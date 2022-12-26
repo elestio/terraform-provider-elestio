@@ -2,49 +2,59 @@ package provider
 
 import (
 	"context"
-	"net/http"
+	"os"
 
+	"github.com/elestio/elestio-go-api-client"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
+	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-// Ensure ScaffoldingProvider satisfies various provider interfaces.
-var _ provider.Provider = &ScaffoldingProvider{}
+var (
+	_ provider.Provider             = &ElestioProvider{}
+	_ provider.ProviderWithMetadata = &ElestioProvider{}
+)
 
-// ScaffoldingProvider defines the provider implementation.
-type ScaffoldingProvider struct {
-	// version is set to the provider version on release, "dev" when the
-	// provider is built and ran locally, and "test" when running acceptance
-	// testing.
-	version string
-}
+type (
+	ElestioProvider struct {
+		// version is set to the provider version on release, "dev" when the
+		// provider is built and ran locally, and "test" when running acceptance
+		// testing.
+		version string
+	}
 
-// ScaffoldingProviderModel describes the provider data model.
-type ScaffoldingProviderModel struct {
-	Endpoint types.String `tfsdk:"endpoint"`
-}
+	ElestioProviderModel struct {
+		Email    types.String `tfsdk:"email"`
+		APIToken types.String `tfsdk:"api_token"`
+	}
+)
 
-func (p *ScaffoldingProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "scaffolding"
+func (p *ElestioProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
+	resp.TypeName = "elestio"
 	resp.Version = p.version
 }
 
-func (p *ScaffoldingProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
+func (p *ElestioProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
-			"endpoint": schema.StringAttribute{
-				MarkdownDescription: "Example provider attribute",
+			"email": schema.StringAttribute{
+				MarkdownDescription: "Elestio email address",
 				Optional:            true,
+			},
+			"api_token": schema.StringAttribute{
+				MarkdownDescription: "Elestio API token",
+				Optional:            true,
+				Sensitive:           true,
 			},
 		},
 	}
 }
 
-func (p *ScaffoldingProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
-	var data ScaffoldingProviderModel
+func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
+	var data ElestioProviderModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
 
@@ -52,30 +62,110 @@ func (p *ScaffoldingProvider) Configure(ctx context.Context, req provider.Config
 		return
 	}
 
-	// Configuration values are now available.
-	// if data.Endpoint.IsNull() { /* ... */ }
+	if data.Email.IsUnknown() {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("email"),
+			"Unknown Elestio API Email",
+			"The provider cannot create the Elestio API client as there is an unknown configuration value for the Elestio API Email. "+
+				"Either target apply the source of the value first, set the value statically in the configuration, or use the ELESTIO_EMAIL environment variable.",
+		)
+	}
 
-	// Example client configuration for data sources and resources
-	client := http.DefaultClient
+	if data.APIToken.IsUnknown() {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("api_token"),
+			"Unknown Elestio API Token",
+			"The provider cannot create the Elestio API client as there is an unknown configuration value for the Elestio API Token. "+
+				"Either target apply the source of the value first, set the value statically in the configuration, or use the ELESTIO_API_TOKEN environment variable.",
+		)
+	}
+
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	email := os.Getenv("ELESTIO_EMAIL")
+	apiToken := os.Getenv("ELESTIO_API_TOKEN")
+
+	if !data.Email.IsNull() {
+		email = data.Email.ValueString()
+	}
+
+	if !data.APIToken.IsNull() {
+		apiToken = data.APIToken.ValueString()
+	}
+
+	if email == "" {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("email"),
+			"Missing Elestio API Email",
+			"The provider cannot create the Elestio API client as there is a missing or empty value for the Elestio API Email. "+
+				"Set the host value in the configuration or use the ELESTIO_EMAIL environment variable. "+
+				"If either is already set, ensure the value is not empty.",
+		)
+	}
+
+	if apiToken == "" {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("api_token"),
+			"Missing Elestio API Token",
+			"The provider cannot create the Elestio API client as there is a missing or empty value for the Elestio API Token. "+
+				"Set the host value in the configuration or use the ELESTIO_API_TOKEN environment variable. "+
+				"If either is already set, ensure the value is not empty.",
+		)
+	}
+
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	client, err := elestio.NewClient(email, apiToken)
+	if err != nil {
+		resp.Diagnostics.AddError(
+			"Unable to Create Elestio API Client",
+			"An unexpected error occurred when creating the Elestio API client. "+
+				"If the error is not clear, please contact the provider developers.\n\n"+
+				"Elestio Client Error: "+err.Error(),
+		)
+		return
+	}
+
+	// Make the Elestio client available during DataSource and Resource
+	// type Configure methods.
 	resp.DataSourceData = client
 	resp.ResourceData = client
 }
 
-func (p *ScaffoldingProvider) Resources(ctx context.Context) []func() resource.Resource {
-	return []func() resource.Resource{
-		NewExampleResource,
+func (p *ElestioProvider) Resources(ctx context.Context) []func() resource.Resource {
+	resources := []func() resource.Resource{
+		NewProjectResource,
 	}
+
+	// Create a resource for each service template
+	templates := []ServiceTemplate{
+		{0, "service", "Service"},
+		{11, "postgres", "PostgreSQL"},
+		{48, "wordpress", "WordPress"},
+		{63, "minio", "Minio"},
+		{229, "mastodon", "Mastodon"},
+	}
+	for _, template := range templates {
+		template := template // avoid iteration with same pointer
+		resources = append(resources, func() resource.Resource { return NewServiceResource(&template) })
+	}
+
+	return resources
 }
 
-func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
+func (p *ElestioProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
-		NewExampleDataSource,
+		NewProjectDataSource,
 	}
 }
 
 func New(version string) func() provider.Provider {
 	return func() provider.Provider {
-		return &ScaffoldingProvider{
+		return &ElestioProvider{
 			version: version,
 		}
 	}

@@ -170,6 +170,21 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"version": schema.StringAttribute{
 				MarkdownDescription: "Service software version.",
 				Required:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.RequiresReplaceIf(
+						func(ctx context.Context, modifier planmodifier.StringRequest, resp *stringplanmodifier.RequiresReplaceIfFuncResponse) {
+							// PostgreSQL = 11
+							if r.TemplateId == 11 {
+								resp.RequiresReplace = true
+								return
+							}
+
+							resp.RequiresReplace = false
+						},
+						"Requires replace if you want to upgrade version.",
+						"Requires replace if you want to upgrade version.",
+					),
+				},
 			},
 			"provider_name": schema.StringAttribute{
 				MarkdownDescription: "Service provider name.",

@@ -3,12 +3,12 @@
 page_title: "elestio_minio Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Minio resource
+  MinIO resource
 ---
 
 # elestio_minio (Resource)
 
-Minio resource
+MinIO resource
 
 
 

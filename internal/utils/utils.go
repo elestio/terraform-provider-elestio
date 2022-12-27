@@ -2,6 +2,7 @@ package utils
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -39,4 +40,28 @@ func BoolValue(elestioBool elestio.NumberAsBool) types.Bool {
 	}
 
 	return types.BoolValue(false)
+}
+
+// CleanString is a helper function to clean a string to be used as a terraform attribute name
+func CleanString(s string) string {
+	cleaned := ""
+
+	s = strings.ToLower(s)
+
+	prevUnderscore := false
+
+	for _, c := range s {
+		if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') {
+			cleaned += string(c)
+			prevUnderscore = false
+		} else {
+			if !prevUnderscore {
+				cleaned += "_"
+				prevUnderscore = true
+			}
+			// If the previous character was an underscore, skip this character
+		}
+	}
+
+	return cleaned
 }

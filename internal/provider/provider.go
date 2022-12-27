@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
@@ -139,19 +140,43 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 func (p *ElestioProvider) Resources(ctx context.Context) []func() resource.Resource {
 	resources := []func() resource.Resource{
 		NewProjectResource,
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:        0,
+				ResourceName:      "service",
+				DocumentationName: "Service",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:        11,
+				ResourceName:      "postgres",
+				DocumentationName: "PostgreSQL",
+				DeprecationMessage: "Use postgresql resource instead. " +
+					"This resource will be removed in the next major version of the provider.",
+			})
+		},
 	}
 
-	// Create a resource for each service template
-	templates := []ServiceTemplate{
-		{0, "service", "Service"},
-		{11, "postgres", "PostgreSQL"},
-		{48, "wordpress", "WordPress"},
-		{63, "minio", "Minio"},
-		{229, "mastodon", "Mastodon"},
+	client := elestio.NewUnsignedClient()
+	templates, err := client.Service.GetTemplatesList()
+	if err != nil {
+		panic(err)
 	}
+
 	for _, template := range templates {
-		template := template // avoid iteration with same pointer
-		resources = append(resources, func() resource.Resource { return NewServiceResource(&template) })
+		template := template
+
+		if template.Category == "Full Stack" {
+			continue
+		}
+
+		serviceTemplate := ServiceTemplate{
+			TemplateId:        template.ID,
+			ResourceName:      utils.CleanString(template.Name),
+			DocumentationName: template.Name,
+		}
+		resources = append(resources, func() resource.Resource { return NewServiceResource(&serviceTemplate) })
 	}
 
 	return resources

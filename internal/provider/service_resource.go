@@ -34,9 +34,10 @@ var (
 
 type (
 	ServiceTemplate struct {
-		TemplateId        int64
-		ResourceName      string
-		DocumentationName string
+		TemplateId         int64
+		ResourceName       string
+		DocumentationName  string
+		DeprecationMessage string
 	}
 
 	ServiceResource struct {
@@ -132,6 +133,7 @@ func (r *ServiceResource) Metadata(ctx context.Context, req resource.MetadataReq
 func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		MarkdownDescription: r.DocumentationName + " resource",
+		DeprecationMessage:  r.DeprecationMessage,
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				MarkdownDescription: "Service identifier.",

@@ -3,12 +3,12 @@
 page_title: "elestio_wordpress Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  WordPress resource
+  Wordpress resource
 ---
 
 # elestio_wordpress (Resource)
 
-WordPress resource
+Wordpress resource
 
 
 

@@ -1,12 +1,12 @@
-# Create and manage a service.
-resource "elestio_service" "service1" {
-  project_id    = "project_id"
-  server_name   = "service1"
+# Create and manage a Service.
+resource "elestio_service" "myawesomeservice" {
+  project_id    = "YOUR-PROJECT-ID"
+  server_name   = "awesomeservice"
   server_type   = "SMALL-1C-2G"
-  template_id   = 11 // postgres
+  template_id   = 11 // postgreSQL
   version       = "14"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "admin@exemple.com"
+  admin_email   = "YOUR-EMAIL"
 }

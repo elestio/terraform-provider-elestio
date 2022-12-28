@@ -42,13 +42,15 @@ func (p *ElestioProvider) Schema(ctx context.Context, req provider.SchemaRequest
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
 			"email": schema.StringAttribute{
-				MarkdownDescription: "Elestio email address",
-				Optional:            true,
+				MarkdownDescription: "Elestio email address." +
+					" This is the email address with which you registered on the [Elestio website](https://dash.elest.io/).",
+				Optional: true,
 			},
 			"api_token": schema.StringAttribute{
-				MarkdownDescription: "Elestio API token",
-				Optional:            true,
-				Sensitive:           true,
+				MarkdownDescription: "Elestio API token." +
+					" You can find this token in the [security settings](https://dash.elest.io/account/security) of your account.",
+				Optional:  true,
+				Sensitive: true,
 			},
 		},
 	}
@@ -140,44 +142,9 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 func (p *ElestioProvider) Resources(ctx context.Context) []func() resource.Resource {
 	resources := []func() resource.Resource{
 		NewProjectResource,
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:        0,
-				ResourceName:      "service",
-				DocumentationName: "Service",
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:        11,
-				ResourceName:      "postgres",
-				DocumentationName: "PostgreSQL",
-				DeprecationMessage: "Use postgresql resource instead. " +
-					"This resource will be removed in the next major version of the provider.",
-			})
-		},
 	}
 
-	client := elestio.NewUnsignedClient()
-	templates, err := client.Service.GetTemplatesList()
-	if err != nil {
-		panic(err)
-	}
-
-	for _, template := range templates {
-		template := template
-
-		if template.Category == "Full Stack" {
-			continue
-		}
-
-		serviceTemplate := ServiceTemplate{
-			TemplateId:        template.ID,
-			ResourceName:      utils.CleanString(template.Name),
-			DocumentationName: template.Name,
-		}
-		resources = append(resources, func() resource.Resource { return NewServiceResource(&serviceTemplate) })
-	}
+	resources = append(resources, NewServiceResources()...)
 
 	return resources
 }
@@ -194,4 +161,61 @@ func New(version string) func() provider.Provider {
 			version: version,
 		}
 	}
+}
+
+func NewServiceResources() []func() resource.Resource {
+	servicesResources := []func() resource.Resource{
+		// Default service resource
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:        0,
+				ResourceName:      "service",
+				DocumentationName: "Service",
+			})
+		},
+
+		// Deprecated service resources
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:        11,
+				ResourceName:      "postgres",
+				DocumentationName: "PostgreSQL",
+				DeprecationMessage: "Use service_postgresql resource instead. " +
+					"This resource will be removed in the next major version of the provider.",
+			})
+		},
+	}
+
+	// Get all service templates from Elestio API
+	unsignedClient := elestio.NewUnsignedClient()
+	templates, err := unsignedClient.Service.GetTemplatesList()
+	if err != nil {
+		panic(err)
+	}
+
+	for _, template := range templates {
+		template := template // avoid iteration with same pointer
+
+		// Skip full stack templates
+		if template.Category == "Full Stack" {
+			continue
+		}
+
+		servicesResources = append(
+			servicesResources,
+			func() resource.Resource {
+				return NewServiceResource(&ServiceTemplate{
+					TemplateId:        template.ID,
+					ResourceName:      utils.CleanString(template.Name),
+					DocumentationName: template.Name,
+					Description:       template.Description,
+					Logo:              template.Logo,
+					DockerHubImage:    template.DockerHubImage,
+					DefaultVersion:    template.DockerHubDefaultTag,
+				})
+			},
+		)
+	}
+
+	return servicesResources
 }

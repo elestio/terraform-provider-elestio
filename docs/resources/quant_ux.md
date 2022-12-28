@@ -3,12 +3,12 @@
 page_title: "elestio_quant_ux Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Quant-UX resource
+  Quant-UX is a resource that creates a service with the template_id = 263. Quant-UX is a prototyping tool to design, test and analyse your visual designs
 ---
 
 # elestio_quant_ux (Resource)
 
-Quant-UX resource
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" height="100" /><br/> Quant-UX is a resource that creates a service with the `template_id = 263`. Quant-UX is a prototyping tool to design, test and analyse your visual designs
 
 
 
@@ -17,30 +17,30 @@ Quant-UX resource
 
 ### Required
 
-- `admin_email` (String) Service admin email.
-- `datacenter` (String) Service datacenter.
-- `project_id` (String) Identifier of the project the service will be created.
-- `provider_name` (String) Service provider name.
-- `server_name` (String) Service server name. Must be unique within the project.
-- `server_type` (String) Service server type. You can only upgrade it, not downgrade.
-- `support_level` (String) Service support level.
-- `version` (String) Service software version.
+- `admin_email` (String) Service admin email. Requires replace to change it.
+- `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://change.me). Requires replace to change it.
+- `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
+- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://change.me). Requires replace to change it.
+- `server_name` (String) Service server name. Must be unique within the project. Requires replace to change it.
+- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://change.me). You can only upgrade it, not downgrade.
+- `support_level` (String) Service support level. You can look for available support levels and their advantages in the [support documentation](https://change.me). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 
 ### Optional
 
 - `alerts_enabled` (Boolean) Service alerts state. **Default** `true`.
 - `app_auto_updates_enabled` (Boolean) Service app auto update state. **Default** `true`.
-- `backups_enabled` (Boolean) Service backups state. Requires a support_level higher than `level1`. **Default** `false`.
+- `backups_enabled` (Boolean) Service backups state.  Requires a support_level higher than `level1`. **Default** `false`.
 - `firewall_enabled` (Boolean) Service firewall state. **Default** `true`.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 
 - `admin` (Attributes) Service admin. (see [below for nested schema](#nestedatt--admin))
 - `admin_user` (String) Service admin user.
-- `app_auto_updates_day_of_week` (Number) Service app auto update day of week.
+- `app_auto_updates_day_of_week` (Number) Service app auto update day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `app_auto_updates_hour` (Number) Service app auto update hour.
 - `app_auto_updates_minute` (Number) Service app auto update minute.
 - `category` (String) Service category.
@@ -56,8 +56,8 @@ Quant-UX resource
 - `deployment_status` (String) Service deployement status.
 - `env` (Map of String, Sensitive) Service environment variables.
 - `external_backups_enabled` (Boolean) Service external backups state. **Default** `false`.
-- `external_backups_retain_day_of_week` (Number) Service external backups retain day.
-- `external_backups_update_day_of_week` (Number) Service external backups update day.
+- `external_backups_retain_day_of_week` (Number) Service external backups retain day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
+- `external_backups_update_day_of_week` (Number) Service external backups update day. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `external_backups_update_hour` (Number) Service external backups update hour.
 - `external_backups_update_minute` (Number) Service external backups update minute.
 - `external_backups_update_type` (String) Service external backups update type.
@@ -69,14 +69,14 @@ Quant-UX resource
 - `ipv6` (String) Service IPv6.
 - `last_updated` (String)
 - `price_per_hour` (String) Service price per hour.
-- `ram_size_gb` (String) Service ram size.
+- `ram_size_gb` (String) Service ram size in GB.
 - `root_app_path` (String) Service root app path.
 - `status` (String) Service status.
-- `storage_size_gb` (Number) Service storage size.
-- `system_auto_updates_reboot_day_of_week` (Number) Service system auto update reboot day of week.
+- `storage_size_gb` (Number) Service storage size in GB.
+- `system_auto_updates_reboot_day_of_week` (Number) Service system auto update reboot day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `system_auto_updates_reboot_hour` (Number) Service system auto update reboot hour.
 - `system_auto_updates_reboot_minute` (Number) Service system auto update reboot minute.
-- `template_id` (Number) Service template identifier.
+- `template_id` (Number) The template identifier defines the software used. You can look for available template ids in the [templates documentation](https://change.me).
 - `traffic_included` (Number) Service traffic included.
 - `traffic_incoming` (Number) Service traffic incoming.
 - `traffic_outgoing` (Number) Service traffic outgoing.

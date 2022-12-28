@@ -37,7 +37,11 @@ type (
 		TemplateId         int64
 		ResourceName       string
 		DocumentationName  string
+		Description        string
 		DeprecationMessage string
+		Logo               string
+		DockerHubImage     string
+		DefaultVersion     string
 	}
 
 	ServiceResource struct {
@@ -131,9 +135,21 @@ func (r *ServiceResource) Metadata(ctx context.Context, req resource.MetadataReq
 }
 
 func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
+
 	resp.Schema = schema.Schema{
-		MarkdownDescription: r.DocumentationName + " resource",
-		DeprecationMessage:  r.DeprecationMessage,
+		MarkdownDescription: utils.If(
+			// condition
+			r.TemplateId == 0,
+			// true
+			"This resource is the generic way to create a service."+
+				" You can choose the software by providing the `template_id` as a parameter."+
+				" You can look for available template ids in the [templates documentation](https://change.me).",
+			// false
+			fmt.Sprintf(`<img src="%s" width="100" height="100" /><br/>`, r.Logo)+
+				fmt.Sprintf(" %s is a resource that creates a service with the `template_id = %d`.", r.DocumentationName, r.TemplateId)+
+				fmt.Sprintf(" %s", r.Description),
+		),
+		DeprecationMessage: r.DeprecationMessage,
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				MarkdownDescription: "Service identifier.",
@@ -143,68 +159,86 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				},
 			},
 			"project_id": schema.StringAttribute{
-				MarkdownDescription: "Identifier of the project the service will be created.",
-				Required:            true,
+				MarkdownDescription: "Identifier of the project in which the service is." +
+					" Requires replace to change it.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"server_name": schema.StringAttribute{
-				MarkdownDescription: "Service server name. Must be unique within the project.",
-				Required:            true,
+				MarkdownDescription: "Service server name." +
+					" Must be unique within the project." +
+					" Requires replace to change it.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"server_type": schema.StringAttribute{
-				MarkdownDescription: "Service server type. You can only upgrade it, not downgrade.",
-				Required:            true,
+				MarkdownDescription: "The server type defines the power and memory allocated to the service." +
+					" Each `provider_name` has a list of available server types." +
+					" You can look for available server types in the [providers documentation](https://change.me)." +
+					" You can only upgrade it, not downgrade.",
+				Required: true,
 			},
 			"template_id": schema.Int64Attribute{
-				MarkdownDescription: "Service template identifier.",
-				Required:            r.TemplateId == 0,
-				Computed:            r.TemplateId != 0,
+				MarkdownDescription: " The template identifier defines the software used." +
+					" You can look for available template ids in the [templates documentation](https://change.me).",
+				Required: r.TemplateId == 0,
+				Computed: r.TemplateId != 0,
 				PlanModifiers: []planmodifier.Int64{
 					int64planmodifier.RequiresReplace(),
 					int64planmodifier.UseStateForUnknown(),
 				},
 			},
 			"version": schema.StringAttribute{
-				MarkdownDescription: "Service software version.",
-				Required:            true,
+				MarkdownDescription: "This is the version of the software used as service." +
+					utils.If(r.DefaultVersion != "", fmt.Sprintf(" **Default** `%s`.", r.DefaultVersion), ""),
+				Required: r.DefaultVersion == "",
+				Optional: r.DefaultVersion != "",
+				Computed: r.DefaultVersion != "",
 				PlanModifiers: []planmodifier.String{
+					modifiers.StringDefault(r.DefaultVersion),
 					stringplanmodifier.RequiresReplaceIf(
 						func(ctx context.Context, modifier planmodifier.StringRequest, resp *stringplanmodifier.RequiresReplaceIfFuncResponse) {
 							// PostgreSQL = 11
 							if r.TemplateId == 11 {
+								// PostgreSQL version cannot be upgraded
 								resp.RequiresReplace = true
 								return
 							}
-
 							resp.RequiresReplace = false
 						},
-						"Requires replace if you want to upgrade version.",
-						"Requires replace if you want to upgrade version.",
+						"This resource requires replace if you want to upgrade version.",
+						"This resource Requires replace if you want to upgrade version.",
 					),
 				},
 			},
 			"provider_name": schema.StringAttribute{
-				MarkdownDescription: "Service provider name.",
-				Required:            true,
+				MarkdownDescription: "The name of the provider to use to host the service." +
+					" You can look for available provider names in the [providers documentation](https://change.me)." +
+					" Requires replace to change it.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"datacenter": schema.StringAttribute{
-				MarkdownDescription: "Service datacenter.",
-				Required:            true,
+				MarkdownDescription: "The datacenter of the provider where the service will be hosted." +
+					" You can look for available datacenters in the [providers documentation](https://change.me)." +
+					" Requires replace to change it.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"support_level": schema.StringAttribute{
-				MarkdownDescription: "Service support level.",
-				Required:            true,
+				MarkdownDescription: "Service support level." +
+					" You can look for available support levels and their advantages in the [support documentation](https://change.me)." +
+					" Requires replace to change it in terraform." +
+					" It is recommended to use the web dashboard to change it without replacing the service.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
@@ -213,8 +247,9 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				},
 			},
 			"admin_email": schema.StringAttribute{
-				MarkdownDescription: "Service admin email.",
-				Required:            true,
+				MarkdownDescription: "Service admin email." +
+					" Requires replace to change it.",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
 				},
@@ -364,11 +399,11 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"ram_size_gb": schema.StringAttribute{
-				MarkdownDescription: "Service ram size.",
+				MarkdownDescription: "Service ram size in GB.",
 				Computed:            true,
 			},
 			"storage_size_gb": schema.Int64Attribute{
-				MarkdownDescription: "Service storage size.",
+				MarkdownDescription: "Service storage size in GB.",
 				Computed:            true,
 			},
 			"price_per_hour": schema.StringAttribute{
@@ -376,16 +411,18 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"app_auto_updates_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service app auto update state. **Default** `true`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service app auto update state." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(true),
 				},
 			},
 			"app_auto_updates_day_of_week": schema.Int64Attribute{
-				MarkdownDescription: "Service app auto update day of week.",
-				Computed:            true,
+				MarkdownDescription: "Service app auto update day of week." +
+					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
+				Computed: true,
 			},
 			"app_auto_updates_hour": schema.Int64Attribute{
 				MarkdownDescription: "Service app auto update hour.",
@@ -396,24 +433,27 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"system_auto_updates_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service system auto update state. **Default** `true`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service system auto update state." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(true),
 				},
 			},
 			"system_auto_updates_security_patches_only_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service system auto update security patches only state. **Default** `false`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service system auto update security patches only state." +
+					" **Default** `false`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(false),
 				},
 			},
 			"system_auto_updates_reboot_day_of_week": schema.Int64Attribute{
-				MarkdownDescription: "Service system auto update reboot day of week.",
-				Computed:            true,
+				MarkdownDescription: "Service system auto update reboot day of week." +
+					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
+				Computed: true,
 			},
 			"system_auto_updates_reboot_hour": schema.Int64Attribute{
 				MarkdownDescription: "Service system auto update reboot hour.",
@@ -424,29 +464,34 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"backups_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service backups state. Requires a support_level higher than `level1`. **Default** `false`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service backups state. " +
+					" Requires a support_level higher than `level1`." +
+					" **Default** `false`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(false),
 				},
 			},
 			"remote_backups_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service remote backups state. **Default** `true`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service remote backups state." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(true),
 				},
 			},
 			"external_backups_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service external backups state. **Default** `false`.",
-				Computed:            true,
+				MarkdownDescription: "Service external backups state." +
+					" **Default** `false`.",
+				Computed: true,
 				// TODO: Handle external backups with s3 config
 			},
 			"external_backups_update_day_of_week": schema.Int64Attribute{
-				MarkdownDescription: "Service external backups update day.",
-				Computed:            true,
+				MarkdownDescription: "Service external backups update day." +
+					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
+				Computed: true,
 			},
 			"external_backups_update_hour": schema.Int64Attribute{
 				MarkdownDescription: "Service external backups update hour.",
@@ -461,13 +506,15 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"external_backups_retain_day_of_week": schema.Int64Attribute{
-				MarkdownDescription: "Service external backups retain day.",
-				Computed:            true,
+				MarkdownDescription: "Service external backups retain day of week." +
+					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
+				Computed: true,
 			},
 			"firewall_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service firewall state. **Default** `true`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service firewall state." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(true),
 				},
@@ -481,9 +528,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Computed:            true,
 			},
 			"alerts_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service alerts state. **Default** `true`.",
-				Optional:            true,
-				Computed:            true,
+				MarkdownDescription: "Service alerts state." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.Bool{
 					modifiers.BoolDefault(true),
 				},
@@ -894,12 +942,14 @@ func convertElestioToTerraformFormat(data *ServiceResourceModel, service *elesti
 	data.AppAutoUpdatesHour = types.Int64Value(service.AppAutoUpdatesHour)
 	data.AppAutoUpdatesMinute = types.Int64Value(service.AppAutoUpdatesMinute)
 	data.SystemAutoUpdatesEnabled = utils.BoolValue(service.SystemAutoUpdatesEnabled)
-	if !data.SystemAutoUpdatesEnabled.ValueBool() {
-		// If system auto updates are disabled, then security patches only is also disabled
-		data.SystemAutoUpdatesSecurityPatchesOnlyEnabled = types.BoolValue(false)
-	} else {
-		data.SystemAutoUpdatesSecurityPatchesOnlyEnabled = utils.BoolValue(service.SystemAutoUpdatesSecurityPatchesOnlyEnabled)
-	}
+	data.SystemAutoUpdatesSecurityPatchesOnlyEnabled = utils.If(
+		// condition
+		!data.SystemAutoUpdatesEnabled.ValueBool(),
+		// if true
+		types.BoolValue(false),
+		// if false
+		utils.BoolValue(service.SystemAutoUpdatesSecurityPatchesOnlyEnabled),
+	)
 	data.SystemAutoUpdatesRebootDayOfWeek = types.Int64Value(service.SystemAutoUpdatesRebootDayOfWeek)
 	data.SystemAutoUpdatesRebootHour = types.Int64Value(service.SystemAutoUpdatesRebootHour)
 	data.SystemAutoUpdatesRebootMinute = types.Int64Value(service.SystemAutoUpdatesRebootMinute)
@@ -1011,8 +1061,8 @@ func (r *ServiceResource) waitServiceDelete(ctx context.Context, service *elesti
 }
 
 func (r *ServiceResource) waitServerTypeUpdate(ctx context.Context, service *elestio.Service, expectedNewServerType string) (*elestio.Service, error) {
-	timeout := 10 * time.Minute
-	createStateConf := sdk_resource.StateChangeConf{
+	updateTimeout := 10 * time.Minute
+	updateStateConf := sdk_resource.StateChangeConf{
 		Pending: []string{"updating"},
 		Target:  []string{"updated"},
 		Refresh: func() (interface{}, string, error) {
@@ -1032,18 +1082,18 @@ func (r *ServiceResource) waitServerTypeUpdate(ctx context.Context, service *ele
 
 			return serviceW, "updated", nil
 		},
-		Timeout:                   timeout,
+		Timeout:                   updateTimeout,
 		Delay:                     10 * time.Second,
 		MinTimeout:                5 * time.Second,
 		ContinuousTargetOccurence: 2,
 	}
 
-	tflog.Trace(ctx, fmt.Sprintf("Service creation waiter timeout %.0f minutes", timeout.Minutes()))
+	tflog.Trace(ctx, fmt.Sprintf("Service update server type waiter timeout %.0f minutes", updateTimeout.Minutes()))
 
-	serviceCreated, err := createStateConf.WaitForStateContext(ctx)
+	serviceUpdated, err := updateStateConf.WaitForStateContext(ctx)
 	if err != nil {
-		return nil, fmt.Errorf("service creation waiter failed, got error: %s", err)
+		return nil, fmt.Errorf("service update server type waiter failed, got error: %s", err)
 	}
 
-	return serviceCreated.(*elestio.Service), nil
+	return serviceUpdated.(*elestio.Service), nil
 }

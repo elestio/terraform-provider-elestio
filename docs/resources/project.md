@@ -14,10 +14,9 @@ Project resource.
 
 ```terraform
 # Create and manage a project.
-resource "elestio_project" "project1" {
-  name             = "My custom name"
-  description      = "My fancy description"
-  technical_emails = "admin@exemple.com"
+resource "elestio_project" "myawesomeproject" {
+  name             = "Awesome project"
+  technical_emails = "YOUR-EMAIL"
 }
 ```
 
@@ -40,4 +39,11 @@ resource "elestio_project" "project1" {
 - `last_updated` (String)
 - `network_cidr` (String) Project network CIDR.
 
+## Import
 
+Import is supported using the following syntax:
+
+```shell
+# Import a project by specifying the project ID.
+terraform import elestio_project.myawesomeproject project_id
+```

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_chatwoot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" height="100" /><br/> Chatwoot is a resource that creates a service with the `template_id = 84`. Chatwoot is an open-source, alternative customer engagement suite.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" height="100" /><br/><br/> Chatwoot is a resource that creates a service with the `template_id = 84`. Chatwoot is an open-source, alternative customer engagement suite.
 
 
 
@@ -21,7 +21,7 @@ description: |-
 - `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://change.me). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://change.me). Requires replace to change it.
-- `server_name` (String) Service server name. Must be unique within the project. Requires replace to change it.
+- `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://change.me). You can only upgrade it, not downgrade.
 - `support_level` (String) Service support level. You can look for available support levels and their advantages in the [support documentation](https://change.me). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 

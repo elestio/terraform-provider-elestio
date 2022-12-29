@@ -33,22 +33,22 @@ The following methods are supported :
 
 Static credentials can be provided by adding an `email` and `api_token` arguments in the Elestio provider block:
 
-{{ tffile "examples/index-static.tf" }}
+{{ tffile "examples/index/static.tf" }}
 
 Usage:
 
-{{ codefile "sh" "examples/index-static-tf-plan.txt" }}
+{{ codefile "sh" "examples/index/static-tf-plan.txt" }}
 
 ### Environment variables
 
 You can provide your email by `ELESTIO_EMAIL` and your API token via `ELESTIO_API_TOKEN` environment variables. 
 When using this method, you may omit the Elestio `provider` block entirely:
 
-{{ tffile "examples/index-env.tf" }}
+{{ tffile "examples/index/env.tf" }}
 
 Usage:
 
-{{ codefile "sh" "examples/index-env-tf-plan.txt" }}
+{{ codefile "sh" "examples/index/env-tf-plan.txt" }}
 
 {{ .SchemaMarkdown | trimspace }}
 

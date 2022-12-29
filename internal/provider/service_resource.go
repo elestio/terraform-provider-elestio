@@ -3,6 +3,7 @@ package provider
 import (
 	"context"
 	"fmt"
+	"regexp"
 	"strings"
 	"time"
 
@@ -145,7 +146,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				" You can choose the software by providing the `template_id` as a parameter."+
 				" You can look for available template ids in the [templates documentation](https://change.me).",
 			// false
-			fmt.Sprintf(`<img src="%s" width="100" height="100" /><br/>`, r.Logo)+
+			utils.If(r.Logo == "", "", fmt.Sprintf(`<img src="%s" width="100" height="100" /><br/><br/>`, r.Logo))+
 				fmt.Sprintf(" %s is a resource that creates a service with the `template_id = %d`.", r.DocumentationName, r.TemplateId)+
 				fmt.Sprintf(" %s", r.Description),
 		),
@@ -168,11 +169,19 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"server_name": schema.StringAttribute{
 				MarkdownDescription: "Service server name." +
+					" Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters." +
 					" Must be unique within the project." +
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.RequiresReplace(),
+				},
+				Validators: []validator.String{
+					stringvalidator.LengthBetween(1, 60),
+					stringvalidator.RegexMatches(
+						regexp.MustCompile(`^[a-z0-9-]+$`),
+						"Must consist of lowercase letters, a-z, 0-9, and - (dash), _ (underscore) not allowed characters.",
+					),
 				},
 			},
 			"server_type": schema.StringAttribute{

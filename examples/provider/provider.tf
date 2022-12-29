@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-# Configure the Fastly Provider
+# Configure the Elestio Provider
 provider "elestio" {
   email     = "YOUR-EMAIL"
   api_token = "YOUR-API-TOKEN"

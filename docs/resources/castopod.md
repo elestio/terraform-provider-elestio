@@ -3,12 +3,12 @@
 page_title: "elestio_castopod Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Castopod is a resource that creates a service with the template_id = 297. Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.
+  Castopod Resource is a preconfigured Service Resource with the template_id = 297. Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only. Docker hub image: castopod/app https://hub.docker.com/r/castopod/app
 ---
 
 # elestio_castopod (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" height="100" /><br/><br/> Castopod is a resource that creates a service with the `template_id = 297`. Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.
+Castopod Resource is a preconfigured Service Resource with the `template_id = 297`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" height="100" /><br/> Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.<br/><br/> Docker hub image: [`castopod/app`](https://hub.docker.com/r/castopod/app)
 
 
 

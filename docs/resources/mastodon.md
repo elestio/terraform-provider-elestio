@@ -3,12 +3,12 @@
 page_title: "elestio_mastodon Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mastodon is a resource that creates a service with the template_id = 229. Mastodon is a free, open-source social network server
+  Mastodon Resource is a preconfigured Service Resource with the template_id = 229. Mastodon is a free, open-source social network server Docker hub image: tootsuite/mastodon https://hub.docker.com/r/tootsuite/mastodon
 ---
 
 # elestio_mastodon (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" height="100" /><br/><br/> Mastodon is a resource that creates a service with the `template_id = 229`. Mastodon is a free, open-source social network server
+Mastodon Resource is a preconfigured Service Resource with the `template_id = 229`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" height="100" /><br/> Mastodon is a free, open-source social network server<br/><br/> Docker hub image: [`tootsuite/mastodon`](https://hub.docker.com/r/tootsuite/mastodon)
 
 
 

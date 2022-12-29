@@ -3,12 +3,12 @@
 page_title: "elestio_rocket_chat Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Rocket.Chat is a resource that creates a service with the template_id = 92. Rocket.Chat is an open-source communications platform for organizations with high standards of data protection.
+  Rocket.Chat Resource is a preconfigured Service Resource with the template_id = 92. Rocket.Chat is an open-source communications platform for organizations with high standards of data protection.  Docker hub image: rocketchat/rocket.chat https://hub.docker.com/r/rocketchat/rocket.chat
 ---
 
 # elestio_rocket_chat (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" height="100" /><br/><br/> Rocket.Chat is a resource that creates a service with the `template_id = 92`. Rocket.Chat is an open-source communications platform for organizations with high standards of data protection.
+Rocket.Chat Resource is a preconfigured Service Resource with the `template_id = 92`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" height="100" /><br/> Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. <br/><br/> Docker hub image: [`rocketchat/rocket.chat`](https://hub.docker.com/r/rocketchat/rocket.chat)
 
 
 

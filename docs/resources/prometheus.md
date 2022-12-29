@@ -3,12 +3,12 @@
 page_title: "elestio_prometheus Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Prometheus is a resource that creates a service with the template_id = 252. Power your metrics and alerting with the leading open-source monitoring solution
+  Prometheus Resource is a preconfigured Service Resource with the template_id = 252. Power your metrics and alerting with the leading open-source monitoring solution Docker hub image: prom/prometheus https://hub.docker.com/r/prom/prometheus
 ---
 
 # elestio_prometheus (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" height="100" /><br/><br/> Prometheus is a resource that creates a service with the `template_id = 252`. Power your metrics and alerting with the leading open-source monitoring solution
+Prometheus Resource is a preconfigured Service Resource with the `template_id = 252`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" height="100" /><br/> Power your metrics and alerting with the leading open-source monitoring solution<br/><br/> Docker hub image: [`prom/prometheus`](https://hub.docker.com/r/prom/prometheus)
 
 
 

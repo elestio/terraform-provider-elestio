@@ -3,12 +3,12 @@
 page_title: "elestio_archivebox Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ArchiveBox is a resource that creates a service with the template_id = 247. ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
+  ArchiveBox Resource is a preconfigured Service Resource with the template_id = 247. ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline. Docker hub image: archivebox/archivebox https://hub.docker.com/r/archivebox/archivebox
 ---
 
 # elestio_archivebox (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" height="100" /><br/><br/> ArchiveBox is a resource that creates a service with the `template_id = 247`. ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
+ArchiveBox Resource is a preconfigured Service Resource with the `template_id = 247`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" height="100" /><br/> ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br/><br/> Docker hub image: [`archivebox/archivebox`](https://hub.docker.com/r/archivebox/archivebox)
 
 
 

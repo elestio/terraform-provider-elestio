@@ -3,12 +3,12 @@
 page_title: "elestio_discourse Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Discourse is a resource that creates a service with the template_id = 91. Discourse is an open-source discussion platform built for the next decade of the Internet.
+  Discourse Resource is a preconfigured Service Resource with the template_id = 91. Discourse is an open-source discussion platform built for the next decade of the Internet.  Docker hub image: bitnami/discourse https://hub.docker.com/r/bitnami/discourse
 ---
 
 # elestio_discourse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" height="100" /><br/><br/> Discourse is a resource that creates a service with the `template_id = 91`. Discourse is an open-source discussion platform built for the next decade of the Internet.
+Discourse Resource is a preconfigured Service Resource with the `template_id = 91`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" height="100" /><br/> Discourse is an open-source discussion platform built for the next decade of the Internet. <br/><br/> Docker hub image: [`bitnami/discourse`](https://hub.docker.com/r/bitnami/discourse)
 
 
 

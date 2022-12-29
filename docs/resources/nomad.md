@@ -3,12 +3,12 @@
 page_title: "elestio_nomad Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Nomad is a resource that creates a service with the template_id = 170. Nomad is a scheduler and workload orchestrator.
+  Nomad Resource is a preconfigured Service Resource with the template_id = 170. Nomad is a scheduler and workload orchestrator.
 ---
 
 # elestio_nomad (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" height="100" /><br/><br/> Nomad is a resource that creates a service with the `template_id = 170`. Nomad is a scheduler and workload orchestrator.
+Nomad Resource is a preconfigured Service Resource with the `template_id = 170`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" height="100" /><br/> Nomad is a scheduler and workload orchestrator.
 
 
 

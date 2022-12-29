@@ -3,12 +3,12 @@
 page_title: "elestio_openresty Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenResty is a resource that creates a service with the template_id = 218. A Fast and Scalable Web Platform by Extending NGINX with LuaJIT
+  OpenResty Resource is a preconfigured Service Resource with the template_id = 218. A Fast and Scalable Web Platform by Extending NGINX with LuaJIT Docker hub image: elestio/nginx-auto-ssl https://hub.docker.com/r/elestio/nginx-auto-ssl
 ---
 
 # elestio_openresty (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" height="100" /><br/><br/> OpenResty is a resource that creates a service with the `template_id = 218`. A Fast and Scalable Web Platform by Extending NGINX with LuaJIT
+OpenResty Resource is a preconfigured Service Resource with the `template_id = 218`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" height="100" /><br/> A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br/><br/> Docker hub image: [`elestio/nginx-auto-ssl`](https://hub.docker.com/r/elestio/nginx-auto-ssl)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_authentik Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Authentik is a resource that creates a service with the template_id = 174. authentik is a flexible, versatile open-source identity provider.
+  Authentik Resource is a preconfigured Service Resource with the template_id = 174. authentik is a flexible, versatile open-source identity provider. Docker hub image: goauthentik.io/server https://hub.docker.com/r/goauthentik.io/server
 ---
 
 # elestio_authentik (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" height="100" /><br/><br/> Authentik is a resource that creates a service with the `template_id = 174`. authentik is a flexible, versatile open-source identity provider.
+Authentik Resource is a preconfigured Service Resource with the `template_id = 174`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" height="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/> Docker hub image: [`goauthentik.io/server`](https://hub.docker.com/r/goauthentik.io/server)
 
 
 

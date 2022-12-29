@@ -3,12 +3,12 @@
 page_title: "elestio_etherpad Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Etherpad is a resource that creates a service with the template_id = 266. Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.
+  Etherpad Resource is a preconfigured Service Resource with the template_id = 266. Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time. Docker hub image: etherpad/etherpad https://hub.docker.com/r/etherpad/etherpad
 ---
 
 # elestio_etherpad (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" height="100" /><br/><br/> Etherpad is a resource that creates a service with the `template_id = 266`. Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.
+Etherpad Resource is a preconfigured Service Resource with the `template_id = 266`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" height="100" /><br/> Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br/><br/> Docker hub image: [`etherpad/etherpad`](https://hub.docker.com/r/etherpad/etherpad)
 
 
 

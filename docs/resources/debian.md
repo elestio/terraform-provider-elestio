@@ -3,12 +3,12 @@
 page_title: "elestio_debian Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Debian is a resource that creates a service with the template_id = 36. Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.
+  Debian Resource is a preconfigured Service Resource with the template_id = 36. Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.
 ---
 
 # elestio_debian (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" height="100" /><br/><br/> Debian is a resource that creates a service with the `template_id = 36`. Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.
+Debian Resource is a preconfigured Service Resource with the `template_id = 36`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" height="100" /><br/> Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.
 
 
 

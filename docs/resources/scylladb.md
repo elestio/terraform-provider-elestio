@@ -3,12 +3,12 @@
 page_title: "elestio_scylladb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ScyllaDB is a resource that creates a service with the template_id = 68. ScyllaDB is a true NoSQL database for the most demanding applications.
+  ScyllaDB Resource is a preconfigured Service Resource with the template_id = 68. ScyllaDB is a true NoSQL database for the most demanding applications.  Docker hub image: scylladb/scylla https://hub.docker.com/r/scylladb/scylla
 ---
 
 # elestio_scylladb (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" height="100" /><br/><br/> ScyllaDB is a resource that creates a service with the `template_id = 68`. ScyllaDB is a true NoSQL database for the most demanding applications.
+ScyllaDB Resource is a preconfigured Service Resource with the `template_id = 68`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" height="100" /><br/> ScyllaDB is a true NoSQL database for the most demanding applications. <br/><br/> Docker hub image: [`scylladb/scylla`](https://hub.docker.com/r/scylladb/scylla)
 
 
 

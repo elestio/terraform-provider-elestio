@@ -3,12 +3,12 @@
 page_title: "elestio_gitlab Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gitlab is a resource that creates a service with the template_id = 182. GitLab enables you to deliver software faster with better security and collaboration in a single platform.
+  Gitlab Resource is a preconfigured Service Resource with the template_id = 182. GitLab enables you to deliver software faster with better security and collaboration in a single platform. Docker hub image: gitlab/gitlab-ee https://hub.docker.com/r/gitlab/gitlab-ee
 ---
 
 # elestio_gitlab (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" height="100" /><br/><br/> Gitlab is a resource that creates a service with the `template_id = 182`. GitLab enables you to deliver software faster with better security and collaboration in a single platform.
+Gitlab Resource is a preconfigured Service Resource with the `template_id = 182`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" height="100" /><br/> GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br/><br/> Docker hub image: [`gitlab/gitlab-ee`](https://hub.docker.com/r/gitlab/gitlab-ee)
 
 
 

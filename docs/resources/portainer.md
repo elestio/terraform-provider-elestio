@@ -3,12 +3,12 @@
 page_title: "elestio_portainer Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Portainer is a resource that creates a service with the template_id = 53. Portainer is a centralized service delivery platform for containerized apps.
+  Portainer Resource is a preconfigured Service Resource with the template_id = 53. Portainer is a centralized service delivery platform for containerized apps. Docker hub image: portainer/portainer-ce https://hub.docker.com/r/portainer/portainer-ce
 ---
 
 # elestio_portainer (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" height="100" /><br/><br/> Portainer is a resource that creates a service with the `template_id = 53`. Portainer is a centralized service delivery platform for containerized apps.
+Portainer Resource is a preconfigured Service Resource with the `template_id = 53`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" height="100" /><br/> Portainer is a centralized service delivery platform for containerized apps.<br/><br/> Docker hub image: [`portainer/portainer-ce`](https://hub.docker.com/r/portainer/portainer-ce)
 
 
 

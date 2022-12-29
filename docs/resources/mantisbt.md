@@ -3,12 +3,12 @@
 page_title: "elestio_mantisbt Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MantisBT is a resource that creates a service with the template_id = 273. MantisBT makes collaboration with team members & clients easy, fast, and professional
+  MantisBT Resource is a preconfigured Service Resource with the template_id = 273. MantisBT makes collaboration with team members & clients easy, fast, and professional Docker hub image: xlrl/mantisbt https://hub.docker.com/r/xlrl/mantisbt
 ---
 
 # elestio_mantisbt (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" height="100" /><br/><br/> MantisBT is a resource that creates a service with the `template_id = 273`. MantisBT makes collaboration with team members & clients easy, fast, and professional
+MantisBT Resource is a preconfigured Service Resource with the `template_id = 273`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" height="100" /><br/> MantisBT makes collaboration with team members & clients easy, fast, and professional<br/><br/> Docker hub image: [`xlrl/mantisbt`](https://hub.docker.com/r/xlrl/mantisbt)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_postgres Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PostgreSQL is a resource that creates a service with the template_id = 11.
+  PostgreSQL Resource is a preconfigured Service Resource with the template_id = 11.
 ---
 
 # elestio_postgres (Resource)
 
-PostgreSQL is a resource that creates a service with the `template_id = 11`.
+PostgreSQL Resource is a preconfigured Service Resource with the `template_id = 11`.
 
 
 

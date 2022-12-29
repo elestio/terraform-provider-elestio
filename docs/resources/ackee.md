@@ -3,12 +3,12 @@
 page_title: "elestio_ackee Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ackee is a resource that creates a service with the template_id = 133. Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.
+  Ackee Resource is a preconfigured Service Resource with the template_id = 133. Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy. Docker hub image: electerious/ackee https://hub.docker.com/r/electerious/ackee
 ---
 
 # elestio_ackee (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" height="100" /><br/><br/> Ackee is a resource that creates a service with the `template_id = 133`. Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.
+Ackee Resource is a preconfigured Service Resource with the `template_id = 133`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" height="100" /><br/> Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.<br/><br/> Docker hub image: [`electerious/ackee`](https://hub.docker.com/r/electerious/ackee)
 
 
 

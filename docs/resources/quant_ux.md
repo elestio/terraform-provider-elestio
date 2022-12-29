@@ -3,12 +3,12 @@
 page_title: "elestio_quant_ux Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Quant-UX is a resource that creates a service with the template_id = 263. Quant-UX is a prototyping tool to design, test and analyse your visual designs
+  Quant-UX Resource is a preconfigured Service Resource with the template_id = 263. Quant-UX is a prototyping tool to design, test and analyse your visual designs Docker hub image: klausenschaefersinho/quant-ux-backend https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend
 ---
 
 # elestio_quant_ux (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" height="100" /><br/><br/> Quant-UX is a resource that creates a service with the `template_id = 263`. Quant-UX is a prototyping tool to design, test and analyse your visual designs
+Quant-UX Resource is a preconfigured Service Resource with the `template_id = 263`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" height="100" /><br/> Quant-UX is a prototyping tool to design, test and analyse your visual designs<br/><br/> Docker hub image: [`klausenschaefersinho/quant-ux-backend`](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend)
 
 
 

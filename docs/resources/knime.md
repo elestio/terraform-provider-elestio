@@ -3,12 +3,12 @@
 page_title: "elestio_knime Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Knime is a resource that creates a service with the template_id = 238. KNIME Analytics Platform
+  Knime Resource is a preconfigured Service Resource with the template_id = 238. KNIME Analytics Platform Docker hub image: elestio/docker-desktop-vnc-knime https://hub.docker.com/r/elestio/docker-desktop-vnc-knime
 ---
 
 # elestio_knime (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" height="100" /><br/><br/> Knime is a resource that creates a service with the `template_id = 238`. KNIME Analytics Platform
+Knime Resource is a preconfigured Service Resource with the `template_id = 238`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" height="100" /><br/> KNIME Analytics Platform<br/><br/> Docker hub image: [`elestio/docker-desktop-vnc-knime`](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)
 
 
 

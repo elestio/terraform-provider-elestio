@@ -3,12 +3,12 @@
 page_title: "elestio_gogs Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gogs is a resource that creates a service with the template_id = 154. Gogs is a lightweight self-hosted Git server that can be run on just about anything.
+  Gogs Resource is a preconfigured Service Resource with the template_id = 154. Gogs is a lightweight self-hosted Git server that can be run on just about anything.  Docker hub image: gogs/gogs https://hub.docker.com/r/gogs/gogs
 ---
 
 # elestio_gogs (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" height="100" /><br/><br/> Gogs is a resource that creates a service with the `template_id = 154`. Gogs is a lightweight self-hosted Git server that can be run on just about anything.
+Gogs Resource is a preconfigured Service Resource with the `template_id = 154`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" height="100" /><br/> Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br/><br/> Docker hub image: [`gogs/gogs`](https://hub.docker.com/r/gogs/gogs)
 
 
 

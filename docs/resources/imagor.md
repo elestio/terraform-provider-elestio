@@ -3,12 +3,12 @@
 page_title: "elestio_imagor Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Imagor is a resource that creates a service with the template_id = 203. Imagor is a fast, Docker-ready image processing server.
+  Imagor Resource is a preconfigured Service Resource with the template_id = 203. Imagor is a fast, Docker-ready image processing server. Docker hub image: shumc/imagor https://hub.docker.com/r/shumc/imagor
 ---
 
 # elestio_imagor (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/imagor-wsHT.png" width="100" height="100" /><br/><br/> Imagor is a resource that creates a service with the `template_id = 203`. Imagor is a fast, Docker-ready image processing server.
+Imagor Resource is a preconfigured Service Resource with the `template_id = 203`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/imagor-wsHT.png" width="100" height="100" /><br/> Imagor is a fast, Docker-ready image processing server.<br/><br/> Docker hub image: [`shumc/imagor`](https://hub.docker.com/r/shumc/imagor)
 
 
 

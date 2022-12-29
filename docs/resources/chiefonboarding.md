@@ -3,12 +3,12 @@
 page_title: "elestio_chiefonboarding Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ChiefOnboarding is a resource that creates a service with the template_id = 291. Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.
+  ChiefOnboarding Resource is a preconfigured Service Resource with the template_id = 291. Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline. Docker hub image: chiefonboarding/chiefonboarding https://hub.docker.com/r/chiefonboarding/chiefonboarding
 ---
 
 # elestio_chiefonboarding (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" height="100" /><br/><br/> ChiefOnboarding is a resource that creates a service with the `template_id = 291`. Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.
+ChiefOnboarding Resource is a preconfigured Service Resource with the `template_id = 291`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" height="100" /><br/> Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br/><br/> Docker hub image: [`chiefonboarding/chiefonboarding`](https://hub.docker.com/r/chiefonboarding/chiefonboarding)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_appsmith Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Appsmith is a resource that creates a service with the template_id = 125.  Appsmith is a powerful open-source framework to build internal tools.
+  Appsmith Resource is a preconfigured Service Resource with the template_id = 125.  Appsmith is a powerful open-source framework to build internal tools.  Docker hub image: appsmith/appsmith-editor https://hub.docker.com/r/appsmith/appsmith-editor
 ---
 
 # elestio_appsmith (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" height="100" /><br/><br/> Appsmith is a resource that creates a service with the `template_id = 125`.  Appsmith is a powerful open-source framework to build internal tools.
+Appsmith Resource is a preconfigured Service Resource with the `template_id = 125`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" height="100" /><br/>  Appsmith is a powerful open-source framework to build internal tools. <br/><br/> Docker hub image: [`appsmith/appsmith-editor`](https://hub.docker.com/r/appsmith/appsmith-editor)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_invoiceninja Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  InvoiceNinja is a resource that creates a service with the template_id = 152. Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses.
+  InvoiceNinja Resource is a preconfigured Service Resource with the template_id = 152. Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses.  Docker hub image: invoiceninja/invoiceninja https://hub.docker.com/r/invoiceninja/invoiceninja
 ---
 
 # elestio_invoiceninja (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" height="100" /><br/><br/> InvoiceNinja is a resource that creates a service with the `template_id = 152`. Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses.
+InvoiceNinja Resource is a preconfigured Service Resource with the `template_id = 152`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" height="100" /><br/> Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses. <br/><br/> Docker hub image: [`invoiceninja/invoiceninja`](https://hub.docker.com/r/invoiceninja/invoiceninja)
 
 
 

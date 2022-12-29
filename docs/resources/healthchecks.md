@@ -3,12 +3,12 @@
 page_title: "elestio_healthchecks Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Healthchecks is a resource that creates a service with the template_id = 140. Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.
+  Healthchecks Resource is a preconfigured Service Resource with the template_id = 140. Healthchecks is an online service for monitoring regularly running tasks such as cron jobs. Docker hub image: linuxserver/healthchecks https://hub.docker.com/r/linuxserver/healthchecks
 ---
 
 # elestio_healthchecks (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" height="100" /><br/><br/> Healthchecks is a resource that creates a service with the `template_id = 140`. Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.
+Healthchecks Resource is a preconfigured Service Resource with the `template_id = 140`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" height="100" /><br/> Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.<br/><br/> Docker hub image: [`linuxserver/healthchecks`](https://hub.docker.com/r/linuxserver/healthchecks)
 
 
 

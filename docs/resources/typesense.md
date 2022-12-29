@@ -3,12 +3,12 @@
 page_title: "elestio_typesense Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Typesense is a resource that creates a service with the template_id = 127. Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.
+  Typesense Resource is a preconfigured Service Resource with the template_id = 127. Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences. Docker hub image: typesense/typesense https://hub.docker.com/r/typesense/typesense
 ---
 
 # elestio_typesense (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" height="100" /><br/><br/> Typesense is a resource that creates a service with the `template_id = 127`. Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.
+Typesense Resource is a preconfigured Service Resource with the `template_id = 127`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" height="100" /><br/> Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br/><br/> Docker hub image: [`typesense/typesense`](https://hub.docker.com/r/typesense/typesense)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_documize Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Documize is a resource that creates a service with the template_id = 279. Free Knowledge Management Software
+  Documize Resource is a preconfigured Service Resource with the template_id = 279. Free Knowledge Management Software Docker hub image: debian https://hub.docker.com/r/debian
 ---
 
 # elestio_documize (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" height="100" /><br/><br/> Documize is a resource that creates a service with the `template_id = 279`. Free Knowledge Management Software
+Documize Resource is a preconfigured Service Resource with the `template_id = 279`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" height="100" /><br/> Free Knowledge Management Software<br/><br/> Docker hub image: [`debian`](https://hub.docker.com/r/debian)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_kestra Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Kestra is a resource that creates a service with the template_id = 219. The open source data orchestration and scheduling platform.
+  Kestra Resource is a preconfigured Service Resource with the template_id = 219. The open source data orchestration and scheduling platform. Docker hub image: kestra/kestra https://hub.docker.com/r/kestra/kestra
 ---
 
 # elestio_kestra (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" height="100" /><br/><br/> Kestra is a resource that creates a service with the `template_id = 219`. The open source data orchestration and scheduling platform.
+Kestra Resource is a preconfigured Service Resource with the `template_id = 219`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" height="100" /><br/> The open source data orchestration and scheduling platform.<br/><br/> Docker hub image: [`kestra/kestra`](https://hub.docker.com/r/kestra/kestra)
 
 
 

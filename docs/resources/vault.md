@@ -3,12 +3,12 @@
 page_title: "elestio_vault Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Vault is a resource that creates a service with the template_id = 183. Vault is a tool for secrets management, encryption as a service, and privileged access management
+  Vault Resource is a preconfigured Service Resource with the template_id = 183. Vault is a tool for secrets management, encryption as a service, and privileged access management Docker hub image: vault https://hub.docker.com/r/vault
 ---
 
 # elestio_vault (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" height="100" /><br/><br/> Vault is a resource that creates a service with the `template_id = 183`. Vault is a tool for secrets management, encryption as a service, and privileged access management
+Vault Resource is a preconfigured Service Resource with the `template_id = 183`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" height="100" /><br/> Vault is a tool for secrets management, encryption as a service, and privileged access management<br/><br/> Docker hub image: [`vault`](https://hub.docker.com/r/vault)
 
 
 

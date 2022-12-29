@@ -3,12 +3,12 @@
 page_title: "elestio_ci_cd_target Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  CI-CD-Target is a resource that creates a service with the template_id = 234. Deploy one or multiple CD/CD pipelines to a target node
+  CI-CD-Target Resource is a preconfigured Service Resource with the template_id = 234. Deploy one or multiple CD/CD pipelines to a target node
 ---
 
 # elestio_ci_cd_target (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" height="100" /><br/><br/> CI-CD-Target is a resource that creates a service with the `template_id = 234`. Deploy one or multiple CD/CD pipelines to a target node
+CI-CD-Target Resource is a preconfigured Service Resource with the `template_id = 234`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" height="100" /><br/> Deploy one or multiple CD/CD pipelines to a target node
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_shopware Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Shopware is a resource that creates a service with the template_id = 289. Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility
+  Shopware Resource is a preconfigured Service Resource with the template_id = 289. Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility Docker hub image: shyim/shopware https://hub.docker.com/r/shyim/shopware
 ---
 
 # elestio_shopware (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" height="100" /><br/><br/> Shopware is a resource that creates a service with the `template_id = 289`. Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility
+Shopware Resource is a preconfigured Service Resource with the `template_id = 289`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" height="100" /><br/> Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br/><br/> Docker hub image: [`shyim/shopware`](https://hub.docker.com/r/shyim/shopware)
 
 
 

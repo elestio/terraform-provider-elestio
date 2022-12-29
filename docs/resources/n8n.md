@@ -3,12 +3,12 @@
 page_title: "elestio_n8n Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  N8N is a resource that creates a service with the template_id = 54. n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.
+  N8N Resource is a preconfigured Service Resource with the template_id = 54. n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them. Docker hub image: n8nio/n8n https://hub.docker.com/r/n8nio/n8n
 ---
 
 # elestio_n8n (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" height="100" /><br/><br/> N8N is a resource that creates a service with the `template_id = 54`. n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.
+N8N Resource is a preconfigured Service Resource with the `template_id = 54`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" height="100" /><br/> n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.<br/><br/> Docker hub image: [`n8nio/n8n`](https://hub.docker.com/r/n8nio/n8n)
 
 
 

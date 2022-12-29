@@ -3,12 +3,12 @@
 page_title: "elestio_timescaledb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  TimescaleDB is a resource that creates a service with the template_id = 45. TimescaleDB is the leading open-source relational database with support for time-series data.
+  TimescaleDB Resource is a preconfigured Service Resource with the template_id = 45. TimescaleDB is the leading open-source relational database with support for time-series data.  Docker hub image: timescale/timescaledb-ha https://hub.docker.com/r/timescale/timescaledb-ha
 ---
 
 # elestio_timescaledb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" height="100" /><br/><br/> TimescaleDB is a resource that creates a service with the `template_id = 45`. TimescaleDB is the leading open-source relational database with support for time-series data.
+TimescaleDB Resource is a preconfigured Service Resource with the `template_id = 45`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" height="100" /><br/> TimescaleDB is the leading open-source relational database with support for time-series data. <br/><br/> Docker hub image: [`timescale/timescaledb-ha`](https://hub.docker.com/r/timescale/timescaledb-ha)
 
 
 

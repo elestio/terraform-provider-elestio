@@ -3,12 +3,12 @@
 page_title: "elestio_supabase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Supabase is a resource that creates a service with the template_id = 284. Supabase is an open source alternative to Firebase.
+  Supabase Resource is a preconfigured Service Resource with the template_id = 284. Supabase is an open source alternative to Firebase. Docker hub image: supabase/studio https://hub.docker.com/r/supabase/studio
 ---
 
 # elestio_supabase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" height="100" /><br/><br/> Supabase is a resource that creates a service with the `template_id = 284`. Supabase is an open source alternative to Firebase.
+Supabase Resource is a preconfigured Service Resource with the `template_id = 284`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" height="100" /><br/> Supabase is an open source alternative to Firebase.<br/><br/> Docker hub image: [`supabase/studio`](https://hub.docker.com/r/supabase/studio)
 
 
 

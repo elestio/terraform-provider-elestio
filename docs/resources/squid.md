@@ -3,12 +3,12 @@
 page_title: "elestio_squid Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Squid is a resource that creates a service with the template_id = 261. Fast & powerful proxy server
+  Squid Resource is a preconfigured Service Resource with the template_id = 261. Fast & powerful proxy server Docker hub image: b4tman/squid https://hub.docker.com/r/b4tman/squid
 ---
 
 # elestio_squid (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" height="100" /><br/><br/> Squid is a resource that creates a service with the `template_id = 261`. Fast & powerful proxy server
+Squid Resource is a preconfigured Service Resource with the `template_id = 261`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" height="100" /><br/> Fast & powerful proxy server<br/><br/> Docker hub image: [`b4tman/squid`](https://hub.docker.com/r/b4tman/squid)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_photoprism Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PhotoPrism is a resource that creates a service with the template_id = 190. PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection
+  PhotoPrism Resource is a preconfigured Service Resource with the template_id = 190. PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection Docker hub image: photoprism/photoprism https://hub.docker.com/r/photoprism/photoprism
 ---
 
 # elestio_photoprism (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" height="100" /><br/><br/> PhotoPrism is a resource that creates a service with the `template_id = 190`. PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection
+PhotoPrism Resource is a preconfigured Service Resource with the `template_id = 190`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" height="100" /><br/> PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br/><br/> Docker hub image: [`photoprism/photoprism`](https://hub.docker.com/r/photoprism/photoprism)
 
 
 

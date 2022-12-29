@@ -3,12 +3,12 @@
 page_title: "elestio_postgresql Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PostgreSQL is a resource that creates a service with the template_id = 11. PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.
+  PostgreSQL Resource is a preconfigured Service Resource with the template_id = 11. PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance. Docker hub image: postgres https://hub.docker.com/r/postgres
 ---
 
 # elestio_postgresql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" height="100" /><br/><br/> PostgreSQL is a resource that creates a service with the `template_id = 11`. PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.
+PostgreSQL Resource is a preconfigured Service Resource with the `template_id = 11`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" height="100" /><br/> PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br/><br/> Docker hub image: [`postgres`](https://hub.docker.com/r/postgres)
 
 
 

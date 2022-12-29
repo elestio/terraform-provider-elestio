@@ -3,12 +3,12 @@
 page_title: "elestio_microk8s Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Microk8s is a resource that creates a service with the template_id = 180. MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge
+  Microk8s Resource is a preconfigured Service Resource with the template_id = 180. MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge
 ---
 
 # elestio_microk8s (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" height="100" /><br/><br/> Microk8s is a resource that creates a service with the `template_id = 180`. MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge
+Microk8s Resource is a preconfigured Service Resource with the `template_id = 180`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" height="100" /><br/> MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_budibase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Budibase is a resource that creates a service with the template_id = 94. Budibase is a quick way to build business apps that empower teams and improve productivity.
+  Budibase Resource is a preconfigured Service Resource with the template_id = 94. Budibase is a quick way to build business apps that empower teams and improve productivity.  Docker hub image: budibase/apps https://hub.docker.com/r/budibase/apps
 ---
 
 # elestio_budibase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" height="100" /><br/><br/> Budibase is a resource that creates a service with the `template_id = 94`. Budibase is a quick way to build business apps that empower teams and improve productivity.
+Budibase Resource is a preconfigured Service Resource with the `template_id = 94`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" height="100" /><br/> Budibase is a quick way to build business apps that empower teams and improve productivity. <br/><br/> Docker hub image: [`budibase/apps`](https://hub.docker.com/r/budibase/apps)
 
 
 

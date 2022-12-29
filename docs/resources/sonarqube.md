@@ -3,12 +3,12 @@
 page_title: "elestio_sonarqube Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SonarQube is a resource that creates a service with the template_id = 113. SonarQube is an open-source platform that reveals the health of an application and highlights new issues.
+  SonarQube Resource is a preconfigured Service Resource with the template_id = 113. SonarQube is an open-source platform that reveals the health of an application and highlights new issues. Docker hub image: bitnami/sonarqube https://hub.docker.com/r/bitnami/sonarqube
 ---
 
 # elestio_sonarqube (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" height="100" /><br/><br/> SonarQube is a resource that creates a service with the `template_id = 113`. SonarQube is an open-source platform that reveals the health of an application and highlights new issues.
+SonarQube Resource is a preconfigured Service Resource with the `template_id = 113`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" height="100" /><br/> SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br/><br/> Docker hub image: [`bitnami/sonarqube`](https://hub.docker.com/r/bitnami/sonarqube)
 
 
 

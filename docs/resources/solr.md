@@ -3,12 +3,12 @@
 page_title: "elestio_solr Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Solr is a resource that creates a service with the template_id = 300. Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.
+  Solr Resource is a preconfigured Service Resource with the template_id = 300. Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene. Docker hub image: bitnami/solr https://hub.docker.com/r/bitnami/solr
 ---
 
 # elestio_solr (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" height="100" /><br/><br/> Solr is a resource that creates a service with the `template_id = 300`. Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.
+Solr Resource is a preconfigured Service Resource with the `template_id = 300`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" height="100" /><br/> Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br/><br/> Docker hub image: [`bitnami/solr`](https://hub.docker.com/r/bitnami/solr)
 
 
 

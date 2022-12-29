@@ -3,12 +3,12 @@
 page_title: "elestio_btcpay Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  BTCPay is a resource that creates a service with the template_id = 283. Start Accepting Bitcoin Payments With 0% Fees & No Third-party
+  BTCPay Resource is a preconfigured Service Resource with the template_id = 283. Start Accepting Bitcoin Payments With 0% Fees & No Third-party Docker hub image: btcpayserver/btcpayserver https://hub.docker.com/r/btcpayserver/btcpayserver
 ---
 
 # elestio_btcpay (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" height="100" /><br/><br/> BTCPay is a resource that creates a service with the `template_id = 283`. Start Accepting Bitcoin Payments With 0% Fees & No Third-party
+BTCPay Resource is a preconfigured Service Resource with the `template_id = 283`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" height="100" /><br/> Start Accepting Bitcoin Payments With 0% Fees & No Third-party<br/><br/> Docker hub image: [`btcpayserver/btcpayserver`](https://hub.docker.com/r/btcpayserver/btcpayserver)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_immudb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ImmuDB is a resource that creates a service with the template_id = 251. immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history
+  ImmuDB Resource is a preconfigured Service Resource with the template_id = 251. immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history Docker hub image: codenotary/immudb https://hub.docker.com/r/codenotary/immudb
 ---
 
 # elestio_immudb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" height="100" /><br/><br/> ImmuDB is a resource that creates a service with the `template_id = 251`. immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history
+ImmuDB Resource is a preconfigured Service Resource with the `template_id = 251`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" height="100" /><br/> immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history<br/><br/> Docker hub image: [`codenotary/immudb`](https://hub.docker.com/r/codenotary/immudb)
 
 
 

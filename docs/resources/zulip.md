@@ -3,12 +3,12 @@
 page_title: "elestio_zulip Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Zulip is a resource that creates a service with the template_id = 232. Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.
+  Zulip Resource is a preconfigured Service Resource with the template_id = 232. Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful. Docker hub image: zulip/docker-zulip https://hub.docker.com/r/zulip/docker-zulip
 ---
 
 # elestio_zulip (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" height="100" /><br/><br/> Zulip is a resource that creates a service with the `template_id = 232`. Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.
+Zulip Resource is a preconfigured Service Resource with the `template_id = 232`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" height="100" /><br/> Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.<br/><br/> Docker hub image: [`zulip/docker-zulip`](https://hub.docker.com/r/zulip/docker-zulip)
 
 
 

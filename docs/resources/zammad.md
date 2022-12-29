@@ -3,12 +3,12 @@
 page_title: "elestio_zammad Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Zammad is a resource that creates a service with the template_id = 106. Zammad is a web-based, open-source helpdesk/customer support system.
+  Zammad Resource is a preconfigured Service Resource with the template_id = 106. Zammad is a web-based, open-source helpdesk/customer support system. Docker hub image: zammad/zammad-docker-compose https://hub.docker.com/r/zammad/zammad-docker-compose
 ---
 
 # elestio_zammad (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" height="100" /><br/><br/> Zammad is a resource that creates a service with the `template_id = 106`. Zammad is a web-based, open-source helpdesk/customer support system.
+Zammad Resource is a preconfigured Service Resource with the `template_id = 106`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" height="100" /><br/> Zammad is a web-based, open-source helpdesk/customer support system.<br/><br/> Docker hub image: [`zammad/zammad-docker-compose`](https://hub.docker.com/r/zammad/zammad-docker-compose)
 
 
 

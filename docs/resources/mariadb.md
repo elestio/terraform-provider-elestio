@@ -3,12 +3,12 @@
 page_title: "elestio_mariadb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MariaDB is a resource that creates a service with the template_id = 270. The open source relational database
+  MariaDB Resource is a preconfigured Service Resource with the template_id = 270. The open source relational database Docker hub image: mariadb https://hub.docker.com/r/mariadb
 ---
 
 # elestio_mariadb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" height="100" /><br/><br/> MariaDB is a resource that creates a service with the `template_id = 270`. The open source relational database
+MariaDB Resource is a preconfigured Service Resource with the `template_id = 270`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" height="100" /><br/> The open source relational database<br/><br/> Docker hub image: [`mariadb`](https://hub.docker.com/r/mariadb)
 
 
 

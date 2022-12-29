@@ -3,12 +3,12 @@
 page_title: "elestio_influxdb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  InfluxDB is a resource that creates a service with the template_id = 116. InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software.
+  InfluxDB Resource is a preconfigured Service Resource with the template_id = 116. InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software.  Docker hub image: bitnami/influxdb https://hub.docker.com/r/bitnami/influxdb
 ---
 
 # elestio_influxdb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" height="100" /><br/><br/> InfluxDB is a resource that creates a service with the `template_id = 116`. InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software.
+InfluxDB Resource is a preconfigured Service Resource with the `template_id = 116`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" height="100" /><br/> InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br/><br/> Docker hub image: [`bitnami/influxdb`](https://hub.docker.com/r/bitnami/influxdb)
 
 
 

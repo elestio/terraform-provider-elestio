@@ -3,12 +3,12 @@
 page_title: "elestio_cassandra Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Cassandra is a resource that creates a service with the template_id = 253. Open Source NoSQL Database
+  Cassandra Resource is a preconfigured Service Resource with the template_id = 253. Open Source NoSQL Database Docker hub image: bitnami/cassandra https://hub.docker.com/r/bitnami/cassandra
 ---
 
 # elestio_cassandra (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" height="100" /><br/><br/> Cassandra is a resource that creates a service with the `template_id = 253`. Open Source NoSQL Database
+Cassandra Resource is a preconfigured Service Resource with the `template_id = 253`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" height="100" /><br/> Open Source NoSQL Database<br/><br/> Docker hub image: [`bitnami/cassandra`](https://hub.docker.com/r/bitnami/cassandra)
 
 
 

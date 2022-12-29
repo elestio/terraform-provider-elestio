@@ -3,12 +3,12 @@
 page_title: "elestio_lightdash Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Lightdash is a resource that creates a service with the template_id = 205. Lighdash an open source alternative to Looker built using dbt.
+  Lightdash Resource is a preconfigured Service Resource with the template_id = 205. Lighdash an open source alternative to Looker built using dbt. Docker hub image: lightdash/lightdash https://hub.docker.com/r/lightdash/lightdash
 ---
 
 # elestio_lightdash (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" height="100" /><br/><br/> Lightdash is a resource that creates a service with the `template_id = 205`. Lighdash an open source alternative to Looker built using dbt.
+Lightdash Resource is a preconfigured Service Resource with the `template_id = 205`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" height="100" /><br/> Lighdash an open source alternative to Looker built using dbt.<br/><br/> Docker hub image: [`lightdash/lightdash`](https://hub.docker.com/r/lightdash/lightdash)
 
 
 

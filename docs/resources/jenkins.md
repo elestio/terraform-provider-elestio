@@ -3,12 +3,12 @@
 page_title: "elestio_jenkins Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Jenkins is a resource that creates a service with the template_id = 114. Jenkins is the leading open-source automation server.
+  Jenkins Resource is a preconfigured Service Resource with the template_id = 114. Jenkins is the leading open-source automation server. Docker hub image: bitnami/jenkins https://hub.docker.com/r/bitnami/jenkins
 ---
 
 # elestio_jenkins (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" height="100" /><br/><br/> Jenkins is a resource that creates a service with the `template_id = 114`. Jenkins is the leading open-source automation server.
+Jenkins Resource is a preconfigured Service Resource with the `template_id = 114`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" height="100" /><br/> Jenkins is the leading open-source automation server.<br/><br/> Docker hub image: [`bitnami/jenkins`](https://hub.docker.com/r/bitnami/jenkins)
 
 
 

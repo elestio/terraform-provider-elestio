@@ -3,12 +3,12 @@
 page_title: "elestio_node_red Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Node-red is a resource that creates a service with the template_id = 55. Node-RED is a low-code programming environment for event-driven applications.
+  Node-red Resource is a preconfigured Service Resource with the template_id = 55. Node-RED is a low-code programming environment for event-driven applications.  Docker hub image: nodered/node-red https://hub.docker.com/r/nodered/node-red
 ---
 
 # elestio_node_red (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/node-red-logo-gbLk.png" width="100" height="100" /><br/><br/> Node-red is a resource that creates a service with the `template_id = 55`. Node-RED is a low-code programming environment for event-driven applications.
+Node-red Resource is a preconfigured Service Resource with the `template_id = 55`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/node-red-logo-gbLk.png" width="100" height="100" /><br/> Node-RED is a low-code programming environment for event-driven applications. <br/><br/> Docker hub image: [`nodered/node-red`](https://hub.docker.com/r/nodered/node-red)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_daptin Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Daptin is a resource that creates a service with the template_id = 139. Daptin is a powerful data and services API server.
+  Daptin Resource is a preconfigured Service Resource with the template_id = 139. Daptin is a powerful data and services API server.  Docker hub image: daptin/daptin https://hub.docker.com/r/daptin/daptin
 ---
 
 # elestio_daptin (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/daptin-EyiZ.png" width="100" height="100" /><br/><br/> Daptin is a resource that creates a service with the `template_id = 139`. Daptin is a powerful data and services API server.
+Daptin Resource is a preconfigured Service Resource with the `template_id = 139`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/daptin-EyiZ.png" width="100" height="100" /><br/> Daptin is a powerful data and services API server. <br/><br/> Docker hub image: [`daptin/daptin`](https://hub.docker.com/r/daptin/daptin)
 
 
 

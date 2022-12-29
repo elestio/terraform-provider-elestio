@@ -3,12 +3,12 @@
 page_title: "elestio_sensu Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Sensu is a resource that creates a service with the template_id = 211. Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.
+  Sensu Resource is a preconfigured Service Resource with the template_id = 211. Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications. Docker hub image: sensu/sensu https://hub.docker.com/r/sensu/sensu
 ---
 
 # elestio_sensu (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" height="100" /><br/><br/> Sensu is a resource that creates a service with the `template_id = 211`. Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.
+Sensu Resource is a preconfigured Service Resource with the `template_id = 211`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" height="100" /><br/> Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.<br/><br/> Docker hub image: [`sensu/sensu`](https://hub.docker.com/r/sensu/sensu)
 
 
 

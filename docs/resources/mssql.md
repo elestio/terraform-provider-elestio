@@ -3,12 +3,12 @@
 page_title: "elestio_mssql Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MSSQL is a resource that creates a service with the template_id = 70. SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.
+  MSSQL Resource is a preconfigured Service Resource with the template_id = 70. SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional. Docker hub image: mcr.microsoft.com/mssql/server https://hub.docker.com/r/mcr.microsoft.com/mssql/server
 ---
 
 # elestio_mssql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" height="100" /><br/><br/> MSSQL is a resource that creates a service with the `template_id = 70`. SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.
+MSSQL Resource is a preconfigured Service Resource with the `template_id = 70`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" height="100" /><br/> SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br/><br/> Docker hub image: [`mcr.microsoft.com/mssql/server`](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_linux_desktop Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Linux-desktop is a resource that creates a service with the template_id = 236. Linux Desktop in the browser. Install any linux app and run it in the browser.
+  Linux-desktop Resource is a preconfigured Service Resource with the template_id = 236. Linux Desktop in the browser. Install any linux app and run it in the browser. Docker hub image: elestio/docker-desktop-vnc https://hub.docker.com/r/elestio/docker-desktop-vnc
 ---
 
 # elestio_linux_desktop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LinuxDesktop-Mq0d.png" width="100" height="100" /><br/><br/> Linux-desktop is a resource that creates a service with the `template_id = 236`. Linux Desktop in the browser. Install any linux app and run it in the browser.
+Linux-desktop Resource is a preconfigured Service Resource with the `template_id = 236`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LinuxDesktop-Mq0d.png" width="100" height="100" /><br/> Linux Desktop in the browser. Install any linux app and run it in the browser.<br/><br/> Docker hub image: [`elestio/docker-desktop-vnc`](https://hub.docker.com/r/elestio/docker-desktop-vnc)
 
 
 

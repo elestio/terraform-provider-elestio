@@ -3,12 +3,12 @@
 page_title: "elestio_trudesk Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Trudesk is a resource that creates a service with the template_id = 271. Trudesk is an open-source help desk/ticketing solution.
+  Trudesk Resource is a preconfigured Service Resource with the template_id = 271. Trudesk is an open-source help desk/ticketing solution. Docker hub image: polonel/trudesk https://hub.docker.com/r/polonel/trudesk
 ---
 
 # elestio_trudesk (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" height="100" /><br/><br/> Trudesk is a resource that creates a service with the `template_id = 271`. Trudesk is an open-source help desk/ticketing solution.
+Trudesk Resource is a preconfigured Service Resource with the `template_id = 271`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" height="100" /><br/> Trudesk is an open-source help desk/ticketing solution.<br/><br/> Docker hub image: [`polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)
 
 
 

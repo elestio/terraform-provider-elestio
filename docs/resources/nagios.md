@@ -3,12 +3,12 @@
 page_title: "elestio_nagios Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Nagios is a resource that creates a service with the template_id = 254. The Industry Standard In IT Infrastructure Monitoring
+  Nagios Resource is a preconfigured Service Resource with the template_id = 254. The Industry Standard In IT Infrastructure Monitoring Docker hub image: jasonrivers/nagios https://hub.docker.com/r/jasonrivers/nagios
 ---
 
 # elestio_nagios (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" height="100" /><br/><br/> Nagios is a resource that creates a service with the `template_id = 254`. The Industry Standard In IT Infrastructure Monitoring
+Nagios Resource is a preconfigured Service Resource with the `template_id = 254`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" height="100" /><br/> The Industry Standard In IT Infrastructure Monitoring<br/><br/> Docker hub image: [`jasonrivers/nagios`](https://hub.docker.com/r/jasonrivers/nagios)
 
 
 

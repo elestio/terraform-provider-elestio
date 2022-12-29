@@ -3,12 +3,12 @@
 page_title: "elestio_mapzy Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mapzy is a resource that creates a service with the template_id = 226. A simple, self-hostable store finder that cares about your privacy.
+  Mapzy Resource is a preconfigured Service Resource with the template_id = 226. A simple, self-hostable store finder that cares about your privacy. Docker hub image: mapzy/mapzy https://hub.docker.com/r/mapzy/mapzy
 ---
 
 # elestio_mapzy (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" height="100" /><br/><br/> Mapzy is a resource that creates a service with the `template_id = 226`. A simple, self-hostable store finder that cares about your privacy.
+Mapzy Resource is a preconfigured Service Resource with the `template_id = 226`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" height="100" /><br/> A simple, self-hostable store finder that cares about your privacy.<br/><br/> Docker hub image: [`mapzy/mapzy`](https://hub.docker.com/r/mapzy/mapzy)
 
 
 

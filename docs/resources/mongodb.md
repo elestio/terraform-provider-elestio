@@ -3,12 +3,12 @@
 page_title: "elestio_mongodb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MongoDB is a resource that creates a service with the template_id = 19. MongoDB is a document-oriented NoSQL database used for high-volume data storage.
+  MongoDB Resource is a preconfigured Service Resource with the template_id = 19. MongoDB is a document-oriented NoSQL database used for high-volume data storage.  Docker hub image: mongo https://hub.docker.com/r/mongo
 ---
 
 # elestio_mongodb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" height="100" /><br/><br/> MongoDB is a resource that creates a service with the `template_id = 19`. MongoDB is a document-oriented NoSQL database used for high-volume data storage.
+MongoDB Resource is a preconfigured Service Resource with the `template_id = 19`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" height="100" /><br/> MongoDB is a document-oriented NoSQL database used for high-volume data storage. <br/><br/> Docker hub image: [`mongo`](https://hub.docker.com/r/mongo)
 
 
 

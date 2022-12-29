@@ -3,12 +3,12 @@
 page_title: "elestio_flarum Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Flarum is a resource that creates a service with the template_id = 241. Flarum is a delightfully simple discussion platform for your website
+  Flarum Resource is a preconfigured Service Resource with the template_id = 241. Flarum is a delightfully simple discussion platform for your website Docker hub image: crazymax/flarum https://hub.docker.com/r/crazymax/flarum
 ---
 
 # elestio_flarum (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" height="100" /><br/><br/> Flarum is a resource that creates a service with the `template_id = 241`. Flarum is a delightfully simple discussion platform for your website
+Flarum Resource is a preconfigured Service Resource with the `template_id = 241`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" height="100" /><br/> Flarum is a delightfully simple discussion platform for your website<br/><br/> Docker hub image: [`crazymax/flarum`](https://hub.docker.com/r/crazymax/flarum)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_rustdeskserver Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  RustdeskServer is a resource that creates a service with the template_id = 288. Open source virtual / remote desktop infrastructure for everyone!
+  RustdeskServer Resource is a preconfigured Service Resource with the template_id = 288. Open source virtual / remote desktop infrastructure for everyone! Docker hub image: rustdesk/rustdesk-server https://hub.docker.com/r/rustdesk/rustdesk-server
 ---
 
 # elestio_rustdeskserver (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" height="100" /><br/><br/> RustdeskServer is a resource that creates a service with the `template_id = 288`. Open source virtual / remote desktop infrastructure for everyone!
+RustdeskServer Resource is a preconfigured Service Resource with the `template_id = 288`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" height="100" /><br/> Open source virtual / remote desktop infrastructure for everyone!<br/><br/> Docker hub image: [`rustdesk/rustdesk-server`](https://hub.docker.com/r/rustdesk/rustdesk-server)
 
 
 

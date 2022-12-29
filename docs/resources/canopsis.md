@@ -3,12 +3,12 @@
 page_title: "elestio_canopsis Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Canopsis is a resource that creates a service with the template_id = 259. The first open-source hypervision solution
+  Canopsis Resource is a preconfigured Service Resource with the template_id = 259. The first open-source hypervision solution Docker hub image: canopsis/canopsis-api https://hub.docker.com/r/canopsis/canopsis-api
 ---
 
 # elestio_canopsis (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" height="100" /><br/><br/> Canopsis is a resource that creates a service with the `template_id = 259`. The first open-source hypervision solution
+Canopsis Resource is a preconfigured Service Resource with the `template_id = 259`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" height="100" /><br/> The first open-source hypervision solution<br/><br/> Docker hub image: [`canopsis/canopsis-api`](https://hub.docker.com/r/canopsis/canopsis-api)
 
 
 

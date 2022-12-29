@@ -3,12 +3,12 @@
 page_title: "elestio_kafka Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Kafka is a resource that creates a service with the template_id = 115. Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications.
+  Kafka Resource is a preconfigured Service Resource with the template_id = 115. Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications.  Docker hub image: confluentinc/cp-kafka https://hub.docker.com/r/confluentinc/cp-kafka
 ---
 
 # elestio_kafka (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" height="100" /><br/><br/> Kafka is a resource that creates a service with the `template_id = 115`. Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications.
+Kafka Resource is a preconfigured Service Resource with the `template_id = 115`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" height="100" /><br/> Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. <br/><br/> Docker hub image: [`confluentinc/cp-kafka`](https://hub.docker.com/r/confluentinc/cp-kafka)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_papercups Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Papercups is a resource that creates a service with the template_id = 197. Papercups is a open-source live customer chat
+  Papercups Resource is a preconfigured Service Resource with the template_id = 197. Papercups is a open-source live customer chat Docker hub image: papercups/papercups https://hub.docker.com/r/papercups/papercups
 ---
 
 # elestio_papercups (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" height="100" /><br/><br/> Papercups is a resource that creates a service with the `template_id = 197`. Papercups is a open-source live customer chat
+Papercups Resource is a preconfigured Service Resource with the `template_id = 197`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" height="100" /><br/> Papercups is a open-source live customer chat<br/><br/> Docker hub image: [`papercups/papercups`](https://hub.docker.com/r/papercups/papercups)
 
 
 

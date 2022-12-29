@@ -3,12 +3,12 @@
 page_title: "elestio_wikijs Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Wikijs is a resource that creates a service with the template_id = 58. Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.
+  Wikijs Resource is a preconfigured Service Resource with the template_id = 58. Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown. Docker hub image: requarks/wiki https://hub.docker.com/r/requarks/wiki
 ---
 
 # elestio_wikijs (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" height="100" /><br/><br/> Wikijs is a resource that creates a service with the `template_id = 58`. Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.
+Wikijs Resource is a preconfigured Service Resource with the `template_id = 58`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" height="100" /><br/> Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.<br/><br/> Docker hub image: [`requarks/wiki`](https://hub.docker.com/r/requarks/wiki)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_erpnext Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ErpNext is a resource that creates a service with the template_id = 120. ERPNext is the leading open-source enterprise resource planning (ERP) software.
+  ErpNext Resource is a preconfigured Service Resource with the template_id = 120. ERPNext is the leading open-source enterprise resource planning (ERP) software.  Docker hub image: frappe/erpnext https://hub.docker.com/r/frappe/erpnext
 ---
 
 # elestio_erpnext (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" height="100" /><br/><br/> ErpNext is a resource that creates a service with the `template_id = 120`. ERPNext is the leading open-source enterprise resource planning (ERP) software.
+ErpNext Resource is a preconfigured Service Resource with the `template_id = 120`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" height="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/> Docker hub image: [`frappe/erpnext`](https://hub.docker.com/r/frappe/erpnext)
 
 
 

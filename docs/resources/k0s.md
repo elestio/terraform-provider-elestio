@@ -3,12 +3,12 @@
 page_title: "elestio_k0s Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  k0s is a resource that creates a service with the template_id = 214. The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.
+  k0s Resource is a preconfigured Service Resource with the template_id = 214. The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.
 ---
 
 # elestio_k0s (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" height="100" /><br/><br/> k0s is a resource that creates a service with the `template_id = 214`. The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.
+k0s Resource is a preconfigured Service Resource with the `template_id = 214`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" height="100" /><br/> The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.
 
 
 

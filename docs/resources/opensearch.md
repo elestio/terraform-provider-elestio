@@ -3,12 +3,12 @@
 page_title: "elestio_opensearch Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenSearch is a resource that creates a service with the template_id = 195. Open source distributed and RESTful search engine.
+  OpenSearch Resource is a preconfigured Service Resource with the template_id = 195. Open source distributed and RESTful search engine. Docker hub image: opensearchproject/opensearch https://hub.docker.com/r/opensearchproject/opensearch
 ---
 
 # elestio_opensearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" height="100" /><br/><br/> OpenSearch is a resource that creates a service with the `template_id = 195`. Open source distributed and RESTful search engine.
+OpenSearch Resource is a preconfigured Service Resource with the `template_id = 195`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" height="100" /><br/> Open source distributed and RESTful search engine.<br/><br/> Docker hub image: [`opensearchproject/opensearch`](https://hub.docker.com/r/opensearchproject/opensearch)
 
 
 

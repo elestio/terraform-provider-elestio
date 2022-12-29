@@ -3,12 +3,12 @@
 page_title: "elestio_superset Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Superset is a resource that creates a service with the template_id = 105. Apache Superset is a data visualization and data exploration platform.
+  Superset Resource is a preconfigured Service Resource with the template_id = 105. Apache Superset is a data visualization and data exploration platform. Docker hub image: apache/superset https://hub.docker.com/r/apache/superset
 ---
 
 # elestio_superset (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" height="100" /><br/><br/> Superset is a resource that creates a service with the `template_id = 105`. Apache Superset is a data visualization and data exploration platform.
+Superset Resource is a preconfigured Service Resource with the `template_id = 105`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" height="100" /><br/> Apache Superset is a data visualization and data exploration platform.<br/><br/> Docker hub image: [`apache/superset`](https://hub.docker.com/r/apache/superset)
 
 
 

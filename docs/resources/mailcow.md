@@ -3,12 +3,12 @@
 page_title: "elestio_mailcow Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MailCow is a resource that creates a service with the template_id = 122. Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.
+  MailCow Resource is a preconfigured Service Resource with the template_id = 122. Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc. Docker hub image: mailcow https://hub.docker.com/r/mailcow
 ---
 
 # elestio_mailcow (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" height="100" /><br/><br/> MailCow is a resource that creates a service with the `template_id = 122`. Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.
+MailCow Resource is a preconfigured Service Resource with the `template_id = 122`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" height="100" /><br/> Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br/><br/> Docker hub image: [`mailcow`](https://hub.docker.com/r/mailcow)
 
 
 

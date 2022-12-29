@@ -3,12 +3,12 @@
 page_title: "elestio_browserless Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Browserless is a resource that creates a service with the template_id = 77. Browserless provides fast, scalable, reliable web browser automation.
+  Browserless Resource is a preconfigured Service Resource with the template_id = 77. Browserless provides fast, scalable, reliable web browser automation.  Docker hub image: browserless/chrome https://hub.docker.com/r/browserless/chrome
 ---
 
 # elestio_browserless (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" height="100" /><br/><br/> Browserless is a resource that creates a service with the `template_id = 77`. Browserless provides fast, scalable, reliable web browser automation.
+Browserless Resource is a preconfigured Service Resource with the `template_id = 77`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" height="100" /><br/> Browserless provides fast, scalable, reliable web browser automation. <br/><br/> Docker hub image: [`browserless/chrome`](https://hub.docker.com/r/browserless/chrome)
 
 
 

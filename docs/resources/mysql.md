@@ -3,12 +3,12 @@
 page_title: "elestio_mysql Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MySQL is a resource that creates a service with the template_id = 12. MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.
+  MySQL Resource is a preconfigured Service Resource with the template_id = 12. MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms. Docker hub image: mysql https://hub.docker.com/r/mysql
 ---
 
 # elestio_mysql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" height="100" /><br/><br/> MySQL is a resource that creates a service with the `template_id = 12`. MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.
+MySQL Resource is a preconfigured Service Resource with the `template_id = 12`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" height="100" /><br/> MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br/><br/> Docker hub image: [`mysql`](https://hub.docker.com/r/mysql)
 
 
 

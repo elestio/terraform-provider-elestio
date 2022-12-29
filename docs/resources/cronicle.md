@@ -3,12 +3,12 @@
 page_title: "elestio_cronicle Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Cronicle is a resource that creates a service with the template_id = 206. Cronicle is a simple, distributed task scheduler and runner with a web based UI.
+  Cronicle Resource is a preconfigured Service Resource with the template_id = 206. Cronicle is a simple, distributed task scheduler and runner with a web based UI. Docker hub image: btdwv/cronicle https://hub.docker.com/r/btdwv/cronicle
 ---
 
 # elestio_cronicle (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" height="100" /><br/><br/> Cronicle is a resource that creates a service with the `template_id = 206`. Cronicle is a simple, distributed task scheduler and runner with a web based UI.
+Cronicle Resource is a preconfigured Service Resource with the `template_id = 206`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" height="100" /><br/> Cronicle is a simple, distributed task scheduler and runner with a web based UI.<br/><br/> Docker hub image: [`btdwv/cronicle`](https://hub.docker.com/r/btdwv/cronicle)
 
 
 

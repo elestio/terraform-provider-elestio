@@ -3,12 +3,12 @@
 page_title: "elestio_pocketbase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PocketBase is a resource that creates a service with the template_id = 298. Open Source backend for your next SaaS and Mobile app in 1 file
+  PocketBase Resource is a preconfigured Service Resource with the template_id = 298. Open Source backend for your next SaaS and Mobile app in 1 file Docker hub image: augustodelg/pocketbase https://hub.docker.com/r/augustodelg/pocketbase
 ---
 
 # elestio_pocketbase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" height="100" /><br/><br/> PocketBase is a resource that creates a service with the `template_id = 298`. Open Source backend for your next SaaS and Mobile app in 1 file
+PocketBase Resource is a preconfigured Service Resource with the `template_id = 298`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" height="100" /><br/> Open Source backend for your next SaaS and Mobile app in 1 file<br/><br/> Docker hub image: [`augustodelg/pocketbase`](https://hub.docker.com/r/augustodelg/pocketbase)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_onedev Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Onedev is a resource that creates a service with the template_id = 126. OneDev is an open-source all-in-one DevOps platform.
+  Onedev Resource is a preconfigured Service Resource with the template_id = 126. OneDev is an open-source all-in-one DevOps platform. Docker hub image: 1dev/server https://hub.docker.com/r/1dev/server
 ---
 
 # elestio_onedev (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" height="100" /><br/><br/> Onedev is a resource that creates a service with the `template_id = 126`. OneDev is an open-source all-in-one DevOps platform.
+Onedev Resource is a preconfigured Service Resource with the `template_id = 126`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" height="100" /><br/> OneDev is an open-source all-in-one DevOps platform.<br/><br/> Docker hub image: [`1dev/server`](https://hub.docker.com/r/1dev/server)
 
 
 

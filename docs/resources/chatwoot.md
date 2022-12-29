@@ -3,12 +3,12 @@
 page_title: "elestio_chatwoot Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Chatwoot is a resource that creates a service with the template_id = 84. Chatwoot is an open-source, alternative customer engagement suite.
+  Chatwoot Resource is a preconfigured Service Resource with the template_id = 84. Chatwoot is an open-source, alternative customer engagement suite. Docker hub image: chatwoot/chatwoot https://hub.docker.com/r/chatwoot/chatwoot
 ---
 
 # elestio_chatwoot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" height="100" /><br/><br/> Chatwoot is a resource that creates a service with the `template_id = 84`. Chatwoot is an open-source, alternative customer engagement suite.
+Chatwoot Resource is a preconfigured Service Resource with the `template_id = 84`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" height="100" /><br/> Chatwoot is an open-source, alternative customer engagement suite.<br/><br/> Docker hub image: [`chatwoot/chatwoot`](https://hub.docker.com/r/chatwoot/chatwoot)
 
 
 

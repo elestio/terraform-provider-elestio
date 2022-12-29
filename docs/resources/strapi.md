@@ -3,12 +3,12 @@
 page_title: "elestio_strapi Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Strapi is a resource that creates a service with the template_id = 65. Strapi enables easy building of self-hosted, customizable, performant content API.
+  Strapi Resource is a preconfigured Service Resource with the template_id = 65. Strapi enables easy building of self-hosted, customizable, performant content API. Docker hub image: strapi/strapi https://hub.docker.com/r/strapi/strapi
 ---
 
 # elestio_strapi (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" height="100" /><br/><br/> Strapi is a resource that creates a service with the `template_id = 65`. Strapi enables easy building of self-hosted, customizable, performant content API.
+Strapi Resource is a preconfigured Service Resource with the `template_id = 65`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" height="100" /><br/> Strapi enables easy building of self-hosted, customizable, performant content API.<br/><br/> Docker hub image: [`strapi/strapi`](https://hub.docker.com/r/strapi/strapi)
 
 
 

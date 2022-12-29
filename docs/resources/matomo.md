@@ -3,12 +3,12 @@
 page_title: "elestio_matomo Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Matomo is a resource that creates a service with the template_id = 210. Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver
+  Matomo Resource is a preconfigured Service Resource with the template_id = 210. Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver Docker hub image: matomo https://hub.docker.com/r/matomo
 ---
 
 # elestio_matomo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" height="100" /><br/><br/> Matomo is a resource that creates a service with the `template_id = 210`. Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver
+Matomo Resource is a preconfigured Service Resource with the `template_id = 210`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" height="100" /><br/> Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br/><br/> Docker hub image: [`matomo`](https://hub.docker.com/r/matomo)
 
 
 

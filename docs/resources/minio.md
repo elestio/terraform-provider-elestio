@@ -3,12 +3,12 @@
 page_title: "elestio_minio Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MinIO is a resource that creates a service with the template_id = 63. MinIO is a leader in hybrid cloud and multi-cloud object storage.
+  MinIO Resource is a preconfigured Service Resource with the template_id = 63. MinIO is a leader in hybrid cloud and multi-cloud object storage. Docker hub image: minio/minio https://hub.docker.com/r/minio/minio
 ---
 
 # elestio_minio (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" height="100" /><br/><br/> MinIO is a resource that creates a service with the `template_id = 63`. MinIO is a leader in hybrid cloud and multi-cloud object storage.
+MinIO Resource is a preconfigured Service Resource with the `template_id = 63`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" height="100" /><br/> MinIO is a leader in hybrid cloud and multi-cloud object storage.<br/><br/> Docker hub image: [`minio/minio`](https://hub.docker.com/r/minio/minio)
 
 
 

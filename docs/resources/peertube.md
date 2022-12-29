@@ -3,12 +3,12 @@
 page_title: "elestio_peertube Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PeerTube is a resource that creates a service with the template_id = 285. Free software to take back control of your videos.
+  PeerTube Resource is a preconfigured Service Resource with the template_id = 285. Free software to take back control of your videos. Docker hub image: chocobozzz/peertube https://hub.docker.com/r/chocobozzz/peertube
 ---
 
 # elestio_peertube (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" height="100" /><br/><br/> PeerTube is a resource that creates a service with the `template_id = 285`. Free software to take back control of your videos.
+PeerTube Resource is a preconfigured Service Resource with the `template_id = 285`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" height="100" /><br/> Free software to take back control of your videos.<br/><br/> Docker hub image: [`chocobozzz/peertube`](https://hub.docker.com/r/chocobozzz/peertube)
 
 
 

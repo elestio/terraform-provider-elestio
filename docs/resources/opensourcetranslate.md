@@ -3,12 +3,12 @@
 page_title: "elestio_opensourcetranslate Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenSourceTranslate is a resource that creates a service with the template_id = 185. OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.
+  OpenSourceTranslate Resource is a preconfigured Service Resource with the template_id = 185. OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted. Docker hub image: libretranslate/libretranslate https://hub.docker.com/r/libretranslate/libretranslate
 ---
 
 # elestio_opensourcetranslate (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" height="100" /><br/><br/> OpenSourceTranslate is a resource that creates a service with the `template_id = 185`. OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.
+OpenSourceTranslate Resource is a preconfigured Service Resource with the `template_id = 185`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" height="100" /><br/> OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br/><br/> Docker hub image: [`libretranslate/libretranslate`](https://hub.docker.com/r/libretranslate/libretranslate)
 
 
 

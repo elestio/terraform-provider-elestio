@@ -3,12 +3,12 @@
 page_title: "elestio_answer Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Answer is a resource that creates a service with the template_id = 295. An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+  Answer Resource is a preconfigured Service Resource with the template_id = 295. An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more. Docker hub image: answerdev/answer https://hub.docker.com/r/answerdev/answer
 ---
 
 # elestio_answer (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" height="100" /><br/><br/> Answer is a resource that creates a service with the `template_id = 295`. An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.
+Answer Resource is a preconfigured Service Resource with the `template_id = 295`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" height="100" /><br/> An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.<br/><br/> Docker hub image: [`answerdev/answer`](https://hub.docker.com/r/answerdev/answer)
 
 
 

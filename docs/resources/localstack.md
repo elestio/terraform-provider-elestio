@@ -3,12 +3,12 @@
 page_title: "elestio_localstack Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  LocalStack is a resource that creates a service with the template_id = 275. A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!
+  LocalStack Resource is a preconfigured Service Resource with the template_id = 275. A fully functional local cloud stack. Develop and test your cloud and serverless apps offline! Docker hub image: localstack/localstack https://hub.docker.com/r/localstack/localstack
 ---
 
 # elestio_localstack (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" height="100" /><br/><br/> LocalStack is a resource that creates a service with the `template_id = 275`. A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!
+LocalStack Resource is a preconfigured Service Resource with the `template_id = 275`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" height="100" /><br/> A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br/><br/> Docker hub image: [`localstack/localstack`](https://hub.docker.com/r/localstack/localstack)
 
 
 

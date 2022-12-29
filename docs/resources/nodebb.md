@@ -3,12 +3,12 @@
 page_title: "elestio_nodebb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  NodeBB is a resource that creates a service with the template_id = 90. NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.
+  NodeBB Resource is a preconfigured Service Resource with the template_id = 90. NodeBB is next-generation forum software - powerful, mobile-ready and easy to use. Docker hub image: nilsramsperger/nodebb https://hub.docker.com/r/nilsramsperger/nodebb
 ---
 
 # elestio_nodebb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" height="100" /><br/><br/> NodeBB is a resource that creates a service with the `template_id = 90`. NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.
+NodeBB Resource is a preconfigured Service Resource with the `template_id = 90`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" height="100" /><br/> NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.<br/><br/> Docker hub image: [`nilsramsperger/nodebb`](https://hub.docker.com/r/nilsramsperger/nodebb)
 
 
 

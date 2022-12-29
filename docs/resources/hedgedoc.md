@@ -3,12 +3,12 @@
 page_title: "elestio_hedgedoc Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  HedgeDoc is a resource that creates a service with the template_id = 243. HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor
+  HedgeDoc Resource is a preconfigured Service Resource with the template_id = 243. HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor Docker hub image: quay.io/hedgedoc/hedgedoc https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc
 ---
 
 # elestio_hedgedoc (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" height="100" /><br/><br/> HedgeDoc is a resource that creates a service with the `template_id = 243`. HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor
+HedgeDoc Resource is a preconfigured Service Resource with the `template_id = 243`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" height="100" /><br/> HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor<br/><br/> Docker hub image: [`quay.io/hedgedoc/hedgedoc`](https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc)
 
 
 

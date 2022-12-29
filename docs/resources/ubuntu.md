@@ -3,12 +3,12 @@
 page_title: "elestio_ubuntu Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ubuntu is a resource that creates a service with the template_id = 38. Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software.
+  Ubuntu Resource is a preconfigured Service Resource with the template_id = 38. Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software.
 ---
 
 # elestio_ubuntu (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" height="100" /><br/><br/> Ubuntu is a resource that creates a service with the `template_id = 38`. Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software.
+Ubuntu Resource is a preconfigured Service Resource with the `template_id = 38`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" height="100" /><br/> Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software.
 
 
 

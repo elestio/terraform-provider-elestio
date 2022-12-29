@@ -3,12 +3,12 @@
 page_title: "elestio_powerdns Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PowerDNS is a resource that creates a service with the template_id = 64. PowerDNS is a premier supplier of open-source DNS software, services and support.
+  PowerDNS Resource is a preconfigured Service Resource with the template_id = 64. PowerDNS is a premier supplier of open-source DNS software, services and support.  Docker hub image: aescanero/powerdns-admin https://hub.docker.com/r/aescanero/powerdns-admin
 ---
 
 # elestio_powerdns (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" height="100" /><br/><br/> PowerDNS is a resource that creates a service with the `template_id = 64`. PowerDNS is a premier supplier of open-source DNS software, services and support.
+PowerDNS Resource is a preconfigured Service Resource with the `template_id = 64`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" height="100" /><br/> PowerDNS is a premier supplier of open-source DNS software, services and support. <br/><br/> Docker hub image: [`aescanero/powerdns-admin`](https://hub.docker.com/r/aescanero/powerdns-admin)
 
 
 

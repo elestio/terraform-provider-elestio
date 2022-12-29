@@ -3,12 +3,12 @@
 page_title: "elestio_directus Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Directus is a resource that creates a service with the template_id = 57. Directus is an Open Data Platform for managing the content of any SQL database.
+  Directus Resource is a preconfigured Service Resource with the template_id = 57. Directus is an Open Data Platform for managing the content of any SQL database.   Docker hub image: directus/directus https://hub.docker.com/r/directus/directus
 ---
 
 # elestio_directus (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" height="100" /><br/><br/> Directus is a resource that creates a service with the `template_id = 57`. Directus is an Open Data Platform for managing the content of any SQL database.
+Directus Resource is a preconfigured Service Resource with the `template_id = 57`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" height="100" /><br/> Directus is an Open Data Platform for managing the content of any SQL database.  <br/><br/> Docker hub image: [`directus/directus`](https://hub.docker.com/r/directus/directus)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_clickhouse Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ClickHouse is a resource that creates a service with the template_id = 93. ClickHouse is an open-source, column-oriented DBMS for online analytical processing.
+  ClickHouse Resource is a preconfigured Service Resource with the template_id = 93. ClickHouse is an open-source, column-oriented DBMS for online analytical processing.  Docker hub image: yandex/clickhouse-server https://hub.docker.com/r/yandex/clickhouse-server
 ---
 
 # elestio_clickhouse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/clickhouse-WFqc.png" width="100" height="100" /><br/><br/> ClickHouse is a resource that creates a service with the `template_id = 93`. ClickHouse is an open-source, column-oriented DBMS for online analytical processing.
+ClickHouse Resource is a preconfigured Service Resource with the `template_id = 93`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/clickhouse-WFqc.png" width="100" height="100" /><br/> ClickHouse is an open-source, column-oriented DBMS for online analytical processing. <br/><br/> Docker hub image: [`yandex/clickhouse-server`](https://hub.docker.com/r/yandex/clickhouse-server)
 
 
 

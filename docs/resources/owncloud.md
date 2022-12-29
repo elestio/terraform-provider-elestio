@@ -3,12 +3,12 @@
 page_title: "elestio_owncloud Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ownCloud is a resource that creates a service with the template_id = 150. ownCloud is a suite of client-server software for creating and using file hosting services.
+  ownCloud Resource is a preconfigured Service Resource with the template_id = 150. ownCloud is a suite of client-server software for creating and using file hosting services.  Docker hub image: owncloud/server https://hub.docker.com/r/owncloud/server
 ---
 
 # elestio_owncloud (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" height="100" /><br/><br/> ownCloud is a resource that creates a service with the `template_id = 150`. ownCloud is a suite of client-server software for creating and using file hosting services.
+ownCloud Resource is a preconfigured Service Resource with the `template_id = 150`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" height="100" /><br/> ownCloud is a suite of client-server software for creating and using file hosting services. <br/><br/> Docker hub image: [`owncloud/server`](https://hub.docker.com/r/owncloud/server)
 
 
 

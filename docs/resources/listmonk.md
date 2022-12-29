@@ -3,12 +3,12 @@
 page_title: "elestio_listmonk Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Listmonk is a resource that creates a service with the template_id = 237. Listmonk is a self-hosted, high performance mailing list and newsletter manager
+  Listmonk Resource is a preconfigured Service Resource with the template_id = 237. Listmonk is a self-hosted, high performance mailing list and newsletter manager Docker hub image: listmonk/listmonk https://hub.docker.com/r/listmonk/listmonk
 ---
 
 # elestio_listmonk (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" height="100" /><br/><br/> Listmonk is a resource that creates a service with the `template_id = 237`. Listmonk is a self-hosted, high performance mailing list and newsletter manager
+Listmonk Resource is a preconfigured Service Resource with the `template_id = 237`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" height="100" /><br/> Listmonk is a self-hosted, high performance mailing list and newsletter manager<br/><br/> Docker hub image: [`listmonk/listmonk`](https://hub.docker.com/r/listmonk/listmonk)
 
 
 

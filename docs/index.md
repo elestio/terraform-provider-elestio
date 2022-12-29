@@ -12,7 +12,7 @@ description: |-
 The Elestio provider is used to interact with the API services provided by Elestio.
 
 In order to use this Provider, you must have an active account with Elestio.
-Pricing and signup information can be found at https://dash.elest.io/signup
+[Pricing](https://elest.io/pricing) and signup information can be found at https://dash.elest.io/signup.
 
 **&larr; Use the navigation to the left to read about the available resources.**
 
@@ -24,7 +24,7 @@ terraform {
   required_providers {
     elestio = {
       source  = "elestio/elestio"
-      version = "1.0.0"
+      version = "1.0.0" # check out the latest version in the release section
     }
   }
 }

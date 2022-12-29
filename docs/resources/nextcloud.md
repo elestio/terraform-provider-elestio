@@ -3,12 +3,12 @@
 page_title: "elestio_nextcloud Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  NextCloud is a resource that creates a service with the template_id = 59. NextCloud provides an industry-leading, on-premises content collaboration platform.
+  NextCloud Resource is a preconfigured Service Resource with the template_id = 59. NextCloud provides an industry-leading, on-premises content collaboration platform. Docker hub image: nextcloud https://hub.docker.com/r/nextcloud
 ---
 
 # elestio_nextcloud (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" height="100" /><br/><br/> NextCloud is a resource that creates a service with the `template_id = 59`. NextCloud provides an industry-leading, on-premises content collaboration platform.
+NextCloud Resource is a preconfigured Service Resource with the `template_id = 59`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" height="100" /><br/> NextCloud provides an industry-leading, on-premises content collaboration platform.<br/><br/> Docker hub image: [`nextcloud`](https://hub.docker.com/r/nextcloud)
 
 
 

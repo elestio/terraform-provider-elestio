@@ -3,12 +3,12 @@
 page_title: "elestio_openldap Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenLDAP is a resource that creates a service with the template_id = 221. OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)
+  OpenLDAP Resource is a preconfigured Service Resource with the template_id = 221. OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP) Docker hub image: osixia/openldap https://hub.docker.com/r/osixia/openldap
 ---
 
 # elestio_openldap (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" height="100" /><br/><br/> OpenLDAP is a resource that creates a service with the `template_id = 221`. OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)
+OpenLDAP Resource is a preconfigured Service Resource with the `template_id = 221`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" height="100" /><br/> OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)<br/><br/> Docker hub image: [`osixia/openldap`](https://hub.docker.com/r/osixia/openldap)
 
 
 

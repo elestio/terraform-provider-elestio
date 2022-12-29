@@ -3,12 +3,12 @@
 page_title: "elestio_wg_easy Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  WG-Easy is a resource that creates a service with the template_id = 177. WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike.
+  WG-Easy Resource is a preconfigured Service Resource with the template_id = 177. WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike.  Docker hub image: weejewel/wg-easy https://hub.docker.com/r/weejewel/wg-easy
 ---
 
 # elestio_wg_easy (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" height="100" /><br/><br/> WG-Easy is a resource that creates a service with the `template_id = 177`. WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike.
+WG-Easy Resource is a preconfigured Service Resource with the `template_id = 177`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" height="100" /><br/> WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br/><br/> Docker hub image: [`weejewel/wg-easy`](https://hub.docker.com/r/weejewel/wg-easy)
 
 
 

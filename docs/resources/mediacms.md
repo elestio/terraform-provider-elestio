@@ -3,12 +3,12 @@
 page_title: "elestio_mediacms Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MediaCMS is a resource that creates a service with the template_id = 175. MediaCMS is a fully featured open-source video and media CMS.
+  MediaCMS Resource is a preconfigured Service Resource with the template_id = 175. MediaCMS is a fully featured open-source video and media CMS. Docker hub image: mediacms/mediacms https://hub.docker.com/r/mediacms/mediacms
 ---
 
 # elestio_mediacms (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" height="100" /><br/><br/> MediaCMS is a resource that creates a service with the `template_id = 175`. MediaCMS is a fully featured open-source video and media CMS.
+MediaCMS Resource is a preconfigured Service Resource with the `template_id = 175`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" height="100" /><br/> MediaCMS is a fully featured open-source video and media CMS.<br/><br/> Docker hub image: [`mediacms/mediacms`](https://hub.docker.com/r/mediacms/mediacms)
 
 
 

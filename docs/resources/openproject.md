@@ -3,12 +3,12 @@
 page_title: "elestio_openproject Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenProject is a resource that creates a service with the template_id = 118. OpenProject is a web-based project management system for location-independent team collaboration.
+  OpenProject Resource is a preconfigured Service Resource with the template_id = 118. OpenProject is a web-based project management system for location-independent team collaboration. Docker hub image: openproject/community https://hub.docker.com/r/openproject/community
 ---
 
 # elestio_openproject (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" height="100" /><br/><br/> OpenProject is a resource that creates a service with the `template_id = 118`. OpenProject is a web-based project management system for location-independent team collaboration.
+OpenProject Resource is a preconfigured Service Resource with the `template_id = 118`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" height="100" /><br/> OpenProject is a web-based project management system for location-independent team collaboration.<br/><br/> Docker hub image: [`openproject/community`](https://hub.docker.com/r/openproject/community)
 
 
 

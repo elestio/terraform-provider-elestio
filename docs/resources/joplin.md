@@ -3,12 +3,12 @@
 page_title: "elestio_joplin Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Joplin is a resource that creates a service with the template_id = 200. Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS
+  Joplin Resource is a preconfigured Service Resource with the template_id = 200. Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS Docker hub image: joplin/server https://hub.docker.com/r/joplin/server
 ---
 
 # elestio_joplin (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" height="100" /><br/><br/> Joplin is a resource that creates a service with the `template_id = 200`. Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS
+Joplin Resource is a preconfigured Service Resource with the `template_id = 200`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" height="100" /><br/> Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS<br/><br/> Docker hub image: [`joplin/server`](https://hub.docker.com/r/joplin/server)
 
 
 

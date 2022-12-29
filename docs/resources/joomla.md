@@ -3,12 +3,12 @@
 page_title: "elestio_joomla Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Joomla is a resource that creates a service with the template_id = 97. Joomla is an award-winning content management system for building websites and powerful online applications.
+  Joomla Resource is a preconfigured Service Resource with the template_id = 97. Joomla is an award-winning content management system for building websites and powerful online applications. Docker hub image: bitnami/joomla https://hub.docker.com/r/bitnami/joomla
 ---
 
 # elestio_joomla (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" height="100" /><br/><br/> Joomla is a resource that creates a service with the `template_id = 97`. Joomla is an award-winning content management system for building websites and powerful online applications.
+Joomla Resource is a preconfigured Service Resource with the `template_id = 97`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" height="100" /><br/> Joomla is an award-winning content management system for building websites and powerful online applications.<br/><br/> Docker hub image: [`bitnami/joomla`](https://hub.docker.com/r/bitnami/joomla)
 
 
 

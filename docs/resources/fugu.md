@@ -3,12 +3,12 @@
 page_title: "elestio_fugu Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Fugu is a resource that creates a service with the template_id = 216. Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.
+  Fugu Resource is a preconfigured Service Resource with the template_id = 216. Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness. Docker hub image: shafyy/fugu https://hub.docker.com/r/shafyy/fugu
 ---
 
 # elestio_fugu (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" height="100" /><br/><br/> Fugu is a resource that creates a service with the `template_id = 216`. Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.
+Fugu Resource is a preconfigured Service Resource with the `template_id = 216`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" height="100" /><br/> Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.<br/><br/> Docker hub image: [`shafyy/fugu`](https://hub.docker.com/r/shafyy/fugu)
 
 
 

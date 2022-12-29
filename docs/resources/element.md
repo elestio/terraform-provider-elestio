@@ -3,12 +3,12 @@
 page_title: "elestio_element Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Element is a resource that creates a service with the template_id = 248. Create your community based on Matrix protocol
+  Element Resource is a preconfigured Service Resource with the template_id = 248. Create your community based on Matrix protocol Docker hub image: matrixdotorg/synapse https://hub.docker.com/r/matrixdotorg/synapse
 ---
 
 # elestio_element (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Element-rC1j.png" width="100" height="100" /><br/><br/> Element is a resource that creates a service with the `template_id = 248`. Create your community based on Matrix protocol
+Element Resource is a preconfigured Service Resource with the `template_id = 248`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Element-rC1j.png" width="100" height="100" /><br/> Create your community based on Matrix protocol<br/><br/> Docker hub image: [`matrixdotorg/synapse`](https://hub.docker.com/r/matrixdotorg/synapse)
 
 
 

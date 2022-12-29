@@ -3,12 +3,12 @@
 page_title: "elestio_signoz Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SigNoz is a resource that creates a service with the template_id = 110. SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly
+  SigNoz Resource is a preconfigured Service Resource with the template_id = 110. SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly
 ---
 
 # elestio_signoz (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" height="100" /><br/><br/> SigNoz is a resource that creates a service with the `template_id = 110`. SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly
+SigNoz Resource is a preconfigured Service Resource with the `template_id = 110`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" height="100" /><br/> SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly
 
 
 

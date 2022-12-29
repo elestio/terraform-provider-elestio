@@ -3,12 +3,12 @@
 page_title: "elestio_nebula Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Nebula is a resource that creates a service with the template_id = 181. Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security
+  Nebula Resource is a preconfigured Service Resource with the template_id = 181. Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security Docker hub image: elestio/nebula-rest-api https://hub.docker.com/r/elestio/nebula-rest-api
 ---
 
 # elestio_nebula (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" height="100" /><br/><br/> Nebula is a resource that creates a service with the `template_id = 181`. Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security
+Nebula Resource is a preconfigured Service Resource with the `template_id = 181`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" height="100" /><br/> Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br/><br/> Docker hub image: [`elestio/nebula-rest-api`](https://hub.docker.com/r/elestio/nebula-rest-api)
 
 
 

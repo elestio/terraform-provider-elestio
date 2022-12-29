@@ -3,12 +3,12 @@
 page_title: "elestio_traduora Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Traduora is a resource that creates a service with the template_id = 290. Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today
+  Traduora Resource is a preconfigured Service Resource with the template_id = 290. Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today Docker hub image: everco/ever-traduora https://hub.docker.com/r/everco/ever-traduora
 ---
 
 # elestio_traduora (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" height="100" /><br/><br/> Traduora is a resource that creates a service with the `template_id = 290`. Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today
+Traduora Resource is a preconfigured Service Resource with the `template_id = 290`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" height="100" /><br/> Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br/><br/> Docker hub image: [`everco/ever-traduora`](https://hub.docker.com/r/everco/ever-traduora)
 
 
 

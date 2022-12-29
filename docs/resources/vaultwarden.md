@@ -3,12 +3,12 @@
 page_title: "elestio_vaultwarden Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Vaultwarden is a resource that creates a service with the template_id = 66.  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure.
+  Vaultwarden Resource is a preconfigured Service Resource with the template_id = 66.  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure.  Docker hub image: vaultwarden/server https://hub.docker.com/r/vaultwarden/server
 ---
 
 # elestio_vaultwarden (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" height="100" /><br/><br/> Vaultwarden is a resource that creates a service with the `template_id = 66`.  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure.
+Vaultwarden Resource is a preconfigured Service Resource with the `template_id = 66`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" height="100" /><br/>  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br/><br/> Docker hub image: [`vaultwarden/server`](https://hub.docker.com/r/vaultwarden/server)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_syncthing Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Syncthing is a resource that creates a service with the template_id = 123. Syncthing is a free, continuous, multiple-device file synchronization program.
+  Syncthing Resource is a preconfigured Service Resource with the template_id = 123. Syncthing is a free, continuous, multiple-device file synchronization program.  Docker hub image: syncthing/syncthing https://hub.docker.com/r/syncthing/syncthing
 ---
 
 # elestio_syncthing (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" height="100" /><br/><br/> Syncthing is a resource that creates a service with the `template_id = 123`. Syncthing is a free, continuous, multiple-device file synchronization program.
+Syncthing Resource is a preconfigured Service Resource with the `template_id = 123`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" height="100" /><br/> Syncthing is a free, continuous, multiple-device file synchronization program. <br/><br/> Docker hub image: [`syncthing/syncthing`](https://hub.docker.com/r/syncthing/syncthing)
 
 
 

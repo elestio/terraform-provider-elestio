@@ -3,12 +3,12 @@
 page_title: "elestio_owncast Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Owncast is a resource that creates a service with the template_id = 299. Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.
+  Owncast Resource is a preconfigured Service Resource with the template_id = 299. Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software. Docker hub image: gabekangas/owncast https://hub.docker.com/r/gabekangas/owncast
 ---
 
 # elestio_owncast (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" height="100" /><br/><br/> Owncast is a resource that creates a service with the `template_id = 299`. Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.
+Owncast Resource is a preconfigured Service Resource with the `template_id = 299`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" height="100" /><br/> Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br/><br/> Docker hub image: [`gabekangas/owncast`](https://hub.docker.com/r/gabekangas/owncast)
 
 
 

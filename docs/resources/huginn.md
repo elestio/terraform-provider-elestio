@@ -3,12 +3,12 @@
 page_title: "elestio_huginn Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Huginn is a resource that creates a service with the template_id = 202. Huginn is a tool in the Web Service Automation category of a tech stack.
+  Huginn Resource is a preconfigured Service Resource with the template_id = 202. Huginn is a tool in the Web Service Automation category of a tech stack. Docker hub image: huginn/huginn-single-process https://hub.docker.com/r/huginn/huginn-single-process
 ---
 
 # elestio_huginn (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" height="100" /><br/><br/> Huginn is a resource that creates a service with the `template_id = 202`. Huginn is a tool in the Web Service Automation category of a tech stack.
+Huginn Resource is a preconfigured Service Resource with the `template_id = 202`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" height="100" /><br/> Huginn is a tool in the Web Service Automation category of a tech stack.<br/><br/> Docker hub image: [`huginn/huginn-single-process`](https://hub.docker.com/r/huginn/huginn-single-process)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_filestash Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Filestash is a resource that creates a service with the template_id = 131. Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located.
+  Filestash Resource is a preconfigured Service Resource with the template_id = 131. Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located.  Docker hub image: machines/filestash https://hub.docker.com/r/machines/filestash
 ---
 
 # elestio_filestash (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" height="100" /><br/><br/> Filestash is a resource that creates a service with the `template_id = 131`. Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located.
+Filestash Resource is a preconfigured Service Resource with the `template_id = 131`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" height="100" /><br/> Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. <br/><br/> Docker hub image: [`machines/filestash`](https://hub.docker.com/r/machines/filestash)
 
 
 

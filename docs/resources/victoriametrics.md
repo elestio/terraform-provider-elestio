@@ -3,12 +3,12 @@
 page_title: "elestio_victoriametrics Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  VictoriaMetrics is a resource that creates a service with the template_id = 156. VictoriaMetrics is a fast, cost-effective monitoring solution and time series database
+  VictoriaMetrics Resource is a preconfigured Service Resource with the template_id = 156. VictoriaMetrics is a fast, cost-effective monitoring solution and time series database Docker hub image: victoriametrics/victoria-metrics https://hub.docker.com/r/victoriametrics/victoria-metrics
 ---
 
 # elestio_victoriametrics (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" height="100" /><br/><br/> VictoriaMetrics is a resource that creates a service with the `template_id = 156`. VictoriaMetrics is a fast, cost-effective monitoring solution and time series database
+VictoriaMetrics Resource is a preconfigured Service Resource with the `template_id = 156`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" height="100" /><br/> VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br/><br/> Docker hub image: [`victoriametrics/victoria-metrics`](https://hub.docker.com/r/victoriametrics/victoria-metrics)
 
 
 

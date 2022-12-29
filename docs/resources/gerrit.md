@@ -3,12 +3,12 @@
 page_title: "elestio_gerrit Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gerrit is a resource that creates a service with the template_id = 262. Gerrit is a code review and project management tool for Git based projects.
+  Gerrit Resource is a preconfigured Service Resource with the template_id = 262. Gerrit is a code review and project management tool for Git based projects. Docker hub image: gerritcodereview/gerrit https://hub.docker.com/r/gerritcodereview/gerrit
 ---
 
 # elestio_gerrit (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" height="100" /><br/><br/> Gerrit is a resource that creates a service with the `template_id = 262`. Gerrit is a code review and project management tool for Git based projects.
+Gerrit Resource is a preconfigured Service Resource with the `template_id = 262`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" height="100" /><br/> Gerrit is a code review and project management tool for Git based projects.<br/><br/> Docker hub image: [`gerritcodereview/gerrit`](https://hub.docker.com/r/gerritcodereview/gerrit)
 
 
 

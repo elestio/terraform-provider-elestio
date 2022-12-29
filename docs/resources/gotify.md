@@ -3,12 +3,12 @@
 page_title: "elestio_gotify Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gotify is a resource that creates a service with the template_id = 146. Gotify is a free and simple server for sending and receiving messages.
+  Gotify Resource is a preconfigured Service Resource with the template_id = 146. Gotify is a free and simple server for sending and receiving messages. Docker hub image: gotify/server https://hub.docker.com/r/gotify/server
 ---
 
 # elestio_gotify (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" height="100" /><br/><br/> Gotify is a resource that creates a service with the `template_id = 146`. Gotify is a free and simple server for sending and receiving messages.
+Gotify Resource is a preconfigured Service Resource with the `template_id = 146`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" height="100" /><br/> Gotify is a free and simple server for sending and receiving messages.<br/><br/> Docker hub image: [`gotify/server`](https://hub.docker.com/r/gotify/server)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_uptime_kuma Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Uptime-kuma is a resource that creates a service with the template_id = 137. Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
+  Uptime-kuma Resource is a preconfigured Service Resource with the template_id = 137. Uptime Kuma is a self-hosted monitoring tool like Uptime Robot. Docker hub image: louislam/uptime-kuma https://hub.docker.com/r/louislam/uptime-kuma
 ---
 
 # elestio_uptime_kuma (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" height="100" /><br/><br/> Uptime-kuma is a resource that creates a service with the `template_id = 137`. Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.
+Uptime-kuma Resource is a preconfigured Service Resource with the `template_id = 137`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" height="100" /><br/> Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br/><br/> Docker hub image: [`louislam/uptime-kuma`](https://hub.docker.com/r/louislam/uptime-kuma)
 
 
 

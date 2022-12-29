@@ -3,12 +3,12 @@
 page_title: "elestio_quickchart Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  QuickChart is a resource that creates a service with the template_id = 60. QuickChart allows you to generates chart images of charts from a URL.
+  QuickChart Resource is a preconfigured Service Resource with the template_id = 60. QuickChart allows you to generates chart images of charts from a URL.  Docker hub image: ianw/quickchart https://hub.docker.com/r/ianw/quickchart
 ---
 
 # elestio_quickchart (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/quickchart-vqGz.png" width="100" height="100" /><br/><br/> QuickChart is a resource that creates a service with the `template_id = 60`. QuickChart allows you to generates chart images of charts from a URL.
+QuickChart Resource is a preconfigured Service Resource with the `template_id = 60`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/quickchart-vqGz.png" width="100" height="100" /><br/> QuickChart allows you to generates chart images of charts from a URL. <br/><br/> Docker hub image: [`ianw/quickchart`](https://hub.docker.com/r/ianw/quickchart)
 
 
 

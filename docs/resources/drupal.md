@@ -3,12 +3,12 @@
 page_title: "elestio_drupal Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Drupal is a resource that creates a service with the template_id = 96. Drupal is an open-source content management platform that supports a wide variety of websites.
+  Drupal Resource is a preconfigured Service Resource with the template_id = 96. Drupal is an open-source content management platform that supports a wide variety of websites. Docker hub image: bitnami/drupal https://hub.docker.com/r/bitnami/drupal
 ---
 
 # elestio_drupal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" height="100" /><br/><br/> Drupal is a resource that creates a service with the `template_id = 96`. Drupal is an open-source content management platform that supports a wide variety of websites.
+Drupal Resource is a preconfigured Service Resource with the `template_id = 96`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" height="100" /><br/> Drupal is an open-source content management platform that supports a wide variety of websites.<br/><br/> Docker hub image: [`bitnami/drupal`](https://hub.docker.com/r/bitnami/drupal)
 
 
 

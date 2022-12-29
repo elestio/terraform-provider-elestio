@@ -3,12 +3,12 @@
 page_title: "elestio_jitsi Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Jitsi is a resource that creates a service with the template_id = 129. Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions.
+  Jitsi Resource is a preconfigured Service Resource with the template_id = 129. Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions.  Docker hub image: jitsi/web https://hub.docker.com/r/jitsi/web
 ---
 
 # elestio_jitsi (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" height="100" /><br/><br/> Jitsi is a resource that creates a service with the `template_id = 129`. Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions.
+Jitsi Resource is a preconfigured Service Resource with the `template_id = 129`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" height="100" /><br/> Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br/><br/> Docker hub image: [`jitsi/web`](https://hub.docker.com/r/jitsi/web)
 
 
 

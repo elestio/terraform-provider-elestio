@@ -3,12 +3,12 @@
 page_title: "elestio_gitlab_runner Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gitlab-runner is a resource that creates a service with the template_id = 235. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.
+  Gitlab-runner Resource is a preconfigured Service Resource with the template_id = 235. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline. Docker hub image: gitlab/gitlab-runner https://hub.docker.com/r/gitlab/gitlab-runner
 ---
 
 # elestio_gitlab_runner (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" height="100" /><br/><br/> Gitlab-runner is a resource that creates a service with the `template_id = 235`. GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.
+Gitlab-runner Resource is a preconfigured Service Resource with the `template_id = 235`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" height="100" /><br/> GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.<br/><br/> Docker hub image: [`gitlab/gitlab-runner`](https://hub.docker.com/r/gitlab/gitlab-runner)
 
 
 

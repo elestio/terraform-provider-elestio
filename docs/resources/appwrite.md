@@ -3,12 +3,12 @@
 page_title: "elestio_appwrite Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Appwrite is a resource that creates a service with the template_id = 144. Appwrite provides developers with a set of REST APIs to manage their core backend needs.
+  Appwrite Resource is a preconfigured Service Resource with the template_id = 144. Appwrite provides developers with a set of REST APIs to manage their core backend needs. Docker hub image: appwrite/appwrite https://hub.docker.com/r/appwrite/appwrite
 ---
 
 # elestio_appwrite (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" height="100" /><br/><br/> Appwrite is a resource that creates a service with the `template_id = 144`. Appwrite provides developers with a set of REST APIs to manage their core backend needs.
+Appwrite Resource is a preconfigured Service Resource with the `template_id = 144`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" height="100" /><br/> Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br/><br/> Docker hub image: [`appwrite/appwrite`](https://hub.docker.com/r/appwrite/appwrite)
 
 
 

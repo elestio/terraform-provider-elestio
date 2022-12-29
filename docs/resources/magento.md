@@ -3,12 +3,12 @@
 page_title: "elestio_magento Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Magento is a resource that creates a service with the template_id = 98. Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up.
+  Magento Resource is a preconfigured Service Resource with the template_id = 98. Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up.  Docker hub image: bitnami/magento https://hub.docker.com/r/bitnami/magento
 ---
 
 # elestio_magento (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" height="100" /><br/><br/> Magento is a resource that creates a service with the `template_id = 98`. Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up.
+Magento Resource is a preconfigured Service Resource with the `template_id = 98`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" height="100" /><br/> Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br/><br/> Docker hub image: [`bitnami/magento`](https://hub.docker.com/r/bitnami/magento)
 
 
 

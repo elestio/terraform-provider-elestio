@@ -3,12 +3,12 @@
 page_title: "elestio_metabase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Metabase is a resource that creates a service with the template_id = 87. Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.
+  Metabase Resource is a preconfigured Service Resource with the template_id = 87. Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company. Docker hub image: metabase/metabase https://hub.docker.com/r/metabase/metabase
 ---
 
 # elestio_metabase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" height="100" /><br/><br/> Metabase is a resource that creates a service with the `template_id = 87`. Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.
+Metabase Resource is a preconfigured Service Resource with the `template_id = 87`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" height="100" /><br/> Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br/><br/> Docker hub image: [`metabase/metabase`](https://hub.docker.com/r/metabase/metabase)
 
 
 

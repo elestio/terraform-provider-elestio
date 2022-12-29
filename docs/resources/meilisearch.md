@@ -3,12 +3,12 @@
 page_title: "elestio_meilisearch Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MeiliSearch is a resource that creates a service with the template_id = 74. MeiliSearch is a next-generation search API.
+  MeiliSearch Resource is a preconfigured Service Resource with the template_id = 74. MeiliSearch is a next-generation search API. Docker hub image: getmeili/meilisearch https://hub.docker.com/r/getmeili/meilisearch
 ---
 
 # elestio_meilisearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" height="100" /><br/><br/> MeiliSearch is a resource that creates a service with the `template_id = 74`. MeiliSearch is a next-generation search API.
+MeiliSearch Resource is a preconfigured Service Resource with the `template_id = 74`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" height="100" /><br/> MeiliSearch is a next-generation search API.<br/><br/> Docker hub image: [`getmeili/meilisearch`](https://hub.docker.com/r/getmeili/meilisearch)
 
 
 

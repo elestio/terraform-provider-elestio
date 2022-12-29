@@ -3,12 +3,12 @@
 page_title: "elestio_freescout Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  FreeScout is a resource that creates a service with the template_id = 193. FreeScout is a free self-hosted help desk & shared mailbox.
+  FreeScout Resource is a preconfigured Service Resource with the template_id = 193. FreeScout is a free self-hosted help desk & shared mailbox. Docker hub image: tiredofit/freescout https://hub.docker.com/r/tiredofit/freescout
 ---
 
 # elestio_freescout (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" height="100" /><br/><br/> FreeScout is a resource that creates a service with the `template_id = 193`. FreeScout is a free self-hosted help desk & shared mailbox.
+FreeScout Resource is a preconfigured Service Resource with the `template_id = 193`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" height="100" /><br/> FreeScout is a free self-hosted help desk & shared mailbox.<br/><br/> Docker hub image: [`tiredofit/freescout`](https://hub.docker.com/r/tiredofit/freescout)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_mealie Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mealie is a resource that creates a service with the template_id = 292. Mealie is an intuitive and easy to use recipe management app
+  Mealie Resource is a preconfigured Service Resource with the template_id = 292. Mealie is an intuitive and easy to use recipe management app Docker hub image: hkotel/mealie https://hub.docker.com/r/hkotel/mealie
 ---
 
 # elestio_mealie (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" height="100" /><br/><br/> Mealie is a resource that creates a service with the `template_id = 292`. Mealie is an intuitive and easy to use recipe management app
+Mealie Resource is a preconfigured Service Resource with the `template_id = 292`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" height="100" /><br/> Mealie is an intuitive and easy to use recipe management app<br/><br/> Docker hub image: [`hkotel/mealie`](https://hub.docker.com/r/hkotel/mealie)
 
 
 

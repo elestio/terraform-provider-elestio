@@ -3,12 +3,12 @@
 page_title: "elestio_mattermost_team_edition Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mattermost Team Edition is a resource that creates a service with the template_id = 89. Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle.
+  Mattermost Team Edition Resource is a preconfigured Service Resource with the template_id = 89. Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle.  Docker hub image: mattermost/mattermost-team-edition https://hub.docker.com/r/mattermost/mattermost-team-edition
 ---
 
 # elestio_mattermost_team_edition (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" height="100" /><br/><br/> Mattermost Team Edition is a resource that creates a service with the `template_id = 89`. Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle.
+Mattermost Team Edition Resource is a preconfigured Service Resource with the `template_id = 89`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" height="100" /><br/> Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br/><br/> Docker hub image: [`mattermost/mattermost-team-edition`](https://hub.docker.com/r/mattermost/mattermost-team-edition)
 
 
 

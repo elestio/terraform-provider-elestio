@@ -3,12 +3,12 @@
 page_title: "elestio_grafana Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Grafana is a resource that creates a service with the template_id = 79. Grafana is a multi-platform, open-source analytics and interactive visualization web application.
+  Grafana Resource is a preconfigured Service Resource with the template_id = 79. Grafana is a multi-platform, open-source analytics and interactive visualization web application. Docker hub image: grafana/grafana https://hub.docker.com/r/grafana/grafana
 ---
 
 # elestio_grafana (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" height="100" /><br/><br/> Grafana is a resource that creates a service with the `template_id = 79`. Grafana is a multi-platform, open-source analytics and interactive visualization web application.
+Grafana Resource is a preconfigured Service Resource with the `template_id = 79`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" height="100" /><br/> Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br/><br/> Docker hub image: [`grafana/grafana`](https://hub.docker.com/r/grafana/grafana)
 
 
 

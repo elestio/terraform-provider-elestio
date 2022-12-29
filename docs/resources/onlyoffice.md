@@ -3,12 +3,12 @@
 page_title: "elestio_onlyoffice Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OnlyOffice is a resource that creates a service with the template_id = 109. OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations.
+  OnlyOffice Resource is a preconfigured Service Resource with the template_id = 109. OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations.  Docker hub image: onlyoffice/communityserver https://hub.docker.com/r/onlyoffice/communityserver
 ---
 
 # elestio_onlyoffice (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onlyoffice-BiCl.png" width="100" height="100" /><br/><br/> OnlyOffice is a resource that creates a service with the `template_id = 109`. OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations.
+OnlyOffice Resource is a preconfigured Service Resource with the `template_id = 109`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onlyoffice-BiCl.png" width="100" height="100" /><br/> OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations. <br/><br/> Docker hub image: [`onlyoffice/communityserver`](https://hub.docker.com/r/onlyoffice/communityserver)
 
 
 

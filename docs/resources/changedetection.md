@@ -3,12 +3,12 @@
 page_title: "elestio_changedetection Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ChangeDetection is a resource that creates a service with the template_id = 186. Changedetection.io is an open source web page monitoring, notification and change detection.
+  ChangeDetection Resource is a preconfigured Service Resource with the template_id = 186. Changedetection.io is an open source web page monitoring, notification and change detection. Docker hub image: dgtlmoon/changedetection.io https://hub.docker.com/r/dgtlmoon/changedetection.io
 ---
 
 # elestio_changedetection (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" height="100" /><br/><br/> ChangeDetection is a resource that creates a service with the `template_id = 186`. Changedetection.io is an open source web page monitoring, notification and change detection.
+ChangeDetection Resource is a preconfigured Service Resource with the `template_id = 186`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" height="100" /><br/> Changedetection.io is an open source web page monitoring, notification and change detection.<br/><br/> Docker hub image: [`dgtlmoon/changedetection.io`](https://hub.docker.com/r/dgtlmoon/changedetection.io)
 
 
 

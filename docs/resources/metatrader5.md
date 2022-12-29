@@ -3,12 +3,12 @@
 page_title: "elestio_metatrader5 Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MetaTrader5 is a resource that creates a service with the template_id = 280. Trade on Forex & stock markets in a virtual desktop from your browser
+  MetaTrader5 Resource is a preconfigured Service Resource with the template_id = 280. Trade on Forex & stock markets in a virtual desktop from your browser Docker hub image: elestio/ubuntu-desktop https://hub.docker.com/r/elestio/ubuntu-desktop
 ---
 
 # elestio_metatrader5 (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" height="100" /><br/><br/> MetaTrader5 is a resource that creates a service with the `template_id = 280`. Trade on Forex & stock markets in a virtual desktop from your browser
+MetaTrader5 Resource is a preconfigured Service Resource with the `template_id = 280`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" height="100" /><br/> Trade on Forex & stock markets in a virtual desktop from your browser<br/><br/> Docker hub image: [`elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
 
 

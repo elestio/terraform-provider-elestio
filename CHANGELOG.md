@@ -31,3 +31,11 @@ FEATURES:
 - **New Resource:** for every service templates
 - Add default `version` value for template services if there is one recommended by the API.
 - Improve documentation
+
+## 0.3.0 (Unreleased)
+
+FEATURES:
+
+- **New Resource:** `elestio_couchbase`
+- **New Resource:** `elestio_searxng`
+- **Improve Documentation:** Add docker hub image link of services

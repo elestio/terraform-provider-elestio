@@ -3,12 +3,12 @@
 page_title: "elestio_bookstack Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  BookStack is a resource that creates a service with the template_id = 143. BookStack is a platform to create documentation/wiki content built with PHP & Laravel.
+  BookStack Resource is a preconfigured Service Resource with the template_id = 143. BookStack is a platform to create documentation/wiki content built with PHP & Laravel. Docker hub image: linuxserver/bookstack https://hub.docker.com/r/linuxserver/bookstack
 ---
 
 # elestio_bookstack (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/bookstack--1--KwEn.png" width="100" height="100" /><br/><br/> BookStack is a resource that creates a service with the `template_id = 143`. BookStack is a platform to create documentation/wiki content built with PHP & Laravel.
+BookStack Resource is a preconfigured Service Resource with the `template_id = 143`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/bookstack--1--KwEn.png" width="100" height="100" /><br/> BookStack is a platform to create documentation/wiki content built with PHP & Laravel.<br/><br/> Docker hub image: [`linuxserver/bookstack`](https://hub.docker.com/r/linuxserver/bookstack)
 
 
 

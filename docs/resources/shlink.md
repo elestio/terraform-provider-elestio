@@ -3,12 +3,12 @@
 page_title: "elestio_shlink Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Shlink is a resource that creates a service with the template_id = 239. The definitive self-hosted URL shortener
+  Shlink Resource is a preconfigured Service Resource with the template_id = 239. The definitive self-hosted URL shortener Docker hub image: shlinkio/shlink https://hub.docker.com/r/shlinkio/shlink
 ---
 
 # elestio_shlink (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" height="100" /><br/><br/> Shlink is a resource that creates a service with the `template_id = 239`. The definitive self-hosted URL shortener
+Shlink Resource is a preconfigured Service Resource with the `template_id = 239`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" height="100" /><br/> The definitive self-hosted URL shortener<br/><br/> Docker hub image: [`shlinkio/shlink`](https://hub.docker.com/r/shlinkio/shlink)
 
 
 

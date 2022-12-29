@@ -3,12 +3,12 @@
 page_title: "elestio_prestashop Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Prestashop is a resource that creates a service with the template_id = 95. The PrestaShop project is a universal open-source software platform to build your e-commerce solution.
+  Prestashop Resource is a preconfigured Service Resource with the template_id = 95. The PrestaShop project is a universal open-source software platform to build your e-commerce solution. Docker hub image: bitnami/prestashop https://hub.docker.com/r/bitnami/prestashop
 ---
 
 # elestio_prestashop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" height="100" /><br/><br/> Prestashop is a resource that creates a service with the `template_id = 95`. The PrestaShop project is a universal open-source software platform to build your e-commerce solution.
+Prestashop Resource is a preconfigured Service Resource with the `template_id = 95`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" height="100" /><br/> The PrestaShop project is a universal open-source software platform to build your e-commerce solution.<br/><br/> Docker hub image: [`bitnami/prestashop`](https://hub.docker.com/r/bitnami/prestashop)
 
 
 

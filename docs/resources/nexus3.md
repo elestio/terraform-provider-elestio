@@ -3,12 +3,12 @@
 page_title: "elestio_nexus3 Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Nexus3 is a resource that creates a service with the template_id = 225. The free artifact repository with universal format support.
+  Nexus3 Resource is a preconfigured Service Resource with the template_id = 225. The free artifact repository with universal format support. Docker hub image: sonatype/nexus3 https://hub.docker.com/r/sonatype/nexus3
 ---
 
 # elestio_nexus3 (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" height="100" /><br/><br/> Nexus3 is a resource that creates a service with the `template_id = 225`. The free artifact repository with universal format support.
+Nexus3 Resource is a preconfigured Service Resource with the `template_id = 225`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" height="100" /><br/> The free artifact repository with universal format support.<br/><br/> Docker hub image: [`sonatype/nexus3`](https://hub.docker.com/r/sonatype/nexus3)
 
 
 

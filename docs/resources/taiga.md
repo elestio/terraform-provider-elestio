@@ -3,12 +3,12 @@
 page_title: "elestio_taiga Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Taiga is a resource that creates a service with the template_id = 233. Your Agile, Free and Open Source Project Management Tool
+  Taiga Resource is a preconfigured Service Resource with the template_id = 233. Your Agile, Free and Open Source Project Management Tool Docker hub image: taigaio/taiga-back https://hub.docker.com/r/taigaio/taiga-back
 ---
 
 # elestio_taiga (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" height="100" /><br/><br/> Taiga is a resource that creates a service with the `template_id = 233`. Your Agile, Free and Open Source Project Management Tool
+Taiga Resource is a preconfigured Service Resource with the `template_id = 233`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" height="100" /><br/> Your Agile, Free and Open Source Project Management Tool<br/><br/> Docker hub image: [`taigaio/taiga-back`](https://hub.docker.com/r/taigaio/taiga-back)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_languagetool Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  LanguageTool is a resource that creates a service with the template_id = 286. LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages.
+  LanguageTool Resource is a preconfigured Service Resource with the template_id = 286. LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages. Docker hub image: erikvl87/languagetool https://hub.docker.com/r/erikvl87/languagetool
 ---
 
 # elestio_languagetool (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download-llvo.png" width="100" height="100" /><br/><br/> LanguageTool is a resource that creates a service with the `template_id = 286`. LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages.
+LanguageTool Resource is a preconfigured Service Resource with the `template_id = 286`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download-llvo.png" width="100" height="100" /><br/> LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages.<br/><br/> Docker hub image: [`erikvl87/languagetool`](https://hub.docker.com/r/erikvl87/languagetool)
 
 
 

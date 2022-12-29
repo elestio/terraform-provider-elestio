@@ -3,12 +3,12 @@
 page_title: "elestio_haproxy Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  HAProxy is a resource that creates a service with the template_id = 215. The Reliable, High Performance TCP/HTTP Load Balancer
+  HAProxy Resource is a preconfigured Service Resource with the template_id = 215. The Reliable, High Performance TCP/HTTP Load Balancer Docker hub image: haproxytech/haproxy-debian https://hub.docker.com/r/haproxytech/haproxy-debian
 ---
 
 # elestio_haproxy (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" height="100" /><br/><br/> HAProxy is a resource that creates a service with the `template_id = 215`. The Reliable, High Performance TCP/HTTP Load Balancer
+HAProxy Resource is a preconfigured Service Resource with the `template_id = 215`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" height="100" /><br/> The Reliable, High Performance TCP/HTTP Load Balancer<br/><br/> Docker hub image: [`haproxytech/haproxy-debian`](https://hub.docker.com/r/haproxytech/haproxy-debian)
 
 
 

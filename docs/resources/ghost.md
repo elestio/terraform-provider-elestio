@@ -3,12 +3,12 @@
 page_title: "elestio_ghost Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ghost is a resource that creates a service with the template_id = 49. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.
+  Ghost Resource is a preconfigured Service Resource with the template_id = 49. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content. Docker hub image: bitnami/ghost https://hub.docker.com/r/bitnami/ghost
 ---
 
 # elestio_ghost (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo--8--TgNO.png" width="100" height="100" /><br/><br/> Ghost is a resource that creates a service with the `template_id = 49`. Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.
+Ghost Resource is a preconfigured Service Resource with the `template_id = 49`.<br/><br/><img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo--8--TgNO.png" width="100" height="100" /><br/> Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.<br/><br/> Docker hub image: [`bitnami/ghost`](https://hub.docker.com/r/bitnami/ghost)
 
 
 

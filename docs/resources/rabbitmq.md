@@ -3,12 +3,12 @@
 page_title: "elestio_rabbitmq Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  RabbitMQ is a resource that creates a service with the template_id = 212. RabbitMQ is the most widely deployed open source message broker
+  RabbitMQ Resource is a preconfigured Service Resource with the template_id = 212. RabbitMQ is the most widely deployed open source message broker Docker hub image: rabbitmq https://hub.docker.com/r/rabbitmq
 ---
 
 # elestio_rabbitmq (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" height="100" /><br/><br/> RabbitMQ is a resource that creates a service with the `template_id = 212`. RabbitMQ is the most widely deployed open source message broker
+RabbitMQ Resource is a preconfigured Service Resource with the `template_id = 212`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" height="100" /><br/> RabbitMQ is the most widely deployed open source message broker<br/><br/> Docker hub image: [`rabbitmq`](https://hub.docker.com/r/rabbitmq)
 
 
 

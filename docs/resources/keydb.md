@@ -3,12 +3,12 @@
 page_title: "elestio_keydb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  KeyDB is a resource that creates a service with the template_id = 75. KeyDB is both your cache and database, for cloud-optimized solutions.
+  KeyDB Resource is a preconfigured Service Resource with the template_id = 75. KeyDB is both your cache and database, for cloud-optimized solutions. Docker hub image: eqalpha/keydb https://hub.docker.com/r/eqalpha/keydb
 ---
 
 # elestio_keydb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" height="100" /><br/><br/> KeyDB is a resource that creates a service with the `template_id = 75`. KeyDB is both your cache and database, for cloud-optimized solutions.
+KeyDB Resource is a preconfigured Service Resource with the `template_id = 75`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" height="100" /><br/> KeyDB is both your cache and database, for cloud-optimized solutions.<br/><br/> Docker hub image: [`eqalpha/keydb`](https://hub.docker.com/r/eqalpha/keydb)
 
 
 

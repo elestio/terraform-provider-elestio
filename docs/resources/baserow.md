@@ -3,12 +3,12 @@
 page_title: "elestio_baserow Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Baserow is a resource that creates a service with the template_id = 213. Baserow is an open source no-code database tool and Airtable alternative.
+  Baserow Resource is a preconfigured Service Resource with the template_id = 213. Baserow is an open source no-code database tool and Airtable alternative.  Docker hub image: baserow/baserow https://hub.docker.com/r/baserow/baserow
 ---
 
 # elestio_baserow (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" height="100" /><br/><br/> Baserow is a resource that creates a service with the `template_id = 213`. Baserow is an open source no-code database tool and Airtable alternative.
+Baserow Resource is a preconfigured Service Resource with the `template_id = 213`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" height="100" /><br/> Baserow is an open source no-code database tool and Airtable alternative. <br/><br/> Docker hub image: [`baserow/baserow`](https://hub.docker.com/r/baserow/baserow)
 
 
 

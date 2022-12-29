@@ -3,12 +3,12 @@
 page_title: "elestio_airbyte Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Airbyte is a resource that creates a service with the template_id = 157. Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses
+  Airbyte Resource is a preconfigured Service Resource with the template_id = 157. Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses Docker hub image: airbyte/server https://hub.docker.com/r/airbyte/server
 ---
 
 # elestio_airbyte (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airbyte-new-logo-a0OK.svg" width="100" height="100" /><br/><br/> Airbyte is a resource that creates a service with the `template_id = 157`. Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses
+Airbyte Resource is a preconfigured Service Resource with the `template_id = 157`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airbyte-new-logo-a0OK.svg" width="100" height="100" /><br/> Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses<br/><br/> Docker hub image: [`airbyte/server`](https://hub.docker.com/r/airbyte/server)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_meshcentral Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MeshCentral is a resource that creates a service with the template_id = 281. MeshCentral is a full computer management web site
+  MeshCentral Resource is a preconfigured Service Resource with the template_id = 281. MeshCentral is a full computer management web site Docker hub image: polonel/trudesk https://hub.docker.com/r/polonel/trudesk
 ---
 
 # elestio_meshcentral (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" height="100" /><br/><br/> MeshCentral is a resource that creates a service with the `template_id = 281`. MeshCentral is a full computer management web site
+MeshCentral Resource is a preconfigured Service Resource with the `template_id = 281`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" height="100" /><br/> MeshCentral is a full computer management web site<br/><br/> Docker hub image: [`polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)
 
 
 

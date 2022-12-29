@@ -3,12 +3,12 @@
 page_title: "elestio_moodle Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Moodle is a resource that creates a service with the template_id = 107. Moodle is the world's most popular open-source learning platform for educators to create their own websites.
+  Moodle Resource is a preconfigured Service Resource with the template_id = 107. Moodle is the world's most popular open-source learning platform for educators to create their own websites. Docker hub image: bitnami/moodle https://hub.docker.com/r/bitnami/moodle
 ---
 
 # elestio_moodle (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" height="100" /><br/><br/> Moodle is a resource that creates a service with the `template_id = 107`. Moodle is the world's most popular open-source learning platform for educators to create their own websites.
+Moodle Resource is a preconfigured Service Resource with the `template_id = 107`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" height="100" /><br/> Moodle is the world's most popular open-source learning platform for educators to create their own websites.<br/><br/> Docker hub image: [`bitnami/moodle`](https://hub.docker.com/r/bitnami/moodle)
 
 
 

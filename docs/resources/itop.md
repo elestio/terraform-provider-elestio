@@ -3,12 +3,12 @@
 page_title: "elestio_itop Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  iTop is a resource that creates a service with the template_id = 264. iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs
+  iTop Resource is a preconfigured Service Resource with the template_id = 264. iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs Docker hub image: vbkunin/itop https://hub.docker.com/r/vbkunin/itop
 ---
 
 # elestio_itop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" height="100" /><br/><br/> iTop is a resource that creates a service with the `template_id = 264`. iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs
+iTop Resource is a preconfigured Service Resource with the `template_id = 264`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" height="100" /><br/> iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs<br/><br/> Docker hub image: [`vbkunin/itop`](https://hub.docker.com/r/vbkunin/itop)
 
 
 

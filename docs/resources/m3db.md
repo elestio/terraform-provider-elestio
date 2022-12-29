@@ -3,12 +3,12 @@
 page_title: "elestio_m3db Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  M3DB is a resource that creates a service with the template_id = 255. M3 is a Prometheus compatible, easy to adopt metrics engine
+  M3DB Resource is a preconfigured Service Resource with the template_id = 255. M3 is a Prometheus compatible, easy to adopt metrics engine Docker hub image: quay.io/m3db/m3dbnode https://hub.docker.com/r/quay.io/m3db/m3dbnode
 ---
 
 # elestio_m3db (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" height="100" /><br/><br/> M3DB is a resource that creates a service with the `template_id = 255`. M3 is a Prometheus compatible, easy to adopt metrics engine
+M3DB Resource is a preconfigured Service Resource with the `template_id = 255`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" height="100" /><br/> M3 is a Prometheus compatible, easy to adopt metrics engine<br/><br/> Docker hub image: [`quay.io/m3db/m3dbnode`](https://hub.docker.com/r/quay.io/m3db/m3dbnode)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_filerun Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  FileRun is a resource that creates a service with the template_id = 244. Reliable and Performant File Management, Desktop Sync and File Sharing.
+  FileRun Resource is a preconfigured Service Resource with the template_id = 244. Reliable and Performant File Management, Desktop Sync and File Sharing. Docker hub image: filerun/filerun https://hub.docker.com/r/filerun/filerun
 ---
 
 # elestio_filerun (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" height="100" /><br/><br/> FileRun is a resource that creates a service with the `template_id = 244`. Reliable and Performant File Management, Desktop Sync and File Sharing.
+FileRun Resource is a preconfigured Service Resource with the `template_id = 244`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" height="100" /><br/> Reliable and Performant File Management, Desktop Sync and File Sharing.<br/><br/> Docker hub image: [`filerun/filerun`](https://hub.docker.com/r/filerun/filerun)
 
 
 

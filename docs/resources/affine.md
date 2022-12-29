@@ -3,12 +3,12 @@
 page_title: "elestio_affine Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Affine is a resource that creates a service with the template_id = 294. More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.
+  Affine Resource is a preconfigured Service Resource with the template_id = 294. More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation. Docker hub image: ghcr.io/toeverything/affine https://hub.docker.com/r/ghcr.io/toeverything/affine
 ---
 
 # elestio_affine (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" height="100" /><br/><br/> Affine is a resource that creates a service with the `template_id = 294`. More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.
+Affine Resource is a preconfigured Service Resource with the `template_id = 294`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" height="100" /><br/> More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.<br/><br/> Docker hub image: [`ghcr.io/toeverything/affine`](https://hub.docker.com/r/ghcr.io/toeverything/affine)
 
 
 

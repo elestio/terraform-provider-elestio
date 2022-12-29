@@ -3,12 +3,12 @@
 page_title: "elestio_sftpgo Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SFTPGo is a resource that creates a service with the template_id = 260. Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support
+  SFTPGo Resource is a preconfigured Service Resource with the template_id = 260. Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support Docker hub image: drakkan/sftpgo https://hub.docker.com/r/drakkan/sftpgo
 ---
 
 # elestio_sftpgo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" height="100" /><br/><br/> SFTPGo is a resource that creates a service with the `template_id = 260`. Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support
+SFTPGo Resource is a preconfigured Service Resource with the `template_id = 260`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" height="100" /><br/> Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support<br/><br/> Docker hub image: [`drakkan/sftpgo`](https://hub.docker.com/r/drakkan/sftpgo)
 
 
 

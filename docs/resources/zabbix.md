@@ -3,12 +3,12 @@
 page_title: "elestio_zabbix Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Zabbix is a resource that creates a service with the template_id = 231. Zabbix is an enterprise-class open source distributed monitoring solution.
+  Zabbix Resource is a preconfigured Service Resource with the template_id = 231. Zabbix is an enterprise-class open source distributed monitoring solution. Docker hub image: zabbix/zabbix-server-mysql https://hub.docker.com/r/zabbix/zabbix-server-mysql
 ---
 
 # elestio_zabbix (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" height="100" /><br/><br/> Zabbix is a resource that creates a service with the `template_id = 231`. Zabbix is an enterprise-class open source distributed monitoring solution.
+Zabbix Resource is a preconfigured Service Resource with the `template_id = 231`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" height="100" /><br/> Zabbix is an enterprise-class open source distributed monitoring solution.<br/><br/> Docker hub image: [`zabbix/zabbix-server-mysql`](https://hub.docker.com/r/zabbix/zabbix-server-mysql)
 
 
 

@@ -3,12 +3,12 @@
 page_title: "elestio_trilium Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Trilium is a resource that creates a service with the template_id = 293. Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
+  Trilium Resource is a preconfigured Service Resource with the template_id = 293. Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases. Docker hub image: zadam/trilium https://hub.docker.com/r/zadam/trilium
 ---
 
 # elestio_trilium (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" height="100" /><br/><br/> Trilium is a resource that creates a service with the `template_id = 293`. Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.
+Trilium Resource is a preconfigured Service Resource with the `template_id = 293`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" height="100" /><br/> Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br/><br/> Docker hub image: [`zadam/trilium`](https://hub.docker.com/r/zadam/trilium)
 
 
 

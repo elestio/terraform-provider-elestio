@@ -3,12 +3,12 @@
 page_title: "elestio_k3s Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  K3S is a resource that creates a service with the template_id = 179. K3s is a fully compliant Kubernetes distribution
+  K3S Resource is a preconfigured Service Resource with the template_id = 179. K3s is a fully compliant Kubernetes distribution
 ---
 
 # elestio_k3s (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" height="100" /><br/><br/> K3S is a resource that creates a service with the `template_id = 179`. K3s is a fully compliant Kubernetes distribution
+K3S Resource is a preconfigured Service Resource with the `template_id = 179`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" height="100" /><br/> K3s is a fully compliant Kubernetes distribution
 
 
 

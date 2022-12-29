@@ -3,12 +3,12 @@
 page_title: "elestio_penpot Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Penpot is a resource that creates a service with the template_id = 121. Penpot is the first open-source design and prototyping platform for cross-domain teams.
+  Penpot Resource is a preconfigured Service Resource with the template_id = 121. Penpot is the first open-source design and prototyping platform for cross-domain teams. Docker hub image: penpotapp/frontend https://hub.docker.com/r/penpotapp/frontend
 ---
 
 # elestio_penpot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" height="100" /><br/><br/> Penpot is a resource that creates a service with the `template_id = 121`. Penpot is the first open-source design and prototyping platform for cross-domain teams.
+Penpot Resource is a preconfigured Service Resource with the `template_id = 121`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" height="100" /><br/> Penpot is the first open-source design and prototyping platform for cross-domain teams.<br/><br/> Docker hub image: [`penpotapp/frontend`](https://hub.docker.com/r/penpotapp/frontend)
 
 
 

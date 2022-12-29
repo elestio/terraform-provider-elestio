@@ -3,12 +3,12 @@
 page_title: "elestio_postal Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Postal is a resource that creates a service with the template_id = 132. Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.
+  Postal Resource is a preconfigured Service Resource with the template_id = 132. Postal is a fully featured open-source mail delivery platform for incoming and outgoing email. Docker hub image: postalserver/postal https://hub.docker.com/r/postalserver/postal
 ---
 
 # elestio_postal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" height="100" /><br/><br/> Postal is a resource that creates a service with the `template_id = 132`. Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.
+Postal Resource is a preconfigured Service Resource with the `template_id = 132`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" height="100" /><br/> Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br/><br/> Docker hub image: [`postalserver/postal`](https://hub.docker.com/r/postalserver/postal)
 
 
 

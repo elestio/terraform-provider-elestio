@@ -3,12 +3,12 @@
 page_title: "elestio_ubuntu_desktop Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ubuntu-Desktop is a resource that creates a service with the template_id = 278. Ubuntu Virtual Desktop experience in your browser
+  Ubuntu-Desktop Resource is a preconfigured Service Resource with the template_id = 278. Ubuntu Virtual Desktop experience in your browser Docker hub image: elestio/ubuntu-desktop https://hub.docker.com/r/elestio/ubuntu-desktop
 ---
 
 # elestio_ubuntu_desktop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" height="100" /><br/><br/> Ubuntu-Desktop is a resource that creates a service with the `template_id = 278`. Ubuntu Virtual Desktop experience in your browser
+Ubuntu-Desktop Resource is a preconfigured Service Resource with the `template_id = 278`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" height="100" /><br/> Ubuntu Virtual Desktop experience in your browser<br/><br/> Docker hub image: [`elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
 
 

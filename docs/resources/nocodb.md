@@ -3,12 +3,12 @@
 page_title: "elestio_nocodb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  NocoDB is a resource that creates a service with the template_id = 117. NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.
+  NocoDB Resource is a preconfigured Service Resource with the template_id = 117. NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet. Docker hub image: nocodb/nocodb https://hub.docker.com/r/nocodb/nocodb
 ---
 
 # elestio_nocodb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" height="100" /><br/><br/> NocoDB is a resource that creates a service with the `template_id = 117`. NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.
+NocoDB Resource is a preconfigured Service Resource with the `template_id = 117`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" height="100" /><br/> NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br/><br/> Docker hub image: [`nocodb/nocodb`](https://hub.docker.com/r/nocodb/nocodb)
 
 
 

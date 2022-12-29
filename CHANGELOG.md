@@ -10,7 +10,7 @@ FEATURES:
 - **New Resource:** `elestio_service`
 - **New Datasource:** `elestio_project`
 
-## 0.1.1 (Unreleased)
+## 0.1.1 (29 december, 2022)
 
 NOTES:
 

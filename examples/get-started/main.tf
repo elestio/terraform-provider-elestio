@@ -25,7 +25,7 @@ resource "elestio_postgresql" "pg_europe" {
   project_id    = elestio_project.pg_project.id
   server_name   = "pg-europe"
   server_type   = "MICRO-1C-1G"
-  provider_name = "hetzner"
+  provider_name = "lightsail"
   datacenter    = "eu-central-1"
   support_level = "level1"
   admin_email   = var.elestio_email

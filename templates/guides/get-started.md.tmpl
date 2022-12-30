@@ -66,14 +66,14 @@ $ cd terraform-provider-elestio/examples/get-started
 ```
 
 <br>
-3. Rename `secrets.tfvars.tmp` file `secrets.tfvars` and fill in the appropriate values:
+3. Rename `secret.tfvars.tmp` file `secret.tfvars` and fill in the appropriate values:
 
 ```shell
-$ mv secrets.tfvars.tmp secrets.tfvars
+$ mv secret.tfvars.tmp secret.tfvars
 ```
 
 ```terraform
-# file secrets.tfvars
+# file secret.tfvars
 elestio_email     = "<elestio_email>"
 elestio_api_token = "<elestio_api_token>"
 ```
@@ -98,6 +98,8 @@ $ terraform validate
 ```shell
 $ terraform apply -var-file="secret.tfvars"
 ```
+
+Deployment time varies by service, provider, datacenter and server type.
 
 <br>
 7. You have created one Project and two PostgreSQL Services using Terraform! Visit the [Elestio Dashboard](https://dash.elest.io/) to see these resources.

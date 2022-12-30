@@ -1,3 +1,0 @@
-$ export ELESTIO_EMAIL="elestioemail"
-$ export ELESTIO_API_TOKEN="elestioapitoken"
-$ terraform plan

@@ -1,23 +1,21 @@
-# Terraform 0.13+ requires providers to be declared in a "required_providers" block
 terraform {
   required_providers {
     elestio = {
       source  = "elestio/elestio"
-      version = "1.0.0" # check out the latest version in the release section
+      version = "0.2.0" # check out the latest version in the release section
     }
   }
 }
 
-# Configure the Elestio Provider
+# Configure the provider
 provider "elestio" {
-  email     = "YOUR-EMAIL"
-  api_token = "YOUR-API-TOKEN"
+  email     = "<elestio_email>"
+  api_token = "<elestio_api_token>"
 }
 
-# Create a Project
+# Create a project
 resource "elestio_project" "myawesomeproject" {
   name = "Awesome project"
-
   # ...
 }
 

@@ -9,46 +9,58 @@ description: |-
 
 [Elestio](https://elest.io/) is a fully managed DevOps platform to deploy your code and open-source software.
 
-The Elestio provider is used to interact with the API services provided by Elestio.
+The Elestio Provider allows you to deploy your services with Terraform.
+You must have an active account with Elestio.
+[Pricing](https://elest.io/pricing) and [Signup](https://dash.elest.io/signup) informations can be found on Elestio website https://elest.io/.
 
-In order to use this Provider, you must have an active account with Elestio.
-[Pricing](https://elest.io/pricing) and signup information can be found at https://dash.elest.io/signup.
-
-**&larr; Use the navigation to the left to read about the available resources.**
+&larr; The navigation menu to the left provides details about the resources that you can interact with (Resources), and a guide (Guides) for how you can get started.
 
 ## Example Usage
+
+Terraform `0.13` and later:
 
 {{ tffile "examples/provider/provider.tf" }}
 
 ## Authentication
 
 The Elestio provider offers a credentials (email and API token) based method for authentication.
-You can find your API token on your account security page: https://dash.elest.io/account/security
+You can find your API token on your [account security page](https://dash.elest.io/account/security).
 
 The following methods are supported :
-- Static arguments
+
+- Static credentials
 - Environment variables
 
-### Static arguments
+### Static Credentials
 
 Static credentials can be provided by adding an `email` and `api_token` arguments in the Elestio provider block:
 
-{{ tffile "examples/index/static.tf" }}
+```terraform
+provider "elestio" {
+  email     = "<elestio_email>"
+  api_token = "<elestio_api_token>"
+}
+```
 
-Usage:
+!> **Warning:** Hardcoding credentials into a Terraform configuration is not recommended. Hardcoded credentials increase the risk of accidentally publishing secrets to public repositories.
 
-{{ codefile "sh" "examples/index/static-tf-plan.txt" }}
+### Environment Variables
 
-### Environment variables
+Run the following commands to set the `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN` environment variables:
 
-You can provide your email by `ELESTIO_EMAIL` and your API token via `ELESTIO_API_TOKEN` environment variables. 
+```sh
+$ export ELESTIO_EMAIL="<elestio_email>"
+$ export ELESTIO_API_TOKEN="<elestio_api_token>"
+```
+
+-> **Note:** Quotation marks are required around the email and API token secret strings.
+
 When using this method, you may omit the Elestio `provider` block entirely:
 
-{{ tffile "examples/index/env.tf" }}
-
-Usage:
-
-{{ codefile "sh" "examples/index/env-tf-plan.txt" }}
+```terraform
+# You can omit the provider block
+# provider "elestio" {}
+```
 
 {{ .SchemaMarkdown | trimspace }}
 

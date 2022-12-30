@@ -39,3 +39,4 @@ FEATURES:
 - **New Resource:** `elestio_couchbase`
 - **New Resource:** `elestio_searxng`
 - **Improve Documentation:** Add docker hub image link of services
+- **New guide:** Get started

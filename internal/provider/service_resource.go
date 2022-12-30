@@ -144,7 +144,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			// true
 			"This resource is the generic way to create a service."+
 				" You can choose the software by providing the `template_id` as a parameter."+
-				" You can look for available template ids in the [templates documentation](https://change.me).",
+				" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).",
 			// false
 			fmt.Sprintf(" %s Resource is a preconfigured Service Resource with the `template_id = %d`.", r.DocumentationName, r.TemplateId)+
 				utils.If(r.Logo == "", "", fmt.Sprintf(`<br/><br/><img src="%s" width="100" height="100" />`, r.Logo))+
@@ -194,7 +194,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"template_id": schema.Int64Attribute{
 				MarkdownDescription: " The template identifier defines the software used." +
-					" You can look for available template ids in the [templates documentation](https://change.me).",
+					" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).",
 				Required: r.TemplateId == 0,
 				Computed: r.TemplateId != 0,
 				PlanModifiers: []planmodifier.Int64{
@@ -245,7 +245,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"support_level": schema.StringAttribute{
 				MarkdownDescription: "Service support level." +
-					" You can look for available support levels and their advantages in the [support documentation](https://change.me)." +
+					" You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing)." +
 					" Requires replace to change it in terraform." +
 					" It is recommended to use the web dashboard to change it without replacing the service.",
 				Required: true,

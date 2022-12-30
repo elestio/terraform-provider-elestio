@@ -23,7 +23,7 @@ Element Resource is a preconfigured Service Resource with the `template_id = 248
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://change.me). Requires replace to change it.
 - `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://change.me). You can only upgrade it, not downgrade.
-- `support_level` (String) Service support level. You can look for available support levels and their advantages in the [support documentation](https://change.me). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
+- `support_level` (String) Service support level. You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 
 ### Optional
 
@@ -76,7 +76,7 @@ Element Resource is a preconfigured Service Resource with the `template_id = 248
 - `system_auto_updates_reboot_day_of_week` (Number) Service system auto update reboot day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `system_auto_updates_reboot_hour` (Number) Service system auto update reboot hour.
 - `system_auto_updates_reboot_minute` (Number) Service system auto update reboot minute.
-- `template_id` (Number) The template identifier defines the software used. You can look for available template ids in the [templates documentation](https://change.me).
+- `template_id` (Number) The template identifier defines the software used. You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).
 - `traffic_included` (Number) Service traffic included.
 - `traffic_incoming` (Number) Service traffic incoming.
 - `traffic_outgoing` (Number) Service traffic outgoing.

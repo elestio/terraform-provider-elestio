@@ -32,7 +32,7 @@ FEATURES:
 - Add default `version` value for template services if there is one recommended by the API.
 - Improve documentation
 
-## 0.3.0 (Unreleased)
+## 0.3.0 (30 december, 2022)
 
 FEATURES:
 

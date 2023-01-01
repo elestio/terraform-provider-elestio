@@ -40,3 +40,13 @@ FEATURES:
 - **New Resource:** `elestio_searxng`
 - **Improve Documentation:** Add docker hub image link of services
 - **New guide:** Get started
+
+## 0.4.0 (Unreleased)
+
+The available templates are now saved in a JSON file in the repo.
+This avoids publishing new resources by mistake during a build.
+
+FEATURES:
+
+- **New Resource:** `elestio_manticoresearch`
+- **Improved Documentation:** Add examples for each templates

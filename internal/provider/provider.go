@@ -2,6 +2,8 @@ package provider
 
 import (
 	"context"
+	_ "embed"
+	"encoding/json"
 	"os"
 
 	"github.com/elestio/elestio-go-api-client"
@@ -17,9 +19,24 @@ import (
 var (
 	_ provider.Provider             = &ElestioProvider{}
 	_ provider.ProviderWithMetadata = &ElestioProvider{}
+
+	//go:embed templates.json
+	templatesListBytes []byte
 )
 
 type (
+	TemplatesList struct {
+		Templates []struct {
+			ID                  int64  `json:"id"`
+			Name                string `json:"title"`
+			Category            string `json:"category"`
+			Description         string `json:"description"`
+			Logo                string `json:"mainImage"`
+			DockerHubImage      string `json:"dockerhub_image"`
+			DockerHubDefaultTag string `json:"dockerhub_default_tag"`
+		} `json:"templates"`
+	}
+
 	ElestioProvider struct {
 		// version is set to the provider version on release, "dev" when the
 		// provider is built and ran locally, and "test" when running acceptance
@@ -186,14 +203,14 @@ func NewServiceResources() []func() resource.Resource {
 		},
 	}
 
-	// Get all service templates from Elestio API
-	unsignedClient := elestio.NewUnsignedClient()
-	templates, err := unsignedClient.Service.GetTemplatesList()
+	// Unmarshal the bytes into the User struct
+	var templatesList TemplatesList
+	err := json.Unmarshal(templatesListBytes, &templatesList)
 	if err != nil {
 		panic(err)
 	}
 
-	for _, template := range templates {
+	for _, template := range templatesList.Templates {
 		template := template // avoid iteration with same pointer
 
 		// Skip full stack templates

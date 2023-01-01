@@ -1,0 +1,2 @@
+# Import a [TEMPLATE_DOCUMENTATION_NAME] service by specifying the Project ID it belongs to, and the [TEMPLATE_DOCUMENTATION_NAME] service ID (spaced by a comma).
+terraform import elestio_[TEMPLATE_RESOURCE_NAME].my_[TEMPLATE_RESOURCE_NAME] project_id,[TEMPLATE_RESOURCE_NAME]_service_id

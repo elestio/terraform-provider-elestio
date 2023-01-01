@@ -13,3 +13,9 @@ test:
 .PHONY: testacc
 testacc:
 	TF_ACC=1 go test ./... -v $(TESTARGS) -timeout 120m
+
+templates-get:
+	bash ./elestio-templates/scripts/get_templates_list.sh
+
+templates-generate:
+	bash ./elestio-templates/scripts/generate_templates_examples.sh

@@ -3,12 +3,12 @@
 page_title: "elestio_plausible_analytics Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Plausible Analytics Resource is a preconfigured Service Resource with the template_id = 85. Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics. Docker hub image: plausible/analytics https://hub.docker.com/r/plausible/analytics
+  Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.elestioplausibleanalytics is a preconfigured elestioservice resource (template_id: 85) running Plausible Analytics ([`dockerimage: plausible/analytics`](https://hub.docker.com/r/plausible/analytics)).
 ---
 
 # elestio_plausible_analytics (Resource)
 
-Plausible Analytics Resource is a preconfigured Service Resource with the `template_id = 85`.<br/><br/><img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/plausible-logo-N0vQ.png" width="100" height="100" /><br/> Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.<br/><br/> Docker hub image: [`plausible/analytics`](https://hub.docker.com/r/plausible/analytics)
+<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/plausible-logo-N0vQ.png" width="100" height="100" /><br/> Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.<br/><br/>**elestio_plausible_analytics** is a preconfigured elestio_service resource (`template_id: 85`) running **Plausible Analytics** ([`docker_image: plausible/analytics`](https://hub.docker.com/r/plausible/analytics)).
 
 
 

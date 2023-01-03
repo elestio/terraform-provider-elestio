@@ -8,7 +8,7 @@ description: |-
 
 # elestio_zammad (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" height="100" /><br/> Zammad is a web-based, open-source helpdesk/customer support system.<br/><br/>**elestio_zammad** is a preconfigured elestio_service resource (`template_id: 106`) running **Zammad** ([`docker_image: zammad/zammad-docker-compose`](https://hub.docker.com/r/zammad/zammad-docker-compose)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" /><br/> Zammad is a web-based, open-source helpdesk/customer support system.<br/><br/>**elestio_zammad** is a preconfigured elestio_service resource (`template_id: 106`) running **Zammad** ([`docker_image: zammad/zammad-docker-compose`](https://hub.docker.com/r/zammad/zammad-docker-compose)).
 
 ## Example Usage
 

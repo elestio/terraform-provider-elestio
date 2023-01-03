@@ -8,7 +8,7 @@ description: |-
 
 # elestio_keeweb (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keeweb-722o.png" width="100" height="100" /><br/> KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. <br/><br/>**elestio_keeweb** is a preconfigured elestio_service resource (`template_id: 153`) running **KeeWeb** ([`docker_image: antelle/keeweb`](https://hub.docker.com/r/antelle/keeweb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keeweb-722o.png" width="100" /><br/> KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. <br/><br/>**elestio_keeweb** is a preconfigured elestio_service resource (`template_id: 153`) running **KeeWeb** ([`docker_image: antelle/keeweb`](https://hub.docker.com/r/antelle/keeweb)).
 
 ## Example Usage
 

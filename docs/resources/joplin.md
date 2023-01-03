@@ -8,7 +8,7 @@ description: |-
 
 # elestio_joplin (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" height="100" /><br/> Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS<br/><br/>**elestio_joplin** is a preconfigured elestio_service resource (`template_id: 200`) running **Joplin** ([`docker_image: joplin/server`](https://hub.docker.com/r/joplin/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" /><br/> Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS<br/><br/>**elestio_joplin** is a preconfigured elestio_service resource (`template_id: 200`) running **Joplin** ([`docker_image: joplin/server`](https://hub.docker.com/r/joplin/server)).
 
 ## Example Usage
 

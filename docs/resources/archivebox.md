@@ -8,7 +8,7 @@ description: |-
 
 # elestio_archivebox (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" height="100" /><br/> ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br/><br/>**elestio_archivebox** is a preconfigured elestio_service resource (`template_id: 247`) running **ArchiveBox** ([`docker_image: archivebox/archivebox`](https://hub.docker.com/r/archivebox/archivebox)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" /><br/> ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br/><br/>**elestio_archivebox** is a preconfigured elestio_service resource (`template_id: 247`) running **ArchiveBox** ([`docker_image: archivebox/archivebox`](https://hub.docker.com/r/archivebox/archivebox)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_keydb (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" height="100" /><br/> KeyDB is both your cache and database, for cloud-optimized solutions.<br/><br/>**elestio_keydb** is a preconfigured elestio_service resource (`template_id: 75`) running **KeyDB** ([`docker_image: eqalpha/keydb`](https://hub.docker.com/r/eqalpha/keydb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" /><br/> KeyDB is both your cache and database, for cloud-optimized solutions.<br/><br/>**elestio_keydb** is a preconfigured elestio_service resource (`template_id: 75`) running **KeyDB** ([`docker_image: eqalpha/keydb`](https://hub.docker.com/r/eqalpha/keydb)).
 
 ## Example Usage
 

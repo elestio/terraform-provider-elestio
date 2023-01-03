@@ -8,7 +8,7 @@ description: |-
 
 # elestio_manticoresearch (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" height="100" /><br/> Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br/><br/>**elestio_manticoresearch** is a preconfigured elestio_service resource (`template_id: 303`) running **ManticoreSearch** ([`docker_image: manticoresearch/manticore`](https://hub.docker.com/r/manticoresearch/manticore)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" /><br/> Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br/><br/>**elestio_manticoresearch** is a preconfigured elestio_service resource (`template_id: 303`) running **ManticoreSearch** ([`docker_image: manticoresearch/manticore`](https://hub.docker.com/r/manticoresearch/manticore)).
 
 ## Example Usage
 

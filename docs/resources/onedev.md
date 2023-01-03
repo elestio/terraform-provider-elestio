@@ -8,7 +8,7 @@ description: |-
 
 # elestio_onedev (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" height="100" /><br/> OneDev is an open-source all-in-one DevOps platform.<br/><br/>**elestio_onedev** is a preconfigured elestio_service resource (`template_id: 126`) running **Onedev** ([`docker_image: 1dev/server`](https://hub.docker.com/r/1dev/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" /><br/> OneDev is an open-source all-in-one DevOps platform.<br/><br/>**elestio_onedev** is a preconfigured elestio_service resource (`template_id: 126`) running **Onedev** ([`docker_image: 1dev/server`](https://hub.docker.com/r/1dev/server)).
 
 ## Example Usage
 

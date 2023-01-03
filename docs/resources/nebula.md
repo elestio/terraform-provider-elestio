@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nebula (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" height="100" /><br/> Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br/><br/>**elestio_nebula** is a preconfigured elestio_service resource (`template_id: 181`) running **Nebula** ([`docker_image: elestio/nebula-rest-api`](https://hub.docker.com/r/elestio/nebula-rest-api)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" /><br/> Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br/><br/>**elestio_nebula** is a preconfigured elestio_service resource (`template_id: 181`) running **Nebula** ([`docker_image: elestio/nebula-rest-api`](https://hub.docker.com/r/elestio/nebula-rest-api)).
 
 ## Example Usage
 

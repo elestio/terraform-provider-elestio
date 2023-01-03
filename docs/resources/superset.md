@@ -8,7 +8,7 @@ description: |-
 
 # elestio_superset (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" height="100" /><br/> Apache Superset is a data visualization and data exploration platform.<br/><br/>**elestio_superset** is a preconfigured elestio_service resource (`template_id: 105`) running **Superset** ([`docker_image: apache/superset`](https://hub.docker.com/r/apache/superset)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" /><br/> Apache Superset is a data visualization and data exploration platform.<br/><br/>**elestio_superset** is a preconfigured elestio_service resource (`template_id: 105`) running **Superset** ([`docker_image: apache/superset`](https://hub.docker.com/r/apache/superset)).
 
 ## Example Usage
 

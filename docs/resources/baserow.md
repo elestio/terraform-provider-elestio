@@ -8,7 +8,7 @@ description: |-
 
 # elestio_baserow (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" height="100" /><br/> Baserow is an open source no-code database tool and Airtable alternative. <br/><br/>**elestio_baserow** is a preconfigured elestio_service resource (`template_id: 213`) running **Baserow** ([`docker_image: baserow/baserow`](https://hub.docker.com/r/baserow/baserow)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" /><br/> Baserow is an open source no-code database tool and Airtable alternative. <br/><br/>**elestio_baserow** is a preconfigured elestio_service resource (`template_id: 213`) running **Baserow** ([`docker_image: baserow/baserow`](https://hub.docker.com/r/baserow/baserow)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_filerun (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" height="100" /><br/> Reliable and Performant File Management, Desktop Sync and File Sharing.<br/><br/>**elestio_filerun** is a preconfigured elestio_service resource (`template_id: 244`) running **FileRun** ([`docker_image: filerun/filerun`](https://hub.docker.com/r/filerun/filerun)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" /><br/> Reliable and Performant File Management, Desktop Sync and File Sharing.<br/><br/>**elestio_filerun** is a preconfigured elestio_service resource (`template_id: 244`) running **FileRun** ([`docker_image: filerun/filerun`](https://hub.docker.com/r/filerun/filerun)).
 
 ## Example Usage
 

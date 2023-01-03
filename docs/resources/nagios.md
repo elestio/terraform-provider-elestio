@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nagios (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" height="100" /><br/> The Industry Standard In IT Infrastructure Monitoring<br/><br/>**elestio_nagios** is a preconfigured elestio_service resource (`template_id: 254`) running **Nagios** ([`docker_image: jasonrivers/nagios`](https://hub.docker.com/r/jasonrivers/nagios)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" /><br/> The Industry Standard In IT Infrastructure Monitoring<br/><br/>**elestio_nagios** is a preconfigured elestio_service resource (`template_id: 254`) running **Nagios** ([`docker_image: jasonrivers/nagios`](https://hub.docker.com/r/jasonrivers/nagios)).
 
 ## Example Usage
 

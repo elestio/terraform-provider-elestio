@@ -8,7 +8,7 @@ description: |-
 
 # elestio_dockerregistry (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" height="100" /><br/> Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br/><br/>**elestio_dockerregistry** is a preconfigured elestio_service resource (`template_id: 230`) running **DockerRegistry** ([`docker_image: registry`](https://hub.docker.com/r/registry)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" /><br/> Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br/><br/>**elestio_dockerregistry** is a preconfigured elestio_service resource (`template_id: 230`) running **DockerRegistry** ([`docker_image: registry`](https://hub.docker.com/r/registry)).
 
 ## Example Usage
 

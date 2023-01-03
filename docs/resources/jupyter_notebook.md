@@ -8,7 +8,7 @@ description: |-
 
 # elestio_jupyter_notebook (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/3614431017-5d4c573bbdc0c-articlex-R2PE.png" width="100" height="100" /><br/> Jupyter Notebook is a web-based notebook environment for interactive computing. <br/><br/>**elestio_jupyter_notebook** is a preconfigured elestio_service resource (`template_id: 112`) running **Jupyter Notebook** ([`docker_image: jupyter/datascience-notebook`](https://hub.docker.com/r/jupyter/datascience-notebook)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/3614431017-5d4c573bbdc0c-articlex-R2PE.png" width="100" /><br/> Jupyter Notebook is a web-based notebook environment for interactive computing. <br/><br/>**elestio_jupyter_notebook** is a preconfigured elestio_service resource (`template_id: 112`) running **Jupyter Notebook** ([`docker_image: jupyter/datascience-notebook`](https://hub.docker.com/r/jupyter/datascience-notebook)).
 
 
 

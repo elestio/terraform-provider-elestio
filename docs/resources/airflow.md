@@ -8,7 +8,7 @@ description: |-
 
 # elestio_airflow (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" height="100" /><br/> Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br/><br/>**elestio_airflow** is a preconfigured elestio_service resource (`template_id: 249`) running **Airflow** ([`docker_image: apache/airflow`](https://hub.docker.com/r/apache/airflow)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" /><br/> Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br/><br/>**elestio_airflow** is a preconfigured elestio_service resource (`template_id: 249`) running **Airflow** ([`docker_image: apache/airflow`](https://hub.docker.com/r/apache/airflow)).
 
 ## Example Usage
 

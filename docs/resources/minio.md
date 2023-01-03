@@ -8,7 +8,7 @@ description: |-
 
 # elestio_minio (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" height="100" /><br/> MinIO is a leader in hybrid cloud and multi-cloud object storage.<br/><br/>**elestio_minio** is a preconfigured elestio_service resource (`template_id: 63`) running **MinIO** ([`docker_image: minio/minio`](https://hub.docker.com/r/minio/minio)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" /><br/> MinIO is a leader in hybrid cloud and multi-cloud object storage.<br/><br/>**elestio_minio** is a preconfigured elestio_service resource (`template_id: 63`) running **MinIO** ([`docker_image: minio/minio`](https://hub.docker.com/r/minio/minio)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_papercups (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" height="100" /><br/> Papercups is a open-source live customer chat<br/><br/>**elestio_papercups** is a preconfigured elestio_service resource (`template_id: 197`) running **Papercups** ([`docker_image: papercups/papercups`](https://hub.docker.com/r/papercups/papercups)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" /><br/> Papercups is a open-source live customer chat<br/><br/>**elestio_papercups** is a preconfigured elestio_service resource (`template_id: 197`) running **Papercups** ([`docker_image: papercups/papercups`](https://hub.docker.com/r/papercups/papercups)).
 
 ## Example Usage
 

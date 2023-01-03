@@ -8,7 +8,7 @@ description: |-
 
 # elestio_debian (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" height="100" /><br/> Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.<br/><br/>**elestio_debian** is a preconfigured elestio_service resource (`template_id: 36`) running **Debian**.
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" /><br/> Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.<br/><br/>**elestio_debian** is a preconfigured elestio_service resource (`template_id: 36`) running **Debian**.
 
 ## Example Usage
 

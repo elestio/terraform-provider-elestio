@@ -8,7 +8,7 @@ description: |-
 
 # elestio_joomla (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" height="100" /><br/> Joomla is an award-winning content management system for building websites and powerful online applications.<br/><br/>**elestio_joomla** is a preconfigured elestio_service resource (`template_id: 97`) running **Joomla** ([`docker_image: bitnami/joomla`](https://hub.docker.com/r/bitnami/joomla)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br/> Joomla is an award-winning content management system for building websites and powerful online applications.<br/><br/>**elestio_joomla** is a preconfigured elestio_service resource (`template_id: 97`) running **Joomla** ([`docker_image: bitnami/joomla`](https://hub.docker.com/r/bitnami/joomla)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_tooljet (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" height="100" /><br/> ToolJet is an open-source low-code framework to build and deploy custom internal tools<br/><br/>**elestio_tooljet** is a preconfigured elestio_service resource (`template_id: 173`) running **ToolJet** ([`docker_image: tooljet/tooljet-server-ce`](https://hub.docker.com/r/tooljet/tooljet-server-ce)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" /><br/> ToolJet is an open-source low-code framework to build and deploy custom internal tools<br/><br/>**elestio_tooljet** is a preconfigured elestio_service resource (`template_id: 173`) running **ToolJet** ([`docker_image: tooljet/tooljet-server-ce`](https://hub.docker.com/r/tooljet/tooljet-server-ce)).
 
 ## Example Usage
 

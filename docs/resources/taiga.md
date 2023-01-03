@@ -8,7 +8,7 @@ description: |-
 
 # elestio_taiga (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" height="100" /><br/> Your Agile, Free and Open Source Project Management Tool<br/><br/>**elestio_taiga** is a preconfigured elestio_service resource (`template_id: 233`) running **Taiga** ([`docker_image: taigaio/taiga-back`](https://hub.docker.com/r/taigaio/taiga-back)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br/> Your Agile, Free and Open Source Project Management Tool<br/><br/>**elestio_taiga** is a preconfigured elestio_service resource (`template_id: 233`) running **Taiga** ([`docker_image: taigaio/taiga-back`](https://hub.docker.com/r/taigaio/taiga-back)).
 
 ## Example Usage
 

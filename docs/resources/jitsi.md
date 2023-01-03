@@ -8,7 +8,7 @@ description: |-
 
 # elestio_jitsi (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" height="100" /><br/> Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br/><br/>**elestio_jitsi** is a preconfigured elestio_service resource (`template_id: 129`) running **Jitsi** ([`docker_image: jitsi/web`](https://hub.docker.com/r/jitsi/web)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" /><br/> Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br/><br/>**elestio_jitsi** is a preconfigured elestio_service resource (`template_id: 129`) running **Jitsi** ([`docker_image: jitsi/web`](https://hub.docker.com/r/jitsi/web)).
 
 ## Example Usage
 

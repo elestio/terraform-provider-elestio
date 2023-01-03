@@ -8,7 +8,7 @@ description: |-
 
 # elestio_kestra (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" height="100" /><br/> The open source data orchestration and scheduling platform.<br/><br/>**elestio_kestra** is a preconfigured elestio_service resource (`template_id: 219`) running **Kestra** ([`docker_image: kestra/kestra`](https://hub.docker.com/r/kestra/kestra)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" /><br/> The open source data orchestration and scheduling platform.<br/><br/>**elestio_kestra** is a preconfigured elestio_service resource (`template_id: 219`) running **Kestra** ([`docker_image: kestra/kestra`](https://hub.docker.com/r/kestra/kestra)).
 
 ## Example Usage
 

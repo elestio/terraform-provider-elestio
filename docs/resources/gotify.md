@@ -8,7 +8,7 @@ description: |-
 
 # elestio_gotify (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" height="100" /><br/> Gotify is a free and simple server for sending and receiving messages.<br/><br/>**elestio_gotify** is a preconfigured elestio_service resource (`template_id: 146`) running **Gotify** ([`docker_image: gotify/server`](https://hub.docker.com/r/gotify/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" /><br/> Gotify is a free and simple server for sending and receiving messages.<br/><br/>**elestio_gotify** is a preconfigured elestio_service resource (`template_id: 146`) running **Gotify** ([`docker_image: gotify/server`](https://hub.docker.com/r/gotify/server)).
 
 ## Example Usage
 

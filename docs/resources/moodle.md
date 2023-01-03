@@ -8,7 +8,7 @@ description: |-
 
 # elestio_moodle (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" height="100" /><br/> Moodle is the world's most popular open-source learning platform for educators to create their own websites.<br/><br/>**elestio_moodle** is a preconfigured elestio_service resource (`template_id: 107`) running **Moodle** ([`docker_image: bitnami/moodle`](https://hub.docker.com/r/bitnami/moodle)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" /><br/> Moodle is the world's most popular open-source learning platform for educators to create their own websites.<br/><br/>**elestio_moodle** is a preconfigured elestio_service resource (`template_id: 107`) running **Moodle** ([`docker_image: bitnami/moodle`](https://hub.docker.com/r/bitnami/moodle)).
 
 ## Example Usage
 

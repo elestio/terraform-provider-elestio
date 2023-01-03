@@ -8,7 +8,7 @@ description: |-
 
 # elestio_grafana (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" height="100" /><br/> Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br/><br/>**elestio_grafana** is a preconfigured elestio_service resource (`template_id: 79`) running **Grafana** ([`docker_image: grafana/grafana`](https://hub.docker.com/r/grafana/grafana)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" /><br/> Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br/><br/>**elestio_grafana** is a preconfigured elestio_service resource (`template_id: 79`) running **Grafana** ([`docker_image: grafana/grafana`](https://hub.docker.com/r/grafana/grafana)).
 
 ## Example Usage
 

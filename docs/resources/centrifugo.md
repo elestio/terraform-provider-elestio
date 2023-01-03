@@ -8,7 +8,7 @@ description: |-
 
 # elestio_centrifugo (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" height="100" /><br/> Centrifugo is a scalable real-time, language-agnostic messaging server. <br/><br/>**elestio_centrifugo** is a preconfigured elestio_service resource (`template_id: 151`) running **Centrifugo** ([`docker_image: centrifugo/centrifugo`](https://hub.docker.com/r/centrifugo/centrifugo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" /><br/> Centrifugo is a scalable real-time, language-agnostic messaging server. <br/><br/>**elestio_centrifugo** is a preconfigured elestio_service resource (`template_id: 151`) running **Centrifugo** ([`docker_image: centrifugo/centrifugo`](https://hub.docker.com/r/centrifugo/centrifugo)).
 
 ## Example Usage
 

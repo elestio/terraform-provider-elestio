@@ -8,7 +8,7 @@ description: |-
 
 # elestio_gogs (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" height="100" /><br/> Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br/><br/>**elestio_gogs** is a preconfigured elestio_service resource (`template_id: 154`) running **Gogs** ([`docker_image: gogs/gogs`](https://hub.docker.com/r/gogs/gogs)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" /><br/> Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br/><br/>**elestio_gogs** is a preconfigured elestio_service resource (`template_id: 154`) running **Gogs** ([`docker_image: gogs/gogs`](https://hub.docker.com/r/gogs/gogs)).
 
 ## Example Usage
 

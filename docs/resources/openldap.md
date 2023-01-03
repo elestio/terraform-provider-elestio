@@ -8,7 +8,7 @@ description: |-
 
 # elestio_openldap (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" height="100" /><br/> OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)<br/><br/>**elestio_openldap** is a preconfigured elestio_service resource (`template_id: 221`) running **OpenLDAP** ([`docker_image: osixia/openldap`](https://hub.docker.com/r/osixia/openldap)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" /><br/> OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)<br/><br/>**elestio_openldap** is a preconfigured elestio_service resource (`template_id: 221`) running **OpenLDAP** ([`docker_image: osixia/openldap`](https://hub.docker.com/r/osixia/openldap)).
 
 ## Example Usage
 

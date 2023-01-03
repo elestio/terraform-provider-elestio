@@ -8,7 +8,7 @@ description: |-
 
 # elestio_appsmith (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" height="100" /><br/>  Appsmith is a powerful open-source framework to build internal tools. <br/><br/>**elestio_appsmith** is a preconfigured elestio_service resource (`template_id: 125`) running **Appsmith** ([`docker_image: appsmith/appsmith-editor`](https://hub.docker.com/r/appsmith/appsmith-editor)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" /><br/>  Appsmith is a powerful open-source framework to build internal tools. <br/><br/>**elestio_appsmith** is a preconfigured elestio_service resource (`template_id: 125`) running **Appsmith** ([`docker_image: appsmith/appsmith-editor`](https://hub.docker.com/r/appsmith/appsmith-editor)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_gerrit (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" height="100" /><br/> Gerrit is a code review and project management tool for Git based projects.<br/><br/>**elestio_gerrit** is a preconfigured elestio_service resource (`template_id: 262`) running **Gerrit** ([`docker_image: gerritcodereview/gerrit`](https://hub.docker.com/r/gerritcodereview/gerrit)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" /><br/> Gerrit is a code review and project management tool for Git based projects.<br/><br/>**elestio_gerrit** is a preconfigured elestio_service resource (`template_id: 262`) running **Gerrit** ([`docker_image: gerritcodereview/gerrit`](https://hub.docker.com/r/gerritcodereview/gerrit)).
 
 ## Example Usage
 

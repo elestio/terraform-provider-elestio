@@ -8,7 +8,7 @@ description: |-
 
 # elestio_rocket_chat (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" height="100" /><br/> Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. <br/><br/>**elestio_rocket_chat** is a preconfigured elestio_service resource (`template_id: 92`) running **Rocket.Chat** ([`docker_image: rocketchat/rocket.chat`](https://hub.docker.com/r/rocketchat/rocket.chat)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" /><br/> Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. <br/><br/>**elestio_rocket_chat** is a preconfigured elestio_service resource (`template_id: 92`) running **Rocket.Chat** ([`docker_image: rocketchat/rocket.chat`](https://hub.docker.com/r/rocketchat/rocket.chat)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_haproxy (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" height="100" /><br/> The Reliable, High Performance TCP/HTTP Load Balancer<br/><br/>**elestio_haproxy** is a preconfigured elestio_service resource (`template_id: 215`) running **HAProxy** ([`docker_image: haproxytech/haproxy-debian`](https://hub.docker.com/r/haproxytech/haproxy-debian)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" /><br/> The Reliable, High Performance TCP/HTTP Load Balancer<br/><br/>**elestio_haproxy** is a preconfigured elestio_service resource (`template_id: 215`) running **HAProxy** ([`docker_image: haproxytech/haproxy-debian`](https://hub.docker.com/r/haproxytech/haproxy-debian)).
 
 ## Example Usage
 

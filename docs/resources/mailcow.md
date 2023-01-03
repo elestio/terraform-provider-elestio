@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mailcow (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" height="100" /><br/> Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br/><br/>**elestio_mailcow** is a preconfigured elestio_service resource (`template_id: 122`) running **MailCow** ([`docker_image: mailcow`](https://hub.docker.com/r/mailcow)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" /><br/> Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br/><br/>**elestio_mailcow** is a preconfigured elestio_service resource (`template_id: 122`) running **MailCow** ([`docker_image: mailcow`](https://hub.docker.com/r/mailcow)).
 
 ## Example Usage
 

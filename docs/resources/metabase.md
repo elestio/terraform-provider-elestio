@@ -8,7 +8,7 @@ description: |-
 
 # elestio_metabase (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" height="100" /><br/> Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br/><br/>**elestio_metabase** is a preconfigured elestio_service resource (`template_id: 87`) running **Metabase** ([`docker_image: metabase/metabase`](https://hub.docker.com/r/metabase/metabase)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" /><br/> Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br/><br/>**elestio_metabase** is a preconfigured elestio_service resource (`template_id: 87`) running **Metabase** ([`docker_image: metabase/metabase`](https://hub.docker.com/r/metabase/metabase)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_neo4j (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" height="100" /><br/> Neo4j is the world’s leading Graph Database<br/><br/>**elestio_neo4j** is a preconfigured elestio_service resource (`template_id: 208`) running **Neo4j** ([`docker_image: neo4j`](https://hub.docker.com/r/neo4j)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" /><br/> Neo4j is the world’s leading Graph Database<br/><br/>**elestio_neo4j** is a preconfigured elestio_service resource (`template_id: 208`) running **Neo4j** ([`docker_image: neo4j`](https://hub.docker.com/r/neo4j)).
 
 ## Example Usage
 

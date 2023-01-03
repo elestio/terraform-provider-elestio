@@ -50,3 +50,4 @@ FEATURES:
 
 - **New Resource:** `elestio_manticoresearch`
 - **Improved Documentation:** Add examples for each templates
+- **New guide:** Deploy from scratch

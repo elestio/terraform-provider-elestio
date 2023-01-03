@@ -8,7 +8,7 @@ description: |-
 
 # elestio_influxdb (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" height="100" /><br/> InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br/><br/>**elestio_influxdb** is a preconfigured elestio_service resource (`template_id: 116`) running **InfluxDB** ([`docker_image: bitnami/influxdb`](https://hub.docker.com/r/bitnami/influxdb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" /><br/> InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br/><br/>**elestio_influxdb** is a preconfigured elestio_service resource (`template_id: 116`) running **InfluxDB** ([`docker_image: bitnami/influxdb`](https://hub.docker.com/r/bitnami/influxdb)).
 
 ## Example Usage
 

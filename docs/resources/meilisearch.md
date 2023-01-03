@@ -8,7 +8,7 @@ description: |-
 
 # elestio_meilisearch (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" height="100" /><br/> MeiliSearch is a next-generation search API.<br/><br/>**elestio_meilisearch** is a preconfigured elestio_service resource (`template_id: 74`) running **MeiliSearch** ([`docker_image: getmeili/meilisearch`](https://hub.docker.com/r/getmeili/meilisearch)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" /><br/> MeiliSearch is a next-generation search API.<br/><br/>**elestio_meilisearch** is a preconfigured elestio_service resource (`template_id: 74`) running **MeiliSearch** ([`docker_image: getmeili/meilisearch`](https://hub.docker.com/r/getmeili/meilisearch)).
 
 ## Example Usage
 

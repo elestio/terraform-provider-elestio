@@ -8,7 +8,7 @@ description: |-
 
 # elestio_powerdns (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" height="100" /><br/> PowerDNS is a premier supplier of open-source DNS software, services and support. <br/><br/>**elestio_powerdns** is a preconfigured elestio_service resource (`template_id: 64`) running **PowerDNS** ([`docker_image: aescanero/powerdns-admin`](https://hub.docker.com/r/aescanero/powerdns-admin)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" /><br/> PowerDNS is a premier supplier of open-source DNS software, services and support. <br/><br/>**elestio_powerdns** is a preconfigured elestio_service resource (`template_id: 64`) running **PowerDNS** ([`docker_image: aescanero/powerdns-admin`](https://hub.docker.com/r/aescanero/powerdns-admin)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_postgresql (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" height="100" /><br/> PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br/><br/>**elestio_postgresql** is a preconfigured elestio_service resource (`template_id: 11`) running **PostgreSQL** ([`docker_image: postgres`](https://hub.docker.com/r/postgres)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" /><br/> PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br/><br/>**elestio_postgresql** is a preconfigured elestio_service resource (`template_id: 11`) running **PostgreSQL** ([`docker_image: postgres`](https://hub.docker.com/r/postgres)).
 
 ## Example Usage
 

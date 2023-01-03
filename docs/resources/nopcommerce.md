@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nopcommerce (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" height="100" /><br/> nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br/><br/>**elestio_nopcommerce** is a preconfigured elestio_service resource (`template_id: 217`) running **nopCommerce** ([`docker_image: nopcommerceteam/nopcommerce`](https://hub.docker.com/r/nopcommerceteam/nopcommerce)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" /><br/> nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br/><br/>**elestio_nopcommerce** is a preconfigured elestio_service resource (`template_id: 217`) running **nopCommerce** ([`docker_image: nopcommerceteam/nopcommerce`](https://hub.docker.com/r/nopcommerceteam/nopcommerce)).
 
 ## Example Usage
 

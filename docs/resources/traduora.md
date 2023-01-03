@@ -8,7 +8,7 @@ description: |-
 
 # elestio_traduora (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" height="100" /><br/> Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br/><br/>**elestio_traduora** is a preconfigured elestio_service resource (`template_id: 290`) running **Traduora** ([`docker_image: everco/ever-traduora`](https://hub.docker.com/r/everco/ever-traduora)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" /><br/> Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br/><br/>**elestio_traduora** is a preconfigured elestio_service resource (`template_id: 290`) running **Traduora** ([`docker_image: everco/ever-traduora`](https://hub.docker.com/r/everco/ever-traduora)).
 
 ## Example Usage
 

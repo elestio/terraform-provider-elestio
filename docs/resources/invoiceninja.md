@@ -8,7 +8,7 @@ description: |-
 
 # elestio_invoiceninja (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" height="100" /><br/> Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses. <br/><br/>**elestio_invoiceninja** is a preconfigured elestio_service resource (`template_id: 152`) running **InvoiceNinja** ([`docker_image: invoiceninja/invoiceninja`](https://hub.docker.com/r/invoiceninja/invoiceninja)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" /><br/> Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses. <br/><br/>**elestio_invoiceninja** is a preconfigured elestio_service resource (`template_id: 152`) running **InvoiceNinja** ([`docker_image: invoiceninja/invoiceninja`](https://hub.docker.com/r/invoiceninja/invoiceninja)).
 
 ## Example Usage
 

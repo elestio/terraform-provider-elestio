@@ -8,7 +8,7 @@ description: |-
 
 # elestio_trilium (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" height="100" /><br/> Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br/><br/>**elestio_trilium** is a preconfigured elestio_service resource (`template_id: 293`) running **Trilium** ([`docker_image: zadam/trilium`](https://hub.docker.com/r/zadam/trilium)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" /><br/> Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br/><br/>**elestio_trilium** is a preconfigured elestio_service resource (`template_id: 293`) running **Trilium** ([`docker_image: zadam/trilium`](https://hub.docker.com/r/zadam/trilium)).
 
 ## Example Usage
 

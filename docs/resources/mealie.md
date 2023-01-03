@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mealie (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" height="100" /><br/> Mealie is an intuitive and easy to use recipe management app<br/><br/>**elestio_mealie** is a preconfigured elestio_service resource (`template_id: 292`) running **Mealie** ([`docker_image: hkotel/mealie`](https://hub.docker.com/r/hkotel/mealie)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br/> Mealie is an intuitive and easy to use recipe management app<br/><br/>**elestio_mealie** is a preconfigured elestio_service resource (`template_id: 292`) running **Mealie** ([`docker_image: hkotel/mealie`](https://hub.docker.com/r/hkotel/mealie)).
 
 ## Example Usage
 

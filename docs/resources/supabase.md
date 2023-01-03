@@ -8,7 +8,7 @@ description: |-
 
 # elestio_supabase (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" height="100" /><br/> Supabase is an open source alternative to Firebase.<br/><br/>**elestio_supabase** is a preconfigured elestio_service resource (`template_id: 284`) running **Supabase** ([`docker_image: supabase/studio`](https://hub.docker.com/r/supabase/studio)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" /><br/> Supabase is an open source alternative to Firebase.<br/><br/>**elestio_supabase** is a preconfigured elestio_service resource (`template_id: 284`) running **Supabase** ([`docker_image: supabase/studio`](https://hub.docker.com/r/supabase/studio)).
 
 ## Example Usage
 

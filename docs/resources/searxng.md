@@ -8,7 +8,7 @@ description: |-
 
 # elestio_searxng (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" height="100" /><br/> SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br/><br/>**elestio_searxng** is a preconfigured elestio_service resource (`template_id: 301`) running **SearXNG** ([`docker_image: searxng/searxng`](https://hub.docker.com/r/searxng/searxng)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" /><br/> SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br/><br/>**elestio_searxng** is a preconfigured elestio_service resource (`template_id: 301`) running **SearXNG** ([`docker_image: searxng/searxng`](https://hub.docker.com/r/searxng/searxng)).
 
 ## Example Usage
 

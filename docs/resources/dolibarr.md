@@ -8,7 +8,7 @@ description: |-
 
 # elestio_dolibarr (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" height="100" /><br/> Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br/><br/>**elestio_dolibarr** is a preconfigured elestio_service resource (`template_id: 198`) running **Dolibarr** ([`docker_image: upshift/dolibarr`](https://hub.docker.com/r/upshift/dolibarr)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" /><br/> Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br/><br/>**elestio_dolibarr** is a preconfigured elestio_service resource (`template_id: 198`) running **Dolibarr** ([`docker_image: upshift/dolibarr`](https://hub.docker.com/r/upshift/dolibarr)).
 
 ## Example Usage
 

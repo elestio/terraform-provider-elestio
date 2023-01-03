@@ -8,7 +8,7 @@ description: |-
 
 # elestio_changedetection (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" height="100" /><br/> Changedetection.io is an open source web page monitoring, notification and change detection.<br/><br/>**elestio_changedetection** is a preconfigured elestio_service resource (`template_id: 186`) running **ChangeDetection** ([`docker_image: dgtlmoon/changedetection.io`](https://hub.docker.com/r/dgtlmoon/changedetection.io)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" /><br/> Changedetection.io is an open source web page monitoring, notification and change detection.<br/><br/>**elestio_changedetection** is a preconfigured elestio_service resource (`template_id: 186`) running **ChangeDetection** ([`docker_image: dgtlmoon/changedetection.io`](https://hub.docker.com/r/dgtlmoon/changedetection.io)).
 
 ## Example Usage
 

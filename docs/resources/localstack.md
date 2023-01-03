@@ -8,7 +8,7 @@ description: |-
 
 # elestio_localstack (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" height="100" /><br/> A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br/><br/>**elestio_localstack** is a preconfigured elestio_service resource (`template_id: 275`) running **LocalStack** ([`docker_image: localstack/localstack`](https://hub.docker.com/r/localstack/localstack)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" /><br/> A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br/><br/>**elestio_localstack** is a preconfigured elestio_service resource (`template_id: 275`) running **LocalStack** ([`docker_image: localstack/localstack`](https://hub.docker.com/r/localstack/localstack)).
 
 ## Example Usage
 

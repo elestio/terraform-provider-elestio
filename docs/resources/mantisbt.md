@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mantisbt (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" height="100" /><br/> MantisBT makes collaboration with team members & clients easy, fast, and professional<br/><br/>**elestio_mantisbt** is a preconfigured elestio_service resource (`template_id: 273`) running **MantisBT** ([`docker_image: xlrl/mantisbt`](https://hub.docker.com/r/xlrl/mantisbt)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" /><br/> MantisBT makes collaboration with team members & clients easy, fast, and professional<br/><br/>**elestio_mantisbt** is a preconfigured elestio_service resource (`template_id: 273`) running **MantisBT** ([`docker_image: xlrl/mantisbt`](https://hub.docker.com/r/xlrl/mantisbt)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_k0s (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" height="100" /><br/> The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.<br/><br/>**elestio_k0s** is a preconfigured elestio_service resource (`template_id: 214`) running **k0s**.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" /><br/> The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.<br/><br/>**elestio_k0s** is a preconfigured elestio_service resource (`template_id: 214`) running **k0s**.
 
 ## Example Usage
 

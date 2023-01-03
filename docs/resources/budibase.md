@@ -8,7 +8,7 @@ description: |-
 
 # elestio_budibase (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" height="100" /><br/> Budibase is a quick way to build business apps that empower teams and improve productivity. <br/><br/>**elestio_budibase** is a preconfigured elestio_service resource (`template_id: 94`) running **Budibase** ([`docker_image: budibase/apps`](https://hub.docker.com/r/budibase/apps)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" /><br/> Budibase is a quick way to build business apps that empower teams and improve productivity. <br/><br/>**elestio_budibase** is a preconfigured elestio_service resource (`template_id: 94`) running **Budibase** ([`docker_image: budibase/apps`](https://hub.docker.com/r/budibase/apps)).
 
 ## Example Usage
 

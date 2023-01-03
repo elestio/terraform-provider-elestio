@@ -8,7 +8,7 @@ description: |-
 
 # elestio_browserless (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" height="100" /><br/> Browserless provides fast, scalable, reliable web browser automation. <br/><br/>**elestio_browserless** is a preconfigured elestio_service resource (`template_id: 77`) running **Browserless** ([`docker_image: browserless/chrome`](https://hub.docker.com/r/browserless/chrome)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" /><br/> Browserless provides fast, scalable, reliable web browser automation. <br/><br/>**elestio_browserless** is a preconfigured elestio_service resource (`template_id: 77`) running **Browserless** ([`docker_image: browserless/chrome`](https://hub.docker.com/r/browserless/chrome)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nocodb (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" height="100" /><br/> NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br/><br/>**elestio_nocodb** is a preconfigured elestio_service resource (`template_id: 117`) running **NocoDB** ([`docker_image: nocodb/nocodb`](https://hub.docker.com/r/nocodb/nocodb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" /><br/> NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br/><br/>**elestio_nocodb** is a preconfigured elestio_service resource (`template_id: 117`) running **NocoDB** ([`docker_image: nocodb/nocodb`](https://hub.docker.com/r/nocodb/nocodb)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_vaultwarden (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" height="100" /><br/>  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br/><br/>**elestio_vaultwarden** is a preconfigured elestio_service resource (`template_id: 66`) running **Vaultwarden** ([`docker_image: vaultwarden/server`](https://hub.docker.com/r/vaultwarden/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" /><br/>  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br/><br/>**elestio_vaultwarden** is a preconfigured elestio_service resource (`template_id: 66`) running **Vaultwarden** ([`docker_image: vaultwarden/server`](https://hub.docker.com/r/vaultwarden/server)).
 
 ## Example Usage
 

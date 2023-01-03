@@ -147,7 +147,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).",
 			// false
 
-			utils.If(r.Logo == "", "", fmt.Sprintf(`<img src="%s" width="100" height="100" /><br/>`, r.Logo))+
+			utils.If(r.Logo == "", "", fmt.Sprintf(`<img src="%s" width="100" /><br/>`, r.Logo))+
 				utils.If(r.Description == "", "", fmt.Sprintf(" %s<br/><br/>", r.Description))+
 				fmt.Sprintf("**elestio_%s** is a preconfigured elestio_service resource (`template_id: %d`) running **%s**", r.ResourceName, r.TemplateId, r.DocumentationName)+
 				utils.If(r.DockerHubImage == "", "", fmt.Sprintf(" ([`docker_image: %s`](https://hub.docker.com/r/%s))", r.DockerHubImage, r.DockerHubImage))+

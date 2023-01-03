@@ -8,7 +8,7 @@ description: |-
 
 # elestio_scylladb (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" height="100" /><br/> ScyllaDB is a true NoSQL database for the most demanding applications. <br/><br/>**elestio_scylladb** is a preconfigured elestio_service resource (`template_id: 68`) running **ScyllaDB** ([`docker_image: scylladb/scylla`](https://hub.docker.com/r/scylladb/scylla)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" /><br/> ScyllaDB is a true NoSQL database for the most demanding applications. <br/><br/>**elestio_scylladb** is a preconfigured elestio_service resource (`template_id: 68`) running **ScyllaDB** ([`docker_image: scylladb/scylla`](https://hub.docker.com/r/scylladb/scylla)).
 
 ## Example Usage
 

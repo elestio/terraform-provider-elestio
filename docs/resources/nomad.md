@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nomad (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" height="100" /><br/> Nomad is a scheduler and workload orchestrator.<br/><br/>**elestio_nomad** is a preconfigured elestio_service resource (`template_id: 170`) running **Nomad**.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" /><br/> Nomad is a scheduler and workload orchestrator.<br/><br/>**elestio_nomad** is a preconfigured elestio_service resource (`template_id: 170`) running **Nomad**.
 
 ## Example Usage
 

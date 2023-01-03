@@ -8,7 +8,7 @@ description: |-
 
 # elestio_flarum (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" height="100" /><br/> Flarum is a delightfully simple discussion platform for your website<br/><br/>**elestio_flarum** is a preconfigured elestio_service resource (`template_id: 241`) running **Flarum** ([`docker_image: crazymax/flarum`](https://hub.docker.com/r/crazymax/flarum)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" /><br/> Flarum is a delightfully simple discussion platform for your website<br/><br/>**elestio_flarum** is a preconfigured elestio_service resource (`template_id: 241`) running **Flarum** ([`docker_image: crazymax/flarum`](https://hub.docker.com/r/crazymax/flarum)).
 
 ## Example Usage
 

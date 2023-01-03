@@ -8,7 +8,7 @@ description: |-
 
 # elestio_photoprism (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" height="100" /><br/> PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br/><br/>**elestio_photoprism** is a preconfigured elestio_service resource (`template_id: 190`) running **PhotoPrism** ([`docker_image: photoprism/photoprism`](https://hub.docker.com/r/photoprism/photoprism)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" /><br/> PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br/><br/>**elestio_photoprism** is a preconfigured elestio_service resource (`template_id: 190`) running **PhotoPrism** ([`docker_image: photoprism/photoprism`](https://hub.docker.com/r/photoprism/photoprism)).
 
 ## Example Usage
 

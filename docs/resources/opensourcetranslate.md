@@ -8,7 +8,7 @@ description: |-
 
 # elestio_opensourcetranslate (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" height="100" /><br/> OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br/><br/>**elestio_opensourcetranslate** is a preconfigured elestio_service resource (`template_id: 185`) running **OpenSourceTranslate** ([`docker_image: libretranslate/libretranslate`](https://hub.docker.com/r/libretranslate/libretranslate)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" /><br/> OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br/><br/>**elestio_opensourcetranslate** is a preconfigured elestio_service resource (`template_id: 185`) running **OpenSourceTranslate** ([`docker_image: libretranslate/libretranslate`](https://hub.docker.com/r/libretranslate/libretranslate)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_strapi (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" height="100" /><br/> Strapi enables easy building of self-hosted, customizable, performant content API.<br/><br/>**elestio_strapi** is a preconfigured elestio_service resource (`template_id: 65`) running **Strapi** ([`docker_image: strapi/strapi`](https://hub.docker.com/r/strapi/strapi)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" /><br/> Strapi enables easy building of self-hosted, customizable, performant content API.<br/><br/>**elestio_strapi** is a preconfigured elestio_service resource (`template_id: 65`) running **Strapi** ([`docker_image: strapi/strapi`](https://hub.docker.com/r/strapi/strapi)).
 
 ## Example Usage
 

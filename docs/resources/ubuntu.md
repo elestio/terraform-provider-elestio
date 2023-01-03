@@ -8,7 +8,7 @@ description: |-
 
 # elestio_ubuntu (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" height="100" /><br/> Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. <br/><br/>**elestio_ubuntu** is a preconfigured elestio_service resource (`template_id: 38`) running **Ubuntu**.
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" /><br/> Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. <br/><br/>**elestio_ubuntu** is a preconfigured elestio_service resource (`template_id: 38`) running **Ubuntu**.
 
 ## Example Usage
 

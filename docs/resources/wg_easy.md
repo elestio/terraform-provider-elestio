@@ -8,7 +8,7 @@ description: |-
 
 # elestio_wg_easy (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" height="100" /><br/> WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br/><br/>**elestio_wg_easy** is a preconfigured elestio_service resource (`template_id: 177`) running **WG-Easy** ([`docker_image: weejewel/wg-easy`](https://hub.docker.com/r/weejewel/wg-easy)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" /><br/> WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br/><br/>**elestio_wg_easy** is a preconfigured elestio_service resource (`template_id: 177`) running **WG-Easy** ([`docker_image: weejewel/wg-easy`](https://hub.docker.com/r/weejewel/wg-easy)).
 
 ## Example Usage
 

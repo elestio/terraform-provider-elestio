@@ -8,7 +8,7 @@ description: |-
 
 # elestio_odoo_erp_crm (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" height="100" /><br/> Odoo is a suite of web-based, open-source business apps.<br/><br/>**elestio_odoo_erp_crm** is a preconfigured elestio_service resource (`template_id: 86`) running **Odoo ERP & CRM** ([`docker_image: odoo`](https://hub.docker.com/r/odoo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br/> Odoo is a suite of web-based, open-source business apps.<br/><br/>**elestio_odoo_erp_crm** is a preconfigured elestio_service resource (`template_id: 86`) running **Odoo ERP & CRM** ([`docker_image: odoo`](https://hub.docker.com/r/odoo)).
 
 
 

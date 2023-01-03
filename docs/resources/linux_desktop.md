@@ -8,7 +8,7 @@ description: |-
 
 # elestio_linux_desktop (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LinuxDesktop-Mq0d.png" width="100" height="100" /><br/> Linux Desktop in the browser. Install any linux app and run it in the browser.<br/><br/>**elestio_linux_desktop** is a preconfigured elestio_service resource (`template_id: 236`) running **Linux-desktop** ([`docker_image: elestio/docker-desktop-vnc`](https://hub.docker.com/r/elestio/docker-desktop-vnc)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LinuxDesktop-Mq0d.png" width="100" /><br/> Linux Desktop in the browser. Install any linux app and run it in the browser.<br/><br/>**elestio_linux_desktop** is a preconfigured elestio_service resource (`template_id: 236`) running **Linux-desktop** ([`docker_image: elestio/docker-desktop-vnc`](https://hub.docker.com/r/elestio/docker-desktop-vnc)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_documize (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" height="100" /><br/> Free Knowledge Management Software<br/><br/>**elestio_documize** is a preconfigured elestio_service resource (`template_id: 279`) running **Documize** ([`docker_image: debian`](https://hub.docker.com/r/debian)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" /><br/> Free Knowledge Management Software<br/><br/>**elestio_documize** is a preconfigured elestio_service resource (`template_id: 279`) running **Documize** ([`docker_image: debian`](https://hub.docker.com/r/debian)).
 
 ## Example Usage
 

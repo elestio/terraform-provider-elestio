@@ -8,7 +8,7 @@ description: |-
 
 # elestio_n8n (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" height="100" /><br/> n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.<br/><br/>**elestio_n8n** is a preconfigured elestio_service resource (`template_id: 54`) running **N8N** ([`docker_image: n8nio/n8n`](https://hub.docker.com/r/n8nio/n8n)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" /><br/> n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.<br/><br/>**elestio_n8n** is a preconfigured elestio_service resource (`template_id: 54`) running **N8N** ([`docker_image: n8nio/n8n`](https://hub.docker.com/r/n8nio/n8n)).
 
 ## Example Usage
 

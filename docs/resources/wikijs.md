@@ -8,7 +8,7 @@ description: |-
 
 # elestio_wikijs (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" height="100" /><br/> Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.<br/><br/>**elestio_wikijs** is a preconfigured elestio_service resource (`template_id: 58`) running **Wikijs** ([`docker_image: requarks/wiki`](https://hub.docker.com/r/requarks/wiki)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" /><br/> Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.<br/><br/>**elestio_wikijs** is a preconfigured elestio_service resource (`template_id: 58`) running **Wikijs** ([`docker_image: requarks/wiki`](https://hub.docker.com/r/requarks/wiki)).
 
 ## Example Usage
 

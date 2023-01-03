@@ -8,7 +8,7 @@ description: |-
 
 # elestio_woocommerce (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" height="100" /><br/> WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br/><br/>**elestio_woocommerce** is a preconfigured elestio_service resource (`template_id: 296`) running **WooCommerce** ([`docker_image: wordpress`](https://hub.docker.com/r/wordpress)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" /><br/> WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br/><br/>**elestio_woocommerce** is a preconfigured elestio_service resource (`template_id: 296`) running **WooCommerce** ([`docker_image: wordpress`](https://hub.docker.com/r/wordpress)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_plausible_analytics (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/plausible-logo-N0vQ.png" width="100" height="100" /><br/> Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.<br/><br/>**elestio_plausible_analytics** is a preconfigured elestio_service resource (`template_id: 85`) running **Plausible Analytics** ([`docker_image: plausible/analytics`](https://hub.docker.com/r/plausible/analytics)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/plausible-logo-N0vQ.png" width="100" /><br/> Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.<br/><br/>**elestio_plausible_analytics** is a preconfigured elestio_service resource (`template_id: 85`) running **Plausible Analytics** ([`docker_image: plausible/analytics`](https://hub.docker.com/r/plausible/analytics)).
 
 
 

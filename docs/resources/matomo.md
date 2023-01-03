@@ -8,7 +8,7 @@ description: |-
 
 # elestio_matomo (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" height="100" /><br/> Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br/><br/>**elestio_matomo** is a preconfigured elestio_service resource (`template_id: 210`) running **Matomo** ([`docker_image: matomo`](https://hub.docker.com/r/matomo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" /><br/> Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br/><br/>**elestio_matomo** is a preconfigured elestio_service resource (`template_id: 210`) running **Matomo** ([`docker_image: matomo`](https://hub.docker.com/r/matomo)).
 
 ## Example Usage
 

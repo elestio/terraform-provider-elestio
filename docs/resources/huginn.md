@@ -8,7 +8,7 @@ description: |-
 
 # elestio_huginn (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" height="100" /><br/> Huginn is a tool in the Web Service Automation category of a tech stack.<br/><br/>**elestio_huginn** is a preconfigured elestio_service resource (`template_id: 202`) running **Huginn** ([`docker_image: huginn/huginn-single-process`](https://hub.docker.com/r/huginn/huginn-single-process)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" /><br/> Huginn is a tool in the Web Service Automation category of a tech stack.<br/><br/>**elestio_huginn** is a preconfigured elestio_service resource (`template_id: 202`) running **Huginn** ([`docker_image: huginn/huginn-single-process`](https://hub.docker.com/r/huginn/huginn-single-process)).
 
 ## Example Usage
 

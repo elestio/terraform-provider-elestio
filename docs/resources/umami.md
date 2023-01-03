@@ -8,7 +8,7 @@ description: |-
 
 # elestio_umami (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/umami-yKdl.png" width="100" height="100" /><br/> Umami is a simple, fast, website analytics alternative to Google Analytics.<br/><br/>**elestio_umami** is a preconfigured elestio_service resource (`template_id: 188`) running **Umami** ([`docker_image: mikecao/umami`](https://hub.docker.com/r/mikecao/umami)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/umami-yKdl.png" width="100" /><br/> Umami is a simple, fast, website analytics alternative to Google Analytics.<br/><br/>**elestio_umami** is a preconfigured elestio_service resource (`template_id: 188`) running **Umami** ([`docker_image: mikecao/umami`](https://hub.docker.com/r/mikecao/umami)).
 
 ## Example Usage
 

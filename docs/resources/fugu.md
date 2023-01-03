@@ -8,7 +8,7 @@ description: |-
 
 # elestio_fugu (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" height="100" /><br/> Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.<br/><br/>**elestio_fugu** is a preconfigured elestio_service resource (`template_id: 216`) running **Fugu** ([`docker_image: shafyy/fugu`](https://hub.docker.com/r/shafyy/fugu)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" /><br/> Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.<br/><br/>**elestio_fugu** is a preconfigured elestio_service resource (`template_id: 216`) running **Fugu** ([`docker_image: shafyy/fugu`](https://hub.docker.com/r/shafyy/fugu)).
 
 ## Example Usage
 

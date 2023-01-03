@@ -8,7 +8,7 @@ description: |-
 
 # elestio_magento (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" height="100" /><br/> Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br/><br/>**elestio_magento** is a preconfigured elestio_service resource (`template_id: 98`) running **Magento** ([`docker_image: bitnami/magento`](https://hub.docker.com/r/bitnami/magento)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br/> Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br/><br/>**elestio_magento** is a preconfigured elestio_service resource (`template_id: 98`) running **Magento** ([`docker_image: bitnami/magento`](https://hub.docker.com/r/bitnami/magento)).
 
 ## Example Usage
 

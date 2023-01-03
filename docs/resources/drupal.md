@@ -8,7 +8,7 @@ description: |-
 
 # elestio_drupal (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" height="100" /><br/> Drupal is an open-source content management platform that supports a wide variety of websites.<br/><br/>**elestio_drupal** is a preconfigured elestio_service resource (`template_id: 96`) running **Drupal** ([`docker_image: bitnami/drupal`](https://hub.docker.com/r/bitnami/drupal)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" /><br/> Drupal is an open-source content management platform that supports a wide variety of websites.<br/><br/>**elestio_drupal** is a preconfigured elestio_service resource (`template_id: 96`) running **Drupal** ([`docker_image: bitnami/drupal`](https://hub.docker.com/r/bitnami/drupal)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_k3s (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" height="100" /><br/> K3s is a fully compliant Kubernetes distribution<br/><br/>**elestio_k3s** is a preconfigured elestio_service resource (`template_id: 179`) running **K3S**.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" /><br/> K3s is a fully compliant Kubernetes distribution<br/><br/>**elestio_k3s** is a preconfigured elestio_service resource (`template_id: 179`) running **K3S**.
 
 ## Example Usage
 

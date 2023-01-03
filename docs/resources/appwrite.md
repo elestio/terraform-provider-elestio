@@ -8,7 +8,7 @@ description: |-
 
 # elestio_appwrite (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" height="100" /><br/> Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br/><br/>**elestio_appwrite** is a preconfigured elestio_service resource (`template_id: 144`) running **Appwrite** ([`docker_image: appwrite/appwrite`](https://hub.docker.com/r/appwrite/appwrite)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" /><br/> Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br/><br/>**elestio_appwrite** is a preconfigured elestio_service resource (`template_id: 144`) running **Appwrite** ([`docker_image: appwrite/appwrite`](https://hub.docker.com/r/appwrite/appwrite)).
 
 ## Example Usage
 

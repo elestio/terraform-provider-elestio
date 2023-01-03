@@ -8,7 +8,7 @@ description: |-
 
 # elestio_chiefonboarding (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" height="100" /><br/> Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br/><br/>**elestio_chiefonboarding** is a preconfigured elestio_service resource (`template_id: 291`) running **ChiefOnboarding** ([`docker_image: chiefonboarding/chiefonboarding`](https://hub.docker.com/r/chiefonboarding/chiefonboarding)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" /><br/> Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br/><br/>**elestio_chiefonboarding** is a preconfigured elestio_service resource (`template_id: 291`) running **ChiefOnboarding** ([`docker_image: chiefonboarding/chiefonboarding`](https://hub.docker.com/r/chiefonboarding/chiefonboarding)).
 
 ## Example Usage
 

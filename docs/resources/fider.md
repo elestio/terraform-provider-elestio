@@ -8,7 +8,7 @@ description: |-
 
 # elestio_fider (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" height="100" /><br/> Customer Feedback Made Easy<br/><br/>**elestio_fider** is a preconfigured elestio_service resource (`template_id: 265`) running **Fider** ([`docker_image: getfider/fider`](https://hub.docker.com/r/getfider/fider)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" /><br/> Customer Feedback Made Easy<br/><br/>**elestio_fider** is a preconfigured elestio_service resource (`template_id: 265`) running **Fider** ([`docker_image: getfider/fider`](https://hub.docker.com/r/getfider/fider)).
 
 ## Example Usage
 

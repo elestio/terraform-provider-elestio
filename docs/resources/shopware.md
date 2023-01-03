@@ -8,7 +8,7 @@ description: |-
 
 # elestio_shopware (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" height="100" /><br/> Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br/><br/>**elestio_shopware** is a preconfigured elestio_service resource (`template_id: 289`) running **Shopware** ([`docker_image: shyim/shopware`](https://hub.docker.com/r/shyim/shopware)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" /><br/> Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br/><br/>**elestio_shopware** is a preconfigured elestio_service resource (`template_id: 289`) running **Shopware** ([`docker_image: shyim/shopware`](https://hub.docker.com/r/shyim/shopware)).
 
 ## Example Usage
 

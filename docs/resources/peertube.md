@@ -8,7 +8,7 @@ description: |-
 
 # elestio_peertube (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" height="100" /><br/> Free software to take back control of your videos.<br/><br/>**elestio_peertube** is a preconfigured elestio_service resource (`template_id: 285`) running **PeerTube** ([`docker_image: chocobozzz/peertube`](https://hub.docker.com/r/chocobozzz/peertube)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" /><br/> Free software to take back control of your videos.<br/><br/>**elestio_peertube** is a preconfigured elestio_service resource (`template_id: 285`) running **PeerTube** ([`docker_image: chocobozzz/peertube`](https://hub.docker.com/r/chocobozzz/peertube)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_prestashop (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" height="100" /><br/> The PrestaShop project is a universal open-source software platform to build your e-commerce solution.<br/><br/>**elestio_prestashop** is a preconfigured elestio_service resource (`template_id: 95`) running **Prestashop** ([`docker_image: bitnami/prestashop`](https://hub.docker.com/r/bitnami/prestashop)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" /><br/> The PrestaShop project is a universal open-source software platform to build your e-commerce solution.<br/><br/>**elestio_prestashop** is a preconfigured elestio_service resource (`template_id: 95`) running **Prestashop** ([`docker_image: bitnami/prestashop`](https://hub.docker.com/r/bitnami/prestashop)).
 
 ## Example Usage
 

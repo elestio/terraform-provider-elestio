@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mattermost_team_edition (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" height="100" /><br/> Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br/><br/>**elestio_mattermost_team_edition** is a preconfigured elestio_service resource (`template_id: 89`) running **Mattermost Team Edition** ([`docker_image: mattermost/mattermost-team-edition`](https://hub.docker.com/r/mattermost/mattermost-team-edition)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" /><br/> Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br/><br/>**elestio_mattermost_team_edition** is a preconfigured elestio_service resource (`template_id: 89`) running **Mattermost Team Edition** ([`docker_image: mattermost/mattermost-team-edition`](https://hub.docker.com/r/mattermost/mattermost-team-edition)).
 
 
 

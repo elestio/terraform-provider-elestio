@@ -8,7 +8,7 @@ description: |-
 
 # elestio_openresty (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" height="100" /><br/> A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br/><br/>**elestio_openresty** is a preconfigured elestio_service resource (`template_id: 218`) running **OpenResty** ([`docker_image: elestio/nginx-auto-ssl`](https://hub.docker.com/r/elestio/nginx-auto-ssl)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" /><br/> A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br/><br/>**elestio_openresty** is a preconfigured elestio_service resource (`template_id: 218`) running **OpenResty** ([`docker_image: elestio/nginx-auto-ssl`](https://hub.docker.com/r/elestio/nginx-auto-ssl)).
 
 ## Example Usage
 

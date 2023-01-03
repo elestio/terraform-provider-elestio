@@ -8,7 +8,7 @@ description: |-
 
 # elestio_sonarqube (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" height="100" /><br/> SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br/><br/>**elestio_sonarqube** is a preconfigured elestio_service resource (`template_id: 113`) running **SonarQube** ([`docker_image: bitnami/sonarqube`](https://hub.docker.com/r/bitnami/sonarqube)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br/> SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br/><br/>**elestio_sonarqube** is a preconfigured elestio_service resource (`template_id: 113`) running **SonarQube** ([`docker_image: bitnami/sonarqube`](https://hub.docker.com/r/bitnami/sonarqube)).
 
 ## Example Usage
 

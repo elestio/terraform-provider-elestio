@@ -8,7 +8,7 @@ description: |-
 
 # elestio_erpnext (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" height="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** ([`docker_image: frappe/erpnext`](https://hub.docker.com/r/frappe/erpnext)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** ([`docker_image: frappe/erpnext`](https://hub.docker.com/r/frappe/erpnext)).
 
 ## Example Usage
 

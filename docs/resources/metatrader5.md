@@ -8,7 +8,7 @@ description: |-
 
 # elestio_metatrader5 (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" height="100" /><br/> Trade on Forex & stock markets in a virtual desktop from your browser<br/><br/>**elestio_metatrader5** is a preconfigured elestio_service resource (`template_id: 280`) running **MetaTrader5** ([`docker_image: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" /><br/> Trade on Forex & stock markets in a virtual desktop from your browser<br/><br/>**elestio_metatrader5** is a preconfigured elestio_service resource (`template_id: 280`) running **MetaTrader5** ([`docker_image: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
 
 ## Example Usage
 

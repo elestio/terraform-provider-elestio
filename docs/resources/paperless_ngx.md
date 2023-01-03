@@ -8,7 +8,7 @@ description: |-
 
 # elestio_paperless_ngx (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" height="100" /><br/> Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.<br/><br/>**elestio_paperless_ngx** is a preconfigured elestio_service resource (`template_id: 227`) running **Paperless-ngx** ([`docker_image: ghcr.io/paperless-ngx/paperless-ngx`](https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" /><br/> Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.<br/><br/>**elestio_paperless_ngx** is a preconfigured elestio_service resource (`template_id: 227`) running **Paperless-ngx** ([`docker_image: ghcr.io/paperless-ngx/paperless-ngx`](https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx)).
 
 ## Example Usage
 

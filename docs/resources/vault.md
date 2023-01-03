@@ -8,7 +8,7 @@ description: |-
 
 # elestio_vault (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" height="100" /><br/> Vault is a tool for secrets management, encryption as a service, and privileged access management<br/><br/>**elestio_vault** is a preconfigured elestio_service resource (`template_id: 183`) running **Vault** ([`docker_image: vault`](https://hub.docker.com/r/vault)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" /><br/> Vault is a tool for secrets management, encryption as a service, and privileged access management<br/><br/>**elestio_vault** is a preconfigured elestio_service resource (`template_id: 183`) running **Vault** ([`docker_image: vault`](https://hub.docker.com/r/vault)).
 
 ## Example Usage
 

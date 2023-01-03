@@ -24,10 +24,16 @@ if ! echo "$response" | jq . > /dev/null 2>&1; then
   exit 1
 fi
 
-# Extract the "instances" array from the response
-# Rename "instances" to "templates" key name
+# Rename "instances" to "templates"
+response=$(echo "$response" | jq '. + {"templates":.instances}|del(.instances)')
+
 # Remove templates with "Full Stack" category
-# Output to a JSON local file
-echo "$response" | jq '. + {"templates":.instances|map(select(.category != "Full Stack"))}|del(.instances)' > "$output_file"
+response=$(echo "$response" | jq '. + {"templates":.templates|map(select(.category != "Full Stack"))}')
+
+# # Add "https:" in front of all image URLs
+response=$(echo "$response" | jq '. + {"templates":.templates|map(.mainImage |= sub("^"; "https:"))}')
+
+# Output the modified JSON to a local file
+echo "$response" > "$output_file"
 
 echo "JSON file created successfully! $output_file"

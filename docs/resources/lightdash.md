@@ -8,7 +8,7 @@ description: |-
 
 # elestio_lightdash (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" height="100" /><br/> Lighdash an open source alternative to Looker built using dbt.<br/><br/>**elestio_lightdash** is a preconfigured elestio_service resource (`template_id: 205`) running **Lightdash** ([`docker_image: lightdash/lightdash`](https://hub.docker.com/r/lightdash/lightdash)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" /><br/> Lighdash an open source alternative to Looker built using dbt.<br/><br/>**elestio_lightdash** is a preconfigured elestio_service resource (`template_id: 205`) running **Lightdash** ([`docker_image: lightdash/lightdash`](https://hub.docker.com/r/lightdash/lightdash)).
 
 ## Example Usage
 

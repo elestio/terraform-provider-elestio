@@ -8,7 +8,7 @@ description: |-
 
 # elestio_trudesk (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" height="100" /><br/> Trudesk is an open-source help desk/ticketing solution.<br/><br/>**elestio_trudesk** is a preconfigured elestio_service resource (`template_id: 271`) running **Trudesk** ([`docker_image: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" /><br/> Trudesk is an open-source help desk/ticketing solution.<br/><br/>**elestio_trudesk** is a preconfigured elestio_service resource (`template_id: 271`) running **Trudesk** ([`docker_image: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
 
 ## Example Usage
 

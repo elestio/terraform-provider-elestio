@@ -8,7 +8,7 @@ description: |-
 
 # elestio_zulip (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" height="100" /><br/> Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.<br/><br/>**elestio_zulip** is a preconfigured elestio_service resource (`template_id: 232`) running **Zulip** ([`docker_image: zulip/docker-zulip`](https://hub.docker.com/r/zulip/docker-zulip)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" /><br/> Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.<br/><br/>**elestio_zulip** is a preconfigured elestio_service resource (`template_id: 232`) running **Zulip** ([`docker_image: zulip/docker-zulip`](https://hub.docker.com/r/zulip/docker-zulip)).
 
 ## Example Usage
 

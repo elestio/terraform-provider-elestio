@@ -8,7 +8,7 @@ description: |-
 
 # elestio_knime (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" height="100" /><br/> KNIME Analytics Platform<br/><br/>**elestio_knime** is a preconfigured elestio_service resource (`template_id: 238`) running **Knime** ([`docker_image: elestio/docker-desktop-vnc-knime`](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br/> KNIME Analytics Platform<br/><br/>**elestio_knime** is a preconfigured elestio_service resource (`template_id: 238`) running **Knime** ([`docker_image: elestio/docker-desktop-vnc-knime`](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)).
 
 ## Example Usage
 

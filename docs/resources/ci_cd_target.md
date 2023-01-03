@@ -8,7 +8,7 @@ description: |-
 
 # elestio_ci_cd_target (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" height="100" /><br/> Deploy one or multiple CD/CD pipelines to a target node<br/><br/>**elestio_ci_cd_target** is a preconfigured elestio_service resource (`template_id: 234`) running **CI-CD-Target**.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" /><br/> Deploy one or multiple CD/CD pipelines to a target node<br/><br/>**elestio_ci_cd_target** is a preconfigured elestio_service resource (`template_id: 234`) running **CI-CD-Target**.
 
 ## Example Usage
 

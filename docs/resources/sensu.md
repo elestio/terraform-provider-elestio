@@ -8,7 +8,7 @@ description: |-
 
 # elestio_sensu (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" height="100" /><br/> Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.<br/><br/>**elestio_sensu** is a preconfigured elestio_service resource (`template_id: 211`) running **Sensu** ([`docker_image: sensu/sensu`](https://hub.docker.com/r/sensu/sensu)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" /><br/> Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.<br/><br/>**elestio_sensu** is a preconfigured elestio_service resource (`template_id: 211`) running **Sensu** ([`docker_image: sensu/sensu`](https://hub.docker.com/r/sensu/sensu)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_meshcentral (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" height="100" /><br/> MeshCentral is a full computer management web site<br/><br/>**elestio_meshcentral** is a preconfigured elestio_service resource (`template_id: 281`) running **MeshCentral** ([`docker_image: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" /><br/> MeshCentral is a full computer management web site<br/><br/>**elestio_meshcentral** is a preconfigured elestio_service resource (`template_id: 281`) running **MeshCentral** ([`docker_image: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
 
 ## Example Usage
 

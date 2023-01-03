@@ -8,7 +8,7 @@ description: |-
 
 # elestio_guacamole (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" height="100" /><br/> Apache Guacamole is a clientless remote desktop gateway.<br/><br/>**elestio_guacamole** is a preconfigured elestio_service resource (`template_id: 142`) running **Guacamole** ([`docker_image: guacamole/guacamole`](https://hub.docker.com/r/guacamole/guacamole)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" /><br/> Apache Guacamole is a clientless remote desktop gateway.<br/><br/>**elestio_guacamole** is a preconfigured elestio_service resource (`template_id: 142`) running **Guacamole** ([`docker_image: guacamole/guacamole`](https://hub.docker.com/r/guacamole/guacamole)).
 
 ## Example Usage
 

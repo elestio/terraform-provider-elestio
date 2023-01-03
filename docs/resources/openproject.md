@@ -8,7 +8,7 @@ description: |-
 
 # elestio_openproject (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" height="100" /><br/> OpenProject is a web-based project management system for location-independent team collaboration.<br/><br/>**elestio_openproject** is a preconfigured elestio_service resource (`template_id: 118`) running **OpenProject** ([`docker_image: openproject/community`](https://hub.docker.com/r/openproject/community)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" /><br/> OpenProject is a web-based project management system for location-independent team collaboration.<br/><br/>**elestio_openproject** is a preconfigured elestio_service resource (`template_id: 118`) running **OpenProject** ([`docker_image: openproject/community`](https://hub.docker.com/r/openproject/community)).
 
 ## Example Usage
 

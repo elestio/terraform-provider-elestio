@@ -8,7 +8,7 @@ description: |-
 
 # elestio_hedgedoc (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" height="100" /><br/> HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor<br/><br/>**elestio_hedgedoc** is a preconfigured elestio_service resource (`template_id: 243`) running **HedgeDoc** ([`docker_image: quay.io/hedgedoc/hedgedoc`](https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" /><br/> HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor<br/><br/>**elestio_hedgedoc** is a preconfigured elestio_service resource (`template_id: 243`) running **HedgeDoc** ([`docker_image: quay.io/hedgedoc/hedgedoc`](https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc)).
 
 ## Example Usage
 

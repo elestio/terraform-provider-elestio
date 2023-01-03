@@ -8,7 +8,7 @@ description: |-
 
 # elestio_keycloak (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keycloak-s9bJ.png" width="100" height="100" /><br/> Keycloak is an open-source identity and access management solution aimed at modern applications and services. <br/><br/>**elestio_keycloak** is a preconfigured elestio_service resource (`template_id: 108`) running **Keycloak** ([`docker_image: bitnami/keycloak`](https://hub.docker.com/r/bitnami/keycloak)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keycloak-s9bJ.png" width="100" /><br/> Keycloak is an open-source identity and access management solution aimed at modern applications and services. <br/><br/>**elestio_keycloak** is a preconfigured elestio_service resource (`template_id: 108`) running **Keycloak** ([`docker_image: bitnami/keycloak`](https://hub.docker.com/r/bitnami/keycloak)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mailu (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" height="100" /><br/> Mailu is an insular email distribution - mail server as Docker images<br/><br/>**elestio_mailu** is a preconfigured elestio_service resource (`template_id: 189`) running **Mailu** ([`docker_image: mailu/admin`](https://hub.docker.com/r/mailu/admin)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br/> Mailu is an insular email distribution - mail server as Docker images<br/><br/>**elestio_mailu** is a preconfigured elestio_service resource (`template_id: 189`) running **Mailu** ([`docker_image: mailu/admin`](https://hub.docker.com/r/mailu/admin)).
 
 ## Example Usage
 

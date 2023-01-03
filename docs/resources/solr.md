@@ -8,7 +8,7 @@ description: |-
 
 # elestio_solr (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" height="100" /><br/> Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br/><br/>**elestio_solr** is a preconfigured elestio_service resource (`template_id: 300`) running **Solr** ([`docker_image: bitnami/solr`](https://hub.docker.com/r/bitnami/solr)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" /><br/> Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br/><br/>**elestio_solr** is a preconfigured elestio_service resource (`template_id: 300`) running **Solr** ([`docker_image: bitnami/solr`](https://hub.docker.com/r/bitnami/solr)).
 
 ## Example Usage
 

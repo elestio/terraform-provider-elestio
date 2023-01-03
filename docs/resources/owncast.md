@@ -8,7 +8,7 @@ description: |-
 
 # elestio_owncast (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" height="100" /><br/> Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br/><br/>**elestio_owncast** is a preconfigured elestio_service resource (`template_id: 299`) running **Owncast** ([`docker_image: gabekangas/owncast`](https://hub.docker.com/r/gabekangas/owncast)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" /><br/> Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br/><br/>**elestio_owncast** is a preconfigured elestio_service resource (`template_id: 299`) running **Owncast** ([`docker_image: gabekangas/owncast`](https://hub.docker.com/r/gabekangas/owncast)).
 
 ## Example Usage
 

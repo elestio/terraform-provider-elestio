@@ -8,7 +8,7 @@ description: |-
 
 # elestio_gitea (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" height="100" /><br/> Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br/><br/>**elestio_gitea** is a preconfigured elestio_service resource (`template_id: 155`) running **Gitea** ([`docker_image: gitea/gitea`](https://hub.docker.com/r/gitea/gitea)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" /><br/> Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br/><br/>**elestio_gitea** is a preconfigured elestio_service resource (`template_id: 155`) running **Gitea** ([`docker_image: gitea/gitea`](https://hub.docker.com/r/gitea/gitea)).
 
 ## Example Usage
 

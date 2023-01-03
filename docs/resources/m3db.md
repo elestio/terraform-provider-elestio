@@ -8,7 +8,7 @@ description: |-
 
 # elestio_m3db (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" height="100" /><br/> M3 is a Prometheus compatible, easy to adopt metrics engine<br/><br/>**elestio_m3db** is a preconfigured elestio_service resource (`template_id: 255`) running **M3DB** ([`docker_image: quay.io/m3db/m3dbnode`](https://hub.docker.com/r/quay.io/m3db/m3dbnode)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" /><br/> M3 is a Prometheus compatible, easy to adopt metrics engine<br/><br/>**elestio_m3db** is a preconfigured elestio_service resource (`template_id: 255`) running **M3DB** ([`docker_image: quay.io/m3db/m3dbnode`](https://hub.docker.com/r/quay.io/m3db/m3dbnode)).
 
 ## Example Usage
 

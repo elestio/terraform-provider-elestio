@@ -8,7 +8,7 @@ description: |-
 
 # elestio_shlink (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" height="100" /><br/> The definitive self-hosted URL shortener<br/><br/>**elestio_shlink** is a preconfigured elestio_service resource (`template_id: 239`) running **Shlink** ([`docker_image: shlinkio/shlink`](https://hub.docker.com/r/shlinkio/shlink)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" /><br/> The definitive self-hosted URL shortener<br/><br/>**elestio_shlink** is a preconfigured elestio_service resource (`template_id: 239`) running **Shlink** ([`docker_image: shlinkio/shlink`](https://hub.docker.com/r/shlinkio/shlink)).
 
 ## Example Usage
 

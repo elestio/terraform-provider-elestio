@@ -8,7 +8,7 @@ description: |-
 
 # elestio_rustdeskserver (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" height="100" /><br/> Open source virtual / remote desktop infrastructure for everyone!<br/><br/>**elestio_rustdeskserver** is a preconfigured elestio_service resource (`template_id: 288`) running **RustdeskServer** ([`docker_image: rustdesk/rustdesk-server`](https://hub.docker.com/r/rustdesk/rustdesk-server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" /><br/> Open source virtual / remote desktop infrastructure for everyone!<br/><br/>**elestio_rustdeskserver** is a preconfigured elestio_service resource (`template_id: 288`) running **RustdeskServer** ([`docker_image: rustdesk/rustdesk-server`](https://hub.docker.com/r/rustdesk/rustdesk-server)).
 
 ## Example Usage
 

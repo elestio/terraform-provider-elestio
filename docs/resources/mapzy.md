@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mapzy (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" height="100" /><br/> A simple, self-hostable store finder that cares about your privacy.<br/><br/>**elestio_mapzy** is a preconfigured elestio_service resource (`template_id: 226`) running **Mapzy** ([`docker_image: mapzy/mapzy`](https://hub.docker.com/r/mapzy/mapzy)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" /><br/> A simple, self-hostable store finder that cares about your privacy.<br/><br/>**elestio_mapzy** is a preconfigured elestio_service resource (`template_id: 226`) running **Mapzy** ([`docker_image: mapzy/mapzy`](https://hub.docker.com/r/mapzy/mapzy)).
 
 ## Example Usage
 

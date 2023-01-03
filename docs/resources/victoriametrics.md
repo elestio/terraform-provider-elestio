@@ -8,7 +8,7 @@ description: |-
 
 # elestio_victoriametrics (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" height="100" /><br/> VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br/><br/>**elestio_victoriametrics** is a preconfigured elestio_service resource (`template_id: 156`) running **VictoriaMetrics** ([`docker_image: victoriametrics/victoria-metrics`](https://hub.docker.com/r/victoriametrics/victoria-metrics)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" /><br/> VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br/><br/>**elestio_victoriametrics** is a preconfigured elestio_service resource (`template_id: 156`) running **VictoriaMetrics** ([`docker_image: victoriametrics/victoria-metrics`](https://hub.docker.com/r/victoriametrics/victoria-metrics)).
 
 ## Example Usage
 

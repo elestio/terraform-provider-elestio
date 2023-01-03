@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nodebb (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" height="100" /><br/> NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.<br/><br/>**elestio_nodebb** is a preconfigured elestio_service resource (`template_id: 90`) running **NodeBB** ([`docker_image: nilsramsperger/nodebb`](https://hub.docker.com/r/nilsramsperger/nodebb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" /><br/> NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.<br/><br/>**elestio_nodebb** is a preconfigured elestio_service resource (`template_id: 90`) running **NodeBB** ([`docker_image: nilsramsperger/nodebb`](https://hub.docker.com/r/nilsramsperger/nodebb)).
 
 ## Example Usage
 

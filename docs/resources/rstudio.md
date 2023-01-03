@@ -8,7 +8,7 @@ description: |-
 
 # elestio_rstudio (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" height="100" /><br/> Publish your R and Python content with RStudio Connect<br/><br/>**elestio_rstudio** is a preconfigured elestio_service resource (`template_id: 272`) running **Rstudio** ([`docker_image: rocker/rstudio`](https://hub.docker.com/r/rocker/rstudio)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" /><br/> Publish your R and Python content with RStudio Connect<br/><br/>**elestio_rstudio** is a preconfigured elestio_service resource (`template_id: 272`) running **Rstudio** ([`docker_image: rocker/rstudio`](https://hub.docker.com/r/rocker/rstudio)).
 
 ## Example Usage
 

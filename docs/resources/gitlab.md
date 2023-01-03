@@ -8,7 +8,7 @@ description: |-
 
 # elestio_gitlab (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" height="100" /><br/> GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br/><br/>**elestio_gitlab** is a preconfigured elestio_service resource (`template_id: 182`) running **Gitlab** ([`docker_image: gitlab/gitlab-ee`](https://hub.docker.com/r/gitlab/gitlab-ee)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" /><br/> GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br/><br/>**elestio_gitlab** is a preconfigured elestio_service resource (`template_id: 182`) running **Gitlab** ([`docker_image: gitlab/gitlab-ee`](https://hub.docker.com/r/gitlab/gitlab-ee)).
 
 ## Example Usage
 

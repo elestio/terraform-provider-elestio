@@ -8,7 +8,7 @@ description: |-
 
 # elestio_authentik (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" height="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** ([`docker_image: goauthentik.io/server`](https://hub.docker.com/r/goauthentik.io/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** ([`docker_image: goauthentik.io/server`](https://hub.docker.com/r/goauthentik.io/server)).
 
 ## Example Usage
 

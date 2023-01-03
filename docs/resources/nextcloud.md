@@ -8,7 +8,7 @@ description: |-
 
 # elestio_nextcloud (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" height="100" /><br/> NextCloud provides an industry-leading, on-premises content collaboration platform.<br/><br/>**elestio_nextcloud** is a preconfigured elestio_service resource (`template_id: 59`) running **NextCloud** ([`docker_image: nextcloud`](https://hub.docker.com/r/nextcloud)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" /><br/> NextCloud provides an industry-leading, on-premises content collaboration platform.<br/><br/>**elestio_nextcloud** is a preconfigured elestio_service resource (`template_id: 59`) running **NextCloud** ([`docker_image: nextcloud`](https://hub.docker.com/r/nextcloud)).
 
 ## Example Usage
 
@@ -18,7 +18,7 @@ resource "elestio_nextcloud" "my_nextcloud" {
   project_id    = "2500"
   server_name   = "awesome-nextcloud"
   server_type   = "SMALL-1C-2G"
-  version       = "production-fpm"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -48,7 +48,7 @@ resource "elestio_nextcloud" "my_nextcloud" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `production-fpm`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

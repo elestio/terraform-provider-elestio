@@ -8,7 +8,7 @@ description: |-
 
 # elestio_freescout (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" height="100" /><br/> FreeScout is a free self-hosted help desk & shared mailbox.<br/><br/>**elestio_freescout** is a preconfigured elestio_service resource (`template_id: 193`) running **FreeScout** ([`docker_image: tiredofit/freescout`](https://hub.docker.com/r/tiredofit/freescout)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" /><br/> FreeScout is a free self-hosted help desk & shared mailbox.<br/><br/>**elestio_freescout** is a preconfigured elestio_service resource (`template_id: 193`) running **FreeScout** ([`docker_image: tiredofit/freescout`](https://hub.docker.com/r/tiredofit/freescout)).
 
 ## Example Usage
 

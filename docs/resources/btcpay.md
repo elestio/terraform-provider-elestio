@@ -8,7 +8,7 @@ description: |-
 
 # elestio_btcpay (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" height="100" /><br/> Start Accepting Bitcoin Payments With 0% Fees & No Third-party<br/><br/>**elestio_btcpay** is a preconfigured elestio_service resource (`template_id: 283`) running **BTCPay** ([`docker_image: btcpayserver/btcpayserver`](https://hub.docker.com/r/btcpayserver/btcpayserver)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" /><br/> Start Accepting Bitcoin Payments With 0% Fees & No Third-party<br/><br/>**elestio_btcpay** is a preconfigured elestio_service resource (`template_id: 283`) running **BTCPay** ([`docker_image: btcpayserver/btcpayserver`](https://hub.docker.com/r/btcpayserver/btcpayserver)).
 
 ## Example Usage
 

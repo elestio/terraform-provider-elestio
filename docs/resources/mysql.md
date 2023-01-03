@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mysql (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" height="100" /><br/> MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br/><br/>**elestio_mysql** is a preconfigured elestio_service resource (`template_id: 12`) running **MySQL** ([`docker_image: mysql`](https://hub.docker.com/r/mysql)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br/> MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br/><br/>**elestio_mysql** is a preconfigured elestio_service resource (`template_id: 12`) running **MySQL** ([`docker_image: mysql`](https://hub.docker.com/r/mysql)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_cryptpad (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" height="100" /><br/> CryptPad is a collaboration suite, encrypted and open-source.<br/><br/>**elestio_cryptpad** is a preconfigured elestio_service resource (`template_id: 194`) running **CryptPad** ([`docker_image: promasu/cryptpad`](https://hub.docker.com/r/promasu/cryptpad)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" /><br/> CryptPad is a collaboration suite, encrypted and open-source.<br/><br/>**elestio_cryptpad** is a preconfigured elestio_service resource (`template_id: 194`) running **CryptPad** ([`docker_image: promasu/cryptpad`](https://hub.docker.com/r/promasu/cryptpad)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_focalboard (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" height="100" /><br/> Project & Task Management for Software Development Teams<br/><br/>**elestio_focalboard** is a preconfigured elestio_service resource (`template_id: 240`) running **FocalBoard** ([`docker_image: mattermost/focalboard`](https://hub.docker.com/r/mattermost/focalboard)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" /><br/> Project & Task Management for Software Development Teams<br/><br/>**elestio_focalboard** is a preconfigured elestio_service resource (`template_id: 240`) running **FocalBoard** ([`docker_image: mattermost/focalboard`](https://hub.docker.com/r/mattermost/focalboard)).
 
 ## Example Usage
 

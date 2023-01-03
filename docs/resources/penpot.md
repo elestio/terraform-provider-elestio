@@ -8,7 +8,7 @@ description: |-
 
 # elestio_penpot (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" height="100" /><br/> Penpot is the first open-source design and prototyping platform for cross-domain teams.<br/><br/>**elestio_penpot** is a preconfigured elestio_service resource (`template_id: 121`) running **Penpot** ([`docker_image: penpotapp/frontend`](https://hub.docker.com/r/penpotapp/frontend)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" /><br/> Penpot is the first open-source design and prototyping platform for cross-domain teams.<br/><br/>**elestio_penpot** is a preconfigured elestio_service resource (`template_id: 121`) running **Penpot** ([`docker_image: penpotapp/frontend`](https://hub.docker.com/r/penpotapp/frontend)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_jitsu (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" height="100" /><br/> Jitsu is an open-source web and app-event collection platform. <br/><br/>**elestio_jitsu** is a preconfigured elestio_service resource (`template_id: 178`) running **Jitsu** ([`docker_image: jitsucom/jitsu`](https://hub.docker.com/r/jitsucom/jitsu)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" /><br/> Jitsu is an open-source web and app-event collection platform. <br/><br/>**elestio_jitsu** is a preconfigured elestio_service resource (`template_id: 178`) running **Jitsu** ([`docker_image: jitsucom/jitsu`](https://hub.docker.com/r/jitsucom/jitsu)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_microk8s (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" height="100" /><br/> MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge<br/><br/>**elestio_microk8s** is a preconfigured elestio_service resource (`template_id: 180`) running **Microk8s**.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" /><br/> MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge<br/><br/>**elestio_microk8s** is a preconfigured elestio_service resource (`template_id: 180`) running **Microk8s**.
 
 ## Example Usage
 

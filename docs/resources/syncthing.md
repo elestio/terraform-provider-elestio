@@ -8,7 +8,7 @@ description: |-
 
 # elestio_syncthing (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" height="100" /><br/> Syncthing is a free, continuous, multiple-device file synchronization program. <br/><br/>**elestio_syncthing** is a preconfigured elestio_service resource (`template_id: 123`) running **Syncthing** ([`docker_image: syncthing/syncthing`](https://hub.docker.com/r/syncthing/syncthing)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" /><br/> Syncthing is a free, continuous, multiple-device file synchronization program. <br/><br/>**elestio_syncthing** is a preconfigured elestio_service resource (`template_id: 123`) running **Syncthing** ([`docker_image: syncthing/syncthing`](https://hub.docker.com/r/syncthing/syncthing)).
 
 ## Example Usage
 

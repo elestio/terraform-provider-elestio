@@ -8,7 +8,7 @@ description: |-
 
 # elestio_portainer (Resource)
 
-<img src="//cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" height="100" /><br/> Portainer is a centralized service delivery platform for containerized apps.<br/><br/>**elestio_portainer** is a preconfigured elestio_service resource (`template_id: 53`) running **Portainer** ([`docker_image: portainer/portainer-ce`](https://hub.docker.com/r/portainer/portainer-ce)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" /><br/> Portainer is a centralized service delivery platform for containerized apps.<br/><br/>**elestio_portainer** is a preconfigured elestio_service resource (`template_id: 53`) running **Portainer** ([`docker_image: portainer/portainer-ce`](https://hub.docker.com/r/portainer/portainer-ce)).
 
 ## Example Usage
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_etherpad (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" height="100" /><br/> Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br/><br/>**elestio_etherpad** is a preconfigured elestio_service resource (`template_id: 266`) running **Etherpad** ([`docker_image: etherpad/etherpad`](https://hub.docker.com/r/etherpad/etherpad)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" /><br/> Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br/><br/>**elestio_etherpad** is a preconfigured elestio_service resource (`template_id: 266`) running **Etherpad** ([`docker_image: etherpad/etherpad`](https://hub.docker.com/r/etherpad/etherpad)).
 
 ## Example Usage
 

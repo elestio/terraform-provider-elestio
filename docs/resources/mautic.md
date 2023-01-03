@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mautic (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" height="100" /><br/> Mautic is a open source marketing automation software.<br/><br/>**elestio_mautic** is a preconfigured elestio_service resource (`template_id: 209`) running **Mautic** ([`docker_image: mautic`](https://hub.docker.com/r/mautic)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br/> Mautic is a open source marketing automation software.<br/><br/>**elestio_mautic** is a preconfigured elestio_service resource (`template_id: 209`) running **Mautic** ([`docker_image: mautic`](https://hub.docker.com/r/mautic)).
 
 ## Example Usage
 

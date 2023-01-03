@@ -8,7 +8,7 @@ description: |-
 
 # elestio_prometheus (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" height="100" /><br/> Power your metrics and alerting with the leading open-source monitoring solution<br/><br/>**elestio_prometheus** is a preconfigured elestio_service resource (`template_id: 252`) running **Prometheus** ([`docker_image: prom/prometheus`](https://hub.docker.com/r/prom/prometheus)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" /><br/> Power your metrics and alerting with the leading open-source monitoring solution<br/><br/>**elestio_prometheus** is a preconfigured elestio_service resource (`template_id: 252`) running **Prometheus** ([`docker_image: prom/prometheus`](https://hub.docker.com/r/prom/prometheus)).
 
 ## Example Usage
 

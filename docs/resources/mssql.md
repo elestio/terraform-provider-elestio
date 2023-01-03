@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mssql (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" height="100" /><br/> SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br/><br/>**elestio_mssql** is a preconfigured elestio_service resource (`template_id: 70`) running **MSSQL** ([`docker_image: mcr.microsoft.com/mssql/server`](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br/> SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br/><br/>**elestio_mssql** is a preconfigured elestio_service resource (`template_id: 70`) running **MSSQL** ([`docker_image: mcr.microsoft.com/mssql/server`](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)).
 
 ## Example Usage
 

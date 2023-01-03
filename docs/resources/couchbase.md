@@ -8,7 +8,7 @@ description: |-
 
 # elestio_couchbase (Resource)
 
-<img src="//cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" height="100" /><br/> Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br/><br/>**elestio_couchbase** is a preconfigured elestio_service resource (`template_id: 302`) running **Couchbase** ([`docker_image: couchbase`](https://hub.docker.com/r/couchbase)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" /><br/> Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br/><br/>**elestio_couchbase** is a preconfigured elestio_service resource (`template_id: 302`) running **Couchbase** ([`docker_image: couchbase`](https://hub.docker.com/r/couchbase)).
 
 ## Example Usage
 

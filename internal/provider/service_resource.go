@@ -190,7 +190,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"server_type": schema.StringAttribute{
 				MarkdownDescription: "The server type defines the power and memory allocated to the service." +
 					" Each `provider_name` has a list of available server types." +
-					" You can look for available server types in the [providers documentation](https://change.me)." +
+					" You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types)." +
 					" You can only upgrade it, not downgrade.",
 				Required: true,
 			},
@@ -229,7 +229,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"provider_name": schema.StringAttribute{
 				MarkdownDescription: "The name of the provider to use to host the service." +
-					" You can look for available provider names in the [providers documentation](https://change.me)." +
+					" You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types)." +
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
@@ -238,7 +238,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"datacenter": schema.StringAttribute{
 				MarkdownDescription: "The datacenter of the provider where the service will be hosted." +
-					" You can look for available datacenters in the [providers documentation](https://change.me)." +
+					" You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types)." +
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{

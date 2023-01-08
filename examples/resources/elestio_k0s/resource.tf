@@ -7,5 +7,5 @@ resource "elestio_k0s" "my_k0s" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

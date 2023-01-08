@@ -7,5 +7,5 @@ resource "elestio_[TEMPLATE_RESOURCE_NAME]" "my_[TEMPLATE_RESOURCE_NAME]" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

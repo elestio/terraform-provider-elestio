@@ -7,5 +7,5 @@ resource "elestio_quant_ux" "my_quant_ux" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

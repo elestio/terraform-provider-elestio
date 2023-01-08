@@ -7,5 +7,5 @@ resource "elestio_ci_cd_target" "my_ci_cd_target" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

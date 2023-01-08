@@ -22,7 +22,7 @@ resource "elestio_trudesk" "my_trudesk" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }
 ```
 
@@ -32,11 +32,11 @@ resource "elestio_trudesk" "my_trudesk" {
 ### Required
 
 - `admin_email` (String) Service admin email. Requires replace to change it.
-- `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://change.me). Requires replace to change it.
+- `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
-- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://change.me). Requires replace to change it.
+- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
-- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://change.me). You can only upgrade it, not downgrade.
+- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.
 - `support_level` (String) Service support level. You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 
 ### Optional

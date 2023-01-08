@@ -7,5 +7,5 @@ resource "elestio_victoriametrics" "my_victoriametrics" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

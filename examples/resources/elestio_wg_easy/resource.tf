@@ -7,5 +7,5 @@ resource "elestio_wg_easy" "my_wg_easy" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
-  admin_email   = "exemple@mail.com"
+  admin_email   = "example@mail.com"
 }

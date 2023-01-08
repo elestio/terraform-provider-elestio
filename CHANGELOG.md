@@ -51,3 +51,11 @@ FEATURES:
 - **New Resource:** `elestio_manticoresearch`
 - **Improved Documentation:** Add examples for each templates
 - **New guide:** Deploy from scratch
+
+## 0.4.1 (Unreleased)
+
+FEATURES:
+
+- **New guide:** Providers, datacenters and server types
+- **New guide:** Import an existing resource
+- **Improved Documentation:** Add url for provider resource doc

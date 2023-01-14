@@ -45,6 +45,7 @@ resource "elestio_mastodon" "my_mastodon" {
 - `app_auto_updates_enabled` (Boolean) Service app auto update state. **Default** `true`.
 - `backups_enabled` (Boolean) Service backups state.  Requires a support_level higher than `level1`. **Default** `false`.
 - `firewall_enabled` (Boolean) Service firewall state. **Default** `true`.
+- `keep_backups_on_delete_enabled` (Boolean) Creates a backup and keeps all existing ones after deleting the service. If the project is deleted, the backups will be lost. **Default** `true`.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.

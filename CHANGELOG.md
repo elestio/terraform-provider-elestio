@@ -52,10 +52,15 @@ FEATURES:
 - **Improved Documentation:** Add examples for each templates
 - **New guide:** Deploy from scratch
 
-## 0.4.1 (Unreleased)
+## 0.5.0 (14 january, 2023)
 
 FEATURES:
 
 - **New guide:** Providers, datacenters and server types
 - **New guide:** Import an existing resource
 - **Improved Documentation:** Add url for provider resource doc
+- **New attribute:** Added bolean attribute 'keep_backups_on_delete_enabled' on services resources.
+
+FIX:
+
+- The waiting time for deleting services has been increased to avoid errors.

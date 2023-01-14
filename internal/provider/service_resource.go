@@ -117,6 +117,7 @@ type (
 		ExternalBackupsUpdateMinute                 types.Int64  `tfsdk:"external_backups_update_minute"`
 		ExternalBackupsUpdateType                   types.String `tfsdk:"external_backups_update_type"`
 		ExternalBackupsRetainDayOfWeek              types.Int64  `tfsdk:"external_backups_retain_day_of_week"`
+		KeepBackupsOnDeleteEnabled                  types.Bool   `tfsdk:"keep_backups_on_delete_enabled"`
 		FirewallEnabled                             types.Bool   `tfsdk:"firewall_enabled"`
 		FirewallId                                  types.String `tfsdk:"firewall_id"`
 		FirewallPorts                               types.String `tfsdk:"firewall_ports"`
@@ -494,6 +495,16 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					modifiers.BoolDefault(true),
 				},
 			},
+			"keep_backups_on_delete_enabled": schema.BoolAttribute{
+				MarkdownDescription: "Creates a backup and keeps all existing ones after deleting the service." +
+					" If the project is deleted, the backups will be lost." +
+					" **Default** `true`.",
+				Optional: true,
+				Computed: true,
+				PlanModifiers: []planmodifier.Bool{
+					modifiers.BoolDefault(true),
+				},
+			},
 			"external_backups_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Service external backups state." +
 					" **Default** `false`.",
@@ -727,7 +738,7 @@ func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest
 		return
 	}
 
-	projectId, serviceId := state.ProjectID.ValueString(), state.Id.ValueString()
+	projectId, serviceId, keepBackups := state.ProjectID.ValueString(), state.Id.ValueString(), state.KeepBackupsOnDeleteEnabled.ValueBool()
 	service, err := r.client.Service.Get(projectId, serviceId)
 	if err != nil {
 		resp.Diagnostics.AddError(
@@ -737,7 +748,7 @@ func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest
 		return
 	}
 
-	if err := r.client.Service.Delete(service.ProjectID, service.ID); err != nil {
+	if err := r.client.Service.Delete(service.ProjectID, service.ID, keepBackups); err != nil {
 		resp.Diagnostics.AddError(
 			"Error Deleting Service",
 			fmt.Sprintf("Unable to start service deletion, got error: %s", err),
@@ -1028,9 +1039,9 @@ func (r *ServiceResource) waitServiceCreate(ctx context.Context, service *elesti
 			return serviceW, "created", nil
 		},
 		Timeout:                   createTimeout,
-		Delay:                     10 * time.Second,
-		MinTimeout:                5 * time.Second,
-		ContinuousTargetOccurence: 2,
+		Delay:                     60 * time.Second,
+		MinTimeout:                10 * time.Second,
+		ContinuousTargetOccurence: 3,
 	}
 
 	tflog.Trace(ctx, fmt.Sprintf("Service creation waiter timeout %.0f minutes", createTimeout.Minutes()))
@@ -1058,9 +1069,9 @@ func (r *ServiceResource) waitServiceDelete(ctx context.Context, service *elesti
 			return struct{}{}, "deleted", nil
 		},
 		Timeout:                   deleteTimeout,
-		Delay:                     10 * time.Second,
-		MinTimeout:                5 * time.Second,
-		ContinuousTargetOccurence: 2,
+		Delay:                     80 * time.Second,
+		MinTimeout:                10 * time.Second,
+		ContinuousTargetOccurence: 3,
 	}
 
 	tflog.Trace(ctx, fmt.Sprintf("Service deletion waiter timeout %.0f minutes", deleteTimeout.Minutes()))
@@ -1095,8 +1106,8 @@ func (r *ServiceResource) waitServerTypeUpdate(ctx context.Context, service *ele
 			return serviceW, "updated", nil
 		},
 		Timeout:                   updateTimeout,
-		Delay:                     10 * time.Second,
-		MinTimeout:                5 * time.Second,
+		Delay:                     80 * time.Second,
+		MinTimeout:                10 * time.Second,
 		ContinuousTargetOccurence: 2,
 	}
 

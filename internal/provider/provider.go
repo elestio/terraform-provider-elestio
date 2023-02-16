@@ -229,6 +229,7 @@ func NewServiceResources() []func() resource.Resource {
 					Logo:              template.Logo,
 					DockerHubImage:    template.DockerHubImage,
 					DefaultVersion:    template.DockerHubDefaultTag,
+					Category:          template.Category,
 				})
 			},
 		)

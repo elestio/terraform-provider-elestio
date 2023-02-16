@@ -43,6 +43,7 @@ type (
 		Logo               string
 		DockerHubImage     string
 		DefaultVersion     string
+		Category           string
 	}
 
 	ServiceResource struct {
@@ -321,7 +322,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service." +
 					" You must create a CNAME record pointing to the service `cname` value." +
 					" Alternatively, you can create an A record pointing to the service `ipv6` value.",
-				Optional: true,
+				Optional: r.Category != "Databases & Cache",
 				Computed: true,
 				PlanModifiers: []planmodifier.Set{
 					modifiers.SetStringEmpty(),
@@ -901,24 +902,26 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	var stateCustomDomainNames []string
-	state.CustomDomainNames.ElementsAs(ctx, &stateCustomDomainNames, false)
+	if r.Category != "Databases & Cache" {
+		var stateCustomDomainNames []string
+		state.CustomDomainNames.ElementsAs(ctx, &stateCustomDomainNames, false)
 
-	var planCustomDomainNames []string
-	plan.CustomDomainNames.ElementsAs(ctx, &planCustomDomainNames, false)
+		var planCustomDomainNames []string
+		plan.CustomDomainNames.ElementsAs(ctx, &planCustomDomainNames, false)
 
-	for _, customDomainNames := range planCustomDomainNames {
-		if !utils.Contains(stateCustomDomainNames, customDomainNames) {
-			if err := r.client.Service.AddCustomDomainName(service.ID, customDomainNames); err != nil {
-				return nil, fmt.Errorf("failed to add customDomainName: %s", err)
+		for _, customDomainNames := range planCustomDomainNames {
+			if !utils.Contains(stateCustomDomainNames, customDomainNames) {
+				if err := r.client.Service.AddCustomDomainName(service.ID, customDomainNames); err != nil {
+					return nil, fmt.Errorf("failed to add customDomainName: %s", err)
+				}
 			}
 		}
-	}
 
-	for _, customDomainNames := range stateCustomDomainNames {
-		if !utils.Contains(planCustomDomainNames, customDomainNames) {
-			if err := r.client.Service.RemoveCustomDomainName(service.ID, customDomainNames); err != nil {
-				return nil, fmt.Errorf("failed to remove customDomainName: %s", err)
+		for _, customDomainNames := range stateCustomDomainNames {
+			if !utils.Contains(planCustomDomainNames, customDomainNames) {
+				if err := r.client.Service.RemoveCustomDomainName(service.ID, customDomainNames); err != nil {
+					return nil, fmt.Errorf("failed to remove customDomainName: %s", err)
+				}
 			}
 		}
 	}

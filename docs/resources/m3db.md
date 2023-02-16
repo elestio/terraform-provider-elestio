@@ -65,7 +65,7 @@ resource "elestio_m3db" "my_m3db" {
 - `country` (String) Service country.
 - `created_at` (String) Service creation date.
 - `creator_name` (String) Service creator name.
-- `custom_domain_names` (Set of String) Indicate the list of domains for which you want to activate HTTPS / TLS / SSL. You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service. You must create a CNAME record pointing to the service `cname` value. Alternatively, you can create an A record pointing to the service `ipv6` value.
+- `custom_domain_names` (Set of String) Indicate the list of domains for which you want to activate HTTPS / TLS / SSL. You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service. You must create a CNAME record pointing to the service `cname` value. Alternatively, you can create an A record pointing to the service `ipv4` value.
 - `database_admin` (Attributes) Service database admin. (see [below for nested schema](#nestedatt--database_admin))
 - `deployment_ended_at` (String) Service deployment endedAt date.
 - `deployment_started_at` (String) Service deployment startedAt date.

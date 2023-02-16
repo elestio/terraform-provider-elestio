@@ -321,7 +321,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				MarkdownDescription: "Indicate the list of domains for which you want to activate HTTPS / TLS / SSL." +
 					" You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service." +
 					" You must create a CNAME record pointing to the service `cname` value." +
-					" Alternatively, you can create an A record pointing to the service `ipv6` value.",
+					" Alternatively, you can create an A record pointing to the service `ipv4` value.",
 				Optional: r.Category != "Databases & Cache",
 				Computed: true,
 				PlanModifiers: []planmodifier.Set{

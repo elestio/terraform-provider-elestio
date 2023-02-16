@@ -44,6 +44,7 @@ resource "elestio_hedgedoc" "my_hedgedoc" {
 - `alerts_enabled` (Boolean) Service alerts state. **Default** `true`.
 - `app_auto_updates_enabled` (Boolean) Service app auto update state. **Default** `true`.
 - `backups_enabled` (Boolean) Service backups state.  Requires a support_level higher than `level1`. **Default** `false`.
+- `custom_domain_names` (Set of String) Indicate the list of domains for which you want to activate HTTPS / TLS / SSL. You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service. You must create a CNAME record pointing to the service `cname` value. Alternatively, you can create an A record pointing to the service `ipv6` value.
 - `firewall_enabled` (Boolean) Service firewall state. **Default** `true`.
 - `keep_backups_on_delete_enabled` (Boolean) Creates a backup and keeps all existing ones after deleting the service. If the project is deleted, the backups will be lost. **Default** `true`.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.

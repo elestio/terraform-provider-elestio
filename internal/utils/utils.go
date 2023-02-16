@@ -21,6 +21,17 @@ func MapStringToMapType(m map[string]string, diags *diag.Diagnostics) types.Map 
 	return v
 }
 
+// SliceStringToSetType maps a native golang slice to a terraform set type
+func SliceStringToSetType(s []string, diags *diag.Diagnostics) types.Set {
+	elems := make([]attr.Value, len(s))
+	for i, v := range s {
+		elems[i] = types.StringValue(v)
+	}
+	v, d := types.SetValue(types.StringType, elems)
+	diags.Append(d...)
+	return v
+}
+
 // ObjectValue is a helper function to build a terraform object type
 func ObjectValue(attrTypes map[string]attr.Type, attrs map[string]attr.Value, diags *diag.Diagnostics) types.Object {
 	object, err := types.ObjectValue(attrTypes, attrs)
@@ -71,4 +82,13 @@ func If[T any](cond bool, vtrue, vfalse T) T {
 		return vtrue
 	}
 	return vfalse
+}
+
+func Contains(slice []string, val string) bool {
+	for _, item := range slice {
+		if item == val {
+			return true
+		}
+	}
+	return false
 }

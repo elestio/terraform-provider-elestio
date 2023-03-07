@@ -65,6 +65,11 @@ type (
 		Command  types.String `tfsdk:"command"`
 	}
 
+	ServiceResourceSSHKeyModel struct {
+		KeyName   types.String `tfsdk:"key_name"`
+		PublicKey types.String `tfsdk:"public_key"`
+	}
+
 	ServiceResourceModel struct {
 		Id                                          types.String `tfsdk:"id"`
 		ProjectID                                   types.String `tfsdk:"project_id"`
@@ -87,6 +92,7 @@ type (
 		IPV6                                        types.String `tfsdk:"ipv6"`
 		CNAME                                       types.String `tfsdk:"cname"`
 		CustomDomainNames                           types.Set    `tfsdk:"custom_domain_names"`
+		SSHKeys                                     types.Set    `tfsdk:"ssh_keys"`
 		Country                                     types.String `tfsdk:"country"`
 		City                                        types.String `tfsdk:"city"`
 		AdminUser                                   types.String `tfsdk:"admin_user"`
@@ -328,6 +334,27 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					modifiers.SetStringEmpty(),
 				},
 				ElementType: types.StringType,
+			},
+			"ssh_keys": schema.SetNestedAttribute{
+				MarkdownDescription: "Indicate the list of SSH keys to add to the service.",
+				Required:            true,
+				NestedObject: schema.NestedAttributeObject{
+					Attributes: map[string]schema.Attribute{
+						"key_name": schema.StringAttribute{
+							MarkdownDescription: "SSH Key Name.",
+							Required:            true,
+						},
+						"public_key": schema.StringAttribute{
+							MarkdownDescription: "SSH Public Key." +
+								" With or without comment at the end." +
+								" Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`",
+							Required: true,
+							PlanModifiers: []planmodifier.String{
+								modifiers.RemoveSSHKeyComment(),
+							},
+						},
+					},
+				},
 			},
 			"country": schema.StringAttribute{
 				MarkdownDescription: "Service country.",
@@ -688,7 +715,7 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 		return
 	}
 
-	convertElestioToTerraformFormat(data, serviceUpdated, &resp.Diagnostics)
+	convertElestioToTerraformFormat(ctx, data, serviceUpdated, &resp.Diagnostics)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
@@ -709,7 +736,7 @@ func (r *ServiceResource) Read(ctx context.Context, req resource.ReadRequest, re
 		return
 	}
 
-	convertElestioToTerraformFormat(data, service, &resp.Diagnostics)
+	convertElestioToTerraformFormat(ctx, data, service, &resp.Diagnostics)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
 
@@ -740,7 +767,7 @@ func (r *ServiceResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
-	convertElestioToTerraformFormat(plan, updatedService, &resp.Diagnostics)
+	convertElestioToTerraformFormat(ctx, plan, updatedService, &resp.Diagnostics)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &plan)...)
 }
 
@@ -796,7 +823,7 @@ func (r *ServiceResource) ImportState(ctx context.Context, req resource.ImportSt
 func (r *ServiceResource) updateElestioService(ctx context.Context, service *elestio.Service, plan *ServiceResourceModel, diags *diag.Diagnostics) (*elestio.Service, error) {
 	state := &ServiceResourceModel{}
 	state.Id = types.StringValue(service.ID)
-	convertElestioToTerraformFormat(state, service, diags)
+	convertElestioToTerraformFormat(ctx, state, service, diags)
 
 	// Server type update should be done first, because it requires to stop the service
 	if !state.ServerType.Equal(plan.ServerType) {
@@ -909,18 +936,69 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		var planCustomDomainNames []string
 		plan.CustomDomainNames.ElementsAs(ctx, &planCustomDomainNames, false)
 
-		for _, customDomainNames := range planCustomDomainNames {
-			if !utils.Contains(stateCustomDomainNames, customDomainNames) {
-				if err := r.client.Service.AddCustomDomainName(service.ID, customDomainNames); err != nil {
+		for _, planCustomDomainName := range planCustomDomainNames {
+			if !utils.Contains(stateCustomDomainNames, planCustomDomainName) {
+				if err := r.client.Service.AddCustomDomainName(service.ID, planCustomDomainName); err != nil {
 					return nil, fmt.Errorf("failed to add customDomainName: %s", err)
 				}
 			}
 		}
 
-		for _, customDomainNames := range stateCustomDomainNames {
-			if !utils.Contains(planCustomDomainNames, customDomainNames) {
-				if err := r.client.Service.RemoveCustomDomainName(service.ID, customDomainNames); err != nil {
+		for _, stateCustomDomainName := range stateCustomDomainNames {
+			if !utils.Contains(planCustomDomainNames, stateCustomDomainName) {
+				if err := r.client.Service.RemoveCustomDomainName(service.ID, stateCustomDomainName); err != nil {
 					return nil, fmt.Errorf("failed to remove customDomainName: %s", err)
+				}
+			}
+		}
+	}
+
+	// Retrieve the actual state of the ssh keys
+	var stateKeys []ServiceResourceSSHKeyModel
+	state.SSHKeys.ElementsAs(ctx, &stateKeys, false)
+
+	// Retrieve the planned state of the ssh keys
+	var planKeys []ServiceResourceSSHKeyModel
+	plan.SSHKeys.ElementsAs(ctx, &planKeys, false)
+
+	if len(stateKeys) > 0 || len(planKeys) > 0 {
+		// Create maps for easy lookup
+		stateKeysMap := make(map[string]ServiceResourceSSHKeyModel)
+		planKeysMap := make(map[string]ServiceResourceSSHKeyModel)
+
+		for _, obj := range stateKeys {
+			stateKeysMap[obj.KeyName.ValueString()] = obj
+		}
+
+		for _, obj := range planKeys {
+			planKeysMap[obj.KeyName.ValueString()] = obj
+		}
+
+		// Iterate over state and delete any objects that are not in the plan
+		for _, stateKey := range stateKeys {
+			if _, exists := planKeysMap[stateKey.KeyName.ValueString()]; !exists {
+				if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
+					return nil, fmt.Errorf("failed to remove ssh key: %s", err)
+				}
+			}
+		}
+
+		// Iterate over the plan and compare each key to the corresponding key in state
+		for _, planKey := range planKeys {
+			if stateKey, exists := stateKeysMap[planKey.KeyName.ValueString()]; exists {
+				if !planKey.PublicKey.Equal(stateKey.PublicKey) {
+					// Key exists in state but has a different public key value, so update it (delete and recreate)
+					if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
+						return nil, fmt.Errorf("failed to update (remove the old one) ssh key: %s", err)
+					}
+					if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
+						return nil, fmt.Errorf("failed to update (add the new one) ssh key: %s", err)
+					}
+				}
+			} else {
+				// Key does not exist in state, so create it
+				if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
+					return nil, fmt.Errorf("failed to add ssh key: %s", err)
 				}
 			}
 		}
@@ -934,7 +1012,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 	return service, nil
 }
 
-func convertElestioToTerraformFormat(data *ServiceResourceModel, service *elestio.Service, diags *diag.Diagnostics) {
+func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceModel, service *elestio.Service, diags *diag.Diagnostics) {
 	data.ProjectID = types.StringValue(service.ProjectID)
 	data.ServerName = types.StringValue(service.ServerName)
 	data.ServerType = types.StringValue(service.ServerType)
@@ -955,6 +1033,34 @@ func convertElestioToTerraformFormat(data *ServiceResourceModel, service *elesti
 	data.IPV6 = types.StringValue(service.IPV6)
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
+
+	keys := make([]attr.Value, len(service.SSHKeys))
+	for i, v := range service.SSHKeys {
+		keys[i] = utils.ObjectValue(
+			map[string]attr.Type{
+				"key_name":   types.StringType,
+				"public_key": types.StringType,
+			},
+			map[string]attr.Value{
+				"key_name":   types.StringValue(v.KeyName),
+				"public_key": types.StringValue(v.PublicKey),
+			},
+			diags,
+		)
+	}
+	setKeys, d := types.SetValueFrom(
+		ctx,
+		types.ObjectType{
+			AttrTypes: map[string]attr.Type{
+				"key_name":   types.StringType,
+				"public_key": types.StringType,
+			},
+		},
+		keys,
+	)
+	diags.Append(d...)
+	data.SSHKeys = setKeys
+
 	data.Country = types.StringValue(service.Country)
 	data.City = types.StringValue(service.City)
 	data.AdminUser = types.StringValue(service.AdminUser)

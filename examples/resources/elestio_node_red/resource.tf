@@ -8,4 +8,5 @@ resource "elestio_node_red" "my_node_red" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

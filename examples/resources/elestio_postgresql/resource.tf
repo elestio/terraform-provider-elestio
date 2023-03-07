@@ -8,4 +8,5 @@ resource "elestio_postgresql" "my_postgresql" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

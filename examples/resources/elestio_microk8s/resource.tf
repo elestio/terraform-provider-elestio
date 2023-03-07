@@ -8,4 +8,5 @@ resource "elestio_microk8s" "my_microk8s" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

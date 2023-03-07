@@ -8,4 +8,5 @@ resource "elestio_nagios" "my_nagios" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

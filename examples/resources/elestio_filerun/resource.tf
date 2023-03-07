@@ -8,4 +8,5 @@ resource "elestio_filerun" "my_filerun" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

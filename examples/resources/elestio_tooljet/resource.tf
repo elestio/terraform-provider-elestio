@@ -8,4 +8,5 @@ resource "elestio_tooljet" "my_tooljet" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

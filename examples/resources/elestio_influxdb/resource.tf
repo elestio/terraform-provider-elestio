@@ -8,4 +8,5 @@ resource "elestio_influxdb" "my_influxdb" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

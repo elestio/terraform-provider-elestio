@@ -8,4 +8,5 @@ resource "elestio_[TEMPLATE_RESOURCE_NAME]" "my_[TEMPLATE_RESOURCE_NAME]" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

@@ -8,4 +8,5 @@ resource "elestio_gitlab_runner" "my_gitlab_runner" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

@@ -8,4 +8,5 @@ resource "elestio_k3s" "my_k3s" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

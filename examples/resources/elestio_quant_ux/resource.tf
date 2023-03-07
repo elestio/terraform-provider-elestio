@@ -8,4 +8,5 @@ resource "elestio_quant_ux" "my_quant_ux" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

@@ -8,4 +8,5 @@ resource "elestio_discourse" "my_discourse" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

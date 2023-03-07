@@ -8,4 +8,5 @@ resource "elestio_minio" "my_minio" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

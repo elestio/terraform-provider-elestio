@@ -8,4 +8,5 @@ resource "elestio_rocket_chat" "my_rocket_chat" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

@@ -8,4 +8,5 @@ resource "elestio_openresty" "my_openresty" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

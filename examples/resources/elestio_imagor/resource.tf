@@ -8,4 +8,5 @@ resource "elestio_imagor" "my_imagor" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

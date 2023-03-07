@@ -8,4 +8,5 @@ resource "elestio_browserless" "my_browserless" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

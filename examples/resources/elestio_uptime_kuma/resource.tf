@@ -8,4 +8,5 @@ resource "elestio_uptime_kuma" "my_uptime_kuma" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

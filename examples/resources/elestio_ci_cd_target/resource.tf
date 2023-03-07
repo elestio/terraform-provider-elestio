@@ -8,4 +8,5 @@ resource "elestio_ci_cd_target" "my_ci_cd_target" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

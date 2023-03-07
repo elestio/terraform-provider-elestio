@@ -8,4 +8,5 @@ resource "elestio_pocketbase" "my_pocketbase" {
   datacenter    = "fsn1"
   support_level = "level1"
   admin_email   = "example@mail.com"
+  ssh_keys      = []
 }

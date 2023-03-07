@@ -633,6 +633,23 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		)
 		return
 	}
+
+	var keys []ServiceResourceSSHKeyModel
+	data.SSHKeys.ElementsAs(ctx, &keys, false)
+	keysMap := make(map[string]ServiceResourceSSHKeyModel)
+	for _, key := range keys {
+		// Duplicate ssh key names are not allowed.
+		if duplicateKey, exists := keysMap[key.KeyName.ValueString()]; exists {
+			resp.Diagnostics.AddAttributeError(
+				path.Root("ssh_keys"),
+				"Invalid Attribute Configuration",
+				fmt.Sprintf("Duplicate ssh key name: %s", duplicateKey.KeyName.ValueString()),
+			)
+			return
+		}
+
+		keysMap[key.KeyName.ValueString()] = key
+	}
 }
 
 func (r *ServiceResource) Configure(ctx context.Context, req resource.ConfigureRequest, resp *resource.ConfigureResponse) {

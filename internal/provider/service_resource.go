@@ -688,42 +688,39 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 		templateId = data.TemplateId.ValueInt64()
 	}
 
-	// The service will be created but we should wait
-	// for it to be fully deployed.
-	serviceCreating, err := r.client.Service.Create(
-		elestio.CreateServiceRequest{
-			ProjectID:    data.ProjectID.ValueString(),
-			ServerName:   data.ServerName.ValueString(),
-			ServerType:   data.ServerType.ValueString(),
-			TemplateID:   templateId,
-			Version:      data.Version.ValueString(),
-			ProviderName: data.ProviderName.ValueString(),
-			Datacenter:   data.Datacenter.ValueString(),
-			SupportLevel: data.SupportLevel.ValueString(),
-			AdminEmail:   data.AdminEmail.ValueString(),
-		},
-	)
+	service, err := r.createServiceWithRetry(ctx, elestio.CreateServiceRequest{
+		ProjectID:    data.ProjectID.ValueString(),
+		ServerName:   data.ServerName.ValueString(),
+		ServerType:   data.ServerType.ValueString(),
+		TemplateID:   templateId,
+		Version:      data.Version.ValueString(),
+		ProviderName: data.ProviderName.ValueString(),
+		Datacenter:   data.Datacenter.ValueString(),
+		SupportLevel: data.SupportLevel.ValueString(),
+		AdminEmail:   data.AdminEmail.ValueString(),
+	})
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Service",
-			fmt.Sprintf("Unable to start service creation, got error: %s", err),
+			fmt.Sprintf("Unable to create service, got error: %s", err),
 		)
 		return
 	}
 
-	serviceCreated, err := r.waitServiceCreate(ctx, serviceCreating)
+	// Service is created but we need to wait for the default configuration to be applied.
+	serviceConfigured, err := r.waitServiceDefaultConfiguration(ctx, service)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Service",
-			fmt.Sprintf("Unable to wait service creation, got error: %s", err),
+			fmt.Sprintf("Unable to wait service default configuration, got error: %s", err),
 		)
 		return
 	}
 
-	data.Id = types.StringValue(serviceCreated.ID)
+	data.Id = types.StringValue(serviceConfigured.ID)
 
 	// Update some fields that are not available in the create request.
-	serviceUpdated, err := r.updateElestioService(ctx, serviceCreated, data, &resp.Diagnostics)
+	serviceUpdated, err := r.updateElestioService(ctx, serviceConfigured, data, &resp.Diagnostics)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Service",
@@ -805,7 +802,7 @@ func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest
 		return
 	}
 
-	if err := r.client.Service.Delete(service.ProjectID, service.ID, keepBackups); err != nil {
+	if err := r.deleteServiceWithRetry(ctx, service.ProjectID, service.ID, keepBackups); err != nil {
 		resp.Diagnostics.AddError(
 			"Error Deleting Service",
 			fmt.Sprintf("Unable to start service deletion, got error: %s", err),
@@ -813,7 +810,7 @@ func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest
 		return
 	}
 
-	if err := r.waitServiceDelete(ctx, service); err != nil {
+	if err := r.waitServiceDeletion(ctx, service); err != nil {
 		resp.Diagnostics.AddError(
 			"Error Deleting Service",
 			fmt.Sprintf("Unable to wait service deletion, got error: %s", err),
@@ -1152,93 +1149,153 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 }
 
-func (r *ServiceResource) waitServiceCreate(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
-	createTimeout := 20 * time.Minute
-	createStateConf := sdk_resource.StateChangeConf{
-		Pending: []string{"creating"},
-		Target:  []string{"created"},
+func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request elestio.CreateServiceRequest) (*elestio.Service, error) {
+	timeout := 2 * time.Minute
+	stateConf := sdk_resource.StateChangeConf{
+		Pending: []string{"error"},
+		Target:  []string{"success"},
 		Refresh: func() (interface{}, string, error) {
-			serviceW, err := r.client.Service.Get(service.ProjectID, service.ID)
+			serviceR, err := r.client.Service.Create(request)
+			if err != nil {
+				// Retry on error
+				// Do not return error here, because it will stop the loop -> return nil, "error", err
+				return struct{}{}, "error", nil
+			}
+
+			return serviceR, "success", nil
+		},
+		Timeout:                   timeout,
+		Delay:                     0,
+		MinTimeout:                10 * time.Second,
+		ContinuousTargetOccurence: 0,
+	}
+
+	tflog.Trace(ctx, fmt.Sprintf("CreateServiceWithRetry timeout %.0f minutes", timeout.Minutes()))
+
+	service, err := stateConf.WaitForStateContext(ctx)
+	if err != nil {
+		return nil, fmt.Errorf("CreateServiceWithRetry failed, got error: %s", err)
+	}
+
+	return service.(*elestio.Service), nil
+}
+
+func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId string, serviceId string, keepBackups bool) error {
+	timeout := 2 * time.Minute
+	stateConf := sdk_resource.StateChangeConf{
+		Pending: []string{"error"},
+		Target:  []string{"success"},
+		Refresh: func() (interface{}, string, error) {
+			err := r.client.Service.Delete(projectId, serviceId, keepBackups)
+			if err != nil {
+				// Retry on error
+				// Do not return error here, because it will stop the loop -> return nil, "error", err
+				return struct{}{}, "error", nil
+			}
+
+			return struct{}{}, "success", nil
+		},
+		Timeout:                   timeout,
+		Delay:                     0,
+		MinTimeout:                5 * time.Second,
+		ContinuousTargetOccurence: 0,
+	}
+
+	tflog.Trace(ctx, fmt.Sprintf("DeleteServiceWithRetry timeout %.0f minutes", timeout.Minutes()))
+
+	_, err := stateConf.WaitForStateContext(ctx)
+	if err != nil {
+		return fmt.Errorf("DeleteServiceWithRetry failed, got error: %s", err)
+	}
+
+	return nil
+}
+
+func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
+	timeout := 15 * time.Minute
+	stateConf := sdk_resource.StateChangeConf{
+		Pending: []string{"waiting"},
+		Target:  []string{"configured"},
+		Refresh: func() (interface{}, string, error) {
+			serviceR, err := r.client.Service.Get(service.ProjectID, service.ID)
 			if err != nil {
 				return struct{}{}, "", err
 			}
 
-			if serviceW.DeploymentStatus != elestio.ServiceDeploymentStatusDeployed {
-				return struct{}{}, "creating", nil
+			if serviceR.DeploymentStatus != elestio.ServiceDeploymentStatusDeployed {
+				return struct{}{}, "waiting", nil
 			}
 
 			// App auto updates are enabled by default at service creation
-			if !utils.BoolValue(serviceW.AppAutoUpdatesEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if !utils.BoolValue(serviceR.AppAutoUpdatesEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
 			// System auto updates are enabled by default at service creation
-			if !utils.BoolValue(serviceW.SystemAutoUpdatesEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if !utils.BoolValue(serviceR.SystemAutoUpdatesEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
 			// Backups are enabled by default at service creation if service level is greater than level1
-			if serviceW.SupportLevel != "level1" && !utils.BoolValue(serviceW.BackupsEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if serviceR.SupportLevel != "level1" && !utils.BoolValue(serviceR.BackupsEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
 			// Remote backups are enabled by default at service creation
-			if !utils.BoolValue(serviceW.RemoteBackupsEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if !utils.BoolValue(serviceR.RemoteBackupsEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
 			// Firewall is enabled by default at service creation
-			if !utils.BoolValue(serviceW.FirewallEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
 			// Alerts are enabled by default at service creation
-			if !utils.BoolValue(serviceW.AlertsEnabled).ValueBool() {
-				return struct{}{}, "creating", nil
+			if !utils.BoolValue(serviceR.AlertsEnabled).ValueBool() {
+				return struct{}{}, "waiting", nil
 			}
 
-			return serviceW, "created", nil
+			return serviceR, "configured", nil
 		},
-		Timeout:                   createTimeout,
+		Timeout:                   timeout,
 		Delay:                     60 * time.Second,
 		MinTimeout:                10 * time.Second,
 		ContinuousTargetOccurence: 3,
 	}
 
-	tflog.Trace(ctx, fmt.Sprintf("Service creation waiter timeout %.0f minutes", createTimeout.Minutes()))
-
-	serviceCreated, err := createStateConf.WaitForStateContext(ctx)
+	tflog.Trace(ctx, fmt.Sprintf("WaitServiceDefaultConfiguration timeout %.0f minutes", timeout.Minutes()))
+	serviceConfigured, err := stateConf.WaitForStateContext(ctx)
 	if err != nil {
-		return nil, fmt.Errorf("service creation waiter failed, got error: %s", err)
+		return nil, fmt.Errorf("WaitServiceDefaultConfiguration failed, got error: %s", err)
 	}
 
-	return serviceCreated.(*elestio.Service), nil
+	return serviceConfigured.(*elestio.Service), nil
 }
 
-func (r *ServiceResource) waitServiceDelete(ctx context.Context, service *elestio.Service) error {
-	deleteTimeout := 20 * time.Minute
-	deleteStateConf := sdk_resource.StateChangeConf{
-		Pending: []string{"deleting"},
+func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *elestio.Service) error {
+	timeout := 15 * time.Minute
+	stateConf := sdk_resource.StateChangeConf{
+		Pending: []string{"waiting"},
 		Target:  []string{"deleted"},
 		Refresh: func() (any, string, error) {
 			_, err := r.client.Service.Get(service.ProjectID, service.ID)
 
 			if err == nil {
-				return struct{}{}, "deleting", nil
+				return struct{}{}, "waiting", nil
 			}
 
 			return struct{}{}, "deleted", nil
 		},
-		Timeout:                   deleteTimeout,
-		Delay:                     80 * time.Second,
-		MinTimeout:                10 * time.Second,
-		ContinuousTargetOccurence: 3,
+		Timeout:                   timeout,
+		Delay:                     60 * time.Second,
+		MinTimeout:                5 * time.Second,
+		ContinuousTargetOccurence: 2,
 	}
 
-	tflog.Trace(ctx, fmt.Sprintf("Service deletion waiter timeout %.0f minutes", deleteTimeout.Minutes()))
-
-	if _, err := deleteStateConf.WaitForStateContext(ctx); err != nil {
-		return fmt.Errorf("service deletion waiter failed, got error: %s", err)
+	tflog.Trace(ctx, fmt.Sprintf("WaitServiceDeletion timeout %.0f minutes", timeout.Minutes()))
+	if _, err := stateConf.WaitForStateContext(ctx); err != nil {
+		return fmt.Errorf("WaitServiceDeletion failed, got error: %s", err)
 	}
 
 	return nil

@@ -44,6 +44,7 @@ type (
 		DockerHubImage     string
 		DefaultVersion     string
 		Category           string
+		FirewallPorts      []elestio.ServiceFirewallPort
 	}
 
 	ServiceResource struct {
@@ -921,7 +922,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 
 	if !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
 		if plan.FirewallEnabled.ValueBool() {
-			if err := r.client.Service.EnableFirewall(service.ID); err != nil {
+			if err := r.client.Service.EnableFirewall(service.ID, r.FirewallPorts); err != nil {
 				return nil, fmt.Errorf("failed to enable firewall: %s", err)
 			}
 		} else {

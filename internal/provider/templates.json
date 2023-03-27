@@ -14,7 +14,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "postgres",
-      "dockerhub_default_tag": "14"
+      "dockerhub_default_tag": "14",
+      "firewallPorts": "34523,34343"
     },
     {
       "id": 12,
@@ -30,7 +31,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mysql",
-      "dockerhub_default_tag": "8"
+      "dockerhub_default_tag": "8",
+      "firewallPorts": "24306,24580"
     },
     {
       "id": 270,
@@ -46,7 +48,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mariadb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "24306,24580"
     },
     {
       "id": 19,
@@ -62,7 +65,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mongo",
-      "dockerhub_default_tag": "6"
+      "dockerhub_default_tag": "6",
+      "firewallPorts": "17271,17290"
     },
     {
       "id": 3,
@@ -78,7 +82,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "redis",
-      "dockerhub_default_tag": "6"
+      "dockerhub_default_tag": "6",
+      "firewallPorts": "23647,24814"
     },
     {
       "id": 75,
@@ -94,7 +99,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "eqalpha/keydb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "23647,24814"
     },
     {
       "id": 45,
@@ -110,7 +116,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "timescale/timescaledb-ha",
-      "dockerhub_default_tag": "pg14-latest"
+      "dockerhub_default_tag": "pg14-latest",
+      "firewallPorts": "34343,34523"
     },
     {
       "id": 93,
@@ -126,7 +133,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "yandex/clickhouse-server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "28125,29000,18123,24306,25432"
     },
     {
       "id": 68,
@@ -142,7 +150,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "scylladb/scylla",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,26443"
     },
     {
       "id": 116,
@@ -158,14 +167,15 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "bitnami/influxdb",
-      "dockerhub_default_tag": "2"
+      "dockerhub_default_tag": "2",
+      "firewallPorts": "80,443"
     },
     {
       "id": 70,
       "category": "Databases & Cache",
       "title": "MSSQL",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "sa",
       "description": "SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png",
@@ -174,7 +184,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "mcr.microsoft.com/mssql/server",
-      "dockerhub_default_tag": "2019-latest"
+      "dockerhub_default_tag": "2019-latest",
+      "firewallPorts": "80,443,18698"
     },
     {
       "id": 208,
@@ -190,7 +201,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "neo4j",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,7687"
     },
     {
       "id": 115,
@@ -206,7 +218,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "confluentinc/cp-kafka",
-      "dockerhub_default_tag": "5.5.5"
+      "dockerhub_default_tag": "5.5.5",
+      "firewallPorts": "80,443,2181,9092,19092,29092"
     },
     {
       "id": 255,
@@ -222,7 +235,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "quay.io/m3db/m3dbnode",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 195,
@@ -238,7 +252,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "opensearchproject/opensearch",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,19200"
     },
     {
       "id": 251,
@@ -254,7 +269,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "codenotary/immudb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,3322,9497"
     },
     {
       "id": 253,
@@ -270,7 +286,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "bitnami/cassandra",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,7000,9042"
     },
     {
       "id": 36,
@@ -286,7 +303,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     },
     {
       "id": 38,
@@ -302,7 +320,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     },
     {
       "id": 48,
@@ -318,7 +337,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "wordpress",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 55,
@@ -334,7 +354,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "nodered/node-red",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 57,
@@ -350,7 +371,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "directus/directus",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 60,
@@ -366,7 +388,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "ianw/quickchart",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 64,
@@ -382,7 +405,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "aescanero/powerdns-admin",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "53/udp,443,29672,44350"
     },
     {
       "id": 65,
@@ -398,7 +422,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "strapi/strapi",
-      "dockerhub_default_tag": "3"
+      "dockerhub_default_tag": "3",
+      "firewallPorts": "80,443,34343,34532"
     },
     {
       "id": 170,
@@ -414,7 +439,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": "80,443"
     },
     {
       "id": 49,
@@ -430,7 +456,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/ghost",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 182,
@@ -446,7 +473,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "gitlab/gitlab-ee",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,22022"
     },
     {
       "id": 235,
@@ -462,7 +490,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "gitlab/gitlab-runner",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8093"
     },
     {
       "id": 59,
@@ -478,7 +507,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "nextcloud",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,21005"
     },
     {
       "id": 63,
@@ -494,7 +524,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "minio/minio",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,34256"
     },
     {
       "id": 66,
@@ -510,7 +541,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "vaultwarden/server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 74,
@@ -526,7 +558,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "getmeili/meilisearch",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 77,
@@ -542,7 +575,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "browserless/chrome",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 79,
@@ -558,7 +592,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "grafana/grafana",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 84,
@@ -574,7 +609,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "chatwoot/chatwoot",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 85,
@@ -590,7 +626,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "plausible/analytics",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 89,
@@ -606,7 +643,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mattermost/mattermost-team-edition",
-      "dockerhub_default_tag": "master"
+      "dockerhub_default_tag": "master",
+      "firewallPorts": "80,443"
     },
     {
       "id": 90,
@@ -622,7 +660,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "nilsramsperger/nodebb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 91,
@@ -638,7 +677,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "bitnami/discourse",
-      "dockerhub_default_tag": "2"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 92,
@@ -654,7 +694,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "rocketchat/rocket.chat",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 94,
@@ -670,7 +711,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "budibase/apps",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 95,
@@ -686,14 +728,15 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/prestashop",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 96,
       "category": "Applications",
       "title": "Drupal",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "Drupal is an open-source content management platform that supports a wide variety of websites.",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png",
@@ -702,7 +745,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/drupal",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 97,
@@ -718,7 +762,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/joomla",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 98,
@@ -734,7 +779,8 @@
       "minRamGB": 4,
       "minCores": 4,
       "dockerhub_image": "bitnami/magento",
-      "dockerhub_default_tag": "2"
+      "dockerhub_default_tag": "2",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 99,
@@ -750,7 +796,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "owncloudops/limesurvey",
-      "dockerhub_default_tag": "5"
+      "dockerhub_default_tag": "5",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 108,
@@ -766,7 +813,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/keycloak",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 188,
@@ -782,7 +830,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mikecao/umami",
-      "dockerhub_default_tag": "postgresql-latest"
+      "dockerhub_default_tag": "postgresql-latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 190,
@@ -798,7 +847,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "photoprism/photoprism",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 193,
@@ -814,14 +864,15 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "tiredofit/freescout",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 194,
       "category": "Applications",
       "title": "CryptPad",
       "version": "latest",
-      "adminUser": "",
+      "adminUser": "null",
       "description": "CryptPad is a collaboration suite, encrypted and open-source.",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png",
@@ -830,7 +881,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "promasu/cryptpad",
-      "dockerhub_default_tag": "nginx"
+      "dockerhub_default_tag": "nginx",
+      "firewallPorts": "80,443,3001"
     },
     {
       "id": 197,
@@ -846,7 +898,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "papercups/papercups",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 198,
@@ -862,7 +915,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "upshift/dolibarr",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 200,
@@ -878,7 +932,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "joplin/server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 54,
@@ -894,7 +949,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "n8nio/n8n",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 58,
@@ -910,7 +966,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "requarks/wiki",
-      "dockerhub_default_tag": "2"
+      "dockerhub_default_tag": "2",
+      "firewallPorts": "80,443"
     },
     {
       "id": 211,
@@ -926,7 +983,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "sensu/sensu",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 212,
@@ -942,7 +1000,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "rabbitmq",
-      "dockerhub_default_tag": "3-management"
+      "dockerhub_default_tag": "3-management",
+      "firewallPorts": "80,443,5672,15672,4369,25672"
     },
     {
       "id": 53,
@@ -958,7 +1017,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "portainer/portainer-ce",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,18443,8000"
     },
     {
       "id": 78,
@@ -974,7 +1034,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "m1k1o/neko-rooms",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 86,
@@ -990,7 +1051,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "odoo",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 206,
@@ -1006,7 +1068,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "btdwv/cronicle",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 210,
@@ -1022,7 +1085,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "matomo",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 213,
@@ -1038,7 +1102,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "baserow/baserow",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 215,
@@ -1054,7 +1119,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "haproxytech/haproxy-debian",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 203,
@@ -1070,7 +1136,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "shumc/imagor",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 216,
@@ -1086,7 +1153,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "shafyy/fugu",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 217,
@@ -1102,7 +1170,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "nopcommerceteam/nopcommerce",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 218,
@@ -1118,7 +1187,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "elestio/nginx-auto-ssl",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 219,
@@ -1134,7 +1204,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "kestra/kestra",
-      "dockerhub_default_tag": "develop-full"
+      "dockerhub_default_tag": "develop-full",
+      "firewallPorts": ""
     },
     {
       "id": 226,
@@ -1150,7 +1221,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mapzy/mapzy",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 230,
@@ -1166,7 +1238,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "registry",
-      "dockerhub_default_tag": "2"
+      "dockerhub_default_tag": "2",
+      "firewallPorts": "80,443"
     },
     {
       "id": 236,
@@ -1182,7 +1255,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "elestio/docker-desktop-vnc",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 238,
@@ -1198,7 +1272,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "elestio/docker-desktop-vnc-knime",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 185,
@@ -1214,7 +1289,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "libretranslate/libretranslate",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 186,
@@ -1230,7 +1306,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "dgtlmoon/changedetection.io",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 209,
@@ -1246,7 +1323,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mautic",
-      "dockerhub_default_tag": "v4"
+      "dockerhub_default_tag": "v4",
+      "firewallPorts": "80,443"
     },
     {
       "id": 202,
@@ -1262,7 +1340,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "huginn/huginn-single-process",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 87,
@@ -1278,7 +1357,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "metabase/metabase",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 205,
@@ -1294,7 +1374,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "lightdash/lightdash",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 105,
@@ -1310,7 +1391,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "apache/superset",
-      "dockerhub_default_tag": "master"
+      "dockerhub_default_tag": "master",
+      "firewallPorts": "80,443"
     },
     {
       "id": 106,
@@ -1326,7 +1408,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "zammad/zammad-docker-compose",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 107,
@@ -1342,23 +1425,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/moodle",
-      "dockerhub_default_tag": "3"
-    },
-    {
-      "id": 109,
-      "category": "Applications",
-      "title": "OnlyOffice",
-      "version": "latest",
-      "adminUser": "null",
-      "description": "OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations. ",
-      "showOrder": 160,
-      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onlyoffice-BiCl.png",
-      "osName": "Ubuntu 20.04",
-      "isPopular": 0,
-      "minRamGB": 4,
-      "minCores": 2,
-      "dockerhub_image": "onlyoffice/communityserver",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "3",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 110,
@@ -1374,7 +1442,8 @@
       "minRamGB": 8,
       "minCores": 1,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": "80,443,24580"
     },
     {
       "id": 112,
@@ -1390,7 +1459,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "jupyter/datascience-notebook",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 113,
@@ -1406,7 +1476,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "bitnami/sonarqube",
-      "dockerhub_default_tag": "9"
+      "dockerhub_default_tag": "9",
+      "firewallPorts": "80,443"
     },
     {
       "id": 114,
@@ -1422,7 +1493,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "bitnami/jenkins",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 117,
@@ -1438,7 +1510,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "nocodb/nocodb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 118,
@@ -1454,7 +1527,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "openproject/community",
-      "dockerhub_default_tag": "12"
+      "dockerhub_default_tag": "12",
+      "firewallPorts": "80,443"
     },
     {
       "id": 120,
@@ -1469,8 +1543,9 @@
       "isPopular": 0,
       "minRamGB": 2,
       "minCores": 1,
-      "dockerhub_image": "frappe/erpnext",
-      "dockerhub_default_tag": "v12.25.0"
+      "dockerhub_image": "frappe/erpnext-nginx",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 121,
@@ -1486,7 +1561,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "penpotapp/frontend",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 122,
@@ -1502,7 +1578,8 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "mailcow",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "25,80,110,143,443,465,587,993,995,4190"
     },
     {
       "id": 123,
@@ -1518,7 +1595,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "syncthing/syncthing",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,22000,22000/udp"
     },
     {
       "id": 125,
@@ -1534,7 +1612,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "appsmith/appsmith-editor",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 126,
@@ -1550,7 +1629,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "1dev/server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 127,
@@ -1566,7 +1646,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "typesense/typesense",
-      "dockerhub_default_tag": "0.23.0.rc66"
+      "dockerhub_default_tag": "0.23.0.rc66",
+      "firewallPorts": "80,443"
     },
     {
       "id": 129,
@@ -1582,7 +1663,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "jitsi/web",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 131,
@@ -1598,7 +1680,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "machines/filestash",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 132,
@@ -1614,7 +1697,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "postalserver/postal",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 133,
@@ -1630,7 +1714,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "electerious/ackee",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 137,
@@ -1646,7 +1731,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "louislam/uptime-kuma",
-      "dockerhub_default_tag": "1"
+      "dockerhub_default_tag": "1",
+      "firewallPorts": "80,443"
     },
     {
       "id": 138,
@@ -1662,7 +1748,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "kimai/kimai2",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 139,
@@ -1678,7 +1765,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "daptin/daptin",
-      "dockerhub_default_tag": "master"
+      "dockerhub_default_tag": "master",
+      "firewallPorts": "80,443"
     },
     {
       "id": 140,
@@ -1694,7 +1782,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "linuxserver/healthchecks",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 142,
@@ -1710,7 +1799,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "guacamole/guacamole",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,3389"
     },
     {
       "id": 143,
@@ -1726,7 +1816,8 @@
       "minRamGB": -1,
       "minCores": 1,
       "dockerhub_image": "linuxserver/bookstack",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 144,
@@ -1739,10 +1830,11 @@
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg",
       "osName": "Ubuntu 20.04",
       "isPopular": 0,
-      "minRamGB": 2,
-      "minCores": 1,
+      "minRamGB": 4,
+      "minCores": 2,
       "dockerhub_image": "appwrite/appwrite",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 146,
@@ -1758,7 +1850,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "gotify/server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 149,
@@ -1774,7 +1867,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "parseplatform/parse-server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,1338"
     },
     {
       "id": 150,
@@ -1790,7 +1884,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "owncloud/server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 151,
@@ -1806,7 +1901,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "centrifugo/centrifugo",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 152,
@@ -1822,7 +1918,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "invoiceninja/invoiceninja",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 153,
@@ -1838,7 +1935,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "antelle/keeweb",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 154,
@@ -1854,7 +1952,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "gogs/gogs",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 155,
@@ -1870,7 +1969,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "gitea/gitea",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 156,
@@ -1886,7 +1986,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "victoriametrics/victoria-metrics",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,3443"
     },
     {
       "id": 157,
@@ -1902,7 +2003,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "airbyte/server",
-      "dockerhub_default_tag": "0.40.17"
+      "dockerhub_default_tag": "0.40.17",
+      "firewallPorts": "80,443"
     },
     {
       "id": 173,
@@ -1918,13 +2020,14 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "tooljet/tooljet-server-ce",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 174,
       "category": "Development",
       "title": "Authentik",
-      "version": "2021.12.5",
+      "version": "2023.3.0",
       "adminUser": "[EMAIL]",
       "description": "authentik is a flexible, versatile open-source identity provider.",
       "showOrder": 160,
@@ -1933,8 +2036,9 @@
       "isPopular": 0,
       "minRamGB": 2,
       "minCores": 1,
-      "dockerhub_image": "goauthentik.io/server",
-      "dockerhub_default_tag": "2021.12.5"
+      "dockerhub_image": "ghcr.io/goauthentik/server",
+      "dockerhub_default_tag": "2023.3.0",
+      "firewallPorts": "80,443"
     },
     {
       "id": 175,
@@ -1950,14 +2054,15 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "mediacms/mediacms",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 177,
       "category": "Hosting & Infra",
       "title": "WG-Easy",
       "version": "latest",
-      "adminUser": "null",
+      "adminUser": "\"\"",
       "description": "WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. ",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg",
@@ -1966,7 +2071,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "weejewel/wg-easy",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 178,
@@ -1982,7 +2088,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "jitsucom/jitsu",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 179,
@@ -1998,7 +2105,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     },
     {
       "id": 180,
@@ -2014,7 +2122,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     },
     {
       "id": 181,
@@ -2030,7 +2139,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "elestio/nebula-rest-api",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,4243/udp"
     },
     {
       "id": 183,
@@ -2046,7 +2156,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "vault",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 189,
@@ -2062,7 +2173,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "mailu/admin",
-      "dockerhub_default_tag": "1.9"
+      "dockerhub_default_tag": "1.9",
+      "firewallPorts": "25,80,110,143,443,465,587,993,995"
     },
     {
       "id": 214,
@@ -2078,7 +2190,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     },
     {
       "id": 221,
@@ -2094,7 +2207,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "osixia/openldap",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8888,389,636"
     },
     {
       "id": 222,
@@ -2110,7 +2224,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "azuracast/azuracast",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 225,
@@ -2124,9 +2239,10 @@
       "osName": "Ubuntu 20.04",
       "isPopular": 0,
       "minRamGB": 4,
-      "minCores": 2,
+      "minCores": 4,
       "dockerhub_image": "sonatype/nexus3",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 227,
@@ -2142,7 +2258,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "ghcr.io/paperless-ngx/paperless-ngx",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 229,
@@ -2158,7 +2275,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "tootsuite/mastodon",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 231,
@@ -2174,7 +2292,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "zabbix/zabbix-server-mysql",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,10051"
     },
     {
       "id": 232,
@@ -2190,7 +2309,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "zulip/docker-zulip",
-      "dockerhub_default_tag": "5.1-0"
+      "dockerhub_default_tag": "5.1-0",
+      "firewallPorts": "80,443"
     },
     {
       "id": 233,
@@ -2206,7 +2326,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "taigaio/taiga-back",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 237,
@@ -2222,7 +2343,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "listmonk/listmonk",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 239,
@@ -2238,7 +2360,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "shlinkio/shlink",
-      "dockerhub_default_tag": "stable"
+      "dockerhub_default_tag": "stable",
+      "firewallPorts": "80,443,18081"
     },
     {
       "id": 240,
@@ -2254,7 +2377,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "mattermost/focalboard",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 241,
@@ -2270,7 +2394,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "crazymax/flarum",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 243,
@@ -2286,7 +2411,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "quay.io/hedgedoc/hedgedoc",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 244,
@@ -2302,7 +2428,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "filerun/filerun",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 247,
@@ -2318,7 +2445,8 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "archivebox/archivebox",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 248,
@@ -2334,14 +2462,15 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "matrixdotorg/synapse",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8448"
     },
     {
       "id": 249,
       "category": "Development",
       "title": "Airflow",
       "version": "latest",
-      "adminUser": "admin",
+      "adminUser": "[EMAIL]",
       "description": "Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png",
@@ -2350,7 +2479,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "apache/airflow",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,15555"
     },
     {
       "id": 252,
@@ -2366,7 +2496,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "prom/prometheus",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 254,
@@ -2382,7 +2513,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "jasonrivers/nagios",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 259,
@@ -2398,7 +2530,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "canopsis/canopsis-api",
-      "dockerhub_default_tag": "4.3.9"
+      "dockerhub_default_tag": "4.3.9",
+      "firewallPorts": "80,443,25672"
     },
     {
       "id": 260,
@@ -2414,7 +2547,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "drakkan/sftpgo",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 261,
@@ -2430,7 +2564,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "b4tman/squid",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "18028"
     },
     {
       "id": 262,
@@ -2446,7 +2581,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "gerritcodereview/gerrit",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,29418"
     },
     {
       "id": 263,
@@ -2462,7 +2598,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "klausenschaefersinho/quant-ux-backend",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 264,
@@ -2478,7 +2615,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "vbkunin/itop",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 265,
@@ -2494,7 +2632,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "getfider/fider",
-      "dockerhub_default_tag": "stable"
+      "dockerhub_default_tag": "stable",
+      "firewallPorts": "80,443"
     },
     {
       "id": 266,
@@ -2510,7 +2649,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "etherpad/etherpad",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 271,
@@ -2526,7 +2666,8 @@
       "minRamGB": 2,
       "minCores": 2,
       "dockerhub_image": "polonel/trudesk",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 272,
@@ -2542,7 +2683,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "rocker/rstudio",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 273,
@@ -2558,7 +2700,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "xlrl/mantisbt",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 275,
@@ -2574,14 +2717,15 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "localstack/localstack",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,4510-4559"
     },
     {
       "id": 277,
       "category": "Applications",
       "title": "SuiteCRM",
       "version": "latest",
-      "adminUser": "admin",
+      "adminUser": "[EMAIL]",
       "description": "SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/suitecrm-logo-UYuT.png",
@@ -2590,7 +2734,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "docker.io/bitnami/suitecrm",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 278,
@@ -2606,7 +2751,8 @@
       "minRamGB": 2,
       "minCores": 2,
       "dockerhub_image": "elestio/ubuntu-desktop",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,14901"
     },
     {
       "id": 279,
@@ -2622,7 +2768,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "debian",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 280,
@@ -2638,7 +2785,8 @@
       "minRamGB": 2,
       "minCores": 2,
       "dockerhub_image": "elestio/ubuntu-desktop",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,14901"
     },
     {
       "id": 281,
@@ -2654,7 +2802,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "polonel/trudesk",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 283,
@@ -2670,7 +2819,8 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "btcpayserver/btcpayserver",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": ""
     },
     {
       "id": 284,
@@ -2683,10 +2833,11 @@
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png",
       "osName": "Ubuntu 20.04",
       "isPopular": 0,
-      "minRamGB": 1,
+      "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "supabase/studio",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,27443"
     },
     {
       "id": 285,
@@ -2702,7 +2853,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "chocobozzz/peertube",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,1935"
     },
     {
       "id": 286,
@@ -2718,14 +2870,15 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "erikvl87/languagetool",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 288,
       "category": "Applications",
       "title": "RustdeskServer",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "null",
       "description": "Open source virtual / remote desktop infrastructure for everyone!",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png",
@@ -2734,7 +2887,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "rustdesk/rustdesk-server",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,21115,21116,21117,21118,21119,21116/udp"
     },
     {
       "id": 289,
@@ -2750,7 +2904,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "shyim/shopware",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 290,
@@ -2766,7 +2921,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "everco/ever-traduora",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 291,
@@ -2782,7 +2938,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "chiefonboarding/chiefonboarding",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 292,
@@ -2798,7 +2955,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "hkotel/mealie",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 293,
@@ -2814,7 +2972,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "zadam/trilium",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 294,
@@ -2829,8 +2988,9 @@
       "isPopular": 1,
       "minRamGB": 1,
       "minCores": 1,
-      "dockerhub_image": "ghcr.io/toeverything/affine",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_image": "ghcr.io/toeverything/affine-self-hosted",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 295,
@@ -2846,7 +3006,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "answerdev/answer",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 296,
@@ -2862,7 +3023,8 @@
       "minRamGB": 2,
       "minCores": 2,
       "dockerhub_image": "wordpress",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443, 24306,24580"
     },
     {
       "id": 297,
@@ -2878,7 +3040,8 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "castopod/app",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 298,
@@ -2894,7 +3057,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "augustodelg/pocketbase",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 299,
@@ -2910,7 +3074,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "gabekangas/owncast",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,1935"
     },
     {
       "id": 300,
@@ -2926,7 +3091,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "bitnami/solr",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 301,
@@ -2942,7 +3108,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "searxng/searxng",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 302,
@@ -2958,7 +3125,8 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "couchbase",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
     },
     {
       "id": 303,
@@ -2974,7 +3142,59 @@
       "minRamGB": 1,
       "minCores": 0,
       "dockerhub_image": "manticoresearch/manticore",
-      "dockerhub_default_tag": "latest"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
+    },
+    {
+      "id": 304,
+      "category": "Development",
+      "title": "Airflow-worker",
+      "version": "latest",
+      "adminUser": "null",
+      "description": "Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 2,
+      "minCores": 1,
+      "dockerhub_image": "apache/airflow",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443"
+    },
+    {
+      "id": 305,
+      "category": "Applications",
+      "title": "Activepieces",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1651244193673-removebg-preview-zydr.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "activepieces/activepieces",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,8284"
+    },
+    {
+      "id": 306,
+      "category": "Applications",
+      "title": "EspoCRM",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/EspoCRM-Zuvd.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "espocrm/espocrm",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,8686"
     },
     {
       "id": 234,
@@ -2990,7 +3210,8 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "",
-      "dockerhub_default_tag": ""
+      "dockerhub_default_tag": "",
+      "firewallPorts": ""
     }
   ]
 }

@@ -64,3 +64,40 @@ FEATURES:
 FIX:
 
 - The waiting time for deleting services has been increased to avoid errors.
+
+## 0.6.0 (17 february, 2023)
+
+This release allows setting custom domain names on services from terraform.
+
+FEATURES:
+
+- **New attribute:** Added set attribute 'custom_domain_names' on services resources.
+
+## v0.6.1 (17 february, 2023)
+
+Fix documentation about custom domain names
+
+## v0.7.0 (7 march, 2023)
+
+Add custom ssh keys on services resources to be able to use terraform provisioners
+
+FEATURES:
+
+- **New attribute:** Added slice attribute 'ssh_keys' on services resources.
+
+## v0.7.1 (16 march, 2023)
+
+Fix service resources on retries and waiters.
+You should notice fewer crashes in service creations.
+
+## v0.8.0 (27 march, 2023)
+
+Fix: The ports that were used by default when the firewall was disabled/re-activated were always those of the Postgres resource.
+Now each template has its own default ports.
+
+FEATURES:
+
+- **New Resource:** `elestio_activepieces`
+- **New Resource:** `elestio_airflow_worker`
+- **New Resource:** `elestio_espocrm`
+- **Deprecated Resource:** `elestio_onlyoffice`. Not anymore supported by Elestio.

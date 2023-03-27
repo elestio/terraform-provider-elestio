@@ -3,12 +3,12 @@
 page_title: "elestio_authentik Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  authentik is a flexible, versatile open-source identity provider.elestio_authentik is a preconfigured elestioservice resource (template_id: 174) running Authentik ([`dockerimage: goauthentik.io/server`](https://hub.docker.com/r/goauthentik.io/server)).
+  authentik is a flexible, versatile open-source identity provider.elestio_authentik is a preconfigured elestioservice resource (template_id: 174) running Authentik ([`dockerimage: ghcr.io/goauthentik/server`](https://hub.docker.com/r/ghcr.io/goauthentik/server)).
 ---
 
 # elestio_authentik (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** ([`docker_image: goauthentik.io/server`](https://hub.docker.com/r/goauthentik.io/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** ([`docker_image: ghcr.io/goauthentik/server`](https://hub.docker.com/r/ghcr.io/goauthentik/server)).
 
 ## Example Usage
 
@@ -18,7 +18,7 @@ resource "elestio_authentik" "my_authentik" {
   project_id    = "2500"
   server_name   = "awesome-authentik"
   server_type   = "SMALL-1C-2G"
-  version       = "2021.12.5"
+  version       = "2023.3.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -52,7 +52,7 @@ resource "elestio_authentik" "my_authentik" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `2021.12.5`.
+- `version` (String) This is the version of the software used as service. **Default** `2023.3.0`.
 
 ### Read-Only
 

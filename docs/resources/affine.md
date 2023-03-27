@@ -3,12 +3,12 @@
 page_title: "elestio_affine Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.elestio_affine is a preconfigured elestioservice resource (template_id: 294) running Affine ([`dockerimage: ghcr.io/toeverything/affine`](https://hub.docker.com/r/ghcr.io/toeverything/affine)).
+  More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.elestio_affine is a preconfigured elestioservice resource (template_id: 294) running Affine ([`dockerimage: ghcr.io/toeverything/affine-self-hosted`](https://hub.docker.com/r/ghcr.io/toeverything/affine-self-hosted)).
 ---
 
 # elestio_affine (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" /><br/> More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.<br/><br/>**elestio_affine** is a preconfigured elestio_service resource (`template_id: 294`) running **Affine** ([`docker_image: ghcr.io/toeverything/affine`](https://hub.docker.com/r/ghcr.io/toeverything/affine)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" /><br/> More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.<br/><br/>**elestio_affine** is a preconfigured elestio_service resource (`template_id: 294`) running **Affine** ([`docker_image: ghcr.io/toeverything/affine-self-hosted`](https://hub.docker.com/r/ghcr.io/toeverything/affine-self-hosted)).
 
 ## Example Usage
 

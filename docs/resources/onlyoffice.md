@@ -3,12 +3,12 @@
 page_title: "elestio_onlyoffice Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations. elestio_onlyoffice is a preconfigured elestioservice resource (template_id: 109) running OnlyOffice ([`dockerimage: onlyoffice/communityserver`](https://hub.docker.com/r/onlyoffice/communityserver)).
+  elestio_onlyoffice is a preconfigured elestio_service resource (template_id: 109) running OnlyOffice.
 ---
 
 # elestio_onlyoffice (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onlyoffice-BiCl.png" width="100" /><br/> OnlyOffice is a free, online office suite comprising viewers and editors for texts, spreadsheets and presentations. <br/><br/>**elestio_onlyoffice** is a preconfigured elestio_service resource (`template_id: 109`) running **OnlyOffice** ([`docker_image: onlyoffice/communityserver`](https://hub.docker.com/r/onlyoffice/communityserver)).
+**elestio_onlyoffice** is a preconfigured elestio_service resource (`template_id: 109`) running **OnlyOffice**.
 
 ## Example Usage
 
@@ -40,6 +40,7 @@ resource "elestio_onlyoffice" "my_onlyoffice" {
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.
 - `ssh_keys` (Attributes Set) Indicate the list of SSH keys to add to the service. (see [below for nested schema](#nestedatt--ssh_keys))
 - `support_level` (String) Service support level. You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
+- `version` (String) This is the version of the software used as service.
 
 ### Optional
 
@@ -52,7 +53,6 @@ resource "elestio_onlyoffice" "my_onlyoffice" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

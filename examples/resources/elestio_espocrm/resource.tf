@@ -1,9 +1,9 @@
-# Create and manage Authentik service.
-resource "elestio_authentik" "my_authentik" {
+# Create and manage EspoCRM service.
+resource "elestio_espocrm" "my_espocrm" {
   project_id    = "2500"
-  server_name   = "awesome-authentik"
+  server_name   = "awesome-espocrm"
   server_type   = "SMALL-1C-2G"
-  version       = "2023.3.0"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"

@@ -48,6 +48,8 @@ github.com/elestio/elestio-go-api-client v1.5.2 h1:91G1hVNdoLvNmW+brNbeOcTUJvyBy
 github.com/elestio/elestio-go-api-client v1.5.2/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
 github.com/elestio/elestio-go-api-client v1.5.3 h1:niwsgOsnZNJ3kYJ/SVAxOgYd5S9YHIWPdRbBa/8JK3c=
 github.com/elestio/elestio-go-api-client v1.5.3/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
+github.com/elestio/elestio-go-api-client v1.6.0 h1:jRBcL3sTZfvZZ5uWkExgTmSSBWO5t25V0NQsaEzl5Tg=
+github.com/elestio/elestio-go-api-client v1.6.0/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
 github.com/emirpasic/gods v1.12.0 h1:QAUIPSaCu4G+POclxeqb3F+WPpdKqFGlw36+yOzGlrg=
 github.com/emirpasic/gods v1.12.0/go.mod h1:YfzfFFoVP/catgzJb4IKIqXjX78Ha8FMSDh3ymbK86o=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=

@@ -3,12 +3,12 @@
 page_title: "elestio_erpnext Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ERPNext is the leading open-source enterprise resource planning (ERP) software. elestio_erpnext is a preconfigured elestioservice resource (template_id: 120) running ErpNext ([`dockerimage: frappe/erpnext`](https://hub.docker.com/r/frappe/erpnext)).
+  ERPNext is the leading open-source enterprise resource planning (ERP) software. elestio_erpnext is a preconfigured elestioservice resource (template_id: 120) running ErpNext ([`dockerimage: frappe/erpnext-nginx`](https://hub.docker.com/r/frappe/erpnext-nginx)).
 ---
 
 # elestio_erpnext (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** ([`docker_image: frappe/erpnext`](https://hub.docker.com/r/frappe/erpnext)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** ([`docker_image: frappe/erpnext-nginx`](https://hub.docker.com/r/frappe/erpnext-nginx)).
 
 ## Example Usage
 
@@ -18,7 +18,7 @@ resource "elestio_erpnext" "my_erpnext" {
   project_id    = "2500"
   server_name   = "awesome-erpnext"
   server_type   = "SMALL-1C-2G"
-  version       = "v12.25.0"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -52,7 +52,7 @@ resource "elestio_erpnext" "my_erpnext" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `v12.25.0`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

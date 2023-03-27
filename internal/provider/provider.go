@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"encoding/json"
 	"os"
+	"strings"
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
@@ -34,6 +35,7 @@ type (
 			Logo                string `json:"mainImage"`
 			DockerHubImage      string `json:"dockerhub_image"`
 			DockerHubDefaultTag string `json:"dockerhub_default_tag"`
+			FirewallPorts       string `json:"firewallPorts"`
 		} `json:"templates"`
 	}
 
@@ -201,6 +203,14 @@ func NewServiceResources() []func() resource.Resource {
 					"This resource will be removed in the next major version of the provider.",
 			})
 		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         109,
+				ResourceName:       "onlyoffice",
+				DocumentationName:  "OnlyOffice",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+			})
+		},
 	}
 
 	// Unmarshal the bytes into the User struct
@@ -218,6 +228,33 @@ func NewServiceResources() []func() resource.Resource {
 			continue
 		}
 
+		var templateFirewallPorts []elestio.ServiceFirewallPort
+
+		// Exemple of the template.FirewallPorts string: "80,443,22000,22000/udp"
+		if len(template.FirewallPorts) > 0 {
+			ports := strings.Split(template.FirewallPorts, ",")
+
+			for _, p := range ports {
+				var port string
+				var protocol elestio.ServiceFirewallPortProtocol
+
+				// Check if port is TCP or UDP
+				if strings.Contains(p, "/udp") {
+					port = strings.Split(p, "/")[0]
+					protocol = elestio.ServiceFirewallPortProtocolUDP
+				} else {
+					port = p
+					protocol = elestio.ServiceFirewallPortProtocolTCP
+				}
+
+				templateFirewallPorts = append(templateFirewallPorts, elestio.ServiceFirewallPort{
+					// Remove whitespace if there is misstakes in the template
+					Port:     strings.TrimSpace(port),
+					Protocol: protocol,
+				})
+			}
+		}
+
 		servicesResources = append(
 			servicesResources,
 			func() resource.Resource {
@@ -230,6 +267,7 @@ func NewServiceResources() []func() resource.Resource {
 					DockerHubImage:    template.DockerHubImage,
 					DefaultVersion:    template.DockerHubDefaultTag,
 					Category:          template.Category,
+					FirewallPorts:     templateFirewallPorts,
 				})
 			},
 		)

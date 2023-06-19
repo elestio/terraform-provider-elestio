@@ -113,5 +113,3 @@ Read-Only:
 - `password` (String, Sensitive) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
-
-

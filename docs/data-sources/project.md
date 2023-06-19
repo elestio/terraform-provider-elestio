@@ -33,5 +33,3 @@ data "elestio_project" "project1" {
 - `name` (String) Project name
 - `network_cidr` (String) Project network CIDR
 - `technical_emails` (String) Project technical emails
-
-

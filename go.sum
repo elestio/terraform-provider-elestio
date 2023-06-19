@@ -32,8 +32,8 @@ github.com/cloudflare/circl v1.3.3/go.mod h1:5XYMA4rFBvNIrhs50XuiBJ15vF2pZn4nnUK
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/elestio/elestio-go-api-client v1.6.0 h1:jRBcL3sTZfvZZ5uWkExgTmSSBWO5t25V0NQsaEzl5Tg=
-github.com/elestio/elestio-go-api-client v1.6.0/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
+github.com/elestio/elestio-go-api-client v1.6.1 h1:dEkhXPDSK+LBuRCMF/fuLYNXVs8zGXnRykOTT2OGeZk=
+github.com/elestio/elestio-go-api-client v1.6.1/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
 github.com/emirpasic/gods v1.18.1 h1:FXtiHYKDGKCW2KzwZKx0iC0PQmdlorYgdFG9jPXJ1Bc=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7+kN2VEUnK/pcBlmesArF7c=

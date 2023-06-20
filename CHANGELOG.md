@@ -102,7 +102,7 @@ FEATURES:
 - **New Resource:** `elestio_espocrm`
 - **Deprecated Resource:** `elestio_onlyoffice`. Not anymore supported by Elestio.
 
-## v0.8.1 ()
+## v0.8.1 (20 June, 2023)
 
 - Update the version of several packages to improve provider performance.
 - Fix a bug at service creation (after an API change)

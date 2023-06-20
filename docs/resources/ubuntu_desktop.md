@@ -3,12 +3,12 @@
 page_title: "elestio_ubuntu_desktop Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ubuntu Virtual Desktop experience in your browserelestioubuntudesktop is a preconfigured elestioservice resource (template_id: 278) running Ubuntu-Desktop ([`dockerimage: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
+  Ubuntu Virtual Desktop experience in your browserelestioubuntudesktop is a preconfigured elestio_service resource (template_id: 278) running Ubuntu-Desktop from the Docker image https://hub.docker.com/r/elestio/ubuntu-desktop elestio/ubuntu-desktop.
 ---
 
 # elestio_ubuntu_desktop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" /><br/> Ubuntu Virtual Desktop experience in your browser<br/><br/>**elestio_ubuntu_desktop** is a preconfigured elestio_service resource (`template_id: 278`) running **Ubuntu-Desktop** ([`docker_image: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" /><br/> Ubuntu Virtual Desktop experience in your browser<br/><br/>**elestio_ubuntu_desktop** is a preconfigured elestio_service resource (`template_id: 278`) running **Ubuntu-Desktop** from the [Docker image](https://hub.docker.com/r/elestio/ubuntu-desktop) `elestio/ubuntu-desktop`.
 
 ## Example Usage
 

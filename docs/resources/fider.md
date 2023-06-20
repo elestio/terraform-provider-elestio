@@ -3,12 +3,12 @@
 page_title: "elestio_fider Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Customer Feedback Made Easyelestio_fider is a preconfigured elestioservice resource (template_id: 265) running Fider ([`dockerimage: getfider/fider`](https://hub.docker.com/r/getfider/fider)).
+  Customer Feedback Made Easyelestio_fider is a preconfigured elestio_service resource (template_id: 265) running Fider from the Docker image https://hub.docker.com/r/getfider/fider getfider/fider.
 ---
 
 # elestio_fider (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" /><br/> Customer Feedback Made Easy<br/><br/>**elestio_fider** is a preconfigured elestio_service resource (`template_id: 265`) running **Fider** ([`docker_image: getfider/fider`](https://hub.docker.com/r/getfider/fider)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" /><br/> Customer Feedback Made Easy<br/><br/>**elestio_fider** is a preconfigured elestio_service resource (`template_id: 265`) running **Fider** from the [Docker image](https://hub.docker.com/r/getfider/fider) `getfider/fider`.
 
 ## Example Usage
 

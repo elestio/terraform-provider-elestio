@@ -3,12 +3,12 @@
 page_title: "elestio_focalboard Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Project & Task Management for Software Development Teamselestio_focalboard is a preconfigured elestioservice resource (template_id: 240) running FocalBoard ([`dockerimage: mattermost/focalboard`](https://hub.docker.com/r/mattermost/focalboard)).
+  Project & Task Management for Software Development Teamselestio_focalboard is a preconfigured elestio_service resource (template_id: 240) running FocalBoard from the Docker image https://hub.docker.com/r/mattermost/focalboard mattermost/focalboard.
 ---
 
 # elestio_focalboard (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" /><br/> Project & Task Management for Software Development Teams<br/><br/>**elestio_focalboard** is a preconfigured elestio_service resource (`template_id: 240`) running **FocalBoard** ([`docker_image: mattermost/focalboard`](https://hub.docker.com/r/mattermost/focalboard)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" /><br/> Project & Task Management for Software Development Teams<br/><br/>**elestio_focalboard** is a preconfigured elestio_service resource (`template_id: 240`) running **FocalBoard** from the [Docker image](https://hub.docker.com/r/mattermost/focalboard) `mattermost/focalboard`.
 
 ## Example Usage
 

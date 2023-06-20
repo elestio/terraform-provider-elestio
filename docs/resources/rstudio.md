@@ -3,12 +3,12 @@
 page_title: "elestio_rstudio Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Publish your R and Python content with RStudio Connectelestio_rstudio is a preconfigured elestioservice resource (template_id: 272) running Rstudio ([`dockerimage: rocker/rstudio`](https://hub.docker.com/r/rocker/rstudio)).
+  Publish your R and Python content with RStudio Connectelestio_rstudio is a preconfigured elestio_service resource (template_id: 272) running Rstudio from the Docker image https://hub.docker.com/r/rocker/rstudio rocker/rstudio.
 ---
 
 # elestio_rstudio (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" /><br/> Publish your R and Python content with RStudio Connect<br/><br/>**elestio_rstudio** is a preconfigured elestio_service resource (`template_id: 272`) running **Rstudio** ([`docker_image: rocker/rstudio`](https://hub.docker.com/r/rocker/rstudio)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" /><br/> Publish your R and Python content with RStudio Connect<br/><br/>**elestio_rstudio** is a preconfigured elestio_service resource (`template_id: 272`) running **Rstudio** from the [Docker image](https://hub.docker.com/r/rocker/rstudio) `rocker/rstudio`.
 
 ## Example Usage
 

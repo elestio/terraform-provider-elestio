@@ -3,12 +3,12 @@
 page_title: "elestio_timescaledb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  TimescaleDB is the leading open-source relational database with support for time-series data. elestio_timescaledb is a preconfigured elestioservice resource (template_id: 45) running TimescaleDB ([`dockerimage: timescale/timescaledb-ha`](https://hub.docker.com/r/timescale/timescaledb-ha)).
+  TimescaleDB is the leading open-source relational database with support for time-series data. elestio_timescaledb is a preconfigured elestio_service resource (template_id: 45) running TimescaleDB from the Docker image https://hub.docker.com/r/timescale/timescaledb-ha timescale/timescaledb-ha.
 ---
 
 # elestio_timescaledb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" /><br/> TimescaleDB is the leading open-source relational database with support for time-series data. <br/><br/>**elestio_timescaledb** is a preconfigured elestio_service resource (`template_id: 45`) running **TimescaleDB** ([`docker_image: timescale/timescaledb-ha`](https://hub.docker.com/r/timescale/timescaledb-ha)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" /><br/> TimescaleDB is the leading open-source relational database with support for time-series data. <br/><br/>**elestio_timescaledb** is a preconfigured elestio_service resource (`template_id: 45`) running **TimescaleDB** from the [Docker image](https://hub.docker.com/r/timescale/timescaledb-ha) `timescale/timescaledb-ha`.
 
 ## Example Usage
 

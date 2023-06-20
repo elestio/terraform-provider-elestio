@@ -3,12 +3,12 @@
 page_title: "elestio_penpot Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Penpot is the first open-source design and prototyping platform for cross-domain teams.elestio_penpot is a preconfigured elestioservice resource (template_id: 121) running Penpot ([`dockerimage: penpotapp/frontend`](https://hub.docker.com/r/penpotapp/frontend)).
+  Penpot is the first open-source design and prototyping platform for cross-domain teams.elestio_penpot is a preconfigured elestio_service resource (template_id: 121) running Penpot from the Docker image https://hub.docker.com/r/penpotapp/frontend penpotapp/frontend.
 ---
 
 # elestio_penpot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" /><br/> Penpot is the first open-source design and prototyping platform for cross-domain teams.<br/><br/>**elestio_penpot** is a preconfigured elestio_service resource (`template_id: 121`) running **Penpot** ([`docker_image: penpotapp/frontend`](https://hub.docker.com/r/penpotapp/frontend)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" /><br/> Penpot is the first open-source design and prototyping platform for cross-domain teams.<br/><br/>**elestio_penpot** is a preconfigured elestio_service resource (`template_id: 121`) running **Penpot** from the [Docker image](https://hub.docker.com/r/penpotapp/frontend) `penpotapp/frontend`.
 
 ## Example Usage
 

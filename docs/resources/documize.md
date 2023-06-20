@@ -3,12 +3,12 @@
 page_title: "elestio_documize Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Free Knowledge Management Softwareelestio_documize is a preconfigured elestioservice resource (template_id: 279) running Documize ([`dockerimage: debian`](https://hub.docker.com/r/debian)).
+  Free Knowledge Management Softwareelestio_documize is a preconfigured elestio_service resource (template_id: 279) running Documize from the Docker image https://hub.docker.com/r/debian debian.
 ---
 
 # elestio_documize (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" /><br/> Free Knowledge Management Software<br/><br/>**elestio_documize** is a preconfigured elestio_service resource (`template_id: 279`) running **Documize** ([`docker_image: debian`](https://hub.docker.com/r/debian)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" /><br/> Free Knowledge Management Software<br/><br/>**elestio_documize** is a preconfigured elestio_service resource (`template_id: 279`) running **Documize** from the [Docker image](https://hub.docker.com/r/debian) `debian`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_meshcentral Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MeshCentral is a full computer management web siteelestio_meshcentral is a preconfigured elestioservice resource (template_id: 281) running MeshCentral ([`dockerimage: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
+  MeshCentral is a full computer management web siteelestio_meshcentral is a preconfigured elestio_service resource (template_id: 281) running MeshCentral from the Docker image https://hub.docker.com/r/polonel/trudesk polonel/trudesk.
 ---
 
 # elestio_meshcentral (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" /><br/> MeshCentral is a full computer management web site<br/><br/>**elestio_meshcentral** is a preconfigured elestio_service resource (`template_id: 281`) running **MeshCentral** ([`docker_image: polonel/trudesk`](https://hub.docker.com/r/polonel/trudesk)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" /><br/> MeshCentral is a full computer management web site<br/><br/>**elestio_meshcentral** is a preconfigured elestio_service resource (`template_id: 281`) running **MeshCentral** from the [Docker image](https://hub.docker.com/r/polonel/trudesk) `polonel/trudesk`.
 
 ## Example Usage
 

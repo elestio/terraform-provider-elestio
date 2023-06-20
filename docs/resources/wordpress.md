@@ -3,12 +3,12 @@
 page_title: "elestio_wordpress Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  WordPress is open-source software you can use to create a beautiful website, blog or app.elestio_wordpress is a preconfigured elestioservice resource (template_id: 48) running Wordpress ([`dockerimage: wordpress`](https://hub.docker.com/r/wordpress)).
+  WordPress is open-source software you can use to create a beautiful website, blog or app.elestio_wordpress is a preconfigured elestio_service resource (template_id: 48) running Wordpress from the Docker image https://hub.docker.com/r/wordpress wordpress.
 ---
 
 # elestio_wordpress (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/800px-WordPress-logo-4TuK.png" width="100" /><br/> WordPress is open-source software you can use to create a beautiful website, blog or app.<br/><br/>**elestio_wordpress** is a preconfigured elestio_service resource (`template_id: 48`) running **Wordpress** ([`docker_image: wordpress`](https://hub.docker.com/r/wordpress)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/800px-WordPress-logo-4TuK.png" width="100" /><br/> WordPress is open-source software you can use to create a beautiful website, blog or app.<br/><br/>**elestio_wordpress** is a preconfigured elestio_service resource (`template_id: 48`) running **Wordpress** from the [Docker image](https://hub.docker.com/r/wordpress) `wordpress`.
 
 ## Example Usage
 

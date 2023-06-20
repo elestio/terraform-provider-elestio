@@ -3,12 +3,12 @@
 page_title: "elestio_kestra Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  The open source data orchestration and scheduling platform.elestio_kestra is a preconfigured elestioservice resource (template_id: 219) running Kestra ([`dockerimage: kestra/kestra`](https://hub.docker.com/r/kestra/kestra)).
+  The open source data orchestration and scheduling platform.elestio_kestra is a preconfigured elestio_service resource (template_id: 219) running Kestra from the Docker image https://hub.docker.com/r/kestra/kestra kestra/kestra.
 ---
 
 # elestio_kestra (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" /><br/> The open source data orchestration and scheduling platform.<br/><br/>**elestio_kestra** is a preconfigured elestio_service resource (`template_id: 219`) running **Kestra** ([`docker_image: kestra/kestra`](https://hub.docker.com/r/kestra/kestra)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" /><br/> The open source data orchestration and scheduling platform.<br/><br/>**elestio_kestra** is a preconfigured elestio_service resource (`template_id: 219`) running **Kestra** from the [Docker image](https://hub.docker.com/r/kestra/kestra) `kestra/kestra`.
 
 ## Example Usage
 

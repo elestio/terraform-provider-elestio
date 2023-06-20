@@ -3,12 +3,12 @@
 page_title: "elestio_sonarqube Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SonarQube is an open-source platform that reveals the health of an application and highlights new issues.elestio_sonarqube is a preconfigured elestioservice resource (template_id: 113) running SonarQube ([`dockerimage: bitnami/sonarqube`](https://hub.docker.com/r/bitnami/sonarqube)).
+  SonarQube is an open-source platform that reveals the health of an application and highlights new issues.elestio_sonarqube is a preconfigured elestio_service resource (template_id: 113) running SonarQube from the Docker image https://hub.docker.com/r/bitnami/sonarqube bitnami/sonarqube.
 ---
 
 # elestio_sonarqube (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br/> SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br/><br/>**elestio_sonarqube** is a preconfigured elestio_service resource (`template_id: 113`) running **SonarQube** ([`docker_image: bitnami/sonarqube`](https://hub.docker.com/r/bitnami/sonarqube)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br/> SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br/><br/>**elestio_sonarqube** is a preconfigured elestio_service resource (`template_id: 113`) running **SonarQube** from the [Docker image](https://hub.docker.com/r/bitnami/sonarqube) `bitnami/sonarqube`.
 
 ## Example Usage
 

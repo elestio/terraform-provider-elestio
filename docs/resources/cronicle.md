@@ -3,12 +3,12 @@
 page_title: "elestio_cronicle Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Cronicle is a simple, distributed task scheduler and runner with a web based UI.elestio_cronicle is a preconfigured elestioservice resource (template_id: 206) running Cronicle ([`dockerimage: btdwv/cronicle`](https://hub.docker.com/r/btdwv/cronicle)).
+  Cronicle is a simple, distributed task scheduler and runner with a web based UI.elestio_cronicle is a preconfigured elestio_service resource (template_id: 206) running Cronicle from the Docker image https://hub.docker.com/r/btdwv/cronicle btdwv/cronicle.
 ---
 
 # elestio_cronicle (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" /><br/> Cronicle is a simple, distributed task scheduler and runner with a web based UI.<br/><br/>**elestio_cronicle** is a preconfigured elestio_service resource (`template_id: 206`) running **Cronicle** ([`docker_image: btdwv/cronicle`](https://hub.docker.com/r/btdwv/cronicle)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" /><br/> Cronicle is a simple, distributed task scheduler and runner with a web based UI.<br/><br/>**elestio_cronicle** is a preconfigured elestio_service resource (`template_id: 206`) running **Cronicle** from the [Docker image](https://hub.docker.com/r/btdwv/cronicle) `btdwv/cronicle`.
 
 ## Example Usage
 

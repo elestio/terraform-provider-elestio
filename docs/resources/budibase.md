@@ -3,12 +3,12 @@
 page_title: "elestio_budibase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Budibase is a quick way to build business apps that empower teams and improve productivity. elestio_budibase is a preconfigured elestioservice resource (template_id: 94) running Budibase ([`dockerimage: budibase/apps`](https://hub.docker.com/r/budibase/apps)).
+  Budibase is a quick way to build business apps that empower teams and improve productivity. elestio_budibase is a preconfigured elestio_service resource (template_id: 94) running Budibase from the Docker image https://hub.docker.com/r/budibase/apps budibase/apps.
 ---
 
 # elestio_budibase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" /><br/> Budibase is a quick way to build business apps that empower teams and improve productivity. <br/><br/>**elestio_budibase** is a preconfigured elestio_service resource (`template_id: 94`) running **Budibase** ([`docker_image: budibase/apps`](https://hub.docker.com/r/budibase/apps)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" /><br/> Budibase is a quick way to build business apps that empower teams and improve productivity. <br/><br/>**elestio_budibase** is a preconfigured elestio_service resource (`template_id: 94`) running **Budibase** from the [Docker image](https://hub.docker.com/r/budibase/apps) `budibase/apps`.
 
 ## Example Usage
 

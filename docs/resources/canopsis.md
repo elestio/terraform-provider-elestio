@@ -3,12 +3,12 @@
 page_title: "elestio_canopsis Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  The first open-source hypervision solutionelestio_canopsis is a preconfigured elestioservice resource (template_id: 259) running Canopsis ([`dockerimage: canopsis/canopsis-api`](https://hub.docker.com/r/canopsis/canopsis-api)).
+  The first open-source hypervision solutionelestio_canopsis is a preconfigured elestio_service resource (template_id: 259) running Canopsis from the Docker image https://hub.docker.com/r/canopsis/canopsis-api canopsis/canopsis-api.
 ---
 
 # elestio_canopsis (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br/> The first open-source hypervision solution<br/><br/>**elestio_canopsis** is a preconfigured elestio_service resource (`template_id: 259`) running **Canopsis** ([`docker_image: canopsis/canopsis-api`](https://hub.docker.com/r/canopsis/canopsis-api)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br/> The first open-source hypervision solution<br/><br/>**elestio_canopsis** is a preconfigured elestio_service resource (`template_id: 259`) running **Canopsis** from the [Docker image](https://hub.docker.com/r/canopsis/canopsis-api) `canopsis/canopsis-api`.
 
 ## Example Usage
 

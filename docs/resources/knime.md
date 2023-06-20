@@ -3,12 +3,12 @@
 page_title: "elestio_knime Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  KNIME Analytics Platformelestio_knime is a preconfigured elestioservice resource (template_id: 238) running Knime ([`dockerimage: elestio/docker-desktop-vnc-knime`](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)).
+  KNIME Analytics Platformelestio_knime is a preconfigured elestio_service resource (template_id: 238) running Knime from the Docker image https://hub.docker.com/r/elestio/docker-desktop-vnc-knime elestio/docker-desktop-vnc-knime.
 ---
 
 # elestio_knime (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br/> KNIME Analytics Platform<br/><br/>**elestio_knime** is a preconfigured elestio_service resource (`template_id: 238`) running **Knime** ([`docker_image: elestio/docker-desktop-vnc-knime`](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br/> KNIME Analytics Platform<br/><br/>**elestio_knime** is a preconfigured elestio_service resource (`template_id: 238`) running **Knime** from the [Docker image](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime) `elestio/docker-desktop-vnc-knime`.
 
 ## Example Usage
 

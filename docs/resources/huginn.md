@@ -3,12 +3,12 @@
 page_title: "elestio_huginn Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Huginn is a tool in the Web Service Automation category of a tech stack.elestio_huginn is a preconfigured elestioservice resource (template_id: 202) running Huginn ([`dockerimage: huginn/huginn-single-process`](https://hub.docker.com/r/huginn/huginn-single-process)).
+  Huginn is a tool in the Web Service Automation category of a tech stack.elestio_huginn is a preconfigured elestio_service resource (template_id: 202) running Huginn from the Docker image https://hub.docker.com/r/huginn/huginn-single-process huginn/huginn-single-process.
 ---
 
 # elestio_huginn (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" /><br/> Huginn is a tool in the Web Service Automation category of a tech stack.<br/><br/>**elestio_huginn** is a preconfigured elestio_service resource (`template_id: 202`) running **Huginn** ([`docker_image: huginn/huginn-single-process`](https://hub.docker.com/r/huginn/huginn-single-process)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" /><br/> Huginn is a tool in the Web Service Automation category of a tech stack.<br/><br/>**elestio_huginn** is a preconfigured elestio_service resource (`template_id: 202`) running **Huginn** from the [Docker image](https://hub.docker.com/r/huginn/huginn-single-process) `huginn/huginn-single-process`.
 
 ## Example Usage
 

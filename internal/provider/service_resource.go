@@ -16,18 +16,19 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/booldefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/int64planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
-	sdk_resource "github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 )
 
 var (
 	_ resource.Resource                   = &ServiceResource{}
-	_ resource.ResourceWithSchema         = &ServiceResource{}
 	_ resource.ResourceWithValidateConfig = &ServiceResource{}
 	_ resource.ResourceWithConfigure      = &ServiceResource{}
 	_ resource.ResourceWithImportState    = &ServiceResource{}
@@ -146,23 +147,66 @@ func (r *ServiceResource) Metadata(ctx context.Context, req resource.MetadataReq
 }
 
 func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
-	resp.Schema = schema.Schema{
-		MarkdownDescription: utils.If(
-			// condition
-			r.TemplateId == 0,
-			// true
-			"This resource is the generic way to create a service."+
-				" You can choose the software by providing the `template_id` as a parameter."+
-				" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).",
-			// false
+	// ↓↓↓ Attributes that require a multi-stage construction process. ↓↓↓
+	version := schema.StringAttribute{
+		MarkdownDescription: "This is the version of the software used as service.",
+		PlanModifiers: []planmodifier.String{
+			stringplanmodifier.RequiresReplaceIf(
+				func(ctx context.Context, modifier planmodifier.StringRequest, resp *stringplanmodifier.RequiresReplaceIfFuncResponse) {
+					if r.TemplateId == 11 {
+						// PostgreSQL = templateId 11
+						// PostgreSQL version cannot be upgraded
+						resp.RequiresReplace = true
+						return
+					}
 
-			utils.If(r.Logo == "", "", fmt.Sprintf(`<img src="%s" width="100" /><br/>`, r.Logo))+
-				utils.If(r.Description == "", "", fmt.Sprintf(" %s<br/><br/>", r.Description))+
-				fmt.Sprintf("**elestio_%s** is a preconfigured elestio_service resource (`template_id: %d`) running **%s**", r.ResourceName, r.TemplateId, r.DocumentationName)+
-				utils.If(r.DockerHubImage == "", "", fmt.Sprintf(" ([`docker_image: %s`](https://hub.docker.com/r/%s))", r.DockerHubImage, r.DockerHubImage))+
-				".",
-		),
-		DeprecationMessage: r.DeprecationMessage,
+					// Add other templateId here if they cannot be upgraded
+
+					resp.RequiresReplace = false
+				},
+				"This resource requires replace if you want to upgrade version.",
+				"This resource Requires replace if you want to upgrade version.",
+			),
+		},
+	}
+
+	if r.DefaultVersion == "" {
+		version.Required = true
+	} else {
+		// The version is optional only if the template specifies a default version
+		version.MarkdownDescription += fmt.Sprintf(" **Default** `%s`.", r.DefaultVersion)
+		version.Default = stringdefault.StaticString(r.DefaultVersion)
+		version.Optional = true
+		version.Computed = true
+	}
+	// ↑↑↑ Attributes that require a multi-stage construction process. ↑↑↑
+
+	schemaMardownDescription := ""
+	if r.TemplateId == 0 {
+		schemaMardownDescription += "This resource is the generic way to create a service." +
+			" You can choose the software by providing the `template_id` as a parameter." +
+			" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services)."
+	} else {
+		if r.Logo != "" {
+			schemaMardownDescription += fmt.Sprintf(`<img src="%s" width="100" /><br/>`, r.Logo)
+		}
+
+		if r.Description != "" {
+			schemaMardownDescription += fmt.Sprintf(" %s<br/><br/>", r.Description)
+		}
+
+		schemaMardownDescription += fmt.Sprintf("**elestio_%s** is a preconfigured elestio_service resource (`template_id: %d`) running **%s**", r.ResourceName, r.TemplateId, r.DocumentationName)
+
+		if r.DockerHubImage != "" {
+			schemaMardownDescription += fmt.Sprintf(" from the [Docker image](https://hub.docker.com/r/%s) `%s`", r.DockerHubImage, r.DockerHubImage)
+		}
+
+		schemaMardownDescription += "."
+	}
+
+	resp.Schema = schema.Schema{
+		MarkdownDescription: schemaMardownDescription,
+		DeprecationMessage:  r.DeprecationMessage,
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
 				MarkdownDescription: "Service identifier.",
@@ -209,33 +253,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Required: r.TemplateId == 0,
 				Computed: r.TemplateId != 0,
 				PlanModifiers: []planmodifier.Int64{
-					int64planmodifier.RequiresReplace(),
-					int64planmodifier.UseStateForUnknown(),
+					utils.If(r.TemplateId == 0, int64planmodifier.RequiresReplace(), int64planmodifier.UseStateForUnknown()),
 				},
 			},
-			"version": schema.StringAttribute{
-				MarkdownDescription: "This is the version of the software used as service." +
-					utils.If(r.DefaultVersion != "", fmt.Sprintf(" **Default** `%s`.", r.DefaultVersion), ""),
-				Required: r.DefaultVersion == "",
-				Optional: r.DefaultVersion != "",
-				Computed: r.DefaultVersion != "",
-				PlanModifiers: []planmodifier.String{
-					modifiers.StringDefault(r.DefaultVersion),
-					stringplanmodifier.RequiresReplaceIf(
-						func(ctx context.Context, modifier planmodifier.StringRequest, resp *stringplanmodifier.RequiresReplaceIfFuncResponse) {
-							// PostgreSQL = 11
-							if r.TemplateId == 11 {
-								// PostgreSQL version cannot be upgraded
-								resp.RequiresReplace = true
-								return
-							}
-							resp.RequiresReplace = false
-						},
-						"This resource requires replace if you want to upgrade version.",
-						"This resource Requires replace if you want to upgrade version.",
-					),
-				},
-			},
+			"version": version,
 			"provider_name": schema.StringAttribute{
 				MarkdownDescription: "The name of the provider to use to host the service." +
 					" You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types)." +
@@ -329,11 +350,9 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" You will also need to create a DNS entry on your domain name (from your registrar control panel) pointing to your service." +
 					" You must create a CNAME record pointing to the service `cname` value." +
 					" Alternatively, you can create an A record pointing to the service `ipv4` value.",
-				Optional: r.Category != "Databases & Cache",
-				Computed: true,
-				PlanModifiers: []planmodifier.Set{
-					modifiers.SetStringEmpty(),
-				},
+				// Databases & Cache do not support custom domains
+				Optional:    r.Category != "Databases & Cache",
+				Computed:    true,
 				ElementType: types.StringType,
 			},
 			"ssh_keys": schema.SetNestedAttribute{
@@ -469,9 +488,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"app_auto_updates_day_of_week": schema.Int64Attribute{
 				MarkdownDescription: "Service app auto update day of week." +
@@ -491,18 +508,14 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"system_auto_updates_security_patches_only_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Service system auto update security patches only state." +
 					" **Default** `false`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(false),
-				},
+				Default:  booldefault.StaticBool(false),
 			},
 			"system_auto_updates_reboot_day_of_week": schema.Int64Attribute{
 				MarkdownDescription: "Service system auto update reboot day of week." +
@@ -523,18 +536,14 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `false`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(false),
-				},
+				Default:  booldefault.StaticBool(false),
 			},
 			"remote_backups_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Service remote backups state." +
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"keep_backups_on_delete_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Creates a backup and keeps all existing ones after deleting the service." +
@@ -542,9 +551,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"external_backups_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Service external backups state." +
@@ -579,9 +586,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"firewall_id": schema.StringAttribute{
 				MarkdownDescription: "Service firewall id.",
@@ -596,9 +601,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" **Default** `true`.",
 				Optional: true,
 				Computed: true,
-				PlanModifiers: []planmodifier.Bool{
-					modifiers.BoolDefault(true),
-				},
+				Default:  booldefault.StaticBool(true),
 			},
 			"last_updated": schema.StringAttribute{
 				Computed: true,
@@ -1151,39 +1154,23 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 }
 
 func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request elestio.CreateServiceRequest) (*elestio.Service, error) {
-	timeout := 2 * time.Minute
-	stateConf := sdk_resource.StateChangeConf{
-		Pending: []string{"error"},
-		Target:  []string{"success"},
-		Refresh: func() (interface{}, string, error) {
-			serviceR, err := r.client.Service.Create(request)
-			if err != nil {
-				// Retry on error
-				// Do not return error here, because it will stop the loop -> return nil, "error", err
-				return struct{}{}, "error", nil
-			}
+	var serviceR *elestio.Service
+	var err error
+	retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
+		serviceR, err = r.client.Service.Create(request)
+		if err != nil {
+			return retry.RetryableError(err)
+		}
 
-			return serviceR, "success", nil
-		},
-		Timeout:                   timeout,
-		Delay:                     0,
-		MinTimeout:                10 * time.Second,
-		ContinuousTargetOccurence: 0,
-	}
+		return nil
+	})
 
-	tflog.Trace(ctx, fmt.Sprintf("CreateServiceWithRetry timeout %.0f minutes", timeout.Minutes()))
-
-	service, err := stateConf.WaitForStateContext(ctx)
-	if err != nil {
-		return nil, fmt.Errorf("CreateServiceWithRetry failed, got error: %s", err)
-	}
-
-	return service.(*elestio.Service), nil
+	return serviceR, err
 }
 
 func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId string, serviceId string, keepBackups bool) error {
 	timeout := 2 * time.Minute
-	stateConf := sdk_resource.StateChangeConf{
+	stateConf := retry.StateChangeConf{
 		Pending: []string{"error"},
 		Target:  []string{"success"},
 		Refresh: func() (interface{}, string, error) {
@@ -1214,7 +1201,7 @@ func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId 
 
 func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
 	timeout := 15 * time.Minute
-	stateConf := sdk_resource.StateChangeConf{
+	stateConf := retry.StateChangeConf{
 		Pending: []string{"waiting"},
 		Target:  []string{"configured"},
 		Refresh: func() (interface{}, string, error) {
@@ -1276,7 +1263,7 @@ func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, s
 
 func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *elestio.Service) error {
 	timeout := 15 * time.Minute
-	stateConf := sdk_resource.StateChangeConf{
+	stateConf := retry.StateChangeConf{
 		Pending: []string{"waiting"},
 		Target:  []string{"deleted"},
 		Refresh: func() (any, string, error) {
@@ -1304,7 +1291,7 @@ func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *eles
 
 func (r *ServiceResource) waitServerTypeUpdate(ctx context.Context, service *elestio.Service, expectedNewServerType string) (*elestio.Service, error) {
 	updateTimeout := 10 * time.Minute
-	updateStateConf := sdk_resource.StateChangeConf{
+	updateStateConf := retry.StateChangeConf{
 		Pending: []string{"updating"},
 		Target:  []string{"updated"},
 		Refresh: func() (interface{}, string, error) {

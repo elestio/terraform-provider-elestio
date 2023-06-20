@@ -3,12 +3,12 @@
 page_title: "elestio_chatwoot Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Chatwoot is an open-source, alternative customer engagement suite.elestio_chatwoot is a preconfigured elestioservice resource (template_id: 84) running Chatwoot ([`dockerimage: chatwoot/chatwoot`](https://hub.docker.com/r/chatwoot/chatwoot)).
+  Chatwoot is an open-source, alternative customer engagement suite.elestio_chatwoot is a preconfigured elestio_service resource (template_id: 84) running Chatwoot from the Docker image https://hub.docker.com/r/chatwoot/chatwoot chatwoot/chatwoot.
 ---
 
 # elestio_chatwoot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br/> Chatwoot is an open-source, alternative customer engagement suite.<br/><br/>**elestio_chatwoot** is a preconfigured elestio_service resource (`template_id: 84`) running **Chatwoot** ([`docker_image: chatwoot/chatwoot`](https://hub.docker.com/r/chatwoot/chatwoot)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br/> Chatwoot is an open-source, alternative customer engagement suite.<br/><br/>**elestio_chatwoot** is a preconfigured elestio_service resource (`template_id: 84`) running **Chatwoot** from the [Docker image](https://hub.docker.com/r/chatwoot/chatwoot) `chatwoot/chatwoot`.
 
 ## Example Usage
 

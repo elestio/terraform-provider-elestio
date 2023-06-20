@@ -3,12 +3,12 @@
 page_title: "elestio_parse Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. elestio_parse is a preconfigured elestioservice resource (template_id: 149) running Parse ([`dockerimage: parseplatform/parse-server`](https://hub.docker.com/r/parseplatform/parse-server)).
+  Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. elestio_parse is a preconfigured elestio_service resource (template_id: 149) running Parse from the Docker image https://hub.docker.com/r/parseplatform/parse-server parseplatform/parse-server.
 ---
 
 # elestio_parse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br/> Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br/><br/>**elestio_parse** is a preconfigured elestio_service resource (`template_id: 149`) running **Parse** ([`docker_image: parseplatform/parse-server`](https://hub.docker.com/r/parseplatform/parse-server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br/> Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br/><br/>**elestio_parse** is a preconfigured elestio_service resource (`template_id: 149`) running **Parse** from the [Docker image](https://hub.docker.com/r/parseplatform/parse-server) `parseplatform/parse-server`.
 
 ## Example Usage
 

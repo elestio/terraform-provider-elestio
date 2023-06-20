@@ -3,12 +3,12 @@
 page_title: "elestio_grafana Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Grafana is a multi-platform, open-source analytics and interactive visualization web application.elestio_grafana is a preconfigured elestioservice resource (template_id: 79) running Grafana ([`dockerimage: grafana/grafana`](https://hub.docker.com/r/grafana/grafana)).
+  Grafana is a multi-platform, open-source analytics and interactive visualization web application.elestio_grafana is a preconfigured elestio_service resource (template_id: 79) running Grafana from the Docker image https://hub.docker.com/r/grafana/grafana grafana/grafana.
 ---
 
 # elestio_grafana (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" /><br/> Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br/><br/>**elestio_grafana** is a preconfigured elestio_service resource (`template_id: 79`) running **Grafana** ([`docker_image: grafana/grafana`](https://hub.docker.com/r/grafana/grafana)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" /><br/> Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br/><br/>**elestio_grafana** is a preconfigured elestio_service resource (`template_id: 79`) running **Grafana** from the [Docker image](https://hub.docker.com/r/grafana/grafana) `grafana/grafana`.
 
 ## Example Usage
 

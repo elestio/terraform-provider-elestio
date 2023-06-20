@@ -3,12 +3,12 @@
 page_title: "elestio_filerun Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Reliable and Performant File Management, Desktop Sync and File Sharing.elestio_filerun is a preconfigured elestioservice resource (template_id: 244) running FileRun ([`dockerimage: filerun/filerun`](https://hub.docker.com/r/filerun/filerun)).
+  Reliable and Performant File Management, Desktop Sync and File Sharing.elestio_filerun is a preconfigured elestio_service resource (template_id: 244) running FileRun from the Docker image https://hub.docker.com/r/filerun/filerun filerun/filerun.
 ---
 
 # elestio_filerun (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" /><br/> Reliable and Performant File Management, Desktop Sync and File Sharing.<br/><br/>**elestio_filerun** is a preconfigured elestio_service resource (`template_id: 244`) running **FileRun** ([`docker_image: filerun/filerun`](https://hub.docker.com/r/filerun/filerun)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png" width="100" /><br/> Reliable and Performant File Management, Desktop Sync and File Sharing.<br/><br/>**elestio_filerun** is a preconfigured elestio_service resource (`template_id: 244`) running **FileRun** from the [Docker image](https://hub.docker.com/r/filerun/filerun) `filerun/filerun`.
 
 ## Example Usage
 

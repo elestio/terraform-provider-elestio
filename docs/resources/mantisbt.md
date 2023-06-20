@@ -3,12 +3,12 @@
 page_title: "elestio_mantisbt Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MantisBT makes collaboration with team members & clients easy, fast, and professionalelestio_mantisbt is a preconfigured elestioservice resource (template_id: 273) running MantisBT ([`dockerimage: xlrl/mantisbt`](https://hub.docker.com/r/xlrl/mantisbt)).
+  MantisBT makes collaboration with team members & clients easy, fast, and professionalelestio_mantisbt is a preconfigured elestio_service resource (template_id: 273) running MantisBT from the Docker image https://hub.docker.com/r/xlrl/mantisbt xlrl/mantisbt.
 ---
 
 # elestio_mantisbt (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" /><br/> MantisBT makes collaboration with team members & clients easy, fast, and professional<br/><br/>**elestio_mantisbt** is a preconfigured elestio_service resource (`template_id: 273`) running **MantisBT** ([`docker_image: xlrl/mantisbt`](https://hub.docker.com/r/xlrl/mantisbt)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" /><br/> MantisBT makes collaboration with team members & clients easy, fast, and professional<br/><br/>**elestio_mantisbt** is a preconfigured elestio_service resource (`template_id: 273`) running **MantisBT** from the [Docker image](https://hub.docker.com/r/xlrl/mantisbt) `xlrl/mantisbt`.
 
 ## Example Usage
 

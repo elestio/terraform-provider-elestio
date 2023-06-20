@@ -3,12 +3,12 @@
 page_title: "elestio_archivebox Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.elestio_archivebox is a preconfigured elestioservice resource (template_id: 247) running ArchiveBox ([`dockerimage: archivebox/archivebox`](https://hub.docker.com/r/archivebox/archivebox)).
+  ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.elestio_archivebox is a preconfigured elestio_service resource (template_id: 247) running ArchiveBox from the Docker image https://hub.docker.com/r/archivebox/archivebox archivebox/archivebox.
 ---
 
 # elestio_archivebox (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" /><br/> ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br/><br/>**elestio_archivebox** is a preconfigured elestio_service resource (`template_id: 247`) running **ArchiveBox** ([`docker_image: archivebox/archivebox`](https://hub.docker.com/r/archivebox/archivebox)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" /><br/> ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br/><br/>**elestio_archivebox** is a preconfigured elestio_service resource (`template_id: 247`) running **ArchiveBox** from the [Docker image](https://hub.docker.com/r/archivebox/archivebox) `archivebox/archivebox`.
 
 ## Example Usage
 

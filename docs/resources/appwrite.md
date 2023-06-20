@@ -3,12 +3,12 @@
 page_title: "elestio_appwrite Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Appwrite provides developers with a set of REST APIs to manage their core backend needs.elestio_appwrite is a preconfigured elestioservice resource (template_id: 144) running Appwrite ([`dockerimage: appwrite/appwrite`](https://hub.docker.com/r/appwrite/appwrite)).
+  Appwrite provides developers with a set of REST APIs to manage their core backend needs.elestio_appwrite is a preconfigured elestio_service resource (template_id: 144) running Appwrite from the Docker image https://hub.docker.com/r/appwrite/appwrite appwrite/appwrite.
 ---
 
 # elestio_appwrite (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" /><br/> Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br/><br/>**elestio_appwrite** is a preconfigured elestio_service resource (`template_id: 144`) running **Appwrite** ([`docker_image: appwrite/appwrite`](https://hub.docker.com/r/appwrite/appwrite)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg" width="100" /><br/> Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br/><br/>**elestio_appwrite** is a preconfigured elestio_service resource (`template_id: 144`) running **Appwrite** from the [Docker image](https://hub.docker.com/r/appwrite/appwrite) `appwrite/appwrite`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_traduora Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow todayelestio_traduora is a preconfigured elestioservice resource (template_id: 290) running Traduora ([`dockerimage: everco/ever-traduora`](https://hub.docker.com/r/everco/ever-traduora)).
+  Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow todayelestio_traduora is a preconfigured elestio_service resource (template_id: 290) running Traduora from the Docker image https://hub.docker.com/r/everco/ever-traduora everco/ever-traduora.
 ---
 
 # elestio_traduora (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" /><br/> Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br/><br/>**elestio_traduora** is a preconfigured elestio_service resource (`template_id: 290`) running **Traduora** ([`docker_image: everco/ever-traduora`](https://hub.docker.com/r/everco/ever-traduora)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" /><br/> Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br/><br/>**elestio_traduora** is a preconfigured elestio_service resource (`template_id: 290`) running **Traduora** from the [Docker image](https://hub.docker.com/r/everco/ever-traduora) `everco/ever-traduora`.
 
 ## Example Usage
 

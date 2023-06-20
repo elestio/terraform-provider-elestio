@@ -3,12 +3,12 @@
 page_title: "elestio_answer Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.elestio_answer is a preconfigured elestioservice resource (template_id: 295) running Answer ([`dockerimage: answerdev/answer`](https://hub.docker.com/r/answerdev/answer)).
+  An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.elestio_answer is a preconfigured elestio_service resource (template_id: 295) running Answer from the Docker image https://hub.docker.com/r/answerdev/answer answerdev/answer.
 ---
 
 # elestio_answer (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" /><br/> An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.<br/><br/>**elestio_answer** is a preconfigured elestio_service resource (`template_id: 295`) running **Answer** ([`docker_image: answerdev/answer`](https://hub.docker.com/r/answerdev/answer)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" /><br/> An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.<br/><br/>**elestio_answer** is a preconfigured elestio_service resource (`template_id: 295`) running **Answer** from the [Docker image](https://hub.docker.com/r/answerdev/answer) `answerdev/answer`.
 
 ## Example Usage
 

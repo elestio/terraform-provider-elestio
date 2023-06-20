@@ -3,12 +3,12 @@
 page_title: "elestio_erpnext Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ERPNext is the leading open-source enterprise resource planning (ERP) software. elestio_erpnext is a preconfigured elestioservice resource (template_id: 120) running ErpNext ([`dockerimage: frappe/erpnext-nginx`](https://hub.docker.com/r/frappe/erpnext-nginx)).
+  ERPNext is the leading open-source enterprise resource planning (ERP) software. elestio_erpnext is a preconfigured elestio_service resource (template_id: 120) running ErpNext from the Docker image https://hub.docker.com/r/frappe/erpnext-nginx frappe/erpnext-nginx.
 ---
 
 # elestio_erpnext (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** ([`docker_image: frappe/erpnext-nginx`](https://hub.docker.com/r/frappe/erpnext-nginx)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/erpnext-logo-blue-v2-3sEa.png" width="100" /><br/> ERPNext is the leading open-source enterprise resource planning (ERP) software. <br/><br/>**elestio_erpnext** is a preconfigured elestio_service resource (`template_id: 120`) running **ErpNext** from the [Docker image](https://hub.docker.com/r/frappe/erpnext-nginx) `frappe/erpnext-nginx`.
 
 ## Example Usage
 

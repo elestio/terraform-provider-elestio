@@ -3,12 +3,12 @@
 page_title: "elestio_opensearch Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Open source distributed and RESTful search engine.elestio_opensearch is a preconfigured elestioservice resource (template_id: 195) running OpenSearch ([`dockerimage: opensearchproject/opensearch`](https://hub.docker.com/r/opensearchproject/opensearch)).
+  Open source distributed and RESTful search engine.elestio_opensearch is a preconfigured elestio_service resource (template_id: 195) running OpenSearch from the Docker image https://hub.docker.com/r/opensearchproject/opensearch opensearchproject/opensearch.
 ---
 
 # elestio_opensearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" /><br/> Open source distributed and RESTful search engine.<br/><br/>**elestio_opensearch** is a preconfigured elestio_service resource (`template_id: 195`) running **OpenSearch** ([`docker_image: opensearchproject/opensearch`](https://hub.docker.com/r/opensearchproject/opensearch)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" /><br/> Open source distributed and RESTful search engine.<br/><br/>**elestio_opensearch** is a preconfigured elestio_service resource (`template_id: 195`) running **OpenSearch** from the [Docker image](https://hub.docker.com/r/opensearchproject/opensearch) `opensearchproject/opensearch`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_kafka Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. elestio_kafka is a preconfigured elestioservice resource (template_id: 115) running Kafka ([`dockerimage: confluentinc/cp-kafka`](https://hub.docker.com/r/confluentinc/cp-kafka)).
+  Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. elestio_kafka is a preconfigured elestio_service resource (template_id: 115) running Kafka from the Docker image https://hub.docker.com/r/confluentinc/cp-kafka confluentinc/cp-kafka.
 ---
 
 # elestio_kafka (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" /><br/> Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. <br/><br/>**elestio_kafka** is a preconfigured elestio_service resource (`template_id: 115`) running **Kafka** ([`docker_image: confluentinc/cp-kafka`](https://hub.docker.com/r/confluentinc/cp-kafka)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" /><br/> Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. <br/><br/>**elestio_kafka** is a preconfigured elestio_service resource (`template_id: 115`) running **Kafka** from the [Docker image](https://hub.docker.com/r/confluentinc/cp-kafka) `confluentinc/cp-kafka`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_mealie Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mealie is an intuitive and easy to use recipe management appelestio_mealie is a preconfigured elestioservice resource (template_id: 292) running Mealie ([`dockerimage: hkotel/mealie`](https://hub.docker.com/r/hkotel/mealie)).
+  Mealie is an intuitive and easy to use recipe management appelestio_mealie is a preconfigured elestio_service resource (template_id: 292) running Mealie from the Docker image https://hub.docker.com/r/hkotel/mealie hkotel/mealie.
 ---
 
 # elestio_mealie (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br/> Mealie is an intuitive and easy to use recipe management app<br/><br/>**elestio_mealie** is a preconfigured elestio_service resource (`template_id: 292`) running **Mealie** ([`docker_image: hkotel/mealie`](https://hub.docker.com/r/hkotel/mealie)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br/> Mealie is an intuitive and easy to use recipe management app<br/><br/>**elestio_mealie** is a preconfigured elestio_service resource (`template_id: 292`) running **Mealie** from the [Docker image](https://hub.docker.com/r/hkotel/mealie) `hkotel/mealie`.
 
 ## Example Usage
 

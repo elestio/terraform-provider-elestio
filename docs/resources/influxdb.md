@@ -3,12 +3,12 @@
 page_title: "elestio_influxdb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. elestio_influxdb is a preconfigured elestioservice resource (template_id: 116) running InfluxDB ([`dockerimage: bitnami/influxdb`](https://hub.docker.com/r/bitnami/influxdb)).
+  InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. elestio_influxdb is a preconfigured elestio_service resource (template_id: 116) running InfluxDB from the Docker image https://hub.docker.com/r/bitnami/influxdb bitnami/influxdb.
 ---
 
 # elestio_influxdb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" /><br/> InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br/><br/>**elestio_influxdb** is a preconfigured elestio_service resource (`template_id: 116`) running **InfluxDB** ([`docker_image: bitnami/influxdb`](https://hub.docker.com/r/bitnami/influxdb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" /><br/> InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br/><br/>**elestio_influxdb** is a preconfigured elestio_service resource (`template_id: 116`) running **InfluxDB** from the [Docker image](https://hub.docker.com/r/bitnami/influxdb) `bitnami/influxdb`.
 
 ## Example Usage
 

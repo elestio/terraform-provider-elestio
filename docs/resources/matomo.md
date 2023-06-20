@@ -3,12 +3,12 @@
 page_title: "elestio_matomo Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Matomo is a full-featured PHP MySQL software program that you download and install on your own webserverelestio_matomo is a preconfigured elestioservice resource (template_id: 210) running Matomo ([`dockerimage: matomo`](https://hub.docker.com/r/matomo)).
+  Matomo is a full-featured PHP MySQL software program that you download and install on your own webserverelestio_matomo is a preconfigured elestio_service resource (template_id: 210) running Matomo from the Docker image https://hub.docker.com/r/matomo matomo.
 ---
 
 # elestio_matomo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" /><br/> Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br/><br/>**elestio_matomo** is a preconfigured elestio_service resource (`template_id: 210`) running **Matomo** ([`docker_image: matomo`](https://hub.docker.com/r/matomo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" /><br/> Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br/><br/>**elestio_matomo** is a preconfigured elestio_service resource (`template_id: 210`) running **Matomo** from the [Docker image](https://hub.docker.com/r/matomo) `matomo`.
 
 ## Example Usage
 

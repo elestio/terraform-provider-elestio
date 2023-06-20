@@ -3,12 +3,12 @@
 page_title: "elestio_nopcommerce Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.elestio_nopcommerce is a preconfigured elestioservice resource (template_id: 217) running nopCommerce ([`dockerimage: nopcommerceteam/nopcommerce`](https://hub.docker.com/r/nopcommerceteam/nopcommerce)).
+  nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.elestio_nopcommerce is a preconfigured elestio_service resource (template_id: 217) running nopCommerce from the Docker image https://hub.docker.com/r/nopcommerceteam/nopcommerce nopcommerceteam/nopcommerce.
 ---
 
 # elestio_nopcommerce (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" /><br/> nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br/><br/>**elestio_nopcommerce** is a preconfigured elestio_service resource (`template_id: 217`) running **nopCommerce** ([`docker_image: nopcommerceteam/nopcommerce`](https://hub.docker.com/r/nopcommerceteam/nopcommerce)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" /><br/> nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br/><br/>**elestio_nopcommerce** is a preconfigured elestio_service resource (`template_id: 217`) running **nopCommerce** from the [Docker image](https://hub.docker.com/r/nopcommerceteam/nopcommerce) `nopcommerceteam/nopcommerce`.
 
 ## Example Usage
 

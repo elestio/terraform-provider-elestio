@@ -3,12 +3,12 @@
 page_title: "elestio_prometheus Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Power your metrics and alerting with the leading open-source monitoring solutionelestio_prometheus is a preconfigured elestioservice resource (template_id: 252) running Prometheus ([`dockerimage: prom/prometheus`](https://hub.docker.com/r/prom/prometheus)).
+  Power your metrics and alerting with the leading open-source monitoring solutionelestio_prometheus is a preconfigured elestio_service resource (template_id: 252) running Prometheus from the Docker image https://hub.docker.com/r/prom/prometheus prom/prometheus.
 ---
 
 # elestio_prometheus (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" /><br/> Power your metrics and alerting with the leading open-source monitoring solution<br/><br/>**elestio_prometheus** is a preconfigured elestio_service resource (`template_id: 252`) running **Prometheus** ([`docker_image: prom/prometheus`](https://hub.docker.com/r/prom/prometheus)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" /><br/> Power your metrics and alerting with the leading open-source monitoring solution<br/><br/>**elestio_prometheus** is a preconfigured elestio_service resource (`template_id: 252`) running **Prometheus** from the [Docker image](https://hub.docker.com/r/prom/prometheus) `prom/prometheus`.
 
 ## Example Usage
 

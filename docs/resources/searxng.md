@@ -3,12 +3,12 @@
 page_title: "elestio_searxng Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.elestio_searxng is a preconfigured elestioservice resource (template_id: 301) running SearXNG ([`dockerimage: searxng/searxng`](https://hub.docker.com/r/searxng/searxng)).
+  SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.elestio_searxng is a preconfigured elestio_service resource (template_id: 301) running SearXNG from the Docker image https://hub.docker.com/r/searxng/searxng searxng/searxng.
 ---
 
 # elestio_searxng (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" /><br/> SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br/><br/>**elestio_searxng** is a preconfigured elestio_service resource (`template_id: 301`) running **SearXNG** ([`docker_image: searxng/searxng`](https://hub.docker.com/r/searxng/searxng)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" /><br/> SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br/><br/>**elestio_searxng** is a preconfigured elestio_service resource (`template_id: 301`) running **SearXNG** from the [Docker image](https://hub.docker.com/r/searxng/searxng) `searxng/searxng`.
 
 ## Example Usage
 

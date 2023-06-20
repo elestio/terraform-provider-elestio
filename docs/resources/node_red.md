@@ -3,12 +3,12 @@
 page_title: "elestio_node_red Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Node-RED is a low-code programming environment for event-driven applications. elestionodered is a preconfigured elestioservice resource (template_id: 55) running Node-red ([`dockerimage: nodered/node-red`](https://hub.docker.com/r/nodered/node-red)).
+  Node-RED is a low-code programming environment for event-driven applications. elestionodered is a preconfigured elestio_service resource (template_id: 55) running Node-red from the Docker image https://hub.docker.com/r/nodered/node-red nodered/node-red.
 ---
 
 # elestio_node_red (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/node-red-logo-gbLk.png" width="100" /><br/> Node-RED is a low-code programming environment for event-driven applications. <br/><br/>**elestio_node_red** is a preconfigured elestio_service resource (`template_id: 55`) running **Node-red** ([`docker_image: nodered/node-red`](https://hub.docker.com/r/nodered/node-red)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/node-red-logo-gbLk.png" width="100" /><br/> Node-RED is a low-code programming environment for event-driven applications. <br/><br/>**elestio_node_red** is a preconfigured elestio_service resource (`template_id: 55`) running **Node-red** from the [Docker image](https://hub.docker.com/r/nodered/node-red) `nodered/node-red`.
 
 ## Example Usage
 

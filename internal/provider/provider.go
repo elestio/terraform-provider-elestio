@@ -18,8 +18,7 @@ import (
 )
 
 var (
-	_ provider.Provider             = &ElestioProvider{}
-	_ provider.ProviderWithMetadata = &ElestioProvider{}
+	_ provider.Provider = &ElestioProvider{}
 
 	//go:embed templates.json
 	templatesListBytes []byte

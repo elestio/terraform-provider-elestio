@@ -3,12 +3,12 @@
 page_title: "elestio_superset Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Apache Superset is a data visualization and data exploration platform.elestio_superset is a preconfigured elestioservice resource (template_id: 105) running Superset ([`dockerimage: apache/superset`](https://hub.docker.com/r/apache/superset)).
+  Apache Superset is a data visualization and data exploration platform.elestio_superset is a preconfigured elestio_service resource (template_id: 105) running Superset from the Docker image https://hub.docker.com/r/apache/superset apache/superset.
 ---
 
 # elestio_superset (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" /><br/> Apache Superset is a data visualization and data exploration platform.<br/><br/>**elestio_superset** is a preconfigured elestio_service resource (`template_id: 105`) running **Superset** ([`docker_image: apache/superset`](https://hub.docker.com/r/apache/superset)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" /><br/> Apache Superset is a data visualization and data exploration platform.<br/><br/>**elestio_superset** is a preconfigured elestio_service resource (`template_id: 105`) running **Superset** from the [Docker image](https://hub.docker.com/r/apache/superset) `apache/superset`.
 
 ## Example Usage
 

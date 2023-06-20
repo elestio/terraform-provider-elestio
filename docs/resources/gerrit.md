@@ -3,12 +3,12 @@
 page_title: "elestio_gerrit Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gerrit is a code review and project management tool for Git based projects.elestio_gerrit is a preconfigured elestioservice resource (template_id: 262) running Gerrit ([`dockerimage: gerritcodereview/gerrit`](https://hub.docker.com/r/gerritcodereview/gerrit)).
+  Gerrit is a code review and project management tool for Git based projects.elestio_gerrit is a preconfigured elestio_service resource (template_id: 262) running Gerrit from the Docker image https://hub.docker.com/r/gerritcodereview/gerrit gerritcodereview/gerrit.
 ---
 
 # elestio_gerrit (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" /><br/> Gerrit is a code review and project management tool for Git based projects.<br/><br/>**elestio_gerrit** is a preconfigured elestio_service resource (`template_id: 262`) running **Gerrit** ([`docker_image: gerritcodereview/gerrit`](https://hub.docker.com/r/gerritcodereview/gerrit)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" /><br/> Gerrit is a code review and project management tool for Git based projects.<br/><br/>**elestio_gerrit** is a preconfigured elestio_service resource (`template_id: 262`) running **Gerrit** from the [Docker image](https://hub.docker.com/r/gerritcodereview/gerrit) `gerritcodereview/gerrit`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_chiefonboarding Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.elestio_chiefonboarding is a preconfigured elestioservice resource (template_id: 291) running ChiefOnboarding ([`dockerimage: chiefonboarding/chiefonboarding`](https://hub.docker.com/r/chiefonboarding/chiefonboarding)).
+  Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.elestio_chiefonboarding is a preconfigured elestio_service resource (template_id: 291) running ChiefOnboarding from the Docker image https://hub.docker.com/r/chiefonboarding/chiefonboarding chiefonboarding/chiefonboarding.
 ---
 
 # elestio_chiefonboarding (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" /><br/> Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br/><br/>**elestio_chiefonboarding** is a preconfigured elestio_service resource (`template_id: 291`) running **ChiefOnboarding** ([`docker_image: chiefonboarding/chiefonboarding`](https://hub.docker.com/r/chiefonboarding/chiefonboarding)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" /><br/> Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br/><br/>**elestio_chiefonboarding** is a preconfigured elestio_service resource (`template_id: 291`) running **ChiefOnboarding** from the [Docker image](https://hub.docker.com/r/chiefonboarding/chiefonboarding) `chiefonboarding/chiefonboarding`.
 
 ## Example Usage
 

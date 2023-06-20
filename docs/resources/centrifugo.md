@@ -3,12 +3,12 @@
 page_title: "elestio_centrifugo Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Centrifugo is a scalable real-time, language-agnostic messaging server. elestio_centrifugo is a preconfigured elestioservice resource (template_id: 151) running Centrifugo ([`dockerimage: centrifugo/centrifugo`](https://hub.docker.com/r/centrifugo/centrifugo)).
+  Centrifugo is a scalable real-time, language-agnostic messaging server. elestio_centrifugo is a preconfigured elestio_service resource (template_id: 151) running Centrifugo from the Docker image https://hub.docker.com/r/centrifugo/centrifugo centrifugo/centrifugo.
 ---
 
 # elestio_centrifugo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" /><br/> Centrifugo is a scalable real-time, language-agnostic messaging server. <br/><br/>**elestio_centrifugo** is a preconfigured elestio_service resource (`template_id: 151`) running **Centrifugo** ([`docker_image: centrifugo/centrifugo`](https://hub.docker.com/r/centrifugo/centrifugo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" /><br/> Centrifugo is a scalable real-time, language-agnostic messaging server. <br/><br/>**elestio_centrifugo** is a preconfigured elestio_service resource (`template_id: 151`) running **Centrifugo** from the [Docker image](https://hub.docker.com/r/centrifugo/centrifugo) `centrifugo/centrifugo`.
 
 ## Example Usage
 

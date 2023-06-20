@@ -3,12 +3,12 @@
 page_title: "elestio_ackee Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.elestio_ackee is a preconfigured elestioservice resource (template_id: 133) running Ackee ([`dockerimage: electerious/ackee`](https://hub.docker.com/r/electerious/ackee)).
+  Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.elestio_ackee is a preconfigured elestio_service resource (template_id: 133) running Ackee from the Docker image https://hub.docker.com/r/electerious/ackee electerious/ackee.
 ---
 
 # elestio_ackee (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" /><br/> Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.<br/><br/>**elestio_ackee** is a preconfigured elestio_service resource (`template_id: 133`) running **Ackee** ([`docker_image: electerious/ackee`](https://hub.docker.com/r/electerious/ackee)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" /><br/> Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.<br/><br/>**elestio_ackee** is a preconfigured elestio_service resource (`template_id: 133`) running **Ackee** from the [Docker image](https://hub.docker.com/r/electerious/ackee) `electerious/ackee`.
 
 ## Example Usage
 

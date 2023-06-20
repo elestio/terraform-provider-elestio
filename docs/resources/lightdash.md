@@ -3,12 +3,12 @@
 page_title: "elestio_lightdash Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Lighdash an open source alternative to Looker built using dbt.elestio_lightdash is a preconfigured elestioservice resource (template_id: 205) running Lightdash ([`dockerimage: lightdash/lightdash`](https://hub.docker.com/r/lightdash/lightdash)).
+  Lighdash an open source alternative to Looker built using dbt.elestio_lightdash is a preconfigured elestio_service resource (template_id: 205) running Lightdash from the Docker image https://hub.docker.com/r/lightdash/lightdash lightdash/lightdash.
 ---
 
 # elestio_lightdash (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" /><br/> Lighdash an open source alternative to Looker built using dbt.<br/><br/>**elestio_lightdash** is a preconfigured elestio_service resource (`template_id: 205`) running **Lightdash** ([`docker_image: lightdash/lightdash`](https://hub.docker.com/r/lightdash/lightdash)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" /><br/> Lighdash an open source alternative to Looker built using dbt.<br/><br/>**elestio_lightdash** is a preconfigured elestio_service resource (`template_id: 205`) running **Lightdash** from the [Docker image](https://hub.docker.com/r/lightdash/lightdash) `lightdash/lightdash`.
 
 ## Example Usage
 

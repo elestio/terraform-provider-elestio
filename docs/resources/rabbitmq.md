@@ -3,12 +3,12 @@
 page_title: "elestio_rabbitmq Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  RabbitMQ is the most widely deployed open source message brokerelestio_rabbitmq is a preconfigured elestioservice resource (template_id: 212) running RabbitMQ ([`dockerimage: rabbitmq`](https://hub.docker.com/r/rabbitmq)).
+  RabbitMQ is the most widely deployed open source message brokerelestio_rabbitmq is a preconfigured elestio_service resource (template_id: 212) running RabbitMQ from the Docker image https://hub.docker.com/r/rabbitmq rabbitmq.
 ---
 
 # elestio_rabbitmq (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br/> RabbitMQ is the most widely deployed open source message broker<br/><br/>**elestio_rabbitmq** is a preconfigured elestio_service resource (`template_id: 212`) running **RabbitMQ** ([`docker_image: rabbitmq`](https://hub.docker.com/r/rabbitmq)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br/> RabbitMQ is the most widely deployed open source message broker<br/><br/>**elestio_rabbitmq** is a preconfigured elestio_service resource (`template_id: 212`) running **RabbitMQ** from the [Docker image](https://hub.docker.com/r/rabbitmq) `rabbitmq`.
 
 ## Example Usage
 

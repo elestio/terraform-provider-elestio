@@ -3,12 +3,12 @@
 page_title: "elestio_owncast Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.elestio_owncast is a preconfigured elestioservice resource (template_id: 299) running Owncast ([`dockerimage: gabekangas/owncast`](https://hub.docker.com/r/gabekangas/owncast)).
+  Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.elestio_owncast is a preconfigured elestio_service resource (template_id: 299) running Owncast from the Docker image https://hub.docker.com/r/gabekangas/owncast gabekangas/owncast.
 ---
 
 # elestio_owncast (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" /><br/> Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br/><br/>**elestio_owncast** is a preconfigured elestio_service resource (`template_id: 299`) running **Owncast** ([`docker_image: gabekangas/owncast`](https://hub.docker.com/r/gabekangas/owncast)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" /><br/> Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br/><br/>**elestio_owncast** is a preconfigured elestio_service resource (`template_id: 299`) running **Owncast** from the [Docker image](https://hub.docker.com/r/gabekangas/owncast) `gabekangas/owncast`.
 
 ## Example Usage
 

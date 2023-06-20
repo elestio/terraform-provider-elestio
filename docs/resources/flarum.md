@@ -3,12 +3,12 @@
 page_title: "elestio_flarum Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Flarum is a delightfully simple discussion platform for your websiteelestio_flarum is a preconfigured elestioservice resource (template_id: 241) running Flarum ([`dockerimage: crazymax/flarum`](https://hub.docker.com/r/crazymax/flarum)).
+  Flarum is a delightfully simple discussion platform for your websiteelestio_flarum is a preconfigured elestio_service resource (template_id: 241) running Flarum from the Docker image https://hub.docker.com/r/crazymax/flarum crazymax/flarum.
 ---
 
 # elestio_flarum (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" /><br/> Flarum is a delightfully simple discussion platform for your website<br/><br/>**elestio_flarum** is a preconfigured elestio_service resource (`template_id: 241`) running **Flarum** ([`docker_image: crazymax/flarum`](https://hub.docker.com/r/crazymax/flarum)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" /><br/> Flarum is a delightfully simple discussion platform for your website<br/><br/>**elestio_flarum** is a preconfigured elestio_service resource (`template_id: 241`) running **Flarum** from the [Docker image](https://hub.docker.com/r/crazymax/flarum) `crazymax/flarum`.
 
 ## Example Usage
 

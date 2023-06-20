@@ -3,12 +3,12 @@
 page_title: "elestio_sftpgo Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV supportelestio_sftpgo is a preconfigured elestioservice resource (template_id: 260) running SFTPGo ([`dockerimage: drakkan/sftpgo`](https://hub.docker.com/r/drakkan/sftpgo)).
+  Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV supportelestio_sftpgo is a preconfigured elestio_service resource (template_id: 260) running SFTPGo from the Docker image https://hub.docker.com/r/drakkan/sftpgo drakkan/sftpgo.
 ---
 
 # elestio_sftpgo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" /><br/> Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support<br/><br/>**elestio_sftpgo** is a preconfigured elestio_service resource (`template_id: 260`) running **SFTPGo** ([`docker_image: drakkan/sftpgo`](https://hub.docker.com/r/drakkan/sftpgo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" /><br/> Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support<br/><br/>**elestio_sftpgo** is a preconfigured elestio_service resource (`template_id: 260`) running **SFTPGo** from the [Docker image](https://hub.docker.com/r/drakkan/sftpgo) `drakkan/sftpgo`.
 
 ## Example Usage
 

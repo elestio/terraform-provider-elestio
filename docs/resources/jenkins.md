@@ -3,12 +3,12 @@
 page_title: "elestio_jenkins Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Jenkins is the leading open-source automation server.elestio_jenkins is a preconfigured elestioservice resource (template_id: 114) running Jenkins ([`dockerimage: bitnami/jenkins`](https://hub.docker.com/r/bitnami/jenkins)).
+  Jenkins is the leading open-source automation server.elestio_jenkins is a preconfigured elestio_service resource (template_id: 114) running Jenkins from the Docker image https://hub.docker.com/r/bitnami/jenkins bitnami/jenkins.
 ---
 
 # elestio_jenkins (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br/> Jenkins is the leading open-source automation server.<br/><br/>**elestio_jenkins** is a preconfigured elestio_service resource (`template_id: 114`) running **Jenkins** ([`docker_image: bitnami/jenkins`](https://hub.docker.com/r/bitnami/jenkins)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br/> Jenkins is the leading open-source automation server.<br/><br/>**elestio_jenkins** is a preconfigured elestio_service resource (`template_id: 114`) running **Jenkins** from the [Docker image](https://hub.docker.com/r/bitnami/jenkins) `bitnami/jenkins`.
 
 ## Example Usage
 

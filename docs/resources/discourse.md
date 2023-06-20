@@ -3,12 +3,12 @@
 page_title: "elestio_discourse Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Discourse is an open-source discussion platform built for the next decade of the Internet. elestio_discourse is a preconfigured elestioservice resource (template_id: 91) running Discourse ([`dockerimage: bitnami/discourse`](https://hub.docker.com/r/bitnami/discourse)).
+  Discourse is an open-source discussion platform built for the next decade of the Internet. elestio_discourse is a preconfigured elestio_service resource (template_id: 91) running Discourse from the Docker image https://hub.docker.com/r/bitnami/discourse bitnami/discourse.
 ---
 
 # elestio_discourse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br/> Discourse is an open-source discussion platform built for the next decade of the Internet. <br/><br/>**elestio_discourse** is a preconfigured elestio_service resource (`template_id: 91`) running **Discourse** ([`docker_image: bitnami/discourse`](https://hub.docker.com/r/bitnami/discourse)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br/> Discourse is an open-source discussion platform built for the next decade of the Internet. <br/><br/>**elestio_discourse** is a preconfigured elestio_service resource (`template_id: 91`) running **Discourse** from the [Docker image](https://hub.docker.com/r/bitnami/discourse) `bitnami/discourse`.
 
 ## Example Usage
 

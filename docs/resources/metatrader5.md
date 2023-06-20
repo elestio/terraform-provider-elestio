@@ -3,12 +3,12 @@
 page_title: "elestio_metatrader5 Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Trade on Forex & stock markets in a virtual desktop from your browserelestio_metatrader5 is a preconfigured elestioservice resource (template_id: 280) running MetaTrader5 ([`dockerimage: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
+  Trade on Forex & stock markets in a virtual desktop from your browserelestio_metatrader5 is a preconfigured elestio_service resource (template_id: 280) running MetaTrader5 from the Docker image https://hub.docker.com/r/elestio/ubuntu-desktop elestio/ubuntu-desktop.
 ---
 
 # elestio_metatrader5 (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" /><br/> Trade on Forex & stock markets in a virtual desktop from your browser<br/><br/>**elestio_metatrader5** is a preconfigured elestio_service resource (`template_id: 280`) running **MetaTrader5** ([`docker_image: elestio/ubuntu-desktop`](https://hub.docker.com/r/elestio/ubuntu-desktop)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" /><br/> Trade on Forex & stock markets in a virtual desktop from your browser<br/><br/>**elestio_metatrader5** is a preconfigured elestio_service resource (`template_id: 280`) running **MetaTrader5** from the [Docker image](https://hub.docker.com/r/elestio/ubuntu-desktop) `elestio/ubuntu-desktop`.
 
 ## Example Usage
 

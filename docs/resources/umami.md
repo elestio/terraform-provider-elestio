@@ -3,12 +3,12 @@
 page_title: "elestio_umami Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Umami is a simple, fast, website analytics alternative to Google Analytics.elestio_umami is a preconfigured elestioservice resource (template_id: 188) running Umami ([`dockerimage: mikecao/umami`](https://hub.docker.com/r/mikecao/umami)).
+  Umami is a simple, fast, website analytics alternative to Google Analytics.elestio_umami is a preconfigured elestio_service resource (template_id: 188) running Umami from the Docker image https://hub.docker.com/r/mikecao/umami mikecao/umami.
 ---
 
 # elestio_umami (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/umami-yKdl.png" width="100" /><br/> Umami is a simple, fast, website analytics alternative to Google Analytics.<br/><br/>**elestio_umami** is a preconfigured elestio_service resource (`template_id: 188`) running **Umami** ([`docker_image: mikecao/umami`](https://hub.docker.com/r/mikecao/umami)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/umami-yKdl.png" width="100" /><br/> Umami is a simple, fast, website analytics alternative to Google Analytics.<br/><br/>**elestio_umami** is a preconfigured elestio_service resource (`template_id: 188`) running **Umami** from the [Docker image](https://hub.docker.com/r/mikecao/umami) `mikecao/umami`.
 
 ## Example Usage
 

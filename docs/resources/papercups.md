@@ -3,12 +3,12 @@
 page_title: "elestio_papercups Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Papercups is a open-source live customer chatelestio_papercups is a preconfigured elestioservice resource (template_id: 197) running Papercups ([`dockerimage: papercups/papercups`](https://hub.docker.com/r/papercups/papercups)).
+  Papercups is a open-source live customer chatelestio_papercups is a preconfigured elestio_service resource (template_id: 197) running Papercups from the Docker image https://hub.docker.com/r/papercups/papercups papercups/papercups.
 ---
 
 # elestio_papercups (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" /><br/> Papercups is a open-source live customer chat<br/><br/>**elestio_papercups** is a preconfigured elestio_service resource (`template_id: 197`) running **Papercups** ([`docker_image: papercups/papercups`](https://hub.docker.com/r/papercups/papercups)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" /><br/> Papercups is a open-source live customer chat<br/><br/>**elestio_papercups** is a preconfigured elestio_service resource (`template_id: 197`) running **Papercups** from the [Docker image](https://hub.docker.com/r/papercups/papercups) `papercups/papercups`.
 
 ## Example Usage
 

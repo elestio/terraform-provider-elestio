@@ -3,12 +3,12 @@
 page_title: "elestio_listmonk Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Listmonk is a self-hosted, high performance mailing list and newsletter managerelestio_listmonk is a preconfigured elestioservice resource (template_id: 237) running Listmonk ([`dockerimage: listmonk/listmonk`](https://hub.docker.com/r/listmonk/listmonk)).
+  Listmonk is a self-hosted, high performance mailing list and newsletter managerelestio_listmonk is a preconfigured elestio_service resource (template_id: 237) running Listmonk from the Docker image https://hub.docker.com/r/listmonk/listmonk listmonk/listmonk.
 ---
 
 # elestio_listmonk (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" /><br/> Listmonk is a self-hosted, high performance mailing list and newsletter manager<br/><br/>**elestio_listmonk** is a preconfigured elestio_service resource (`template_id: 237`) running **Listmonk** ([`docker_image: listmonk/listmonk`](https://hub.docker.com/r/listmonk/listmonk)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" /><br/> Listmonk is a self-hosted, high performance mailing list and newsletter manager<br/><br/>**elestio_listmonk** is a preconfigured elestio_service resource (`template_id: 237`) running **Listmonk** from the [Docker image](https://hub.docker.com/r/listmonk/listmonk) `listmonk/listmonk`.
 
 ## Example Usage
 

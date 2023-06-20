@@ -3,12 +3,12 @@
 page_title: "elestio_filestash Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. elestio_filestash is a preconfigured elestioservice resource (template_id: 131) running Filestash ([`dockerimage: machines/filestash`](https://hub.docker.com/r/machines/filestash)).
+  Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. elestio_filestash is a preconfigured elestio_service resource (template_id: 131) running Filestash from the Docker image https://hub.docker.com/r/machines/filestash machines/filestash.
 ---
 
 # elestio_filestash (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" /><br/> Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. <br/><br/>**elestio_filestash** is a preconfigured elestio_service resource (`template_id: 131`) running **Filestash** ([`docker_image: machines/filestash`](https://hub.docker.com/r/machines/filestash)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" /><br/> Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. <br/><br/>**elestio_filestash** is a preconfigured elestio_service resource (`template_id: 131`) running **Filestash** from the [Docker image](https://hub.docker.com/r/machines/filestash) `machines/filestash`.
 
 ## Example Usage
 

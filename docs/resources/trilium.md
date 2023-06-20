@@ -3,12 +3,12 @@
 page_title: "elestio_trilium Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.elestio_trilium is a preconfigured elestioservice resource (template_id: 293) running Trilium ([`dockerimage: zadam/trilium`](https://hub.docker.com/r/zadam/trilium)).
+  Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.elestio_trilium is a preconfigured elestio_service resource (template_id: 293) running Trilium from the Docker image https://hub.docker.com/r/zadam/trilium zadam/trilium.
 ---
 
 # elestio_trilium (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" /><br/> Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br/><br/>**elestio_trilium** is a preconfigured elestio_service resource (`template_id: 293`) running **Trilium** ([`docker_image: zadam/trilium`](https://hub.docker.com/r/zadam/trilium)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" /><br/> Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br/><br/>**elestio_trilium** is a preconfigured elestio_service resource (`template_id: 293`) running **Trilium** from the [Docker image](https://hub.docker.com/r/zadam/trilium) `zadam/trilium`.
 
 ## Example Usage
 

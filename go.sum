@@ -28,6 +28,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/elestio/elestio-go-api-client v1.6.0 h1:jRBcL3sTZfvZZ5uWkExgTmSSBWO5t25V0NQsaEzl5Tg=
 github.com/elestio/elestio-go-api-client v1.6.0/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
+github.com/elestio/elestio-go-api-client v1.6.1 h1:dEkhXPDSK+LBuRCMF/fuLYNXVs8zGXnRykOTT2OGeZk=
+github.com/elestio/elestio-go-api-client v1.6.1/go.mod h1:+SaZC1sHxSJ0cE651jy3Y3IBsfRhhDcI1GEQV7LXeEs=
 github.com/emirpasic/gods v1.18.1 h1:FXtiHYKDGKCW2KzwZKx0iC0PQmdlorYgdFG9jPXJ1Bc=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fatih/color v1.13.0 h1:8LOYc1KYPPmyKMuN8QV2DNRWNbLo6LZ0iLs8+mlH53w=

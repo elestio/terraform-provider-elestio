@@ -3,12 +3,12 @@
 page_title: "elestio_shopware Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibilityelestio_shopware is a preconfigured elestioservice resource (template_id: 289) running Shopware ([`dockerimage: shyim/shopware`](https://hub.docker.com/r/shyim/shopware)).
+  Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibilityelestio_shopware is a preconfigured elestio_service resource (template_id: 289) running Shopware from the Docker image https://hub.docker.com/r/shyim/shopware shyim/shopware.
 ---
 
 # elestio_shopware (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" /><br/> Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br/><br/>**elestio_shopware** is a preconfigured elestio_service resource (`template_id: 289`) running **Shopware** ([`docker_image: shyim/shopware`](https://hub.docker.com/r/shyim/shopware)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" /><br/> Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br/><br/>**elestio_shopware** is a preconfigured elestio_service resource (`template_id: 289`) running **Shopware** from the [Docker image](https://hub.docker.com/r/shyim/shopware) `shyim/shopware`.
 
 ## Example Usage
 

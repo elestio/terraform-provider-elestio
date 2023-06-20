@@ -3,12 +3,12 @@
 page_title: "elestio_openresty Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  A Fast and Scalable Web Platform by Extending NGINX with LuaJITelestio_openresty is a preconfigured elestioservice resource (template_id: 218) running OpenResty ([`dockerimage: elestio/nginx-auto-ssl`](https://hub.docker.com/r/elestio/nginx-auto-ssl)).
+  A Fast and Scalable Web Platform by Extending NGINX with LuaJITelestio_openresty is a preconfigured elestio_service resource (template_id: 218) running OpenResty from the Docker image https://hub.docker.com/r/elestio/nginx-auto-ssl elestio/nginx-auto-ssl.
 ---
 
 # elestio_openresty (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" /><br/> A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br/><br/>**elestio_openresty** is a preconfigured elestio_service resource (`template_id: 218`) running **OpenResty** ([`docker_image: elestio/nginx-auto-ssl`](https://hub.docker.com/r/elestio/nginx-auto-ssl)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" /><br/> A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br/><br/>**elestio_openresty** is a preconfigured elestio_service resource (`template_id: 218`) running **OpenResty** from the [Docker image](https://hub.docker.com/r/elestio/nginx-auto-ssl) `elestio/nginx-auto-ssl`.
 
 ## Example Usage
 

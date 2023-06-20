@@ -3,12 +3,12 @@
 page_title: "elestio_mediacms Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MediaCMS is a fully featured open-source video and media CMS.elestio_mediacms is a preconfigured elestioservice resource (template_id: 175) running MediaCMS ([`dockerimage: mediacms/mediacms`](https://hub.docker.com/r/mediacms/mediacms)).
+  MediaCMS is a fully featured open-source video and media CMS.elestio_mediacms is a preconfigured elestio_service resource (template_id: 175) running MediaCMS from the Docker image https://hub.docker.com/r/mediacms/mediacms mediacms/mediacms.
 ---
 
 # elestio_mediacms (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" /><br/> MediaCMS is a fully featured open-source video and media CMS.<br/><br/>**elestio_mediacms** is a preconfigured elestio_service resource (`template_id: 175`) running **MediaCMS** ([`docker_image: mediacms/mediacms`](https://hub.docker.com/r/mediacms/mediacms)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" /><br/> MediaCMS is a fully featured open-source video and media CMS.<br/><br/>**elestio_mediacms** is a preconfigured elestio_service resource (`template_id: 175`) running **MediaCMS** from the [Docker image](https://hub.docker.com/r/mediacms/mediacms) `mediacms/mediacms`.
 
 ## Example Usage
 

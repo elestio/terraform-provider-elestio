@@ -3,12 +3,12 @@
 page_title: "elestio_immudb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change historyelestio_immudb is a preconfigured elestioservice resource (template_id: 251) running ImmuDB ([`dockerimage: codenotary/immudb`](https://hub.docker.com/r/codenotary/immudb)).
+  immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change historyelestio_immudb is a preconfigured elestio_service resource (template_id: 251) running ImmuDB from the Docker image https://hub.docker.com/r/codenotary/immudb codenotary/immudb.
 ---
 
 # elestio_immudb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" /><br/> immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history<br/><br/>**elestio_immudb** is a preconfigured elestio_service resource (`template_id: 251`) running **ImmuDB** ([`docker_image: codenotary/immudb`](https://hub.docker.com/r/codenotary/immudb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" /><br/> immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history<br/><br/>**elestio_immudb** is a preconfigured elestio_service resource (`template_id: 251`) running **ImmuDB** from the [Docker image](https://hub.docker.com/r/codenotary/immudb) `codenotary/immudb`.
 
 ## Example Usage
 

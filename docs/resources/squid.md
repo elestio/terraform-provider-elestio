@@ -3,12 +3,12 @@
 page_title: "elestio_squid Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Fast & powerful proxy serverelestio_squid is a preconfigured elestioservice resource (template_id: 261) running Squid ([`dockerimage: b4tman/squid`](https://hub.docker.com/r/b4tman/squid)).
+  Fast & powerful proxy serverelestio_squid is a preconfigured elestio_service resource (template_id: 261) running Squid from the Docker image https://hub.docker.com/r/b4tman/squid b4tman/squid.
 ---
 
 # elestio_squid (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br/> Fast & powerful proxy server<br/><br/>**elestio_squid** is a preconfigured elestio_service resource (`template_id: 261`) running **Squid** ([`docker_image: b4tman/squid`](https://hub.docker.com/r/b4tman/squid)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br/> Fast & powerful proxy server<br/><br/>**elestio_squid** is a preconfigured elestio_service resource (`template_id: 261`) running **Squid** from the [Docker image](https://hub.docker.com/r/b4tman/squid) `b4tman/squid`.
 
 ## Example Usage
 

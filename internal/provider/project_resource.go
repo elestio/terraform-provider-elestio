@@ -6,11 +6,11 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
-	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
@@ -63,9 +63,7 @@ func (r *ProjectResource) Schema(ctx context.Context, req resource.SchemaRequest
 				MarkdownDescription: "Project description.",
 				Optional:            true,
 				Computed:            true,
-				PlanModifiers: []planmodifier.String{
-					modifiers.StringDefault(""),
-				},
+				Default:             stringdefault.StaticString(""),
 			},
 			"technical_emails": schema.StringAttribute{
 				MarkdownDescription: "Project technical emails.",

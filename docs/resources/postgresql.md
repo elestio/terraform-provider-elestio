@@ -3,12 +3,12 @@
 page_title: "elestio_postgresql Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.elestio_postgresql is a preconfigured elestioservice resource (template_id: 11) running PostgreSQL ([`dockerimage: postgres`](https://hub.docker.com/r/postgres)).
+  PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.elestio_postgresql is a preconfigured elestio_service resource (template_id: 11) running PostgreSQL from the Docker image https://hub.docker.com/r/postgres postgres.
 ---
 
 # elestio_postgresql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" /><br/> PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br/><br/>**elestio_postgresql** is a preconfigured elestio_service resource (`template_id: 11`) running **PostgreSQL** ([`docker_image: postgres`](https://hub.docker.com/r/postgres)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" /><br/> PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br/><br/>**elestio_postgresql** is a preconfigured elestio_service resource (`template_id: 11`) running **PostgreSQL** from the [Docker image](https://hub.docker.com/r/postgres) `postgres`.
 
 ## Example Usage
 

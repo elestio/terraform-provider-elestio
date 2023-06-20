@@ -3,12 +3,12 @@
 page_title: "elestio_odoo_erp_crm Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Odoo is a suite of web-based, open-source business apps.elestioodooerp_crm is a preconfigured elestioservice resource (template_id: 86) running Odoo ERP & CRM ([`dockerimage: odoo`](https://hub.docker.com/r/odoo)).
+  Odoo is a suite of web-based, open-source business apps.elestioodooerp_crm is a preconfigured elestio_service resource (template_id: 86) running Odoo ERP & CRM from the Docker image https://hub.docker.com/r/odoo odoo.
 ---
 
 # elestio_odoo_erp_crm (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br/> Odoo is a suite of web-based, open-source business apps.<br/><br/>**elestio_odoo_erp_crm** is a preconfigured elestio_service resource (`template_id: 86`) running **Odoo ERP & CRM** ([`docker_image: odoo`](https://hub.docker.com/r/odoo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br/> Odoo is a suite of web-based, open-source business apps.<br/><br/>**elestio_odoo_erp_crm** is a preconfigured elestio_service resource (`template_id: 86`) running **Odoo ERP & CRM** from the [Docker image](https://hub.docker.com/r/odoo) `odoo`.
 
 
 

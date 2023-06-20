@@ -3,12 +3,12 @@
 page_title: "elestio_mariadb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  The open source relational databaseelestio_mariadb is a preconfigured elestioservice resource (template_id: 270) running MariaDB ([`dockerimage: mariadb`](https://hub.docker.com/r/mariadb)).
+  The open source relational databaseelestio_mariadb is a preconfigured elestio_service resource (template_id: 270) running MariaDB from the Docker image https://hub.docker.com/r/mariadb mariadb.
 ---
 
 # elestio_mariadb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br/> The open source relational database<br/><br/>**elestio_mariadb** is a preconfigured elestio_service resource (`template_id: 270`) running **MariaDB** ([`docker_image: mariadb`](https://hub.docker.com/r/mariadb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br/> The open source relational database<br/><br/>**elestio_mariadb** is a preconfigured elestio_service resource (`template_id: 270`) running **MariaDB** from the [Docker image](https://hub.docker.com/r/mariadb) `mariadb`.
 
 ## Example Usage
 

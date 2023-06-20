@@ -3,12 +3,12 @@
 page_title: "elestio_mastodon Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mastodon is a free, open-source social network serverelestio_mastodon is a preconfigured elestioservice resource (template_id: 229) running Mastodon ([`dockerimage: tootsuite/mastodon`](https://hub.docker.com/r/tootsuite/mastodon)).
+  Mastodon is a free, open-source social network serverelestio_mastodon is a preconfigured elestio_service resource (template_id: 229) running Mastodon from the Docker image https://hub.docker.com/r/tootsuite/mastodon tootsuite/mastodon.
 ---
 
 # elestio_mastodon (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" /><br/> Mastodon is a free, open-source social network server<br/><br/>**elestio_mastodon** is a preconfigured elestio_service resource (`template_id: 229`) running **Mastodon** ([`docker_image: tootsuite/mastodon`](https://hub.docker.com/r/tootsuite/mastodon)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" /><br/> Mastodon is a free, open-source social network server<br/><br/>**elestio_mastodon** is a preconfigured elestio_service resource (`template_id: 229`) running **Mastodon** from the [Docker image](https://hub.docker.com/r/tootsuite/mastodon) `tootsuite/mastodon`.
 
 ## Example Usage
 

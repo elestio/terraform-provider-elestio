@@ -3,12 +3,12 @@
 page_title: "elestio_neo4j Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Neo4j is the world’s leading Graph Databaseelestio_neo4j is a preconfigured elestioservice resource (template_id: 208) running Neo4j ([`dockerimage: neo4j`](https://hub.docker.com/r/neo4j)).
+  Neo4j is the world’s leading Graph Databaseelestio_neo4j is a preconfigured elestio_service resource (template_id: 208) running Neo4j from the Docker image https://hub.docker.com/r/neo4j neo4j.
 ---
 
 # elestio_neo4j (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" /><br/> Neo4j is the world’s leading Graph Database<br/><br/>**elestio_neo4j** is a preconfigured elestio_service resource (`template_id: 208`) running **Neo4j** ([`docker_image: neo4j`](https://hub.docker.com/r/neo4j)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" /><br/> Neo4j is the world’s leading Graph Database<br/><br/>**elestio_neo4j** is a preconfigured elestio_service resource (`template_id: 208`) running **Neo4j** from the [Docker image](https://hub.docker.com/r/neo4j) `neo4j`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_localstack Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!elestio_localstack is a preconfigured elestioservice resource (template_id: 275) running LocalStack ([`dockerimage: localstack/localstack`](https://hub.docker.com/r/localstack/localstack)).
+  A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!elestio_localstack is a preconfigured elestio_service resource (template_id: 275) running LocalStack from the Docker image https://hub.docker.com/r/localstack/localstack localstack/localstack.
 ---
 
 # elestio_localstack (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" /><br/> A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br/><br/>**elestio_localstack** is a preconfigured elestio_service resource (`template_id: 275`) running **LocalStack** ([`docker_image: localstack/localstack`](https://hub.docker.com/r/localstack/localstack)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" /><br/> A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br/><br/>**elestio_localstack** is a preconfigured elestio_service resource (`template_id: 275`) running **LocalStack** from the [Docker image](https://hub.docker.com/r/localstack/localstack) `localstack/localstack`.
 
 ## Example Usage
 

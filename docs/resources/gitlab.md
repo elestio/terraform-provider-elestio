@@ -3,12 +3,12 @@
 page_title: "elestio_gitlab Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  GitLab enables you to deliver software faster with better security and collaboration in a single platform.elestio_gitlab is a preconfigured elestioservice resource (template_id: 182) running Gitlab ([`dockerimage: gitlab/gitlab-ee`](https://hub.docker.com/r/gitlab/gitlab-ee)).
+  GitLab enables you to deliver software faster with better security and collaboration in a single platform.elestio_gitlab is a preconfigured elestio_service resource (template_id: 182) running Gitlab from the Docker image https://hub.docker.com/r/gitlab/gitlab-ee gitlab/gitlab-ee.
 ---
 
 # elestio_gitlab (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" /><br/> GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br/><br/>**elestio_gitlab** is a preconfigured elestio_service resource (`template_id: 182`) running **Gitlab** ([`docker_image: gitlab/gitlab-ee`](https://hub.docker.com/r/gitlab/gitlab-ee)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" /><br/> GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br/><br/>**elestio_gitlab** is a preconfigured elestio_service resource (`template_id: 182`) running **Gitlab** from the [Docker image](https://hub.docker.com/r/gitlab/gitlab-ee) `gitlab/gitlab-ee`.
 
 ## Example Usage
 

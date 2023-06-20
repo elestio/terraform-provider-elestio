@@ -3,12 +3,12 @@
 page_title: "elestio_limesurvey Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  LimeSurvey is the most popular FOSS online survey tool on the web.elestio_limesurvey is a preconfigured elestioservice resource (template_id: 99) running LimeSurvey ([`dockerimage: owncloudops/limesurvey`](https://hub.docker.com/r/owncloudops/limesurvey)).
+  LimeSurvey is the most popular FOSS online survey tool on the web.elestio_limesurvey is a preconfigured elestio_service resource (template_id: 99) running LimeSurvey from the Docker image https://hub.docker.com/r/owncloudops/limesurvey owncloudops/limesurvey.
 ---
 
 # elestio_limesurvey (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-limesurvey-head-NC55.svg" width="100" /><br/> LimeSurvey is the most popular FOSS online survey tool on the web.<br/><br/>**elestio_limesurvey** is a preconfigured elestio_service resource (`template_id: 99`) running **LimeSurvey** ([`docker_image: owncloudops/limesurvey`](https://hub.docker.com/r/owncloudops/limesurvey)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-limesurvey-head-NC55.svg" width="100" /><br/> LimeSurvey is the most popular FOSS online survey tool on the web.<br/><br/>**elestio_limesurvey** is a preconfigured elestio_service resource (`template_id: 99`) running **LimeSurvey** from the [Docker image](https://hub.docker.com/r/owncloudops/limesurvey) `owncloudops/limesurvey`.
 
 ## Example Usage
 

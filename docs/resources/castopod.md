@@ -3,12 +3,12 @@
 page_title: "elestio_castopod Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.elestio_castopod is a preconfigured elestioservice resource (template_id: 297) running Castopod ([`dockerimage: castopod/app`](https://hub.docker.com/r/castopod/app)).
+  Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.elestio_castopod is a preconfigured elestio_service resource (template_id: 297) running Castopod from the Docker image https://hub.docker.com/r/castopod/app castopod/app.
 ---
 
 # elestio_castopod (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" /><br/> Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.<br/><br/>**elestio_castopod** is a preconfigured elestio_service resource (`template_id: 297`) running **Castopod** ([`docker_image: castopod/app`](https://hub.docker.com/r/castopod/app)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" /><br/> Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.<br/><br/>**elestio_castopod** is a preconfigured elestio_service resource (`template_id: 297`) running **Castopod** from the [Docker image](https://hub.docker.com/r/castopod/app) `castopod/app`.
 
 ## Example Usage
 

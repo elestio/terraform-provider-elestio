@@ -3,12 +3,12 @@
 page_title: "elestio_jitsi Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. elestio_jitsi is a preconfigured elestioservice resource (template_id: 129) running Jitsi ([`dockerimage: jitsi/web`](https://hub.docker.com/r/jitsi/web)).
+  Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. elestio_jitsi is a preconfigured elestio_service resource (template_id: 129) running Jitsi from the Docker image https://hub.docker.com/r/jitsi/web jitsi/web.
 ---
 
 # elestio_jitsi (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" /><br/> Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br/><br/>**elestio_jitsi** is a preconfigured elestio_service resource (`template_id: 129`) running **Jitsi** ([`docker_image: jitsi/web`](https://hub.docker.com/r/jitsi/web)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" /><br/> Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br/><br/>**elestio_jitsi** is a preconfigured elestio_service resource (`template_id: 129`) running **Jitsi** from the [Docker image](https://hub.docker.com/r/jitsi/web) `jitsi/web`.
 
 ## Example Usage
 

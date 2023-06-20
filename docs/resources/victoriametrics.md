@@ -3,12 +3,12 @@
 page_title: "elestio_victoriametrics Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  VictoriaMetrics is a fast, cost-effective monitoring solution and time series databaseelestio_victoriametrics is a preconfigured elestioservice resource (template_id: 156) running VictoriaMetrics ([`dockerimage: victoriametrics/victoria-metrics`](https://hub.docker.com/r/victoriametrics/victoria-metrics)).
+  VictoriaMetrics is a fast, cost-effective monitoring solution and time series databaseelestio_victoriametrics is a preconfigured elestio_service resource (template_id: 156) running VictoriaMetrics from the Docker image https://hub.docker.com/r/victoriametrics/victoria-metrics victoriametrics/victoria-metrics.
 ---
 
 # elestio_victoriametrics (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" /><br/> VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br/><br/>**elestio_victoriametrics** is a preconfigured elestio_service resource (`template_id: 156`) running **VictoriaMetrics** ([`docker_image: victoriametrics/victoria-metrics`](https://hub.docker.com/r/victoriametrics/victoria-metrics)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" /><br/> VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br/><br/>**elestio_victoriametrics** is a preconfigured elestio_service resource (`template_id: 156`) running **VictoriaMetrics** from the [Docker image](https://hub.docker.com/r/victoriametrics/victoria-metrics) `victoriametrics/victoria-metrics`.
 
 ## Example Usage
 

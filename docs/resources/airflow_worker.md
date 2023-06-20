@@ -3,12 +3,12 @@
 page_title: "elestio_airflow_worker Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.elestioairflowworker is a preconfigured elestioservice resource (template_id: 304) running Airflow-worker ([`dockerimage: apache/airflow`](https://hub.docker.com/r/apache/airflow)).
+  Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.elestioairflowworker is a preconfigured elestio_service resource (template_id: 304) running Airflow-worker from the Docker image https://hub.docker.com/r/apache/airflow apache/airflow.
 ---
 
 # elestio_airflow_worker (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" /><br/> Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br/><br/>**elestio_airflow_worker** is a preconfigured elestio_service resource (`template_id: 304`) running **Airflow-worker** ([`docker_image: apache/airflow`](https://hub.docker.com/r/apache/airflow)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" /><br/> Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br/><br/>**elestio_airflow_worker** is a preconfigured elestio_service resource (`template_id: 304`) running **Airflow-worker** from the [Docker image](https://hub.docker.com/r/apache/airflow) `apache/airflow`.
 
 ## Example Usage
 

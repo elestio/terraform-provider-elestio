@@ -3,12 +3,12 @@
 page_title: "elestio_postal Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.elestio_postal is a preconfigured elestioservice resource (template_id: 132) running Postal ([`dockerimage: postalserver/postal`](https://hub.docker.com/r/postalserver/postal)).
+  Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.elestio_postal is a preconfigured elestio_service resource (template_id: 132) running Postal from the Docker image https://hub.docker.com/r/postalserver/postal postalserver/postal.
 ---
 
 # elestio_postal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br/> Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br/><br/>**elestio_postal** is a preconfigured elestio_service resource (`template_id: 132`) running **Postal** ([`docker_image: postalserver/postal`](https://hub.docker.com/r/postalserver/postal)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br/> Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br/><br/>**elestio_postal** is a preconfigured elestio_service resource (`template_id: 132`) running **Postal** from the [Docker image](https://hub.docker.com/r/postalserver/postal) `postalserver/postal`.
 
 ## Example Usage
 

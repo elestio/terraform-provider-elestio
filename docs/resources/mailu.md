@@ -3,12 +3,12 @@
 page_title: "elestio_mailu Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mailu is an insular email distribution - mail server as Docker imageselestio_mailu is a preconfigured elestioservice resource (template_id: 189) running Mailu ([`dockerimage: mailu/admin`](https://hub.docker.com/r/mailu/admin)).
+  Mailu is an insular email distribution - mail server as Docker imageselestio_mailu is a preconfigured elestio_service resource (template_id: 189) running Mailu from the Docker image https://hub.docker.com/r/mailu/admin mailu/admin.
 ---
 
 # elestio_mailu (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br/> Mailu is an insular email distribution - mail server as Docker images<br/><br/>**elestio_mailu** is a preconfigured elestio_service resource (`template_id: 189`) running **Mailu** ([`docker_image: mailu/admin`](https://hub.docker.com/r/mailu/admin)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br/> Mailu is an insular email distribution - mail server as Docker images<br/><br/>**elestio_mailu** is a preconfigured elestio_service resource (`template_id: 189`) running **Mailu** from the [Docker image](https://hub.docker.com/r/mailu/admin) `mailu/admin`.
 
 ## Example Usage
 

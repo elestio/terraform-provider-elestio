@@ -3,12 +3,12 @@
 page_title: "elestio_vaultwarden Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. elestio_vaultwarden is a preconfigured elestioservice resource (template_id: 66) running Vaultwarden ([`dockerimage: vaultwarden/server`](https://hub.docker.com/r/vaultwarden/server)).
+  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. elestio_vaultwarden is a preconfigured elestio_service resource (template_id: 66) running Vaultwarden from the Docker image https://hub.docker.com/r/vaultwarden/server vaultwarden/server.
 ---
 
 # elestio_vaultwarden (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" /><br/>  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br/><br/>**elestio_vaultwarden** is a preconfigured elestio_service resource (`template_id: 66`) running **Vaultwarden** ([`docker_image: vaultwarden/server`](https://hub.docker.com/r/vaultwarden/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" /><br/>  Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br/><br/>**elestio_vaultwarden** is a preconfigured elestio_service resource (`template_id: 66`) running **Vaultwarden** from the [Docker image](https://hub.docker.com/r/vaultwarden/server) `vaultwarden/server`.
 
 ## Example Usage
 

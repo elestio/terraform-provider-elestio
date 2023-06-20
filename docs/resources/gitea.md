@@ -3,12 +3,12 @@
 page_title: "elestio_gitea Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLabelestio_gitea is a preconfigured elestioservice resource (template_id: 155) running Gitea ([`dockerimage: gitea/gitea`](https://hub.docker.com/r/gitea/gitea)).
+  Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLabelestio_gitea is a preconfigured elestio_service resource (template_id: 155) running Gitea from the Docker image https://hub.docker.com/r/gitea/gitea gitea/gitea.
 ---
 
 # elestio_gitea (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" /><br/> Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br/><br/>**elestio_gitea** is a preconfigured elestio_service resource (`template_id: 155`) running **Gitea** ([`docker_image: gitea/gitea`](https://hub.docker.com/r/gitea/gitea)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" /><br/> Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br/><br/>**elestio_gitea** is a preconfigured elestio_service resource (`template_id: 155`) running **Gitea** from the [Docker image](https://hub.docker.com/r/gitea/gitea) `gitea/gitea`.
 
 ## Example Usage
 

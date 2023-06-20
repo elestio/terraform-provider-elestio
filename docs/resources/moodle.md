@@ -3,12 +3,12 @@
 page_title: "elestio_moodle Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Moodle is the world's most popular open-source learning platform for educators to create their own websites.elestio_moodle is a preconfigured elestioservice resource (template_id: 107) running Moodle ([`dockerimage: bitnami/moodle`](https://hub.docker.com/r/bitnami/moodle)).
+  Moodle is the world's most popular open-source learning platform for educators to create their own websites.elestio_moodle is a preconfigured elestio_service resource (template_id: 107) running Moodle from the Docker image https://hub.docker.com/r/bitnami/moodle bitnami/moodle.
 ---
 
 # elestio_moodle (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" /><br/> Moodle is the world's most popular open-source learning platform for educators to create their own websites.<br/><br/>**elestio_moodle** is a preconfigured elestio_service resource (`template_id: 107`) running **Moodle** ([`docker_image: bitnami/moodle`](https://hub.docker.com/r/bitnami/moodle)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Moodle-PYvu.png" width="100" /><br/> Moodle is the world's most popular open-source learning platform for educators to create their own websites.<br/><br/>**elestio_moodle** is a preconfigured elestio_service resource (`template_id: 107`) running **Moodle** from the [Docker image](https://hub.docker.com/r/bitnami/moodle) `bitnami/moodle`.
 
 ## Example Usage
 

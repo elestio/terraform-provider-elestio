@@ -3,12 +3,12 @@
 page_title: "elestio_manticoresearch Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.elestio_manticoresearch is a preconfigured elestioservice resource (template_id: 303) running ManticoreSearch ([`dockerimage: manticoresearch/manticore`](https://hub.docker.com/r/manticoresearch/manticore)).
+  Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.elestio_manticoresearch is a preconfigured elestio_service resource (template_id: 303) running ManticoreSearch from the Docker image https://hub.docker.com/r/manticoresearch/manticore manticoresearch/manticore.
 ---
 
 # elestio_manticoresearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" /><br/> Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br/><br/>**elestio_manticoresearch** is a preconfigured elestio_service resource (`template_id: 303`) running **ManticoreSearch** ([`docker_image: manticoresearch/manticore`](https://hub.docker.com/r/manticoresearch/manticore)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" /><br/> Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br/><br/>**elestio_manticoresearch** is a preconfigured elestio_service resource (`template_id: 303`) running **ManticoreSearch** from the [Docker image](https://hub.docker.com/r/manticoresearch/manticore) `manticoresearch/manticore`.
 
 ## Example Usage
 

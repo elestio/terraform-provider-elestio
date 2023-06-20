@@ -3,12 +3,12 @@
 page_title: "elestio_freescout Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  FreeScout is a free self-hosted help desk & shared mailbox.elestio_freescout is a preconfigured elestioservice resource (template_id: 193) running FreeScout ([`dockerimage: tiredofit/freescout`](https://hub.docker.com/r/tiredofit/freescout)).
+  FreeScout is a free self-hosted help desk & shared mailbox.elestio_freescout is a preconfigured elestio_service resource (template_id: 193) running FreeScout from the Docker image https://hub.docker.com/r/tiredofit/freescout tiredofit/freescout.
 ---
 
 # elestio_freescout (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" /><br/> FreeScout is a free self-hosted help desk & shared mailbox.<br/><br/>**elestio_freescout** is a preconfigured elestio_service resource (`template_id: 193`) running **FreeScout** ([`docker_image: tiredofit/freescout`](https://hub.docker.com/r/tiredofit/freescout)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" /><br/> FreeScout is a free self-hosted help desk & shared mailbox.<br/><br/>**elestio_freescout** is a preconfigured elestio_service resource (`template_id: 193`) running **FreeScout** from the [Docker image](https://hub.docker.com/r/tiredofit/freescout) `tiredofit/freescout`.
 
 ## Example Usage
 

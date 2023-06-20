@@ -3,12 +3,12 @@
 page_title: "elestio_directus Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Directus is an Open Data Platform for managing the content of any SQL database.  elestio_directus is a preconfigured elestioservice resource (template_id: 57) running Directus ([`dockerimage: directus/directus`](https://hub.docker.com/r/directus/directus)).
+  Directus is an Open Data Platform for managing the content of any SQL database.  elestio_directus is a preconfigured elestio_service resource (template_id: 57) running Directus from the Docker image https://hub.docker.com/r/directus/directus directus/directus.
 ---
 
 # elestio_directus (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br/> Directus is an Open Data Platform for managing the content of any SQL database.  <br/><br/>**elestio_directus** is a preconfigured elestio_service resource (`template_id: 57`) running **Directus** ([`docker_image: directus/directus`](https://hub.docker.com/r/directus/directus)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br/> Directus is an Open Data Platform for managing the content of any SQL database.  <br/><br/>**elestio_directus** is a preconfigured elestio_service resource (`template_id: 57`) running **Directus** from the [Docker image](https://hub.docker.com/r/directus/directus) `directus/directus`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_couchbase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQLelestio_couchbase is a preconfigured elestioservice resource (template_id: 302) running Couchbase ([`dockerimage: couchbase`](https://hub.docker.com/r/couchbase)).
+  Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQLelestio_couchbase is a preconfigured elestio_service resource (template_id: 302) running Couchbase from the Docker image https://hub.docker.com/r/couchbase couchbase.
 ---
 
 # elestio_couchbase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" /><br/> Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br/><br/>**elestio_couchbase** is a preconfigured elestio_service resource (`template_id: 302`) running **Couchbase** ([`docker_image: couchbase`](https://hub.docker.com/r/couchbase)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" /><br/> Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br/><br/>**elestio_couchbase** is a preconfigured elestio_service resource (`template_id: 302`) running **Couchbase** from the [Docker image](https://hub.docker.com/r/couchbase) `couchbase`.
 
 ## Example Usage
 

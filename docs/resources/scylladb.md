@@ -3,12 +3,12 @@
 page_title: "elestio_scylladb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ScyllaDB is a true NoSQL database for the most demanding applications. elestio_scylladb is a preconfigured elestioservice resource (template_id: 68) running ScyllaDB ([`dockerimage: scylladb/scylla`](https://hub.docker.com/r/scylladb/scylla)).
+  ScyllaDB is a true NoSQL database for the most demanding applications. elestio_scylladb is a preconfigured elestio_service resource (template_id: 68) running ScyllaDB from the Docker image https://hub.docker.com/r/scylladb/scylla scylladb/scylla.
 ---
 
 # elestio_scylladb (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" /><br/> ScyllaDB is a true NoSQL database for the most demanding applications. <br/><br/>**elestio_scylladb** is a preconfigured elestio_service resource (`template_id: 68`) running **ScyllaDB** ([`docker_image: scylladb/scylla`](https://hub.docker.com/r/scylladb/scylla)).
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" /><br/> ScyllaDB is a true NoSQL database for the most demanding applications. <br/><br/>**elestio_scylladb** is a preconfigured elestio_service resource (`template_id: 68`) running **ScyllaDB** from the [Docker image](https://hub.docker.com/r/scylladb/scylla) `scylladb/scylla`.
 
 ## Example Usage
 

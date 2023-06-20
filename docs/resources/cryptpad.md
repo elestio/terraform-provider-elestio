@@ -3,12 +3,12 @@
 page_title: "elestio_cryptpad Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  CryptPad is a collaboration suite, encrypted and open-source.elestio_cryptpad is a preconfigured elestioservice resource (template_id: 194) running CryptPad ([`dockerimage: promasu/cryptpad`](https://hub.docker.com/r/promasu/cryptpad)).
+  CryptPad is a collaboration suite, encrypted and open-source.elestio_cryptpad is a preconfigured elestio_service resource (template_id: 194) running CryptPad from the Docker image https://hub.docker.com/r/promasu/cryptpad promasu/cryptpad.
 ---
 
 # elestio_cryptpad (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" /><br/> CryptPad is a collaboration suite, encrypted and open-source.<br/><br/>**elestio_cryptpad** is a preconfigured elestio_service resource (`template_id: 194`) running **CryptPad** ([`docker_image: promasu/cryptpad`](https://hub.docker.com/r/promasu/cryptpad)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" /><br/> CryptPad is a collaboration suite, encrypted and open-source.<br/><br/>**elestio_cryptpad** is a preconfigured elestio_service resource (`template_id: 194`) running **CryptPad** from the [Docker image](https://hub.docker.com/r/promasu/cryptpad) `promasu/cryptpad`.
 
 ## Example Usage
 

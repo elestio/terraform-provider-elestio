@@ -3,12 +3,12 @@
 page_title: "elestio_uptime_kuma Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.elestiouptimekuma is a preconfigured elestioservice resource (template_id: 137) running Uptime-kuma ([`dockerimage: louislam/uptime-kuma`](https://hub.docker.com/r/louislam/uptime-kuma)).
+  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.elestiouptimekuma is a preconfigured elestio_service resource (template_id: 137) running Uptime-kuma from the Docker image https://hub.docker.com/r/louislam/uptime-kuma louislam/uptime-kuma.
 ---
 
 # elestio_uptime_kuma (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br/> Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br/><br/>**elestio_uptime_kuma** is a preconfigured elestio_service resource (`template_id: 137`) running **Uptime-kuma** ([`docker_image: louislam/uptime-kuma`](https://hub.docker.com/r/louislam/uptime-kuma)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br/> Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br/><br/>**elestio_uptime_kuma** is a preconfigured elestio_service resource (`template_id: 137`) running **Uptime-kuma** from the [Docker image](https://hub.docker.com/r/louislam/uptime-kuma) `louislam/uptime-kuma`.
 
 ## Example Usage
 

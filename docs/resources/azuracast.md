@@ -3,12 +3,12 @@
 page_title: "elestio_azuracast Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  A self-hosted web radio management suiteelestio_azuracast is a preconfigured elestioservice resource (template_id: 222) running AzuraCast ([`dockerimage: azuracast/azuracast`](https://hub.docker.com/r/azuracast/azuracast)).
+  A self-hosted web radio management suiteelestio_azuracast is a preconfigured elestio_service resource (template_id: 222) running AzuraCast from the Docker image https://hub.docker.com/r/azuracast/azuracast azuracast/azuracast.
 ---
 
 # elestio_azuracast (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/AzuraCast-aDBt.png" width="100" /><br/> A self-hosted web radio management suite<br/><br/>**elestio_azuracast** is a preconfigured elestio_service resource (`template_id: 222`) running **AzuraCast** ([`docker_image: azuracast/azuracast`](https://hub.docker.com/r/azuracast/azuracast)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/AzuraCast-aDBt.png" width="100" /><br/> A self-hosted web radio management suite<br/><br/>**elestio_azuracast** is a preconfigured elestio_service resource (`template_id: 222`) running **AzuraCast** from the [Docker image](https://hub.docker.com/r/azuracast/azuracast) `azuracast/azuracast`.
 
 ## Example Usage
 

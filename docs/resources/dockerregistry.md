@@ -3,12 +3,12 @@
 page_title: "elestio_dockerregistry Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.elestio_dockerregistry is a preconfigured elestioservice resource (template_id: 230) running DockerRegistry ([`dockerimage: registry`](https://hub.docker.com/r/registry)).
+  Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.elestio_dockerregistry is a preconfigured elestio_service resource (template_id: 230) running DockerRegistry from the Docker image https://hub.docker.com/r/registry registry.
 ---
 
 # elestio_dockerregistry (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" /><br/> Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br/><br/>**elestio_dockerregistry** is a preconfigured elestio_service resource (`template_id: 230`) running **DockerRegistry** ([`docker_image: registry`](https://hub.docker.com/r/registry)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" /><br/> Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br/><br/>**elestio_dockerregistry** is a preconfigured elestio_service resource (`template_id: 230`) running **DockerRegistry** from the [Docker image](https://hub.docker.com/r/registry) `registry`.
 
 ## Example Usage
 

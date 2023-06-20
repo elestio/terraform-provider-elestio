@@ -3,12 +3,12 @@
 page_title: "elestio_gitlab_runner Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.elestiogitlabrunner is a preconfigured elestioservice resource (template_id: 235) running Gitlab-runner ([`dockerimage: gitlab/gitlab-runner`](https://hub.docker.com/r/gitlab/gitlab-runner)).
+  GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.elestiogitlabrunner is a preconfigured elestio_service resource (template_id: 235) running Gitlab-runner from the Docker image https://hub.docker.com/r/gitlab/gitlab-runner gitlab/gitlab-runner.
 ---
 
 # elestio_gitlab_runner (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" /><br/> GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.<br/><br/>**elestio_gitlab_runner** is a preconfigured elestio_service resource (`template_id: 235`) running **Gitlab-runner** ([`docker_image: gitlab/gitlab-runner`](https://hub.docker.com/r/gitlab/gitlab-runner)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" /><br/> GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.<br/><br/>**elestio_gitlab_runner** is a preconfigured elestio_service resource (`template_id: 235`) running **Gitlab-runner** from the [Docker image](https://hub.docker.com/r/gitlab/gitlab-runner) `gitlab/gitlab-runner`.
 
 ## Example Usage
 

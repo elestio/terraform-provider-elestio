@@ -3,12 +3,12 @@
 page_title: "elestio_kimai Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.elestio_kimai is a preconfigured elestioservice resource (template_id: 138) running Kimai ([`dockerimage: kimai/kimai2`](https://hub.docker.com/r/kimai/kimai2)).
+  Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.elestio_kimai is a preconfigured elestio_service resource (template_id: 138) running Kimai from the Docker image https://hub.docker.com/r/kimai/kimai2 kimai/kimai2.
 ---
 
 # elestio_kimai (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kimai--1--hIV6.png" width="100" /><br/> Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.<br/><br/>**elestio_kimai** is a preconfigured elestio_service resource (`template_id: 138`) running **Kimai** ([`docker_image: kimai/kimai2`](https://hub.docker.com/r/kimai/kimai2)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kimai--1--hIV6.png" width="100" /><br/> Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.<br/><br/>**elestio_kimai** is a preconfigured elestio_service resource (`template_id: 138`) running **Kimai** from the [Docker image](https://hub.docker.com/r/kimai/kimai2) `kimai/kimai2`.
 
 ## Example Usage
 

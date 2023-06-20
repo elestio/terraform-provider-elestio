@@ -3,12 +3,12 @@
 page_title: "elestio_owncloud Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  ownCloud is a suite of client-server software for creating and using file hosting services. elestio_owncloud is a preconfigured elestioservice resource (template_id: 150) running ownCloud ([`dockerimage: owncloud/server`](https://hub.docker.com/r/owncloud/server)).
+  ownCloud is a suite of client-server software for creating and using file hosting services. elestio_owncloud is a preconfigured elestio_service resource (template_id: 150) running ownCloud from the Docker image https://hub.docker.com/r/owncloud/server owncloud/server.
 ---
 
 # elestio_owncloud (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" /><br/> ownCloud is a suite of client-server software for creating and using file hosting services. <br/><br/>**elestio_owncloud** is a preconfigured elestio_service resource (`template_id: 150`) running **ownCloud** ([`docker_image: owncloud/server`](https://hub.docker.com/r/owncloud/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" /><br/> ownCloud is a suite of client-server software for creating and using file hosting services. <br/><br/>**elestio_owncloud** is a preconfigured elestio_service resource (`template_id: 150`) running **ownCloud** from the [Docker image](https://hub.docker.com/r/owncloud/server) `owncloud/server`.
 
 ## Example Usage
 

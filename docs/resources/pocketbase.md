@@ -3,12 +3,12 @@
 page_title: "elestio_pocketbase Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Open Source backend for your next SaaS and Mobile app in 1 fileelestio_pocketbase is a preconfigured elestioservice resource (template_id: 298) running PocketBase ([`dockerimage: augustodelg/pocketbase`](https://hub.docker.com/r/augustodelg/pocketbase)).
+  Open Source backend for your next SaaS and Mobile app in 1 fileelestio_pocketbase is a preconfigured elestio_service resource (template_id: 298) running PocketBase from the Docker image https://hub.docker.com/r/augustodelg/pocketbase augustodelg/pocketbase.
 ---
 
 # elestio_pocketbase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" /><br/> Open Source backend for your next SaaS and Mobile app in 1 file<br/><br/>**elestio_pocketbase** is a preconfigured elestio_service resource (`template_id: 298`) running **PocketBase** ([`docker_image: augustodelg/pocketbase`](https://hub.docker.com/r/augustodelg/pocketbase)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" /><br/> Open Source backend for your next SaaS and Mobile app in 1 file<br/><br/>**elestio_pocketbase** is a preconfigured elestio_service resource (`template_id: 298`) running **PocketBase** from the [Docker image](https://hub.docker.com/r/augustodelg/pocketbase) `augustodelg/pocketbase`.
 
 ## Example Usage
 

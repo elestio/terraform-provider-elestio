@@ -3,12 +3,12 @@
 page_title: "elestio_suitecrm Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.elestio_suitecrm is a preconfigured elestioservice resource (template_id: 277) running SuiteCRM ([`dockerimage: docker.io/bitnami/suitecrm`](https://hub.docker.com/r/docker.io/bitnami/suitecrm)).
+  SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.elestio_suitecrm is a preconfigured elestio_service resource (template_id: 277) running SuiteCRM from the Docker image https://hub.docker.com/r/docker.io/bitnami/suitecrm docker.io/bitnami/suitecrm.
 ---
 
 # elestio_suitecrm (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/suitecrm-logo-UYuT.png" width="100" /><br/> SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.<br/><br/>**elestio_suitecrm** is a preconfigured elestio_service resource (`template_id: 277`) running **SuiteCRM** ([`docker_image: docker.io/bitnami/suitecrm`](https://hub.docker.com/r/docker.io/bitnami/suitecrm)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/suitecrm-logo-UYuT.png" width="100" /><br/> SuiteCRM is an open source Customer Relationship Management (CRM) software solution that provides a 360-degree view of your customers and business.<br/><br/>**elestio_suitecrm** is a preconfigured elestio_service resource (`template_id: 277`) running **SuiteCRM** from the [Docker image](https://hub.docker.com/r/docker.io/bitnami/suitecrm) `docker.io/bitnami/suitecrm`.
 
 ## Example Usage
 

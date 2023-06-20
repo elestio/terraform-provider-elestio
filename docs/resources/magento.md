@@ -3,12 +3,12 @@
 page_title: "elestio_magento Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. elestio_magento is a preconfigured elestioservice resource (template_id: 98) running Magento ([`dockerimage: bitnami/magento`](https://hub.docker.com/r/bitnami/magento)).
+  Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. elestio_magento is a preconfigured elestio_service resource (template_id: 98) running Magento from the Docker image https://hub.docker.com/r/bitnami/magento bitnami/magento.
 ---
 
 # elestio_magento (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br/> Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br/><br/>**elestio_magento** is a preconfigured elestio_service resource (`template_id: 98`) running **Magento** ([`docker_image: bitnami/magento`](https://hub.docker.com/r/bitnami/magento)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br/> Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br/><br/>**elestio_magento** is a preconfigured elestio_service resource (`template_id: 98`) running **Magento** from the [Docker image](https://hub.docker.com/r/bitnami/magento) `bitnami/magento`.
 
 ## Example Usage
 

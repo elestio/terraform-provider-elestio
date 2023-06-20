@@ -3,12 +3,12 @@
 page_title: "elestio_woocommerce Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  WooCommerce is a customizable, open-source eCommerce platform built on WordPress.elestio_woocommerce is a preconfigured elestioservice resource (template_id: 296) running WooCommerce ([`dockerimage: wordpress`](https://hub.docker.com/r/wordpress)).
+  WooCommerce is a customizable, open-source eCommerce platform built on WordPress.elestio_woocommerce is a preconfigured elestio_service resource (template_id: 296) running WooCommerce from the Docker image https://hub.docker.com/r/wordpress wordpress.
 ---
 
 # elestio_woocommerce (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" /><br/> WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br/><br/>**elestio_woocommerce** is a preconfigured elestio_service resource (`template_id: 296`) running **WooCommerce** ([`docker_image: wordpress`](https://hub.docker.com/r/wordpress)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" /><br/> WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br/><br/>**elestio_woocommerce** is a preconfigured elestio_service resource (`template_id: 296`) running **WooCommerce** from the [Docker image](https://hub.docker.com/r/wordpress) `wordpress`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_opensourcetranslate Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.elestio_opensourcetranslate is a preconfigured elestioservice resource (template_id: 185) running OpenSourceTranslate ([`dockerimage: libretranslate/libretranslate`](https://hub.docker.com/r/libretranslate/libretranslate)).
+  OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.elestio_opensourcetranslate is a preconfigured elestio_service resource (template_id: 185) running OpenSourceTranslate from the Docker image https://hub.docker.com/r/libretranslate/libretranslate libretranslate/libretranslate.
 ---
 
 # elestio_opensourcetranslate (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" /><br/> OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br/><br/>**elestio_opensourcetranslate** is a preconfigured elestio_service resource (`template_id: 185`) running **OpenSourceTranslate** ([`docker_image: libretranslate/libretranslate`](https://hub.docker.com/r/libretranslate/libretranslate)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" /><br/> OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br/><br/>**elestio_opensourcetranslate** is a preconfigured elestio_service resource (`template_id: 185`) running **OpenSourceTranslate** from the [Docker image](https://hub.docker.com/r/libretranslate/libretranslate) `libretranslate/libretranslate`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_syncthing Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Syncthing is a free, continuous, multiple-device file synchronization program. elestio_syncthing is a preconfigured elestioservice resource (template_id: 123) running Syncthing ([`dockerimage: syncthing/syncthing`](https://hub.docker.com/r/syncthing/syncthing)).
+  Syncthing is a free, continuous, multiple-device file synchronization program. elestio_syncthing is a preconfigured elestio_service resource (template_id: 123) running Syncthing from the Docker image https://hub.docker.com/r/syncthing/syncthing syncthing/syncthing.
 ---
 
 # elestio_syncthing (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" /><br/> Syncthing is a free, continuous, multiple-device file synchronization program. <br/><br/>**elestio_syncthing** is a preconfigured elestio_service resource (`template_id: 123`) running **Syncthing** ([`docker_image: syncthing/syncthing`](https://hub.docker.com/r/syncthing/syncthing)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" /><br/> Syncthing is a free, continuous, multiple-device file synchronization program. <br/><br/>**elestio_syncthing** is a preconfigured elestio_service resource (`template_id: 123`) running **Syncthing** from the [Docker image](https://hub.docker.com/r/syncthing/syncthing) `syncthing/syncthing`.
 
 ## Example Usage
 

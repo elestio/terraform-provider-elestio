@@ -3,12 +3,12 @@
 page_title: "elestio_quant_ux Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Quant-UX is a prototyping tool to design, test and analyse your visual designselestioquantux is a preconfigured elestioservice resource (template_id: 263) running Quant-UX ([`dockerimage: klausenschaefersinho/quant-ux-backend`](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend)).
+  Quant-UX is a prototyping tool to design, test and analyse your visual designselestioquantux is a preconfigured elestio_service resource (template_id: 263) running Quant-UX from the Docker image https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend klausenschaefersinho/quant-ux-backend.
 ---
 
 # elestio_quant_ux (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" /><br/> Quant-UX is a prototyping tool to design, test and analyse your visual designs<br/><br/>**elestio_quant_ux** is a preconfigured elestio_service resource (`template_id: 263`) running **Quant-UX** ([`docker_image: klausenschaefersinho/quant-ux-backend`](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" /><br/> Quant-UX is a prototyping tool to design, test and analyse your visual designs<br/><br/>**elestio_quant_ux** is a preconfigured elestio_service resource (`template_id: 263`) running **Quant-UX** from the [Docker image](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend) `klausenschaefersinho/quant-ux-backend`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_mautic Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mautic is a open source marketing automation software.elestio_mautic is a preconfigured elestioservice resource (template_id: 209) running Mautic ([`dockerimage: mautic`](https://hub.docker.com/r/mautic)).
+  Mautic is a open source marketing automation software.elestio_mautic is a preconfigured elestio_service resource (template_id: 209) running Mautic from the Docker image https://hub.docker.com/r/mautic mautic.
 ---
 
 # elestio_mautic (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br/> Mautic is a open source marketing automation software.<br/><br/>**elestio_mautic** is a preconfigured elestio_service resource (`template_id: 209`) running **Mautic** ([`docker_image: mautic`](https://hub.docker.com/r/mautic)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br/> Mautic is a open source marketing automation software.<br/><br/>**elestio_mautic** is a preconfigured elestio_service resource (`template_id: 209`) running **Mautic** from the [Docker image](https://hub.docker.com/r/mautic) `mautic`.
 
 ## Example Usage
 

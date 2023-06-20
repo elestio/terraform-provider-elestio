@@ -3,12 +3,12 @@
 page_title: "elestio_mapzy Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  A simple, self-hostable store finder that cares about your privacy.elestio_mapzy is a preconfigured elestioservice resource (template_id: 226) running Mapzy ([`dockerimage: mapzy/mapzy`](https://hub.docker.com/r/mapzy/mapzy)).
+  A simple, self-hostable store finder that cares about your privacy.elestio_mapzy is a preconfigured elestio_service resource (template_id: 226) running Mapzy from the Docker image https://hub.docker.com/r/mapzy/mapzy mapzy/mapzy.
 ---
 
 # elestio_mapzy (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" /><br/> A simple, self-hostable store finder that cares about your privacy.<br/><br/>**elestio_mapzy** is a preconfigured elestio_service resource (`template_id: 226`) running **Mapzy** ([`docker_image: mapzy/mapzy`](https://hub.docker.com/r/mapzy/mapzy)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" /><br/> A simple, self-hostable store finder that cares about your privacy.<br/><br/>**elestio_mapzy** is a preconfigured elestio_service resource (`template_id: 226`) running **Mapzy** from the [Docker image](https://hub.docker.com/r/mapzy/mapzy) `mapzy/mapzy`.
 
 ## Example Usage
 

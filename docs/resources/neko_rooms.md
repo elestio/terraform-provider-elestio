@@ -3,12 +3,12 @@
 page_title: "elestio_neko_rooms Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Neko-Rooms is a simple room management system for n.eko. elestionekorooms is a preconfigured elestioservice resource (template_id: 78) running Neko Rooms ([`dockerimage: m1k1o/neko-rooms`](https://hub.docker.com/r/m1k1o/neko-rooms)).
+  Neko-Rooms is a simple room management system for n.eko. elestionekorooms is a preconfigured elestio_service resource (template_id: 78) running Neko Rooms from the Docker image https://hub.docker.com/r/m1k1o/neko-rooms m1k1o/neko-rooms.
 ---
 
 # elestio_neko_rooms (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nekologo-ALP3.png" width="100" /><br/> Neko-Rooms is a simple room management system for n.eko. <br/><br/>**elestio_neko_rooms** is a preconfigured elestio_service resource (`template_id: 78`) running **Neko Rooms** ([`docker_image: m1k1o/neko-rooms`](https://hub.docker.com/r/m1k1o/neko-rooms)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nekologo-ALP3.png" width="100" /><br/> Neko-Rooms is a simple room management system for n.eko. <br/><br/>**elestio_neko_rooms** is a preconfigured elestio_service resource (`template_id: 78`) running **Neko Rooms** from the [Docker image](https://hub.docker.com/r/m1k1o/neko-rooms) `m1k1o/neko-rooms`.
 
 
 

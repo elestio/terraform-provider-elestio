@@ -3,12 +3,12 @@
 page_title: "elestio_keeweb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. elestio_keeweb is a preconfigured elestioservice resource (template_id: 153) running KeeWeb ([`dockerimage: antelle/keeweb`](https://hub.docker.com/r/antelle/keeweb)).
+  KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. elestio_keeweb is a preconfigured elestio_service resource (template_id: 153) running KeeWeb from the Docker image https://hub.docker.com/r/antelle/keeweb antelle/keeweb.
 ---
 
 # elestio_keeweb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keeweb-722o.png" width="100" /><br/> KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. <br/><br/>**elestio_keeweb** is a preconfigured elestio_service resource (`template_id: 153`) running **KeeWeb** ([`docker_image: antelle/keeweb`](https://hub.docker.com/r/antelle/keeweb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keeweb-722o.png" width="100" /><br/> KeeWeb is a free, open-source password manager, available as a web version and as a desktop app. <br/><br/>**elestio_keeweb** is a preconfigured elestio_service resource (`template_id: 153`) running **KeeWeb** from the [Docker image](https://hub.docker.com/r/antelle/keeweb) `antelle/keeweb`.
 
 ## Example Usage
 

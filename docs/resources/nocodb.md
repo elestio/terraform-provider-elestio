@@ -3,12 +3,12 @@
 page_title: "elestio_nocodb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.elestio_nocodb is a preconfigured elestioservice resource (template_id: 117) running NocoDB ([`dockerimage: nocodb/nocodb`](https://hub.docker.com/r/nocodb/nocodb)).
+  NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.elestio_nocodb is a preconfigured elestio_service resource (template_id: 117) running NocoDB from the Docker image https://hub.docker.com/r/nocodb/nocodb nocodb/nocodb.
 ---
 
 # elestio_nocodb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" /><br/> NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br/><br/>**elestio_nocodb** is a preconfigured elestio_service resource (`template_id: 117`) running **NocoDB** ([`docker_image: nocodb/nocodb`](https://hub.docker.com/r/nocodb/nocodb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" /><br/> NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br/><br/>**elestio_nocodb** is a preconfigured elestio_service resource (`template_id: 117`) running **NocoDB** from the [Docker image](https://hub.docker.com/r/nocodb/nocodb) `nocodb/nocodb`.
 
 ## Example Usage
 

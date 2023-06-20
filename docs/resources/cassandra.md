@@ -3,12 +3,12 @@
 page_title: "elestio_cassandra Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Open Source NoSQL Databaseelestio_cassandra is a preconfigured elestioservice resource (template_id: 253) running Cassandra ([`dockerimage: bitnami/cassandra`](https://hub.docker.com/r/bitnami/cassandra)).
+  Open Source NoSQL Databaseelestio_cassandra is a preconfigured elestio_service resource (template_id: 253) running Cassandra from the Docker image https://hub.docker.com/r/bitnami/cassandra bitnami/cassandra.
 ---
 
 # elestio_cassandra (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" /><br/> Open Source NoSQL Database<br/><br/>**elestio_cassandra** is a preconfigured elestio_service resource (`template_id: 253`) running **Cassandra** ([`docker_image: bitnami/cassandra`](https://hub.docker.com/r/bitnami/cassandra)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" /><br/> Open Source NoSQL Database<br/><br/>**elestio_cassandra** is a preconfigured elestio_service resource (`template_id: 253`) running **Cassandra** from the [Docker image](https://hub.docker.com/r/bitnami/cassandra) `bitnami/cassandra`.
 
 ## Example Usage
 

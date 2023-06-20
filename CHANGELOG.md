@@ -101,3 +101,8 @@ FEATURES:
 - **New Resource:** `elestio_airflow_worker`
 - **New Resource:** `elestio_espocrm`
 - **Deprecated Resource:** `elestio_onlyoffice`. Not anymore supported by Elestio.
+
+## v0.8.1 ()
+
+- Update the version of several packages to improve provider performance.
+- Fix a bug at service creation (after an API change)

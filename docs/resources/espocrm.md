@@ -3,12 +3,12 @@
 page_title: "elestio_espocrm Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.elestio_espocrm is a preconfigured elestioservice resource (template_id: 306) running EspoCRM ([`dockerimage: espocrm/espocrm`](https://hub.docker.com/r/espocrm/espocrm)).
+  EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.elestio_espocrm is a preconfigured elestio_service resource (template_id: 306) running EspoCRM from the Docker image https://hub.docker.com/r/espocrm/espocrm espocrm/espocrm.
 ---
 
 # elestio_espocrm (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/EspoCRM-Zuvd.png" width="100" /><br/> EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.<br/><br/>**elestio_espocrm** is a preconfigured elestio_service resource (`template_id: 306`) running **EspoCRM** ([`docker_image: espocrm/espocrm`](https://hub.docker.com/r/espocrm/espocrm)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/EspoCRM-Zuvd.png" width="100" /><br/> EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.<br/><br/>**elestio_espocrm** is a preconfigured elestio_service resource (`template_id: 306`) running **EspoCRM** from the [Docker image](https://hub.docker.com/r/espocrm/espocrm) `espocrm/espocrm`.
 
 ## Example Usage
 

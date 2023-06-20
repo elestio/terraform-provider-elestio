@@ -3,12 +3,12 @@
 page_title: "elestio_mailcow Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.elestio_mailcow is a preconfigured elestioservice resource (template_id: 122) running MailCow ([`dockerimage: mailcow`](https://hub.docker.com/r/mailcow)).
+  Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.elestio_mailcow is a preconfigured elestio_service resource (template_id: 122) running MailCow from the Docker image https://hub.docker.com/r/mailcow mailcow.
 ---
 
 # elestio_mailcow (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" /><br/> Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br/><br/>**elestio_mailcow** is a preconfigured elestio_service resource (`template_id: 122`) running **MailCow** ([`docker_image: mailcow`](https://hub.docker.com/r/mailcow)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" /><br/> Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br/><br/>**elestio_mailcow** is a preconfigured elestio_service resource (`template_id: 122`) running **MailCow** from the [Docker image](https://hub.docker.com/r/mailcow) `mailcow`.
 
 ## Example Usage
 

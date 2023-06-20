@@ -3,12 +3,12 @@
 page_title: "elestio_nagios Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  The Industry Standard In IT Infrastructure Monitoringelestio_nagios is a preconfigured elestioservice resource (template_id: 254) running Nagios ([`dockerimage: jasonrivers/nagios`](https://hub.docker.com/r/jasonrivers/nagios)).
+  The Industry Standard In IT Infrastructure Monitoringelestio_nagios is a preconfigured elestio_service resource (template_id: 254) running Nagios from the Docker image https://hub.docker.com/r/jasonrivers/nagios jasonrivers/nagios.
 ---
 
 # elestio_nagios (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" /><br/> The Industry Standard In IT Infrastructure Monitoring<br/><br/>**elestio_nagios** is a preconfigured elestio_service resource (`template_id: 254`) running **Nagios** ([`docker_image: jasonrivers/nagios`](https://hub.docker.com/r/jasonrivers/nagios)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" /><br/> The Industry Standard In IT Infrastructure Monitoring<br/><br/>**elestio_nagios** is a preconfigured elestio_service resource (`template_id: 254`) running **Nagios** from the [Docker image](https://hub.docker.com/r/jasonrivers/nagios) `jasonrivers/nagios`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_nexus3 Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  The free artifact repository with universal format support.elestio_nexus3 is a preconfigured elestioservice resource (template_id: 225) running Nexus3 ([`dockerimage: sonatype/nexus3`](https://hub.docker.com/r/sonatype/nexus3)).
+  The free artifact repository with universal format support.elestio_nexus3 is a preconfigured elestio_service resource (template_id: 225) running Nexus3 from the Docker image https://hub.docker.com/r/sonatype/nexus3 sonatype/nexus3.
 ---
 
 # elestio_nexus3 (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" /><br/> The free artifact repository with universal format support.<br/><br/>**elestio_nexus3** is a preconfigured elestio_service resource (`template_id: 225`) running **Nexus3** ([`docker_image: sonatype/nexus3`](https://hub.docker.com/r/sonatype/nexus3)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" /><br/> The free artifact repository with universal format support.<br/><br/>**elestio_nexus3** is a preconfigured elestio_service resource (`template_id: 225`) running **Nexus3** from the [Docker image](https://hub.docker.com/r/sonatype/nexus3) `sonatype/nexus3`.
 
 ## Example Usage
 

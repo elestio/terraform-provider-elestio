@@ -3,12 +3,12 @@
 page_title: "elestio_photoprism Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collectionelestio_photoprism is a preconfigured elestioservice resource (template_id: 190) running PhotoPrism ([`dockerimage: photoprism/photoprism`](https://hub.docker.com/r/photoprism/photoprism)).
+  PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collectionelestio_photoprism is a preconfigured elestio_service resource (template_id: 190) running PhotoPrism from the Docker image https://hub.docker.com/r/photoprism/photoprism photoprism/photoprism.
 ---
 
 # elestio_photoprism (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" /><br/> PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br/><br/>**elestio_photoprism** is a preconfigured elestio_service resource (`template_id: 190`) running **PhotoPrism** ([`docker_image: photoprism/photoprism`](https://hub.docker.com/r/photoprism/photoprism)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" /><br/> PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br/><br/>**elestio_photoprism** is a preconfigured elestio_service resource (`template_id: 190`) running **PhotoPrism** from the [Docker image](https://hub.docker.com/r/photoprism/photoprism) `photoprism/photoprism`.
 
 ## Example Usage
 

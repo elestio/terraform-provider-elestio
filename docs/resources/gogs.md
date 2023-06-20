@@ -3,12 +3,12 @@
 page_title: "elestio_gogs Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Gogs is a lightweight self-hosted Git server that can be run on just about anything. elestio_gogs is a preconfigured elestioservice resource (template_id: 154) running Gogs ([`dockerimage: gogs/gogs`](https://hub.docker.com/r/gogs/gogs)).
+  Gogs is a lightweight self-hosted Git server that can be run on just about anything. elestio_gogs is a preconfigured elestio_service resource (template_id: 154) running Gogs from the Docker image https://hub.docker.com/r/gogs/gogs gogs/gogs.
 ---
 
 # elestio_gogs (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" /><br/> Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br/><br/>**elestio_gogs** is a preconfigured elestio_service resource (`template_id: 154`) running **Gogs** ([`docker_image: gogs/gogs`](https://hub.docker.com/r/gogs/gogs)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" /><br/> Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br/><br/>**elestio_gogs** is a preconfigured elestio_service resource (`template_id: 154`) running **Gogs** from the [Docker image](https://hub.docker.com/r/gogs/gogs) `gogs/gogs`.
 
 ## Example Usage
 

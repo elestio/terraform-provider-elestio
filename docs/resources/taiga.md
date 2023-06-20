@@ -3,12 +3,12 @@
 page_title: "elestio_taiga Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Your Agile, Free and Open Source Project Management Toolelestio_taiga is a preconfigured elestioservice resource (template_id: 233) running Taiga ([`dockerimage: taigaio/taiga-back`](https://hub.docker.com/r/taigaio/taiga-back)).
+  Your Agile, Free and Open Source Project Management Toolelestio_taiga is a preconfigured elestio_service resource (template_id: 233) running Taiga from the Docker image https://hub.docker.com/r/taigaio/taiga-back taigaio/taiga-back.
 ---
 
 # elestio_taiga (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br/> Your Agile, Free and Open Source Project Management Tool<br/><br/>**elestio_taiga** is a preconfigured elestio_service resource (`template_id: 233`) running **Taiga** ([`docker_image: taigaio/taiga-back`](https://hub.docker.com/r/taigaio/taiga-back)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br/> Your Agile, Free and Open Source Project Management Tool<br/><br/>**elestio_taiga** is a preconfigured elestio_service resource (`template_id: 233`) running **Taiga** from the [Docker image](https://hub.docker.com/r/taigaio/taiga-back) `taigaio/taiga-back`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_changedetection Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Changedetection.io is an open source web page monitoring, notification and change detection.elestio_changedetection is a preconfigured elestioservice resource (template_id: 186) running ChangeDetection ([`dockerimage: dgtlmoon/changedetection.io`](https://hub.docker.com/r/dgtlmoon/changedetection.io)).
+  Changedetection.io is an open source web page monitoring, notification and change detection.elestio_changedetection is a preconfigured elestio_service resource (template_id: 186) running ChangeDetection from the Docker image https://hub.docker.com/r/dgtlmoon/changedetection.io dgtlmoon/changedetection.io.
 ---
 
 # elestio_changedetection (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" /><br/> Changedetection.io is an open source web page monitoring, notification and change detection.<br/><br/>**elestio_changedetection** is a preconfigured elestio_service resource (`template_id: 186`) running **ChangeDetection** ([`docker_image: dgtlmoon/changedetection.io`](https://hub.docker.com/r/dgtlmoon/changedetection.io)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" /><br/> Changedetection.io is an open source web page monitoring, notification and change detection.<br/><br/>**elestio_changedetection** is a preconfigured elestio_service resource (`template_id: 186`) running **ChangeDetection** from the [Docker image](https://hub.docker.com/r/dgtlmoon/changedetection.io) `dgtlmoon/changedetection.io`.
 
 ## Example Usage
 

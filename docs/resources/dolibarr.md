@@ -3,12 +3,12 @@
 page_title: "elestio_dolibarr Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Dolibarr ERP CRM is a modern software package to manage your company or foundation's activityelestio_dolibarr is a preconfigured elestioservice resource (template_id: 198) running Dolibarr ([`dockerimage: upshift/dolibarr`](https://hub.docker.com/r/upshift/dolibarr)).
+  Dolibarr ERP CRM is a modern software package to manage your company or foundation's activityelestio_dolibarr is a preconfigured elestio_service resource (template_id: 198) running Dolibarr from the Docker image https://hub.docker.com/r/upshift/dolibarr upshift/dolibarr.
 ---
 
 # elestio_dolibarr (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" /><br/> Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br/><br/>**elestio_dolibarr** is a preconfigured elestio_service resource (`template_id: 198`) running **Dolibarr** ([`docker_image: upshift/dolibarr`](https://hub.docker.com/r/upshift/dolibarr)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" /><br/> Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br/><br/>**elestio_dolibarr** is a preconfigured elestio_service resource (`template_id: 198`) running **Dolibarr** from the [Docker image](https://hub.docker.com/r/upshift/dolibarr) `upshift/dolibarr`.
 
 ## Example Usage
 

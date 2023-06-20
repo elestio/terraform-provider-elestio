@@ -3,12 +3,12 @@
 page_title: "elestio_healthchecks Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.elestio_healthchecks is a preconfigured elestioservice resource (template_id: 140) running Healthchecks ([`dockerimage: linuxserver/healthchecks`](https://hub.docker.com/r/linuxserver/healthchecks)).
+  Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.elestio_healthchecks is a preconfigured elestio_service resource (template_id: 140) running Healthchecks from the Docker image https://hub.docker.com/r/linuxserver/healthchecks linuxserver/healthchecks.
 ---
 
 # elestio_healthchecks (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" /><br/> Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.<br/><br/>**elestio_healthchecks** is a preconfigured elestio_service resource (`template_id: 140`) running **Healthchecks** ([`docker_image: linuxserver/healthchecks`](https://hub.docker.com/r/linuxserver/healthchecks)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" /><br/> Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.<br/><br/>**elestio_healthchecks** is a preconfigured elestio_service resource (`template_id: 140`) running **Healthchecks** from the [Docker image](https://hub.docker.com/r/linuxserver/healthchecks) `linuxserver/healthchecks`.
 
 ## Example Usage
 

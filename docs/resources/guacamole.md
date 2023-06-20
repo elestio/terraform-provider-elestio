@@ -3,12 +3,12 @@
 page_title: "elestio_guacamole Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Apache Guacamole is a clientless remote desktop gateway.elestio_guacamole is a preconfigured elestioservice resource (template_id: 142) running Guacamole ([`dockerimage: guacamole/guacamole`](https://hub.docker.com/r/guacamole/guacamole)).
+  Apache Guacamole is a clientless remote desktop gateway.elestio_guacamole is a preconfigured elestio_service resource (template_id: 142) running Guacamole from the Docker image https://hub.docker.com/r/guacamole/guacamole guacamole/guacamole.
 ---
 
 # elestio_guacamole (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" /><br/> Apache Guacamole is a clientless remote desktop gateway.<br/><br/>**elestio_guacamole** is a preconfigured elestio_service resource (`template_id: 142`) running **Guacamole** ([`docker_image: guacamole/guacamole`](https://hub.docker.com/r/guacamole/guacamole)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" /><br/> Apache Guacamole is a clientless remote desktop gateway.<br/><br/>**elestio_guacamole** is a preconfigured elestio_service resource (`template_id: 142`) running **Guacamole** from the [Docker image](https://hub.docker.com/r/guacamole/guacamole) `guacamole/guacamole`.
 
 ## Example Usage
 

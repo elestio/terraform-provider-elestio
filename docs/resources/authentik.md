@@ -3,12 +3,12 @@
 page_title: "elestio_authentik Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  authentik is a flexible, versatile open-source identity provider.elestio_authentik is a preconfigured elestioservice resource (template_id: 174) running Authentik ([`dockerimage: ghcr.io/goauthentik/server`](https://hub.docker.com/r/ghcr.io/goauthentik/server)).
+  authentik is a flexible, versatile open-source identity provider.elestio_authentik is a preconfigured elestio_service resource (template_id: 174) running Authentik from the Docker image https://hub.docker.com/r/ghcr.io/goauthentik/server ghcr.io/goauthentik/server.
 ---
 
 # elestio_authentik (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** ([`docker_image: ghcr.io/goauthentik/server`](https://hub.docker.com/r/ghcr.io/goauthentik/server)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authentik-logo-RG9c.png" width="100" /><br/> authentik is a flexible, versatile open-source identity provider.<br/><br/>**elestio_authentik** is a preconfigured elestio_service resource (`template_id: 174`) running **Authentik** from the [Docker image](https://hub.docker.com/r/ghcr.io/goauthentik/server) `ghcr.io/goauthentik/server`.
 
 ## Example Usage
 

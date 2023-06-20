@@ -3,12 +3,12 @@
 page_title: "elestio_zabbix Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Zabbix is an enterprise-class open source distributed monitoring solution.elestio_zabbix is a preconfigured elestioservice resource (template_id: 231) running Zabbix ([`dockerimage: zabbix/zabbix-server-mysql`](https://hub.docker.com/r/zabbix/zabbix-server-mysql)).
+  Zabbix is an enterprise-class open source distributed monitoring solution.elestio_zabbix is a preconfigured elestio_service resource (template_id: 231) running Zabbix from the Docker image https://hub.docker.com/r/zabbix/zabbix-server-mysql zabbix/zabbix-server-mysql.
 ---
 
 # elestio_zabbix (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" /><br/> Zabbix is an enterprise-class open source distributed monitoring solution.<br/><br/>**elestio_zabbix** is a preconfigured elestio_service resource (`template_id: 231`) running **Zabbix** ([`docker_image: zabbix/zabbix-server-mysql`](https://hub.docker.com/r/zabbix/zabbix-server-mysql)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" /><br/> Zabbix is an enterprise-class open source distributed monitoring solution.<br/><br/>**elestio_zabbix** is a preconfigured elestio_service resource (`template_id: 231`) running **Zabbix** from the [Docker image](https://hub.docker.com/r/zabbix/zabbix-server-mysql) `zabbix/zabbix-server-mysql`.
 
 ## Example Usage
 

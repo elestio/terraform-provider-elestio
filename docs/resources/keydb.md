@@ -3,12 +3,12 @@
 page_title: "elestio_keydb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  KeyDB is both your cache and database, for cloud-optimized solutions.elestio_keydb is a preconfigured elestioservice resource (template_id: 75) running KeyDB ([`dockerimage: eqalpha/keydb`](https://hub.docker.com/r/eqalpha/keydb)).
+  KeyDB is both your cache and database, for cloud-optimized solutions.elestio_keydb is a preconfigured elestio_service resource (template_id: 75) running KeyDB from the Docker image https://hub.docker.com/r/eqalpha/keydb eqalpha/keydb.
 ---
 
 # elestio_keydb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" /><br/> KeyDB is both your cache and database, for cloud-optimized solutions.<br/><br/>**elestio_keydb** is a preconfigured elestio_service resource (`template_id: 75`) running **KeyDB** ([`docker_image: eqalpha/keydb`](https://hub.docker.com/r/eqalpha/keydb)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" /><br/> KeyDB is both your cache and database, for cloud-optimized solutions.<br/><br/>**elestio_keydb** is a preconfigured elestio_service resource (`template_id: 75`) running **KeyDB** from the [Docker image](https://hub.docker.com/r/eqalpha/keydb) `eqalpha/keydb`.
 
 ## Example Usage
 

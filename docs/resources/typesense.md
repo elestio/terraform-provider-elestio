@@ -3,12 +3,12 @@
 page_title: "elestio_typesense Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.elestio_typesense is a preconfigured elestioservice resource (template_id: 127) running Typesense ([`dockerimage: typesense/typesense`](https://hub.docker.com/r/typesense/typesense)).
+  Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.elestio_typesense is a preconfigured elestio_service resource (template_id: 127) running Typesense from the Docker image https://hub.docker.com/r/typesense/typesense typesense/typesense.
 ---
 
 # elestio_typesense (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" /><br/> Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br/><br/>**elestio_typesense** is a preconfigured elestio_service resource (`template_id: 127`) running **Typesense** ([`docker_image: typesense/typesense`](https://hub.docker.com/r/typesense/typesense)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" /><br/> Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br/><br/>**elestio_typesense** is a preconfigured elestio_service resource (`template_id: 127`) running **Typesense** from the [Docker image](https://hub.docker.com/r/typesense/typesense) `typesense/typesense`.
 
 ## Example Usage
 

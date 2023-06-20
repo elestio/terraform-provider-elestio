@@ -3,12 +3,12 @@
 page_title: "elestio_mysql Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.elestio_mysql is a preconfigured elestioservice resource (template_id: 12) running MySQL ([`dockerimage: mysql`](https://hub.docker.com/r/mysql)).
+  MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.elestio_mysql is a preconfigured elestio_service resource (template_id: 12) running MySQL from the Docker image https://hub.docker.com/r/mysql mysql.
 ---
 
 # elestio_mysql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br/> MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br/><br/>**elestio_mysql** is a preconfigured elestio_service resource (`template_id: 12`) running **MySQL** ([`docker_image: mysql`](https://hub.docker.com/r/mysql)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br/> MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br/><br/>**elestio_mysql** is a preconfigured elestio_service resource (`template_id: 12`) running **MySQL** from the [Docker image](https://hub.docker.com/r/mysql) `mysql`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_mongodb Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  MongoDB is a document-oriented NoSQL database used for high-volume data storage. elestio_mongodb is a preconfigured elestioservice resource (template_id: 19) running MongoDB ([`dockerimage: mongo`](https://hub.docker.com/r/mongo)).
+  MongoDB is a document-oriented NoSQL database used for high-volume data storage. elestio_mongodb is a preconfigured elestio_service resource (template_id: 19) running MongoDB from the Docker image https://hub.docker.com/r/mongo mongo.
 ---
 
 # elestio_mongodb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" /><br/> MongoDB is a document-oriented NoSQL database used for high-volume data storage. <br/><br/>**elestio_mongodb** is a preconfigured elestio_service resource (`template_id: 19`) running **MongoDB** ([`docker_image: mongo`](https://hub.docker.com/r/mongo)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" /><br/> MongoDB is a document-oriented NoSQL database used for high-volume data storage. <br/><br/>**elestio_mongodb** is a preconfigured elestio_service resource (`template_id: 19`) running **MongoDB** from the [Docker image](https://hub.docker.com/r/mongo) `mongo`.
 
 ## Example Usage
 

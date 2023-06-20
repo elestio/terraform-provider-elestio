@@ -3,12 +3,12 @@
 page_title: "elestio_openproject Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  OpenProject is a web-based project management system for location-independent team collaboration.elestio_openproject is a preconfigured elestioservice resource (template_id: 118) running OpenProject ([`dockerimage: openproject/community`](https://hub.docker.com/r/openproject/community)).
+  OpenProject is a web-based project management system for location-independent team collaboration.elestio_openproject is a preconfigured elestio_service resource (template_id: 118) running OpenProject from the Docker image https://hub.docker.com/r/openproject/community openproject/community.
 ---
 
 # elestio_openproject (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" /><br/> OpenProject is a web-based project management system for location-independent team collaboration.<br/><br/>**elestio_openproject** is a preconfigured elestio_service resource (`template_id: 118`) running **OpenProject** ([`docker_image: openproject/community`](https://hub.docker.com/r/openproject/community)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" /><br/> OpenProject is a web-based project management system for location-independent team collaboration.<br/><br/>**elestio_openproject** is a preconfigured elestio_service resource (`template_id: 118`) running **OpenProject** from the [Docker image](https://hub.docker.com/r/openproject/community) `openproject/community`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_joomla Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Joomla is an award-winning content management system for building websites and powerful online applications.elestio_joomla is a preconfigured elestioservice resource (template_id: 97) running Joomla ([`dockerimage: bitnami/joomla`](https://hub.docker.com/r/bitnami/joomla)).
+  Joomla is an award-winning content management system for building websites and powerful online applications.elestio_joomla is a preconfigured elestio_service resource (template_id: 97) running Joomla from the Docker image https://hub.docker.com/r/bitnami/joomla bitnami/joomla.
 ---
 
 # elestio_joomla (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br/> Joomla is an award-winning content management system for building websites and powerful online applications.<br/><br/>**elestio_joomla** is a preconfigured elestio_service resource (`template_id: 97`) running **Joomla** ([`docker_image: bitnami/joomla`](https://hub.docker.com/r/bitnami/joomla)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br/> Joomla is an award-winning content management system for building websites and powerful online applications.<br/><br/>**elestio_joomla** is a preconfigured elestio_service resource (`template_id: 97`) running **Joomla** from the [Docker image](https://hub.docker.com/r/bitnami/joomla) `bitnami/joomla`.
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_nebula Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Nebula is a scalable overlay networking tool with a focus on performance, simplicity and securityelestio_nebula is a preconfigured elestioservice resource (template_id: 181) running Nebula ([`dockerimage: elestio/nebula-rest-api`](https://hub.docker.com/r/elestio/nebula-rest-api)).
+  Nebula is a scalable overlay networking tool with a focus on performance, simplicity and securityelestio_nebula is a preconfigured elestio_service resource (template_id: 181) running Nebula from the Docker image https://hub.docker.com/r/elestio/nebula-rest-api elestio/nebula-rest-api.
 ---
 
 # elestio_nebula (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" /><br/> Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br/><br/>**elestio_nebula** is a preconfigured elestio_service resource (`template_id: 181`) running **Nebula** ([`docker_image: elestio/nebula-rest-api`](https://hub.docker.com/r/elestio/nebula-rest-api)).
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" /><br/> Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br/><br/>**elestio_nebula** is a preconfigured elestio_service resource (`template_id: 181`) running **Nebula** from the [Docker image](https://hub.docker.com/r/elestio/nebula-rest-api) `elestio/nebula-rest-api`.
 
 ## Example Usage
 

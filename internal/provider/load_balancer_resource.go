@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"strings"
+	"time"
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -13,6 +14,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/retry"
 )
 
 var _ resource.Resource = &LoadBalancerResource{}
@@ -89,8 +91,38 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 	tflog.Info(ctx, "Creating Load Balancer")
 
 	loadBalancer, err := r.client.LoadBalancer.Create(elestio.CreateLoadBalancerRequest{
-		ProjectID: plan.ProjectId.ValueString(),
-		// TODO: add fields
+		ProjectID:    plan.ProjectId.ValueString(),
+		ProviderName: "hetzner",
+		Datacenter:   "fsn1",
+		ServerType:   "SMALL-1C-2G",
+		Config: elestio.CreateLoadBalancerRequestConfig{
+			HostHeader:             "$http_host",
+			IsAccessLogsEnabled:    true,
+			IsForceHTTPSEnabled:    true,
+			IPRateLimit:            100,
+			IsIPRateLimitEnabled:   false,
+			OutputCacheInSeconds:   0,
+			IsStickySessionEnabled: false,
+			IsProxyProtocolEnabled: false,
+			SSLDomains:             []string{},
+			ForwardRules: []elestio.LoadBalancerConfigForwardRule{
+				{
+					Protocol:       "HTTP",
+					TargetProtocol: "HTTP",
+					Port:           "80",
+					TargetPort:     "3000",
+				},
+				{
+					Protocol:       "HTTPS",
+					TargetProtocol: "HTTP",
+					Port:           "443",
+					TargetPort:     "3000",
+				},
+			},
+			OutputHeaders:         []elestio.LoadBalancerConfigOutputHeader{},
+			TargetServices:        []string{"elest.io"},
+			RemoveResponseHeaders: []string{},
+		},
 	})
 	if err != nil {
 		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to create load balancer, got error: %s", err))
@@ -175,6 +207,27 @@ func (r *LoadBalancerResource) Delete(ctx context.Context, req resource.DeleteRe
 	}
 
 	tflog.Trace(ctx, "Deleted Load Balancer: "+state.Id.ValueString())
+
+	confirmDeleteStateConf := &retry.StateChangeConf{
+		Pending: []string{"DELETING"},
+		Target:  []string{"DELETED"},
+		Refresh: func() (interface{}, string, error) {
+			loadBalancer, err := r.client.LoadBalancer.Get(state.ProjectId.ValueString(), state.Id.ValueString())
+			// We expect a 401 error when the load balancer is deleted
+			if err != nil {
+				return struct{}{}, "DELETED", nil
+			}
+			return loadBalancer, "DELETING", nil
+		},
+		Timeout:                   5 * time.Minute,
+		Delay:                     10 * time.Second,
+		MinTimeout:                5 * time.Second,
+		ContinuousTargetOccurence: 2,
+	}
+	_, err = confirmDeleteStateConf.WaitForStateContext(ctx)
+	if err != nil {
+		resp.Diagnostics.AddWarning("Client Error", fmt.Sprintf("Unable to confirm load balancer deletion, got error: %s", err))
+	}
 }
 
 func (r *LoadBalancerResource) ImportState(ctx context.Context, req resource.ImportStateRequest, resp *resource.ImportStateResponse) {

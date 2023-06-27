@@ -17,8 +17,43 @@ Load balancer resource
 
 ### Required
 
+- `config` (Attributes) Load balancer configuration (see [below for nested schema](#nestedatt--config))
+- `datacenter` (String) Datacenter name
 - `project_id` (String) Project identifier to which the load balancer will be attached
+- `provider_name` (String) Provider name
+- `server_type` (String) Server type
 
 ### Read-Only
 
 - `id` (String) Load balancer identifier
+
+<a id="nestedatt--config"></a>
+### Nested Schema for `config`
+
+Required:
+
+- `target_services` (Set of String) Target services
+
+Optional:
+
+- `forward_rules` (Attributes Set) Forward rules (see [below for nested schema](#nestedatt--config--forward_rules))
+- `host_header` (String) Host header
+- `ip_rate_limit` (Number) IP rate limit (requests per second)
+- `is_access_logs_enabled` (Boolean) Is access logs enabled
+- `is_force_https_enabled` (Boolean) Is force https enabled
+- `is_ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled
+- `is_proxy_protocol_enabled` (Boolean) Is proxy protocol enabled
+- `is_sticky_session_enabled` (Boolean) Is sticky session enabled
+- `output_cache_in_seconds` (Number) Output cache in seconds
+- `remove_response_headers` (Set of String) Remove response headers
+- `ssl_domains` (Set of String) SSL domains
+
+<a id="nestedatt--config--forward_rules"></a>
+### Nested Schema for `config.forward_rules`
+
+Required:
+
+- `port` (String) Port
+- `protocol` (String) Protocol
+- `target_port` (String) Target port
+- `target_protocol` (String) Target protocol

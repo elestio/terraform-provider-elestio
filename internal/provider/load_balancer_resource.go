@@ -45,55 +45,61 @@ type LoadBalancerResourceModel struct {
 	Config       ConfigModel  `tfsdk:"config"`
 }
 
-type (
-	ConfigModel struct {
-		HostHeader             types.String       `tfsdk:"host_header"`
-		IsAccessLogsEnabled    types.Bool         `tfsdk:"is_access_logs_enabled"`
-		IsForceHTTPSEnabled    types.Bool         `tfsdk:"is_force_https_enabled"`
-		IPRateLimit            types.Int64        `tfsdk:"ip_rate_limit"`
-		IsIPRateLimitEnabled   types.Bool         `tfsdk:"is_ip_rate_limit_enabled"`
-		OutputCacheInSeconds   types.Int64        `tfsdk:"output_cache_in_seconds"`
-		IsStickySessionEnabled types.Bool         `tfsdk:"is_sticky_session_enabled"`
-		IsProxyProtocolEnabled types.Bool         `tfsdk:"is_proxy_protocol_enabled"`
-		SSLDomains             types.Set          `tfsdk:"ssl_domains"`
-		ForwardRules           []ForwardRuleModel `tfsdk:"forward_rules"`
-		// OutputHeaders          []struct {
-		// 	Key   types.String `tfsdk:"key"`
-		// 	Value types.String `tfsdk:"value"`
-		// } `tfsdk:"output_headers"`
-		TargetServices        types.Set `tfsdk:"target_services"`
-		RemoveResponseHeaders types.Set `tfsdk:"remove_response_headers"`
-	}
+type ConfigModel struct {
+	HostHeader             types.String        `tfsdk:"host_header"`
+	IsAccessLogsEnabled    types.Bool          `tfsdk:"is_access_logs_enabled"`
+	IsForceHTTPSEnabled    types.Bool          `tfsdk:"is_force_https_enabled"`
+	IPRateLimit            types.Int64         `tfsdk:"ip_rate_limit"`
+	IsIPRateLimitEnabled   types.Bool          `tfsdk:"is_ip_rate_limit_enabled"`
+	OutputCacheInSeconds   types.Int64         `tfsdk:"output_cache_in_seconds"`
+	IsStickySessionEnabled types.Bool          `tfsdk:"is_sticky_session_enabled"`
+	IsProxyProtocolEnabled types.Bool          `tfsdk:"is_proxy_protocol_enabled"`
+	SSLDomains             types.Set           `tfsdk:"ssl_domains"`
+	ForwardRules           []ForwardRuleModel  `tfsdk:"forward_rules"`
+	OutputHeaders          []OutputHeaderModel `tfsdk:"output_headers"`
+	TargetServices         types.Set           `tfsdk:"target_services"`
+	RemoveResponseHeaders  types.Set           `tfsdk:"remove_response_headers"`
+}
 
-	ForwardRuleModel struct {
-		Port           types.String `tfsdk:"port"`
-		Protocol       types.String `tfsdk:"protocol"`
-		TargetPort     types.String `tfsdk:"target_port"`
-		TargetProtocol types.String `tfsdk:"target_protocol"`
-	}
-)
+var configAttrTypes = map[string]attr.Type{
+	"host_header":               types.StringType,
+	"is_access_logs_enabled":    types.BoolType,
+	"is_force_https_enabled":    types.BoolType,
+	"ip_rate_limit":             types.Int64Type,
+	"is_ip_rate_limit_enabled":  types.BoolType,
+	"output_cache_in_seconds":   types.Int64Type,
+	"is_sticky_session_enabled": types.BoolType,
+	"is_proxy_protocol_enabled": types.BoolType,
+	"ssl_domains":               types.SetType{ElemType: types.StringType},
+	"forward_rules":             types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
+	"output_headers":            types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
+	"target_services":           types.SetType{ElemType: types.StringType},
+	"remove_response_headers":   types.SetType{ElemType: types.StringType},
+}
 
-var (
-	configAttrTypes = map[string]attr.Type{
-		"host_header":               types.StringType,
-		"is_access_logs_enabled":    types.BoolType,
-		"is_force_https_enabled":    types.BoolType,
-		"ip_rate_limit":             types.Int64Type,
-		"is_ip_rate_limit_enabled":  types.BoolType,
-		"output_cache_in_seconds":   types.Int64Type,
-		"is_sticky_session_enabled": types.BoolType,
-		"is_proxy_protocol_enabled": types.BoolType,
-		"ssl_domains":               types.SetType{ElemType: types.StringType},
-		"forward_rules":             types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
-	}
+type ForwardRuleModel struct {
+	Port           types.String `tfsdk:"port"`
+	Protocol       types.String `tfsdk:"protocol"`
+	TargetPort     types.String `tfsdk:"target_port"`
+	TargetProtocol types.String `tfsdk:"target_protocol"`
+}
 
-	forwardRuleAttrTypes = map[string]attr.Type{
-		"port":            types.StringType,
-		"protocol":        types.StringType,
-		"target_port":     types.StringType,
-		"target_protocol": types.StringType,
-	}
-)
+var forwardRuleAttrTypes = map[string]attr.Type{
+	"port":            types.StringType,
+	"protocol":        types.StringType,
+	"target_port":     types.StringType,
+	"target_protocol": types.StringType,
+}
+
+type OutputHeaderModel struct {
+	Key   types.String `tfsdk:"key"`
+	Value types.String `tfsdk:"value"`
+}
+
+var outputHeaderAttrTypes = map[string]attr.Type{
+	"key":   types.StringType,
+	"value": types.StringType,
+}
 
 func (r *LoadBalancerResource) Metadata(ctx context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
 	resp.TypeName = req.ProviderTypeName + "_load_balancer"
@@ -122,6 +128,12 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 			"target_protocol": types.StringValue("HTTP"),
 		}),
 	})
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	defaultOutputHeaders, diags := types.SetValue(types.ObjectType{AttrTypes: outputHeaderAttrTypes}, []attr.Value{})
 	resp.Diagnostics.Append(diags...)
 	if resp.Diagnostics.HasError() {
 		return
@@ -261,23 +273,24 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 							},
 						},
 					},
-					// "output_headers": schema.ListNestedAttribute{
-					// 	MarkdownDescription: "Output headers",
-					// 	Optional:            true,
-					// 	Computed:            true,
-					// 	NestedObject: schema.NestedAttributeObject{
-					// 		Attributes: map[string]schema.Attribute{
-					// 			"key": schema.StringAttribute{
-					// 				MarkdownDescription: "Key",
-					// 				Required:            true,
-					// 			},
-					// 			"value": schema.StringAttribute{
-					// 				MarkdownDescription: "Value",
-					// 				Required:            true,
-					// 			},
-					// 		},
-					// 	},
-					// },
+					"output_headers": schema.SetNestedAttribute{
+						MarkdownDescription: "Output headers",
+						Optional:            true,
+						Computed:            true,
+						Default:             setdefault.StaticValue(defaultOutputHeaders),
+						NestedObject: schema.NestedAttributeObject{
+							Attributes: map[string]schema.Attribute{
+								"key": schema.StringAttribute{
+									MarkdownDescription: "Key",
+									Required:            true,
+								},
+								"value": schema.StringAttribute{
+									MarkdownDescription: "Value",
+									Required:            true,
+								},
+							},
+						},
+					},
 					"target_services": schema.SetAttribute{
 						MarkdownDescription: "Target services",
 						Required:            true,
@@ -330,16 +343,16 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 
 	var diags diag.Diagnostics
 
-	sslDomains := []string{}
-	diags = plan.Config.SSLDomains.ElementsAs(ctx, &sslDomains, false)
+	planSSLDomains := []string{}
+	diags = plan.Config.SSLDomains.ElementsAs(ctx, &planSSLDomains, false)
 	if diags.HasError() {
 		resp.Diagnostics.Append(diags...)
 		return
 	}
 
-	forwardRules := make([]elestio.LoadBalancerConfigForwardRule, len(plan.Config.ForwardRules))
+	planForwardRules := make([]elestio.LoadBalancerConfigForwardRule, len(plan.Config.ForwardRules))
 	for i, forwardRule := range plan.Config.ForwardRules {
-		forwardRules[i] = elestio.LoadBalancerConfigForwardRule{
+		planForwardRules[i] = elestio.LoadBalancerConfigForwardRule{
 			Protocol:       forwardRule.Protocol.ValueString(),
 			Port:           forwardRule.Port.ValueString(),
 			TargetProtocol: forwardRule.TargetProtocol.ValueString(),
@@ -347,15 +360,23 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 		}
 	}
 
-	targetServices := []string{}
-	diags = plan.Config.TargetServices.ElementsAs(ctx, &targetServices, false)
+	planOutputHeaders := make([]elestio.LoadBalancerConfigOutputHeader, len(plan.Config.OutputHeaders))
+	for i, outputHeader := range plan.Config.OutputHeaders {
+		planOutputHeaders[i] = elestio.LoadBalancerConfigOutputHeader{
+			Key:   outputHeader.Key.ValueString(),
+			Value: outputHeader.Value.ValueString(),
+		}
+	}
+
+	planTargetServices := []string{}
+	diags = plan.Config.TargetServices.ElementsAs(ctx, &planTargetServices, false)
 	if diags.HasError() {
 		resp.Diagnostics.Append(diags...)
 		return
 	}
 
-	removeResponseHeaders := []string{}
-	diags = plan.Config.RemoveResponseHeaders.ElementsAs(ctx, &removeResponseHeaders, false)
+	planRemoveResponseHeaders := []string{}
+	diags = plan.Config.RemoveResponseHeaders.ElementsAs(ctx, &planRemoveResponseHeaders, false)
 	if diags.HasError() {
 		resp.Diagnostics.Append(diags...)
 		return
@@ -375,11 +396,11 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 			OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
 			IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
 			IsProxyProtocolEnabled: plan.Config.IsProxyProtocolEnabled.ValueBool(),
-			SSLDomains:             sslDomains,
-			ForwardRules:           forwardRules,
-			OutputHeaders:          []elestio.LoadBalancerConfigOutputHeader{},
-			TargetServices:         targetServices,
-			RemoveResponseHeaders:  removeResponseHeaders,
+			SSLDomains:             planSSLDomains,
+			ForwardRules:           planForwardRules,
+			OutputHeaders:          planOutputHeaders,
+			TargetServices:         planTargetServices,
+			RemoveResponseHeaders:  planRemoveResponseHeaders,
 		},
 	})
 	if err != nil {
@@ -436,13 +457,61 @@ func (r *LoadBalancerResource) Update(ctx context.Context, req resource.UpdateRe
 
 	tflog.Info(ctx, "Updating Load Balancer: "+state.Id.ValueString())
 
-	if plan.ProjectId.ValueString() != state.ProjectId.ValueString() {
-		resp.Diagnostics.AddError("Error updating service", "Do not support project Id change")
+	var diags diag.Diagnostics
+
+	planSSLDomains := []string{}
+	diags = plan.Config.SSLDomains.ElementsAs(ctx, &planSSLDomains, false)
+	if diags.HasError() {
+		resp.Diagnostics.Append(diags...)
+		return
+	}
+
+	planForwardRules := make([]elestio.LoadBalancerConfigForwardRule, len(plan.Config.ForwardRules))
+	for i, forwardRule := range plan.Config.ForwardRules {
+		planForwardRules[i] = elestio.LoadBalancerConfigForwardRule{
+			Protocol:       forwardRule.Protocol.ValueString(),
+			Port:           forwardRule.Port.ValueString(),
+			TargetProtocol: forwardRule.TargetProtocol.ValueString(),
+			TargetPort:     forwardRule.TargetPort.ValueString(),
+		}
+	}
+
+	planOutputHeaders := make([]elestio.LoadBalancerConfigOutputHeader, len(plan.Config.OutputHeaders))
+	for i, outputHeader := range plan.Config.OutputHeaders {
+		planOutputHeaders[i] = elestio.LoadBalancerConfigOutputHeader{
+			Key:   outputHeader.Key.ValueString(),
+			Value: outputHeader.Value.ValueString(),
+		}
+	}
+
+	planTargetServices := []string{}
+	diags = plan.Config.TargetServices.ElementsAs(ctx, &planTargetServices, false)
+	if diags.HasError() {
+		resp.Diagnostics.Append(diags...)
+		return
+	}
+
+	planRemoveResponseHeaders := []string{}
+	diags = plan.Config.RemoveResponseHeaders.ElementsAs(ctx, &planRemoveResponseHeaders, false)
+	if diags.HasError() {
+		resp.Diagnostics.Append(diags...)
 		return
 	}
 
 	payload := elestio.UpdateLoadBalancerConfigRequest{
-		// TODO: add fields
+		HostHeader:             plan.Config.HostHeader.ValueString(),
+		IsAccessLogsEnabled:    plan.Config.IsAccessLogsEnabled.ValueBool(),
+		IsForceHTTPSEnabled:    plan.Config.IsForceHTTPSEnabled.ValueBool(),
+		IPRateLimit:            plan.Config.IPRateLimit.ValueInt64(),
+		IsIPRateLimitEnabled:   plan.Config.IsIPRateLimitEnabled.ValueBool(),
+		OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
+		IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
+		IsProxyProtocolEnabled: plan.Config.IsProxyProtocolEnabled.ValueBool(),
+		SSLDomains:             planSSLDomains,
+		ForwardRules:           planForwardRules,
+		OutputHeaders:          planOutputHeaders,
+		TargetServices:         planTargetServices,
+		RemoveResponseHeaders:  planRemoveResponseHeaders,
 	}
 	loadBalancer, err := r.client.LoadBalancer.UpdateConfig(state.ProjectId.ValueString(), state.Id.ValueString(), payload)
 	if err != nil {
@@ -540,16 +609,25 @@ func transformClientLoadBalancerToResourceModel(ctx context.Context, loadBalance
 		return loadBalancerModel, diags
 	}
 
-	var forwardRules []ForwardRuleModel
-	for _, r := range loadBalancerClient.Config.ForwardRules {
-		var rule ForwardRuleModel
-		rule.Port = types.StringValue(r.Port)
-		rule.Protocol = types.StringValue(r.Protocol)
-		rule.TargetPort = types.StringValue(r.TargetPort)
-		rule.TargetProtocol = types.StringValue(r.TargetProtocol)
-		forwardRules = append(forwardRules, rule)
+	forwardRules := make([]ForwardRuleModel, len(loadBalancerClient.Config.ForwardRules))
+	for i, r := range loadBalancerClient.Config.ForwardRules {
+		forwardRules[i] = ForwardRuleModel{
+			Port:           types.StringValue(r.Port),
+			Protocol:       types.StringValue(r.Protocol),
+			TargetPort:     types.StringValue(r.TargetPort),
+			TargetProtocol: types.StringValue(r.TargetProtocol),
+		}
 	}
 	loadBalancerModel.Config.ForwardRules = forwardRules
+
+	outputHeaders := make([]OutputHeaderModel, len(loadBalancerClient.Config.OutputHeaders))
+	for i, h := range loadBalancerClient.Config.OutputHeaders {
+		outputHeaders[i] = OutputHeaderModel{
+			Key:   types.StringValue(h.Key),
+			Value: types.StringValue(h.Value),
+		}
+	}
+	loadBalancerModel.Config.OutputHeaders = outputHeaders
 
 	loadBalancerModel.Config.TargetServices, diags = types.SetValueFrom(ctx, types.StringType, loadBalancerClient.Config.TargetServices)
 	if diags.HasError() {
@@ -557,90 +635,6 @@ func transformClientLoadBalancerToResourceModel(ctx context.Context, loadBalance
 	}
 
 	loadBalancerModel.Config.RemoveResponseHeaders, diags = types.SetValueFrom(ctx, types.StringType, loadBalancerClient.Config.RemoveResponseHeaders)
-	if diags.HasError() {
-		return loadBalancerModel, diags
-	}
+
 	return loadBalancerModel, diags
 }
-
-// func (m LoadBalancerResourceModel) ToClientType(ctx context.Context) (elestio.LoadBalancer, diag.Diagnostics) {
-// 	var diags diag.Diagnostics
-// 	var loadBalancerClient elestio.LoadBalancer
-
-// 	loadBalancerClient.ID = m.Id.ValueString()
-// 	loadBalancerClient.ProjectID = m.ProjectId.ValueString()
-// 	loadBalancerClient.ProviderName = m.ProviderName.ValueString()
-// 	loadBalancerClient.Datacenter = m.Datacenter.ValueString()
-// 	loadBalancerClient.ServerType = m.ServerType.ValueString()
-// 	loadBalancerClient.Config.HostHeader = m.Config.HostHeader.ValueString()
-// 	loadBalancerClient.Config.IsAccessLogsEnabled = m.Config.IsAccessLogsEnabled.ValueBool()
-// 	loadBalancerClient.Config.IsForceHTTPSEnabled = m.Config.IsForceHTTPSEnabled.ValueBool()
-// 	loadBalancerClient.Config.IPRateLimit = m.Config.IPRateLimit.ValueInt64()
-// 	loadBalancerClient.Config.IsIPRateLimitEnabled = m.Config.IsIPRateLimitEnabled.ValueBool()
-// 	loadBalancerClient.Config.OutputCacheInSeconds = m.Config.OutputCacheInSeconds.ValueInt64()
-// 	loadBalancerClient.Config.IsStickySessionEnabled = m.Config.IsStickySessionEnabled.ValueBool()
-// 	loadBalancerClient.Config.IsProxyProtocolEnabled = m.Config.IsProxyProtocolEnabled.ValueBool()
-// 	// config.SSLDomains = utils.SetValueOrNull(ctx, types.StringType, l.Config.SSLDomains, &diags)
-// 	var forwardRules []elestio.LoadBalancerConfigForwardRule
-// 	for _, rule := range m.Config.ForwardRules {
-// 		var forwardRule elestio.LoadBalancerConfigForwardRule
-// 		forwardRule.Port = rule.Port.ValueString()
-// 		forwardRule.Protocol = rule.Protocol.ValueString()
-// 		forwardRule.TargetPort = rule.TargetPort.ValueString()
-// 		forwardRule.TargetProtocol = rule.TargetProtocol.ValueString()
-// 		forwardRules = append(forwardRules, forwardRule)
-// 	}
-// 	loadBalancerClient.Config.ForwardRules = forwardRules
-
-// 	return loadBalancerClient, diags
-// }
-
-// func (m ConfigModel) ToClientTypeConfig(ctx context.Context) (elestio.LoadBalancerConfig, diag.Diagnostics) {
-// 	var diags diag.Diagnostics
-// 	var result elestio.LoadBalancerConfig
-
-// 	result.HostHeader = m.HostHeader.ValueString()
-// 	result.IsAccessLogsEnabled = m.IsAccessLogsEnabled.ValueBool()
-// 	result.IsForceHTTPSEnabled = m.IsForceHTTPSEnabled.ValueBool()
-// 	result.IPRateLimit = m.IPRateLimit.ValueInt64()
-// 	result.IsIPRateLimitEnabled = m.IsIPRateLimitEnabled.ValueBool()
-// 	result.OutputCacheInSeconds = m.OutputCacheInSeconds.ValueInt64()
-// 	result.IsStickySessionEnabled = m.IsStickySessionEnabled.ValueBool()
-// 	result.IsProxyProtocolEnabled = m.IsProxyProtocolEnabled.ValueBool()
-
-// 	var forwardRulesObjects []types.Object
-// 	diags.Append(m.ForwardRules.ElementsAs(ctx, &forwardRulesObjects, false)...)
-// 	if diags.HasError() {
-// 		return result, diags
-// 	}
-
-// 	for _, forwardRuleObject := range forwardRulesObjects {
-// 		var forwardRuleModel ForwardRuleModel
-// 		diags.Append(forwardRuleObject.As(ctx, &forwardRuleModel, basetypes.ObjectAsOptions{})...)
-// 		if diags.HasError() {
-// 			return result, diags
-// 		}
-
-// 		forwardRule, forwardRuleDiags := forwardRuleModel.ToClientTypeForwardRule(ctx)
-// 		diags.Append(forwardRuleDiags...)
-// 		if diags.HasError() {
-// 			return result, diags
-// 		}
-
-// 		result.ForwardRules = append(result.ForwardRules, forwardRule)
-// 	}
-
-// 	return result, diags
-// }
-
-// func (m ForwardRuleModel) ToClientTypeForwardRule(ctx context.Context) (elestio.LoadBalancerConfigForwardRule, diag.Diagnostics) {
-// 	var diags diag.Diagnostics
-// 	var result elestio.LoadBalancerConfigForwardRule
-
-// 	result.Port = m.Port.ValueString()
-// 	result.Protocol = m.Protocol.ValueString()
-// 	result.TargetPort = m.TargetPort.ValueString()
-// 	result.TargetProtocol = m.TargetProtocol.ValueString()
-
-// 	return result, diags
-// }

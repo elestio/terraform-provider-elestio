@@ -45,6 +45,7 @@ Optional:
 - `is_proxy_protocol_enabled` (Boolean) Is proxy protocol enabled
 - `is_sticky_session_enabled` (Boolean) Is sticky session enabled
 - `output_cache_in_seconds` (Number) Output cache in seconds
+- `output_headers` (Attributes Set) Output headers (see [below for nested schema](#nestedatt--config--output_headers))
 - `remove_response_headers` (Set of String) Remove response headers
 - `ssl_domains` (Set of String) SSL domains
 
@@ -57,3 +58,12 @@ Required:
 - `protocol` (String) Protocol
 - `target_port` (String) Target port
 - `target_protocol` (String) Target protocol
+
+
+<a id="nestedatt--config--output_headers"></a>
+### Nested Schema for `config.output_headers`
+
+Required:
+
+- `key` (String) Key
+- `value` (String) Value

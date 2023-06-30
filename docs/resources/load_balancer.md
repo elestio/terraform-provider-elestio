@@ -25,7 +25,20 @@ Load balancer resource
 
 ### Read-Only
 
+- `city` (String) City
+- `cname` (String) CNAME
+- `cores` (Number) Cores
+- `country` (String) Country
+- `created_at` (String) Created at
+- `created_by` (String) Created by
+- `deployment_status` (String) Deployment status
+- `global_ip` (String) Global IP
 - `id` (String) Load balancer identifier
+- `ipv4` (String) IPv4
+- `ipv6` (String) IPv6
+- `price_per_hour` (String) Price per hour
+- `ram_size_gb` (String) RAM size in GB
+- `storage_size_gb` (Number) Storage size in GB
 
 <a id="nestedatt--config"></a>
 ### Nested Schema for `config`

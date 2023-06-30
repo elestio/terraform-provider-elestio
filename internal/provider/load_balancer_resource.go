@@ -59,35 +59,35 @@ type LoadBalancerResourceModel struct {
 }
 
 type ConfigModel struct {
-	HostHeader             types.String        `tfsdk:"host_header"`
-	IsAccessLogsEnabled    types.Bool          `tfsdk:"is_access_logs_enabled"`
-	IsForceHTTPSEnabled    types.Bool          `tfsdk:"is_force_https_enabled"`
-	IPRateLimitPerSecond   types.Int64         `tfsdk:"ip_rate_limit_per_second"`
-	IsIPRateLimitEnabled   types.Bool          `tfsdk:"is_ip_rate_limit_enabled"`
-	OutputCacheInSeconds   types.Int64         `tfsdk:"output_cache_in_seconds"`
-	IsStickySessionEnabled types.Bool          `tfsdk:"is_sticky_session_enabled"`
-	IsProxyProtocolEnabled types.Bool          `tfsdk:"is_proxy_protocol_enabled"`
-	SSLDomains             types.Set           `tfsdk:"ssl_domains"`
-	ForwardRules           []ForwardRuleModel  `tfsdk:"forward_rules"`
-	OutputHeaders          []OutputHeaderModel `tfsdk:"output_headers"`
-	TargetServices         types.Set           `tfsdk:"target_services"`
-	RemoveResponseHeaders  types.Set           `tfsdk:"remove_response_headers"`
+	HostHeader            types.String        `tfsdk:"host_header"`
+	AccessLogsEnabled     types.Bool          `tfsdk:"access_logs_enabled"`
+	ForceHTTPSEnabled     types.Bool          `tfsdk:"force_https_enabled"`
+	IPRateLimitPerSecond  types.Int64         `tfsdk:"ip_rate_limit_per_second"`
+	IPRateLimitEnabled    types.Bool          `tfsdk:"ip_rate_limit_enabled"`
+	OutputCacheInSeconds  types.Int64         `tfsdk:"output_cache_in_seconds"`
+	StickySessionEnabled  types.Bool          `tfsdk:"sticky_session_enabled"`
+	ProxyProtocolEnabled  types.Bool          `tfsdk:"proxy_protocol_enabled"`
+	SSLDomains            types.Set           `tfsdk:"ssl_domains"`
+	ForwardRules          []ForwardRuleModel  `tfsdk:"forward_rules"`
+	OutputHeaders         []OutputHeaderModel `tfsdk:"output_headers"`
+	TargetServices        types.Set           `tfsdk:"target_services"`
+	RemoveResponseHeaders types.Set           `tfsdk:"remove_response_headers"`
 }
 
 var configAttrTypes = map[string]attr.Type{
-	"host_header":               types.StringType,
-	"is_access_logs_enabled":    types.BoolType,
-	"is_force_https_enabled":    types.BoolType,
-	"ip_rate_limit_per_second":  types.Int64Type,
-	"is_ip_rate_limit_enabled":  types.BoolType,
-	"output_cache_in_seconds":   types.Int64Type,
-	"is_sticky_session_enabled": types.BoolType,
-	"is_proxy_protocol_enabled": types.BoolType,
-	"ssl_domains":               types.SetType{ElemType: types.StringType},
-	"forward_rules":             types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
-	"output_headers":            types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
-	"target_services":           types.SetType{ElemType: types.StringType},
-	"remove_response_headers":   types.SetType{ElemType: types.StringType},
+	"host_header":              types.StringType,
+	"access_logs_enabled":      types.BoolType,
+	"force_https_enabled":      types.BoolType,
+	"ip_rate_limit_per_second": types.Int64Type,
+	"ip_rate_limit_enabled":    types.BoolType,
+	"output_cache_in_seconds":  types.Int64Type,
+	"sticky_session_enabled":   types.BoolType,
+	"proxy_protocol_enabled":   types.BoolType,
+	"ssl_domains":              types.SetType{ElemType: types.StringType},
+	"forward_rules":            types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
+	"output_headers":           types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
+	"target_services":          types.SetType{ElemType: types.StringType},
+	"remove_response_headers":  types.SetType{ElemType: types.StringType},
 }
 
 type ForwardRuleModel struct {
@@ -214,14 +214,14 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						Computed:            true,
 						Default:             stringdefault.StaticString("$http_host"),
 					},
-					"is_access_logs_enabled": schema.BoolAttribute{
+					"access_logs_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is access logs enabled." +
 							"</br>Default value: `true`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(true),
 					},
-					"is_force_https_enabled": schema.BoolAttribute{
+					"force_https_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is force https enabled." +
 							"</br>Default value: `true`",
 						Optional: true,
@@ -235,7 +235,7 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						Computed: true,
 						Default:  int64default.StaticInt64(100),
 					},
-					"is_ip_rate_limit_enabled": schema.BoolAttribute{
+					"ip_rate_limit_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is IP rate limit enabled." +
 							"</br>Default value: `false`",
 						Optional: true,
@@ -249,14 +249,14 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						Computed: true,
 						Default:  int64default.StaticInt64(0),
 					},
-					"is_sticky_session_enabled": schema.BoolAttribute{
+					"sticky_session_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is sticky session enabled." +
 							"</br>Default value: `false`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(false),
 					},
-					"is_proxy_protocol_enabled": schema.BoolAttribute{
+					"proxy_protocol_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is proxy protocol enabled." +
 							"</br>Default value: `false`",
 						Optional: true,
@@ -355,22 +355,37 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 			"ipv4": schema.StringAttribute{
 				MarkdownDescription: "IPv4",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"ipv6": schema.StringAttribute{
 				MarkdownDescription: "IPv6",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"cname": schema.StringAttribute{
 				MarkdownDescription: "CNAME",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"country": schema.StringAttribute{
 				MarkdownDescription: "Country",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"city": schema.StringAttribute{
 				MarkdownDescription: "City",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"global_ip": schema.StringAttribute{
 				MarkdownDescription: "Global IP",
@@ -473,13 +488,13 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 		ServerType:   plan.ServerType.ValueString(),
 		Config: elestio.CreateLoadBalancerRequestConfig{
 			HostHeader:             plan.Config.HostHeader.ValueString(),
-			IsAccessLogsEnabled:    plan.Config.IsAccessLogsEnabled.ValueBool(),
-			IsForceHTTPSEnabled:    plan.Config.IsForceHTTPSEnabled.ValueBool(),
+			IsAccessLogsEnabled:    plan.Config.AccessLogsEnabled.ValueBool(),
+			IsForceHTTPSEnabled:    plan.Config.ForceHTTPSEnabled.ValueBool(),
 			IPRateLimit:            plan.Config.IPRateLimitPerSecond.ValueInt64(),
-			IsIPRateLimitEnabled:   plan.Config.IsIPRateLimitEnabled.ValueBool(),
+			IsIPRateLimitEnabled:   plan.Config.IPRateLimitEnabled.ValueBool(),
 			OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
-			IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
-			IsProxyProtocolEnabled: plan.Config.IsProxyProtocolEnabled.ValueBool(),
+			IsStickySessionEnabled: plan.Config.StickySessionEnabled.ValueBool(),
+			IsProxyProtocolEnabled: plan.Config.ProxyProtocolEnabled.ValueBool(),
 			SSLDomains:             planSSLDomains,
 			ForwardRules:           planForwardRules,
 			OutputHeaders:          planOutputHeaders,
@@ -612,13 +627,13 @@ func (r *LoadBalancerResource) Update(ctx context.Context, req resource.UpdateRe
 
 	payload := elestio.UpdateLoadBalancerConfigRequest{
 		HostHeader:             plan.Config.HostHeader.ValueString(),
-		IsAccessLogsEnabled:    plan.Config.IsAccessLogsEnabled.ValueBool(),
-		IsForceHTTPSEnabled:    plan.Config.IsForceHTTPSEnabled.ValueBool(),
+		IsAccessLogsEnabled:    plan.Config.AccessLogsEnabled.ValueBool(),
+		IsForceHTTPSEnabled:    plan.Config.ForceHTTPSEnabled.ValueBool(),
 		IPRateLimit:            plan.Config.IPRateLimitPerSecond.ValueInt64(),
-		IsIPRateLimitEnabled:   plan.Config.IsIPRateLimitEnabled.ValueBool(),
+		IsIPRateLimitEnabled:   plan.Config.IPRateLimitEnabled.ValueBool(),
 		OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
-		IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
-		IsProxyProtocolEnabled: plan.Config.IsProxyProtocolEnabled.ValueBool(),
+		IsStickySessionEnabled: plan.Config.StickySessionEnabled.ValueBool(),
+		IsProxyProtocolEnabled: plan.Config.ProxyProtocolEnabled.ValueBool(),
 		SSLDomains:             planSSLDomains,
 		ForwardRules:           planForwardRules,
 		OutputHeaders:          planOutputHeaders,
@@ -707,13 +722,13 @@ func transformClientLoadBalancerToResourceModel(ctx context.Context, loadBalance
 	loadBalancerModel.Datacenter = types.StringValue(loadBalancerClient.Datacenter)
 	loadBalancerModel.ServerType = types.StringValue(loadBalancerClient.ServerType)
 	loadBalancerModel.Config.HostHeader = types.StringValue(loadBalancerClient.Config.HostHeader)
-	loadBalancerModel.Config.IsAccessLogsEnabled = types.BoolValue(loadBalancerClient.Config.IsAccessLogsEnabled)
-	loadBalancerModel.Config.IsForceHTTPSEnabled = types.BoolValue(loadBalancerClient.Config.IsForceHTTPSEnabled)
+	loadBalancerModel.Config.AccessLogsEnabled = types.BoolValue(loadBalancerClient.Config.IsAccessLogsEnabled)
+	loadBalancerModel.Config.ForceHTTPSEnabled = types.BoolValue(loadBalancerClient.Config.IsForceHTTPSEnabled)
 	loadBalancerModel.Config.IPRateLimitPerSecond = types.Int64Value(loadBalancerClient.Config.IPRateLimit)
-	loadBalancerModel.Config.IsIPRateLimitEnabled = types.BoolValue(loadBalancerClient.Config.IsIPRateLimitEnabled)
+	loadBalancerModel.Config.IPRateLimitEnabled = types.BoolValue(loadBalancerClient.Config.IsIPRateLimitEnabled)
 	loadBalancerModel.Config.OutputCacheInSeconds = types.Int64Value(loadBalancerClient.Config.OutputCacheInSeconds)
-	loadBalancerModel.Config.IsStickySessionEnabled = types.BoolValue(loadBalancerClient.Config.IsStickySessionEnabled)
-	loadBalancerModel.Config.IsProxyProtocolEnabled = types.BoolValue(loadBalancerClient.Config.IsProxyProtocolEnabled)
+	loadBalancerModel.Config.StickySessionEnabled = types.BoolValue(loadBalancerClient.Config.IsStickySessionEnabled)
+	loadBalancerModel.Config.ProxyProtocolEnabled = types.BoolValue(loadBalancerClient.Config.IsProxyProtocolEnabled)
 	loadBalancerModel.Config.SSLDomains, diags = types.SetValueFrom(ctx, types.StringType, loadBalancerClient.Config.SSLDomains)
 	if diags.HasError() {
 		return loadBalancerModel, diags

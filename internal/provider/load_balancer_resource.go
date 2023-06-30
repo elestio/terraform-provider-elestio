@@ -62,7 +62,7 @@ type ConfigModel struct {
 	HostHeader             types.String        `tfsdk:"host_header"`
 	IsAccessLogsEnabled    types.Bool          `tfsdk:"is_access_logs_enabled"`
 	IsForceHTTPSEnabled    types.Bool          `tfsdk:"is_force_https_enabled"`
-	IPRateLimit            types.Int64         `tfsdk:"ip_rate_limit"`
+	IPRateLimitPerSecond   types.Int64         `tfsdk:"ip_rate_limit_per_second"`
 	IsIPRateLimitEnabled   types.Bool          `tfsdk:"is_ip_rate_limit_enabled"`
 	OutputCacheInSeconds   types.Int64         `tfsdk:"output_cache_in_seconds"`
 	IsStickySessionEnabled types.Bool          `tfsdk:"is_sticky_session_enabled"`
@@ -78,7 +78,7 @@ var configAttrTypes = map[string]attr.Type{
 	"host_header":               types.StringType,
 	"is_access_logs_enabled":    types.BoolType,
 	"is_force_https_enabled":    types.BoolType,
-	"ip_rate_limit":             types.Int64Type,
+	"ip_rate_limit_per_second":  types.Int64Type,
 	"is_ip_rate_limit_enabled":  types.BoolType,
 	"output_cache_in_seconds":   types.Int64Type,
 	"is_sticky_session_enabled": types.BoolType,
@@ -178,24 +178,27 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 				},
 			},
 			"provider_name": schema.StringAttribute{
-				MarkdownDescription: "Provider name",
-				Required:            true,
+				MarkdownDescription: "Provider name." +
+					" Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"datacenter": schema.StringAttribute{
-				MarkdownDescription: "Datacenter name",
-				Required:            true,
+				MarkdownDescription: "Datacenter name." +
+					" Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
 			"server_type": schema.StringAttribute{
-				MarkdownDescription: "Server type",
-				Required:            true,
+				MarkdownDescription: "Server type." +
+					" Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
+				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
@@ -212,46 +215,53 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						Default:             stringdefault.StaticString("$http_host"),
 					},
 					"is_access_logs_enabled": schema.BoolAttribute{
-						MarkdownDescription: "Is access logs enabled",
-						Optional:            true,
-						Computed:            true,
-						Default:             booldefault.StaticBool(true),
+						MarkdownDescription: "Is access logs enabled." +
+							"</br>Default value: `true`",
+						Optional: true,
+						Computed: true,
+						Default:  booldefault.StaticBool(true),
 					},
 					"is_force_https_enabled": schema.BoolAttribute{
-						MarkdownDescription: "Is force https enabled",
-						Optional:            true,
-						Computed:            true,
-						Default:             booldefault.StaticBool(true),
+						MarkdownDescription: "Is force https enabled." +
+							"</br>Default value: `true`",
+						Optional: true,
+						Computed: true,
+						Default:  booldefault.StaticBool(true),
 					},
-					"ip_rate_limit": schema.Int64Attribute{
-						MarkdownDescription: "IP rate limit (requests per second)",
-						Optional:            true,
-						Computed:            true,
-						Default:             int64default.StaticInt64(100),
+					"ip_rate_limit_per_second": schema.Int64Attribute{
+						MarkdownDescription: "Indicate the maximum number of requests allowed per second per IP address." +
+							"</br>Default value: `100`",
+						Optional: true,
+						Computed: true,
+						Default:  int64default.StaticInt64(100),
 					},
 					"is_ip_rate_limit_enabled": schema.BoolAttribute{
-						MarkdownDescription: "Is IP rate limit enabled",
-						Optional:            true,
-						Computed:            true,
-						Default:             booldefault.StaticBool(false),
+						MarkdownDescription: "Is IP rate limit enabled." +
+							"</br>Default value: `false`",
+						Optional: true,
+						Computed: true,
+						Default:  booldefault.StaticBool(false),
 					},
 					"output_cache_in_seconds": schema.Int64Attribute{
-						MarkdownDescription: "Output cache in seconds",
-						Optional:            true,
-						Computed:            true,
-						Default:             int64default.StaticInt64(0),
+						MarkdownDescription: "Output cache in seconds." +
+							"</br>Default value: `0`",
+						Optional: true,
+						Computed: true,
+						Default:  int64default.StaticInt64(0),
 					},
 					"is_sticky_session_enabled": schema.BoolAttribute{
-						MarkdownDescription: "Is sticky session enabled",
-						Optional:            true,
-						Computed:            true,
-						Default:             booldefault.StaticBool(false),
+						MarkdownDescription: "Is sticky session enabled." +
+							"</br>Default value: `false`",
+						Optional: true,
+						Computed: true,
+						Default:  booldefault.StaticBool(false),
 					},
 					"is_proxy_protocol_enabled": schema.BoolAttribute{
-						MarkdownDescription: "Is proxy protocol enabled",
-						Optional:            true,
-						Computed:            true,
-						Default:             booldefault.StaticBool(false),
+						MarkdownDescription: "Is proxy protocol enabled." +
+							"</br>Default value: `false`",
+						Optional: true,
+						Computed: true,
+						Default:  booldefault.StaticBool(false),
 					},
 					"ssl_domains": schema.SetAttribute{
 						MarkdownDescription: "SSL domains",
@@ -261,10 +271,11 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						ElementType:         types.StringType,
 					},
 					"forward_rules": schema.SetNestedAttribute{
-						MarkdownDescription: "Forward rules",
-						Optional:            true,
-						Computed:            true,
-						Default:             setdefault.StaticValue(defaultForwardRules),
+						MarkdownDescription: "Forward rules." +
+							"</br>Default value: `[{protocol = \"http\", port = \"80\", target_protocol = \"http\", target_port = \"80\"}, {protocol = \"https\", port = \"443\", target_protocol = \"http\", target_port = \"80\"}]`",
+						Optional: true,
+						Computed: true,
+						Default:  setdefault.StaticValue(defaultForwardRules),
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"protocol": schema.StringAttribute{
@@ -305,9 +316,11 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						},
 					},
 					"target_services": schema.SetAttribute{
-						MarkdownDescription: "Target services",
-						Required:            true,
-						ElementType:         types.StringType,
+						MarkdownDescription: " The services to which the load balancer will forward the requests." +
+							" You can provide services IDs but also IPs and CNAME records." +
+							"</br>Example: `[\"xxxx-xxxx-xxxx-xxxx\", \"192.168.xxxx\", \"myawesomeapp.com\"]`",
+						Required:    true,
+						ElementType: types.StringType,
 						Validators: []validator.Set{
 							setvalidator.SizeAtLeast(1),
 						},
@@ -462,7 +475,7 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 			HostHeader:             plan.Config.HostHeader.ValueString(),
 			IsAccessLogsEnabled:    plan.Config.IsAccessLogsEnabled.ValueBool(),
 			IsForceHTTPSEnabled:    plan.Config.IsForceHTTPSEnabled.ValueBool(),
-			IPRateLimit:            plan.Config.IPRateLimit.ValueInt64(),
+			IPRateLimit:            plan.Config.IPRateLimitPerSecond.ValueInt64(),
 			IsIPRateLimitEnabled:   plan.Config.IsIPRateLimitEnabled.ValueBool(),
 			OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
 			IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
@@ -601,7 +614,7 @@ func (r *LoadBalancerResource) Update(ctx context.Context, req resource.UpdateRe
 		HostHeader:             plan.Config.HostHeader.ValueString(),
 		IsAccessLogsEnabled:    plan.Config.IsAccessLogsEnabled.ValueBool(),
 		IsForceHTTPSEnabled:    plan.Config.IsForceHTTPSEnabled.ValueBool(),
-		IPRateLimit:            plan.Config.IPRateLimit.ValueInt64(),
+		IPRateLimit:            plan.Config.IPRateLimitPerSecond.ValueInt64(),
 		IsIPRateLimitEnabled:   plan.Config.IsIPRateLimitEnabled.ValueBool(),
 		OutputCacheInSeconds:   plan.Config.OutputCacheInSeconds.ValueInt64(),
 		IsStickySessionEnabled: plan.Config.IsStickySessionEnabled.ValueBool(),
@@ -696,7 +709,7 @@ func transformClientLoadBalancerToResourceModel(ctx context.Context, loadBalance
 	loadBalancerModel.Config.HostHeader = types.StringValue(loadBalancerClient.Config.HostHeader)
 	loadBalancerModel.Config.IsAccessLogsEnabled = types.BoolValue(loadBalancerClient.Config.IsAccessLogsEnabled)
 	loadBalancerModel.Config.IsForceHTTPSEnabled = types.BoolValue(loadBalancerClient.Config.IsForceHTTPSEnabled)
-	loadBalancerModel.Config.IPRateLimit = types.Int64Value(loadBalancerClient.Config.IPRateLimit)
+	loadBalancerModel.Config.IPRateLimitPerSecond = types.Int64Value(loadBalancerClient.Config.IPRateLimit)
 	loadBalancerModel.Config.IsIPRateLimitEnabled = types.BoolValue(loadBalancerClient.Config.IsIPRateLimitEnabled)
 	loadBalancerModel.Config.OutputCacheInSeconds = types.Int64Value(loadBalancerClient.Config.OutputCacheInSeconds)
 	loadBalancerModel.Config.IsStickySessionEnabled = types.BoolValue(loadBalancerClient.Config.IsStickySessionEnabled)

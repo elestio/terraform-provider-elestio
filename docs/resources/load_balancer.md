@@ -18,10 +18,10 @@ Load balancer resource
 ### Required
 
 - `config` (Attributes) Load balancer configuration (see [below for nested schema](#nestedatt--config))
-- `datacenter` (String) Datacenter name
+- `datacenter` (String) Datacenter name. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
 - `project_id` (String) Project identifier to which the load balancer will be attached
-- `provider_name` (String) Provider name
-- `server_type` (String) Server type
+- `provider_name` (String) Provider name. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
+- `server_type` (String) Server type. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
 
 ### Read-Only
 
@@ -45,19 +45,19 @@ Load balancer resource
 
 Required:
 
-- `target_services` (Set of String) Target services
+- `target_services` (Set of String) The services to which the load balancer will forward the requests. You can provide services IDs but also IPs and CNAME records.</br>Example: `["xxxx-xxxx-xxxx-xxxx", "192.168.xxxx", "myawesomeapp.com"]`
 
 Optional:
 
-- `forward_rules` (Attributes Set) Forward rules (see [below for nested schema](#nestedatt--config--forward_rules))
+- `forward_rules` (Attributes Set) Forward rules.</br>Default value: `[{protocol = "http", port = "80", target_protocol = "http", target_port = "80"}, {protocol = "https", port = "443", target_protocol = "http", target_port = "80"}]` (see [below for nested schema](#nestedatt--config--forward_rules))
 - `host_header` (String) Host header
-- `ip_rate_limit` (Number) IP rate limit (requests per second)
-- `is_access_logs_enabled` (Boolean) Is access logs enabled
-- `is_force_https_enabled` (Boolean) Is force https enabled
-- `is_ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled
-- `is_proxy_protocol_enabled` (Boolean) Is proxy protocol enabled
-- `is_sticky_session_enabled` (Boolean) Is sticky session enabled
-- `output_cache_in_seconds` (Number) Output cache in seconds
+- `ip_rate_limit_per_second` (Number) Indicate the maximum number of requests allowed per second per IP address.</br>Default value: `100`
+- `is_access_logs_enabled` (Boolean) Is access logs enabled.</br>Default value: `true`
+- `is_force_https_enabled` (Boolean) Is force https enabled.</br>Default value: `true`
+- `is_ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled.</br>Default value: `false`
+- `is_proxy_protocol_enabled` (Boolean) Is proxy protocol enabled.</br>Default value: `false`
+- `is_sticky_session_enabled` (Boolean) Is sticky session enabled.</br>Default value: `false`
+- `output_cache_in_seconds` (Number) Output cache in seconds.</br>Default value: `0`
 - `output_headers` (Attributes Set) Output headers (see [below for nested schema](#nestedatt--config--output_headers))
 - `remove_response_headers` (Set of String) Remove response headers
 - `ssl_domains` (Set of String) SSL domains

@@ -3,7 +3,7 @@ module github.com/elestio/terraform-provider-elestio
 go 1.18
 
 require (
-	github.com/elestio/elestio-go-api-client v1.6.1
+	github.com/elestio/elestio-go-api-client v1.8.0
 	github.com/hashicorp/terraform-plugin-docs v0.15.0
 	github.com/hashicorp/terraform-plugin-framework v1.3.1
 	github.com/hashicorp/terraform-plugin-framework-validators v0.10.0

@@ -160,6 +160,7 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 func (p *ElestioProvider) Resources(ctx context.Context) []func() resource.Resource {
 	resources := []func() resource.Resource{
 		NewProjectResource,
+		NewLoadBalancerResource,
 	}
 
 	resources = append(resources, NewServiceResources()...)

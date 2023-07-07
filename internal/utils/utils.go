@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"context"
 	"fmt"
 	"strings"
 
@@ -51,6 +52,18 @@ func BoolValue(elestioBool elestio.NumberAsBool) types.Bool {
 	}
 
 	return types.BoolValue(false)
+}
+
+// SetValueOrNull returns a types.Set based on the supplied elements. If the
+// supplied elements is empty, the returned types.Set will be flagged as null.
+func SetValueOrNull[T any](ctx context.Context, elementType attr.Type, elements []T, diags *diag.Diagnostics) types.Set {
+	if len(elements) == 0 {
+		return types.SetNull(elementType)
+	}
+
+	result, d := types.SetValueFrom(ctx, elementType, elements)
+	diags.Append(d...)
+	return result
 }
 
 // CleanString is a helper function to clean a string to be used as a terraform attribute name

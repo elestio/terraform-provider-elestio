@@ -3,12 +3,12 @@
 page_title: "elestio_powerdns Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  PowerDNS is a premier supplier of open-source DNS software, services and support. elestio_powerdns is a preconfigured elestio_service resource (template_id: 64) running PowerDNS from the Docker image https://hub.docker.com/r/aescanero/powerdns-admin aescanero/powerdns-admin.
+  PowerDNS is a premier supplier of open-source DNS software, services and support. elestio_powerdns is a preconfigured elestio_service resource (template_id: 64) running PowerDNS from the Docker image https://hub.docker.com/r/pschiffe/pdns-mysql pschiffe/pdns-mysql.
 ---
 
 # elestio_powerdns (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" /><br/> PowerDNS is a premier supplier of open-source DNS software, services and support. <br/><br/>**elestio_powerdns** is a preconfigured elestio_service resource (`template_id: 64`) running **PowerDNS** from the [Docker image](https://hub.docker.com/r/aescanero/powerdns-admin) `aescanero/powerdns-admin`.
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" /><br/> PowerDNS is a premier supplier of open-source DNS software, services and support. <br/><br/>**elestio_powerdns** is a preconfigured elestio_service resource (`template_id: 64`) running **PowerDNS** from the [Docker image](https://hub.docker.com/r/pschiffe/pdns-mysql) `pschiffe/pdns-mysql`.
 
 ## Example Usage
 

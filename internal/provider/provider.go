@@ -211,6 +211,22 @@ func NewServiceResources() []func() resource.Resource {
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
 			})
 		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         236,
+				ResourceName:       "linux_desktop",
+				DocumentationName:  "Linux-desktop",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         244,
+				ResourceName:       "filerun",
+				DocumentationName:  "FileRun",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+			})
+		},
 	}
 
 	// Unmarshal the bytes into the User struct

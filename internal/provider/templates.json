@@ -15,7 +15,11 @@
       "minCores": 1,
       "dockerhub_image": "postgres",
       "dockerhub_default_tag": "14",
-      "firewallPorts": "34523,34343"
+      "firewallPorts": "34523,34343",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 12,
@@ -32,7 +36,11 @@
       "minCores": 1,
       "dockerhub_image": "mysql",
       "dockerhub_default_tag": "8",
-      "firewallPorts": "24306,24580"
+      "firewallPorts": "24306,24580",
+      "clusterNodes": 2,
+      "isCluster": 1,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 270,
@@ -48,8 +56,12 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "mariadb",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "24306,24580"
+      "dockerhub_default_tag": "10.9.6",
+      "firewallPorts": "24306,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 19,
@@ -66,7 +78,11 @@
       "minCores": 1,
       "dockerhub_image": "mongo",
       "dockerhub_default_tag": "6",
-      "firewallPorts": "17271,17290"
+      "firewallPorts": "17271,17290",
+      "clusterNodes": 5,
+      "isCluster": 1,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 3,
@@ -83,7 +99,11 @@
       "minCores": 1,
       "dockerhub_image": "redis",
       "dockerhub_default_tag": "6",
-      "firewallPorts": "23647,24814"
+      "firewallPorts": "23647,24814",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 75,
@@ -100,7 +120,11 @@
       "minCores": 1,
       "dockerhub_image": "eqalpha/keydb",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "23647,24814"
+      "firewallPorts": "23647,24814",
+      "clusterNodes": 5,
+      "isCluster": 1,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 45,
@@ -117,7 +141,11 @@
       "minCores": 1,
       "dockerhub_image": "timescale/timescaledb-ha",
       "dockerhub_default_tag": "pg14-latest",
-      "firewallPorts": "34343,34523"
+      "firewallPorts": "34343,34523",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 93,
@@ -132,9 +160,13 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "yandex/clickhouse-server",
+      "dockerhub_image": "clickhouse/clickhouse-server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "28125,29000,18123,24306,25432"
+      "firewallPorts": "28125,29000,18123,24306,25432",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 68,
@@ -151,7 +183,11 @@
       "minCores": 2,
       "dockerhub_image": "scylladb/scylla",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,26443"
+      "firewallPorts": "80,443,26443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 116,
@@ -168,7 +204,11 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/influxdb",
       "dockerhub_default_tag": "2",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 70,
@@ -185,7 +225,11 @@
       "minCores": 1,
       "dockerhub_image": "mcr.microsoft.com/mssql/server",
       "dockerhub_default_tag": "2019-latest",
-      "firewallPorts": "80,443,18698"
+      "firewallPorts": "80,443,18698",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 208,
@@ -202,7 +246,11 @@
       "minCores": 1,
       "dockerhub_image": "neo4j",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,7687"
+      "firewallPorts": "80,443,7687",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 115,
@@ -218,8 +266,12 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "confluentinc/cp-kafka",
-      "dockerhub_default_tag": "5.5.5",
-      "firewallPorts": "80,443,2181,9092,19092,29092"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,2181,9092,19092,29092",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 255,
@@ -236,7 +288,11 @@
       "minCores": 2,
       "dockerhub_image": "quay.io/m3db/m3dbnode",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 195,
@@ -253,7 +309,11 @@
       "minCores": 2,
       "dockerhub_image": "opensearchproject/opensearch",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,19200"
+      "firewallPorts": "80,443,19200",
+      "clusterNodes": 5,
+      "isCluster": 1,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 251,
@@ -270,7 +330,11 @@
       "minCores": 1,
       "dockerhub_image": "codenotary/immudb",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,3322,9497"
+      "firewallPorts": "80,443,3322,9497",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 253,
@@ -287,7 +351,11 @@
       "minCores": 2,
       "dockerhub_image": "bitnami/cassandra",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,7000,9042"
+      "firewallPorts": "80,443,7000,9042",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 36,
@@ -304,7 +372,11 @@
       "minCores": 1,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 38,
@@ -321,7 +393,11 @@
       "minCores": 1,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 48,
@@ -338,7 +414,11 @@
       "minCores": 1,
       "dockerhub_image": "wordpress",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 55,
@@ -355,7 +435,11 @@
       "minCores": 1,
       "dockerhub_image": "nodered/node-red",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 57,
@@ -372,7 +456,11 @@
       "minCores": 1,
       "dockerhub_image": "directus/directus",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 60,
@@ -389,7 +477,11 @@
       "minCores": 1,
       "dockerhub_image": "ianw/quickchart",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 64,
@@ -404,9 +496,13 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "aescanero/powerdns-admin",
+      "dockerhub_image": "pschiffe/pdns-mysql",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "53/udp,443,29672,44350"
+      "firewallPorts": "53/udp,443,29672,44350",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 65,
@@ -423,7 +519,11 @@
       "minCores": 1,
       "dockerhub_image": "strapi/strapi",
       "dockerhub_default_tag": "3",
-      "firewallPorts": "80,443,34343,34532"
+      "firewallPorts": "80,443,34343,34532",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 170,
@@ -440,7 +540,11 @@
       "minCores": 1,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 49,
@@ -450,14 +554,18 @@
       "adminUser": "[EMAIL]",
       "description": "Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.",
       "showOrder": 1,
-      "mainImage": "https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo--8--TgNO.png",
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ghost-b9yj.png",
       "osName": "Ubuntu 20.04",
       "isPopular": 1,
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/ghost",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 182,
@@ -474,7 +582,11 @@
       "minCores": 1,
       "dockerhub_image": "gitlab/gitlab-ee",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,22022"
+      "firewallPorts": "80,443,22022",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 235,
@@ -491,7 +603,11 @@
       "minCores": 1,
       "dockerhub_image": "gitlab/gitlab-runner",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,8093"
+      "firewallPorts": "80,443,8093",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 59,
@@ -508,7 +624,11 @@
       "minCores": 1,
       "dockerhub_image": "nextcloud",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,21005"
+      "firewallPorts": "80,443,21005",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 63,
@@ -525,7 +645,11 @@
       "minCores": 1,
       "dockerhub_image": "minio/minio",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,34256"
+      "firewallPorts": "80,443,34256",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 66,
@@ -542,14 +666,18 @@
       "minCores": 1,
       "dockerhub_image": "vaultwarden/server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 74,
       "category": "Development",
       "title": "MeiliSearch",
       "version": "latest",
-      "adminUser": "null",
+      "adminUser": "\"\"",
       "description": "MeiliSearch is a next-generation search API.",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png",
@@ -559,7 +687,11 @@
       "minCores": 1,
       "dockerhub_image": "getmeili/meilisearch",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 77,
@@ -576,7 +708,11 @@
       "minCores": 1,
       "dockerhub_image": "browserless/chrome",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 79,
@@ -593,7 +729,11 @@
       "minCores": 1,
       "dockerhub_image": "grafana/grafana",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 84,
@@ -610,7 +750,11 @@
       "minCores": 1,
       "dockerhub_image": "chatwoot/chatwoot",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 85,
@@ -627,7 +771,11 @@
       "minCores": 1,
       "dockerhub_image": "plausible/analytics",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 89,
@@ -644,7 +792,11 @@
       "minCores": 1,
       "dockerhub_image": "mattermost/mattermost-team-edition",
       "dockerhub_default_tag": "master",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 90,
@@ -659,9 +811,13 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "nilsramsperger/nodebb",
+      "dockerhub_image": "elestio/nodebb",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 91,
@@ -678,7 +834,11 @@
       "minCores": 2,
       "dockerhub_image": "bitnami/discourse",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 92,
@@ -695,7 +855,11 @@
       "minCores": 1,
       "dockerhub_image": "rocketchat/rocket.chat",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 94,
@@ -712,7 +876,11 @@
       "minCores": 1,
       "dockerhub_image": "budibase/apps",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 95,
@@ -729,7 +897,11 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/prestashop",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 96,
@@ -746,7 +918,11 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/drupal",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 97,
@@ -763,14 +939,18 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/joomla",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 98,
       "category": "Applications",
       "title": "Magento",
       "version": "2",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. ",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png",
@@ -780,13 +960,17 @@
       "minCores": 4,
       "dockerhub_image": "bitnami/magento",
       "dockerhub_default_tag": "2",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 99,
       "category": "Applications",
       "title": "LimeSurvey",
-      "version": "5",
+      "version": "latest",
       "adminUser": "[EMAIL]",
       "description": "LimeSurvey is the most popular FOSS online survey tool on the web.",
       "showOrder": 10,
@@ -796,8 +980,12 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "owncloudops/limesurvey",
-      "dockerhub_default_tag": "5",
-      "firewallPorts": "80,443,24580"
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 108,
@@ -814,7 +1002,11 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/keycloak",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443,7600",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 188,
@@ -831,7 +1023,11 @@
       "minCores": 1,
       "dockerhub_image": "mikecao/umami",
       "dockerhub_default_tag": "postgresql-latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 190,
@@ -848,7 +1044,11 @@
       "minCores": 2,
       "dockerhub_image": "photoprism/photoprism",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 193,
@@ -865,7 +1065,11 @@
       "minCores": 1,
       "dockerhub_image": "tiredofit/freescout",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 194,
@@ -882,14 +1086,18 @@
       "minCores": 1,
       "dockerhub_image": "promasu/cryptpad",
       "dockerhub_default_tag": "nginx",
-      "firewallPorts": "80,443,3001"
+      "firewallPorts": "80,443,3001",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 197,
       "category": "Applications",
       "title": "Papercups",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "Papercups is a open-source live customer chat",
       "showOrder": 10,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png",
@@ -899,7 +1107,11 @@
       "minCores": 1,
       "dockerhub_image": "papercups/papercups",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 198,
@@ -916,7 +1128,11 @@
       "minCores": 1,
       "dockerhub_image": "upshift/dolibarr",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 200,
@@ -933,7 +1149,11 @@
       "minCores": 1,
       "dockerhub_image": "joplin/server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 54,
@@ -950,7 +1170,11 @@
       "minCores": 1,
       "dockerhub_image": "n8nio/n8n",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 58,
@@ -967,7 +1191,11 @@
       "minCores": 1,
       "dockerhub_image": "requarks/wiki",
       "dockerhub_default_tag": "2",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 211,
@@ -984,7 +1212,11 @@
       "minCores": 1,
       "dockerhub_image": "sensu/sensu",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 212,
@@ -1001,7 +1233,11 @@
       "minCores": 1,
       "dockerhub_image": "rabbitmq",
       "dockerhub_default_tag": "3-management",
-      "firewallPorts": "80,443,5672,15672,4369,25672"
+      "firewallPorts": "80,443,5672,15672,4369,25672",
+      "clusterNodes": 5,
+      "isCluster": 1,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 53,
@@ -1018,7 +1254,11 @@
       "minCores": 1,
       "dockerhub_image": "portainer/portainer-ce",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,18443,8000"
+      "firewallPorts": "80,443,18443,8000",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 78,
@@ -1035,7 +1275,11 @@
       "minCores": 1,
       "dockerhub_image": "m1k1o/neko-rooms",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 86,
@@ -1052,7 +1296,11 @@
       "minCores": 1,
       "dockerhub_image": "odoo",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 206,
@@ -1069,7 +1317,11 @@
       "minCores": 1,
       "dockerhub_image": "btdwv/cronicle",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 210,
@@ -1086,7 +1338,11 @@
       "minCores": 1,
       "dockerhub_image": "matomo",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 213,
@@ -1103,7 +1359,11 @@
       "minCores": 1,
       "dockerhub_image": "baserow/baserow",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 215,
@@ -1120,7 +1380,11 @@
       "minCores": 1,
       "dockerhub_image": "haproxytech/haproxy-debian",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 203,
@@ -1137,7 +1401,11 @@
       "minCores": 1,
       "dockerhub_image": "shumc/imagor",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 216,
@@ -1154,7 +1422,11 @@
       "minCores": 1,
       "dockerhub_image": "shafyy/fugu",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 217,
@@ -1171,7 +1443,11 @@
       "minCores": 2,
       "dockerhub_image": "nopcommerceteam/nopcommerce",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 218,
@@ -1188,7 +1464,11 @@
       "minCores": 1,
       "dockerhub_image": "elestio/nginx-auto-ssl",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 219,
@@ -1205,7 +1485,11 @@
       "minCores": 2,
       "dockerhub_image": "kestra/kestra",
       "dockerhub_default_tag": "develop-full",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 226,
@@ -1222,7 +1506,11 @@
       "minCores": 1,
       "dockerhub_image": "mapzy/mapzy",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 230,
@@ -1239,24 +1527,11 @@
       "minCores": 1,
       "dockerhub_image": "registry",
       "dockerhub_default_tag": "2",
-      "firewallPorts": "80,443"
-    },
-    {
-      "id": 236,
-      "category": "Hosting & Infra",
-      "title": "Linux-desktop",
-      "version": "latest",
-      "adminUser": "root",
-      "description": "Linux Desktop in the browser. Install any linux app and run it in the browser.",
-      "showOrder": 22,
-      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LinuxDesktop-Mq0d.png",
-      "osName": "Ubuntu 20.04",
-      "isPopular": 0,
-      "minRamGB": 1,
-      "minCores": 1,
-      "dockerhub_image": "elestio/docker-desktop-vnc",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 238,
@@ -1273,7 +1548,11 @@
       "minCores": 2,
       "dockerhub_image": "elestio/docker-desktop-vnc-knime",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 185,
@@ -1290,7 +1569,11 @@
       "minCores": 2,
       "dockerhub_image": "libretranslate/libretranslate",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 186,
@@ -1307,7 +1590,11 @@
       "minCores": 2,
       "dockerhub_image": "dgtlmoon/changedetection.io",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 209,
@@ -1324,7 +1611,11 @@
       "minCores": 1,
       "dockerhub_image": "mautic",
       "dockerhub_default_tag": "v4",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 202,
@@ -1341,7 +1632,11 @@
       "minCores": 1,
       "dockerhub_image": "huginn/huginn-single-process",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 87,
@@ -1358,7 +1653,11 @@
       "minCores": 1,
       "dockerhub_image": "metabase/metabase",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 205,
@@ -1375,7 +1674,11 @@
       "minCores": 1,
       "dockerhub_image": "lightdash/lightdash",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 105,
@@ -1387,18 +1690,22 @@
       "showOrder": 50,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png",
       "osName": "Ubuntu 20.04",
-      "isPopular": 0,
-      "minRamGB": null,
+      "isPopular": 1,
+      "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "apache/superset",
       "dockerhub_default_tag": "master",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 106,
       "category": "Applications",
       "title": "Zammad",
-      "version": "latest",
+      "version": "5.4.1-38",
       "adminUser": "null",
       "description": "Zammad is a web-based, open-source helpdesk/customer support system.",
       "showOrder": 110,
@@ -1408,14 +1715,18 @@
       "minRamGB": 4,
       "minCores": 1,
       "dockerhub_image": "zammad/zammad-docker-compose",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "dockerhub_default_tag": "5.4.1-38",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 107,
       "category": "Applications",
       "title": "Moodle",
-      "version": "3",
+      "version": "4.2",
       "adminUser": "[EMAIL]",
       "description": "Moodle is the world's most popular open-source learning platform for educators to create their own websites.",
       "showOrder": 160,
@@ -1425,8 +1736,12 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "bitnami/moodle",
-      "dockerhub_default_tag": "3",
-      "firewallPorts": "80,443,24580"
+      "dockerhub_default_tag": "4.2",
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 110,
@@ -1443,7 +1758,11 @@
       "minCores": 1,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": "80,443,24580"
+      "firewallPorts": "80,443,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 112,
@@ -1460,14 +1779,18 @@
       "minCores": 1,
       "dockerhub_image": "jupyter/datascience-notebook",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 113,
       "category": "Development",
       "title": "SonarQube",
       "version": "9",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "SonarQube is an open-source platform that reveals the health of an application and highlights new issues.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png",
@@ -1477,13 +1800,17 @@
       "minCores": 1,
       "dockerhub_image": "bitnami/sonarqube",
       "dockerhub_default_tag": "9",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 114,
       "category": "Development",
       "title": "Jenkins",
-      "version": "latest",
+      "version": "lts-jdk11",
       "adminUser": "root",
       "description": "Jenkins is the leading open-source automation server.",
       "showOrder": 160,
@@ -1492,9 +1819,13 @@
       "isPopular": 0,
       "minRamGB": 4,
       "minCores": 1,
-      "dockerhub_image": "bitnami/jenkins",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "dockerhub_image": "jenkins/jenkins",
+      "dockerhub_default_tag": "lts-jdk11",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 117,
@@ -1511,7 +1842,11 @@
       "minCores": 1,
       "dockerhub_image": "nocodb/nocodb",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 118,
@@ -1528,7 +1863,11 @@
       "minCores": 1,
       "dockerhub_image": "openproject/community",
       "dockerhub_default_tag": "12",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 120,
@@ -1545,7 +1884,11 @@
       "minCores": 1,
       "dockerhub_image": "frappe/erpnext-nginx",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 121,
@@ -1562,7 +1905,11 @@
       "minCores": 1,
       "dockerhub_image": "penpotapp/frontend",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 122,
@@ -1579,7 +1926,11 @@
       "minCores": 1,
       "dockerhub_image": "mailcow",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "25,80,110,143,443,465,587,993,995,4190"
+      "firewallPorts": "25,80,110,143,443,465,587,993,995,4190",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 1
     },
     {
       "id": 123,
@@ -1596,7 +1947,11 @@
       "minCores": 1,
       "dockerhub_image": "syncthing/syncthing",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,22000,22000/udp"
+      "firewallPorts": "80,443,22000,22000/udp",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 125,
@@ -1611,9 +1966,13 @@
       "isPopular": 0,
       "minRamGB": -1,
       "minCores": 1,
-      "dockerhub_image": "appsmith/appsmith-editor",
+      "dockerhub_image": "appsmith/appsmith-ce",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 126,
@@ -1630,7 +1989,11 @@
       "minCores": 1,
       "dockerhub_image": "1dev/server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 127,
@@ -1647,7 +2010,11 @@
       "minCores": 1,
       "dockerhub_image": "typesense/typesense",
       "dockerhub_default_tag": "0.23.0.rc66",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 129,
@@ -1664,14 +2031,18 @@
       "minCores": 1,
       "dockerhub_image": "jitsi/web",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 131,
       "category": "Applications",
       "title": "Filestash",
       "version": "latest",
-      "adminUser": "null",
+      "adminUser": "root",
       "description": "Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. ",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png",
@@ -1681,7 +2052,11 @@
       "minCores": 1,
       "dockerhub_image": "machines/filestash",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 132,
@@ -1698,7 +2073,11 @@
       "minCores": 2,
       "dockerhub_image": "postalserver/postal",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 1
     },
     {
       "id": 133,
@@ -1715,7 +2094,11 @@
       "minCores": 1,
       "dockerhub_image": "electerious/ackee",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 137,
@@ -1732,7 +2115,11 @@
       "minCores": 1,
       "dockerhub_image": "louislam/uptime-kuma",
       "dockerhub_default_tag": "1",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 138,
@@ -1749,7 +2136,11 @@
       "minCores": 1,
       "dockerhub_image": "kimai/kimai2",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 139,
@@ -1766,7 +2157,11 @@
       "minCores": 1,
       "dockerhub_image": "daptin/daptin",
       "dockerhub_default_tag": "master",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 140,
@@ -1783,14 +2178,18 @@
       "minCores": 1,
       "dockerhub_image": "linuxserver/healthchecks",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 142,
       "category": "Hosting & Infra",
       "title": "Guacamole",
       "version": "latest",
-      "adminUser": "[EMAIL]",
+      "adminUser": "root",
       "description": "Apache Guacamole is a clientless remote desktop gateway.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png",
@@ -1800,7 +2199,11 @@
       "minCores": 1,
       "dockerhub_image": "guacamole/guacamole",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,3389"
+      "firewallPorts": "80,443,3389",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 143,
@@ -1817,7 +2220,11 @@
       "minCores": 1,
       "dockerhub_image": "linuxserver/bookstack",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 144,
@@ -1834,7 +2241,11 @@
       "minCores": 2,
       "dockerhub_image": "appwrite/appwrite",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 146,
@@ -1851,7 +2262,11 @@
       "minCores": 1,
       "dockerhub_image": "gotify/server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 149,
@@ -1868,7 +2283,11 @@
       "minCores": 1,
       "dockerhub_image": "parseplatform/parse-server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,1338"
+      "firewallPorts": "80,443,1338",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 150,
@@ -1885,7 +2304,11 @@
       "minCores": 1,
       "dockerhub_image": "owncloud/server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 151,
@@ -1902,7 +2325,11 @@
       "minCores": 1,
       "dockerhub_image": "centrifugo/centrifugo",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 152,
@@ -1919,7 +2346,11 @@
       "minCores": 1,
       "dockerhub_image": "invoiceninja/invoiceninja",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 153,
@@ -1936,7 +2367,11 @@
       "minCores": 1,
       "dockerhub_image": "antelle/keeweb",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 154,
@@ -1953,7 +2388,11 @@
       "minCores": 1,
       "dockerhub_image": "gogs/gogs",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 155,
@@ -1970,7 +2409,11 @@
       "minCores": 1,
       "dockerhub_image": "gitea/gitea",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 156,
@@ -1987,13 +2430,17 @@
       "minCores": 1,
       "dockerhub_image": "victoriametrics/victoria-metrics",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,3443"
+      "firewallPorts": "80,443,3443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 157,
       "category": "Development",
       "title": "Airbyte",
-      "version": "0.40.17",
+      "version": "0.43.1",
       "adminUser": "root",
       "description": "Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses",
       "showOrder": 160,
@@ -2003,8 +2450,12 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "airbyte/server",
-      "dockerhub_default_tag": "0.40.17",
-      "firewallPorts": "80,443"
+      "dockerhub_default_tag": "0.43.1",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 173,
@@ -2021,7 +2472,11 @@
       "minCores": 1,
       "dockerhub_image": "tooljet/tooljet-server-ce",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 174,
@@ -2038,7 +2493,11 @@
       "minCores": 1,
       "dockerhub_image": "ghcr.io/goauthentik/server",
       "dockerhub_default_tag": "2023.3.0",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 175,
@@ -2055,7 +2514,11 @@
       "minCores": 1,
       "dockerhub_image": "mediacms/mediacms",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 177,
@@ -2072,7 +2535,11 @@
       "minCores": 1,
       "dockerhub_image": "weejewel/wg-easy",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 178,
@@ -2089,7 +2556,11 @@
       "minCores": 1,
       "dockerhub_image": "jitsucom/jitsu",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 179,
@@ -2106,7 +2577,11 @@
       "minCores": 2,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 180,
@@ -2123,7 +2598,11 @@
       "minCores": 2,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 181,
@@ -2140,7 +2619,11 @@
       "minCores": 1,
       "dockerhub_image": "elestio/nebula-rest-api",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,4243/udp"
+      "firewallPorts": "80,443,4243/udp",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 183,
@@ -2157,13 +2640,17 @@
       "minCores": 1,
       "dockerhub_image": "vault",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 189,
       "category": "Hosting & Infra",
       "title": "Mailu",
-      "version": "latest",
+      "version": "2.0",
       "adminUser": "admin@[DOMAIN]",
       "description": "Mailu is an insular email distribution - mail server as Docker images",
       "showOrder": 160,
@@ -2172,9 +2659,13 @@
       "isPopular": 0,
       "minRamGB": 2,
       "minCores": 1,
-      "dockerhub_image": "mailu/admin",
-      "dockerhub_default_tag": "1.9",
-      "firewallPorts": "25,80,110,143,443,465,587,993,995"
+      "dockerhub_image": "ghcr.io/mailu",
+      "dockerhub_default_tag": "2.0",
+      "firewallPorts": "25,80,110,143,443,465,587,993,995,16443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 1
     },
     {
       "id": 214,
@@ -2191,7 +2682,11 @@
       "minCores": 2,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 221,
@@ -2208,7 +2703,11 @@
       "minCores": 1,
       "dockerhub_image": "osixia/openldap",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,8888,389,636"
+      "firewallPorts": "80,443,8888,389,636",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 222,
@@ -2225,7 +2724,11 @@
       "minCores": 2,
       "dockerhub_image": "azuracast/azuracast",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 225,
@@ -2242,7 +2745,11 @@
       "minCores": 4,
       "dockerhub_image": "sonatype/nexus3",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 227,
@@ -2259,7 +2766,11 @@
       "minCores": 1,
       "dockerhub_image": "ghcr.io/paperless-ngx/paperless-ngx",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 229,
@@ -2271,12 +2782,16 @@
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png",
       "osName": "Ubuntu 20.04",
-      "isPopular": 0,
+      "isPopular": 1,
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "tootsuite/mastodon",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 231,
@@ -2293,13 +2808,17 @@
       "minCores": 2,
       "dockerhub_image": "zabbix/zabbix-server-mysql",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,10051"
+      "firewallPorts": "80,443,10051",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 232,
       "category": "Applications",
       "title": "Zulip",
-      "version": "latest",
+      "version": "6.2-0",
       "adminUser": "[EMAIL]",
       "description": "Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.",
       "showOrder": 160,
@@ -2309,8 +2828,12 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "zulip/docker-zulip",
-      "dockerhub_default_tag": "5.1-0",
-      "firewallPorts": "80,443"
+      "dockerhub_default_tag": "6.2-0",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 233,
@@ -2327,7 +2850,11 @@
       "minCores": 1,
       "dockerhub_image": "taigaio/taiga-back",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 237,
@@ -2344,7 +2871,11 @@
       "minCores": 1,
       "dockerhub_image": "listmonk/listmonk",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 239,
@@ -2361,7 +2892,11 @@
       "minCores": 1,
       "dockerhub_image": "shlinkio/shlink",
       "dockerhub_default_tag": "stable",
-      "firewallPorts": "80,443,18081"
+      "firewallPorts": "80,443,18081",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 240,
@@ -2378,7 +2913,11 @@
       "minCores": 1,
       "dockerhub_image": "mattermost/focalboard",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 241,
@@ -2395,7 +2934,11 @@
       "minCores": 1,
       "dockerhub_image": "crazymax/flarum",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 243,
@@ -2412,24 +2955,11 @@
       "minCores": 1,
       "dockerhub_image": "quay.io/hedgedoc/hedgedoc",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
-    },
-    {
-      "id": 244,
-      "category": "Applications",
-      "title": "FileRun",
-      "version": "latest",
-      "adminUser": "admin",
-      "description": "Reliable and Performant File Management, Desktop Sync and File Sharing.",
-      "showOrder": 160,
-      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Filerun-XXiR.png",
-      "osName": "Ubuntu 20.04",
-      "isPopular": 0,
-      "minRamGB": null,
-      "minCores": 1,
-      "dockerhub_image": "filerun/filerun",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 247,
@@ -2446,7 +2976,11 @@
       "minCores": 1,
       "dockerhub_image": "archivebox/archivebox",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 248,
@@ -2463,7 +2997,11 @@
       "minCores": 1,
       "dockerhub_image": "matrixdotorg/synapse",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,8448"
+      "firewallPorts": "80,443,8448",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 249,
@@ -2480,7 +3018,11 @@
       "minCores": 2,
       "dockerhub_image": "apache/airflow",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,15555"
+      "firewallPorts": "80,443,15555",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 252,
@@ -2497,7 +3039,11 @@
       "minCores": 1,
       "dockerhub_image": "prom/prometheus",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 254,
@@ -2514,7 +3060,11 @@
       "minCores": 2,
       "dockerhub_image": "jasonrivers/nagios",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 259,
@@ -2531,7 +3081,11 @@
       "minCores": 2,
       "dockerhub_image": "canopsis/canopsis-api",
       "dockerhub_default_tag": "4.3.9",
-      "firewallPorts": "80,443,25672"
+      "firewallPorts": "80,443,25672",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 260,
@@ -2548,7 +3102,11 @@
       "minCores": 1,
       "dockerhub_image": "drakkan/sftpgo",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 261,
@@ -2565,7 +3123,11 @@
       "minCores": 1,
       "dockerhub_image": "b4tman/squid",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "18028"
+      "firewallPorts": "18028",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 262,
@@ -2582,7 +3144,11 @@
       "minCores": 1,
       "dockerhub_image": "gerritcodereview/gerrit",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,29418"
+      "firewallPorts": "80,443,29418",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 263,
@@ -2599,7 +3165,11 @@
       "minCores": 1,
       "dockerhub_image": "klausenschaefersinho/quant-ux-backend",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 264,
@@ -2616,7 +3186,11 @@
       "minCores": 2,
       "dockerhub_image": "vbkunin/itop",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 265,
@@ -2633,7 +3207,11 @@
       "minCores": 1,
       "dockerhub_image": "getfider/fider",
       "dockerhub_default_tag": "stable",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 266,
@@ -2650,7 +3228,11 @@
       "minCores": 1,
       "dockerhub_image": "etherpad/etherpad",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 271,
@@ -2667,7 +3249,11 @@
       "minCores": 2,
       "dockerhub_image": "polonel/trudesk",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 272,
@@ -2684,7 +3270,11 @@
       "minCores": 1,
       "dockerhub_image": "rocker/rstudio",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 273,
@@ -2701,7 +3291,11 @@
       "minCores": 1,
       "dockerhub_image": "xlrl/mantisbt",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 275,
@@ -2718,7 +3312,11 @@
       "minCores": 2,
       "dockerhub_image": "localstack/localstack",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,4510-4559"
+      "firewallPorts": "80,443,4510-4559",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 277,
@@ -2735,7 +3333,11 @@
       "minCores": 1,
       "dockerhub_image": "docker.io/bitnami/suitecrm",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 278,
@@ -2752,7 +3354,11 @@
       "minCores": 2,
       "dockerhub_image": "elestio/ubuntu-desktop",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,14901"
+      "firewallPorts": "80,443,14901",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 279,
@@ -2769,7 +3375,11 @@
       "minCores": 1,
       "dockerhub_image": "debian",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 280,
@@ -2786,7 +3396,11 @@
       "minCores": 2,
       "dockerhub_image": "elestio/ubuntu-desktop",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,14901"
+      "firewallPorts": "80,443,14901",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 281,
@@ -2803,7 +3417,11 @@
       "minCores": 1,
       "dockerhub_image": "polonel/trudesk",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 283,
@@ -2820,7 +3438,11 @@
       "minCores": 2,
       "dockerhub_image": "btcpayserver/btcpayserver",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 284,
@@ -2832,18 +3454,22 @@
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png",
       "osName": "Ubuntu 20.04",
-      "isPopular": 0,
+      "isPopular": 1,
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "supabase/studio",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,27443"
+      "firewallPorts": "80,443,27443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 285,
       "category": "Applications",
       "title": "PeerTube",
-      "version": "latest",
+      "version": "production-bullseye",
       "adminUser": "root",
       "description": "Free software to take back control of your videos.",
       "showOrder": 160,
@@ -2853,8 +3479,12 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "chocobozzz/peertube",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,1935"
+      "dockerhub_default_tag": "production-bullseye",
+      "firewallPorts": "80,443,1935",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 286,
@@ -2871,7 +3501,11 @@
       "minCores": 1,
       "dockerhub_image": "erikvl87/languagetool",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 288,
@@ -2888,7 +3522,11 @@
       "minCores": 1,
       "dockerhub_image": "rustdesk/rustdesk-server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,21115,21116,21117,21118,21119,21116/udp"
+      "firewallPorts": "80,443,21115,21116,21117,21118,21119,21116/udp",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 289,
@@ -2905,7 +3543,11 @@
       "minCores": 1,
       "dockerhub_image": "shyim/shopware",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 290,
@@ -2922,7 +3564,11 @@
       "minCores": 1,
       "dockerhub_image": "everco/ever-traduora",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 291,
@@ -2939,13 +3585,17 @@
       "minCores": 1,
       "dockerhub_image": "chiefonboarding/chiefonboarding",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 292,
       "category": "Applications",
       "title": "Mealie",
-      "version": "latest",
+      "version": "omni-nightly",
       "adminUser": "[EMAIL]",
       "description": "Mealie is an intuitive and easy to use recipe management app",
       "showOrder": 160,
@@ -2955,8 +3605,12 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "hkotel/mealie",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "dockerhub_default_tag": "omni-nightly",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 293,
@@ -2973,7 +3627,11 @@
       "minCores": 1,
       "dockerhub_image": "zadam/trilium",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 294,
@@ -2990,7 +3648,11 @@
       "minCores": 1,
       "dockerhub_image": "ghcr.io/toeverything/affine-self-hosted",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 295,
@@ -3007,7 +3669,11 @@
       "minCores": 0,
       "dockerhub_image": "answerdev/answer",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 296,
@@ -3024,7 +3690,11 @@
       "minCores": 2,
       "dockerhub_image": "wordpress",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443, 24306,24580"
+      "firewallPorts": "80,443, 24306,24580",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 297,
@@ -3041,7 +3711,11 @@
       "minCores": 1,
       "dockerhub_image": "castopod/app",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 298,
@@ -3058,7 +3732,11 @@
       "minCores": 0,
       "dockerhub_image": "augustodelg/pocketbase",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 299,
@@ -3073,9 +3751,13 @@
       "isPopular": 0,
       "minRamGB": 1,
       "minCores": 0,
-      "dockerhub_image": "gabekangas/owncast",
+      "dockerhub_image": "owncast/owncast",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,1935"
+      "firewallPorts": "80,443,1935",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 300,
@@ -3092,7 +3774,11 @@
       "minCores": 0,
       "dockerhub_image": "bitnami/solr",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 301,
@@ -3109,7 +3795,11 @@
       "minCores": 0,
       "dockerhub_image": "searxng/searxng",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 302,
@@ -3126,7 +3816,11 @@
       "minCores": 0,
       "dockerhub_image": "couchbase",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 303,
@@ -3143,7 +3837,11 @@
       "minCores": 0,
       "dockerhub_image": "manticoresearch/manticore",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 304,
@@ -3160,7 +3858,11 @@
       "minCores": 1,
       "dockerhub_image": "apache/airflow",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443"
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0
     },
     {
       "id": 305,
@@ -3177,7 +3879,11 @@
       "minCores": 0,
       "dockerhub_image": "activepieces/activepieces",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "443,8284"
+      "firewallPorts": "443,8284",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 306,
@@ -3194,7 +3900,11 @@
       "minCores": 0,
       "dockerhub_image": "espocrm/espocrm",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "443,8686"
+      "firewallPorts": "443,8686",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     },
     {
       "id": 234,
@@ -3211,7 +3921,11 @@
       "minCores": 1,
       "dockerhub_image": "",
       "dockerhub_default_tag": "",
-      "firewallPorts": ""
+      "firewallPorts": "",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0
     }
   ]
 }

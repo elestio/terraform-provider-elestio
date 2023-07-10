@@ -8,7 +8,7 @@ description: |-
 
 # elestio_ghost (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo--8--TgNO.png" width="100" /><br/> Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.<br/><br/>**elestio_ghost** is a preconfigured elestio_service resource (`template_id: 49`) running **Ghost** from the [Docker image](https://hub.docker.com/r/bitnami/ghost) `bitnami/ghost`.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ghost-b9yj.png" width="100" /><br/> Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.<br/><br/>**elestio_ghost** is a preconfigured elestio_service resource (`template_id: 49`) running **Ghost** from the [Docker image](https://hub.docker.com/r/bitnami/ghost) `bitnami/ghost`.
 
 ## Example Usage
 

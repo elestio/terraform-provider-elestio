@@ -3,7 +3,7 @@ resource "elestio_jenkins" "my_jenkins" {
   project_id    = "2500"
   server_name   = "awesome-jenkins"
   server_type   = "SMALL-1C-2G"
-  version       = "latest"
+  version       = "lts-jdk11"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"

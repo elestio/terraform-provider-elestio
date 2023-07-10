@@ -3,12 +3,12 @@
 page_title: "elestio_jenkins Resource - terraform-provider-elestio"
 subcategory: ""
 description: |-
-  Jenkins is the leading open-source automation server.elestio_jenkins is a preconfigured elestio_service resource (template_id: 114) running Jenkins from the Docker image https://hub.docker.com/r/bitnami/jenkins bitnami/jenkins.
+  Jenkins is the leading open-source automation server.elestio_jenkins is a preconfigured elestio_service resource (template_id: 114) running Jenkins from the Docker image https://hub.docker.com/r/jenkins/jenkins jenkins/jenkins.
 ---
 
 # elestio_jenkins (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br/> Jenkins is the leading open-source automation server.<br/><br/>**elestio_jenkins** is a preconfigured elestio_service resource (`template_id: 114`) running **Jenkins** from the [Docker image](https://hub.docker.com/r/bitnami/jenkins) `bitnami/jenkins`.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br/> Jenkins is the leading open-source automation server.<br/><br/>**elestio_jenkins** is a preconfigured elestio_service resource (`template_id: 114`) running **Jenkins** from the [Docker image](https://hub.docker.com/r/jenkins/jenkins) `jenkins/jenkins`.
 
 ## Example Usage
 
@@ -18,7 +18,7 @@ resource "elestio_jenkins" "my_jenkins" {
   project_id    = "2500"
   server_name   = "awesome-jenkins"
   server_type   = "SMALL-1C-2G"
-  version       = "latest"
+  version       = "lts-jdk11"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -53,7 +53,7 @@ resource "elestio_jenkins" "my_jenkins" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `lts-jdk11`.
 
 ### Read-Only
 

@@ -18,7 +18,7 @@ resource "elestio_mealie" "my_mealie" {
   project_id    = "2500"
   server_name   = "awesome-mealie"
   server_type   = "SMALL-1C-2G"
-  version       = "latest"
+  version       = "omni-nightly"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -53,7 +53,7 @@ resource "elestio_mealie" "my_mealie" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `omni-nightly`.
 
 ### Read-Only
 

@@ -18,7 +18,7 @@ resource "elestio_airbyte" "my_airbyte" {
   project_id    = "2500"
   server_name   = "awesome-airbyte"
   server_type   = "SMALL-1C-2G"
-  version       = "0.40.17"
+  version       = "0.43.1"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -53,7 +53,7 @@ resource "elestio_airbyte" "my_airbyte" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `0.40.17`.
+- `version` (String) This is the version of the software used as service. **Default** `0.43.1`.
 
 ### Read-Only
 

@@ -18,7 +18,7 @@ resource "elestio_zulip" "my_zulip" {
   project_id    = "2500"
   server_name   = "awesome-zulip"
   server_type   = "SMALL-1C-2G"
-  version       = "5.1-0"
+  version       = "6.2-0"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   support_level = "level1"
@@ -53,7 +53,7 @@ resource "elestio_zulip" "my_zulip" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `5.1-0`.
+- `version` (String) This is the version of the software used as service. **Default** `6.2-0`.
 
 ### Read-Only
 

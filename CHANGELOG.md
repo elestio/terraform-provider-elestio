@@ -106,3 +106,9 @@ FEATURES:
 
 - Update the version of several packages to improve provider performance.
 - Fix a bug at service creation (after an API change)
+
+##
+
+- **New Resource:** `elestio_load_balancer`
+- **Deprecated Resource:** `elestio_linux_desktop`. Not anymore supported by Elestio.
+- **Deprecated Resource:** `elestio_filerun`. Not anymore supported by Elestio.

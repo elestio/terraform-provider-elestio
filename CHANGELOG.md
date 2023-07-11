@@ -107,8 +107,9 @@ FEATURES:
 - Update the version of several packages to improve provider performance.
 - Fix a bug at service creation (after an API change)
 
-##
+## v0.9.0 (11 July, 2023)
 
-- **New Resource:** `elestio_load_balancer`
+- **New Attribute:** `elestio_service.default_password`. Customize the default password used by the software in your service.
+- **New Resource:** `elestio_load_balancer`. You can now deploy a load balancer from Elestio with Terraform.
 - **Deprecated Resource:** `elestio_linux_desktop`. Not anymore supported by Elestio.
 - **Deprecated Resource:** `elestio_filerun`. Not anymore supported by Elestio.

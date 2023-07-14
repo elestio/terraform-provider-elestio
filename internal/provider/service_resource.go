@@ -246,6 +246,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
@@ -256,6 +257,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 				Validators: []validator.String{
@@ -289,6 +291,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
@@ -298,6 +301,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" Requires replace to change it.",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 			},
@@ -380,14 +384,23 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"ipv4": schema.StringAttribute{
 				MarkdownDescription: "Service IPv4.",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"ipv6": schema.StringAttribute{
 				MarkdownDescription: "Service IPv6.",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"cname": schema.StringAttribute{
 				MarkdownDescription: "Service CNAME.",
 				Computed:            true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
+				},
 			},
 			"custom_domain_names": schema.SetAttribute{
 				MarkdownDescription: "Indicate the list of domains for which you want to activate HTTPS / TLS / SSL." +

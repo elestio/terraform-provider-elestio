@@ -278,11 +278,15 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"support_level": schema.StringAttribute{
 				MarkdownDescription: "Service support level." +
-					" You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing)." +
-					" Requires replace to change it in terraform." +
+					" Available support levels are `level1`, `level2` and `level3`." +
+					" You can look for their advantages in the [pricing documentation](https://elest.io/pricing)." +
+					" Requires replace the whole resource to change it in terraform." +
 					" It is recommended to use the web dashboard to change it without replacing the service.",
-				Required: true,
+				Optional: true,
+				Computed: true,
+				Default:  stringdefault.StaticString("level1"),
 				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 				Validators: []validator.String{

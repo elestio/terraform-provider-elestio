@@ -38,7 +38,6 @@ resource "elestio_influxdb" "my_influxdb" {
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.
-- `ssh_keys` (Attributes Set) Indicate the list of SSH keys to add to the service. (see [below for nested schema](#nestedatt--ssh_keys))
 
 ### Optional
 
@@ -49,6 +48,7 @@ resource "elestio_influxdb" "my_influxdb" {
 - `firewall_enabled` (Boolean) Service firewall state. **Default** `true`.
 - `keep_backups_on_delete_enabled` (Boolean) Creates a backup and keeps all existing ones after deleting the service. If the project is deleted, the backups will be lost. **Default** `true`.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
+- `ssh_keys` (Attributes Set) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
@@ -106,7 +106,7 @@ resource "elestio_influxdb" "my_influxdb" {
 Required:
 
 - `key_name` (String) SSH Key Name.
-- `public_key` (String) SSH Public Key. With or without comment at the end. Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`
+- `public_key` (String) SSH Public Key. Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.` If you provide a comment, it will be removed by the provider.
 
 
 <a id="nestedatt--admin"></a>

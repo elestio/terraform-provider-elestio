@@ -113,3 +113,8 @@ FEATURES:
 - **New Resource:** `elestio_load_balancer`. You can now deploy a load balancer from Elestio with Terraform.
 - **Deprecated Resource:** `elestio_linux_desktop`. Not anymore supported by Elestio.
 - **Deprecated Resource:** `elestio_filerun`. Not anymore supported by Elestio.
+
+##
+
+- The `support_level` attribute of a service resource is now optional. Default value is `level1`.
+- The `ssh_keys` attribute of a service resource is now optional. Default value is `[]`.

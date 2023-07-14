@@ -19,6 +19,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/booldefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/int64planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
+	"github.com/hashicorp/terraform-plugin-framework/resource/schema/setdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
@@ -67,75 +68,80 @@ type (
 		Command  types.String `tfsdk:"command"`
 	}
 
-	ServiceResourceSSHKeyModel struct {
-		KeyName   types.String `tfsdk:"key_name"`
-		PublicKey types.String `tfsdk:"public_key"`
-	}
-
 	ServiceResourceModel struct {
-		Id                                          types.String `tfsdk:"id"`
-		ProjectID                                   types.String `tfsdk:"project_id"`
-		ServerName                                  types.String `tfsdk:"server_name"`
-		ServerType                                  types.String `tfsdk:"server_type"`
-		TemplateId                                  types.Int64  `tfsdk:"template_id"`
-		Version                                     types.String `tfsdk:"version"`
-		ProviderName                                types.String `tfsdk:"provider_name"`
-		Datacenter                                  types.String `tfsdk:"datacenter"`
-		SupportLevel                                types.String `tfsdk:"support_level"`
-		AdminEmail                                  types.String `tfsdk:"admin_email"`
-		DefaultPassword                             types.String `tfsdk:"default_password"`
-		Category                                    types.String `tfsdk:"category"`
-		Status                                      types.String `tfsdk:"status"`
-		DeploymentStatus                            types.String `tfsdk:"deployment_status"`
-		DeploymentStartedAt                         types.String `tfsdk:"deployment_started_at"`
-		DeploymentEndedAt                           types.String `tfsdk:"deployment_ended_at"`
-		CreatorName                                 types.String `tfsdk:"creator_name"`
-		CreatedAt                                   types.String `tfsdk:"created_at"`
-		IPV4                                        types.String `tfsdk:"ipv4"`
-		IPV6                                        types.String `tfsdk:"ipv6"`
-		CNAME                                       types.String `tfsdk:"cname"`
-		CustomDomainNames                           types.Set    `tfsdk:"custom_domain_names"`
-		SSHKeys                                     types.Set    `tfsdk:"ssh_keys"`
-		Country                                     types.String `tfsdk:"country"`
-		City                                        types.String `tfsdk:"city"`
-		AdminUser                                   types.String `tfsdk:"admin_user"`
-		RootAppPath                                 types.String `tfsdk:"root_app_path"`
-		Env                                         types.Map    `tfsdk:"env"`
-		Admin                                       types.Object `tfsdk:"admin"`
-		DatabaseAdmin                               types.Object `tfsdk:"database_admin"`
-		GlobalIP                                    types.String `tfsdk:"global_ip"`
-		TrafficOutgoing                             types.Int64  `tfsdk:"traffic_outgoing"`
-		TrafficIncoming                             types.Int64  `tfsdk:"traffic_incoming"`
-		TrafficIncluded                             types.Int64  `tfsdk:"traffic_included"`
-		Cores                                       types.Int64  `tfsdk:"cores"`
-		RAMSizeGB                                   types.String `tfsdk:"ram_size_gb"`
-		StorageSizeGB                               types.Int64  `tfsdk:"storage_size_gb"`
-		PricePerHour                                types.String `tfsdk:"price_per_hour"`
-		AppAutoUpdatesEnabled                       types.Bool   `tfsdk:"app_auto_updates_enabled"`
-		AppAutoUpdatesDayOfWeek                     types.Int64  `tfsdk:"app_auto_updates_day_of_week"`
-		AppAutoUpdatesHour                          types.Int64  `tfsdk:"app_auto_updates_hour"`
-		AppAutoUpdatesMinute                        types.Int64  `tfsdk:"app_auto_updates_minute"`
-		SystemAutoUpdatesEnabled                    types.Bool   `tfsdk:"system_auto_updates_enabled"`
-		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool   `tfsdk:"system_auto_updates_security_patches_only_enabled"`
-		SystemAutoUpdatesRebootDayOfWeek            types.Int64  `tfsdk:"system_auto_updates_reboot_day_of_week"`
-		SystemAutoUpdatesRebootHour                 types.Int64  `tfsdk:"system_auto_updates_reboot_hour"`
-		SystemAutoUpdatesRebootMinute               types.Int64  `tfsdk:"system_auto_updates_reboot_minute"`
-		BackupsEnabled                              types.Bool   `tfsdk:"backups_enabled"`
-		RemoteBackupsEnabled                        types.Bool   `tfsdk:"remote_backups_enabled"`
-		ExternalBackupsEnabled                      types.Bool   `tfsdk:"external_backups_enabled"`
-		ExternalBackupsUpdateDayOfWeek              types.Int64  `tfsdk:"external_backups_update_day_of_week"`
-		ExternalBackupsUpdateHour                   types.Int64  `tfsdk:"external_backups_update_hour"`
-		ExternalBackupsUpdateMinute                 types.Int64  `tfsdk:"external_backups_update_minute"`
-		ExternalBackupsUpdateType                   types.String `tfsdk:"external_backups_update_type"`
-		ExternalBackupsRetainDayOfWeek              types.Int64  `tfsdk:"external_backups_retain_day_of_week"`
-		KeepBackupsOnDeleteEnabled                  types.Bool   `tfsdk:"keep_backups_on_delete_enabled"`
-		FirewallEnabled                             types.Bool   `tfsdk:"firewall_enabled"`
-		FirewallId                                  types.String `tfsdk:"firewall_id"`
-		FirewallPorts                               types.String `tfsdk:"firewall_ports"`
-		AlertsEnabled                               types.Bool   `tfsdk:"alerts_enabled"`
-		LastUpdated                                 types.String `tfsdk:"last_updated"`
+		Id                                          types.String  `tfsdk:"id"`
+		ProjectID                                   types.String  `tfsdk:"project_id"`
+		ServerName                                  types.String  `tfsdk:"server_name"`
+		ServerType                                  types.String  `tfsdk:"server_type"`
+		TemplateId                                  types.Int64   `tfsdk:"template_id"`
+		Version                                     types.String  `tfsdk:"version"`
+		ProviderName                                types.String  `tfsdk:"provider_name"`
+		Datacenter                                  types.String  `tfsdk:"datacenter"`
+		SupportLevel                                types.String  `tfsdk:"support_level"`
+		AdminEmail                                  types.String  `tfsdk:"admin_email"`
+		DefaultPassword                             types.String  `tfsdk:"default_password"`
+		Category                                    types.String  `tfsdk:"category"`
+		Status                                      types.String  `tfsdk:"status"`
+		DeploymentStatus                            types.String  `tfsdk:"deployment_status"`
+		DeploymentStartedAt                         types.String  `tfsdk:"deployment_started_at"`
+		DeploymentEndedAt                           types.String  `tfsdk:"deployment_ended_at"`
+		CreatorName                                 types.String  `tfsdk:"creator_name"`
+		CreatedAt                                   types.String  `tfsdk:"created_at"`
+		IPV4                                        types.String  `tfsdk:"ipv4"`
+		IPV6                                        types.String  `tfsdk:"ipv6"`
+		CNAME                                       types.String  `tfsdk:"cname"`
+		CustomDomainNames                           types.Set     `tfsdk:"custom_domain_names"`
+		SSHKeys                                     []SSHKeyModel `tfsdk:"ssh_keys"`
+		Country                                     types.String  `tfsdk:"country"`
+		City                                        types.String  `tfsdk:"city"`
+		AdminUser                                   types.String  `tfsdk:"admin_user"`
+		RootAppPath                                 types.String  `tfsdk:"root_app_path"`
+		Env                                         types.Map     `tfsdk:"env"`
+		Admin                                       types.Object  `tfsdk:"admin"`
+		DatabaseAdmin                               types.Object  `tfsdk:"database_admin"`
+		GlobalIP                                    types.String  `tfsdk:"global_ip"`
+		TrafficOutgoing                             types.Int64   `tfsdk:"traffic_outgoing"`
+		TrafficIncoming                             types.Int64   `tfsdk:"traffic_incoming"`
+		TrafficIncluded                             types.Int64   `tfsdk:"traffic_included"`
+		Cores                                       types.Int64   `tfsdk:"cores"`
+		RAMSizeGB                                   types.String  `tfsdk:"ram_size_gb"`
+		StorageSizeGB                               types.Int64   `tfsdk:"storage_size_gb"`
+		PricePerHour                                types.String  `tfsdk:"price_per_hour"`
+		AppAutoUpdatesEnabled                       types.Bool    `tfsdk:"app_auto_updates_enabled"`
+		AppAutoUpdatesDayOfWeek                     types.Int64   `tfsdk:"app_auto_updates_day_of_week"`
+		AppAutoUpdatesHour                          types.Int64   `tfsdk:"app_auto_updates_hour"`
+		AppAutoUpdatesMinute                        types.Int64   `tfsdk:"app_auto_updates_minute"`
+		SystemAutoUpdatesEnabled                    types.Bool    `tfsdk:"system_auto_updates_enabled"`
+		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool    `tfsdk:"system_auto_updates_security_patches_only_enabled"`
+		SystemAutoUpdatesRebootDayOfWeek            types.Int64   `tfsdk:"system_auto_updates_reboot_day_of_week"`
+		SystemAutoUpdatesRebootHour                 types.Int64   `tfsdk:"system_auto_updates_reboot_hour"`
+		SystemAutoUpdatesRebootMinute               types.Int64   `tfsdk:"system_auto_updates_reboot_minute"`
+		BackupsEnabled                              types.Bool    `tfsdk:"backups_enabled"`
+		RemoteBackupsEnabled                        types.Bool    `tfsdk:"remote_backups_enabled"`
+		ExternalBackupsEnabled                      types.Bool    `tfsdk:"external_backups_enabled"`
+		ExternalBackupsUpdateDayOfWeek              types.Int64   `tfsdk:"external_backups_update_day_of_week"`
+		ExternalBackupsUpdateHour                   types.Int64   `tfsdk:"external_backups_update_hour"`
+		ExternalBackupsUpdateMinute                 types.Int64   `tfsdk:"external_backups_update_minute"`
+		ExternalBackupsUpdateType                   types.String  `tfsdk:"external_backups_update_type"`
+		ExternalBackupsRetainDayOfWeek              types.Int64   `tfsdk:"external_backups_retain_day_of_week"`
+		KeepBackupsOnDeleteEnabled                  types.Bool    `tfsdk:"keep_backups_on_delete_enabled"`
+		FirewallEnabled                             types.Bool    `tfsdk:"firewall_enabled"`
+		FirewallId                                  types.String  `tfsdk:"firewall_id"`
+		FirewallPorts                               types.String  `tfsdk:"firewall_ports"`
+		AlertsEnabled                               types.Bool    `tfsdk:"alerts_enabled"`
+		LastUpdated                                 types.String  `tfsdk:"last_updated"`
 	}
 )
+
+type SSHKeyModel struct {
+	KeyName   types.String `tfsdk:"key_name"`
+	PublicKey types.String `tfsdk:"public_key"`
+}
+
+var sshKeyAttryTypes = map[string]attr.Type{
+	"key_name":   types.StringType,
+	"public_key": types.StringType,
+}
 
 func NewServiceResource(template *ServiceTemplate) resource.Resource {
 	return &ServiceResource{
@@ -203,6 +209,12 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 		}
 
 		schemaMardownDescription += "."
+	}
+
+	defaultSSHKeys, diags := types.SetValue(types.ObjectType{AttrTypes: sshKeyAttryTypes}, []attr.Value{})
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
 	}
 
 	resp.Schema = schema.Schema{
@@ -375,8 +387,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				ElementType: types.StringType,
 			},
 			"ssh_keys": schema.SetNestedAttribute{
-				MarkdownDescription: "Indicate the list of SSH keys to add to the service.",
-				Required:            true,
+				MarkdownDescription: "This attribute allows you to add SSH keys to your service.",
+				Optional:            true,
+				Computed:            true,
+				Default:             setdefault.StaticValue(defaultSSHKeys),
 				NestedObject: schema.NestedAttributeObject{
 					Attributes: map[string]schema.Attribute{
 						"key_name": schema.StringAttribute{
@@ -385,8 +399,8 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 						},
 						"public_key": schema.StringAttribute{
 							MarkdownDescription: "SSH Public Key." +
-								" With or without comment at the end." +
-								" Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`",
+								" Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`" +
+								" If you provide a comment, it will be removed by the provider.",
 							Required: true,
 							PlanModifiers: []planmodifier.String{
 								modifiers.RemoveSSHKeyComment(),
@@ -709,21 +723,19 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		return
 	}
 
-	var keys []ServiceResourceSSHKeyModel
-	data.SSHKeys.ElementsAs(ctx, &keys, false)
-	keysMap := make(map[string]ServiceResourceSSHKeyModel)
-	for _, key := range keys {
-		// Duplicate ssh key names are not allowed.
-		if duplicateKey, exists := keysMap[key.KeyName.ValueString()]; exists {
+	// Check that the ssh keys names are unique because names are used as identifiers.
+	existingKeyNames := make(map[string]bool)
+	for _, key := range data.SSHKeys {
+		if _, exists := existingKeyNames[key.KeyName.ValueString()]; exists {
 			resp.Diagnostics.AddAttributeError(
 				path.Root("ssh_keys"),
 				"Invalid Attribute Configuration",
-				fmt.Sprintf("Duplicate ssh key name: %s", duplicateKey.KeyName.ValueString()),
+				fmt.Sprintf("Duplicate ssh key name: %s", key.KeyName.ValueString()),
 			)
 			return
 		}
 
-		keysMap[key.KeyName.ValueString()] = key
+		existingKeyNames[key.KeyName.ValueString()] = true
 	}
 }
 
@@ -1043,29 +1055,21 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	// Retrieve the actual state of the ssh keys
-	var stateKeys []ServiceResourceSSHKeyModel
-	state.SSHKeys.ElementsAs(ctx, &stateKeys, false)
-
-	// Retrieve the planned state of the ssh keys
-	var planKeys []ServiceResourceSSHKeyModel
-	plan.SSHKeys.ElementsAs(ctx, &planKeys, false)
-
-	if len(stateKeys) > 0 || len(planKeys) > 0 {
+	if len(state.SSHKeys) > 0 || len(plan.SSHKeys) > 0 {
 		// Create maps for easy lookup
-		stateKeysMap := make(map[string]ServiceResourceSSHKeyModel)
-		planKeysMap := make(map[string]ServiceResourceSSHKeyModel)
+		stateKeysMap := make(map[string]SSHKeyModel)
+		planKeysMap := make(map[string]SSHKeyModel)
 
-		for _, obj := range stateKeys {
+		for _, obj := range state.SSHKeys {
 			stateKeysMap[obj.KeyName.ValueString()] = obj
 		}
 
-		for _, obj := range planKeys {
+		for _, obj := range plan.SSHKeys {
 			planKeysMap[obj.KeyName.ValueString()] = obj
 		}
 
 		// Iterate over state and delete any objects that are not in the plan
-		for _, stateKey := range stateKeys {
+		for _, stateKey := range state.SSHKeys {
 			if _, exists := planKeysMap[stateKey.KeyName.ValueString()]; !exists {
 				if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
 					return nil, fmt.Errorf("failed to remove ssh key: %s", err)
@@ -1074,7 +1078,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 
 		// Iterate over the plan and compare each key to the corresponding key in state
-		for _, planKey := range planKeys {
+		for _, planKey := range plan.SSHKeys {
 			if stateKey, exists := stateKeysMap[planKey.KeyName.ValueString()]; exists {
 				if !planKey.PublicKey.Equal(stateKey.PublicKey) {
 					// Key exists in state but has a different public key value, so update it (delete and recreate)
@@ -1124,32 +1128,14 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
 
-	keys := make([]attr.Value, len(service.SSHKeys))
-	for i, v := range service.SSHKeys {
-		keys[i] = utils.ObjectValue(
-			map[string]attr.Type{
-				"key_name":   types.StringType,
-				"public_key": types.StringType,
-			},
-			map[string]attr.Value{
-				"key_name":   types.StringValue(v.KeyName),
-				"public_key": types.StringValue(v.PublicKey),
-			},
-			diags,
-		)
+	sshKeys := make([]SSHKeyModel, len(service.SSHKeys))
+	for i, s := range service.SSHKeys {
+		sshKeys[i] = SSHKeyModel{
+			KeyName:   types.StringValue(s.KeyName),
+			PublicKey: types.StringValue(s.PublicKey),
+		}
 	}
-	setKeys, d := types.SetValueFrom(
-		ctx,
-		types.ObjectType{
-			AttrTypes: map[string]attr.Type{
-				"key_name":   types.StringType,
-				"public_key": types.StringType,
-			},
-		},
-		keys,
-	)
-	diags.Append(d...)
-	data.SSHKeys = setKeys
+	data.SSHKeys = sshKeys
 
 	data.Country = types.StringValue(service.Country)
 	data.City = types.StringValue(service.City)

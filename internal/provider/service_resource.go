@@ -8,7 +8,6 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
-	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -52,20 +51,6 @@ type (
 	ServiceResource struct {
 		client *elestio.Client
 		*ServiceTemplate
-	}
-
-	ServiceResourceAdminModel struct {
-		URL      types.String `tfsdk:"url"`
-		User     types.String `tfsdk:"user"`
-		Password types.String `tfsdk:"password"`
-	}
-
-	ServiceResourceDatabaseAdminModel struct {
-		Host     types.String `tfsdk:"host"`
-		Port     types.String `tfsdk:"port"`
-		User     types.String `tfsdk:"user"`
-		Password types.String `tfsdk:"password"`
-		Command  types.String `tfsdk:"command"`
 	}
 
 	ServiceResourceModel struct {
@@ -141,6 +126,34 @@ type SSHKeyModel struct {
 var sshKeyAttryTypes = map[string]attr.Type{
 	"key_name":   types.StringType,
 	"public_key": types.StringType,
+}
+
+type AdminModel struct {
+	URL      types.String `tfsdk:"url"`
+	User     types.String `tfsdk:"user"`
+	Password types.String `tfsdk:"password"`
+}
+
+var adminAttryTypes = map[string]attr.Type{
+	"url":      types.StringType,
+	"user":     types.StringType,
+	"password": types.StringType,
+}
+
+type DatabaseAdminModel struct {
+	Host     types.String `tfsdk:"host"`
+	Port     types.String `tfsdk:"port"`
+	User     types.String `tfsdk:"user"`
+	Password types.String `tfsdk:"password"`
+	Command  types.String `tfsdk:"command"`
+}
+
+var databaseAdminAttryTypes = map[string]attr.Type{
+	"host":     types.StringType,
+	"port":     types.StringType,
+	"user":     types.StringType,
+	"password": types.StringType,
+	"command":  types.StringType,
 }
 
 func NewServiceResource(template *ServiceTemplate) resource.Resource {
@@ -399,12 +412,12 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 						},
 						"public_key": schema.StringAttribute{
 							MarkdownDescription: "SSH Public Key." +
-								" Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`" +
-								" If you provide a comment, it will be removed by the provider.",
+								" The public key should only contain two parts: the protocol and the key." +
+								" You should not include the username, hostname, or comment." +
+								"</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`" +
+								"</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`",
 							Required: true,
-							PlanModifiers: []planmodifier.String{
-								modifiers.RemoveSSHKeyComment(),
-							},
+							// The validators are specified in the Configure method below.
 						},
 					},
 				},
@@ -440,6 +453,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"admin": schema.SingleNestedAttribute{
 				MarkdownDescription: "Service admin.",
 				Computed:            true,
+				Sensitive:           true,
 				Attributes: map[string]schema.Attribute{
 					"url": schema.StringAttribute{
 						MarkdownDescription: "Service admin URL.",
@@ -452,13 +466,13 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					"password": schema.StringAttribute{
 						MarkdownDescription: "Service admin password.",
 						Computed:            true,
-						Sensitive:           true,
 					},
 				},
 			},
 			"database_admin": schema.SingleNestedAttribute{
 				MarkdownDescription: "Service database admin.",
 				Computed:            true,
+				Sensitive:           true,
 				Attributes: map[string]schema.Attribute{
 					"host": schema.StringAttribute{
 						MarkdownDescription: "Service database admin host.",
@@ -475,12 +489,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					"password": schema.StringAttribute{
 						MarkdownDescription: "Service database admin password.",
 						Computed:            true,
-						Sensitive:           true,
 					},
 					"command": schema.StringAttribute{
 						MarkdownDescription: "Service database admin command.",
 						Computed:            true,
-						Sensitive:           true,
 					},
 				},
 			},
@@ -723,9 +735,25 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		return
 	}
 
-	// Check that the ssh keys names are unique because names are used as identifiers.
+	// Check that:
+	// - the ssh public_keys have the good format "protocol key" and contain only two parts.
+	// - the ssh keys names are unique because names are used as identifiers.
 	existingKeyNames := make(map[string]bool)
 	for _, key := range data.SSHKeys {
+		parts := strings.Split(key.PublicKey.ValueString(), " ")
+		if len(parts) != 2 {
+			resp.Diagnostics.AddAttributeError(
+				path.Root("ssh_keys"),
+				"Invalid Attribute Configuration",
+				fmt.Sprintf("The public key of %s contain %d parts.", key.KeyName.ValueString(), len(parts))+
+					" The public key should only contain two parts: the protocol and the key."+
+					" You should not include the username, hostname, or comment."+
+					"</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`"+
+					"</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`",
+			)
+			return
+		}
+
 		if _, exists := existingKeyNames[key.KeyName.ValueString()]; exists {
 			resp.Diagnostics.AddAttributeError(
 				path.Root("ssh_keys"),
@@ -734,7 +762,6 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 			)
 			return
 		}
-
 		existingKeyNames[key.KeyName.ValueString()] = true
 	}
 }
@@ -1107,6 +1134,8 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 }
 
 func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceModel, service *elestio.Service, diags *diag.Diagnostics) {
+	var d diag.Diagnostics
+
 	data.ProjectID = types.StringValue(service.ProjectID)
 	data.ServerName = types.StringValue(service.ServerName)
 	data.ServerType = types.StringValue(service.ServerType)
@@ -1127,7 +1156,6 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.IPV6 = types.StringValue(service.IPV6)
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
-
 	sshKeys := make([]SSHKeyModel, len(service.SSHKeys))
 	for i, s := range service.SSHKeys {
 		sshKeys[i] = SSHKeyModel{
@@ -1136,42 +1164,31 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 		}
 	}
 	data.SSHKeys = sshKeys
-
 	data.Country = types.StringValue(service.Country)
 	data.City = types.StringValue(service.City)
 	data.AdminUser = types.StringValue(service.AdminUser)
 	data.RootAppPath = types.StringValue(service.RootAppPath)
 	data.Env = utils.MapStringToMapType(service.Env, diags)
-	data.Admin = utils.ObjectValue(
-		map[string]attr.Type{
-			"url":      types.StringType,
-			"user":     types.StringType,
-			"password": types.StringType,
-		},
-		map[string]attr.Value{
-			"url":      types.StringValue(service.Admin.URL),
-			"user":     types.StringValue(service.Admin.User),
-			"password": types.StringValue(service.Admin.Password),
-		},
-		diags,
-	)
-	data.DatabaseAdmin = utils.ObjectValue(
-		map[string]attr.Type{
-			"host":     types.StringType,
-			"port":     types.StringType,
-			"user":     types.StringType,
-			"password": types.StringType,
-			"command":  types.StringType,
-		},
-		map[string]attr.Value{
-			"host":     types.StringValue(service.DatabaseAdmin.Host),
-			"port":     types.StringValue(service.DatabaseAdmin.Port),
-			"user":     types.StringValue(service.DatabaseAdmin.User),
-			"password": types.StringValue(service.DatabaseAdmin.Password),
-			"command":  types.StringValue(service.DatabaseAdmin.Command),
-		},
-		diags,
-	)
+	data.Admin, d = types.ObjectValue(adminAttryTypes, map[string]attr.Value{
+		"url":      types.StringValue(service.Admin.URL),
+		"user":     types.StringValue(service.Admin.User),
+		"password": types.StringValue(service.Admin.Password),
+	})
+	diags.Append(d...)
+	if diags.HasError() {
+		return
+	}
+	data.DatabaseAdmin, d = types.ObjectValue(databaseAdminAttryTypes, map[string]attr.Value{
+		"host":     types.StringValue(service.DatabaseAdmin.Host),
+		"port":     types.StringValue(service.DatabaseAdmin.Port),
+		"user":     types.StringValue(service.DatabaseAdmin.User),
+		"password": types.StringValue(service.DatabaseAdmin.Password),
+		"command":  types.StringValue(service.DatabaseAdmin.Command),
+	})
+	diags.Append(d...)
+	if diags.HasError() {
+		return
+	}
 	data.GlobalIP = types.StringValue(service.GlobalIP)
 	data.TrafficOutgoing = types.Int64Value(service.TrafficOutgoing)
 	data.TrafficIncoming = types.Int64Value(service.TrafficIncoming)

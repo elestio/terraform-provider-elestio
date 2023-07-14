@@ -57,7 +57,7 @@ resource "elestio_chatwoot" "my_chatwoot" {
 
 ### Read-Only
 
-- `admin` (Attributes) Service admin. (see [below for nested schema](#nestedatt--admin))
+- `admin` (Attributes, Sensitive) Service admin. (see [below for nested schema](#nestedatt--admin))
 - `admin_user` (String) Service admin user.
 - `app_auto_updates_day_of_week` (Number) Service app auto update day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `app_auto_updates_hour` (Number) Service app auto update hour.
@@ -69,7 +69,7 @@ resource "elestio_chatwoot" "my_chatwoot" {
 - `country` (String) Service country.
 - `created_at` (String) Service creation date.
 - `creator_name` (String) Service creator name.
-- `database_admin` (Attributes) Service database admin. (see [below for nested schema](#nestedatt--database_admin))
+- `database_admin` (Attributes, Sensitive) Service database admin. (see [below for nested schema](#nestedatt--database_admin))
 - `deployment_ended_at` (String) Service deployment endedAt date.
 - `deployment_started_at` (String) Service deployment startedAt date.
 - `deployment_status` (String) Service deployement status.
@@ -106,7 +106,7 @@ resource "elestio_chatwoot" "my_chatwoot" {
 Required:
 
 - `key_name` (String) SSH Key Name.
-- `public_key` (String) SSH Public Key. Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.` If you provide a comment, it will be removed by the provider.
+- `public_key` (String) SSH Public Key. The public key should only contain two parts: the protocol and the key. You should not include the username, hostname, or comment.</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`
 
 
 <a id="nestedatt--admin"></a>
@@ -114,7 +114,7 @@ Required:
 
 Read-Only:
 
-- `password` (String, Sensitive) Service admin password.
+- `password` (String) Service admin password.
 - `url` (String) Service admin URL.
 - `user` (String) Service admin user.
 
@@ -124,9 +124,9 @@ Read-Only:
 
 Read-Only:
 
-- `command` (String, Sensitive) Service database admin command.
+- `command` (String) Service database admin command.
 - `host` (String) Service database admin host.
-- `password` (String, Sensitive) Service database admin password.
+- `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
 

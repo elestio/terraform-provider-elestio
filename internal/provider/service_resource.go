@@ -256,7 +256,8 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters." +
 					" Must be unique within the project." +
 					" Requires replace to change it.",
-				Required: true,
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),

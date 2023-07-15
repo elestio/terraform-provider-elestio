@@ -1,15 +1,15 @@
 ---
-page_title: "Get started"
+page_title: 'Getting started with the Elestio provider'
 ---
 
-# Get started
+# Getting Started with the Elestio Provider
 
 In this tutorial, we will discover together the Elestio Terraform Provider.
 
 As a goal, we will deploy not one but two PostgreSQL services!
 And to complicate things, they will be hosted in different regions.
 
-You can clone this repository [elestio-terraform-postgres-regions](https://github.com/elestio-examples/elestio-terraform-postgres-regions) that contain required code for this guide.
+You don't have to code anything, you can clone this repository [elestio-terraform-postgres-regions](https://github.com/elestio-examples/elestio-terraform-postgres-regions) that contain required code for this guide.
 
 ## Signup
 
@@ -47,26 +47,23 @@ Terraform v0.14.0 # any version >= v0.14.0 is OK
 1.  Clone the [repository](https://github.com/elestio-examples/elestio-terraform-postgres-regions) containing the example configurations:
 
     ```bash
-    git clone https://github.com/elestio/terraform-provider-elestio.git
+    git clone https://github.com/elestio-examples/elestio-terraform-postgres-regions.git
     ```
 
     ```bash
-    |- outputs.tf     # Defines the outputs you want terraform extract
-    |- postgres.tf    # Defines the PostgreSQL service
-    |- project.tf     # Defines the Elestio project that will contain the PostgreSQL service
-    |- provider.tf    # Defines the Elestio provider for Terraform
-    |- secret.tfvars  # Defines the sensitive variables values
-    |- variables.tf   # Defines the variables required in other .tf files
+    |- main.tf
+    |- variables.tf   # Defines the type of each variables required by main.tf
+    |- secrets.tfvars # Contains the value of each variables defined in variables.tf
     ```
 
-2.  Rename `secret.tfvars.tmp` file `secret.tfvars` and fill in the appropriate values:
+2.  Rename `secrets.tfvars.tmp` file `secrets.tfvars` and fill in the appropriate values:
 
     ```bash
-    mv secret.tfvars.tmp secret.tfvars
+    mv secrets.tfvars.tmp secrets.tfvars
     ```
 
     ```terraform
-    # file secret.tfvars
+    # file secrets.tfvars
 
     elestio_email     = "<elestio_email>"
     elestio_api_token = "<elestio_api_token>"
@@ -87,7 +84,7 @@ Terraform v0.14.0 # any version >= v0.14.0 is OK
 5.  Apply the configuration:
 
     ```bash
-    terraform apply -var-file="secret.tfvars"
+    terraform apply -var-file="secrets.tfvars"
     ```
 
     Deployment time varies by service, provider, datacenter and server type.
@@ -114,7 +111,7 @@ eval "$(terraform output -raw pg_asia_psql)"
 Run the following command to destroy all the resources you created:
 
 ```bash
-terraform destroy -var-file="secret.tfvars"
+terraform destroy -var-file="secrets.tfvars"
 ```
 
 This command destroys all the resources specified in your Terraform state. `terraform destroy` doesn't destroy resources running elsewhere that aren't managed by the current Terraform project.

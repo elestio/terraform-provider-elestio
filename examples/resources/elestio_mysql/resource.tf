@@ -1,12 +1,9 @@
 # Create and manage MySQL service.
-resource "elestio_mysql" "my_mysql" {
+resource "elestio_mysql" "demo_mysql" {
   project_id    = "2500"
-  server_name   = "awesome-mysql"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-mysql"
   version       = "8"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

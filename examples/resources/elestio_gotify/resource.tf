@@ -1,12 +1,9 @@
 # Create and manage Gotify service.
-resource "elestio_gotify" "my_gotify" {
+resource "elestio_gotify" "demo_gotify" {
   project_id    = "2500"
-  server_name   = "awesome-gotify"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-gotify"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

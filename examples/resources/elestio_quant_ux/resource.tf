@@ -1,12 +1,9 @@
 # Create and manage Quant-UX service.
-resource "elestio_quant_ux" "my_quant_ux" {
+resource "elestio_quant_ux" "demo_quant_ux" {
   project_id    = "2500"
-  server_name   = "awesome-quant_ux"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-quant_ux"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

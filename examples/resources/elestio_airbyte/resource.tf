@@ -1,12 +1,9 @@
 # Create and manage Airbyte service.
-resource "elestio_airbyte" "my_airbyte" {
+resource "elestio_airbyte" "demo_airbyte" {
   project_id    = "2500"
-  server_name   = "awesome-airbyte"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-airbyte"
   version       = "0.43.1"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

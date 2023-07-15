@@ -1,12 +1,9 @@
 # Create and manage Daptin service.
-resource "elestio_daptin" "my_daptin" {
+resource "elestio_daptin" "demo_daptin" {
   project_id    = "2500"
-  server_name   = "awesome-daptin"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-daptin"
   version       = "master"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

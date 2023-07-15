@@ -1,12 +1,9 @@
 # Create and manage Mautic service.
-resource "elestio_mautic" "my_mautic" {
+resource "elestio_mautic" "demo_mautic" {
   project_id    = "2500"
-  server_name   = "awesome-mautic"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-mautic"
   version       = "v4"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

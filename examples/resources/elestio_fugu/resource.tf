@@ -1,12 +1,9 @@
 # Create and manage Fugu service.
-resource "elestio_fugu" "my_fugu" {
+resource "elestio_fugu" "demo_fugu" {
   project_id    = "2500"
-  server_name   = "awesome-fugu"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-fugu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

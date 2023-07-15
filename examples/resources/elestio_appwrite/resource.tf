@@ -1,12 +1,9 @@
 # Create and manage Appwrite service.
-resource "elestio_appwrite" "my_appwrite" {
+resource "elestio_appwrite" "demo_appwrite" {
   project_id    = "2500"
-  server_name   = "awesome-appwrite"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-appwrite"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

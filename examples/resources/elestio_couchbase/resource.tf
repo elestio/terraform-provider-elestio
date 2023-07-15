@@ -1,12 +1,9 @@
 # Create and manage Couchbase service.
-resource "elestio_couchbase" "my_couchbase" {
+resource "elestio_couchbase" "demo_couchbase" {
   project_id    = "2500"
-  server_name   = "awesome-couchbase"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-couchbase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

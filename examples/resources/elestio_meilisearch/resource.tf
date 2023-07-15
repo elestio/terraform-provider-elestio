@@ -1,12 +1,9 @@
 # Create and manage MeiliSearch service.
-resource "elestio_meilisearch" "my_meilisearch" {
+resource "elestio_meilisearch" "demo_meilisearch" {
   project_id    = "2500"
-  server_name   = "awesome-meilisearch"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-meilisearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

@@ -1,12 +1,9 @@
 # Create and manage Kimai service.
-resource "elestio_kimai" "my_kimai" {
+resource "elestio_kimai" "demo_kimai" {
   project_id    = "2500"
-  server_name   = "awesome-kimai"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-kimai"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

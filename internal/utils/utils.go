@@ -2,7 +2,6 @@ package utils
 
 import (
 	"context"
-	"fmt"
 	"strings"
 
 	"github.com/elestio/elestio-go-api-client"
@@ -31,18 +30,6 @@ func SliceStringToSetType(s []string, diags *diag.Diagnostics) types.Set {
 	v, d := types.SetValue(types.StringType, elems)
 	diags.Append(d...)
 	return v
-}
-
-// ObjectValue is a helper function to build a terraform object type
-func ObjectValue(attrTypes map[string]attr.Type, attrs map[string]attr.Value, diags *diag.Diagnostics) types.Object {
-	object, err := types.ObjectValue(attrTypes, attrs)
-	if err != nil {
-		diags.AddError(
-			"Error Building Object Type",
-			fmt.Sprintf("Unable to build the object type, got error: %s", err),
-		)
-	}
-	return object
 }
 
 // BoolValue is a helper function to build a terraform bool type

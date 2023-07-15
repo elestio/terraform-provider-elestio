@@ -74,21 +74,21 @@ type ConfigModel struct {
 	RemoveResponseHeaders types.Set           `tfsdk:"remove_response_headers"`
 }
 
-var configAttrTypes = map[string]attr.Type{
-	"host_header":              types.StringType,
-	"access_logs_enabled":      types.BoolType,
-	"force_https_enabled":      types.BoolType,
-	"ip_rate_limit_per_second": types.Int64Type,
-	"ip_rate_limit_enabled":    types.BoolType,
-	"output_cache_in_seconds":  types.Int64Type,
-	"sticky_session_enabled":   types.BoolType,
-	"proxy_protocol_enabled":   types.BoolType,
-	"ssl_domains":              types.SetType{ElemType: types.StringType},
-	"forward_rules":            types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
-	"output_headers":           types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
-	"target_services":          types.SetType{ElemType: types.StringType},
-	"remove_response_headers":  types.SetType{ElemType: types.StringType},
-}
+// var configAttrTypes = map[string]attr.Type{
+// 	"host_header":              types.StringType,
+// 	"access_logs_enabled":      types.BoolType,
+// 	"force_https_enabled":      types.BoolType,
+// 	"ip_rate_limit_per_second": types.Int64Type,
+// 	"ip_rate_limit_enabled":    types.BoolType,
+// 	"output_cache_in_seconds":  types.Int64Type,
+// 	"sticky_session_enabled":   types.BoolType,
+// 	"proxy_protocol_enabled":   types.BoolType,
+// 	"ssl_domains":              types.SetType{ElemType: types.StringType},
+// 	"forward_rules":            types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
+// 	"output_headers":           types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
+// 	"target_services":          types.SetType{ElemType: types.StringType},
+// 	"remove_response_headers":  types.SetType{ElemType: types.StringType},
+// }
 
 type ForwardRuleModel struct {
 	Port           types.String `tfsdk:"port"`

@@ -1,12 +1,9 @@
 # Create and manage Gitea service.
-resource "elestio_gitea" "my_gitea" {
+resource "elestio_gitea" "demo_gitea" {
   project_id    = "2500"
-  server_name   = "awesome-gitea"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-gitea"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

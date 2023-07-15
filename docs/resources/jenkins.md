@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Jenkins service.
-resource "elestio_jenkins" "my_jenkins" {
+resource "elestio_jenkins" "demo_jenkins" {
   project_id    = "2500"
-  server_name   = "awesome-jenkins"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-jenkins"
   version       = "lts-jdk11"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 
@@ -32,17 +29,14 @@ resource "elestio_jenkins" "my_jenkins" {
 
 ### Required
 
-- `admin_email` (String) Service admin email. Requires replace to change it.
 - `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
-- `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.
-- `ssh_keys` (Attributes Set) Indicate the list of SSH keys to add to the service. (see [below for nested schema](#nestedatt--ssh_keys))
-- `support_level` (String) Service support level. You can look for available support levels and their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 
 ### Optional
 
+- `admin_email` (String) Service admin email. Requires replace to change it.
 - `alerts_enabled` (Boolean) Service alerts state. **Default** `true`.
 - `app_auto_updates_enabled` (Boolean) Service app auto update state. **Default** `true`.
 - `backups_enabled` (Boolean) Service backups state.  Requires a support_level higher than `level1`. **Default** `false`.
@@ -51,13 +45,16 @@ resource "elestio_jenkins" "my_jenkins" {
 - `firewall_enabled` (Boolean) Service firewall state. **Default** `true`.
 - `keep_backups_on_delete_enabled` (Boolean) Creates a backup and keeps all existing ones after deleting the service. If the project is deleted, the backups will be lost. **Default** `true`.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
+- `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
+- `ssh_keys` (Attributes Set) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
+- `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `version` (String) This is the version of the software used as service. **Default** `lts-jdk11`.
 
 ### Read-Only
 
-- `admin` (Attributes) Service admin. (see [below for nested schema](#nestedatt--admin))
+- `admin` (Attributes, Sensitive) Service admin. (see [below for nested schema](#nestedatt--admin))
 - `admin_user` (String) Service admin user.
 - `app_auto_updates_day_of_week` (Number) Service app auto update day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
 - `app_auto_updates_hour` (Number) Service app auto update hour.
@@ -69,7 +66,7 @@ resource "elestio_jenkins" "my_jenkins" {
 - `country` (String) Service country.
 - `created_at` (String) Service creation date.
 - `creator_name` (String) Service creator name.
-- `database_admin` (Attributes) Service database admin. (see [below for nested schema](#nestedatt--database_admin))
+- `database_admin` (Attributes, Sensitive) Service database admin. (see [below for nested schema](#nestedatt--database_admin))
 - `deployment_ended_at` (String) Service deployment endedAt date.
 - `deployment_started_at` (String) Service deployment startedAt date.
 - `deployment_status` (String) Service deployement status.
@@ -106,7 +103,7 @@ resource "elestio_jenkins" "my_jenkins" {
 Required:
 
 - `key_name` (String) SSH Key Name.
-- `public_key` (String) SSH Public Key. With or without comment at the end. Example: `ssh-rsa AAAAB3Nz` or `ssh-rsa AAAAB3Nz comment@macbook.`
+- `public_key` (String) SSH Public Key. The public key should only contain two parts: the protocol and the key. You should not include the username, hostname, or comment.</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`
 
 
 <a id="nestedatt--admin"></a>
@@ -114,7 +111,7 @@ Required:
 
 Read-Only:
 
-- `password` (String, Sensitive) Service admin password.
+- `password` (String) Service admin password.
 - `url` (String) Service admin URL.
 - `user` (String) Service admin user.
 
@@ -124,9 +121,9 @@ Read-Only:
 
 Read-Only:
 
-- `command` (String, Sensitive) Service database admin command.
+- `command` (String) Service database admin command.
 - `host` (String) Service database admin host.
-- `password` (String, Sensitive) Service database admin password.
+- `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
 

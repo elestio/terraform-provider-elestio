@@ -1,12 +1,9 @@
 # Create and manage ErpNext service.
-resource "elestio_erpnext" "my_erpnext" {
+resource "elestio_erpnext" "demo_erpnext" {
   project_id    = "2500"
-  server_name   = "awesome-erpnext"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-erpnext"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

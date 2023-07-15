@@ -116,6 +116,7 @@ FEATURES:
 
 ##
 
+- The `admin_email` attribute of a service resource is now optional. Default value will be chosen by the API from your account email.
 - The `support_level` attribute of a service resource is now optional. Default value is `level1`.
 - The `ssh_keys` attribute of a service resource is now optional. Default value is `[]`.
 - The `ssh_keys.public_key` attribute can now only contain 2 parts (type and key). The comment part is not supported anymore.

@@ -9,6 +9,7 @@ import (
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
+	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
@@ -325,10 +326,14 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"admin_email": schema.StringAttribute{
 				MarkdownDescription: "Service admin email." +
 					" Requires replace to change it.",
-				Required: true,
+				Optional: true,
+				Computed: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
+				},
+				Validators: []validator.String{
+					validators.IsEmail(),
 				},
 			},
 			"default_password": schema.StringAttribute{

@@ -32,7 +32,6 @@ resource "elestio_signoz" "my_signoz" {
 
 ### Required
 
-- `admin_email` (String) Service admin email. Requires replace to change it.
 - `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
@@ -42,6 +41,7 @@ resource "elestio_signoz" "my_signoz" {
 
 ### Optional
 
+- `admin_email` (String) Service admin email. Requires replace to change it.
 - `alerts_enabled` (Boolean) Service alerts state. **Default** `true`.
 - `app_auto_updates_enabled` (Boolean) Service app auto update state. **Default** `true`.
 - `backups_enabled` (Boolean) Service backups state.  Requires a support_level higher than `level1`. **Default** `false`.

@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Moodle service.
-resource "elestio_moodle" "my_moodle" {
+resource "elestio_moodle" "demo_moodle" {
   project_id    = "2500"
-  server_name   = "awesome-moodle"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-moodle"
   version       = "4.2"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

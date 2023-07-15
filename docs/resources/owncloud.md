@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage ownCloud service.
-resource "elestio_owncloud" "my_owncloud" {
+resource "elestio_owncloud" "demo_owncloud" {
   project_id    = "2500"
-  server_name   = "awesome-owncloud"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-owncloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

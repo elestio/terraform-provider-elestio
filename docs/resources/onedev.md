@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Onedev service.
-resource "elestio_onedev" "my_onedev" {
+resource "elestio_onedev" "demo_onedev" {
   project_id    = "2500"
-  server_name   = "awesome-onedev"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-onedev"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

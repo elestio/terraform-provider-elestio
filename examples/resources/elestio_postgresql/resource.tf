@@ -1,12 +1,9 @@
 # Create and manage PostgreSQL service.
-resource "elestio_postgresql" "my_postgresql" {
+resource "elestio_postgresql" "demo_postgresql" {
   project_id    = "2500"
-  server_name   = "awesome-postgresql"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-postgresql"
   version       = "14"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

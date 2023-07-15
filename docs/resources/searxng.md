@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage SearXNG service.
-resource "elestio_searxng" "my_searxng" {
+resource "elestio_searxng" "demo_searxng" {
   project_id    = "2500"
-  server_name   = "awesome-searxng"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-searxng"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

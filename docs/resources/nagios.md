@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Nagios service.
-resource "elestio_nagios" "my_nagios" {
+resource "elestio_nagios" "demo_nagios" {
   project_id    = "2500"
-  server_name   = "awesome-nagios"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-nagios"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

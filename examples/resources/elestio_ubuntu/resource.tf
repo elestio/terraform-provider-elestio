@@ -1,12 +1,9 @@
 # Create and manage Ubuntu service.
-resource "elestio_ubuntu" "my_ubuntu" {
+resource "elestio_ubuntu" "demo_ubuntu" {
   project_id    = "2500"
-  server_name   = "awesome-ubuntu"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-ubuntu"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

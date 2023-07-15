@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage AzuraCast service.
-resource "elestio_azuracast" "my_azuracast" {
+resource "elestio_azuracast" "demo_azuracast" {
   project_id    = "2500"
-  server_name   = "awesome-azuracast"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-azuracast"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

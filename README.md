@@ -30,26 +30,22 @@ provider "elestio" {
 }
 
 # Project that will contain the postgres service
-resource "elestio_project" "demoproject" {
-  name             = "Demo Project"
-  technical_emails = "your-email"
+resource "elestio_project" "project" {
+  name             = "Demo"
+  technical_emails = "your-account-email"
 }
 
 # Service postgres
-resource "elestio_postgres" "demopostgres" {
-  project_id    = elestio_project.demoproject.id
-  server_name   = "demo-postgres"
+resource "elestio_postgresql" "postgres" {
+  project_id    = elestio_project.project.id
   server_type   = "SMALL-1C-2G"
-  version       = "13"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "your-email"
 }
 
 # Retrieve the command to access the database
 output "psql_command" {
-  value       = elestio_postgres.demopostgres.database_admin.command
+  value       = elestio_postgresql.postgres.database_admin.command
   description = "The PSQL command to connect to the database."
   sensitive   = true
 }

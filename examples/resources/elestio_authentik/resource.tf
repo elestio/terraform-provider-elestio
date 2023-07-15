@@ -1,12 +1,9 @@
 # Create and manage Authentik service.
-resource "elestio_authentik" "my_authentik" {
+resource "elestio_authentik" "demo_authentik" {
   project_id    = "2500"
-  server_name   = "awesome-authentik"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-authentik"
   version       = "2023.3.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

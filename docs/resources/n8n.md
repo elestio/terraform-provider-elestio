@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage N8N service.
-resource "elestio_n8n" "my_n8n" {
+resource "elestio_n8n" "demo_n8n" {
   project_id    = "2500"
-  server_name   = "awesome-n8n"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-n8n"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

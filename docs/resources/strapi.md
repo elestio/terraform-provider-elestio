@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Strapi service.
-resource "elestio_strapi" "my_strapi" {
+resource "elestio_strapi" "demo_strapi" {
   project_id    = "2500"
-  server_name   = "awesome-strapi"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-strapi"
   version       = "3"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

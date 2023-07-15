@@ -1,12 +1,9 @@
 # Create and manage Vault service.
-resource "elestio_vault" "my_vault" {
+resource "elestio_vault" "demo_vault" {
   project_id    = "2500"
-  server_name   = "awesome-vault"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-vault"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

@@ -1,12 +1,9 @@
 # Create and manage nopCommerce service.
-resource "elestio_nopcommerce" "my_nopcommerce" {
+resource "elestio_nopcommerce" "demo_nopcommerce" {
   project_id    = "2500"
-  server_name   = "awesome-nopcommerce"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-nopcommerce"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Discourse service.
-resource "elestio_discourse" "my_discourse" {
+resource "elestio_discourse" "demo_discourse" {
   project_id    = "2500"
-  server_name   = "awesome-discourse"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-discourse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

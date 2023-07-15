@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Uptime-kuma service.
-resource "elestio_uptime_kuma" "my_uptime_kuma" {
+resource "elestio_uptime_kuma" "demo_uptime_kuma" {
   project_id    = "2500"
-  server_name   = "awesome-uptime_kuma"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-uptime_kuma"
   version       = "1"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

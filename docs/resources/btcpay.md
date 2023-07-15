@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage BTCPay service.
-resource "elestio_btcpay" "my_btcpay" {
+resource "elestio_btcpay" "demo_btcpay" {
   project_id    = "2500"
-  server_name   = "awesome-btcpay"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-btcpay"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage SonarQube service.
-resource "elestio_sonarqube" "my_sonarqube" {
+resource "elestio_sonarqube" "demo_sonarqube" {
   project_id    = "2500"
-  server_name   = "awesome-sonarqube"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-sonarqube"
   version       = "9"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

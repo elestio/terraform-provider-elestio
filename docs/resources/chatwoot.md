@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Chatwoot service.
-resource "elestio_chatwoot" "my_chatwoot" {
+resource "elestio_chatwoot" "demo_chatwoot" {
   project_id    = "2500"
-  server_name   = "awesome-chatwoot"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-chatwoot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage NextCloud service.
-resource "elestio_nextcloud" "my_nextcloud" {
+resource "elestio_nextcloud" "demo_nextcloud" {
   project_id    = "2500"
-  server_name   = "awesome-nextcloud"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-nextcloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

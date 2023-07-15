@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Lightdash service.
-resource "elestio_lightdash" "my_lightdash" {
+resource "elestio_lightdash" "demo_lightdash" {
   project_id    = "2500"
-  server_name   = "awesome-lightdash"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-lightdash"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Grafana service.
-resource "elestio_grafana" "my_grafana" {
+resource "elestio_grafana" "demo_grafana" {
   project_id    = "2500"
-  server_name   = "awesome-grafana"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-grafana"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

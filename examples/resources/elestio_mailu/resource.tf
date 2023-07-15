@@ -1,12 +1,9 @@
 # Create and manage Mailu service.
-resource "elestio_mailu" "my_mailu" {
+resource "elestio_mailu" "demo_mailu" {
   project_id    = "2500"
-  server_name   = "awesome-mailu"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-mailu"
   version       = "2.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

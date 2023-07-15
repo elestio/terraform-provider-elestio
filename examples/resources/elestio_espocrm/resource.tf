@@ -1,12 +1,9 @@
 # Create and manage EspoCRM service.
-resource "elestio_espocrm" "my_espocrm" {
+resource "elestio_espocrm" "demo_espocrm" {
   project_id    = "2500"
-  server_name   = "awesome-espocrm"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-espocrm"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

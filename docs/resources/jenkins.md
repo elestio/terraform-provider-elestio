@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Jenkins service.
-resource "elestio_jenkins" "my_jenkins" {
+resource "elestio_jenkins" "demo_jenkins" {
   project_id    = "2500"
-  server_name   = "awesome-jenkins"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-jenkins"
   version       = "lts-jdk11"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

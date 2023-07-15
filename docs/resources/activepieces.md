@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Activepieces service.
-resource "elestio_activepieces" "my_activepieces" {
+resource "elestio_activepieces" "demo_activepieces" {
   project_id    = "2500"
-  server_name   = "awesome-activepieces"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-activepieces"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

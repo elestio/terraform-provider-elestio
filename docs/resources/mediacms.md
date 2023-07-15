@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage MediaCMS service.
-resource "elestio_mediacms" "my_mediacms" {
+resource "elestio_mediacms" "demo_mediacms" {
   project_id    = "2500"
-  server_name   = "awesome-mediacms"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-mediacms"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

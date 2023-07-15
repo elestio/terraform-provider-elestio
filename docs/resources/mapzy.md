@@ -14,16 +14,13 @@ description: |-
 
 ```terraform
 # Create and manage Mapzy service.
-resource "elestio_mapzy" "my_mapzy" {
+resource "elestio_mapzy" "demo_mapzy" {
   project_id    = "2500"
-  server_name   = "awesome-mapzy"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-mapzy"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }
 ```
 

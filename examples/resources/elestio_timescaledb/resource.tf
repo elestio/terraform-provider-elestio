@@ -1,12 +1,9 @@
 # Create and manage TimescaleDB service.
-resource "elestio_timescaledb" "my_timescaledb" {
+resource "elestio_timescaledb" "demo_timescaledb" {
   project_id    = "2500"
-  server_name   = "awesome-timescaledb"
-  server_type   = "SMALL-1C-2G"
+  server_name   = "demo-timescaledb"
   version       = "pg14-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  support_level = "level1"
-  admin_email   = "example@mail.com"
-  ssh_keys      = []
+  server_type   = "SMALL-1C-2G"
 }

@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
@@ -274,8 +275,15 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				MarkdownDescription: "The server type defines the power and memory allocated to the service." +
 					" Each `provider_name` has a list of available server types." +
 					" You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types)." +
-					" You can only upgrade it, not downgrade.",
+					" You can only upgrade it, not downgrade." +
+					"<br/>Requires replace to update the server type with the provider `scale_way`.",
 				Required: true,
+				PlanModifiers: []planmodifier.String{
+					stringplanmodifier.RequiresReplaceIf(modifiers.RequiresReplaceIfProviderScaleway(),
+						"Requires replace to update the server type with the provider `scale_way`.",
+						"Requires replace to update the server type with the provider `scale_way`.",
+					),
+				},
 			},
 			"template_id": schema.Int64Attribute{
 				MarkdownDescription: " The template identifier defines the software used." +
@@ -348,6 +356,9 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
+				},
+				Validators: []validator.String{
+					validators.IsDefaultPassword(),
 				},
 			},
 			"category": schema.StringAttribute{
@@ -431,12 +442,13 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 						},
 						"public_key": schema.StringAttribute{
 							MarkdownDescription: "SSH Public Key." +
-								" The public key should only contain two parts: the protocol and the key." +
-								" You should not include the username, hostname, or comment." +
-								"</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`" +
-								"</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`",
+								"The SSH public key should only contain two parts separated by a space." +
+								" Example: `ssh-rsa AAaCfa...WAqDUNs=`." +
+								" You should not include the username, hostname, or comment.",
 							Required: true,
-							// The validators are specified in the Configure method below.
+							Validators: []validator.String{
+								validators.IsPublicSSHKey(),
+							},
 						},
 					},
 				},
@@ -683,58 +695,6 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		return
 	}
 
-	if data.DefaultPassword.ValueString() != "" {
-		// Password length must be at least 10 characters
-		if len(data.DefaultPassword.ValueString()) < 10 {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("default_password"),
-				"Invalid Attribute Configuration",
-				"The password must be at least 10 characters.",
-			)
-			return
-		}
-
-		// Password can only contain alphanumeric characters or hyphens
-		if !regexp.MustCompile(`^[a-zA-Z0-9-]+$`).MatchString(data.DefaultPassword.ValueString()) {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("default_password"),
-				"Invalid Attribute Configuration",
-				"The password can only contain alphanumeric characters or hyphens.",
-			)
-			return
-		}
-
-		// Password must contain at least one uppercase letter
-		if !strings.ContainsAny(data.DefaultPassword.ValueString(), "ABCDEFGHIJKLMNOPQRSTUVWXYZ") {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("default_password"),
-				"Invalid Attribute Configuration",
-				"The password must contain at least one uppercase letter.",
-			)
-			return
-		}
-
-		// Password must contain at least one lowercase letter
-		if !strings.ContainsAny(data.DefaultPassword.ValueString(), "abcdefghijklmnopqrstuvwxyz") {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("default_password"),
-				"Invalid Attribute Configuration",
-				"The password must contain at least one lowercase letter.",
-			)
-			return
-		}
-
-		// Password must contain at least one number
-		if !strings.ContainsAny(data.DefaultPassword.ValueString(), "0123456789") {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("default_password"),
-				"Invalid Attribute Configuration",
-				"The password must contain at least one number.",
-			)
-			return
-		}
-	}
-
 	if data.BackupsEnabled.ValueBool() && data.SupportLevel.ValueString() == "level1" {
 		resp.Diagnostics.AddAttributeError(
 			path.Root("backups_enabled"),
@@ -754,25 +714,9 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		return
 	}
 
-	// Check that:
-	// - the ssh public_keys have the good format "protocol key" and contain only two parts.
-	// - the ssh keys names are unique because names are used as identifiers.
+	// Check that ssh keys names are unique because names are used as identifiers.
 	existingKeyNames := make(map[string]bool)
 	for _, key := range data.SSHKeys {
-		parts := strings.Split(key.PublicKey.ValueString(), " ")
-		if len(parts) != 2 {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("ssh_keys"),
-				"Invalid Attribute Configuration",
-				fmt.Sprintf("The public key of %s contain %d parts.", key.KeyName.ValueString(), len(parts))+
-					" The public key should only contain two parts: the protocol and the key."+
-					" You should not include the username, hostname, or comment."+
-					"</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`"+
-					"</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`",
-			)
-			return
-		}
-
 		if _, exists := existingKeyNames[key.KeyName.ValueString()]; exists {
 			resp.Diagnostics.AddAttributeError(
 				path.Root("ssh_keys"),
@@ -978,7 +922,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		if err := r.client.Service.UpdateServerType(service.ID, plan.ServerType.ValueString(), service.ProviderName, service.Datacenter); err != nil {
 			return nil, fmt.Errorf("failed to update serverType: %s", err)
 		}
-		r.waitServerTypeUpdate(ctx, service, plan.ServerType.ValueString())
+		r.waitServerReboot(ctx, service)
 	}
 
 	if !state.Version.Equal(plan.Version) {
@@ -1102,6 +1046,8 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 	}
 
 	if len(state.SSHKeys) > 0 || len(plan.SSHKeys) > 0 {
+		keyWasUpdated := false
+
 		// Create maps for easy lookup
 		stateKeysMap := make(map[string]SSHKeyModel)
 		planKeysMap := make(map[string]SSHKeyModel)
@@ -1120,6 +1066,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 				if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
 					return nil, fmt.Errorf("failed to remove ssh key: %s", err)
 				}
+				keyWasUpdated = true
 			}
 		}
 
@@ -1134,13 +1081,22 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 					if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
 						return nil, fmt.Errorf("failed to update (add the new one) ssh key: %s", err)
 					}
+					keyWasUpdated = true
 				}
 			} else {
 				// Key does not exist in state, so create it
 				if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
 					return nil, fmt.Errorf("failed to add ssh key: %s", err)
 				}
+				keyWasUpdated = true
 			}
+		}
+
+		if keyWasUpdated && plan.ProviderName.ValueString() == "scaleway" {
+			if err := r.client.Service.RebootServer(service.ID); err != nil {
+				return nil, fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
+			}
+			r.waitServerReboot(ctx, service)
 		}
 	}
 
@@ -1383,40 +1339,36 @@ func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *eles
 	return nil
 }
 
-func (r *ServiceResource) waitServerTypeUpdate(ctx context.Context, service *elestio.Service, expectedNewServerType string) (*elestio.Service, error) {
-	updateTimeout := 10 * time.Minute
-	updateStateConf := retry.StateChangeConf{
-		Pending: []string{"updating"},
-		Target:  []string{"updated"},
+func (r *ServiceResource) waitServerReboot(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
+	timeout := 10 * time.Minute
+	stateConf := retry.StateChangeConf{
+		Pending: []string{"rebooting"},
+		Target:  []string{"rebooted"},
 		Refresh: func() (interface{}, string, error) {
 			serviceW, err := r.client.Service.Get(service.ProjectID, service.ID)
 			if err != nil {
 				return struct{}{}, "", err
 			}
 
-			// running -> stopped -> migrating -> running
+			// running -> stopping -> stopped -> migrating -> running
 			if serviceW.Status != elestio.ServiceStatusRunning {
-				return struct{}{}, "updating", nil
+				return struct{}{}, "rebooting", nil
 			}
 
-			if serviceW.ServerType != expectedNewServerType {
-				return struct{}{}, "updating", nil
-			}
-
-			return serviceW, "updated", nil
+			return serviceW, "rebooted", nil
 		},
-		Timeout:                   updateTimeout,
-		Delay:                     80 * time.Second,
+		Timeout:                   timeout,
+		Delay:                     40 * time.Second,
 		MinTimeout:                10 * time.Second,
 		ContinuousTargetOccurence: 2,
 	}
 
-	tflog.Trace(ctx, fmt.Sprintf("Service update server type waiter timeout %.0f minutes", updateTimeout.Minutes()))
+	tflog.Trace(ctx, fmt.Sprintf("Service reboot waiter timeout %.0f minutes", timeout.Minutes()))
 
-	serviceUpdated, err := updateStateConf.WaitForStateContext(ctx)
+	serviceRebooted, err := stateConf.WaitForStateContext(ctx)
 	if err != nil {
-		return nil, fmt.Errorf("service update server type waiter failed, got error: %s", err)
+		return nil, fmt.Errorf("service reboot waiter failed, got error: %s", err)
 	}
 
-	return serviceUpdated.(*elestio.Service), nil
+	return serviceRebooted.(*elestio.Service), nil
 }

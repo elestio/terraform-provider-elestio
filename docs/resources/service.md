@@ -33,7 +33,7 @@ resource "elestio_service" "demo_service" {
 - `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
-- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.
+- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.<br/>Requires replace to update the server type with the provider `scale_way`.
 - `template_id` (Number) The template identifier defines the software used. You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services).
 - `version` (String) This is the version of the software used as service.
 
@@ -104,7 +104,7 @@ resource "elestio_service" "demo_service" {
 Required:
 
 - `key_name` (String) SSH Key Name.
-- `public_key` (String) SSH Public Key. The public key should only contain two parts: the protocol and the key. You should not include the username, hostname, or comment.</br>Valid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ`</br>Invalid: `ssh-rsa AAAAB3NzaC1yc2E...BAAABAQDZ user@host comment`
+- `public_key` (String) SSH Public Key.The SSH public key should only contain two parts separated by a space. Example: `ssh-rsa AAaCfa...WAqDUNs=`. You should not include the username, hostname, or comment.
 
 
 <a id="nestedatt--admin"></a>

@@ -162,9 +162,12 @@ FEATURES:
 ## v0.10.1 (17 July, 2023)
 
 - Limit `provider_name` to:
+
   - `hetzner`
   - `do` for DigitalOcean
   - `lightsail` for AWS Lightsail
   - `linode`
   - `vultr`
   - `scaleway`
+
+- Update and simplify the documentation guides.

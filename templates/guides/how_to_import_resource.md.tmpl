@@ -1,5 +1,5 @@
 ---
-page_title: "Import an existing resource"
+page_title: "How to import an existing resource"
 ---
 
 # Import an existing resource

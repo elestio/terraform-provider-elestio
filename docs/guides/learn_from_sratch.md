@@ -1,12 +1,12 @@
 ---
-page_title: "Deploy from scratch"
+page_title: 'Learn how to write your first Terraform configuration'
 ---
 
-# Deploy from scratch
+# Learn how to write your first Terraform configuration
 
 In this guide, starting from an empty folder, you will learn how to deploy a Terraform infrastructure on Elestio !
 
-You can check this repository [elestio-terraform-scratch](https://github.com/elestio-examples/elestio-terraform-scratch) that contain the final code of this guide.
+If you have any doubt, you can check the final code of this guide in this repository [elestio-terraform-scratch][elestio-terraform-scratch](https://github.com/elestio-examples/elestio-terraform-scratch).
 
 ## Prepare the dependencies
 
@@ -36,50 +36,48 @@ This section will explain how to organize a basic Terraform project :
 
 1. **Create and move to an empty folder**
 
-    -> **Note:** Here is an overview of the files we will create together
+    -> **Note:** Here is an overview of the files we will create together. Do not create them yet.
 
     ```bash
     # do not create yet theses files
-    |- outputs.tf     # Defines the outputs you want terraform extract
-    |- postgres.tf    # Defines the PostgreSQL service
-    |- project.tf     # Defines the Elestio project that will contain the PostgreSQL service
-    |- provider.tf    # Defines the Elestio provider for Terraform
-    |- secret.tfvars  # Defines the sensitive variables values
-    |- variables.tf   # Defines the variables required in other .tf files
+    |- main.tf
+    |- variables.tf   # Defines the type of each variables required by main.tf
+    |- secrets.tfvars # Contains the value of each variables defined in variables.tf
     ```
 
-2. **Create a file `provider.tf` and declare the provider adding the following lines :**
+2. **Create a file `main.tf` and declare the provider adding the following lines :**
 
-    ```terraform
-    # provider.tf
+    ```hcl
+    # main.tf
 
     terraform {
       required_providers {
-         elestio = {
-            source  = "elestio/elestio"
-            version = "0.3.0" # check out the latest version available
-         }
+        elestio = {
+          source = "elestio/elestio"
+          # check out the latest version available
+          version = "0.10.0"
+        }
       }
     }
 
-    # Configure the Elestio Provider
+    # Configure the Elestio Provider with your credentials
     provider "elestio" {
-       email     = var.elestio_email
-       api_token = var.elestio_api_token
+      email     = var.elestio_email
+      api_token = var.elestio_api_token
     }
     ```
 
     As you can see, the email and API token are assigned to variables.  
-     You should never put sensitive information directly in `.tf` files.
+    You should never put sensitive information directly in `.tf` files.
 
 3. **Create a file `variables.tf` and declare variables adding the following lines :**
 
-    ```terraform
+    ```hcl
     # variables.tf
 
     variable "elestio_email" {
-      description = "Elestio Email"
-      type        = string
+        description = "Elestio Email"
+        type        = string
     }
 
     variable "elestio_api_token" {
@@ -91,10 +89,10 @@ This section will explain how to organize a basic Terraform project :
 
     This file does not contain the values of these variables. We will have to declare them in another file.
 
-4. Create a file `secret.tfvars` and fill it with your values :
+4. Create a file `secrets.tfvars` and fill it with your values :
 
     ```bash
-    # secret.tfvars
+    # secrets.tfvars
 
     elestio_email      = "YOUR-EMAIL"
     elestio_api_token  = "YOUR-API-TOKEN"
@@ -102,10 +100,10 @@ This section will explain how to organize a basic Terraform project :
 
     ~> **Note:** Do not commit with Git this file ! Sensitive information such as an API token should never be pushed. For more information on how to securely authenticate, please read the [authentication documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs#authentication).
 
-5. **Create a file `project.tf` and add the following lines :**
+5. **Go back to the `main.tf` file and add the following lines :**
 
-    ```bash
-    # project.tf
+    ```hcl
+    # add to main.tf
 
     # Create a Project
     resource "elestio_project" "pg_project" {
@@ -118,36 +116,29 @@ This section will explain how to organize a basic Terraform project :
     To contain our PostgreSQL service, we will have to create a new project on Elestio.  
     Instead of using the web interface, we can also declare it via terraform.
 
-6. **Create a file `postgres.tf` and add the following lines :**
-
-    ```bash
-    # postgres.tf
-
-    # Create a PostgreSQL Service
-    resource "elestio_postgresql" "pg_service" {
-      project_id    = elestio_project.pg_project.id
-      server_name   = "pg-service"
-      server_type   = "SMALL-1C-2G"
-      provider_name = "hetzner"
-      datacenter    = "fsn1"
-      support_level = "level1"
-      admin_email   = var.elestio_email
-    }
-    ```
-
-    Terraform takes care of managing the dependencies and creating the different resources in the right order. As you can see, `project_id` will be filled with the value of the Project Resource that will be created with the previously `project.tf` file.
-
-7. **Create a file `outputs.tf` and add the following lines :**
+6. **In the same `main.tf` file, add the following lines :**
 
     ```terraform
-    # outputs.tf
+    # add to main.tf
 
+    # Create a PostgreSQL Service
+    resource "elestio_postgresql" "my_service" {
+      project_id       = elestio_project.my_project.id
+      provider_name    = "hetzner"
+      datacenter       = "fsn1"
+      server_type      = "SMALL-1C-2G"
+      firewall_enabled = true
+    }
+
+    # Output the command that can be used to connect to the database
     output "pg_service_psql_command" {
-      value       = elestio_postgresql.pg_service.database_admin.command
+      value       = elestio_postgresql.my_service.database_admin.command
       description = "The PSQL command to connect to the database."
       sensitive   = true
     }
     ```
+
+    Terraform takes care of managing the dependencies and creating the different resources in the right order. As you can see, `project_id` will be filled with the value of the Project Resource that will be created.
 
 ## Apply the Terraform configuration
 
@@ -166,7 +157,7 @@ This section will explain how to organize a basic Terraform project :
 3. **Apply the configuration :**
 
     ```bash
-    terraform apply -var-file="secret.tfvars"
+    terraform apply -var-file="secrets.tfvars"
     ```
 
     Deployment time varies by service, provider, datacenter and server type.
@@ -174,6 +165,28 @@ This section will explain how to organize a basic Terraform project :
 4. **Voila, you have created a Project and PostgreSQL Service using Terraform !**
 
     You can visit the [Elestio web dashboard](https://dash.elest.io/) to see these ressources.
+
+## Update the configuration
+
+1. Change the `firewall_enabled` value to false in `main.tf` and run the following command :
+
+    ```bash
+    terraform apply -var-file="secrets.tfvars"
+    ```
+
+    This will update the configuration and destroy the firewall.
+
+2. Revert the change in `main.tf` and run the following command :
+
+    ```bash
+    terraform apply -var-file="secrets.tfvars"
+    ```
+
+    This will update the configuration and create the firewall again.
+
+Some changes (ex: `datacenter`) require the creation of new resources and the destruction of old resources.
+Terraform will show you the resources to be created and destroyed before prompting you to confirm.
+You can loose data if you destroy a resource, so be careful.
 
 ## (Optional) Access to the database
 
@@ -194,7 +207,7 @@ eval "$(terraform output -raw pg_service_psql_command)"
 Run the following command to destroy all the resources you created:
 
 ```bash
-terraform destroy -var-file="secret.tfvars"
+terraform destroy -var-file="secrets.tfvars"
 ```
 
 This command destroys all the resources specified in your Terraform state. `terraform destroy` doesn't destroy resources running elsewhere that aren't managed by the current Terraform project.

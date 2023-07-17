@@ -304,6 +304,9 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
+				Validators: []validator.String{
+					stringvalidator.OneOf("hetzner", "do", "lightsail", "linode", "vultr", "scaleway"),
+				},
 			},
 			"datacenter": schema.StringAttribute{
 				MarkdownDescription: "The datacenter of the provider where the service will be hosted." +

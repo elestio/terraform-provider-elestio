@@ -8,6 +8,7 @@ import (
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/hashicorp/terraform-plugin-framework-validators/setvalidator"
+	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -184,6 +185,9 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
+				},
+				Validators: []validator.String{
+					stringvalidator.OneOf("hetzner", "do", "lightsail", "linode", "vultr", "scaleway"),
 				},
 			},
 			"datacenter": schema.StringAttribute{

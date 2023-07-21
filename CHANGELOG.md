@@ -171,3 +171,7 @@ FEATURES:
   - `scaleway`
 
 - Update and simplify the documentation guides.
+
+## v0.10.2 (21 July, 2023)
+
+- Fix a unhandled bug on `ssh_keys` attribute of a service resource.

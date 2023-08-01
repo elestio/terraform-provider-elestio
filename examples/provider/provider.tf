@@ -1,8 +1,7 @@
 terraform {
   required_providers {
     elestio = {
-      source  = "elestio/elestio"
-      version = "0.2.0" # check out the latest version in the release section
+      source = "elestio/elestio"
     }
   }
 }
@@ -14,8 +13,7 @@ provider "elestio" {
 }
 
 # Create a project
-resource "elestio_project" "myawesomeproject" {
-  name = "Awesome project"
-  # ...
+resource "elestio_project" "project" {
+  name             = "Demo"
+  technical_emails = "admin@email.com"
 }
-

@@ -48,13 +48,12 @@ When you create a service via the website, all three pieces of information (prov
 
 For each of the providers, here are the values to pass to terraform **provider_name**:
 
-- Vultr Cloud -> `vultr`
 - Hetzner Cloud -> `hetzner`
 - Digital Ocean -> `do`
 - Amazon Lightsail -> `lightsail`
 - Linode Cloud -> `linode`
-- BYOVM -> `byovm`
-- Amazon EC2 -> `aws`
+- Vultr Cloud -> `vultr`
+- Scaleway -> `scaleway`
 
 ## Datacenters
 

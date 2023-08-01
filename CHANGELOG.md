@@ -175,3 +175,7 @@ FEATURES:
 ## v0.10.2 (21 July, 2023)
 
 - Fix a unhandled bug on `ssh_keys` attribute of a service resource.
+
+## v0.10.3 (1 August, 2023)
+
+- Fix documentation typo.

@@ -1,5 +1,5 @@
 ---
-page_title: 'SSH Keys with Elestio and Terraform'
+page_title: "SSH Keys"
 ---
 
 # SSH Keys with Elestio and Terraform
@@ -47,8 +47,8 @@ In the example above you will note that the key starts with "ssh-dss". This is b
 
 ```
 DSA has an intrinsic weakness which makes it very easy to create a signature
-which contains enough information to give away the private key! This would
-allow an attacker to pretend to be you for any number of future sessions.
+which contains enough information to give away the private key! This would 
+allow an attacker to pretend to be you for any number of future sessions. 
 ```
 
 For this reason, **Elestio only accepts RSA public keys**.
@@ -61,19 +61,16 @@ SI016HMjIFQZzzgF+l2Q90MHxFcPiPP1fKCt4YSp4HOOMA3FsZerxnG/ay73WadY38BpJLsb+hx7STo
 ```
 
 ### Unix/Linux and Mac OS X
-
 1. Open a terminal window.
 2. Enter `ssh-keygen -t rsa` and press enter.
 3. Look in your ~/.ssh directory (or where you saved the output). You'll `find id_XXX` (private key) and `id_XXX.pub` (public key).
 
 ### Windows
-
 1. Download and use [PuTTYgen](https://www.puttygen.com/)
 2. Make sure you choose the RSA2 key format
 3. Save the private key and the public key that are generated
 
 ### Convert existing SSH2 key to OpenSSH format
-
 If you already have a SSH2 key, you can convert it to OpenSSH format using the command `ssh-keygen -i -f ssh2.pub`
 
 ## How to use SSH keys in Terraform

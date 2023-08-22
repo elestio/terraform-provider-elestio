@@ -79,6 +79,7 @@ type (
 		CNAME                                       types.String `tfsdk:"cname"`
 		CustomDomainNames                           types.Set    `tfsdk:"custom_domain_names"`
 		SSHKeys                                     types.Set    `tfsdk:"ssh_keys"`
+		SSHPublicKeys                               types.Set    `tfsdk:"ssh_public_keys"`
 		Country                                     types.String `tfsdk:"country"`
 		City                                        types.String `tfsdk:"city"`
 		AdminUser                                   types.String `tfsdk:"admin_user"`
@@ -121,11 +122,13 @@ type (
 )
 
 type SSHKeyModel struct {
+	// Deprecated: replaced by SSHPublicKeyModel
 	KeyName   types.String `tfsdk:"key_name"`
 	PublicKey types.String `tfsdk:"public_key"`
 }
 
 var sshKeyAttryTypes = map[string]attr.Type{
+	// Deprecated: replaced by sshPublicKeyAttryTypes
 	"key_name":   types.StringType,
 	"public_key": types.StringType,
 }
@@ -450,12 +453,15 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 								" You should not include the username, hostname, or comment.",
 							Required: true,
 							Validators: []validator.String{
-								validators.IsPublicSSHKey(),
+								validators.IsSSHPublicKey(),
 							},
+							DeprecationMessage: "This attribute is deprecated and will be removed in a future version." +
+								" Please use `ssh_public_keys` instead.",
 						},
 					},
 				},
 			},
+			"ssh_public_keys": sshPublicKeysSchema,
 			"country": schema.StringAttribute{
 				MarkdownDescription: "Service country.",
 				Computed:            true,
@@ -717,26 +723,8 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		return
 	}
 
-	var sshKeys []SSHKeyModel
-	resp.Diagnostics.Append(data.SSHKeys.ElementsAs(ctx, &sshKeys, true)...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
-	mapKeys := make(map[string]SSHKeyModel)
-	for _, key := range sshKeys {
-		// Duplicate ssh key names are not allowed.
-		if duplicateKey, exists := mapKeys[key.KeyName.ValueString()]; exists {
-			resp.Diagnostics.AddAttributeError(
-				path.Root("ssh_keys"),
-				"Invalid Attribute Configuration",
-				fmt.Sprintf("Duplicate ssh key name: %s", duplicateKey.KeyName.ValueString()),
-			)
-			return
-		}
-
-		mapKeys[key.KeyName.ValueString()] = key
-	}
+	// TODO: Move this check to a validator file with the proper format
+	ensureSSHPublicKeysUsernamesAreUnique(&ctx, &data.SSHPublicKeys, &resp.Diagnostics)
 }
 
 func (r *ServiceResource) Configure(ctx context.Context, req resource.ConfigureRequest, resp *resource.ConfigureResponse) {
@@ -1055,81 +1043,45 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	// Retrieve the actual state of the ssh keys
-	var stateKeys []SSHKeyModel
-	diags.Append(state.SSHKeys.ElementsAs(ctx, &stateKeys, true)...)
+	keysToAdd, keysToUpdate, keysToRemove := compareSSHPublicKeys(&ctx, &state.SSHPublicKeys, &plan.SSHPublicKeys, diags)
 	if diags.HasError() {
-		return nil, fmt.Errorf("failed to retrieve ssh keys from state")
+		return nil, fmt.Errorf("failed to compare ssh public keys from state to plan")
 	}
 
-	// Retrieve the planned state of the ssh keys
-	var planKeys []SSHKeyModel
-	diags.Append(plan.SSHKeys.ElementsAs(ctx, &planKeys, true)...)
-
-	if diags.HasError() {
-		return nil, fmt.Errorf("failed to retrieve ssh keys from plan")
+	for _, key := range keysToRemove {
+		if err := r.client.Service.RemoveSSHPublicKey(service.ID, key.Username.ValueString()); err != nil {
+			return nil, fmt.Errorf("failed to remove ssh public key: %s", err)
+		}
 	}
 
-	if len(stateKeys) > 0 || len(planKeys) > 0 {
-		keyWasUpdated := false
-
-		// Create maps for easy lookup
-		stateKeysMap := make(map[string]SSHKeyModel)
-		planKeysMap := make(map[string]SSHKeyModel)
-
-		for _, obj := range stateKeys {
-			stateKeysMap[obj.KeyName.ValueString()] = obj
+	for _, key := range keysToUpdate {
+		if err := r.client.Service.RemoveSSHPublicKey(service.ID, key.Username.ValueString()); err != nil {
+			return nil, fmt.Errorf("failed to update (remove the old one) ssh public key: %s", err)
 		}
-
-		for _, obj := range planKeys {
-			planKeysMap[obj.KeyName.ValueString()] = obj
+		if err := r.client.Service.AddSSHPublicKey(service.ID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
+			return nil, fmt.Errorf("failed to update (add the new one) ssh public key: %s", err)
 		}
+	}
 
-		// Iterate over state and delete any objects that are not in the plan
-		for _, stateKey := range stateKeys {
-			if _, exists := planKeysMap[stateKey.KeyName.ValueString()]; !exists {
-				if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
-					return nil, fmt.Errorf("failed to remove ssh key: %s", err)
-				}
-				keyWasUpdated = true
-			}
+	for _, key := range keysToAdd {
+		if err := r.client.Service.AddSSHPublicKey(service.ID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
+			return nil, fmt.Errorf("failed to add ssh public key: %s", err)
 		}
+	}
 
-		// Iterate over the plan and compare each key to the corresponding key in state
-		for _, planKey := range planKeys {
-			if stateKey, exists := stateKeysMap[planKey.KeyName.ValueString()]; exists {
-				if !planKey.PublicKey.Equal(stateKey.PublicKey) {
-					// Key exists in state but has a different public key value, so update it (delete and recreate)
-					if err := r.client.Service.RemoveSSHKey(service.ID, stateKey.KeyName.ValueString()); err != nil {
-						return nil, fmt.Errorf("failed to update (remove the old one) ssh key: %s", err)
-					}
-					if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
-						return nil, fmt.Errorf("failed to update (add the new one) ssh key: %s", err)
-					}
-					keyWasUpdated = true
-				}
-			} else {
-				// Key does not exist in state, so create it
-				if err := r.client.Service.AddSSHKey(service.ID, planKey.KeyName.ValueString(), planKey.PublicKey.ValueString()); err != nil {
-					return nil, fmt.Errorf("failed to add ssh key: %s", err)
-				}
-				keyWasUpdated = true
-			}
+	// Scaleway does not support updating ssh keys without rebooting the server.
+	keyWasUpdated := len(keysToAdd) > 0 || len(keysToUpdate) > 0 || len(keysToRemove) > 0
+	if keyWasUpdated && plan.ProviderName.ValueString() == "scaleway" {
+		if err := r.client.Service.RebootServer(service.ID); err != nil {
+			return nil, fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
 		}
-
-		if keyWasUpdated && plan.ProviderName.ValueString() == "scaleway" {
-			if err := r.client.Service.RebootServer(service.ID); err != nil {
-				return nil, fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
-			}
-			r.waitServerReboot(ctx, service)
-		}
+		r.waitServerReboot(ctx, service)
 	}
 
 	service, err := r.client.Service.Get(service.ProjectID, service.ID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to get service: %s", err)
 	}
-
 	return service, nil
 }
 
@@ -1156,19 +1108,19 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.IPV6 = types.StringValue(service.IPV6)
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
-	sshKeys := make([]SSHKeyModel, len(service.SSHKeys))
-	for i, s := range service.SSHKeys {
-		sshKeys[i] = SSHKeyModel{
-			KeyName:   types.StringValue(s.KeyName),
-			PublicKey: types.StringValue(s.PublicKey),
+	sshPublicKeys := make([]SSHPublicKeyModel, len(service.SSHPublicKeys))
+	for i, s := range service.SSHPublicKeys {
+		sshPublicKeys[i] = SSHPublicKeyModel{
+			Username: types.StringValue(s.Name),
+			KeyData:  types.StringValue(s.Key),
 		}
 	}
-	setKeys, d := types.SetValueFrom(ctx, types.ObjectType{AttrTypes: sshKeyAttryTypes}, sshKeys)
+	setSSHPublicKeys, d := types.SetValueFrom(ctx, types.ObjectType{AttrTypes: sshKeyAttryTypes}, sshPublicKeys)
 	diags.Append(d...)
 	if diags.HasError() {
 		return
 	}
-	data.SSHKeys = setKeys
+	data.SSHPublicKeys = setSSHPublicKeys
 	data.Country = types.StringValue(service.Country)
 	data.City = types.StringValue(service.City)
 	data.AdminUser = types.StringValue(service.AdminUser)

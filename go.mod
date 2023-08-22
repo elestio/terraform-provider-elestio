@@ -3,12 +3,14 @@ module github.com/elestio/terraform-provider-elestio
 go 1.18
 
 require (
-	github.com/elestio/elestio-go-api-client v1.10.0
+	github.com/elestio/elestio-go-api-client v1.11.1
+	github.com/google/go-cmp v0.5.9
 	github.com/hashicorp/terraform-plugin-docs v0.15.0
 	github.com/hashicorp/terraform-plugin-framework v1.3.1
 	github.com/hashicorp/terraform-plugin-framework-validators v0.10.0
 	github.com/hashicorp/terraform-plugin-log v0.9.0
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.26.1
+	golang.org/x/crypto v0.8.0
 )
 
 require (
@@ -54,7 +56,6 @@ require (
 	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/zclconf/go-cty v1.13.2 // indirect
-	golang.org/x/crypto v0.8.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/net v0.9.0 // indirect
 	golang.org/x/sys v0.7.0 // indirect

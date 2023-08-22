@@ -47,6 +47,7 @@ resource "elestio_minio" "demo_minio" {
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
 - `ssh_keys` (Attributes Set) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
+- `ssh_public_keys` (Attributes Set) You can add Public Keys to your resource to access it via the SSH protocol. (see [below for nested schema](#nestedatt--ssh_public_keys))
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
@@ -103,7 +104,16 @@ resource "elestio_minio" "demo_minio" {
 Required:
 
 - `key_name` (String) SSH Key Name.
-- `public_key` (String) SSH Public Key.The SSH public key should only contain two parts separated by a space. Example: `ssh-rsa AAaCfa...WAqDUNs=`. You should not include the username, hostname, or comment.
+- `public_key` (String, Deprecated) SSH Public Key.The SSH public key should only contain two parts separated by a space. Example: `ssh-rsa AAaCfa...WAqDUNs=`. You should not include the username, hostname, or comment.
+
+
+<a id="nestedatt--ssh_public_keys"></a>
+### Nested Schema for `ssh_public_keys`
+
+Required:
+
+- `key_data` (String, Sensitive) The Public Key value. Rather than defining this in-line you can source this from a local file using [the `file` function](https://www.terraform.io/docs/configuration/functions/file.html) - for example `key_data = file('~/.ssh/id_rsa.pub')`. Elestio only supports RSA SSH2 key signatures (`ALGORITHM KEY COMMENT` on a single line). You can generate a valid key using `ssh-keygen -t rsa` command.
+- `username` (String) The username is used to identify the Public Key among others. Must be unique (per resource).
 
 
 <a id="nestedatt--admin"></a>

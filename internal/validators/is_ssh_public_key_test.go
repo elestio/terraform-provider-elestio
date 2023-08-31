@@ -52,7 +52,7 @@ func TestIsSSHPublicKey(t *testing.T) {
 				diag.NewAttributeErrorDiagnostic(
 					path.Root("test"),
 					"Invalid Attribute Configuration",
-					"Your SSH public key must be on a single line.",
+					"Your SSH public key must be on a single line. You can use the `chomp()` terraform function to remove newlines from your key. Example: key_data = chomp(file('~/.ssh/id_rsa.pub'))",
 				),
 			},
 		},
@@ -62,7 +62,7 @@ func TestIsSSHPublicKey(t *testing.T) {
 				diag.NewAttributeErrorDiagnostic(
 					path.Root("test"),
 					"Invalid Attribute Configuration",
-					"Your SSH public key must be on a single line.",
+					"Your SSH public key must be on a single line. You can use the `chomp()` terraform function to remove newlines from your key. Example: key_data = chomp(file('~/.ssh/id_rsa.pub'))",
 				),
 			},
 		},

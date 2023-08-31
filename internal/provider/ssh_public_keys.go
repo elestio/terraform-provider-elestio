@@ -16,7 +16,7 @@ import (
 )
 
 type SSHPublicKeyModel struct {
-	Username types.String `tfsdk:"name"`
+	Username types.String `tfsdk:"username"`
 	KeyData  types.String `tfsdk:"key_data"`
 }
 
@@ -40,11 +40,9 @@ var sshPublicKeysSchema = schema.SetNestedAttribute{
 			},
 			"key_data": schema.StringAttribute{
 				MarkdownDescription: "The Public Key value." +
-					" Rather than defining this in-line you can source this from a local file using [the `file` function](https://www.terraform.io/docs/configuration/functions/file.html) - for example `key_data = file('~/.ssh/id_rsa.pub')`." +
-					" Elestio only supports RSA SSH2 key signatures (`ALGORITHM KEY COMMENT` on a single line)." +
-					" You can generate a valid key using `ssh-keygen -t rsa` command.",
-				Required:  true,
-				Sensitive: true,
+					" Read the guide [\"How generate a valid SSH Key for Elestio\"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys)." +
+					" Example: `key_data = chomp(file('~/.ssh/id_rsa.pub'))`.",
+				Required: true,
 				Validators: []validator.String{
 					validators.IsSSHPublicKey(),
 				},

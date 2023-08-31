@@ -29,10 +29,10 @@ resource "elestio_airflow" "demo_airflow" {
 
 ### Required
 
-- `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
+- `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
-- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). Requires replace to change it.
-- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types). You can only upgrade it, not downgrade.<br/>Requires replace to update the server type with the provider `scale_way`.
+- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
+- `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). You can only upgrade it, not downgrade.<br/>Requires replace to update the server type with the provider `scale_way`.
 
 ### Optional
 
@@ -112,7 +112,7 @@ Required:
 
 Required:
 
-- `key_data` (String, Sensitive) The Public Key value. Rather than defining this in-line you can source this from a local file using [the `file` function](https://www.terraform.io/docs/configuration/functions/file.html) - for example `key_data = file('~/.ssh/id_rsa.pub')`. Elestio only supports RSA SSH2 key signatures (`ALGORITHM KEY COMMENT` on a single line). You can generate a valid key using `ssh-keygen -t rsa` command.
+- `key_data` (String) The Public Key value. Read the guide ["How generate a valid SSH Key for Elestio"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys). Example: `key_data = chomp(file('~/.ssh/id_rsa.pub'))`.
 - `username` (String) The username is used to identify the Public Key among others. Must be unique (per resource).
 
 

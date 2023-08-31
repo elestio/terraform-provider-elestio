@@ -54,8 +54,6 @@ This section will explain how to organize a basic Terraform project :
       required_providers {
         elestio = {
           source = "elestio/elestio"
-          # check out the latest version available
-          version = "0.10.0"
         }
       }
     }

@@ -76,13 +76,14 @@ If you already have a SSH2 key, you can convert it to OpenSSH format using the c
 ## How to use SSH keys in Terraform
 
 If you want to login to your Elestio services to do any work, you will need to submit your public key in OpenSSH format via the `ssh_public_keys` attribute in your resource.
+The file() function will read the contents of your local file. The chomp() function will remove any trailing newlines from the end of the string.
 
 ```tf
 resource "elestio_postgresql" "postgres" {
   ssh_public_keys = [
     {
       username = "admin"
-      key_data = file("~/.ssh/id_rsa.pub")
+      key_data = chomp(file("~/.ssh/id_XXX.pub"))
     }
   ]
 }
@@ -91,7 +92,7 @@ resource "elestio_postgresql" "postgres" {
 You can now login to the server using the private key and the resource `cname` (use `terraform show` command to retrieve it):
 
 ```sh
-ssh -o -i ~/.ssh/id_rsa root@database-u525.vm.elestio.app
+ssh -o -i ~/.ssh/id_XXX root@database-u525.vm.elestio.app
 ```
 
 You can also use Terraform provisioners to perform actions from your configuration:
@@ -102,18 +103,25 @@ resource "elestio_postgresql" "postgres" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
+  ssh_public_keys = [
+    {
+      username = "admin"
+      key_data = chomp(file("~/.ssh/id_XXX.pub"))
+    }
+  ]
+
+  # Specify the SSH connection config for the provisioner
+  connection {
+    type        = "ssh"
+    host        = self.ipv4
+    private_key = file("~/.ssh/id_XXX") # The matching private key
+  }
 
   # Execute remote commands on the service
   # https://www.terraform.io/docs/language/resources/provisioners/remote-exec.html
   provisioner "remote-exec" {
-    connection {
-      type        = "ssh"
-      host        = self.ipv4
-      private_key = file("~/.ssh/id_rsa") # Specify the matching private key
-    }
-
     inline = [
-      "cd /opt/app", # We can now run commands on the service
+      "cd /opt/app",
       "docker exec -it postgres psql -U ${self.database_admin.user} -c 'CREATE DATABASE production;'"
     ]
   }
@@ -130,28 +138,29 @@ resource "elestio_postgresql" "postgres" {
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
+  # 1. Submit the public key to the service
   ssh_public_keys = [
     {
       username = "admin"
-      key_data = file("~/.ssh/id_rsa.pub") # Submit the public key
+      key_data = chomp(file("~/.ssh/id_terraform.pub")) 
     }
   ]
 
-  # 1. Specify the SSH connection config
+  # 2. Specify the SSH connection config for the provisioners
   connection {
     type        = "ssh"
     user        = "root"
     host        = self.ipv4
-    private_key = file("~/.ssh/id_rsa")
+    private_key = file("~/.ssh/id_terraform")
   }
 
-  # 2. Replace the default docker-compose.yml file with our own
+  # 3. Replace the default docker-compose.yml file with our own
   provisioner "file" {
-    source      = "${path.module}/files/docker-compose.yml" # The pathfile on your local machine
-    destination = "/opt/app/docker-compose.yml"             # The destination path on the service
+    source      = "${path.module}/files/docker-compose.yml"  # The pathfile on your local machine
+    destination = "/opt/app/docker-compose.yml"              # The destination path on the service        
   }
 
-  # 3. Restart the container
+  # 4. Restart the container
   provisioner "remote-exec" {
     inline = [
       "cd /opt/app",

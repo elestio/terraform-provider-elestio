@@ -179,3 +179,8 @@ FEATURES:
 ## v0.10.3 (1 August, 2023)
 
 - Fix documentation typo.
+
+## v0.11.0 (31 August, 2023)
+
+- **Attribute Renamed:** The `ssh_keys` attribute of a service resource is renamed to `ssh_public_keys`
+- **New guide:** SSH Keys

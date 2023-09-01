@@ -36,8 +36,7 @@ provider "elestio" {
 
 # Create a project
 resource "elestio_project" "project" {
-  name             = "Demo"
-  technical_emails = "admin@email.com"
+  name = "Demo"
 }
 
 # Create a postgresql service

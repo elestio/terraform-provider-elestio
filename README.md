@@ -32,7 +32,6 @@ provider "elestio" {
 # Project that will contain the postgres service
 resource "elestio_project" "project" {
   name             = "Demo"
-  technical_emails = "your-account-email"
 }
 
 # Service postgres

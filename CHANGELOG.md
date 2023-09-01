@@ -184,3 +184,7 @@ FEATURES:
 
 - **Attribute Renamed:** The `ssh_keys` attribute of a service resource is renamed to `ssh_public_keys`
 - **New guide:** SSH Keys
+
+## v0.12.0
+
+- **Attribute Renamed:** The `technical_emails` attribute of a project resource is renamed to `technical_email`. It is now optional.

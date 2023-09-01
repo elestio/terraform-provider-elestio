@@ -6,12 +6,14 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
+	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
@@ -29,7 +31,8 @@ type (
 		Id              types.String `tfsdk:"id"`
 		Name            types.String `tfsdk:"name"`
 		Description     types.String `tfsdk:"description"`
-		TechnicalEmails types.String `tfsdk:"technical_emails"`
+		TechnicalEmails types.String `tfsdk:"technical_emails"` // deprecated
+		TechnicalEmail  types.String `tfsdk:"technical_email"`
 		NetworkCIDR     types.String `tfsdk:"network_cidr"`
 		CreationDate    types.String `tfsdk:"creation_date"`
 		LastUpdated     types.String `tfsdk:"last_updated"`
@@ -67,7 +70,17 @@ func (r *ProjectResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"technical_emails": schema.StringAttribute{
 				MarkdownDescription: "Project technical emails.",
-				Required:            true,
+				DeprecationMessage:  "Use `technical_email` instead.",
+				Optional:            true,
+			},
+			"technical_email": schema.StringAttribute{
+				MarkdownDescription: "Project technical email.",
+				Optional:            true,
+				Computed:            true,
+				Default:             stringdefault.StaticString(""),
+				Validators: []validator.String{
+					validators.IsEmail(),
+				},
 			},
 			"network_cidr": schema.StringAttribute{
 				MarkdownDescription: "Project network CIDR.",
@@ -116,9 +129,9 @@ func (r *ProjectResource) Create(ctx context.Context, req resource.CreateRequest
 
 	project, err := r.client.Project.Create(
 		elestio.CreateProjectRequest{
-			Name:            data.Name.ValueString(),
-			Description:     data.Description.ValueString(),
-			TechnicalEmails: data.TechnicalEmails.ValueString(),
+			Name:           data.Name.ValueString(),
+			Description:    data.Description.ValueString(),
+			TechnicalEmail: data.TechnicalEmail.ValueString(),
 		},
 	)
 	if err != nil {
@@ -165,9 +178,9 @@ func (r *ProjectResource) Update(ctx context.Context, req resource.UpdateRequest
 	project, err := r.client.Project.Update(
 		plan.Id.ValueString(),
 		elestio.UpdateProjectRequest{
-			Name:            plan.Name.ValueString(),
-			Description:     plan.Description.ValueString(),
-			TechnicalEmails: plan.TechnicalEmails.ValueString(),
+			Name:           plan.Name.ValueString(),
+			Description:    plan.Description.ValueString(),
+			TechnicalEmail: plan.TechnicalEmail.ValueString(),
 		},
 	)
 	if err != nil {
@@ -206,7 +219,7 @@ func (r *ProjectResource) ImportState(ctx context.Context, req resource.ImportSt
 func UpdateTerraformDataWithElestioProject(data *ProjectResourceModel, project *elestio.Project) {
 	data.Name = types.StringValue(project.Name)
 	data.Description = types.StringValue(project.Description)
-	data.TechnicalEmails = types.StringValue(project.TechnicalEmails)
+	data.TechnicalEmail = types.StringValue(project.TechnicalEmail)
 	data.NetworkCIDR = types.StringValue(project.NetworkCIDR)
 	data.CreationDate = types.StringValue(project.CreationDate)
 	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))

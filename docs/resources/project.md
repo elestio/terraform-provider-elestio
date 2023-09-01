@@ -15,8 +15,7 @@ Project resource.
 ```terraform
 # Create and manage a project.
 resource "elestio_project" "myawesomeproject" {
-  name             = "Awesome project"
-  technical_emails = "YOUR-EMAIL"
+  name = "Awesome project"
 }
 ```
 
@@ -26,11 +25,12 @@ resource "elestio_project" "myawesomeproject" {
 ### Required
 
 - `name` (String) Project name. Must be unique.
-- `technical_emails` (String) Project technical emails.
 
 ### Optional
 
 - `description` (String) Project description.
+- `technical_email` (String) Project technical email.
+- `technical_emails` (String, Deprecated) Project technical emails.
 
 ### Read-Only
 

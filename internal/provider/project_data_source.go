@@ -21,7 +21,8 @@ type (
 		Id              types.String `tfsdk:"id"`
 		Name            types.String `tfsdk:"name"`
 		Description     types.String `tfsdk:"description"`
-		TechnicalEmails types.String `tfsdk:"technical_emails"`
+		TechnicalEmails types.String `tfsdk:"technical_emails"` // deprecated
+		TechnicalEmail  types.String `tfsdk:"technical_email"`
 		NetworkCIDR     types.String `tfsdk:"network_cidr"`
 		CreationDate    types.String `tfsdk:"creation_date"`
 	}
@@ -53,6 +54,11 @@ func (d *ProjectDataSource) Schema(ctx context.Context, req datasource.SchemaReq
 			},
 			"technical_emails": schema.StringAttribute{
 				MarkdownDescription: "Project technical emails",
+				DeprecationMessage:  "Use `technical_email` instead",
+				Computed:            true,
+			},
+			"technical_email": schema.StringAttribute{
+				MarkdownDescription: "Email address which will receive technical notifications",
 				Computed:            true,
 			},
 			"network_cidr": schema.StringAttribute{
@@ -106,7 +112,8 @@ func (d *ProjectDataSource) Read(ctx context.Context, req datasource.ReadRequest
 	state.Id = types.StringValue(project.ID.String())
 	state.Name = types.StringValue(project.Name)
 	state.Description = types.StringValue(project.Description)
-	state.TechnicalEmails = types.StringValue(project.TechnicalEmails)
+	state.TechnicalEmails = types.StringValue(project.TechnicalEmail)
+	state.TechnicalEmail = types.StringValue(project.TechnicalEmail)
 	state.NetworkCIDR = types.StringValue(project.NetworkCIDR)
 	state.CreationDate = types.StringValue(project.CreationDate)
 

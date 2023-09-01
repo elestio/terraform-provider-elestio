@@ -32,4 +32,5 @@ data "elestio_project" "project1" {
 - `description` (String) Project description
 - `name` (String) Project name
 - `network_cidr` (String) Project network CIDR
-- `technical_emails` (String) Project technical emails
+- `technical_email` (String) Email address which will receive technical notifications
+- `technical_emails` (String, Deprecated) Project technical emails

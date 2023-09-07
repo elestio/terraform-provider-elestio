@@ -185,7 +185,7 @@ FEATURES:
 - **Attribute Renamed:** The `ssh_keys` attribute of a service resource is renamed to `ssh_public_keys`
 - **New guide:** SSH Keys
 
-## v0.12.0
+## v0.12.0 (7 September, 2023)
 
 - **Attribute Renamed:** The `technical_emails` attribute of a project resource is renamed to `technical_email`. It is now optional.
 - The `forward_rules` attribute of a load balancer resource is now validated with stricter rules to avoid errors.

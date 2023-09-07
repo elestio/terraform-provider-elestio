@@ -207,26 +207,30 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 	// ↑↑↑ Attributes that require a multi-stage construction process. ↑↑↑
 
 	schemaMardownDescription := ""
-	if r.TemplateId == 0 {
-		schemaMardownDescription += "This resource is the generic way to create a service." +
-			" You can choose the software by providing the `template_id` as a parameter." +
-			" You can look for available template ids in the [templates documentation](https://elest.io/fully-managed-services)."
+
+	// Add subcategory that terraform-docs resources.mdp.tmpl will handle
+	if r.Category != "" {
+		schemaMardownDescription += "Services: " + r.Category + " ---- "
 	} else {
-		if r.Logo != "" {
-			schemaMardownDescription += fmt.Sprintf(`<img src="%s" width="100" /><br/>`, r.Logo)
-		}
+		schemaMardownDescription += "Services: Others ---- "
+	}
 
-		if r.Description != "" {
-			schemaMardownDescription += fmt.Sprintf(" %s<br/><br/>", r.Description)
-		}
+	// Add service logo
+	if r.Logo != "" {
+		schemaMardownDescription += fmt.Sprintf(`<img src="%s" width="100" /><br>`, r.Logo)
+	}
 
-		schemaMardownDescription += fmt.Sprintf("**elestio_%s** is a preconfigured elestio_service resource (`template_id: %d`) running **%s**", r.ResourceName, r.TemplateId, r.DocumentationName)
+	// Add service description
+	if r.Description != "" {
+		schemaMardownDescription += fmt.Sprintf("%s<br><br>", r.Description)
+	}
 
-		if r.DockerHubImage != "" {
-			schemaMardownDescription += fmt.Sprintf(" from the [Docker image](https://hub.docker.com/r/%s) `%s`", r.DockerHubImage, r.DockerHubImage)
-		}
+	// Add terraform description
+	schemaMardownDescription += fmt.Sprintf("The **elestio_%s** resource allows the creation and management of Elestio %s services.", r.ResourceName, r.DocumentationName)
 
-		schemaMardownDescription += "."
+	// Add service dockerhub image
+	if r.DockerHubImage != "" {
+		schemaMardownDescription += fmt.Sprintf(" The service uses the following docker image [%s](https://hub.docker.com/r/%s)", r.DockerHubImage, r.DockerHubImage)
 	}
 
 	defaultSSHKeys, diags := types.SetValue(types.ObjectType{AttrTypes: sshKeyAttryTypes}, []attr.Value{})

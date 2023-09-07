@@ -184,23 +184,26 @@ func New(version string) func() provider.Provider {
 
 func NewServiceResources() []func() resource.Resource {
 	servicesResources := []func() resource.Resource{
-		// Default service resource
+		// Deprecated service resources
 		func() resource.Resource {
 			return NewServiceResource(&ServiceTemplate{
 				TemplateId:        0,
 				ResourceName:      "service",
 				DocumentationName: "Service",
+				DeprecationMessage: "Use elestio_<SERVICE> resources instead. " +
+					"This resource will be removed in the next major version of the provider.",
+				Category: "Deprecated",
 			})
 		},
 
-		// Deprecated service resources
 		func() resource.Resource {
 			return NewServiceResource(&ServiceTemplate{
 				TemplateId:        11,
 				ResourceName:      "postgres",
 				DocumentationName: "PostgreSQL",
-				DeprecationMessage: "Use service_postgresql resource instead. " +
+				DeprecationMessage: "Use elestio_postgresql resource instead. " +
 					"This resource will be removed in the next major version of the provider.",
+				Category: "Deprecated",
 			})
 		},
 		func() resource.Resource {
@@ -209,6 +212,7 @@ func NewServiceResources() []func() resource.Resource {
 				ResourceName:       "onlyoffice",
 				DocumentationName:  "OnlyOffice",
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
 			})
 		},
 		func() resource.Resource {
@@ -217,6 +221,7 @@ func NewServiceResources() []func() resource.Resource {
 				ResourceName:       "linux_desktop",
 				DocumentationName:  "Linux-desktop",
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
 			})
 		},
 		func() resource.Resource {
@@ -225,6 +230,7 @@ func NewServiceResources() []func() resource.Resource {
 				ResourceName:       "filerun",
 				DocumentationName:  "FileRun",
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
 			})
 		},
 	}

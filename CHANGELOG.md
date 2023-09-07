@@ -190,3 +190,4 @@ FEATURES:
 - **Attribute Renamed:** The `technical_emails` attribute of a project resource is renamed to `technical_email`. It is now optional.
 - The `forward_rules` attribute of a load balancer resource is now validated with stricter rules to avoid errors.
 - Fixed some typos in the load balancer documentation.
+- Added subcategories in the documentation.

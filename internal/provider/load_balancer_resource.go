@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/setvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -227,42 +228,42 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 					},
 					"force_https_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is force https enabled." +
-							"</br>Default value: `true`",
+							" </br>Default value: `true`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(true),
 					},
 					"ip_rate_limit_per_second": schema.Int64Attribute{
 						MarkdownDescription: "Indicate the maximum number of requests allowed per second per IP address." +
-							"</br>Default value: `100`",
+							" </br>Default value: `100`",
 						Optional: true,
 						Computed: true,
 						Default:  int64default.StaticInt64(100),
 					},
 					"ip_rate_limit_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is IP rate limit enabled." +
-							"</br>Default value: `false`",
+							" </br>Default value: `false`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(false),
 					},
 					"output_cache_in_seconds": schema.Int64Attribute{
 						MarkdownDescription: "Output cache in seconds." +
-							"</br>Default value: `0`",
+							" </br>Default value: `0`",
 						Optional: true,
 						Computed: true,
 						Default:  int64default.StaticInt64(0),
 					},
 					"sticky_session_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is sticky session enabled." +
-							"</br>Default value: `false`",
+							" </br>Default value: `false`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(false),
 					},
 					"proxy_protocol_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is proxy protocol enabled." +
-							"</br>Default value: `false`",
+							" </br>Default value: `false`",
 						Optional: true,
 						Computed: true,
 						Default:  booldefault.StaticBool(false),
@@ -275,24 +276,32 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						ElementType:         types.StringType,
 					},
 					"forward_rules": schema.SetNestedAttribute{
-						MarkdownDescription: "Forward rules." +
-							"</br>Default value: `[{protocol = \"http\", port = \"80\", target_protocol = \"http\", target_port = \"80\"}, {protocol = \"https\", port = \"443\", target_protocol = \"http\", target_port = \"80\"}]`",
+						MarkdownDescription: "Forward Rules." +
+							fmt.Sprintf(" </br>Default value: `%+v`", defaultForwardRules),
 						Optional: true,
 						Computed: true,
 						Default:  setdefault.StaticValue(defaultForwardRules),
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"protocol": schema.StringAttribute{
-									MarkdownDescription: "Protocol",
+									MarkdownDescription: "Protocol. Availables values: `HTTP`, `HTTPS`, `TCP`, `UDP`. If you use `TCP` or `UDP`, you must use the same value for relative `target_protocol` attribute.",
 									Required:            true,
+									Validators: []validator.String{
+										stringvalidator.OneOf("HTTP", "HTTPS", "TCP", "UDP"),
+										validators.IsValidForwardRuleMatchingProtocol(path.MatchRelative().AtParent().AtName("target_protocol"), "TCP", "UDP"),
+									},
 								},
 								"port": schema.StringAttribute{
 									MarkdownDescription: "Port",
 									Required:            true,
 								},
 								"target_protocol": schema.StringAttribute{
-									MarkdownDescription: "Target protocol",
+									MarkdownDescription: "Target protocol. Availables values: `HTTP`, `HTTPS`, `TCP`, `UDP`. If you use `TCP` or `UDP`, you must use the same value for relative `protocol` attribute.",
 									Required:            true,
+									Validators: []validator.String{
+										stringvalidator.OneOf("HTTP", "HTTPS", "TCP", "UDP"),
+										validators.IsValidForwardRuleMatchingProtocol(path.MatchRelative().AtParent().AtName("protocol"), "TCP", "UDP"),
+									},
 								},
 								"target_port": schema.StringAttribute{
 									MarkdownDescription: "Target port",

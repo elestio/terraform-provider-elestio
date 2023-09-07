@@ -82,17 +82,17 @@ Required:
 Optional:
 
 - `access_logs_enabled` (Boolean) Is access logs enabled.</br>Default value: `true`
-- `force_https_enabled` (Boolean) Is force https enabled.</br>Default value: `true`
-- `forward_rules` (Attributes Set) Forward rules.</br>Default value: `[{protocol = "http", port = "80", target_protocol = "http", target_port = "80"}, {protocol = "https", port = "443", target_protocol = "http", target_port = "80"}]` (see [below for nested schema](#nestedatt--config--forward_rules))
+- `force_https_enabled` (Boolean) Is force https enabled. </br>Default value: `true`
+- `forward_rules` (Attributes Set) Forward Rules. </br>Default value: `[{"port":"80","protocol":"HTTP","target_port":"3000","target_protocol":"HTTP"},{"port":"443","protocol":"HTTPS","target_port":"3000","target_protocol":"HTTP"}]` (see [below for nested schema](#nestedatt--config--forward_rules))
 - `host_header` (String) Host header
-- `ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled.</br>Default value: `false`
-- `ip_rate_limit_per_second` (Number) Indicate the maximum number of requests allowed per second per IP address.</br>Default value: `100`
-- `output_cache_in_seconds` (Number) Output cache in seconds.</br>Default value: `0`
+- `ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled. </br>Default value: `false`
+- `ip_rate_limit_per_second` (Number) Indicate the maximum number of requests allowed per second per IP address. </br>Default value: `100`
+- `output_cache_in_seconds` (Number) Output cache in seconds. </br>Default value: `0`
 - `output_headers` (Attributes Set) Output headers (see [below for nested schema](#nestedatt--config--output_headers))
-- `proxy_protocol_enabled` (Boolean) Is proxy protocol enabled.</br>Default value: `false`
+- `proxy_protocol_enabled` (Boolean) Is proxy protocol enabled. </br>Default value: `false`
 - `remove_response_headers` (Set of String) Remove response headers
 - `ssl_domains` (Set of String) SSL domains
-- `sticky_session_enabled` (Boolean) Is sticky session enabled.</br>Default value: `false`
+- `sticky_session_enabled` (Boolean) Is sticky session enabled. </br>Default value: `false`
 
 <a id="nestedatt--config--forward_rules"></a>
 ### Nested Schema for `config.forward_rules`
@@ -100,9 +100,9 @@ Optional:
 Required:
 
 - `port` (String) Port
-- `protocol` (String) Protocol
+- `protocol` (String) Protocol. Availables values: `HTTP`, `HTTPS`, `TCP`, `UDP`. If you use `TCP` or `UDP`, you must use the same value for relative `target_protocol` attribute.
 - `target_port` (String) Target port
-- `target_protocol` (String) Target protocol
+- `target_protocol` (String) Target protocol. Availables values: `HTTP`, `HTTPS`, `TCP`, `UDP`. If you use `TCP` or `UDP`, you must use the same value for relative `protocol` attribute.
 
 
 <a id="nestedatt--config--output_headers"></a>

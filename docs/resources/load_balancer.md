@@ -84,7 +84,7 @@ Optional:
 - `access_logs_enabled` (Boolean) Is access logs enabled.</br>Default value: `true`
 - `force_https_enabled` (Boolean) Is force https enabled. </br>Default value: `true`
 - `forward_rules` (Attributes Set) Forward Rules. </br>Default value: `[{"port":"80","protocol":"HTTP","target_port":"3000","target_protocol":"HTTP"},{"port":"443","protocol":"HTTPS","target_port":"3000","target_protocol":"HTTP"}]` (see [below for nested schema](#nestedatt--config--forward_rules))
-- `host_header` (String) Host header
+- `host_header` (String) Host header.</br>Default value: `$http_host`
 - `ip_rate_limit_enabled` (Boolean) Is IP rate limit enabled. </br>Default value: `false`
 - `ip_rate_limit_per_second` (Number) Indicate the maximum number of requests allowed per second per IP address. </br>Default value: `100`
 - `output_cache_in_seconds` (Number) Output cache in seconds. </br>Default value: `0`

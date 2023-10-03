@@ -41,7 +41,7 @@ var sshPublicKeysSchema = schema.SetNestedAttribute{
 			"key_data": schema.StringAttribute{
 				MarkdownDescription: "The Public Key value." +
 					" Read the guide [\"How generate a valid SSH Key for Elestio\"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys)." +
-					" Example: `key_data = chomp(file('~/.ssh/id_rsa.pub'))`.",
+					" Example: `key_data = chomp(file(\"~/.ssh/id_rsa.pub\"))`.",
 				Required: true,
 				Validators: []validator.String{
 					validators.IsSSHPublicKey(),

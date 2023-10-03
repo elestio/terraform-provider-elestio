@@ -112,7 +112,7 @@ Required:
 
 Required:
 
-- `key_data` (String) The Public Key value. Read the guide ["How generate a valid SSH Key for Elestio"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys). Example: `key_data = chomp(file('~/.ssh/id_rsa.pub'))`.
+- `key_data` (String) The Public Key value. Read the guide ["How generate a valid SSH Key for Elestio"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys). Example: `key_data = chomp(file("~/.ssh/id_rsa.pub"))`.
 - `username` (String) The username is used to identify the Public Key among others. Must be unique (per resource).
 
 

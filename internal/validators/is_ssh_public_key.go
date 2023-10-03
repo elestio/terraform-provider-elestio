@@ -41,7 +41,7 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Your SSH public key must be on a single line. You can use the `chomp()` terraform function to remove newlines from your key. Example: key_data = chomp(file('~/.ssh/id_rsa.pub'))",
+			"Your SSH public key must be on a single line. You can use the `chomp()` terraform function to remove newlines from your key. Example: key_data = chomp(file(\"~/.ssh/id_rsa.pub\"))",
 		)
 		return
 	}

@@ -191,3 +191,9 @@ FEATURES:
 - The `forward_rules` attribute of a load balancer resource is now validated with stricter rules to avoid errors.
 - Fixed some typos in the load balancer documentation.
 - Added subcategories in the documentation.
+
+## v0.12.1 (3 October, 2023)
+
+- Updated the documentation guide about providers, datacenters and server types.
+- Fix typo escape in the documentation about the `ssh_public_keys` attribute of a service resource.
+- Fix missing documentation about the default value of `host_header` attribute of a load balancer resource.

@@ -214,10 +214,11 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 				Required:            true,
 				Attributes: map[string]schema.Attribute{
 					"host_header": schema.StringAttribute{
-						MarkdownDescription: "Host header",
-						Optional:            true,
-						Computed:            true,
-						Default:             stringdefault.StaticString("$http_host"),
+						MarkdownDescription: "Host header." +
+							"</br>Default value: `$http_host`",
+						Optional: true,
+						Computed: true,
+						Default:  stringdefault.StaticString("$http_host"),
 					},
 					"access_logs_enabled": schema.BoolAttribute{
 						MarkdownDescription: "Is access logs enabled." +

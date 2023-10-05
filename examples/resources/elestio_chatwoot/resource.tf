@@ -1,7 +1,5 @@
-# Create and manage Chatwoot service.
-resource "elestio_chatwoot" "demo_chatwoot" {
+resource "elestio_chatwoot" "example" {
   project_id    = "2500"
-  server_name   = "demo-chatwoot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

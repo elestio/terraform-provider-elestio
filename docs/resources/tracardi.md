@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_tracardi (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Tracardi-ptmw.png" width="100" /><br>TRACARDI is a new HOME for your customer data. TRACARDI is an API-first solution, a low-code / no-code platform aimed at any e-commerce business that wants to start using user data for marketing purposes.<br><br>The **elestio_tracardi** resource allows the creation and management of Elestio Tracardi services. The service uses the following docker image [tracardi/tracardi-api](https://hub.docker.com/r/tracardi/tracardi-api)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Tracardi-ptmw.png" width="100" /><br>TRACARDI is a new HOME for your customer data. TRACARDI is an API-first solution, a low-code / no-code platform aimed at any e-commerce business that wants to start using user data for marketing purposes.<br><br>The **elestio_tracardi** resource allows the creation and management of Elestio Tracardi services. The service uses the following docker image [tracardi/tracardi-api](https://hub.docker.com/r/tracardi/tracardi-api)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Tracardi service.
-resource "elestio_tracardi" "demo_tracardi" {
+resource "elestio_tracardi" "example" {
   project_id    = "2500"
-  server_name   = "demo-tracardi"
   version       = "0.7.1"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mantisbt (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" /><br>MantisBT makes collaboration with team members & clients easy, fast, and professional<br><br>The **elestio_mantisbt** resource allows the creation and management of Elestio MantisBT services. The service uses the following docker image [xlrl/mantisbt](https://hub.docker.com/r/xlrl/mantisbt)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MantisBT-HsqL.png" width="100" /><br>MantisBT makes collaboration with team members & clients easy, fast, and professional<br><br>The **elestio_mantisbt** resource allows the creation and management of Elestio MantisBT services. The service uses the following docker image [xlrl/mantisbt](https://hub.docker.com/r/xlrl/mantisbt)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MantisBT service.
-resource "elestio_mantisbt" "demo_mantisbt" {
+resource "elestio_mantisbt" "example" {
   project_id    = "2500"
-  server_name   = "demo-mantisbt"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

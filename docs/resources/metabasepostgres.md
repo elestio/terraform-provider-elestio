@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_metabasepostgres (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" /><br>Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br><br>The **elestio_metabasepostgres** resource allows the creation and management of Elestio MetabasePostgres services. The service uses the following docker image [metabase/metabase](https://hub.docker.com/r/metabase/metabase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" /><br>Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br><br>The **elestio_metabasepostgres** resource allows the creation and management of Elestio MetabasePostgres services. The service uses the following docker image [metabase/metabase](https://hub.docker.com/r/metabase/metabase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MetabasePostgres service.
-resource "elestio_metabasepostgres" "demo_metabasepostgres" {
+resource "elestio_metabasepostgres" "example" {
   project_id    = "2500"
-  server_name   = "demo-metabasepostgres"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

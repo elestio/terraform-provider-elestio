@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_weaviate (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Weaviate-RRYC.png" width="100" /><br>Weaviate is an open-source vector database. It allows you to store data objects and vector embeddings from your favorite ML models, and scale seamlessly into billions of data objects.<br><br>The **elestio_weaviate** resource allows the creation and management of Elestio Weaviate services. The service uses the following docker image [semitechnologies/weaviate](https://hub.docker.com/r/semitechnologies/weaviate)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Weaviate-RRYC.png" width="100" /><br>Weaviate is an open-source vector database. It allows you to store data objects and vector embeddings from your favorite ML models, and scale seamlessly into billions of data objects.<br><br>The **elestio_weaviate** resource allows the creation and management of Elestio Weaviate services. The service uses the following docker image [semitechnologies/weaviate](https://hub.docker.com/r/semitechnologies/weaviate)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Weaviate service.
-resource "elestio_weaviate" "demo_weaviate" {
+resource "elestio_weaviate" "example" {
   project_id    = "2500"
-  server_name   = "demo-weaviate"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_openproject (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" /><br>OpenProject is a web-based project management system for location-independent team collaboration.<br><br>The **elestio_openproject** resource allows the creation and management of Elestio OpenProject services. The service uses the following docker image [openproject/community](https://hub.docker.com/r/openproject/community)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openproject-logo-ccbb591e-TXxN.png" width="100" /><br>OpenProject is a web-based project management system for location-independent team collaboration.<br><br>The **elestio_openproject** resource allows the creation and management of Elestio OpenProject services. The service uses the following docker image [openproject/community](https://hub.docker.com/r/openproject/community)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenProject service.
-resource "elestio_openproject" "demo_openproject" {
+resource "elestio_openproject" "example" {
   project_id    = "2500"
-  server_name   = "demo-openproject"
   version       = "12"
   provider_name = "hetzner"
   datacenter    = "fsn1"

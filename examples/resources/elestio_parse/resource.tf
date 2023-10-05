@@ -1,7 +1,5 @@
-# Create and manage Parse service.
-resource "elestio_parse" "demo_parse" {
+resource "elestio_parse" "example" {
   project_id    = "2500"
-  server_name   = "demo-parse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

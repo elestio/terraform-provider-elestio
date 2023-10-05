@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_kbin (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kbin-6NIG.png" width="100" /><br>A reddit-like content aggregator and micro-blogging platform for the fediverse.<br><br>The **elestio_kbin** resource allows the creation and management of Elestio KBIN services. The service uses the following docker image [elestio/kbin](https://hub.docker.com/r/elestio/kbin)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kbin-6NIG.png" width="100" /><br>A reddit-like content aggregator and micro-blogging platform for the fediverse.<br><br>The **elestio_kbin** resource allows the creation and management of Elestio KBIN services. The service uses the following docker image [elestio/kbin](https://hub.docker.com/r/elestio/kbin)
 
 ## Example Usage
 
 ```terraform
-# Create and manage KBIN service.
-resource "elestio_kbin" "demo_kbin" {
+resource "elestio_kbin" "example" {
   project_id    = "2500"
-  server_name   = "demo-kbin"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

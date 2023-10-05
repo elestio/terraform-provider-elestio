@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_openldap (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" /><br>OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)<br><br>The **elestio_openldap** resource allows the creation and management of Elestio OpenLDAP services. The service uses the following docker image [osixia/openldap](https://hub.docker.com/r/osixia/openldap)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/openldap-4yMT.png" width="100" /><br>OpenLDAP is a free, open-source implementation of the Lightweight Directory Access Protocol (LDAP)<br><br>The **elestio_openldap** resource allows the creation and management of Elestio OpenLDAP services. The service uses the following docker image [osixia/openldap](https://hub.docker.com/r/osixia/openldap)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenLDAP service.
-resource "elestio_openldap" "demo_openldap" {
+resource "elestio_openldap" "example" {
   project_id    = "2500"
-  server_name   = "demo-openldap"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

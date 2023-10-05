@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_woocommerce (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" /><br>WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br><br>The **elestio_woocommerce** resource allows the creation and management of Elestio WooCommerce services. The service uses the following docker image [wordpress](https://hub.docker.com/r/wordpress)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/WooCommerce-bPyg.png" width="100" /><br>WooCommerce is a customizable, open-source eCommerce platform built on WordPress.<br><br>The **elestio_woocommerce** resource allows the creation and management of Elestio WooCommerce services. The service uses the following docker image [wordpress](https://hub.docker.com/r/wordpress)
 
 ## Example Usage
 
 ```terraform
-# Create and manage WooCommerce service.
-resource "elestio_woocommerce" "demo_woocommerce" {
+resource "elestio_woocommerce" "example" {
   project_id    = "2500"
-  server_name   = "demo-woocommerce"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

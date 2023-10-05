@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_freescout (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" /><br>FreeScout is a free self-hosted help desk & shared mailbox.<br><br>The **elestio_freescout** resource allows the creation and management of Elestio FreeScout services. The service uses the following docker image [tiredofit/freescout](https://hub.docker.com/r/tiredofit/freescout)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/freescout-icon-zdui0h5vwn6vq9af-c-A0pH.png" width="100" /><br>FreeScout is a free self-hosted help desk & shared mailbox.<br><br>The **elestio_freescout** resource allows the creation and management of Elestio FreeScout services. The service uses the following docker image [tiredofit/freescout](https://hub.docker.com/r/tiredofit/freescout)
 
 ## Example Usage
 
 ```terraform
-# Create and manage FreeScout service.
-resource "elestio_freescout" "demo_freescout" {
+resource "elestio_freescout" "example" {
   project_id    = "2500"
-  server_name   = "demo-freescout"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

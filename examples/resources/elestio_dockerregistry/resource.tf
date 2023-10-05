@@ -1,7 +1,5 @@
-# Create and manage DockerRegistry service.
-resource "elestio_dockerregistry" "demo_dockerregistry" {
+resource "elestio_dockerregistry" "example" {
   project_id    = "2500"
-  server_name   = "demo-dockerregistry"
   version       = "2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_n8n (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" /><br>n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.<br><br>The **elestio_n8n** resource allows the creation and management of Elestio N8N services. The service uses the following docker image [n8nio/n8n](https://hub.docker.com/r/n8nio/n8n)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png" width="100" /><br>n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.<br><br>The **elestio_n8n** resource allows the creation and management of Elestio N8N services. The service uses the following docker image [n8nio/n8n](https://hub.docker.com/r/n8nio/n8n)
 
 ## Example Usage
 
 ```terraform
-# Create and manage N8N service.
-resource "elestio_n8n" "demo_n8n" {
+resource "elestio_n8n" "example" {
   project_id    = "2500"
-  server_name   = "demo-n8n"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

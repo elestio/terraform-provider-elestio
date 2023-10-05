@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_scylladb (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" /><br>ScyllaDB is a true NoSQL database for the most demanding applications. <br><br>The **elestio_scylladb** resource allows the creation and management of Elestio ScyllaDB services. The service uses the following docker image [scylladb/scylla](https://hub.docker.com/r/scylladb/scylla)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/scylla-OWLR.png" width="100" /><br>ScyllaDB is a true NoSQL database for the most demanding applications. <br><br>The **elestio_scylladb** resource allows the creation and management of Elestio ScyllaDB services. The service uses the following docker image [scylladb/scylla](https://hub.docker.com/r/scylladb/scylla)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ScyllaDB service.
-resource "elestio_scylladb" "demo_scylladb" {
+resource "elestio_scylladb" "example" {
   project_id    = "2500"
-  server_name   = "demo-scylladb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

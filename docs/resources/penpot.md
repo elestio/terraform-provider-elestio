@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_penpot (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" /><br>Penpot is the first open-source design and prototyping platform for cross-domain teams.<br><br>The **elestio_penpot** resource allows the creation and management of Elestio Penpot services. The service uses the following docker image [penpotapp/frontend](https://hub.docker.com/r/penpotapp/frontend)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/penpot-PdtW.png" width="100" /><br>Penpot is the first open-source design and prototyping platform for cross-domain teams.<br><br>The **elestio_penpot** resource allows the creation and management of Elestio Penpot services. The service uses the following docker image [penpotapp/frontend](https://hub.docker.com/r/penpotapp/frontend)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Penpot service.
-resource "elestio_penpot" "demo_penpot" {
+resource "elestio_penpot" "example" {
   project_id    = "2500"
-  server_name   = "demo-penpot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

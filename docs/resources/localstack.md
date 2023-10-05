@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_localstack (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" /><br>A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br><br>The **elestio_localstack** resource allows the creation and management of Elestio LocalStack services. The service uses the following docker image [localstack/localstack](https://hub.docker.com/r/localstack/localstack)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Localstack-YeZh.png" width="100" /><br>A fully functional local cloud stack. Develop and test your cloud and serverless apps offline!<br><br>The **elestio_localstack** resource allows the creation and management of Elestio LocalStack services. The service uses the following docker image [localstack/localstack](https://hub.docker.com/r/localstack/localstack)
 
 ## Example Usage
 
 ```terraform
-# Create and manage LocalStack service.
-resource "elestio_localstack" "demo_localstack" {
+resource "elestio_localstack" "example" {
   project_id    = "2500"
-  server_name   = "demo-localstack"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

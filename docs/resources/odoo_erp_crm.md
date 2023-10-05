@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_odoo_erp_crm (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br>Odoo is a suite of web-based, open-source business apps.<br><br>The **elestio_odoo_erp_crm** resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image [elestio/odoo](https://hub.docker.com/r/elestio/odoo)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br>Odoo is a suite of web-based, open-source business apps.<br><br>The **elestio_odoo_erp_crm** resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image [elestio/odoo](https://hub.docker.com/r/elestio/odoo)
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

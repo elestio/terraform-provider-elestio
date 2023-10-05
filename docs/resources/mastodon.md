@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mastodon (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" /><br>Mastodon is a free fediverse, open-source social network server with OpenSearch for indexing.<br><br>The **elestio_mastodon** resource allows the creation and management of Elestio Mastodon services. The service uses the following docker image [ghcr.io/mastodon/mastodon](https://hub.docker.com/r/ghcr.io/mastodon/mastodon)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png" width="100" /><br>Mastodon is a free fediverse, open-source social network server with OpenSearch for indexing.<br><br>The **elestio_mastodon** resource allows the creation and management of Elestio Mastodon services. The service uses the following docker image [ghcr.io/mastodon/mastodon](https://hub.docker.com/r/ghcr.io/mastodon/mastodon)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Mastodon service.
-resource "elestio_mastodon" "demo_mastodon" {
+resource "elestio_mastodon" "example" {
   project_id    = "2500"
-  server_name   = "demo-mastodon"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

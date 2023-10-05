@@ -1,7 +1,5 @@
-# Create and manage ManticoreSearch service.
-resource "elestio_manticoresearch" "demo_manticoresearch" {
+resource "elestio_manticoresearch" "example" {
   project_id    = "2500"
-  server_name   = "demo-manticoresearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

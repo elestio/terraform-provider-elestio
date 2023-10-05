@@ -1,7 +1,5 @@
-# Create and manage OpenLDAP service.
-resource "elestio_openldap" "demo_openldap" {
+resource "elestio_openldap" "example" {
   project_id    = "2500"
-  server_name   = "demo-openldap"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

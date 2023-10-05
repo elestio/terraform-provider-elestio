@@ -1,7 +1,5 @@
-# Create and manage SigNoz service.
-resource "elestio_signoz" "demo_signoz" {
+resource "elestio_signoz" "example" {
   project_id    = "2500"
-  server_name   = "demo-signoz"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

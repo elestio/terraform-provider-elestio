@@ -1,7 +1,5 @@
-# Create and manage LocalStack service.
-resource "elestio_localstack" "demo_localstack" {
+resource "elestio_localstack" "example" {
   project_id    = "2500"
-  server_name   = "demo-localstack"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

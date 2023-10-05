@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_joplin (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" /><br>Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS<br><br>The **elestio_joplin** resource allows the creation and management of Elestio Joplin services. The service uses the following docker image [joplin/server](https://hub.docker.com/r/joplin/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Joplin-icon-rZ5H.png" width="100" /><br>Joplin - an open source note taking and to-do application with synchronization capabilities for Windows, macOS, Linux, Android and iOS<br><br>The **elestio_joplin** resource allows the creation and management of Elestio Joplin services. The service uses the following docker image [joplin/server](https://hub.docker.com/r/joplin/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Joplin service.
-resource "elestio_joplin" "demo_joplin" {
+resource "elestio_joplin" "example" {
   project_id    = "2500"
-  server_name   = "demo-joplin"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage ApacheNiFi service.
-resource "elestio_apachenifi" "demo_apachenifi" {
+resource "elestio_apachenifi" "example" {
   project_id    = "2500"
-  server_name   = "demo-apachenifi"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_openresty (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" /><br>A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br><br>The **elestio_openresty** resource allows the creation and management of Elestio OpenResty services. The service uses the following docker image [elestio/nginx-auto-ssl](https://hub.docker.com/r/elestio/nginx-auto-ssl)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenResty-HC6K.png" width="100" /><br>A Fast and Scalable Web Platform by Extending NGINX with LuaJIT<br><br>The **elestio_openresty** resource allows the creation and management of Elestio OpenResty services. The service uses the following docker image [elestio/nginx-auto-ssl](https://hub.docker.com/r/elestio/nginx-auto-ssl)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenResty service.
-resource "elestio_openresty" "demo_openresty" {
+resource "elestio_openresty" "example" {
   project_id    = "2500"
-  server_name   = "demo-openresty"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

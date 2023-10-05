@@ -1,7 +1,5 @@
-# Create and manage InvoiceNinja service.
-resource "elestio_invoiceninja" "demo_invoiceninja" {
+resource "elestio_invoiceninja" "example" {
   project_id    = "2500"
-  server_name   = "demo-invoiceninja"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

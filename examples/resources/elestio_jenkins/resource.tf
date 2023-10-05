@@ -1,7 +1,5 @@
-# Create and manage Jenkins service.
-resource "elestio_jenkins" "demo_jenkins" {
+resource "elestio_jenkins" "example" {
   project_id    = "2500"
-  server_name   = "demo-jenkins"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

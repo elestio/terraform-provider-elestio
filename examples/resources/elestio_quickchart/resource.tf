@@ -1,7 +1,5 @@
-# Create and manage QuickChart service.
-resource "elestio_quickchart" "demo_quickchart" {
+resource "elestio_quickchart" "example" {
   project_id    = "2500"
-  server_name   = "demo-quickchart"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

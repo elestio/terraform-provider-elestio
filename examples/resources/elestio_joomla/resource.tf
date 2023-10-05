@@ -1,7 +1,5 @@
-# Create and manage Joomla service.
-resource "elestio_joomla" "demo_joomla" {
+resource "elestio_joomla" "example" {
   project_id    = "2500"
-  server_name   = "demo-joomla"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

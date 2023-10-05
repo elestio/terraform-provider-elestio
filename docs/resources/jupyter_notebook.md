@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_jupyter_notebook (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/3614431017-5d4c573bbdc0c-articlex-R2PE.png" width="100" /><br>Jupyter Notebook is a web-based notebook environment for interactive computing. <br><br>The **elestio_jupyter_notebook** resource allows the creation and management of Elestio Jupyter Notebook services. The service uses the following docker image [jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/3614431017-5d4c573bbdc0c-articlex-R2PE.png" width="100" /><br>Jupyter Notebook is a web-based notebook environment for interactive computing. <br><br>The **elestio_jupyter_notebook** resource allows the creation and management of Elestio Jupyter Notebook services. The service uses the following docker image [jupyter/datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook)
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

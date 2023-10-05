@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_illa (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ILLA-driH.png" width="100" /><br>ILLA Cloud is a low-code platform. Anyone can build internal tools with ILLA Cloud in minutes.<br><br>The **elestio_illa** resource allows the creation and management of Elestio ILLA services. The service uses the following docker image [illasoft/illa-builder](https://hub.docker.com/r/illasoft/illa-builder)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ILLA-driH.png" width="100" /><br>ILLA Cloud is a low-code platform. Anyone can build internal tools with ILLA Cloud in minutes.<br><br>The **elestio_illa** resource allows the creation and management of Elestio ILLA services. The service uses the following docker image [illasoft/illa-builder](https://hub.docker.com/r/illasoft/illa-builder)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ILLA service.
-resource "elestio_illa" "demo_illa" {
+resource "elestio_illa" "example" {
   project_id    = "2500"
-  server_name   = "demo-illa"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

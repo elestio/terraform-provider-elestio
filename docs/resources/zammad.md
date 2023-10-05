@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_zammad (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" /><br>Zammad is a web-based, open-source helpdesk/customer support system.<br><br>The **elestio_zammad** resource allows the creation and management of Elestio Zammad services. The service uses the following docker image [zammad/zammad-docker-compose](https://hub.docker.com/r/zammad/zammad-docker-compose)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zammad-EmPz.png" width="100" /><br>Zammad is a web-based, open-source helpdesk/customer support system.<br><br>The **elestio_zammad** resource allows the creation and management of Elestio Zammad services. The service uses the following docker image [zammad/zammad-docker-compose](https://hub.docker.com/r/zammad/zammad-docker-compose)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Zammad service.
-resource "elestio_zammad" "demo_zammad" {
+resource "elestio_zammad" "example" {
   project_id    = "2500"
-  server_name   = "demo-zammad"
   version       = "5.4.1-38"
   provider_name = "hetzner"
   datacenter    = "fsn1"

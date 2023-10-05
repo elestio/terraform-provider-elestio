@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_serpbear (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SerpBear-6MHU.png" width="100" /><br>SerpBear is an Open Source Search Engine Position Tracking App. It allows you to track your website's keyword positions in Google and get notified of their positions.<br><br>The **elestio_serpbear** resource allows the creation and management of Elestio SerpBear services. The service uses the following docker image [towfiqi/serpbear](https://hub.docker.com/r/towfiqi/serpbear)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SerpBear-6MHU.png" width="100" /><br>SerpBear is an Open Source Search Engine Position Tracking App. It allows you to track your website's keyword positions in Google and get notified of their positions.<br><br>The **elestio_serpbear** resource allows the creation and management of Elestio SerpBear services. The service uses the following docker image [towfiqi/serpbear](https://hub.docker.com/r/towfiqi/serpbear)
 
 ## Example Usage
 
 ```terraform
-# Create and manage SerpBear service.
-resource "elestio_serpbear" "demo_serpbear" {
+resource "elestio_serpbear" "example" {
   project_id    = "2500"
-  server_name   = "demo-serpbear"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_metatrader5 (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" /><br>Trade on Forex & stock markets in a virtual desktop from your browser<br><br>The **elestio_metatrader5** resource allows the creation and management of Elestio MetaTrader5 services. The service uses the following docker image [elestio/ubuntu-desktop](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Metatrader-dtbG.png" width="100" /><br>Trade on Forex & stock markets in a virtual desktop from your browser<br><br>The **elestio_metatrader5** resource allows the creation and management of Elestio MetaTrader5 services. The service uses the following docker image [elestio/ubuntu-desktop](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MetaTrader5 service.
-resource "elestio_metatrader5" "demo_metatrader5" {
+resource "elestio_metatrader5" "example" {
   project_id    = "2500"
-  server_name   = "demo-metatrader5"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

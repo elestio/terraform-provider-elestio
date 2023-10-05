@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_dittofeed (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dittofeed-6nSV.png" width="100" /><br>Automate communications with customers. Give data control to your growth engineers.<br><br>The **elestio_dittofeed** resource allows the creation and management of Elestio Dittofeed services. The service uses the following docker image [dittofeed/dittofeed-dashboard](https://hub.docker.com/r/dittofeed/dittofeed-dashboard)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dittofeed-6nSV.png" width="100" /><br>Automate communications with customers. Give data control to your growth engineers.<br><br>The **elestio_dittofeed** resource allows the creation and management of Elestio Dittofeed services. The service uses the following docker image [dittofeed/dittofeed-dashboard](https://hub.docker.com/r/dittofeed/dittofeed-dashboard)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Dittofeed service.
-resource "elestio_dittofeed" "demo_dittofeed" {
+resource "elestio_dittofeed" "example" {
   project_id    = "2500"
-  server_name   = "demo-dittofeed"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_invoiceninja (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" /><br>Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses. <br><br>The **elestio_invoiceninja** resource allows the creation and management of Elestio InvoiceNinja services. The service uses the following docker image [invoiceninja/invoiceninja](https://hub.docker.com/r/invoiceninja/invoiceninja)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvoiceNinja-logo-220x90-J8W0.png" width="100" /><br>Invoice Ninja is the leading free, open-source online invoicing app for freelancers and businesses. <br><br>The **elestio_invoiceninja** resource allows the creation and management of Elestio InvoiceNinja services. The service uses the following docker image [invoiceninja/invoiceninja](https://hub.docker.com/r/invoiceninja/invoiceninja)
 
 ## Example Usage
 
 ```terraform
-# Create and manage InvoiceNinja service.
-resource "elestio_invoiceninja" "demo_invoiceninja" {
+resource "elestio_invoiceninja" "example" {
   project_id    = "2500"
-  server_name   = "demo-invoiceninja"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

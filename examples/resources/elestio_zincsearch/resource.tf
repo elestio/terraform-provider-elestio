@@ -1,7 +1,5 @@
-# Create and manage ZincSearch service.
-resource "elestio_zincsearch" "demo_zincsearch" {
+resource "elestio_zincsearch" "example" {
   project_id    = "2500"
-  server_name   = "demo-zincsearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

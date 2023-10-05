@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_victoriametrics (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" /><br>VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br><br>The **elestio_victoriametrics** resource allows the creation and management of Elestio VictoriaMetrics services. The service uses the following docker image [victoriametrics/victoria-metrics](https://hub.docker.com/r/victoriametrics/victoria-metrics)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/victoriametrics-aNTf.png" width="100" /><br>VictoriaMetrics is a fast, cost-effective monitoring solution and time series database<br><br>The **elestio_victoriametrics** resource allows the creation and management of Elestio VictoriaMetrics services. The service uses the following docker image [victoriametrics/victoria-metrics](https://hub.docker.com/r/victoriametrics/victoria-metrics)
 
 ## Example Usage
 
 ```terraform
-# Create and manage VictoriaMetrics service.
-resource "elestio_victoriametrics" "demo_victoriametrics" {
+resource "elestio_victoriametrics" "example" {
   project_id    = "2500"
-  server_name   = "demo-victoriametrics"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

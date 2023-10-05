@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_mage_ai (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mage-AI-rtjE.png" width="100" /><br> The modern replacement for Airflow. Build, run, and manage data pipelines for integrating and transforming data.<br><br>The **elestio_mage_ai** resource allows the creation and management of Elestio Mage AI services. The service uses the following docker image [ mageai/mageai](https://hub.docker.com/r/ mageai/mageai)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mage-AI-rtjE.png" width="100" /><br> The modern replacement for Airflow. Build, run, and manage data pipelines for integrating and transforming data.<br><br>The **elestio_mage_ai** resource allows the creation and management of Elestio Mage AI services. The service uses the following docker image [ mageai/mageai](https://hub.docker.com/r/ mageai/mageai)
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

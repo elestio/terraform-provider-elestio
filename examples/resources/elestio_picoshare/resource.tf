@@ -1,7 +1,5 @@
-# Create and manage Picoshare service.
-resource "elestio_picoshare" "demo_picoshare" {
+resource "elestio_picoshare" "example" {
   project_id    = "2500"
-  server_name   = "demo-picoshare"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

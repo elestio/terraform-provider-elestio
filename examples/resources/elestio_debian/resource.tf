@@ -1,7 +1,5 @@
-# Create and manage Debian service.
-resource "elestio_debian" "demo_debian" {
+resource "elestio_debian" "example" {
   project_id    = "2500"
-  server_name   = "demo-debian"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

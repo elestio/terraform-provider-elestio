@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_immich (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Immich-rDWK.png" width="100" /><br>Self-hosted photo and video backup solution directly from your mobile phone.<br><br>The **elestio_immich** resource allows the creation and management of Elestio Immich services. The service uses the following docker image [ghcr.io/immich-app/immich-server](https://hub.docker.com/r/ghcr.io/immich-app/immich-server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Immich-rDWK.png" width="100" /><br>Self-hosted photo and video backup solution directly from your mobile phone.<br><br>The **elestio_immich** resource allows the creation and management of Elestio Immich services. The service uses the following docker image [ghcr.io/immich-app/immich-server](https://hub.docker.com/r/ghcr.io/immich-app/immich-server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Immich service.
-resource "elestio_immich" "demo_immich" {
+resource "elestio_immich" "example" {
   project_id    = "2500"
-  server_name   = "demo-immich"
   version       = "release"
   provider_name = "hetzner"
   datacenter    = "fsn1"

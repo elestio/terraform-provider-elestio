@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_appwrite (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Appwrite-ljVz.png" width="100" /><br>Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br><br>The **elestio_appwrite** resource allows the creation and management of Elestio Appwrite services. The service uses the following docker image [appwrite/appwrite](https://hub.docker.com/r/appwrite/appwrite)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Appwrite-ljVz.png" width="100" /><br>Appwrite provides developers with a set of REST APIs to manage their core backend needs.<br><br>The **elestio_appwrite** resource allows the creation and management of Elestio Appwrite services. The service uses the following docker image [appwrite/appwrite](https://hub.docker.com/r/appwrite/appwrite)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Appwrite service.
-resource "elestio_appwrite" "demo_appwrite" {
+resource "elestio_appwrite" "example" {
   project_id    = "2500"
-  server_name   = "demo-appwrite"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

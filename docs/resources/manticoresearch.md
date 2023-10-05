@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_manticoresearch (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" /><br>Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br><br>The **elestio_manticoresearch** resource allows the creation and management of Elestio ManticoreSearch services. The service uses the following docker image [manticoresearch/manticore](https://hub.docker.com/r/manticoresearch/manticore)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ManticoreSearch-K3AP.png" width="100" /><br>Manticore Search is an easy to use open source fast database for search. Modern, fast, light-weight, outstanding full-text search capabilities.<br><br>The **elestio_manticoresearch** resource allows the creation and management of Elestio ManticoreSearch services. The service uses the following docker image [manticoresearch/manticore](https://hub.docker.com/r/manticoresearch/manticore)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ManticoreSearch service.
-resource "elestio_manticoresearch" "demo_manticoresearch" {
+resource "elestio_manticoresearch" "example" {
   project_id    = "2500"
-  server_name   = "demo-manticoresearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_postgresql (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" /><br>PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br><br>The **elestio_postgresql** resource allows the creation and management of Elestio PostgreSQL services. The service uses the following docker image [postgres](https://hub.docker.com/r/postgres)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PostgreSQL-Logo--1--i1yU.png" width="100" /><br>PostgreSQL is a powerful, open-source object-relational database system, known for reliability, data integrity and performance.<br><br>The **elestio_postgresql** resource allows the creation and management of Elestio PostgreSQL services. The service uses the following docker image [postgres](https://hub.docker.com/r/postgres)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PostgreSQL service.
-resource "elestio_postgresql" "demo_postgresql" {
+resource "elestio_postgresql" "example" {
   project_id    = "2500"
-  server_name   = "demo-postgresql"
   version       = "16"
   provider_name = "hetzner"
   datacenter    = "fsn1"

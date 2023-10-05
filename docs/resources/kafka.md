@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_kafka (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" /><br>Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. <br><br>The **elestio_kafka** resource allows the creation and management of Elestio Kafka services. The service uses the following docker image [confluentinc/cp-kafka](https://hub.docker.com/r/confluentinc/cp-kafka)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kafka-logo-wide-tz4U.png" width="100" /><br>Apache Kafka is an open-source platform for high-performance data pipelines, streaming analytics, data integration and mission-critical applications. <br><br>The **elestio_kafka** resource allows the creation and management of Elestio Kafka services. The service uses the following docker image [confluentinc/cp-kafka](https://hub.docker.com/r/confluentinc/cp-kafka)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Kafka service.
-resource "elestio_kafka" "demo_kafka" {
+resource "elestio_kafka" "example" {
   project_id    = "2500"
-  server_name   = "demo-kafka"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

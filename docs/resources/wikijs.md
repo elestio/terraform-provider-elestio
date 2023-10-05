@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_wikijs (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" /><br>Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.<br><br>The **elestio_wikijs** resource allows the creation and management of Elestio Wikijs services. The service uses the following docker image [requarks/wiki](https://hub.docker.com/r/requarks/wiki)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/qrfrajefv1o01zv8nfju-removebg-preview-ZJtv.png" width="100" /><br>Wikijs is a powerful open-source wiki app built on Node.js, Git and Markdown.<br><br>The **elestio_wikijs** resource allows the creation and management of Elestio Wikijs services. The service uses the following docker image [requarks/wiki](https://hub.docker.com/r/requarks/wiki)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Wikijs service.
-resource "elestio_wikijs" "demo_wikijs" {
+resource "elestio_wikijs" "example" {
   project_id    = "2500"
-  server_name   = "demo-wikijs"
   version       = "2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

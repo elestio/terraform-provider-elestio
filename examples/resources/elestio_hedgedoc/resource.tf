@@ -1,7 +1,5 @@
-# Create and manage HedgeDoc service.
-resource "elestio_hedgedoc" "demo_hedgedoc" {
+resource "elestio_hedgedoc" "example" {
   project_id    = "2500"
-  server_name   = "demo-hedgedoc"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

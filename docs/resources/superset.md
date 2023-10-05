@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_superset (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" /><br>Apache Superset is a data visualization and data exploration platform.<br><br>The **elestio_superset** resource allows the creation and management of Elestio Superset services. The service uses the following docker image [apache/superset](https://hub.docker.com/r/apache/superset)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/apache-superset-yhGS.png" width="100" /><br>Apache Superset is a data visualization and data exploration platform.<br><br>The **elestio_superset** resource allows the creation and management of Elestio Superset services. The service uses the following docker image [apache/superset](https://hub.docker.com/r/apache/superset)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Superset service.
-resource "elestio_superset" "demo_superset" {
+resource "elestio_superset" "example" {
   project_id    = "2500"
-  server_name   = "demo-superset"
   version       = "master"
   provider_name = "hetzner"
   datacenter    = "fsn1"

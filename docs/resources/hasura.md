@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_hasura (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hasura-3R0C.png" width="100" /><br>Hasura GraphQL Engine is an open-source product that connects to your databases & services and gives you a realtime GraphQL API, instantly.<br><br>The **elestio_hasura** resource allows the creation and management of Elestio Hasura services. The service uses the following docker image [hasura/graphql-engine](https://hub.docker.com/r/hasura/graphql-engine)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hasura-3R0C.png" width="100" /><br>Hasura GraphQL Engine is an open-source product that connects to your databases & services and gives you a realtime GraphQL API, instantly.<br><br>The **elestio_hasura** resource allows the creation and management of Elestio Hasura services. The service uses the following docker image [hasura/graphql-engine](https://hub.docker.com/r/hasura/graphql-engine)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Hasura service.
-resource "elestio_hasura" "demo_hasura" {
+resource "elestio_hasura" "example" {
   project_id    = "2500"
-  server_name   = "demo-hasura"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

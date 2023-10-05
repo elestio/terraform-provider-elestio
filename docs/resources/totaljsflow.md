@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_totaljsflow (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/TotaljsFlow-UHff.png" width="100" /><br>It's a friendly, modern, straightforward Visual Programming Interface for Low-code Development accessible through a web browser. The tool integrates, processes, and transforms various events and data in real-time.<br><br>The **elestio_totaljsflow** resource allows the creation and management of Elestio TotaljsFlow services. The service uses the following docker image [totalplatform/flow](https://hub.docker.com/r/totalplatform/flow)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/TotaljsFlow-UHff.png" width="100" /><br>It's a friendly, modern, straightforward Visual Programming Interface for Low-code Development accessible through a web browser. The tool integrates, processes, and transforms various events and data in real-time.<br><br>The **elestio_totaljsflow** resource allows the creation and management of Elestio TotaljsFlow services. The service uses the following docker image [totalplatform/flow](https://hub.docker.com/r/totalplatform/flow)
 
 ## Example Usage
 
 ```terraform
-# Create and manage TotaljsFlow service.
-resource "elestio_totaljsflow" "demo_totaljsflow" {
+resource "elestio_totaljsflow" "example" {
   project_id    = "2500"
-  server_name   = "demo-totaljsflow"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

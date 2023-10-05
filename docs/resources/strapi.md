@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_strapi (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" /><br>Strapi enables easy building of self-hosted, customizable, performant content API.<br><br>The **elestio_strapi** resource allows the creation and management of Elestio Strapi services. The service uses the following docker image [elestio/strapi-development](https://hub.docker.com/r/elestio/strapi-development)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/logo-strapi-black-blue-lfAP.png" width="100" /><br>Strapi enables easy building of self-hosted, customizable, performant content API.<br><br>The **elestio_strapi** resource allows the creation and management of Elestio Strapi services. The service uses the following docker image [elestio/strapi-development](https://hub.docker.com/r/elestio/strapi-development)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Strapi service.
-resource "elestio_strapi" "demo_strapi" {
+resource "elestio_strapi" "example" {
   project_id    = "2500"
-  server_name   = "demo-strapi"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

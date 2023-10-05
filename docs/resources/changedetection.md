@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_changedetection (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" /><br>Changedetection.io is an open source web page monitoring, notification and change detection.<br><br>The **elestio_changedetection** resource allows the creation and management of Elestio ChangeDetection services. The service uses the following docker image [dgtlmoon/changedetection.io](https://hub.docker.com/r/dgtlmoon/changedetection.io)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/changedetection-MGUw.png" width="100" /><br>Changedetection.io is an open source web page monitoring, notification and change detection.<br><br>The **elestio_changedetection** resource allows the creation and management of Elestio ChangeDetection services. The service uses the following docker image [dgtlmoon/changedetection.io](https://hub.docker.com/r/dgtlmoon/changedetection.io)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ChangeDetection service.
-resource "elestio_changedetection" "demo_changedetection" {
+resource "elestio_changedetection" "example" {
   project_id    = "2500"
-  server_name   = "demo-changedetection"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

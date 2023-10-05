@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_columnstore (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ColumnStore-MywM.png" width="100" /><br>MariaDB ColumnStore is a GPLv2 open-source columnar database built on MariaDB Server.<br><br>The **elestio_columnstore** resource allows the creation and management of Elestio ColumnStore services. The service uses the following docker image [mariadb/columnstore](https://hub.docker.com/r/mariadb/columnstore)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ColumnStore-MywM.png" width="100" /><br>MariaDB ColumnStore is a GPLv2 open-source columnar database built on MariaDB Server.<br><br>The **elestio_columnstore** resource allows the creation and management of Elestio ColumnStore services. The service uses the following docker image [mariadb/columnstore](https://hub.docker.com/r/mariadb/columnstore)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ColumnStore service.
-resource "elestio_columnstore" "demo_columnstore" {
+resource "elestio_columnstore" "example" {
   project_id    = "2500"
-  server_name   = "demo-columnstore"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_rallly (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rallly-41397-logo-1671008442-clxn4-ZcWi.webp" width="100" /><br>Rallly is the Doodle alternative scheduling and collaboration tool designed to make organizing events and meetings easier.<br><br>The **elestio_rallly** resource allows the creation and management of Elestio Rallly services. The service uses the following docker image [lukevella/rallly](https://hub.docker.com/r/lukevella/rallly)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rallly-41397-logo-1671008442-clxn4-ZcWi.webp" width="100" /><br>Rallly is the Doodle alternative scheduling and collaboration tool designed to make organizing events and meetings easier.<br><br>The **elestio_rallly** resource allows the creation and management of Elestio Rallly services. The service uses the following docker image [lukevella/rallly](https://hub.docker.com/r/lukevella/rallly)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Rallly service.
-resource "elestio_rallly" "demo_rallly" {
+resource "elestio_rallly" "example" {
   project_id    = "2500"
-  server_name   = "demo-rallly"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

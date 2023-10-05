@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_jitsi (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" /><br>Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br><br>The **elestio_jitsi** resource allows the creation and management of Elestio Jitsi services. The service uses the following docker image [jitsi/web](https://hub.docker.com/r/jitsi/web)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsimeet-ZZbj.png" width="100" /><br>Jitsi is a set of open-source projects that allows you to easily build and deploy secure video conferencing solutions. <br><br>The **elestio_jitsi** resource allows the creation and management of Elestio Jitsi services. The service uses the following docker image [jitsi/web](https://hub.docker.com/r/jitsi/web)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Jitsi service.
-resource "elestio_jitsi" "demo_jitsi" {
+resource "elestio_jitsi" "example" {
   project_id    = "2500"
-  server_name   = "demo-jitsi"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

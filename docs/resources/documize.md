@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_documize (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" /><br>Free Knowledge Management Software<br><br>The **elestio_documize** resource allows the creation and management of Elestio Documize services. The service uses the following docker image [debian](https://hub.docker.com/r/debian)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/documize-icon-StjS.png" width="100" /><br>Free Knowledge Management Software<br><br>The **elestio_documize** resource allows the creation and management of Elestio Documize services. The service uses the following docker image [debian](https://hub.docker.com/r/debian)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Documize service.
-resource "elestio_documize" "demo_documize" {
+resource "elestio_documize" "example" {
   project_id    = "2500"
-  server_name   = "demo-documize"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

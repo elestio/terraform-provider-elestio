@@ -1,7 +1,5 @@
-# Create and manage MetaTrader5 service.
-resource "elestio_metatrader5" "demo_metatrader5" {
+resource "elestio_metatrader5" "example" {
   project_id    = "2500"
-  server_name   = "demo-metatrader5"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

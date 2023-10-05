@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_squid (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br>Fast & powerful proxy server<br><br>The **elestio_squid** resource allows the creation and management of Elestio Squid services. The service uses the following docker image [b4tman/squid](https://hub.docker.com/r/b4tman/squid)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br>Fast & powerful proxy server<br><br>The **elestio_squid** resource allows the creation and management of Elestio Squid services. The service uses the following docker image [b4tman/squid](https://hub.docker.com/r/b4tman/squid)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Squid service.
-resource "elestio_squid" "demo_squid" {
+resource "elestio_squid" "example" {
   project_id    = "2500"
-  server_name   = "demo-squid"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

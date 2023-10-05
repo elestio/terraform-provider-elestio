@@ -1,7 +1,5 @@
-# Create and manage PhpBB service.
-resource "elestio_phpbb" "demo_phpbb" {
+resource "elestio_phpbb" "example" {
   project_id    = "2500"
-  server_name   = "demo-phpbb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

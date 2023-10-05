@@ -1,7 +1,5 @@
-# Create and manage Fugu service.
-resource "elestio_fugu" "demo_fugu" {
+resource "elestio_fugu" "example" {
   project_id    = "2500"
-  server_name   = "demo-fugu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

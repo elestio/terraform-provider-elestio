@@ -1,7 +1,5 @@
-# Create and manage PostHog service.
-resource "elestio_posthog" "demo_posthog" {
+resource "elestio_posthog" "example" {
   project_id    = "2500"
-  server_name   = "demo-posthog"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

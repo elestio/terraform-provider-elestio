@@ -1,7 +1,5 @@
-# Create and manage Rocket.Chat service.
-resource "elestio_rocket_chat" "demo_rocket_chat" {
+resource "elestio_rocket_chat" "example" {
   project_id    = "2500"
-  server_name   = "demo-rocket_chat"
   version       = "sha-856c235"
   provider_name = "hetzner"
   datacenter    = "fsn1"

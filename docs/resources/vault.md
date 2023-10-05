@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_vault (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" /><br>Vault is a tool for secrets management, encryption as a service, and privileged access management<br><br>The **elestio_vault** resource allows the creation and management of Elestio Vault services. The service uses the following docker image [vault](https://hub.docker.com/r/vault)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" /><br>Vault is a tool for secrets management, encryption as a service, and privileged access management<br><br>The **elestio_vault** resource allows the creation and management of Elestio Vault services. The service uses the following docker image [vault](https://hub.docker.com/r/vault)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Vault service.
-resource "elestio_vault" "demo_vault" {
+resource "elestio_vault" "example" {
   project_id    = "2500"
-  server_name   = "demo-vault"
   version       = "1.13.3"
   provider_name = "hetzner"
   datacenter    = "fsn1"

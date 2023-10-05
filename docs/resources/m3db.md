@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_m3db (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" /><br>M3 is a Prometheus compatible, easy to adopt metrics engine<br><br>The **elestio_m3db** resource allows the creation and management of Elestio M3DB services. The service uses the following docker image [quay.io/m3db/m3dbnode](https://hub.docker.com/r/quay.io/m3db/m3dbnode)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" /><br>M3 is a Prometheus compatible, easy to adopt metrics engine<br><br>The **elestio_m3db** resource allows the creation and management of Elestio M3DB services. The service uses the following docker image [quay.io/m3db/m3dbnode](https://hub.docker.com/r/quay.io/m3db/m3dbnode)
 
 ## Example Usage
 
 ```terraform
-# Create and manage M3DB service.
-resource "elestio_m3db" "demo_m3db" {
+resource "elestio_m3db" "example" {
   project_id    = "2500"
-  server_name   = "demo-m3db"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

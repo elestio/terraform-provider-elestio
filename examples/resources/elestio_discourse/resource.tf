@@ -1,7 +1,5 @@
-# Create and manage Discourse service.
-resource "elestio_discourse" "demo_discourse" {
+resource "elestio_discourse" "example" {
   project_id    = "2500"
-  server_name   = "demo-discourse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

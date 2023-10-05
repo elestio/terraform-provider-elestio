@@ -1,7 +1,5 @@
-# Create and manage Weaviate service.
-resource "elestio_weaviate" "demo_weaviate" {
+resource "elestio_weaviate" "example" {
   project_id    = "2500"
-  server_name   = "demo-weaviate"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

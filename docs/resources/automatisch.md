@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_automatisch (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Automatisch-JNpW.png" width="100" /><br>Automatisch helps you to automate your business processes without coding. Use our affordable cloud solution or self-host on your own servers.<br><br>The **elestio_automatisch** resource allows the creation and management of Elestio Automatisch services. The service uses the following docker image [automatischio/automatisch](https://hub.docker.com/r/automatischio/automatisch)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Automatisch-JNpW.png" width="100" /><br>Automatisch helps you to automate your business processes without coding. Use our affordable cloud solution or self-host on your own servers.<br><br>The **elestio_automatisch** resource allows the creation and management of Elestio Automatisch services. The service uses the following docker image [automatischio/automatisch](https://hub.docker.com/r/automatischio/automatisch)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Automatisch service.
-resource "elestio_automatisch" "demo_automatisch" {
+resource "elestio_automatisch" "example" {
   project_id    = "2500"
-  server_name   = "demo-automatisch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

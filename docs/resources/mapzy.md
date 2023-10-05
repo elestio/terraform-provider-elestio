@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mapzy (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" /><br>A simple, self-hostable store finder that cares about your privacy.<br><br>The **elestio_mapzy** resource allows the creation and management of Elestio Mapzy services. The service uses the following docker image [mapzy/mapzy](https://hub.docker.com/r/mapzy/mapzy)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mapzy-logo--1--8BYM.png" width="100" /><br>A simple, self-hostable store finder that cares about your privacy.<br><br>The **elestio_mapzy** resource allows the creation and management of Elestio Mapzy services. The service uses the following docker image [mapzy/mapzy](https://hub.docker.com/r/mapzy/mapzy)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Mapzy service.
-resource "elestio_mapzy" "demo_mapzy" {
+resource "elestio_mapzy" "example" {
   project_id    = "2500"
-  server_name   = "demo-mapzy"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

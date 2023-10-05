@@ -1,7 +1,5 @@
-# Create and manage Onedev service.
-resource "elestio_onedev" "demo_onedev" {
+resource "elestio_onedev" "example" {
   project_id    = "2500"
-  server_name   = "demo-onedev"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

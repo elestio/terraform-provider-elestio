@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_mattermost_team_edition (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" /><br>Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br><br>The **elestio_mattermost_team_edition** resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image [mattermost/mattermost-team-edition](https://hub.docker.com/r/mattermost/mattermost-team-edition)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" /><br>Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br><br>The **elestio_mattermost_team_edition** resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image [mattermost/mattermost-team-edition](https://hub.docker.com/r/mattermost/mattermost-team-edition)
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

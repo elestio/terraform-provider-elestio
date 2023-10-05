@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_debian (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" /><br>Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.<br><br>The **elestio_debian** resource allows the creation and management of Elestio Debian services.
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232612738-debianlogo.png" width="100" /><br>Debian (aka Debian GNU/Linux) is a Linux distribution composed of free and open-source software.<br><br>The **elestio_debian** resource allows the creation and management of Elestio Debian services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage Debian service.
-resource "elestio_debian" "demo_debian" {
+resource "elestio_debian" "example" {
   project_id    = "2500"
-  server_name   = "demo-debian"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

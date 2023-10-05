@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_k3s (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" /><br>K3s is a fully compliant Kubernetes distribution<br><br>The **elestio_k3s** resource allows the creation and management of Elestio K3S services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k3s-BF91.png" width="100" /><br>K3s is a fully compliant Kubernetes distribution<br><br>The **elestio_k3s** resource allows the creation and management of Elestio K3S services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage K3S service.
-resource "elestio_k3s" "demo_k3s" {
+resource "elestio_k3s" "example" {
   project_id    = "2500"
-  server_name   = "demo-k3s"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

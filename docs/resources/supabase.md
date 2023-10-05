@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_supabase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" /><br>Supabase is an open source alternative to Firebase.<br><br>The **elestio_supabase** resource allows the creation and management of Elestio Supabase services. The service uses the following docker image [supabase/studio](https://hub.docker.com/r/supabase/studio)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" /><br>Supabase is an open source alternative to Firebase.<br><br>The **elestio_supabase** resource allows the creation and management of Elestio Supabase services. The service uses the following docker image [supabase/studio](https://hub.docker.com/r/supabase/studio)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Supabase service.
-resource "elestio_supabase" "demo_supabase" {
+resource "elestio_supabase" "example" {
   project_id    = "2500"
-  server_name   = "demo-supabase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_lago (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lago-EpCS.png" width="100" /><br>Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.<br><br>The **elestio_lago** resource allows the creation and management of Elestio Lago services. The service uses the following docker image [getlago/front](https://hub.docker.com/r/getlago/front)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lago-EpCS.png" width="100" /><br>Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.<br><br>The **elestio_lago** resource allows the creation and management of Elestio Lago services. The service uses the following docker image [getlago/front](https://hub.docker.com/r/getlago/front)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Lago service.
-resource "elestio_lago" "demo_lago" {
+resource "elestio_lago" "example" {
   project_id    = "2500"
-  server_name   = "demo-lago"
   version       = "v0.48.0-beta"
   provider_name = "hetzner"
   datacenter    = "fsn1"

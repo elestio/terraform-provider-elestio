@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gitea (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" /><br>Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br><br>The **elestio_gitea** resource allows the creation and management of Elestio Gitea services. The service uses the following docker image [gitea/gitea](https://hub.docker.com/r/gitea/gitea)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/480px-Gitea-Logo-k3Mq.png" width="100" /><br>Gitea is a painless self-hosted Git service. It is similar to GitHub, Bitbucket, and GitLab<br><br>The **elestio_gitea** resource allows the creation and management of Elestio Gitea services. The service uses the following docker image [gitea/gitea](https://hub.docker.com/r/gitea/gitea)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gitea service.
-resource "elestio_gitea" "demo_gitea" {
+resource "elestio_gitea" "example" {
   project_id    = "2500"
-  server_name   = "demo-gitea"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

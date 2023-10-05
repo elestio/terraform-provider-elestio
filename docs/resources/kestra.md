@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_kestra (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" /><br>The open source data orchestration and scheduling platform.<br><br>The **elestio_kestra** resource allows the creation and management of Elestio Kestra services. The service uses the following docker image [kestra/kestra](https://hub.docker.com/r/kestra/kestra)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png" width="100" /><br>The open source data orchestration and scheduling platform.<br><br>The **elestio_kestra** resource allows the creation and management of Elestio Kestra services. The service uses the following docker image [kestra/kestra](https://hub.docker.com/r/kestra/kestra)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Kestra service.
-resource "elestio_kestra" "demo_kestra" {
+resource "elestio_kestra" "example" {
   project_id    = "2500"
-  server_name   = "demo-kestra"
   version       = "latest-full"
   provider_name = "hetzner"
   datacenter    = "fsn1"

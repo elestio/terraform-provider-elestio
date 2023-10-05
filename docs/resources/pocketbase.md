@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_pocketbase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" /><br>Open Source backend for your next SaaS and Mobile app in 1 file<br><br>The **elestio_pocketbase** resource allows the creation and management of Elestio PocketBase services. The service uses the following docker image [augustodelg/pocketbase](https://hub.docker.com/r/augustodelg/pocketbase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PocketBase-VP3a.png" width="100" /><br>Open Source backend for your next SaaS and Mobile app in 1 file<br><br>The **elestio_pocketbase** resource allows the creation and management of Elestio PocketBase services. The service uses the following docker image [augustodelg/pocketbase](https://hub.docker.com/r/augustodelg/pocketbase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PocketBase service.
-resource "elestio_pocketbase" "demo_pocketbase" {
+resource "elestio_pocketbase" "example" {
   project_id    = "2500"
-  server_name   = "demo-pocketbase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_portainer (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" /><br>Portainer is a centralized service delivery platform for containerized apps.<br><br>The **elestio_portainer** resource allows the creation and management of Elestio Portainer services. The service uses the following docker image [portainer/portainer-ce](https://hub.docker.com/r/portainer/portainer-ce)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/portainer-M5O2.png" width="100" /><br>Portainer is a centralized service delivery platform for containerized apps.<br><br>The **elestio_portainer** resource allows the creation and management of Elestio Portainer services. The service uses the following docker image [portainer/portainer-ce](https://hub.docker.com/r/portainer/portainer-ce)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Portainer service.
-resource "elestio_portainer" "demo_portainer" {
+resource "elestio_portainer" "example" {
   project_id    = "2500"
-  server_name   = "demo-portainer"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

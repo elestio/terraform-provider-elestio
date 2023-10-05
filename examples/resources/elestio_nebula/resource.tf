@@ -1,7 +1,5 @@
-# Create and manage Nebula service.
-resource "elestio_nebula" "demo_nebula" {
+resource "elestio_nebula" "example" {
   project_id    = "2500"
-  server_name   = "demo-nebula"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

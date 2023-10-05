@@ -1,7 +1,5 @@
-# Create and manage ArchiveBox service.
-resource "elestio_archivebox" "demo_archivebox" {
+resource "elestio_archivebox" "example" {
   project_id    = "2500"
-  server_name   = "demo-archivebox"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

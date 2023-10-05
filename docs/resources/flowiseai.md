@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_flowiseai (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FlowiseAI-fDvD.png" width="100" /><br>Open source UI visual tool to build your customized LLM flow using Langchain.<br><br>The **elestio_flowiseai** resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image [flowiseai/flowise](https://hub.docker.com/r/flowiseai/flowise)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FlowiseAI-fDvD.png" width="100" /><br>Open source UI visual tool to build your customized LLM flow using Langchain.<br><br>The **elestio_flowiseai** resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image [flowiseai/flowise](https://hub.docker.com/r/flowiseai/flowise)
 
 ## Example Usage
 
 ```terraform
-# Create and manage FlowiseAI service.
-resource "elestio_flowiseai" "demo_flowiseai" {
+resource "elestio_flowiseai" "example" {
   project_id    = "2500"
-  server_name   = "demo-flowiseai"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

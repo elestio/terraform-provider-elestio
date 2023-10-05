@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_kimai (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kimai--1--hIV6.png" width="100" /><br>Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.<br><br>The **elestio_kimai** resource allows the creation and management of Elestio Kimai services. The service uses the following docker image [kimai/kimai2](https://hub.docker.com/r/kimai/kimai2)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kimai--1--hIV6.png" width="100" /><br>Kimai is a free, open-source, online time-tracking software designed for small businesses and freelancers.<br><br>The **elestio_kimai** resource allows the creation and management of Elestio Kimai services. The service uses the following docker image [kimai/kimai2](https://hub.docker.com/r/kimai/kimai2)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Kimai service.
-resource "elestio_kimai" "demo_kimai" {
+resource "elestio_kimai" "example" {
   project_id    = "2500"
-  server_name   = "demo-kimai"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

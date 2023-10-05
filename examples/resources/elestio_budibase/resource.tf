@@ -1,7 +1,5 @@
-# Create and manage Budibase service.
-resource "elestio_budibase" "demo_budibase" {
+resource "elestio_budibase" "example" {
   project_id    = "2500"
-  server_name   = "demo-budibase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

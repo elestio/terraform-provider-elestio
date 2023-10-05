@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_hydra (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hydra-J2IS.png" width="100" /><br>Hydra is an open-source alternative to enterprise data warehouses and it's simple, fast, and adaptable to your needs.<br><br>The **elestio_hydra** resource allows the creation and management of Elestio Hydra services. The service uses the following docker image [hydradatabase/hydra](https://hub.docker.com/r/hydradatabase/hydra)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hydra-J2IS.png" width="100" /><br>Hydra is an open-source alternative to enterprise data warehouses and it's simple, fast, and adaptable to your needs.<br><br>The **elestio_hydra** resource allows the creation and management of Elestio Hydra services. The service uses the following docker image [hydradatabase/hydra](https://hub.docker.com/r/hydradatabase/hydra)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Hydra service.
-resource "elestio_hydra" "demo_hydra" {
+resource "elestio_hydra" "example" {
   project_id    = "2500"
-  server_name   = "demo-hydra"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

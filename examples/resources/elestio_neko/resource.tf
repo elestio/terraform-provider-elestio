@@ -1,7 +1,5 @@
-# Create and manage Neko Rooms service.
-resource "elestio_neko" "demo_neko" {
+resource "elestio_neko" "example" {
   project_id    = "2500"
-  server_name   = "demo-neko"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

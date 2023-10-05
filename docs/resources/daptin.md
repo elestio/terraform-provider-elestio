@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_daptin (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/daptin-EyiZ.png" width="100" /><br>Daptin is a powerful data and services API server. <br><br>The **elestio_daptin** resource allows the creation and management of Elestio Daptin services. The service uses the following docker image [daptin/daptin](https://hub.docker.com/r/daptin/daptin)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/daptin-EyiZ.png" width="100" /><br>Daptin is a powerful data and services API server. <br><br>The **elestio_daptin** resource allows the creation and management of Elestio Daptin services. The service uses the following docker image [daptin/daptin](https://hub.docker.com/r/daptin/daptin)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Daptin service.
-resource "elestio_daptin" "demo_daptin" {
+resource "elestio_daptin" "example" {
   project_id    = "2500"
-  server_name   = "demo-daptin"
   version       = "master"
   provider_name = "hetzner"
   datacenter    = "fsn1"

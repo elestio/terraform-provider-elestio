@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_limesurvey (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-limesurvey-head-NC55.svg" width="100" /><br>LimeSurvey is the most popular FOSS online survey tool on the web.<br><br>The **elestio_limesurvey** resource allows the creation and management of Elestio LimeSurvey services. The service uses the following docker image [owncloudops/limesurvey](https://hub.docker.com/r/owncloudops/limesurvey)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-limesurvey-head-NC55.svg" width="100" /><br>LimeSurvey is the most popular FOSS online survey tool on the web.<br><br>The **elestio_limesurvey** resource allows the creation and management of Elestio LimeSurvey services. The service uses the following docker image [owncloudops/limesurvey](https://hub.docker.com/r/owncloudops/limesurvey)
 
 ## Example Usage
 
 ```terraform
-# Create and manage LimeSurvey service.
-resource "elestio_limesurvey" "demo_limesurvey" {
+resource "elestio_limesurvey" "example" {
   project_id    = "2500"
-  server_name   = "demo-limesurvey"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Jupyter Notebook service.
-resource "elestio_jupyter" "demo_jupyter" {
+resource "elestio_jupyter" "example" {
   project_id    = "2500"
-  server_name   = "demo-jupyter"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

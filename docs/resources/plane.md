@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_plane (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Plane-tFaD.png" width="100" /><br>An open-source software development tool to manage issues, sprints, and product roadmaps with peace of mind<br><br>The **elestio_plane** resource allows the creation and management of Elestio Plane services. The service uses the following docker image [makeplane/plane-frontend](https://hub.docker.com/r/makeplane/plane-frontend)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Plane-tFaD.png" width="100" /><br>An open-source software development tool to manage issues, sprints, and product roadmaps with peace of mind<br><br>The **elestio_plane** resource allows the creation and management of Elestio Plane services. The service uses the following docker image [makeplane/plane-frontend](https://hub.docker.com/r/makeplane/plane-frontend)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Plane service.
-resource "elestio_plane" "demo_plane" {
+resource "elestio_plane" "example" {
   project_id    = "2500"
-  server_name   = "demo-plane"
   version       = "0.11"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_haproxy (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" /><br>The Reliable, High Performance TCP/HTTP Load Balancer<br><br>The **elestio_haproxy** resource allows the creation and management of Elestio HAProxy services. The service uses the following docker image [haproxytech/haproxy-debian](https://hub.docker.com/r/haproxytech/haproxy-debian)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/haproxy-BB8J.png" width="100" /><br>The Reliable, High Performance TCP/HTTP Load Balancer<br><br>The **elestio_haproxy** resource allows the creation and management of Elestio HAProxy services. The service uses the following docker image [haproxytech/haproxy-debian](https://hub.docker.com/r/haproxytech/haproxy-debian)
 
 ## Example Usage
 
 ```terraform
-# Create and manage HAProxy service.
-resource "elestio_haproxy" "demo_haproxy" {
+resource "elestio_haproxy" "example" {
   project_id    = "2500"
-  server_name   = "demo-haproxy"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

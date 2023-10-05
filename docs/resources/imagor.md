@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_imagor (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/imagor-wsHT.png" width="100" /><br>Imagor is a fast, Docker-ready image processing server.<br><br>The **elestio_imagor** resource allows the creation and management of Elestio Imagor services. The service uses the following docker image [shumc/imagor](https://hub.docker.com/r/shumc/imagor)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/imagor-wsHT.png" width="100" /><br>Imagor is a fast, Docker-ready image processing server.<br><br>The **elestio_imagor** resource allows the creation and management of Elestio Imagor services. The service uses the following docker image [shumc/imagor](https://hub.docker.com/r/shumc/imagor)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Imagor service.
-resource "elestio_imagor" "demo_imagor" {
+resource "elestio_imagor" "example" {
   project_id    = "2500"
-  server_name   = "demo-imagor"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_itop (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" /><br>iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs<br><br>The **elestio_itop** resource allows the creation and management of Elestio iTop services. The service uses the following docker image [vbkunin/itop](https://hub.docker.com/r/vbkunin/itop)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" /><br>iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs<br><br>The **elestio_itop** resource allows the creation and management of Elestio iTop services. The service uses the following docker image [vbkunin/itop](https://hub.docker.com/r/vbkunin/itop)
 
 ## Example Usage
 
 ```terraform
-# Create and manage iTop service.
-resource "elestio_itop" "demo_itop" {
+resource "elestio_itop" "example" {
   project_id    = "2500"
-  server_name   = "demo-itop"
   version       = "latest-base"
   provider_name = "hetzner"
   datacenter    = "fsn1"

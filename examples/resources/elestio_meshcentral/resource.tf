@@ -1,7 +1,5 @@
-# Create and manage MeshCentral service.
-resource "elestio_meshcentral" "demo_meshcentral" {
+resource "elestio_meshcentral" "example" {
   project_id    = "2500"
-  server_name   = "demo-meshcentral"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

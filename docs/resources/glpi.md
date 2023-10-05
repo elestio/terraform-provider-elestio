@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_glpi (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GLPI-qrhV.png" width="100" /><br>GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.<br><br>The **elestio_glpi** resource allows the creation and management of Elestio GLPI services. The service uses the following docker image [elestio/glpi](https://hub.docker.com/r/elestio/glpi)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GLPI-qrhV.png" width="100" /><br>GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.<br><br>The **elestio_glpi** resource allows the creation and management of Elestio GLPI services. The service uses the following docker image [elestio/glpi](https://hub.docker.com/r/elestio/glpi)
 
 ## Example Usage
 
 ```terraform
-# Create and manage GLPI service.
-resource "elestio_glpi" "demo_glpi" {
+resource "elestio_glpi" "example" {
   project_id    = "2500"
-  server_name   = "demo-glpi"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

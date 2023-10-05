@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_fider (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" /><br>Customer Feedback Made Easy<br><br>The **elestio_fider** resource allows the creation and management of Elestio Fider services. The service uses the following docker image [getfider/fider](https://hub.docker.com/r/getfider/fider)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Fider-fV4Z.png" width="100" /><br>Customer Feedback Made Easy<br><br>The **elestio_fider** resource allows the creation and management of Elestio Fider services. The service uses the following docker image [getfider/fider](https://hub.docker.com/r/getfider/fider)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Fider service.
-resource "elestio_fider" "demo_fider" {
+resource "elestio_fider" "example" {
   project_id    = "2500"
-  server_name   = "demo-fider"
   version       = "stable"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Listmonk service.
-resource "elestio_listmonk" "demo_listmonk" {
+resource "elestio_listmonk" "example" {
   project_id    = "2500"
-  server_name   = "demo-listmonk"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

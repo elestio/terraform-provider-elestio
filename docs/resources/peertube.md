@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_peertube (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" /><br>Free software to take back control of your videos for the Fediverse<br><br>The **elestio_peertube** resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image [chocobozzz/peertube](https://hub.docker.com/r/chocobozzz/peertube)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" /><br>Free software to take back control of your videos for the Fediverse<br><br>The **elestio_peertube** resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image [chocobozzz/peertube](https://hub.docker.com/r/chocobozzz/peertube)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PeerTube service.
-resource "elestio_peertube" "demo_peertube" {
+resource "elestio_peertube" "example" {
   project_id    = "2500"
-  server_name   = "demo-peertube"
   version       = "production-bullseye"
   provider_name = "hetzner"
   datacenter    = "fsn1"

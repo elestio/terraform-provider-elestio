@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_photoprism (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" /><br>PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br><br>The **elestio_photoprism** resource allows the creation and management of Elestio PhotoPrism services. The service uses the following docker image [photoprism/photoprism](https://hub.docker.com/r/photoprism/photoprism)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/photoprism-LqJf.svg" width="100" /><br>PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection<br><br>The **elestio_photoprism** resource allows the creation and management of Elestio PhotoPrism services. The service uses the following docker image [photoprism/photoprism](https://hub.docker.com/r/photoprism/photoprism)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PhotoPrism service.
-resource "elestio_photoprism" "demo_photoprism" {
+resource "elestio_photoprism" "example" {
   project_id    = "2500"
-  server_name   = "demo-photoprism"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

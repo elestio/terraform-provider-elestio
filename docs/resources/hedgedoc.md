@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_hedgedoc (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" /><br>HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor<br><br>The **elestio_hedgedoc** resource allows the creation and management of Elestio HedgeDoc services. The service uses the following docker image [quay.io/hedgedoc/hedgedoc](https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HedgeDoc-VR31.png" width="100" /><br>HedgeDoc is an open-source, web-based, self-hosted, collaborative markdown editor<br><br>The **elestio_hedgedoc** resource allows the creation and management of Elestio HedgeDoc services. The service uses the following docker image [quay.io/hedgedoc/hedgedoc](https://hub.docker.com/r/quay.io/hedgedoc/hedgedoc)
 
 ## Example Usage
 
 ```terraform
-# Create and manage HedgeDoc service.
-resource "elestio_hedgedoc" "demo_hedgedoc" {
+resource "elestio_hedgedoc" "example" {
   project_id    = "2500"
-  server_name   = "demo-hedgedoc"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

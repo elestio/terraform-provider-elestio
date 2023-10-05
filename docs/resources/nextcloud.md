@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nextcloud (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" /><br>NextCloud provides an industry-leading, on-premises content collaboration platform.<br><br>The **elestio_nextcloud** resource allows the creation and management of Elestio NextCloud services. The service uses the following docker image [nextcloud](https://hub.docker.com/r/nextcloud)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" /><br>NextCloud provides an industry-leading, on-premises content collaboration platform.<br><br>The **elestio_nextcloud** resource allows the creation and management of Elestio NextCloud services. The service uses the following docker image [nextcloud](https://hub.docker.com/r/nextcloud)
 
 ## Example Usage
 
 ```terraform
-# Create and manage NextCloud service.
-resource "elestio_nextcloud" "demo_nextcloud" {
+resource "elestio_nextcloud" "example" {
   project_id    = "2500"
-  server_name   = "demo-nextcloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

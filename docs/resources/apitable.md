@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_apitable (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/APITable-Bu4d.webp" width="100" /><br>APITable is an API-oriented low-code platform for building collaborative apps and is better than all other Airtable open-source alternatives.<br><br>The **elestio_apitable** resource allows the creation and management of Elestio APITable services. The service uses the following docker image [apitable/web-servers](https://hub.docker.com/r/apitable/web-servers)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/APITable-Bu4d.webp" width="100" /><br>APITable is an API-oriented low-code platform for building collaborative apps and is better than all other Airtable open-source alternatives.<br><br>The **elestio_apitable** resource allows the creation and management of Elestio APITable services. The service uses the following docker image [apitable/web-servers](https://hub.docker.com/r/apitable/web-servers)
 
 ## Example Usage
 
 ```terraform
-# Create and manage APITable service.
-resource "elestio_apitable" "demo_apitable" {
+resource "elestio_apitable" "example" {
   project_id    = "2500"
-  server_name   = "demo-apitable"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_influxdb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" /><br>InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br><br>The **elestio_influxdb** resource allows the creation and management of Elestio InfluxDB services. The service uses the following docker image [bitnami/influxdb](https://hub.docker.com/r/bitnami/influxdb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Influxdb-logo-Ear0.png" width="100" /><br>InfluxDB is a scalable datastore that empowers developers to build IoT, analytics and monitoring software. <br><br>The **elestio_influxdb** resource allows the creation and management of Elestio InfluxDB services. The service uses the following docker image [bitnami/influxdb](https://hub.docker.com/r/bitnami/influxdb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage InfluxDB service.
-resource "elestio_influxdb" "demo_influxdb" {
+resource "elestio_influxdb" "example" {
   project_id    = "2500"
-  server_name   = "demo-influxdb"
   version       = "2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

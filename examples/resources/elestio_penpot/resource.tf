@@ -1,7 +1,5 @@
-# Create and manage Penpot service.
-resource "elestio_penpot" "demo_penpot" {
+resource "elestio_penpot" "example" {
   project_id    = "2500"
-  server_name   = "demo-penpot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

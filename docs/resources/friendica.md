@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_friendica (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Friendica-cLpr.png" width="100" /><br>A Decentralized Social Network, you can use to host your own social media server that forms one part of the fediverse, an interconnected and decentralized network of independently operated servers<br><br>The **elestio_friendica** resource allows the creation and management of Elestio Friendica services. The service uses the following docker image [friendica](https://hub.docker.com/r/friendica)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Friendica-cLpr.png" width="100" /><br>A Decentralized Social Network, you can use to host your own social media server that forms one part of the fediverse, an interconnected and decentralized network of independently operated servers<br><br>The **elestio_friendica** resource allows the creation and management of Elestio Friendica services. The service uses the following docker image [friendica](https://hub.docker.com/r/friendica)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Friendica service.
-resource "elestio_friendica" "demo_friendica" {
+resource "elestio_friendica" "example" {
   project_id    = "2500"
-  server_name   = "demo-friendica"
   version       = "stable"
   provider_name = "hetzner"
   datacenter    = "fsn1"

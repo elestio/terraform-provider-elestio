@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_directus (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br>Directus is an Open Data Platform for managing the content of any SQL database.  <br><br>The **elestio_directus** resource allows the creation and management of Elestio Directus services. The service uses the following docker image [elestio/directus](https://hub.docker.com/r/elestio/directus)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br>Directus is an Open Data Platform for managing the content of any SQL database.  <br><br>The **elestio_directus** resource allows the creation and management of Elestio Directus services. The service uses the following docker image [elestio/directus](https://hub.docker.com/r/elestio/directus)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Directus service.
-resource "elestio_directus" "demo_directus" {
+resource "elestio_directus" "example" {
   project_id    = "2500"
-  server_name   = "demo-directus"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

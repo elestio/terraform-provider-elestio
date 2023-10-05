@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_windmill (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Windmill-2Gp5.png" width="100" /><br>Open source low code framework to turn scripts into workflows and internal apps with auto-generated UIs in minutes.<br><br>The **elestio_windmill** resource allows the creation and management of Elestio Windmill services. The service uses the following docker image [windmill-labs/windmill](https://hub.docker.com/r/windmill-labs/windmill)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Windmill-2Gp5.png" width="100" /><br>Open source low code framework to turn scripts into workflows and internal apps with auto-generated UIs in minutes.<br><br>The **elestio_windmill** resource allows the creation and management of Elestio Windmill services. The service uses the following docker image [windmill-labs/windmill](https://hub.docker.com/r/windmill-labs/windmill)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Windmill service.
-resource "elestio_windmill" "demo_windmill" {
+resource "elestio_windmill" "example" {
   project_id    = "2500"
-  server_name   = "demo-windmill"
   version       = "main"
   provider_name = "hetzner"
   datacenter    = "fsn1"

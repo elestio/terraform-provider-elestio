@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_ubuntu (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" /><br>Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. <br><br>The **elestio_ubuntu** resource allows the creation and management of Elestio Ubuntu services.
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/1554232857660-ubuntu-logo32.png" width="100" /><br>Ubuntu is a Linux distribution based on Debian and composed mostly of free and open-source software. <br><br>The **elestio_ubuntu** resource allows the creation and management of Elestio Ubuntu services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage Ubuntu service.
-resource "elestio_ubuntu" "demo_ubuntu" {
+resource "elestio_ubuntu" "example" {
   project_id    = "2500"
-  server_name   = "demo-ubuntu"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

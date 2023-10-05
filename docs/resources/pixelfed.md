@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_pixelfed (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pixelfed-1nfv.png" width="100" /><br>Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.<br><br>The **elestio_pixelfed** resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image [elestio/pixelfed](https://hub.docker.com/r/elestio/pixelfed)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pixelfed-1nfv.png" width="100" /><br>Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.<br><br>The **elestio_pixelfed** resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image [elestio/pixelfed](https://hub.docker.com/r/elestio/pixelfed)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Pixelfed service.
-resource "elestio_pixelfed" "demo_pixelfed" {
+resource "elestio_pixelfed" "example" {
   project_id    = "2500"
-  server_name   = "demo-pixelfed"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

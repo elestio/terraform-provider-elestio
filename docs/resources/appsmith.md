@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_appsmith (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" /><br> Appsmith is a powerful open-source framework to build internal tools. <br><br>The **elestio_appsmith** resource allows the creation and management of Elestio Appsmith services. The service uses the following docker image [appsmith/appsmith-ce](https://hub.docker.com/r/appsmith/appsmith-ce)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appsmith-DJZg.png" width="100" /><br> Appsmith is a powerful open-source framework to build internal tools. <br><br>The **elestio_appsmith** resource allows the creation and management of Elestio Appsmith services. The service uses the following docker image [appsmith/appsmith-ce](https://hub.docker.com/r/appsmith/appsmith-ce)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Appsmith service.
-resource "elestio_appsmith" "demo_appsmith" {
+resource "elestio_appsmith" "example" {
   project_id    = "2500"
-  server_name   = "demo-appsmith"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

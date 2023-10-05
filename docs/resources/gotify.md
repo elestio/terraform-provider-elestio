@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gotify (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" /><br>Gotify is a free and simple server for sending and receiving messages.<br><br>The **elestio_gotify** resource allows the creation and management of Elestio Gotify services. The service uses the following docker image [gotify/server](https://hub.docker.com/r/gotify/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gotify-6mZO.png" width="100" /><br>Gotify is a free and simple server for sending and receiving messages.<br><br>The **elestio_gotify** resource allows the creation and management of Elestio Gotify services. The service uses the following docker image [gotify/server](https://hub.docker.com/r/gotify/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gotify service.
-resource "elestio_gotify" "demo_gotify" {
+resource "elestio_gotify" "example" {
   project_id    = "2500"
-  server_name   = "demo-gotify"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

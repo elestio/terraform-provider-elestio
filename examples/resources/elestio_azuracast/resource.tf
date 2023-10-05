@@ -1,7 +1,5 @@
-# Create and manage AzuraCast service.
-resource "elestio_azuracast" "demo_azuracast" {
+resource "elestio_azuracast" "example" {
   project_id    = "2500"
-  server_name   = "demo-azuracast"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

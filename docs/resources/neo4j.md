@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_neo4j (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" /><br>Neo4j is the world’s leading Graph Database<br><br>The **elestio_neo4j** resource allows the creation and management of Elestio Neo4j services. The service uses the following docker image [neo4j](https://hub.docker.com/r/neo4j)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Logo-Neo-nyLM.png" width="100" /><br>Neo4j is the world’s leading Graph Database<br><br>The **elestio_neo4j** resource allows the creation and management of Elestio Neo4j services. The service uses the following docker image [neo4j](https://hub.docker.com/r/neo4j)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Neo4j service.
-resource "elestio_neo4j" "demo_neo4j" {
+resource "elestio_neo4j" "example" {
   project_id    = "2500"
-  server_name   = "demo-neo4j"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

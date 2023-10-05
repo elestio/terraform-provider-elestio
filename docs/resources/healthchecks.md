@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_healthchecks (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" /><br>Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.<br><br>The **elestio_healthchecks** resource allows the creation and management of Elestio Healthchecks services. The service uses the following docker image [linuxserver/healthchecks](https://hub.docker.com/r/linuxserver/healthchecks)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-healthchecks-zDNH.svg" width="100" /><br>Healthchecks is an online service for monitoring regularly running tasks such as cron jobs.<br><br>The **elestio_healthchecks** resource allows the creation and management of Elestio Healthchecks services. The service uses the following docker image [linuxserver/healthchecks](https://hub.docker.com/r/linuxserver/healthchecks)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Healthchecks service.
-resource "elestio_healthchecks" "demo_healthchecks" {
+resource "elestio_healthchecks" "example" {
   project_id    = "2500"
-  server_name   = "demo-healthchecks"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

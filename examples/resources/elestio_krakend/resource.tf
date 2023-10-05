@@ -1,7 +1,5 @@
-# Create and manage KrakenD service.
-resource "elestio_krakend" "demo_krakend" {
+resource "elestio_krakend" "example" {
   project_id    = "2500"
-  server_name   = "demo-krakend"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

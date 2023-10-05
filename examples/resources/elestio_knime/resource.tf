@@ -1,7 +1,5 @@
-# Create and manage Knime service.
-resource "elestio_knime" "demo_knime" {
+resource "elestio_knime" "example" {
   project_id    = "2500"
-  server_name   = "demo-knime"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

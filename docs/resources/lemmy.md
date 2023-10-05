@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_lemmy (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/lemmy-svg-7oS6.png" width="100" /><br>Open-source Reddit alternative. Create your own discussion platform with Lemmy<br><br>The **elestio_lemmy** resource allows the creation and management of Elestio Lemmy services. The service uses the following docker image [dessalines/lemmy](https://hub.docker.com/r/dessalines/lemmy)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/lemmy-svg-7oS6.png" width="100" /><br>Open-source Reddit alternative. Create your own discussion platform with Lemmy<br><br>The **elestio_lemmy** resource allows the creation and management of Elestio Lemmy services. The service uses the following docker image [dessalines/lemmy](https://hub.docker.com/r/dessalines/lemmy)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Lemmy service.
-resource "elestio_lemmy" "demo_lemmy" {
+resource "elestio_lemmy" "example" {
   project_id    = "2500"
-  server_name   = "demo-lemmy"
   version       = "0.17.3"
   provider_name = "hetzner"
   datacenter    = "fsn1"

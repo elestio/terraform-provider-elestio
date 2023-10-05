@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nocobase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/NocoBase-B6GW.png" width="100" /><br>Scalability-first open-source no-code platform. No programming required, build your own collaboration platform, management system with NocoBase in minutes.<br><br>The **elestio_nocobase** resource allows the creation and management of Elestio NocoBase services. The service uses the following docker image [nocobase/nocobase](https://hub.docker.com/r/nocobase/nocobase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/NocoBase-B6GW.png" width="100" /><br>Scalability-first open-source no-code platform. No programming required, build your own collaboration platform, management system with NocoBase in minutes.<br><br>The **elestio_nocobase** resource allows the creation and management of Elestio NocoBase services. The service uses the following docker image [nocobase/nocobase](https://hub.docker.com/r/nocobase/nocobase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage NocoBase service.
-resource "elestio_nocobase" "demo_nocobase" {
+resource "elestio_nocobase" "example" {
   project_id    = "2500"
-  server_name   = "demo-nocobase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_prometheus (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" /><br>Power your metrics and alerting with the leading open-source monitoring solution<br><br>The **elestio_prometheus** resource allows the creation and management of Elestio Prometheus services. The service uses the following docker image [prom/prometheus](https://hub.docker.com/r/prom/prometheus)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Prometheus--1--F22U.png" width="100" /><br>Power your metrics and alerting with the leading open-source monitoring solution<br><br>The **elestio_prometheus** resource allows the creation and management of Elestio Prometheus services. The service uses the following docker image [prom/prometheus](https://hub.docker.com/r/prom/prometheus)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Prometheus service.
-resource "elestio_prometheus" "demo_prometheus" {
+resource "elestio_prometheus" "example" {
   project_id    = "2500"
-  server_name   = "demo-prometheus"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

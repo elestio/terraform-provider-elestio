@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_trudesk (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" /><br>Trudesk is an open-source help desk/ticketing solution.<br><br>The **elestio_trudesk** resource allows the creation and management of Elestio Trudesk services. The service uses the following docker image [polonel/trudesk](https://hub.docker.com/r/polonel/trudesk)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/trudesk-gzOA.png" width="100" /><br>Trudesk is an open-source help desk/ticketing solution.<br><br>The **elestio_trudesk** resource allows the creation and management of Elestio Trudesk services. The service uses the following docker image [polonel/trudesk](https://hub.docker.com/r/polonel/trudesk)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Trudesk service.
-resource "elestio_trudesk" "demo_trudesk" {
+resource "elestio_trudesk" "example" {
   project_id    = "2500"
-  server_name   = "demo-trudesk"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_keydb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" /><br>KeyDB is both your cache and database, for cloud-optimized solutions.<br><br>The **elestio_keydb** resource allows the creation and management of Elestio KeyDB services. The service uses the following docker image [eqalpha/keydb](https://hub.docker.com/r/eqalpha/keydb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keydb-qVesDRM-cbJX.png" width="100" /><br>KeyDB is both your cache and database, for cloud-optimized solutions.<br><br>The **elestio_keydb** resource allows the creation and management of Elestio KeyDB services. The service uses the following docker image [eqalpha/keydb](https://hub.docker.com/r/eqalpha/keydb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage KeyDB service.
-resource "elestio_keydb" "demo_keydb" {
+resource "elestio_keydb" "example" {
   project_id    = "2500"
-  server_name   = "demo-keydb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

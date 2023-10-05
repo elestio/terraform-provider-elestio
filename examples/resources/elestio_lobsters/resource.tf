@@ -1,7 +1,5 @@
-# Create and manage Lobsters service.
-resource "elestio_lobsters" "demo_lobsters" {
+resource "elestio_lobsters" "example" {
   project_id    = "2500"
-  server_name   = "demo-lobsters"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

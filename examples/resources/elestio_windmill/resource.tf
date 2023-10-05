@@ -1,7 +1,5 @@
-# Create and manage Windmill service.
-resource "elestio_windmill" "demo_windmill" {
+resource "elestio_windmill" "example" {
   project_id    = "2500"
-  server_name   = "demo-windmill"
   version       = "main"
   provider_name = "hetzner"
   datacenter    = "fsn1"

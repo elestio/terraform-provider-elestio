@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_filerun (Resource)
-The **elestio_filerun** resource allows the creation and management of Elestio FileRun services.
 
+The **elestio_filerun** resource allows the creation and management of Elestio FileRun services.
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

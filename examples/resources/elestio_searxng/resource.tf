@@ -1,7 +1,5 @@
-# Create and manage SearXNG service.
-resource "elestio_searxng" "demo_searxng" {
+resource "elestio_searxng" "example" {
   project_id    = "2500"
-  server_name   = "demo-searxng"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

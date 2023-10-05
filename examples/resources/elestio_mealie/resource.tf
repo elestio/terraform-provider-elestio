@@ -1,7 +1,5 @@
-# Create and manage Mealie service.
-resource "elestio_mealie" "demo_mealie" {
+resource "elestio_mealie" "example" {
   project_id    = "2500"
-  server_name   = "demo-mealie"
   version       = "omni-nightly"
   provider_name = "hetzner"
   datacenter    = "fsn1"

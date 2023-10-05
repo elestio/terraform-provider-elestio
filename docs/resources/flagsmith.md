@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_flagsmith (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flagsmith-Ttv1.png" width="100" /><br>Flagsmith is an, fully featured, Feature Flag and Remote Config service.<br><br>The **elestio_flagsmith** resource allows the creation and management of Elestio Flagsmith services. The service uses the following docker image [flagsmith/flagsmith](https://hub.docker.com/r/flagsmith/flagsmith)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flagsmith-Ttv1.png" width="100" /><br>Flagsmith is an, fully featured, Feature Flag and Remote Config service.<br><br>The **elestio_flagsmith** resource allows the creation and management of Elestio Flagsmith services. The service uses the following docker image [flagsmith/flagsmith](https://hub.docker.com/r/flagsmith/flagsmith)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Flagsmith service.
-resource "elestio_flagsmith" "demo_flagsmith" {
+resource "elestio_flagsmith" "example" {
   project_id    = "2500"
-  server_name   = "demo-flagsmith"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

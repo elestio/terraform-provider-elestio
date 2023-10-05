@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_dremio (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dremio-K3uc.png" width="100" /><br>The Easy and Open Data Lakehouse Self-service analytics with data warehouse functionality and data lake flexibility across all your data.<br><br>The **elestio_dremio** resource allows the creation and management of Elestio Dremio services. The service uses the following docker image [dremio/dremio-oss](https://hub.docker.com/r/dremio/dremio-oss)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dremio-K3uc.png" width="100" /><br>The Easy and Open Data Lakehouse Self-service analytics with data warehouse functionality and data lake flexibility across all your data.<br><br>The **elestio_dremio** resource allows the creation and management of Elestio Dremio services. The service uses the following docker image [dremio/dremio-oss](https://hub.docker.com/r/dremio/dremio-oss)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Dremio service.
-resource "elestio_dremio" "demo_dremio" {
+resource "elestio_dremio" "example" {
   project_id    = "2500"
-  server_name   = "demo-dremio"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

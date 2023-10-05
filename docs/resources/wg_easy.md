@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_wg_easy (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" /><br>WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br><br>The **elestio_wg_easy** resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image [weejewel/wg-easy](https://hub.docker.com/r/weejewel/wg-easy)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" /><br>WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br><br>The **elestio_wg_easy** resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image [weejewel/wg-easy](https://hub.docker.com/r/weejewel/wg-easy)
 
 ## Example Usage
 
 ```terraform
-# Create and manage WG-Easy service.
-resource "elestio_wg_easy" "demo_wg_easy" {
+resource "elestio_wg_easy" "example" {
   project_id    = "2500"
-  server_name   = "demo-wg_easy"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

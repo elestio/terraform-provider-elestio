@@ -1,7 +1,5 @@
-# Create and manage Supabase service.
-resource "elestio_supabase" "demo_supabase" {
+resource "elestio_supabase" "example" {
   project_id    = "2500"
-  server_name   = "demo-supabase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

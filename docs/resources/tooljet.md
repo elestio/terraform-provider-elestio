@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_tooljet (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" /><br>ToolJet is an open-source low-code framework to build and deploy custom internal tools<br><br>The **elestio_tooljet** resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image [tooljet/tooljet-server-ce](https://hub.docker.com/r/tooljet/tooljet-server-ce)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" /><br>ToolJet is an open-source low-code framework to build and deploy custom internal tools<br><br>The **elestio_tooljet** resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image [tooljet/tooljet-server-ce](https://hub.docker.com/r/tooljet/tooljet-server-ce)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ToolJet service.
-resource "elestio_tooljet" "demo_tooljet" {
+resource "elestio_tooljet" "example" {
   project_id    = "2500"
-  server_name   = "demo-tooljet"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

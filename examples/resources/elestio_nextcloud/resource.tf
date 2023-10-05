@@ -1,7 +1,5 @@
-# Create and manage NextCloud service.
-resource "elestio_nextcloud" "demo_nextcloud" {
+resource "elestio_nextcloud" "example" {
   project_id    = "2500"
-  server_name   = "demo-nextcloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

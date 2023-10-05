@@ -1,7 +1,5 @@
-# Create and manage ErpNext service.
-resource "elestio_erpnext" "demo_erpnext" {
+resource "elestio_erpnext" "example" {
   project_id    = "2500"
-  server_name   = "demo-erpnext"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage iTop service.
-resource "elestio_itop" "demo_itop" {
+resource "elestio_itop" "example" {
   project_id    = "2500"
-  server_name   = "demo-itop"
   version       = "latest-base"
   provider_name = "hetzner"
   datacenter    = "fsn1"

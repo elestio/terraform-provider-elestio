@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_budibase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" /><br>Budibase is a quick way to build business apps that empower teams and improve productivity. <br><br>The **elestio_budibase** resource allows the creation and management of Elestio Budibase services. The service uses the following docker image [budibase/apps](https://hub.docker.com/r/budibase/apps)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/budibase-logo-rW50.png" width="100" /><br>Budibase is a quick way to build business apps that empower teams and improve productivity. <br><br>The **elestio_budibase** resource allows the creation and management of Elestio Budibase services. The service uses the following docker image [budibase/apps](https://hub.docker.com/r/budibase/apps)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Budibase service.
-resource "elestio_budibase" "demo_budibase" {
+resource "elestio_budibase" "example" {
   project_id    = "2500"
-  server_name   = "demo-budibase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

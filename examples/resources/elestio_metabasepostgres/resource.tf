@@ -1,7 +1,5 @@
-# Create and manage MetabasePostgres service.
-resource "elestio_metabasepostgres" "demo_metabasepostgres" {
+resource "elestio_metabasepostgres" "example" {
   project_id    = "2500"
-  server_name   = "demo-metabasepostgres"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

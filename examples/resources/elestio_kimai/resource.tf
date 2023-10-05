@@ -1,7 +1,5 @@
-# Create and manage Kimai service.
-resource "elestio_kimai" "demo_kimai" {
+resource "elestio_kimai" "example" {
   project_id    = "2500"
-  server_name   = "demo-kimai"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

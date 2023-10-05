@@ -1,7 +1,5 @@
-# Create and manage WooCommerce service.
-resource "elestio_woocommerce" "demo_woocommerce" {
+resource "elestio_woocommerce" "example" {
   project_id    = "2500"
-  server_name   = "demo-woocommerce"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage ToolJet service.
-resource "elestio_tooljet" "demo_tooljet" {
+resource "elestio_tooljet" "example" {
   project_id    = "2500"
-  server_name   = "demo-tooljet"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

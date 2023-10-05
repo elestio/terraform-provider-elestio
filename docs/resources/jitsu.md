@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_jitsu (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" /><br>Jitsu is an open-source web and app-event collection platform. <br><br>The **elestio_jitsu** resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image [jitsucom/jitsu](https://hub.docker.com/r/jitsucom/jitsu)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" /><br>Jitsu is an open-source web and app-event collection platform. <br><br>The **elestio_jitsu** resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image [jitsucom/jitsu](https://hub.docker.com/r/jitsucom/jitsu)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Jitsu service.
-resource "elestio_jitsu" "demo_jitsu" {
+resource "elestio_jitsu" "example" {
   project_id    = "2500"
-  server_name   = "demo-jitsu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

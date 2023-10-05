@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_vaultwarden (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" /><br> Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br><br>The **elestio_vaultwarden** resource allows the creation and management of Elestio Vaultwarden services. The service uses the following docker image [vaultwarden/server](https://hub.docker.com/r/vaultwarden/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vaultwarden-logo-pzQm.svg" width="100" /><br> Vaultwarden is an open-source password management application that can be self-hosted and run on your infrastructure. <br><br>The **elestio_vaultwarden** resource allows the creation and management of Elestio Vaultwarden services. The service uses the following docker image [vaultwarden/server](https://hub.docker.com/r/vaultwarden/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Vaultwarden service.
-resource "elestio_vaultwarden" "demo_vaultwarden" {
+resource "elestio_vaultwarden" "example" {
   project_id    = "2500"
-  server_name   = "demo-vaultwarden"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

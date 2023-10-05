@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_infisical (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Infisical-DDNP.png" width="100" /><br>Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.<br><br>The **elestio_infisical** resource allows the creation and management of Elestio Infisical services. The service uses the following docker image [infisical/frontend](https://hub.docker.com/r/infisical/frontend)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Infisical-DDNP.png" width="100" /><br>Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.<br><br>The **elestio_infisical** resource allows the creation and management of Elestio Infisical services. The service uses the following docker image [infisical/frontend](https://hub.docker.com/r/infisical/frontend)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Infisical service.
-resource "elestio_infisical" "demo_infisical" {
+resource "elestio_infisical" "example" {
   project_id    = "2500"
-  server_name   = "demo-infisical"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Taiga service.
-resource "elestio_taiga" "demo_taiga" {
+resource "elestio_taiga" "example" {
   project_id    = "2500"
-  server_name   = "demo-taiga"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

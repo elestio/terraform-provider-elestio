@@ -15,9 +15,10 @@ description: |-
 ---
 
 # {{.Name}} ({{.Type}})
+
 {{ if gt (len (split .Description " ---- ")) 1 -}}
 {{ index (split .Description " ---- ") 1 | trimspace }}
-{{ else }}
+{{- else -}}
 {{ .Description | trimspace }}
 {{- end }}
 
@@ -28,8 +29,8 @@ description: |-
 {{- end }}
 
 {{ .SchemaMarkdown | trimspace }}
-{{- if .HasImport }}
 
+{{if .HasImport -}}
 ## Import
 
 Import is supported using the following syntax:

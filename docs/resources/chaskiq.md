@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_chaskiq (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Chaskiq-OigG.png" width="100" /><br>A full-featured Live Chat, Support, and marketing platform, an alternative to Intercom, Drift, Crisp, etc<br><br>The **elestio_chaskiq** resource allows the creation and management of Elestio Chaskiq services. The service uses the following docker image [chaskiq/chaskiq](https://hub.docker.com/r/chaskiq/chaskiq)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Chaskiq-OigG.png" width="100" /><br>A full-featured Live Chat, Support, and marketing platform, an alternative to Intercom, Drift, Crisp, etc<br><br>The **elestio_chaskiq** resource allows the creation and management of Elestio Chaskiq services. The service uses the following docker image [chaskiq/chaskiq](https://hub.docker.com/r/chaskiq/chaskiq)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Chaskiq service.
-resource "elestio_chaskiq" "demo_chaskiq" {
+resource "elestio_chaskiq" "example" {
   project_id    = "2500"
-  server_name   = "demo-chaskiq"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

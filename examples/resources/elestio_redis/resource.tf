@@ -1,7 +1,5 @@
-# Create and manage Redis service.
-resource "elestio_redis" "demo_redis" {
+resource "elestio_redis" "example" {
   project_id    = "2500"
-  server_name   = "demo-redis"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

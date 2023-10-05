@@ -1,7 +1,5 @@
-# Create and manage Airbyte service.
-resource "elestio_airbyte" "demo_airbyte" {
+resource "elestio_airbyte" "example" {
   project_id    = "2500"
-  server_name   = "demo-airbyte"
   version       = "0.50.30"
   provider_name = "hetzner"
   datacenter    = "fsn1"

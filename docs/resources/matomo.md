@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_matomo (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" /><br>Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br><br>The **elestio_matomo** resource allows the creation and management of Elestio Matomo services. The service uses the following docker image [matomo](https://hub.docker.com/r/matomo)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Matomo-99V8.png" width="100" /><br>Matomo is a full-featured PHP MySQL software program that you download and install on your own webserver<br><br>The **elestio_matomo** resource allows the creation and management of Elestio Matomo services. The service uses the following docker image [matomo](https://hub.docker.com/r/matomo)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Matomo service.
-resource "elestio_matomo" "demo_matomo" {
+resource "elestio_matomo" "example" {
   project_id    = "2500"
-  server_name   = "demo-matomo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

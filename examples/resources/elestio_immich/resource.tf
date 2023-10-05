@@ -1,7 +1,5 @@
-# Create and manage Immich service.
-resource "elestio_immich" "demo_immich" {
+resource "elestio_immich" "example" {
   project_id    = "2500"
-  server_name   = "demo-immich"
   version       = "release"
   provider_name = "hetzner"
   datacenter    = "fsn1"

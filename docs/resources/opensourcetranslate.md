@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_opensourcetranslate (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" /><br>OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br><br>The **elestio_opensourcetranslate** resource allows the creation and management of Elestio OpenSourceTranslate services. The service uses the following docker image [libretranslate/libretranslate](https://hub.docker.com/r/libretranslate/libretranslate)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/icon-kZPO.svg" width="100" /><br>OpenSourceTranslate is a free and Open Source Machine Translation API, entirely self-hosted.<br><br>The **elestio_opensourcetranslate** resource allows the creation and management of Elestio OpenSourceTranslate services. The service uses the following docker image [libretranslate/libretranslate](https://hub.docker.com/r/libretranslate/libretranslate)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenSourceTranslate service.
-resource "elestio_opensourcetranslate" "demo_opensourcetranslate" {
+resource "elestio_opensourcetranslate" "example" {
   project_id    = "2500"
-  server_name   = "demo-opensourcetranslate"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

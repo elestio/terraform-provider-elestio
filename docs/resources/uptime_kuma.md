@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_uptime_kuma (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br>Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br><br>The **elestio_uptime_kuma** resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image [elestio/uptime-kuma](https://hub.docker.com/r/elestio/uptime-kuma)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br>Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br><br>The **elestio_uptime_kuma** resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image [elestio/uptime-kuma](https://hub.docker.com/r/elestio/uptime-kuma)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Uptime-kuma service.
-resource "elestio_uptime_kuma" "demo_uptime_kuma" {
+resource "elestio_uptime_kuma" "example" {
   project_id    = "2500"
-  server_name   = "demo-uptime_kuma"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Yopass service.
-resource "elestio_yopass" "demo_yopass" {
+resource "elestio_yopass" "example" {
   project_id    = "2500"
-  server_name   = "demo-yopass"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

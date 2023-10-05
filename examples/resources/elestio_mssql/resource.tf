@@ -1,7 +1,5 @@
-# Create and manage MSSQL service.
-resource "elestio_mssql" "demo_mssql" {
+resource "elestio_mssql" "example" {
   project_id    = "2500"
-  server_name   = "demo-mssql"
   version       = "2019-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

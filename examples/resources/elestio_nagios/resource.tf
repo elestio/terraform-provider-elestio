@@ -1,7 +1,5 @@
-# Create and manage Nagios service.
-resource "elestio_nagios" "demo_nagios" {
+resource "elestio_nagios" "example" {
   project_id    = "2500"
-  server_name   = "demo-nagios"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

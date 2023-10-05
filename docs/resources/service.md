@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_service (Resource)
-The **elestio_service** resource allows the creation and management of Elestio Service services.
 
+The **elestio_service** resource allows the creation and management of Elestio Service services.
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

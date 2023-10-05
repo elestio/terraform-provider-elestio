@@ -1,7 +1,5 @@
-# Create and manage OpenBlocks service.
-resource "elestio_openblocks" "demo_openblocks" {
+resource "elestio_openblocks" "example" {
   project_id    = "2500"
-  server_name   = "demo-openblocks"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

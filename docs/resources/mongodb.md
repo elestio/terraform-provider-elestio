@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mongodb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" /><br>MongoDB is a document-oriented NoSQL database used for high-volume data storage. <br><br>The **elestio_mongodb** resource allows the creation and management of Elestio MongoDB services. The service uses the following docker image [mongo](https://hub.docker.com/r/mongo)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/2560px-MongoDB-Logo-XOCy.png" width="100" /><br>MongoDB is a document-oriented NoSQL database used for high-volume data storage. <br><br>The **elestio_mongodb** resource allows the creation and management of Elestio MongoDB services. The service uses the following docker image [mongo](https://hub.docker.com/r/mongo)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MongoDB service.
-resource "elestio_mongodb" "demo_mongodb" {
+resource "elestio_mongodb" "example" {
   project_id    = "2500"
-  server_name   = "demo-mongodb"
   version       = "6"
   provider_name = "hetzner"
   datacenter    = "fsn1"

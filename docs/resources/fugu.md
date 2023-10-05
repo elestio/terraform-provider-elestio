@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_fugu (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" /><br>Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.<br><br>The **elestio_fugu** resource allows the creation and management of Elestio Fugu services. The service uses the following docker image [shafyy/fugu](https://hub.docker.com/r/shafyy/fugu)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/fugu-KvzW.png" width="100" /><br>Fugu is a product analytics software with a strong focus on simplicity and privacy-friendliness.<br><br>The **elestio_fugu** resource allows the creation and management of Elestio Fugu services. The service uses the following docker image [shafyy/fugu](https://hub.docker.com/r/shafyy/fugu)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Fugu service.
-resource "elestio_fugu" "demo_fugu" {
+resource "elestio_fugu" "example" {
   project_id    = "2500"
-  server_name   = "demo-fugu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

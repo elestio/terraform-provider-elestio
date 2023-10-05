@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_dockerregistry (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" /><br>Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br><br>The **elestio_dockerregistry** resource allows the creation and management of Elestio DockerRegistry services. The service uses the following docker image [registry](https://hub.docker.com/r/registry)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DockerRegistry-XOni.png" width="100" /><br>Docker Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.<br><br>The **elestio_dockerregistry** resource allows the creation and management of Elestio DockerRegistry services. The service uses the following docker image [registry](https://hub.docker.com/r/registry)
 
 ## Example Usage
 
 ```terraform
-# Create and manage DockerRegistry service.
-resource "elestio_dockerregistry" "demo_dockerregistry" {
+resource "elestio_dockerregistry" "example" {
   project_id    = "2500"
-  server_name   = "demo-dockerregistry"
   version       = "2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

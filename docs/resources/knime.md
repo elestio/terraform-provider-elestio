@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_knime (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br>KNIME Analytics Platform<br><br>The **elestio_knime** resource allows the creation and management of Elestio Knime services. The service uses the following docker image [elestio/knime](https://hub.docker.com/r/elestio/knime)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br>KNIME Analytics Platform<br><br>The **elestio_knime** resource allows the creation and management of Elestio Knime services. The service uses the following docker image [elestio/knime](https://hub.docker.com/r/elestio/knime)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Knime service.
-resource "elestio_knime" "demo_knime" {
+resource "elestio_knime" "example" {
   project_id    = "2500"
-  server_name   = "demo-knime"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

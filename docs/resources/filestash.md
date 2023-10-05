@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_filestash (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" /><br>Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. <br><br>The **elestio_filestash** resource allows the creation and management of Elestio Filestash services. The service uses the following docker image [machines/filestash](https://hub.docker.com/r/machines/filestash)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/filestash-7t74.png" width="100" /><br>Filestash is a Dropbox-like file manager that lets you manage your data anywhere it is located. <br><br>The **elestio_filestash** resource allows the creation and management of Elestio Filestash services. The service uses the following docker image [machines/filestash](https://hub.docker.com/r/machines/filestash)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Filestash service.
-resource "elestio_filestash" "demo_filestash" {
+resource "elestio_filestash" "example" {
   project_id    = "2500"
-  server_name   = "demo-filestash"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

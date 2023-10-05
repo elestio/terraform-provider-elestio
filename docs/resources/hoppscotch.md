@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_hoppscotch (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hoppscotch-0tkX.png" width="100" /><br>Hoppscotch is a lightweight, web-based API development suite. <br><br>The **elestio_hoppscotch** resource allows the creation and management of Elestio Hoppscotch services. The service uses the following docker image [elestio/hoppscotch-app](https://hub.docker.com/r/elestio/hoppscotch-app)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hoppscotch-0tkX.png" width="100" /><br>Hoppscotch is a lightweight, web-based API development suite. <br><br>The **elestio_hoppscotch** resource allows the creation and management of Elestio Hoppscotch services. The service uses the following docker image [elestio/hoppscotch-app](https://hub.docker.com/r/elestio/hoppscotch-app)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Hoppscotch service.
-resource "elestio_hoppscotch" "demo_hoppscotch" {
+resource "elestio_hoppscotch" "example" {
   project_id    = "2500"
-  server_name   = "demo-hoppscotch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

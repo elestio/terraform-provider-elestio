@@ -1,7 +1,5 @@
-# Create and manage Kafka service.
-resource "elestio_kafka" "demo_kafka" {
+resource "elestio_kafka" "example" {
   project_id    = "2500"
-  server_name   = "demo-kafka"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

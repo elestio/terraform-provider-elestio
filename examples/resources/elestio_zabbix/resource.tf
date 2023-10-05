@@ -1,7 +1,5 @@
-# Create and manage Zabbix service.
-resource "elestio_zabbix" "demo_zabbix" {
+resource "elestio_zabbix" "example" {
   project_id    = "2500"
-  server_name   = "demo-zabbix"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

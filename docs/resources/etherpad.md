@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_etherpad (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" /><br>Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br><br>The **elestio_etherpad** resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image [elestio/etherpad](https://hub.docker.com/r/elestio/etherpad)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" /><br>Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br><br>The **elestio_etherpad** resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image [elestio/etherpad](https://hub.docker.com/r/elestio/etherpad)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Etherpad service.
-resource "elestio_etherpad" "demo_etherpad" {
+resource "elestio_etherpad" "example" {
   project_id    = "2500"
-  server_name   = "demo-etherpad"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

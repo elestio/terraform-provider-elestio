@@ -1,7 +1,5 @@
-# Create and manage SerpBear service.
-resource "elestio_serpbear" "demo_serpbear" {
+resource "elestio_serpbear" "example" {
   project_id    = "2500"
-  server_name   = "demo-serpbear"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

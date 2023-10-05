@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_parse (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br>Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br><br>The **elestio_parse** resource allows the creation and management of Elestio Parse services. The service uses the following docker image [parseplatform/parse-server](https://hub.docker.com/r/parseplatform/parse-server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br>Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br><br>The **elestio_parse** resource allows the creation and management of Elestio Parse services. The service uses the following docker image [parseplatform/parse-server](https://hub.docker.com/r/parseplatform/parse-server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Parse service.
-resource "elestio_parse" "demo_parse" {
+resource "elestio_parse" "example" {
   project_id    = "2500"
-  server_name   = "demo-parse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

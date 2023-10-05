@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_wekan (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Wekan-cw01.png" width="100" /><br>Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.<br><br>The **elestio_wekan** resource allows the creation and management of Elestio Wekan services. The service uses the following docker image [quay.io/wekan/wekan](https://hub.docker.com/r/quay.io/wekan/wekan)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Wekan-cw01.png" width="100" /><br>Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.<br><br>The **elestio_wekan** resource allows the creation and management of Elestio Wekan services. The service uses the following docker image [quay.io/wekan/wekan](https://hub.docker.com/r/quay.io/wekan/wekan)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Wekan service.
-resource "elestio_wekan" "demo_wekan" {
+resource "elestio_wekan" "example" {
   project_id    = "2500"
-  server_name   = "demo-wekan"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Matomo service.
-resource "elestio_matomo" "demo_matomo" {
+resource "elestio_matomo" "example" {
   project_id    = "2500"
-  server_name   = "demo-matomo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

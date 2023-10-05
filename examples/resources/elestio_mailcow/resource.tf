@@ -1,7 +1,5 @@
-# Create and manage MailCow service.
-resource "elestio_mailcow" "demo_mailcow" {
+resource "elestio_mailcow" "example" {
   project_id    = "2500"
-  server_name   = "demo-mailcow"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nocodb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" /><br>NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br><br>The **elestio_nocodb** resource allows the creation and management of Elestio NocoDB services. The service uses the following docker image [nocodb/nocodb](https://hub.docker.com/r/nocodb/nocodb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nocodb-lrBE.png" width="100" /><br>NocoDB is an open-source #NoCode platform that turns any database into a smart spreadsheet.<br><br>The **elestio_nocodb** resource allows the creation and management of Elestio NocoDB services. The service uses the following docker image [nocodb/nocodb](https://hub.docker.com/r/nocodb/nocodb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage NocoDB service.
-resource "elestio_nocodb" "demo_nocodb" {
+resource "elestio_nocodb" "example" {
   project_id    = "2500"
-  server_name   = "demo-nocodb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_keycloak (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keycloak-s9bJ.png" width="100" /><br>Keycloak is an open-source identity and access management solution aimed at modern applications and services. <br><br>The **elestio_keycloak** resource allows the creation and management of Elestio Keycloak services. The service uses the following docker image [elestio/keycloak](https://hub.docker.com/r/elestio/keycloak)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/keycloak-s9bJ.png" width="100" /><br>Keycloak is an open-source identity and access management solution aimed at modern applications and services. <br><br>The **elestio_keycloak** resource allows the creation and management of Elestio Keycloak services. The service uses the following docker image [elestio/keycloak](https://hub.docker.com/r/elestio/keycloak)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Keycloak service.
-resource "elestio_keycloak" "demo_keycloak" {
+resource "elestio_keycloak" "example" {
   project_id    = "2500"
-  server_name   = "demo-keycloak"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

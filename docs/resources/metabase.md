@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_metabase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" /><br>Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br><br>The **elestio_metabase** resource allows the creation and management of Elestio Metabase services. The service uses the following docker image [metabase/metabase](https://hub.docker.com/r/metabase/metabase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png" width="100" /><br>Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.<br><br>The **elestio_metabase** resource allows the creation and management of Elestio Metabase services. The service uses the following docker image [metabase/metabase](https://hub.docker.com/r/metabase/metabase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Metabase service.
-resource "elestio_metabase" "demo_metabase" {
+resource "elestio_metabase" "example" {
   project_id    = "2500"
-  server_name   = "demo-metabase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

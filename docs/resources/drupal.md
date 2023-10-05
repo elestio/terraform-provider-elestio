@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_drupal (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" /><br>Drupal is an open-source content management platform that supports a wide variety of websites.<br><br>The **elestio_drupal** resource allows the creation and management of Elestio Drupal services. The service uses the following docker image [bitnami/drupal](https://hub.docker.com/r/bitnami/drupal)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/drupal-wordmark-AULA.png" width="100" /><br>Drupal is an open-source content management platform that supports a wide variety of websites.<br><br>The **elestio_drupal** resource allows the creation and management of Elestio Drupal services. The service uses the following docker image [bitnami/drupal](https://hub.docker.com/r/bitnami/drupal)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Drupal service.
-resource "elestio_drupal" "demo_drupal" {
+resource "elestio_drupal" "example" {
   project_id    = "2500"
-  server_name   = "demo-drupal"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

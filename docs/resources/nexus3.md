@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nexus3 (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" /><br>The free artifact repository with universal format support.<br><br>The **elestio_nexus3** resource allows the creation and management of Elestio Nexus3 services. The service uses the following docker image [sonatype/nexus3](https://hub.docker.com/r/sonatype/nexus3)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nexus3-AVm3.png" width="100" /><br>The free artifact repository with universal format support.<br><br>The **elestio_nexus3** resource allows the creation and management of Elestio Nexus3 services. The service uses the following docker image [sonatype/nexus3](https://hub.docker.com/r/sonatype/nexus3)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Nexus3 service.
-resource "elestio_nexus3" "demo_nexus3" {
+resource "elestio_nexus3" "example" {
   project_id    = "2500"
-  server_name   = "demo-nexus3"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

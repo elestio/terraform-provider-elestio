@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_canopsis (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br>The first open-source hypervision solution<br><br>The **elestio_canopsis** resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image [canopsis/canopsis-api](https://hub.docker.com/r/canopsis/canopsis-api)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br>The first open-source hypervision solution<br><br>The **elestio_canopsis** resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image [canopsis/canopsis-api](https://hub.docker.com/r/canopsis/canopsis-api)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Canopsis service.
-resource "elestio_canopsis" "demo_canopsis" {
+resource "elestio_canopsis" "example" {
   project_id    = "2500"
-  server_name   = "demo-canopsis"
   version       = "4.3.9"
   provider_name = "hetzner"
   datacenter    = "fsn1"

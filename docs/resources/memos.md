@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_memos (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68747470733a2f2f7573656d656d6f732e636f6d2f6c6f676f2e77656270-Eg8C.webp" width="100" /><br>A lightweight, self-hosted memo hub. Open Source and Free forever.<br><br>The **elestio_memos** resource allows the creation and management of Elestio Memos services. The service uses the following docker image [neosmemo/memos](https://hub.docker.com/r/neosmemo/memos)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68747470733a2f2f7573656d656d6f732e636f6d2f6c6f676f2e77656270-Eg8C.webp" width="100" /><br>A lightweight, self-hosted memo hub. Open Source and Free forever.<br><br>The **elestio_memos** resource allows the creation and management of Elestio Memos services. The service uses the following docker image [neosmemo/memos](https://hub.docker.com/r/neosmemo/memos)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Memos service.
-resource "elestio_memos" "demo_memos" {
+resource "elestio_memos" "example" {
   project_id    = "2500"
-  server_name   = "demo-memos"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

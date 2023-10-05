@@ -1,7 +1,5 @@
-# Create and manage Baserow service.
-resource "elestio_baserow" "demo_baserow" {
+resource "elestio_baserow" "example" {
   project_id    = "2500"
-  server_name   = "demo-baserow"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

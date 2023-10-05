@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gitlab (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" /><br>GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br><br>The **elestio_gitlab** resource allows the creation and management of Elestio Gitlab services. The service uses the following docker image [gitlab/gitlab-ee](https://hub.docker.com/r/gitlab/gitlab-ee)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/gitlab-logo-gray-rgb-8NKA.png" width="100" /><br>GitLab enables you to deliver software faster with better security and collaboration in a single platform.<br><br>The **elestio_gitlab** resource allows the creation and management of Elestio Gitlab services. The service uses the following docker image [gitlab/gitlab-ee](https://hub.docker.com/r/gitlab/gitlab-ee)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gitlab service.
-resource "elestio_gitlab" "demo_gitlab" {
+resource "elestio_gitlab" "example" {
   project_id    = "2500"
-  server_name   = "demo-gitlab"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

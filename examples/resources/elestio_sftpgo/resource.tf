@@ -1,7 +1,5 @@
-# Create and manage SFTPGo service.
-resource "elestio_sftpgo" "demo_sftpgo" {
+resource "elestio_sftpgo" "example" {
   project_id    = "2500"
-  server_name   = "demo-sftpgo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

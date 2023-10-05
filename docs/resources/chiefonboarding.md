@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_chiefonboarding (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" /><br>Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br><br>The **elestio_chiefonboarding** resource allows the creation and management of Elestio ChiefOnboarding services. The service uses the following docker image [chiefonboarding/chiefonboarding](https://hub.docker.com/r/chiefonboarding/chiefonboarding)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/151832141493-657c97eadff523414184-512-removebg-preview-EuP8.png" width="100" /><br>Create entire blueprints of what your new hire will go through within minutes. Simply drag and drop items into the timeline.<br><br>The **elestio_chiefonboarding** resource allows the creation and management of Elestio ChiefOnboarding services. The service uses the following docker image [chiefonboarding/chiefonboarding](https://hub.docker.com/r/chiefonboarding/chiefonboarding)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ChiefOnboarding service.
-resource "elestio_chiefonboarding" "demo_chiefonboarding" {
+resource "elestio_chiefonboarding" "example" {
   project_id    = "2500"
-  server_name   = "demo-chiefonboarding"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

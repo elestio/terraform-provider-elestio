@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_lobsters (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lobsters-KGMT.png" width="100" /><br>Lobsters are a computing-focused community centered around link aggregation and discussion.<br><br>The **elestio_lobsters** resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image [elestio/lobster](https://hub.docker.com/r/elestio/lobster)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lobsters-KGMT.png" width="100" /><br>Lobsters are a computing-focused community centered around link aggregation and discussion.<br><br>The **elestio_lobsters** resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image [elestio/lobster](https://hub.docker.com/r/elestio/lobster)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Lobsters service.
-resource "elestio_lobsters" "demo_lobsters" {
+resource "elestio_lobsters" "example" {
   project_id    = "2500"
-  server_name   = "demo-lobsters"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

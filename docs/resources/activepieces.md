@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_activepieces (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1651244193673-removebg-preview-zydr.png" width="100" /><br>Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.<br><br>The **elestio_activepieces** resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image [elestio/activepieces](https://hub.docker.com/r/elestio/activepieces)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1651244193673-removebg-preview-zydr.png" width="100" /><br>Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.<br><br>The **elestio_activepieces** resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image [elestio/activepieces](https://hub.docker.com/r/elestio/activepieces)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Activepieces service.
-resource "elestio_activepieces" "demo_activepieces" {
+resource "elestio_activepieces" "example" {
   project_id    = "2500"
-  server_name   = "demo-activepieces"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

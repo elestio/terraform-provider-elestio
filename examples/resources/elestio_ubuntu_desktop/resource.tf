@@ -1,7 +1,5 @@
-# Create and manage Ubuntu-Desktop service.
-resource "elestio_ubuntu_desktop" "demo_ubuntu_desktop" {
+resource "elestio_ubuntu_desktop" "example" {
   project_id    = "2500"
-  server_name   = "demo-ubuntu_desktop"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_archivebox (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" /><br>ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br><br>The **elestio_archivebox** resource allows the creation and management of Elestio ArchiveBox services. The service uses the following docker image [archivebox/archivebox](https://hub.docker.com/r/archivebox/archivebox)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/archivebox--1--20hc.png" width="100" /><br>ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.<br><br>The **elestio_archivebox** resource allows the creation and management of Elestio ArchiveBox services. The service uses the following docker image [archivebox/archivebox](https://hub.docker.com/r/archivebox/archivebox)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ArchiveBox service.
-resource "elestio_archivebox" "demo_archivebox" {
+resource "elestio_archivebox" "example" {
   project_id    = "2500"
-  server_name   = "demo-archivebox"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

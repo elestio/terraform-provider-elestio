@@ -1,7 +1,5 @@
-# Create and manage MySQL service.
-resource "elestio_mysql" "demo_mysql" {
+resource "elestio_mysql" "example" {
   project_id    = "2500"
-  server_name   = "demo-mysql"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

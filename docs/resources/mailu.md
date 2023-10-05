@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mailu (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br>Mailu is an insular email distribution - mail server as Docker images<br><br>The **elestio_mailu** resource allows the creation and management of Elestio Mailu services. The service uses the following docker image [ghcr.io/mailu](https://hub.docker.com/r/ghcr.io/mailu)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br>Mailu is an insular email distribution - mail server as Docker images<br><br>The **elestio_mailu** resource allows the creation and management of Elestio Mailu services. The service uses the following docker image [ghcr.io/mailu](https://hub.docker.com/r/ghcr.io/mailu)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Mailu service.
-resource "elestio_mailu" "demo_mailu" {
+resource "elestio_mailu" "example" {
   project_id    = "2500"
-  server_name   = "demo-mailu"
   version       = "2.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"

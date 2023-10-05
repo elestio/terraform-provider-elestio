@@ -1,7 +1,5 @@
-# Create and manage Mage AI service.
-resource "elestio_mage" "demo_mage" {
+resource "elestio_mage" "example" {
   project_id    = "2500"
-  server_name   = "demo-mage"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

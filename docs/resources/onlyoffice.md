@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_onlyoffice (Resource)
-The **elestio_onlyoffice** resource allows the creation and management of Elestio OnlyOffice services.
 
+The **elestio_onlyoffice** resource allows the creation and management of Elestio OnlyOffice services.
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_botpress (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Botpress-HmD3.png" width="100" /><br>The first next-generation chatbot builder powered by OpenAI. Build ChatGPT-like bots for your project or business to get things done. <br><br>The **elestio_botpress** resource allows the creation and management of Elestio Botpress services. The service uses the following docker image [botpress/server](https://hub.docker.com/r/botpress/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Botpress-HmD3.png" width="100" /><br>The first next-generation chatbot builder powered by OpenAI. Build ChatGPT-like bots for your project or business to get things done. <br><br>The **elestio_botpress** resource allows the creation and management of Elestio Botpress services. The service uses the following docker image [botpress/server](https://hub.docker.com/r/botpress/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Botpress service.
-resource "elestio_botpress" "demo_botpress" {
+resource "elestio_botpress" "example" {
   project_id    = "2500"
-  server_name   = "demo-botpress"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

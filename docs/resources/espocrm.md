@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_espocrm (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/EspoCRM-Zuvd.png" width="100" /><br>EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.<br><br>The **elestio_espocrm** resource allows the creation and management of Elestio EspoCRM services. The service uses the following docker image [espocrm/espocrm](https://hub.docker.com/r/espocrm/espocrm)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/EspoCRM-Zuvd.png" width="100" /><br>EspoCRM is a web application that allows users to see, enter and evaluate all your company relationships regardless of the type.<br><br>The **elestio_espocrm** resource allows the creation and management of Elestio EspoCRM services. The service uses the following docker image [espocrm/espocrm](https://hub.docker.com/r/espocrm/espocrm)
 
 ## Example Usage
 
 ```terraform
-# Create and manage EspoCRM service.
-resource "elestio_espocrm" "demo_espocrm" {
+resource "elestio_espocrm" "example" {
   project_id    = "2500"
-  server_name   = "demo-espocrm"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

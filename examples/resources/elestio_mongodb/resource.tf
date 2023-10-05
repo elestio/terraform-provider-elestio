@@ -1,7 +1,5 @@
-# Create and manage MongoDB service.
-resource "elestio_mongodb" "demo_mongodb" {
+resource "elestio_mongodb" "example" {
   project_id    = "2500"
-  server_name   = "demo-mongodb"
   version       = "6"
   provider_name = "hetzner"
   datacenter    = "fsn1"

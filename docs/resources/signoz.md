@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_signoz (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" /><br>SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly<br><br>The **elestio_signoz** resource allows the creation and management of Elestio SigNoz services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" /><br>SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly<br><br>The **elestio_signoz** resource allows the creation and management of Elestio SigNoz services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage SigNoz service.
-resource "elestio_signoz" "demo_signoz" {
+resource "elestio_signoz" "example" {
   project_id    = "2500"
-  server_name   = "demo-signoz"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

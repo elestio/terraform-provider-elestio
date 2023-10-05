@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_pritunl (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pritunl-Ji9D.png" width="100" /><br>Best open-source alternative to proprietary commercial VPN products such as Aviatrix and Pulse Secure.<br><br>The **elestio_pritunl** resource allows the creation and management of Elestio Pritunl services. The service uses the following docker image [ghcr.io/jippi/docker-pritunl](https://hub.docker.com/r/ghcr.io/jippi/docker-pritunl)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pritunl-Ji9D.png" width="100" /><br>Best open-source alternative to proprietary commercial VPN products such as Aviatrix and Pulse Secure.<br><br>The **elestio_pritunl** resource allows the creation and management of Elestio Pritunl services. The service uses the following docker image [ghcr.io/jippi/docker-pritunl](https://hub.docker.com/r/ghcr.io/jippi/docker-pritunl)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Pritunl service.
-resource "elestio_pritunl" "demo_pritunl" {
+resource "elestio_pritunl" "example" {
   project_id    = "2500"
-  server_name   = "demo-pritunl"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

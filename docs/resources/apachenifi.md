@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_apachenifi (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ApacheNiFi-ttJL.png" width="100" /><br>Apache NiFi automates the movement of data between disparate data sources and systems, making data ingestion fast, easy, and secure.<br><br>The **elestio_apachenifi** resource allows the creation and management of Elestio ApacheNiFi services. The service uses the following docker image [apache/nifi](https://hub.docker.com/r/apache/nifi)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ApacheNiFi-ttJL.png" width="100" /><br>Apache NiFi automates the movement of data between disparate data sources and systems, making data ingestion fast, easy, and secure.<br><br>The **elestio_apachenifi** resource allows the creation and management of Elestio ApacheNiFi services. The service uses the following docker image [apache/nifi](https://hub.docker.com/r/apache/nifi)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ApacheNiFi service.
-resource "elestio_apachenifi" "demo_apachenifi" {
+resource "elestio_apachenifi" "example" {
   project_id    = "2500"
-  server_name   = "demo-apachenifi"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

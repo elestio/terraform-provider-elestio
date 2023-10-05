@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mealie (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [hkotel/mealie](https://hub.docker.com/r/hkotel/mealie)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [hkotel/mealie](https://hub.docker.com/r/hkotel/mealie)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Mealie service.
-resource "elestio_mealie" "demo_mealie" {
+resource "elestio_mealie" "example" {
   project_id    = "2500"
-  server_name   = "demo-mealie"
   version       = "omni-nightly"
   provider_name = "hetzner"
   datacenter    = "fsn1"

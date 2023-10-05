@@ -1,7 +1,5 @@
-# Create and manage Gotify service.
-resource "elestio_gotify" "demo_gotify" {
+resource "elestio_gotify" "example" {
   project_id    = "2500"
-  server_name   = "demo-gotify"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

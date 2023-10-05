@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gerrit (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" /><br>Gerrit is a code review and project management tool for Git based projects.<br><br>The **elestio_gerrit** resource allows the creation and management of Elestio Gerrit services. The service uses the following docker image [gerritcodereview/gerrit](https://hub.docker.com/r/gerritcodereview/gerrit)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gerrit-WauR.png" width="100" /><br>Gerrit is a code review and project management tool for Git based projects.<br><br>The **elestio_gerrit** resource allows the creation and management of Elestio Gerrit services. The service uses the following docker image [gerritcodereview/gerrit](https://hub.docker.com/r/gerritcodereview/gerrit)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gerrit service.
-resource "elestio_gerrit" "demo_gerrit" {
+resource "elestio_gerrit" "example" {
   project_id    = "2500"
-  server_name   = "demo-gerrit"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

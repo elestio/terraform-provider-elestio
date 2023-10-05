@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mautic (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br>Mautic is a open source marketing automation software.<br><br>The **elestio_mautic** resource allows the creation and management of Elestio Mautic services. The service uses the following docker image [mautic](https://hub.docker.com/r/mautic)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br>Mautic is a open source marketing automation software.<br><br>The **elestio_mautic** resource allows the creation and management of Elestio Mautic services. The service uses the following docker image [mautic](https://hub.docker.com/r/mautic)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Mautic service.
-resource "elestio_mautic" "demo_mautic" {
+resource "elestio_mautic" "example" {
   project_id    = "2500"
-  server_name   = "demo-mautic"
   version       = "v4"
   provider_name = "hetzner"
   datacenter    = "fsn1"

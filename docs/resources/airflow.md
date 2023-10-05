@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_airflow (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" /><br>Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br><br>The **elestio_airflow** resource allows the creation and management of Elestio Airflow services. The service uses the following docker image [apache/airflow](https://hub.docker.com/r/apache/airflow)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airflow-logo--1--edli.png" width="100" /><br>Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.<br><br>The **elestio_airflow** resource allows the creation and management of Elestio Airflow services. The service uses the following docker image [apache/airflow](https://hub.docker.com/r/apache/airflow)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Airflow service.
-resource "elestio_airflow" "demo_airflow" {
+resource "elestio_airflow" "example" {
   project_id    = "2500"
-  server_name   = "demo-airflow"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

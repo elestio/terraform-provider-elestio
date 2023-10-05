@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_growthbook (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrowthBook-rtdF.png" width="100" /><br>GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experiments<br><br>The **elestio_growthbook** resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image [elestio/growthbook](https://hub.docker.com/r/elestio/growthbook)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrowthBook-rtdF.png" width="100" /><br>GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experiments<br><br>The **elestio_growthbook** resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image [elestio/growthbook](https://hub.docker.com/r/elestio/growthbook)
 
 ## Example Usage
 
 ```terraform
-# Create and manage GrowthBook service.
-resource "elestio_growthbook" "demo_growthbook" {
+resource "elestio_growthbook" "example" {
   project_id    = "2500"
-  server_name   = "demo-growthbook"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

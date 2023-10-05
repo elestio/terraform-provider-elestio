@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_centrifugo (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" /><br>Centrifugo is a scalable real-time, language-agnostic messaging server. <br><br>The **elestio_centrifugo** resource allows the creation and management of Elestio Centrifugo services. The service uses the following docker image [centrifugo/centrifugo](https://hub.docker.com/r/centrifugo/centrifugo)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/centrifugo-zHJH.svg" width="100" /><br>Centrifugo is a scalable real-time, language-agnostic messaging server. <br><br>The **elestio_centrifugo** resource allows the creation and management of Elestio Centrifugo services. The service uses the following docker image [centrifugo/centrifugo](https://hub.docker.com/r/centrifugo/centrifugo)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Centrifugo service.
-resource "elestio_centrifugo" "demo_centrifugo" {
+resource "elestio_centrifugo" "example" {
   project_id    = "2500"
-  server_name   = "demo-centrifugo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

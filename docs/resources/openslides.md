@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_openslides (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenSlides-Fngj.png" width="100" /><br>OpenSlides is a powerful and modern, web-based software for the digital organization of your meetings and committees. <br><br>The **elestio_openslides** resource allows the creation and management of Elestio OpenSlides services. The service uses the following docker image [penslides/openslides/openslides-client](https://hub.docker.com/r/penslides/openslides/openslides-client)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenSlides-Fngj.png" width="100" /><br>OpenSlides is a powerful and modern, web-based software for the digital organization of your meetings and committees. <br><br>The **elestio_openslides** resource allows the creation and management of Elestio OpenSlides services. The service uses the following docker image [penslides/openslides/openslides-client](https://hub.docker.com/r/penslides/openslides/openslides-client)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenSlides service.
-resource "elestio_openslides" "demo_openslides" {
+resource "elestio_openslides" "example" {
   project_id    = "2500"
-  server_name   = "demo-openslides"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

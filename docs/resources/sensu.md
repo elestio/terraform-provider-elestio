@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_sensu (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" /><br>Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.<br><br>The **elestio_sensu** resource allows the creation and management of Elestio Sensu services. The service uses the following docker image [sensu/sensu](https://hub.docker.com/r/sensu/sensu)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sensu-H3Of.png" width="100" /><br>Sensu is an open source monitoring tool for ephemeral infrastructure and distributed applications.<br><br>The **elestio_sensu** resource allows the creation and management of Elestio Sensu services. The service uses the following docker image [sensu/sensu](https://hub.docker.com/r/sensu/sensu)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Sensu service.
-resource "elestio_sensu" "demo_sensu" {
+resource "elestio_sensu" "example" {
   project_id    = "2500"
-  server_name   = "demo-sensu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

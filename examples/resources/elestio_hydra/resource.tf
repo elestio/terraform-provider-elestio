@@ -1,7 +1,5 @@
-# Create and manage Hydra service.
-resource "elestio_hydra" "demo_hydra" {
+resource "elestio_hydra" "example" {
   project_id    = "2500"
-  server_name   = "demo-hydra"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nodebb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" /><br>NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.<br><br>The **elestio_nodebb** resource allows the creation and management of Elestio NodeBB services. The service uses the following docker image [elestio/nodebb](https://hub.docker.com/r/elestio/nodebb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/G2mNnDi-PoW0.png" width="100" /><br>NodeBB is next-generation forum software - powerful, mobile-ready and easy to use.<br><br>The **elestio_nodebb** resource allows the creation and management of Elestio NodeBB services. The service uses the following docker image [elestio/nodebb](https://hub.docker.com/r/elestio/nodebb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage NodeBB service.
-resource "elestio_nodebb" "demo_nodebb" {
+resource "elestio_nodebb" "example" {
   project_id    = "2500"
-  server_name   = "demo-nodebb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

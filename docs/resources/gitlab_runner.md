@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gitlab_runner (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" /><br>GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.<br><br>The **elestio_gitlab_runner** resource allows the creation and management of Elestio Gitlab-runner services. The service uses the following docker image [gitlab/gitlab-runner](https://hub.docker.com/r/gitlab/gitlab-runner)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gitlab-qKSS.png" width="100" /><br>GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.<br><br>The **elestio_gitlab_runner** resource allows the creation and management of Elestio Gitlab-runner services. The service uses the following docker image [gitlab/gitlab-runner](https://hub.docker.com/r/gitlab/gitlab-runner)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gitlab-runner service.
-resource "elestio_gitlab_runner" "demo_gitlab_runner" {
+resource "elestio_gitlab_runner" "example" {
   project_id    = "2500"
-  server_name   = "demo-gitlab_runner"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

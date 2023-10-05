@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_owncloud (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" /><br>ownCloud is a suite of client-server software for creating and using file hosting services. <br><br>The **elestio_owncloud** resource allows the creation and management of Elestio ownCloud services. The service uses the following docker image [owncloud/server](https://hub.docker.com/r/owncloud/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-OwnCloud-logo-and-wordmark-nqoe.png" width="100" /><br>ownCloud is a suite of client-server software for creating and using file hosting services. <br><br>The **elestio_owncloud** resource allows the creation and management of Elestio ownCloud services. The service uses the following docker image [owncloud/server](https://hub.docker.com/r/owncloud/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ownCloud service.
-resource "elestio_owncloud" "demo_owncloud" {
+resource "elestio_owncloud" "example" {
   project_id    = "2500"
-  server_name   = "demo-owncloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

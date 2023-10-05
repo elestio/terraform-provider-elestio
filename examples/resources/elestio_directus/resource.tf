@@ -1,7 +1,5 @@
-# Create and manage Directus service.
-resource "elestio_directus" "demo_directus" {
+resource "elestio_directus" "example" {
   project_id    = "2500"
-  server_name   = "demo-directus"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

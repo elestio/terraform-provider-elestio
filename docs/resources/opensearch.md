@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_opensearch (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" /><br>Open source distributed and RESTful search engine.<br><br>The **elestio_opensearch** resource allows the creation and management of Elestio OpenSearch services. The service uses the following docker image [opensearchproject/opensearch](https://hub.docker.com/r/opensearchproject/opensearch)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/opensearch-twitter-card-D0aD.png" width="100" /><br>Open source distributed and RESTful search engine.<br><br>The **elestio_opensearch** resource allows the creation and management of Elestio OpenSearch services. The service uses the following docker image [opensearchproject/opensearch](https://hub.docker.com/r/opensearchproject/opensearch)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenSearch service.
-resource "elestio_opensearch" "demo_opensearch" {
+resource "elestio_opensearch" "example" {
   project_id    = "2500"
-  server_name   = "demo-opensearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

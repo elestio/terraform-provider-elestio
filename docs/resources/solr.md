@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_solr (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" /><br>Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br><br>The **elestio_solr** resource allows the creation and management of Elestio Solr services. The service uses the following docker image [bitnami/solr](https://hub.docker.com/r/bitnami/solr)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" /><br>Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br><br>The **elestio_solr** resource allows the creation and management of Elestio Solr services. The service uses the following docker image [bitnami/solr](https://hub.docker.com/r/bitnami/solr)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Solr service.
-resource "elestio_solr" "demo_solr" {
+resource "elestio_solr" "example" {
   project_id    = "2500"
-  server_name   = "demo-solr"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

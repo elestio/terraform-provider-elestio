@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mariadb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br>The open source relational database<br><br>The **elestio_mariadb** resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image [elestio/mariadb](https://hub.docker.com/r/elestio/mariadb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br>The open source relational database<br><br>The **elestio_mariadb** resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image [elestio/mariadb](https://hub.docker.com/r/elestio/mariadb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MariaDB service.
-resource "elestio_mariadb" "demo_mariadb" {
+resource "elestio_mariadb" "example" {
   project_id    = "2500"
-  server_name   = "demo-mariadb"
   version       = "10.9"
   provider_name = "hetzner"
   datacenter    = "fsn1"

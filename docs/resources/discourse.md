@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_discourse (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br>Discourse is an open-source discussion platform built for the next decade of the Internet. <br><br>The **elestio_discourse** resource allows the creation and management of Elestio Discourse services. The service uses the following docker image [bitnami/discourse](https://hub.docker.com/r/bitnami/discourse)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br>Discourse is an open-source discussion platform built for the next decade of the Internet. <br><br>The **elestio_discourse** resource allows the creation and management of Elestio Discourse services. The service uses the following docker image [bitnami/discourse](https://hub.docker.com/r/bitnami/discourse)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Discourse service.
-resource "elestio_discourse" "demo_discourse" {
+resource "elestio_discourse" "example" {
   project_id    = "2500"
-  server_name   = "demo-discourse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

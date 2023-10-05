@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_chatwoot (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br>Chatwoot is an open-source, alternative customer engagement suite.<br><br>The **elestio_chatwoot** resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image [chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br>Chatwoot is an open-source, alternative customer engagement suite.<br><br>The **elestio_chatwoot** resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image [chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Chatwoot service.
-resource "elestio_chatwoot" "demo_chatwoot" {
+resource "elestio_chatwoot" "example" {
   project_id    = "2500"
-  server_name   = "demo-chatwoot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

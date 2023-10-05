@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_traggo (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Traggo-RlJO.png" width="100" /><br>Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.<br><br>The **elestio_traggo** resource allows the creation and management of Elestio Traggo services. The service uses the following docker image [traggo/server](https://hub.docker.com/r/traggo/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Traggo-RlJO.png" width="100" /><br>Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.<br><br>The **elestio_traggo** resource allows the creation and management of Elestio Traggo services. The service uses the following docker image [traggo/server](https://hub.docker.com/r/traggo/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Traggo service.
-resource "elestio_traggo" "demo_traggo" {
+resource "elestio_traggo" "example" {
   project_id    = "2500"
-  server_name   = "demo-traggo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

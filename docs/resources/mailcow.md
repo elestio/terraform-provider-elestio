@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mailcow (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" /><br>Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br><br>The **elestio_mailcow** resource allows the creation and management of Elestio MailCow services. The service uses the following docker image [mailcow](https://hub.docker.com/r/mailcow)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailcow-g4H1.png" width="100" /><br>Mailcow is a mail server suite with an elegant web interface for managing domains, mailboxes, etc.<br><br>The **elestio_mailcow** resource allows the creation and management of Elestio MailCow services. The service uses the following docker image [mailcow](https://hub.docker.com/r/mailcow)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MailCow service.
-resource "elestio_mailcow" "demo_mailcow" {
+resource "elestio_mailcow" "example" {
   project_id    = "2500"
-  server_name   = "demo-mailcow"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

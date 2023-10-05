@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_postal (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br>Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br><br>The **elestio_postal** resource allows the creation and management of Elestio Postal services. The service uses the following docker image [postalserver/postal](https://hub.docker.com/r/postalserver/postal)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br>Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br><br>The **elestio_postal** resource allows the creation and management of Elestio Postal services. The service uses the following docker image [postalserver/postal](https://hub.docker.com/r/postalserver/postal)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Postal service.
-resource "elestio_postal" "demo_postal" {
+resource "elestio_postal" "example" {
   project_id    = "2500"
-  server_name   = "demo-postal"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

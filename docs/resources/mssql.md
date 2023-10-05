@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mssql (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MSSQL service.
-resource "elestio_mssql" "demo_mssql" {
+resource "elestio_mssql" "example" {
   project_id    = "2500"
-  server_name   = "demo-mssql"
   version       = "2019-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

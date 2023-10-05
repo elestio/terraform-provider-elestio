@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_flatnotes (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flatnotes-BIyF.png" width="100" /><br>A self-hosted, database-less note-taking web app that utilizes a flat folder of markdown files for storage.<br><br>The **elestio_flatnotes** resource allows the creation and management of Elestio Flatnotes services. The service uses the following docker image [dullage/flatnotes](https://hub.docker.com/r/dullage/flatnotes)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flatnotes-BIyF.png" width="100" /><br>A self-hosted, database-less note-taking web app that utilizes a flat folder of markdown files for storage.<br><br>The **elestio_flatnotes** resource allows the creation and management of Elestio Flatnotes services. The service uses the following docker image [dullage/flatnotes](https://hub.docker.com/r/dullage/flatnotes)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Flatnotes service.
-resource "elestio_flatnotes" "demo_flatnotes" {
+resource "elestio_flatnotes" "example" {
   project_id    = "2500"
-  server_name   = "demo-flatnotes"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

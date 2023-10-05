@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_cronicle (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" /><br>Cronicle is a simple, distributed task scheduler and runner with a web based UI.<br><br>The **elestio_cronicle** resource allows the creation and management of Elestio Cronicle services. The service uses the following docker image [btdwv/cronicle](https://hub.docker.com/r/btdwv/cronicle)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cronicle-GxiP.png" width="100" /><br>Cronicle is a simple, distributed task scheduler and runner with a web based UI.<br><br>The **elestio_cronicle** resource allows the creation and management of Elestio Cronicle services. The service uses the following docker image [btdwv/cronicle](https://hub.docker.com/r/btdwv/cronicle)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Cronicle service.
-resource "elestio_cronicle" "demo_cronicle" {
+resource "elestio_cronicle" "example" {
   project_id    = "2500"
-  server_name   = "demo-cronicle"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

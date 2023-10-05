@@ -1,7 +1,5 @@
-# Create and manage Docspell service.
-resource "elestio_docspell" "demo_docspell" {
+resource "elestio_docspell" "example" {
   project_id    = "2500"
-  server_name   = "demo-docspell"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

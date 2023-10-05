@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nebula (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" /><br>Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br><br>The **elestio_nebula** resource allows the creation and management of Elestio Nebula services. The service uses the following docker image [elestio/nebula-rest-api](https://hub.docker.com/r/elestio/nebula-rest-api)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1200px-Slack-icon-2019-oMDw.png" width="100" /><br>Nebula is a scalable overlay networking tool with a focus on performance, simplicity and security<br><br>The **elestio_nebula** resource allows the creation and management of Elestio Nebula services. The service uses the following docker image [elestio/nebula-rest-api](https://hub.docker.com/r/elestio/nebula-rest-api)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Nebula service.
-resource "elestio_nebula" "demo_nebula" {
+resource "elestio_nebula" "example" {
   project_id    = "2500"
-  server_name   = "demo-nebula"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

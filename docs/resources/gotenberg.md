@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gotenberg (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gotenberg-gPoP.png" width="100" /><br>A Docker-powered stateless API for PDF files<br><br>The **elestio_gotenberg** resource allows the creation and management of Elestio Gotenberg services. The service uses the following docker image [gotenberg/gotenberg](https://hub.docker.com/r/gotenberg/gotenberg)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gotenberg-gPoP.png" width="100" /><br>A Docker-powered stateless API for PDF files<br><br>The **elestio_gotenberg** resource allows the creation and management of Elestio Gotenberg services. The service uses the following docker image [gotenberg/gotenberg](https://hub.docker.com/r/gotenberg/gotenberg)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gotenberg service.
-resource "elestio_gotenberg" "demo_gotenberg" {
+resource "elestio_gotenberg" "example" {
   project_id    = "2500"
-  server_name   = "demo-gotenberg"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

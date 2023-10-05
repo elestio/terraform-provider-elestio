@@ -1,7 +1,5 @@
-# Create and manage Sensu service.
-resource "elestio_sensu" "demo_sensu" {
+resource "elestio_sensu" "example" {
   project_id    = "2500"
-  server_name   = "demo-sensu"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

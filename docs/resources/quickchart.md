@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_quickchart (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/quickchart-vqGz.png" width="100" /><br>QuickChart allows you to generates chart images of charts from a URL. <br><br>The **elestio_quickchart** resource allows the creation and management of Elestio QuickChart services. The service uses the following docker image [ianw/quickchart](https://hub.docker.com/r/ianw/quickchart)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/quickchart-vqGz.png" width="100" /><br>QuickChart allows you to generates chart images of charts from a URL. <br><br>The **elestio_quickchart** resource allows the creation and management of Elestio QuickChart services. The service uses the following docker image [ianw/quickchart](https://hub.docker.com/r/ianw/quickchart)
 
 ## Example Usage
 
 ```terraform
-# Create and manage QuickChart service.
-resource "elestio_quickchart" "demo_quickchart" {
+resource "elestio_quickchart" "example" {
   project_id    = "2500"
-  server_name   = "demo-quickchart"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

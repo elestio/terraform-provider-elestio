@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_onedev (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" /><br>OneDev is an open-source all-in-one DevOps platform.<br><br>The **elestio_onedev** resource allows the creation and management of Elestio Onedev services. The service uses the following docker image [1dev/server](https://hub.docker.com/r/1dev/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/onedev-kb7k.png" width="100" /><br>OneDev is an open-source all-in-one DevOps platform.<br><br>The **elestio_onedev** resource allows the creation and management of Elestio Onedev services. The service uses the following docker image [1dev/server](https://hub.docker.com/r/1dev/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Onedev service.
-resource "elestio_onedev" "demo_onedev" {
+resource "elestio_onedev" "example" {
   project_id    = "2500"
-  server_name   = "demo-onedev"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_typesense (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" /><br>Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br><br>The **elestio_typesense** resource allows the creation and management of Elestio Typesense services. The service uses the following docker image [typesense/typesense](https://hub.docker.com/r/typesense/typesense)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" /><br>Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br><br>The **elestio_typesense** resource allows the creation and management of Elestio Typesense services. The service uses the following docker image [typesense/typesense](https://hub.docker.com/r/typesense/typesense)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Typesense service.
-resource "elestio_typesense" "demo_typesense" {
+resource "elestio_typesense" "example" {
   project_id    = "2500"
-  server_name   = "demo-typesense"
   version       = "0.23.0.rc66"
   provider_name = "hetzner"
   datacenter    = "fsn1"

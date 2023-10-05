@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_languagetool (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download-llvo.png" width="100" /><br>LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages.<br><br>The **elestio_languagetool** resource allows the creation and management of Elestio LanguageTool services. The service uses the following docker image [erikvl87/languagetool](https://hub.docker.com/r/erikvl87/languagetool)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download-llvo.png" width="100" /><br>LanguageTool is an Open Source proofreading software for English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages.<br><br>The **elestio_languagetool** resource allows the creation and management of Elestio LanguageTool services. The service uses the following docker image [erikvl87/languagetool](https://hub.docker.com/r/erikvl87/languagetool)
 
 ## Example Usage
 
 ```terraform
-# Create and manage LanguageTool service.
-resource "elestio_languagetool" "demo_languagetool" {
+resource "elestio_languagetool" "example" {
   project_id    = "2500"
-  server_name   = "demo-languagetool"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

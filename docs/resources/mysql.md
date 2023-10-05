@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mysql (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br>MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br><br>The **elestio_mysql** resource allows the creation and management of Elestio MySQL services. The service uses the following docker image [elestio/mysql](https://hub.docker.com/r/elestio/mysql)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br>MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br><br>The **elestio_mysql** resource allows the creation and management of Elestio MySQL services. The service uses the following docker image [elestio/mysql](https://hub.docker.com/r/elestio/mysql)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MySQL service.
-resource "elestio_mysql" "demo_mysql" {
+resource "elestio_mysql" "example" {
   project_id    = "2500"
-  server_name   = "demo-mysql"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Centrifugo service.
-resource "elestio_centrifugo" "demo_centrifugo" {
+resource "elestio_centrifugo" "example" {
   project_id    = "2500"
-  server_name   = "demo-centrifugo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

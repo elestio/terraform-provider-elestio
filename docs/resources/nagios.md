@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nagios (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" /><br>The Industry Standard In IT Infrastructure Monitoring<br><br>The **elestio_nagios** resource allows the creation and management of Elestio Nagios services. The service uses the following docker image [jasonrivers/nagios](https://hub.docker.com/r/jasonrivers/nagios)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Nagios-xrco.png" width="100" /><br>The Industry Standard In IT Infrastructure Monitoring<br><br>The **elestio_nagios** resource allows the creation and management of Elestio Nagios services. The service uses the following docker image [jasonrivers/nagios](https://hub.docker.com/r/jasonrivers/nagios)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Nagios service.
-resource "elestio_nagios" "demo_nagios" {
+resource "elestio_nagios" "example" {
   project_id    = "2500"
-  server_name   = "demo-nagios"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

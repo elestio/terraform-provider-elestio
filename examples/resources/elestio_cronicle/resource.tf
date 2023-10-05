@@ -1,7 +1,5 @@
-# Create and manage Cronicle service.
-resource "elestio_cronicle" "demo_cronicle" {
+resource "elestio_cronicle" "example" {
   project_id    = "2500"
-  server_name   = "demo-cronicle"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

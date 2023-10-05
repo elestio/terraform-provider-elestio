@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_powerdns (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" /><br>PowerDNS is a premier supplier of open-source DNS software, services and support. <br><br>The **elestio_powerdns** resource allows the creation and management of Elestio PowerDNS services. The service uses the following docker image [pschiffe/pdns-mysql](https://hub.docker.com/r/pschiffe/pdns-mysql)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/powerdns-logo-trans-0Pta.png" width="100" /><br>PowerDNS is a premier supplier of open-source DNS software, services and support. <br><br>The **elestio_powerdns** resource allows the creation and management of Elestio PowerDNS services. The service uses the following docker image [pschiffe/pdns-mysql](https://hub.docker.com/r/pschiffe/pdns-mysql)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PowerDNS service.
-resource "elestio_powerdns" "demo_powerdns" {
+resource "elestio_powerdns" "example" {
   project_id    = "2500"
-  server_name   = "demo-powerdns"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

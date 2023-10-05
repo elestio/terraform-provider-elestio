@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_syncthing (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" /><br>Syncthing is a free, continuous, multiple-device file synchronization program. <br><br>The **elestio_syncthing** resource allows the creation and management of Elestio Syncthing services. The service uses the following docker image [syncthing/syncthing](https://hub.docker.com/r/syncthing/syncthing)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/synclogo-text-128-vnSG.png" width="100" /><br>Syncthing is a free, continuous, multiple-device file synchronization program. <br><br>The **elestio_syncthing** resource allows the creation and management of Elestio Syncthing services. The service uses the following docker image [syncthing/syncthing](https://hub.docker.com/r/syncthing/syncthing)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Syncthing service.
-resource "elestio_syncthing" "demo_syncthing" {
+resource "elestio_syncthing" "example" {
   project_id    = "2500"
-  server_name   = "demo-syncthing"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

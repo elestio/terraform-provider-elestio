@@ -1,7 +1,5 @@
-# Create and manage Squid service.
-resource "elestio_squid" "demo_squid" {
+resource "elestio_squid" "example" {
   project_id    = "2500"
-  server_name   = "demo-squid"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

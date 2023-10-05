@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_jenkins (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br>Jenkins is the leading open-source automation server.<br><br>The **elestio_jenkins** resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image [elestio/jenkins](https://hub.docker.com/r/elestio/jenkins)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br>Jenkins is the leading open-source automation server.<br><br>The **elestio_jenkins** resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image [elestio/jenkins](https://hub.docker.com/r/elestio/jenkins)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Jenkins service.
-resource "elestio_jenkins" "demo_jenkins" {
+resource "elestio_jenkins" "example" {
   project_id    = "2500"
-  server_name   = "demo-jenkins"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

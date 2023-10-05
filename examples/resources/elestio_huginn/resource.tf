@@ -1,7 +1,5 @@
-# Create and manage Huginn service.
-resource "elestio_huginn" "demo_huginn" {
+resource "elestio_huginn" "example" {
   project_id    = "2500"
-  server_name   = "demo-huginn"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

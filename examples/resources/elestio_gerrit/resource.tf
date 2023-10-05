@@ -1,7 +1,5 @@
-# Create and manage Gerrit service.
-resource "elestio_gerrit" "demo_gerrit" {
+resource "elestio_gerrit" "example" {
   project_id    = "2500"
-  server_name   = "demo-gerrit"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

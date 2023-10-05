@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nomad (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" /><br>Nomad is a scheduler and workload orchestrator.<br><br>The **elestio_nomad** resource allows the creation and management of Elestio Nomad services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nomad-logo-B6lr.png" width="100" /><br>Nomad is a scheduler and workload orchestrator.<br><br>The **elestio_nomad** resource allows the creation and management of Elestio Nomad services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage Nomad service.
-resource "elestio_nomad" "demo_nomad" {
+resource "elestio_nomad" "example" {
   project_id    = "2500"
-  server_name   = "demo-nomad"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

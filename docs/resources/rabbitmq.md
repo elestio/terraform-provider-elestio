@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_rabbitmq (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br>RabbitMQ is the most widely deployed open source message broker<br><br>The **elestio_rabbitmq** resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image [rabbitmq](https://hub.docker.com/r/rabbitmq)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br>RabbitMQ is the most widely deployed open source message broker<br><br>The **elestio_rabbitmq** resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image [rabbitmq](https://hub.docker.com/r/rabbitmq)
 
 ## Example Usage
 
 ```terraform
-# Create and manage RabbitMQ service.
-resource "elestio_rabbitmq" "demo_rabbitmq" {
+resource "elestio_rabbitmq" "example" {
   project_id    = "2500"
-  server_name   = "demo-rabbitmq"
   version       = "3-management"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage FlowiseAI service.
-resource "elestio_flowiseai" "demo_flowiseai" {
+resource "elestio_flowiseai" "example" {
   project_id    = "2500"
-  server_name   = "demo-flowiseai"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

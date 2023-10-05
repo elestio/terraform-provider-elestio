@@ -1,7 +1,5 @@
-# Create and manage Dremio service.
-resource "elestio_dremio" "demo_dremio" {
+resource "elestio_dremio" "example" {
   project_id    = "2500"
-  server_name   = "demo-dremio"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Cassandra service.
-resource "elestio_cassandra" "demo_cassandra" {
+resource "elestio_cassandra" "example" {
   project_id    = "2500"
-  server_name   = "demo-cassandra"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

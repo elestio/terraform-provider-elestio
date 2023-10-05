@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_rocket_chat (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" /><br>Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. <br><br>The **elestio_rocket_chat** resource allows the creation and management of Elestio Rocket.Chat services. The service uses the following docker image [rocketchat/rocket.chat](https://hub.docker.com/r/rocketchat/rocket.chat)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/spaces--M418Ul0aSTwf2PYsyPW-avatar-rectangle-1618603990572--1--TRcl.png" width="100" /><br>Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. <br><br>The **elestio_rocket_chat** resource allows the creation and management of Elestio Rocket.Chat services. The service uses the following docker image [rocketchat/rocket.chat](https://hub.docker.com/r/rocketchat/rocket.chat)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Rocket.Chat service.
-resource "elestio_rocket_chat" "demo_rocket_chat" {
+resource "elestio_rocket_chat" "example" {
   project_id    = "2500"
-  server_name   = "demo-rocket_chat"
   version       = "sha-856c235"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_ci_cd_target (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" /><br>Deploy one or multiple CD/CD pipelines to a target node<br><br>The **elestio_ci_cd_target** resource allows the creation and management of Elestio CI-CD-Target services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CI-CD-Target2-YtKS.svg" width="100" /><br>Deploy one or multiple CD/CD pipelines to a target node<br><br>The **elestio_ci_cd_target** resource allows the creation and management of Elestio CI-CD-Target services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage CI-CD-Target service.
-resource "elestio_ci_cd_target" "demo_ci_cd_target" {
+resource "elestio_ci_cd_target" "example" {
   project_id    = "2500"
-  server_name   = "demo-ci_cd_target"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

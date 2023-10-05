@@ -1,7 +1,5 @@
-# Create and manage Umami service.
-resource "elestio_umami" "demo_umami" {
+resource "elestio_umami" "example" {
   project_id    = "2500"
-  server_name   = "demo-umami"
   version       = "postgresql-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

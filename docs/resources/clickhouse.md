@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_clickhouse (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/clickhouse-WFqc.png" width="100" /><br>ClickHouse is an open-source, column-oriented DBMS for online analytical processing. <br><br>The **elestio_clickhouse** resource allows the creation and management of Elestio ClickHouse services. The service uses the following docker image [clickhouse/clickhouse-server](https://hub.docker.com/r/clickhouse/clickhouse-server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/clickhouse-WFqc.png" width="100" /><br>ClickHouse is an open-source, column-oriented DBMS for online analytical processing. <br><br>The **elestio_clickhouse** resource allows the creation and management of Elestio ClickHouse services. The service uses the following docker image [clickhouse/clickhouse-server](https://hub.docker.com/r/clickhouse/clickhouse-server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ClickHouse service.
-resource "elestio_clickhouse" "demo_clickhouse" {
+resource "elestio_clickhouse" "example" {
   project_id    = "2500"
-  server_name   = "demo-clickhouse"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

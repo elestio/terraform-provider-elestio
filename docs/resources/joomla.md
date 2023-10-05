@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_joomla (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br>Joomla is an award-winning content management system for building websites and powerful online applications.<br><br>The **elestio_joomla** resource allows the creation and management of Elestio Joomla services. The service uses the following docker image [bitnami/joomla](https://hub.docker.com/r/bitnami/joomla)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br>Joomla is an award-winning content management system for building websites and powerful online applications.<br><br>The **elestio_joomla** resource allows the creation and management of Elestio Joomla services. The service uses the following docker image [bitnami/joomla](https://hub.docker.com/r/bitnami/joomla)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Joomla service.
-resource "elestio_joomla" "demo_joomla" {
+resource "elestio_joomla" "example" {
   project_id    = "2500"
-  server_name   = "demo-joomla"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

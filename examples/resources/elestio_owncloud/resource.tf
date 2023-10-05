@@ -1,7 +1,5 @@
-# Create and manage ownCloud service.
-resource "elestio_owncloud" "demo_owncloud" {
+resource "elestio_owncloud" "example" {
   project_id    = "2500"
-  server_name   = "demo-owncloud"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

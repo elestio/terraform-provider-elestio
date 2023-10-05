@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_btcpay (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" /><br>Start Accepting Bitcoin Payments With 0% Fees & No Third-party<br><br>The **elestio_btcpay** resource allows the creation and management of Elestio BTCPay services. The service uses the following docker image [btcpayserver/btcpayserver](https://hub.docker.com/r/btcpayserver/btcpayserver)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/BTCPay-pPYb.png" width="100" /><br>Start Accepting Bitcoin Payments With 0% Fees & No Third-party<br><br>The **elestio_btcpay** resource allows the creation and management of Elestio BTCPay services. The service uses the following docker image [btcpayserver/btcpayserver](https://hub.docker.com/r/btcpayserver/btcpayserver)
 
 ## Example Usage
 
 ```terraform
-# Create and manage BTCPay service.
-resource "elestio_btcpay" "demo_btcpay" {
+resource "elestio_btcpay" "example" {
   project_id    = "2500"
-  server_name   = "demo-btcpay"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

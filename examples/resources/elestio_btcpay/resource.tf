@@ -1,7 +1,5 @@
-# Create and manage BTCPay service.
-resource "elestio_btcpay" "demo_btcpay" {
+resource "elestio_btcpay" "example" {
   project_id    = "2500"
-  server_name   = "demo-btcpay"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

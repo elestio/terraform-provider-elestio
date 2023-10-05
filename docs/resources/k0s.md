@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_k0s (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" /><br>The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.<br><br>The **elestio_k0s** resource allows the creation and management of Elestio k0s services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/k0s-484r.png" width="100" /><br>The Simple, Solid & Certified Kubernetes Distribution. Deploy and run Kubernetes workloads at any scale on any infrastructure. All batteries included. 100% open source & free.<br><br>The **elestio_k0s** resource allows the creation and management of Elestio k0s services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage k0s service.
-resource "elestio_k0s" "demo_k0s" {
+resource "elestio_k0s" "example" {
   project_id    = "2500"
-  server_name   = "demo-k0s"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

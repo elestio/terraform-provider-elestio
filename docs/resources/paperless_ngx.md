@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_paperless_ngx (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" /><br>Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.<br><br>The **elestio_paperless_ngx** resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image [ghcr.io/paperless-ngx/paperless-ngx](https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" /><br>Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.<br><br>The **elestio_paperless_ngx** resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image [ghcr.io/paperless-ngx/paperless-ngx](https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Paperless-ngx service.
-resource "elestio_paperless_ngx" "demo_paperless_ngx" {
+resource "elestio_paperless_ngx" "example" {
   project_id    = "2500"
-  server_name   = "demo-paperless_ngx"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

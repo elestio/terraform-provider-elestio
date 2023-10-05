@@ -1,7 +1,5 @@
-# Create and manage Hoppscotch service.
-resource "elestio_hoppscotch" "demo_hoppscotch" {
+resource "elestio_hoppscotch" "example" {
   project_id    = "2500"
-  server_name   = "demo-hoppscotch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

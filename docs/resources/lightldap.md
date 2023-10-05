@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_lightldap (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--9--nDJ2.png" width="100" /><br>A Lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication. It integrates with many backends, from KeyCloak to Authelia to Nextcloud and more!<br><br>The **elestio_lightldap** resource allows the creation and management of Elestio LightLDAP services. The service uses the following docker image [nitnelave/lldap](https://hub.docker.com/r/nitnelave/lldap)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--9--nDJ2.png" width="100" /><br>A Lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication. It integrates with many backends, from KeyCloak to Authelia to Nextcloud and more!<br><br>The **elestio_lightldap** resource allows the creation and management of Elestio LightLDAP services. The service uses the following docker image [nitnelave/lldap](https://hub.docker.com/r/nitnelave/lldap)
 
 ## Example Usage
 
 ```terraform
-# Create and manage LightLDAP service.
-resource "elestio_lightldap" "demo_lightldap" {
+resource "elestio_lightldap" "example" {
   project_id    = "2500"
-  server_name   = "demo-lightldap"
   version       = "stable"
   provider_name = "hetzner"
   datacenter    = "fsn1"

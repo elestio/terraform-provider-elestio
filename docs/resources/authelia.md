@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_authelia (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authelia-zjQ9.png" width="100" /><br>Authelia is an authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal. It<br><br>The **elestio_authelia** resource allows the creation and management of Elestio Authelia services. The service uses the following docker image [authelia/authelia](https://hub.docker.com/r/authelia/authelia)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authelia-zjQ9.png" width="100" /><br>Authelia is an authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal. It<br><br>The **elestio_authelia** resource allows the creation and management of Elestio Authelia services. The service uses the following docker image [authelia/authelia](https://hub.docker.com/r/authelia/authelia)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Authelia service.
-resource "elestio_authelia" "demo_authelia" {
+resource "elestio_authelia" "example" {
   project_id    = "2500"
-  server_name   = "demo-authelia"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

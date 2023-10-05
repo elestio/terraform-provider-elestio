@@ -1,7 +1,5 @@
-# Create and manage Trudesk service.
-resource "elestio_trudesk" "demo_trudesk" {
+resource "elestio_trudesk" "example" {
   project_id    = "2500"
-  server_name   = "demo-trudesk"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

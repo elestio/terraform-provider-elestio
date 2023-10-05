@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_cassandra (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" /><br>Open Source NoSQL Database<br><br>The **elestio_cassandra** resource allows the creation and management of Elestio Cassandra services. The service uses the following docker image [bitnami/cassandra](https://hub.docker.com/r/bitnami/cassandra)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cassandra-npTG.png" width="100" /><br>Open Source NoSQL Database<br><br>The **elestio_cassandra** resource allows the creation and management of Elestio Cassandra services. The service uses the following docker image [bitnami/cassandra](https://hub.docker.com/r/bitnami/cassandra)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Cassandra service.
-resource "elestio_cassandra" "demo_cassandra" {
+resource "elestio_cassandra" "example" {
   project_id    = "2500"
-  server_name   = "demo-cassandra"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

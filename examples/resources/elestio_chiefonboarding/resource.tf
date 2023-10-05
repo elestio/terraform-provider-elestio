@@ -1,7 +1,5 @@
-# Create and manage ChiefOnboarding service.
-resource "elestio_chiefonboarding" "demo_chiefonboarding" {
+resource "elestio_chiefonboarding" "example" {
   project_id    = "2500"
-  server_name   = "demo-chiefonboarding"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

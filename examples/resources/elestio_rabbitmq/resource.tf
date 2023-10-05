@@ -1,7 +1,5 @@
-# Create and manage RabbitMQ service.
-resource "elestio_rabbitmq" "demo_rabbitmq" {
+resource "elestio_rabbitmq" "example" {
   project_id    = "2500"
-  server_name   = "demo-rabbitmq"
   version       = "3-management"
   provider_name = "hetzner"
   datacenter    = "fsn1"

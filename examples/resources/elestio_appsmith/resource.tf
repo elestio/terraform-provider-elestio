@@ -1,7 +1,5 @@
-# Create and manage Appsmith service.
-resource "elestio_appsmith" "demo_appsmith" {
+resource "elestio_appsmith" "example" {
   project_id    = "2500"
-  server_name   = "demo-appsmith"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

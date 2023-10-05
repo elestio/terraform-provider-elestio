@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_posthog (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/posthog-logo-800x155-aeCl.svg" width="100" /><br>PostHog provides open-source product analytics, session recording, feature flagging and a/b testing that you can self-host.<br><br>The **elestio_posthog** resource allows the creation and management of Elestio PostHog services. The service uses the following docker image [posthog/posthog](https://hub.docker.com/r/posthog/posthog)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/posthog-logo-800x155-aeCl.svg" width="100" /><br>PostHog provides open-source product analytics, session recording, feature flagging and a/b testing that you can self-host.<br><br>The **elestio_posthog** resource allows the creation and management of Elestio PostHog services. The service uses the following docker image [posthog/posthog](https://hub.docker.com/r/posthog/posthog)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PostHog service.
-resource "elestio_posthog" "demo_posthog" {
+resource "elestio_posthog" "example" {
   project_id    = "2500"
-  server_name   = "demo-posthog"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

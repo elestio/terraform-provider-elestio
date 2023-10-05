@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_yopass (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Yopass-GlqF.png" width="100" /><br>Yopass encryption mechanisms are built on open-source software meaning full transparency with the possibility to audit and submit features.<br><br>The **elestio_yopass** resource allows the creation and management of Elestio Yopass services. The service uses the following docker image [jhaals/yopass](https://hub.docker.com/r/jhaals/yopass)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Yopass-GlqF.png" width="100" /><br>Yopass encryption mechanisms are built on open-source software meaning full transparency with the possibility to audit and submit features.<br><br>The **elestio_yopass** resource allows the creation and management of Elestio Yopass services. The service uses the following docker image [jhaals/yopass](https://hub.docker.com/r/jhaals/yopass)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Yopass service.
-resource "elestio_yopass" "demo_yopass" {
+resource "elestio_yopass" "example" {
   project_id    = "2500"
-  server_name   = "demo-yopass"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

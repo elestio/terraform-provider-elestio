@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_cal_com (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cal-P3ad.png" width="100" /><br>Calendly alternative Cal.com, is the event-juggling scheduler for everyone. Focus on meetings, not making meetings. Free for individuals.<br><br>The **elestio_cal_com** resource allows the creation and management of Elestio Cal.com services. The service uses the following docker image [calcom/cal.com](https://hub.docker.com/r/calcom/cal.com)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cal-P3ad.png" width="100" /><br>Calendly alternative Cal.com, is the event-juggling scheduler for everyone. Focus on meetings, not making meetings. Free for individuals.<br><br>The **elestio_cal_com** resource allows the creation and management of Elestio Cal.com services. The service uses the following docker image [calcom/cal.com](https://hub.docker.com/r/calcom/cal.com)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Cal.com service.
-resource "elestio_cal_com" "demo_cal_com" {
+resource "elestio_cal_com" "example" {
   project_id    = "2500"
-  server_name   = "demo-cal_com"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

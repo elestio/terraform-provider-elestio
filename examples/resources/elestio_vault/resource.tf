@@ -1,7 +1,5 @@
-# Create and manage Vault service.
-resource "elestio_vault" "demo_vault" {
+resource "elestio_vault" "example" {
   project_id    = "2500"
-  server_name   = "demo-vault"
   version       = "1.13.3"
   provider_name = "hetzner"
   datacenter    = "fsn1"

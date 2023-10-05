@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_shlink (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" /><br>The definitive self-hosted URL shortener<br><br>The **elestio_shlink** resource allows the creation and management of Elestio Shlink services. The service uses the following docker image [shlinkio/shlink](https://hub.docker.com/r/shlinkio/shlink)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/shlink-logo-blue-svg-QBnL.png" width="100" /><br>The definitive self-hosted URL shortener<br><br>The **elestio_shlink** resource allows the creation and management of Elestio Shlink services. The service uses the following docker image [shlinkio/shlink](https://hub.docker.com/r/shlinkio/shlink)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Shlink service.
-resource "elestio_shlink" "demo_shlink" {
+resource "elestio_shlink" "example" {
   project_id    = "2500"
-  server_name   = "demo-shlink"
   version       = "stable"
   provider_name = "hetzner"
   datacenter    = "fsn1"

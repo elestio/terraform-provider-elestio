@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_bookstack (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/bookstack--1--KwEn.png" width="100" /><br>BookStack is a platform to create documentation/wiki content built with PHP & Laravel.<br><br>The **elestio_bookstack** resource allows the creation and management of Elestio BookStack services. The service uses the following docker image [linuxserver/bookstack](https://hub.docker.com/r/linuxserver/bookstack)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/bookstack--1--KwEn.png" width="100" /><br>BookStack is a platform to create documentation/wiki content built with PHP & Laravel.<br><br>The **elestio_bookstack** resource allows the creation and management of Elestio BookStack services. The service uses the following docker image [linuxserver/bookstack](https://hub.docker.com/r/linuxserver/bookstack)
 
 ## Example Usage
 
 ```terraform
-# Create and manage BookStack service.
-resource "elestio_bookstack" "demo_bookstack" {
+resource "elestio_bookstack" "example" {
   project_id    = "2500"
-  server_name   = "demo-bookstack"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

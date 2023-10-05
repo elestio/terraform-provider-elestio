@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_guacamole (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" /><br>Apache Guacamole is a clientless remote desktop gateway.<br><br>The **elestio_guacamole** resource allows the creation and management of Elestio Guacamole services. The service uses the following docker image [guacamole/guacamole](https://hub.docker.com/r/guacamole/guacamole)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Apache-Guacamole-logo--1--TZJP.png" width="100" /><br>Apache Guacamole is a clientless remote desktop gateway.<br><br>The **elestio_guacamole** resource allows the creation and management of Elestio Guacamole services. The service uses the following docker image [guacamole/guacamole](https://hub.docker.com/r/guacamole/guacamole)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Guacamole service.
-resource "elestio_guacamole" "demo_guacamole" {
+resource "elestio_guacamole" "example" {
   project_id    = "2500"
-  server_name   = "demo-guacamole"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

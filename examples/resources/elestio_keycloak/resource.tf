@@ -1,7 +1,5 @@
-# Create and manage Keycloak service.
-resource "elestio_keycloak" "demo_keycloak" {
+resource "elestio_keycloak" "example" {
   project_id    = "2500"
-  server_name   = "demo-keycloak"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

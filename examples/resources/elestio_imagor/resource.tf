@@ -1,7 +1,5 @@
-# Create and manage Imagor service.
-resource "elestio_imagor" "demo_imagor" {
+resource "elestio_imagor" "example" {
   project_id    = "2500"
-  server_name   = "demo-imagor"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

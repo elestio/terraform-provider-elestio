@@ -1,7 +1,5 @@
-# Create and manage Postal service.
-resource "elestio_postal" "demo_postal" {
+resource "elestio_postal" "example" {
   project_id    = "2500"
-  server_name   = "demo-postal"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

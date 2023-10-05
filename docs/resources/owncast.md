@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_owncast (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" /><br>Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br><br>The **elestio_owncast** resource allows the creation and management of Elestio Owncast services. The service uses the following docker image [owncast/owncast](https://hub.docker.com/r/owncast/owncast)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Owncast-L0Gg.png" width="100" /><br>Owncast is a free and open source live video and web chat server for use with existing popular broadcasting software.<br><br>The **elestio_owncast** resource allows the creation and management of Elestio Owncast services. The service uses the following docker image [owncast/owncast](https://hub.docker.com/r/owncast/owncast)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Owncast service.
-resource "elestio_owncast" "demo_owncast" {
+resource "elestio_owncast" "example" {
   project_id    = "2500"
-  server_name   = "demo-owncast"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

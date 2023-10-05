@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_browserless (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" /><br>Browserless provides fast, scalable, reliable web browser automation. <br><br>The **elestio_browserless** resource allows the creation and management of Elestio Browserless services. The service uses the following docker image [browserless/chrome](https://hub.docker.com/r/browserless/chrome)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" /><br>Browserless provides fast, scalable, reliable web browser automation. <br><br>The **elestio_browserless** resource allows the creation and management of Elestio Browserless services. The service uses the following docker image [browserless/chrome](https://hub.docker.com/r/browserless/chrome)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Browserless service.
-resource "elestio_browserless" "demo_browserless" {
+resource "elestio_browserless" "example" {
   project_id    = "2500"
-  server_name   = "demo-browserless"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

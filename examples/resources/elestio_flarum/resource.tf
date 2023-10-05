@@ -1,7 +1,5 @@
-# Create and manage Flarum service.
-resource "elestio_flarum" "demo_flarum" {
+resource "elestio_flarum" "example" {
   project_id    = "2500"
-  server_name   = "demo-flarum"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

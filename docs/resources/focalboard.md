@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_focalboard (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" /><br>Project & Task Management for Software Development Teams<br><br>The **elestio_focalboard** resource allows the creation and management of Elestio FocalBoard services. The service uses the following docker image [mattermost/focalboard](https://hub.docker.com/r/mattermost/focalboard)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Focalboard-mL2w.png" width="100" /><br>Project & Task Management for Software Development Teams<br><br>The **elestio_focalboard** resource allows the creation and management of Elestio FocalBoard services. The service uses the following docker image [mattermost/focalboard](https://hub.docker.com/r/mattermost/focalboard)
 
 ## Example Usage
 
 ```terraform
-# Create and manage FocalBoard service.
-resource "elestio_focalboard" "demo_focalboard" {
+resource "elestio_focalboard" "example" {
   project_id    = "2500"
-  server_name   = "demo-focalboard"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

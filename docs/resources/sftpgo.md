@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_sftpgo (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" /><br>Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support<br><br>The **elestio_sftpgo** resource allows the creation and management of Elestio SFTPGo services. The service uses the following docker image [drakkan/sftpgo](https://hub.docker.com/r/drakkan/sftpgo)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SFTPGo-VvLZ.png" width="100" /><br>Fully featured and highly configurable SFTP server with optional HTTP/S, FTP/S and WebDAV support<br><br>The **elestio_sftpgo** resource allows the creation and management of Elestio SFTPGo services. The service uses the following docker image [drakkan/sftpgo](https://hub.docker.com/r/drakkan/sftpgo)
 
 ## Example Usage
 
 ```terraform
-# Create and manage SFTPGo service.
-resource "elestio_sftpgo" "demo_sftpgo" {
+resource "elestio_sftpgo" "example" {
   project_id    = "2500"
-  server_name   = "demo-sftpgo"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

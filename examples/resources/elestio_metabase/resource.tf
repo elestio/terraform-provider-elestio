@@ -1,7 +1,5 @@
-# Create and manage Metabase service.
-resource "elestio_metabase" "demo_metabase" {
+resource "elestio_metabase" "example" {
   project_id    = "2500"
-  server_name   = "demo-metabase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_searxng (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" /><br>SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br><br>The **elestio_searxng** resource allows the creation and management of Elestio SearXNG services. The service uses the following docker image [searxng/searxng](https://hub.docker.com/r/searxng/searxng)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SearXNG-sxIM.png" width="100" /><br>SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.<br><br>The **elestio_searxng** resource allows the creation and management of Elestio SearXNG services. The service uses the following docker image [searxng/searxng](https://hub.docker.com/r/searxng/searxng)
 
 ## Example Usage
 
 ```terraform
-# Create and manage SearXNG service.
-resource "elestio_searxng" "demo_searxng" {
+resource "elestio_searxng" "example" {
   project_id    = "2500"
-  server_name   = "demo-searxng"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

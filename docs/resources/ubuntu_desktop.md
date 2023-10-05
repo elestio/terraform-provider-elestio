@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_ubuntu_desktop (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" /><br>Ubuntu Virtual Desktop experience in your browser<br><br>The **elestio_ubuntu_desktop** resource allows the creation and management of Elestio Ubuntu-Desktop services. The service uses the following docker image [elestio/ubuntu-desktop](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ubuntu-foQJ.png" width="100" /><br>Ubuntu Virtual Desktop experience in your browser<br><br>The **elestio_ubuntu_desktop** resource allows the creation and management of Elestio Ubuntu-Desktop services. The service uses the following docker image [elestio/ubuntu-desktop](https://hub.docker.com/r/elestio/ubuntu-desktop)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Ubuntu-Desktop service.
-resource "elestio_ubuntu_desktop" "demo_ubuntu_desktop" {
+resource "elestio_ubuntu_desktop" "example" {
   project_id    = "2500"
-  server_name   = "demo-ubuntu_desktop"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

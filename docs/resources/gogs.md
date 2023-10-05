@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_gogs (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" /><br>Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br><br>The **elestio_gogs** resource allows the creation and management of Elestio Gogs services. The service uses the following docker image [gogs/gogs](https://hub.docker.com/r/gogs/gogs)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/gogs-HYw4.png" width="100" /><br>Gogs is a lightweight self-hosted Git server that can be run on just about anything. <br><br>The **elestio_gogs** resource allows the creation and management of Elestio Gogs services. The service uses the following docker image [gogs/gogs](https://hub.docker.com/r/gogs/gogs)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Gogs service.
-resource "elestio_gogs" "demo_gogs" {
+resource "elestio_gogs" "example" {
   project_id    = "2500"
-  server_name   = "demo-gogs"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

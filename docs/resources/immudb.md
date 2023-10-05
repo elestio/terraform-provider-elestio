@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_immudb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" /><br>immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history<br><br>The **elestio_immudb** resource allows the creation and management of Elestio ImmuDB services. The service uses the following docker image [codenotary/immudb](https://hub.docker.com/r/codenotary/immudb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ImmuDB-P3Sd.png" width="100" /><br>immutable ledger database based on zero trust, SQL and Key-Value, tamperproof, data change history<br><br>The **elestio_immudb** resource allows the creation and management of Elestio ImmuDB services. The service uses the following docker image [codenotary/immudb](https://hub.docker.com/r/codenotary/immudb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage ImmuDB service.
-resource "elestio_immudb" "demo_immudb" {
+resource "elestio_immudb" "example" {
   project_id    = "2500"
-  server_name   = "demo-immudb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_meilisearch (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" /><br>MeiliSearch is a next-generation search API.<br><br>The **elestio_meilisearch** resource allows the creation and management of Elestio MeiliSearch services. The service uses the following docker image [getmeili/meilisearch](https://hub.docker.com/r/getmeili/meilisearch)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" /><br>MeiliSearch is a next-generation search API.<br><br>The **elestio_meilisearch** resource allows the creation and management of Elestio MeiliSearch services. The service uses the following docker image [getmeili/meilisearch](https://hub.docker.com/r/getmeili/meilisearch)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MeiliSearch service.
-resource "elestio_meilisearch" "demo_meilisearch" {
+resource "elestio_meilisearch" "example" {
   project_id    = "2500"
-  server_name   = "demo-meilisearch"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

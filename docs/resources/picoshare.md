@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_picoshare (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Picoshare-UGdv.png" width="100" /><br>PicoShare is a service for sharing images, videos, and other files.<br><br>The **elestio_picoshare** resource allows the creation and management of Elestio Picoshare services. The service uses the following docker image [mtlynch/picoshare](https://hub.docker.com/r/mtlynch/picoshare)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Picoshare-UGdv.png" width="100" /><br>PicoShare is a service for sharing images, videos, and other files.<br><br>The **elestio_picoshare** resource allows the creation and management of Elestio Picoshare services. The service uses the following docker image [mtlynch/picoshare](https://hub.docker.com/r/mtlynch/picoshare)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Picoshare service.
-resource "elestio_picoshare" "demo_picoshare" {
+resource "elestio_picoshare" "example" {
   project_id    = "2500"
-  server_name   = "demo-picoshare"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

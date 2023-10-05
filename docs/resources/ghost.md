@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_ghost (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ghost-b9yj.png" width="100" /><br>Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.<br><br>The **elestio_ghost** resource allows the creation and management of Elestio Ghost services. The service uses the following docker image [bitnami/ghost](https://hub.docker.com/r/bitnami/ghost)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ghost-b9yj.png" width="100" /><br>Ghost is a powerful app for new-media creators to publish, share, and grow a business around their content.<br><br>The **elestio_ghost** resource allows the creation and management of Elestio Ghost services. The service uses the following docker image [bitnami/ghost](https://hub.docker.com/r/bitnami/ghost)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Ghost service.
-resource "elestio_ghost" "demo_ghost" {
+resource "elestio_ghost" "example" {
   project_id    = "2500"
-  server_name   = "demo-ghost"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Etherpad service.
-resource "elestio_etherpad" "demo_etherpad" {
+resource "elestio_etherpad" "example" {
   project_id    = "2500"
-  server_name   = "demo-etherpad"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_ackee (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" /><br>Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.<br><br>The **elestio_ackee** resource allows the creation and management of Elestio Ackee services. The service uses the following docker image [electerious/ackee](https://hub.docker.com/r/electerious/ackee)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ackee2-9kWq.png" width="100" /><br>Ackee is a self-hosted, Node.js-based analytics tool for ensuring privacy.<br><br>The **elestio_ackee** resource allows the creation and management of Elestio Ackee services. The service uses the following docker image [electerious/ackee](https://hub.docker.com/r/electerious/ackee)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Ackee service.
-resource "elestio_ackee" "demo_ackee" {
+resource "elestio_ackee" "example" {
   project_id    = "2500"
-  server_name   = "demo-ackee"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

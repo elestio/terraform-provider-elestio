@@ -1,7 +1,5 @@
-# Create and manage Superset service.
-resource "elestio_superset" "demo_superset" {
+resource "elestio_superset" "example" {
   project_id    = "2500"
-  server_name   = "demo-superset"
   version       = "master"
   provider_name = "hetzner"
   datacenter    = "fsn1"

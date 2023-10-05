@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_airbyte (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airbyte-new-logo-a0OK.svg" width="100" /><br>Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses<br><br>The **elestio_airbyte** resource allows the creation and management of Elestio Airbyte services. The service uses the following docker image [airbyte/server](https://hub.docker.com/r/airbyte/server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/airbyte-new-logo-a0OK.svg" width="100" /><br>Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses<br><br>The **elestio_airbyte** resource allows the creation and management of Elestio Airbyte services. The service uses the following docker image [airbyte/server](https://hub.docker.com/r/airbyte/server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Airbyte service.
-resource "elestio_airbyte" "demo_airbyte" {
+resource "elestio_airbyte" "example" {
   project_id    = "2500"
-  server_name   = "demo-airbyte"
   version       = "0.50.30"
   provider_name = "hetzner"
   datacenter    = "fsn1"

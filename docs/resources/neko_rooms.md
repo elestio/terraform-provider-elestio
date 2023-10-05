@@ -7,8 +7,8 @@ description: |-
 ---
 
 # elestio_neko_rooms (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nekologo-ALP3.png" width="100" /><br>Neko-Rooms is a simple room management system for n.eko. <br><br>The **elestio_neko_rooms** resource allows the creation and management of Elestio Neko Rooms services. The service uses the following docker image [m1k1o/neko-rooms](https://hub.docker.com/r/m1k1o/neko-rooms)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nekologo-ALP3.png" width="100" /><br>Neko-Rooms is a simple room management system for n.eko. <br><br>The **elestio_neko_rooms** resource allows the creation and management of Elestio Neko Rooms services. The service uses the following docker image [m1k1o/neko-rooms](https://hub.docker.com/r/m1k1o/neko-rooms)
 
 
 
@@ -124,3 +124,5 @@ Read-Only:
 - `password` (String) Service database admin password.
 - `port` (String) Service database admin port.
 - `user` (String) Service database admin user.
+
+

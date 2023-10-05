@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_taiga (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br>Your Agile, Free and Open Source Project Management Tool<br><br>The **elestio_taiga** resource allows the creation and management of Elestio Taiga services. The service uses the following docker image [taigaio/taiga-back](https://hub.docker.com/r/taigaio/taiga-back)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br>Your Agile, Free and Open Source Project Management Tool<br><br>The **elestio_taiga** resource allows the creation and management of Elestio Taiga services. The service uses the following docker image [taigaio/taiga-back](https://hub.docker.com/r/taigaio/taiga-back)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Taiga service.
-resource "elestio_taiga" "demo_taiga" {
+resource "elestio_taiga" "example" {
   project_id    = "2500"
-  server_name   = "demo-taiga"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

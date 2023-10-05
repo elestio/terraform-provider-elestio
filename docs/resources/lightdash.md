@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_lightdash (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" /><br>Lighdash an open source alternative to Looker built using dbt.<br><br>The **elestio_lightdash** resource allows the creation and management of Elestio Lightdash services. The service uses the following docker image [lightdash/lightdash](https://hub.docker.com/r/lightdash/lightdash)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lightdash-NVQX.png" width="100" /><br>Lighdash an open source alternative to Looker built using dbt.<br><br>The **elestio_lightdash** resource allows the creation and management of Elestio Lightdash services. The service uses the following docker image [lightdash/lightdash](https://hub.docker.com/r/lightdash/lightdash)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Lightdash service.
-resource "elestio_lightdash" "demo_lightdash" {
+resource "elestio_lightdash" "example" {
   project_id    = "2500"
-  server_name   = "demo-lightdash"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_magento (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br>Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br><br>The **elestio_magento** resource allows the creation and management of Elestio Magento services. The service uses the following docker image [bitnami/magento](https://hub.docker.com/r/bitnami/magento)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br>Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br><br>The **elestio_magento** resource allows the creation and management of Elestio Magento services. The service uses the following docker image [bitnami/magento](https://hub.docker.com/r/bitnami/magento)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Magento service.
-resource "elestio_magento" "demo_magento" {
+resource "elestio_magento" "example" {
   project_id    = "2500"
-  server_name   = "demo-magento"
   version       = "2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -1,7 +1,5 @@
-# Create and manage Bigcapital service.
-resource "elestio_bigcapital" "demo_bigcapital" {
+resource "elestio_bigcapital" "example" {
   project_id    = "2500"
-  server_name   = "demo-bigcapital"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

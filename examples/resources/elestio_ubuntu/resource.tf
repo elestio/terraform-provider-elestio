@@ -1,7 +1,5 @@
-# Create and manage Ubuntu service.
-resource "elestio_ubuntu" "demo_ubuntu" {
+resource "elestio_ubuntu" "example" {
   project_id    = "2500"
-  server_name   = "demo-ubuntu"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

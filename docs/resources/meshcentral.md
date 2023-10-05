@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_meshcentral (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" /><br>MeshCentral is a full computer management web site<br><br>The **elestio_meshcentral** resource allows the creation and management of Elestio MeshCentral services. The service uses the following docker image [polonel/trudesk](https://hub.docker.com/r/polonel/trudesk)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MeshCentral-vuNF.png" width="100" /><br>MeshCentral is a full computer management web site<br><br>The **elestio_meshcentral** resource allows the creation and management of Elestio MeshCentral services. The service uses the following docker image [polonel/trudesk](https://hub.docker.com/r/polonel/trudesk)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MeshCentral service.
-resource "elestio_meshcentral" "demo_meshcentral" {
+resource "elestio_meshcentral" "example" {
   project_id    = "2500"
-  server_name   = "demo-meshcentral"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

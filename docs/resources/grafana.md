@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_grafana (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" /><br>Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br><br>The **elestio_grafana** resource allows the creation and management of Elestio Grafana services. The service uses the following docker image [grafana/grafana](https://hub.docker.com/r/grafana/grafana)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Grafana-MDph.png" width="100" /><br>Grafana is a multi-platform, open-source analytics and interactive visualization web application.<br><br>The **elestio_grafana** resource allows the creation and management of Elestio Grafana services. The service uses the following docker image [grafana/grafana](https://hub.docker.com/r/grafana/grafana)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Grafana service.
-resource "elestio_grafana" "demo_grafana" {
+resource "elestio_grafana" "example" {
   project_id    = "2500"
-  server_name   = "demo-grafana"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

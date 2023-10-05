@@ -1,7 +1,5 @@
-# Create and manage VictoriaMetrics service.
-resource "elestio_victoriametrics" "demo_victoriametrics" {
+resource "elestio_victoriametrics" "example" {
   project_id    = "2500"
-  server_name   = "demo-victoriametrics"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

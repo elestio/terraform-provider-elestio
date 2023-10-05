@@ -1,7 +1,5 @@
-# Create and manage Guacamole service.
-resource "elestio_guacamole" "demo_guacamole" {
+resource "elestio_guacamole" "example" {
   project_id    = "2500"
-  server_name   = "demo-guacamole"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

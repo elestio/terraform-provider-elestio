@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_bytebase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bytebase-9C6y.png" width="100" /><br>Bytebase is an open-source database CI/CD tool for developers and DBAs.<br><br>The **elestio_bytebase** resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image [bytebase/bytebase](https://hub.docker.com/r/bytebase/bytebase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bytebase-9C6y.png" width="100" /><br>Bytebase is an open-source database CI/CD tool for developers and DBAs.<br><br>The **elestio_bytebase** resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image [bytebase/bytebase](https://hub.docker.com/r/bytebase/bytebase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Bytebase service.
-resource "elestio_bytebase" "demo_bytebase" {
+resource "elestio_bytebase" "example" {
   project_id    = "2500"
-  server_name   = "demo-bytebase"
   version       = "1.17.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"

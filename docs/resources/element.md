@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_element (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Element-rC1j.png" width="100" /><br>Create your community based on Matrix protocol<br><br>The **elestio_element** resource allows the creation and management of Elestio Element services. The service uses the following docker image [matrixdotorg/synapse](https://hub.docker.com/r/matrixdotorg/synapse)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Element-rC1j.png" width="100" /><br>Create your community based on Matrix protocol<br><br>The **elestio_element** resource allows the creation and management of Elestio Element services. The service uses the following docker image [matrixdotorg/synapse](https://hub.docker.com/r/matrixdotorg/synapse)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Element service.
-resource "elestio_element" "demo_element" {
+resource "elestio_element" "example" {
   project_id    = "2500"
-  server_name   = "demo-element"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

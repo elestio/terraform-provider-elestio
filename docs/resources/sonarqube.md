@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_sonarqube (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br>SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br><br>The **elestio_sonarqube** resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image [bitnami/sonarqube](https://hub.docker.com/r/bitnami/sonarqube)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br>SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br><br>The **elestio_sonarqube** resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image [bitnami/sonarqube](https://hub.docker.com/r/bitnami/sonarqube)
 
 ## Example Usage
 
 ```terraform
-# Create and manage SonarQube service.
-resource "elestio_sonarqube" "demo_sonarqube" {
+resource "elestio_sonarqube" "example" {
   project_id    = "2500"
-  server_name   = "demo-sonarqube"
   version       = "9"
   provider_name = "hetzner"
   datacenter    = "fsn1"

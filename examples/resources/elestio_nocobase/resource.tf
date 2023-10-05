@@ -1,7 +1,5 @@
-# Create and manage NocoBase service.
-resource "elestio_nocobase" "demo_nocobase" {
+resource "elestio_nocobase" "example" {
   project_id    = "2500"
-  server_name   = "demo-nocobase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

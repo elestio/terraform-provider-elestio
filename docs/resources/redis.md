@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_redis (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [elestio/redis](https://hub.docker.com/r/elestio/redis)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [elestio/redis](https://hub.docker.com/r/elestio/redis)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Redis service.
-resource "elestio_redis" "demo_redis" {
+resource "elestio_redis" "example" {
   project_id    = "2500"
-  server_name   = "demo-redis"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

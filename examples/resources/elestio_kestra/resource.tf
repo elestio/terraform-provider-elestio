@@ -1,7 +1,5 @@
-# Create and manage Kestra service.
-resource "elestio_kestra" "demo_kestra" {
+resource "elestio_kestra" "example" {
   project_id    = "2500"
-  server_name   = "demo-kestra"
   version       = "latest-full"
   provider_name = "hetzner"
   datacenter    = "fsn1"

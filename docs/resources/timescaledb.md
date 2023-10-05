@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_timescaledb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" /><br>TimescaleDB is the leading open-source relational database with support for time-series data. <br><br>The **elestio_timescaledb** resource allows the creation and management of Elestio TimescaleDB services. The service uses the following docker image [timescale/timescaledb-ha](https://hub.docker.com/r/timescale/timescaledb-ha)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/timescale-inc-logo-vector--1--cFoa.png" width="100" /><br>TimescaleDB is the leading open-source relational database with support for time-series data. <br><br>The **elestio_timescaledb** resource allows the creation and management of Elestio TimescaleDB services. The service uses the following docker image [timescale/timescaledb-ha](https://hub.docker.com/r/timescale/timescaledb-ha)
 
 ## Example Usage
 
 ```terraform
-# Create and manage TimescaleDB service.
-resource "elestio_timescaledb" "demo_timescaledb" {
+resource "elestio_timescaledb" "example" {
   project_id    = "2500"
-  server_name   = "demo-timescaledb"
   version       = "pg14-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_docspell (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--1--O6uX.png" width="100" /><br>Simple document organizer<br><br>The **elestio_docspell** resource allows the creation and management of Elestio Docspell services. The service uses the following docker image [docspell/restserver](https://hub.docker.com/r/docspell/restserver)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--1--O6uX.png" width="100" /><br>Simple document organizer<br><br>The **elestio_docspell** resource allows the creation and management of Elestio Docspell services. The service uses the following docker image [docspell/restserver](https://hub.docker.com/r/docspell/restserver)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Docspell service.
-resource "elestio_docspell" "demo_docspell" {
+resource "elestio_docspell" "example" {
   project_id    = "2500"
-  server_name   = "demo-docspell"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

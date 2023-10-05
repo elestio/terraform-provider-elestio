@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_zulip (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" /><br>Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.<br><br>The **elestio_zulip** resource allows the creation and management of Elestio Zulip services. The service uses the following docker image [zulip/docker-zulip](https://hub.docker.com/r/zulip/docker-zulip)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zulip-3nZW.png" width="100" /><br>Zulip is a team collaboration tool with unique topic-based threading that combines the best of email and chat to make remote work productive and delightful.<br><br>The **elestio_zulip** resource allows the creation and management of Elestio Zulip services. The service uses the following docker image [zulip/docker-zulip](https://hub.docker.com/r/zulip/docker-zulip)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Zulip service.
-resource "elestio_zulip" "demo_zulip" {
+resource "elestio_zulip" "example" {
   project_id    = "2500"
-  server_name   = "demo-zulip"
   version       = "6.2-0"
   provider_name = "hetzner"
   datacenter    = "fsn1"

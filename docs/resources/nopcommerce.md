@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_nopcommerce (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" /><br>nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br><br>The **elestio_nopcommerce** resource allows the creation and management of Elestio nopCommerce services. The service uses the following docker image [nopcommerceteam/nopcommerce](https://hub.docker.com/r/nopcommerceteam/nopcommerce)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/nopcommerce-NcUG.svg" width="100" /><br>nopCommerce is the most popular ASP.NET shopping cart in the world based on Microsoft technologies. Free and open-source eCommerce platform.<br><br>The **elestio_nopcommerce** resource allows the creation and management of Elestio nopCommerce services. The service uses the following docker image [nopcommerceteam/nopcommerce](https://hub.docker.com/r/nopcommerceteam/nopcommerce)
 
 ## Example Usage
 
 ```terraform
-# Create and manage nopCommerce service.
-resource "elestio_nopcommerce" "demo_nopcommerce" {
+resource "elestio_nopcommerce" "example" {
   project_id    = "2500"
-  server_name   = "demo-nopcommerce"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

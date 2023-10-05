@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_outline (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/outline-Eoq3.png" width="100" /><br>Outline is a fast wiki and knowledge base for growing teams - an alternative to Google Docs. <br><br>The **elestio_outline** resource allows the creation and management of Elestio Outline services. The service uses the following docker image [outlinewiki/outline](https://hub.docker.com/r/outlinewiki/outline)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/outline-Eoq3.png" width="100" /><br>Outline is a fast wiki and knowledge base for growing teams - an alternative to Google Docs. <br><br>The **elestio_outline** resource allows the creation and management of Elestio Outline services. The service uses the following docker image [outlinewiki/outline](https://hub.docker.com/r/outlinewiki/outline)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Outline service.
-resource "elestio_outline" "demo_outline" {
+resource "elestio_outline" "example" {
   project_id    = "2500"
-  server_name   = "demo-outline"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

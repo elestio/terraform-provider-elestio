@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_loki (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrafanaLoki-LOvr.png" width="100" /><br>Loki is a log aggregation system designed to store and query logs from all your applications and infrastructure.<br><br>The **elestio_loki** resource allows the creation and management of Elestio Loki services. The service uses the following docker image [grafana/loki](https://hub.docker.com/r/grafana/loki)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrafanaLoki-LOvr.png" width="100" /><br>Loki is a log aggregation system designed to store and query logs from all your applications and infrastructure.<br><br>The **elestio_loki** resource allows the creation and management of Elestio Loki services. The service uses the following docker image [grafana/loki](https://hub.docker.com/r/grafana/loki)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Loki service.
-resource "elestio_loki" "demo_loki" {
+resource "elestio_loki" "example" {
   project_id    = "2500"
-  server_name   = "demo-loki"
   version       = "2.8.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"

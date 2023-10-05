@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_minio (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" /><br>MinIO is a leader in hybrid cloud and multi-cloud object storage.<br><br>The **elestio_minio** resource allows the creation and management of Elestio MinIO services. The service uses the following docker image [elestio/minio](https://hub.docker.com/r/elestio/minio)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/MINIO-wordmark-E9Yv.png" width="100" /><br>MinIO is a leader in hybrid cloud and multi-cloud object storage.<br><br>The **elestio_minio** resource allows the creation and management of Elestio MinIO services. The service uses the following docker image [elestio/minio](https://hub.docker.com/r/elestio/minio)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MinIO service.
-resource "elestio_minio" "demo_minio" {
+resource "elestio_minio" "example" {
   project_id    = "2500"
-  server_name   = "demo-minio"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

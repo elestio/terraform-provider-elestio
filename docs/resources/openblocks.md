@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_openblocks (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/118157710-removebg-preview-djB7.png" width="100" /><br>Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.<br><br>The **elestio_openblocks** resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image [openblocksdev/openblocks-ce](https://hub.docker.com/r/openblocksdev/openblocks-ce)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/118157710-removebg-preview-djB7.png" width="100" /><br>Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.<br><br>The **elestio_openblocks** resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image [openblocksdev/openblocks-ce](https://hub.docker.com/r/openblocksdev/openblocks-ce)
 
 ## Example Usage
 
 ```terraform
-# Create and manage OpenBlocks service.
-resource "elestio_openblocks" "demo_openblocks" {
+resource "elestio_openblocks" "example" {
   project_id    = "2500"
-  server_name   = "demo-openblocks"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

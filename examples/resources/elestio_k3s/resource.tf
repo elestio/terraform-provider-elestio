@@ -1,7 +1,5 @@
-# Create and manage K3S service.
-resource "elestio_k3s" "demo_k3s" {
+resource "elestio_k3s" "example" {
   project_id    = "2500"
-  server_name   = "demo-k3s"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

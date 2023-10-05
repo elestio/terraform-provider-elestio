@@ -1,7 +1,5 @@
-# Create and manage Filestash service.
-resource "elestio_filestash" "demo_filestash" {
+resource "elestio_filestash" "example" {
   project_id    = "2500"
-  server_name   = "demo-filestash"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

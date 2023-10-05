@@ -1,7 +1,5 @@
-# Create and manage Mastodon service.
-resource "elestio_mastodon" "demo_mastodon" {
+resource "elestio_mastodon" "example" {
   project_id    = "2500"
-  server_name   = "demo-mastodon"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

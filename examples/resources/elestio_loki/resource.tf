@@ -1,7 +1,5 @@
-# Create and manage Loki service.
-resource "elestio_loki" "demo_loki" {
+resource "elestio_loki" "example" {
   project_id    = "2500"
-  server_name   = "demo-loki"
   version       = "2.8.0"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_rustdeskserver (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" /><br>Open source virtual / remote desktop infrastructure for everyone!<br><br>The **elestio_rustdeskserver** resource allows the creation and management of Elestio RustdeskServer services. The service uses the following docker image [rustdesk/rustdesk-server](https://hub.docker.com/r/rustdesk/rustdesk-server)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/unnamed-1Q0t.png" width="100" /><br>Open source virtual / remote desktop infrastructure for everyone!<br><br>The **elestio_rustdeskserver** resource allows the creation and management of Elestio RustdeskServer services. The service uses the following docker image [rustdesk/rustdesk-server](https://hub.docker.com/r/rustdesk/rustdesk-server)
 
 ## Example Usage
 
 ```terraform
-# Create and manage RustdeskServer service.
-resource "elestio_rustdeskserver" "demo_rustdeskserver" {
+resource "elestio_rustdeskserver" "example" {
   project_id    = "2500"
-  server_name   = "demo-rustdeskserver"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_phpbb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/hpBB-JzHY.png" width="100" /><br>phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website.<br><br>The **elestio_phpbb** resource allows the creation and management of Elestio PhpBB services. The service uses the following docker image [bitnami/phpbb](https://hub.docker.com/r/bitnami/phpbb)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/hpBB-JzHY.png" width="100" /><br>phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website.<br><br>The **elestio_phpbb** resource allows the creation and management of Elestio PhpBB services. The service uses the following docker image [bitnami/phpbb](https://hub.docker.com/r/bitnami/phpbb)
 
 ## Example Usage
 
 ```terraform
-# Create and manage PhpBB service.
-resource "elestio_phpbb" "demo_phpbb" {
+resource "elestio_phpbb" "example" {
   project_id    = "2500"
-  server_name   = "demo-phpbb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

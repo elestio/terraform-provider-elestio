@@ -1,7 +1,5 @@
-# Create and manage NodeBB service.
-resource "elestio_nodebb" "demo_nodebb" {
+resource "elestio_nodebb" "example" {
   project_id    = "2500"
-  server_name   = "demo-nodebb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_cryptpad (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" /><br>CryptPad is a collaboration suite, encrypted and open-source.<br><br>The **elestio_cryptpad** resource allows the creation and management of Elestio CryptPad services. The service uses the following docker image [promasu/cryptpad](https://hub.docker.com/r/promasu/cryptpad)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/CryptPad-ayFU.png" width="100" /><br>CryptPad is a collaboration suite, encrypted and open-source.<br><br>The **elestio_cryptpad** resource allows the creation and management of Elestio CryptPad services. The service uses the following docker image [promasu/cryptpad](https://hub.docker.com/r/promasu/cryptpad)
 
 ## Example Usage
 
 ```terraform
-# Create and manage CryptPad service.
-resource "elestio_cryptpad" "demo_cryptpad" {
+resource "elestio_cryptpad" "example" {
   project_id    = "2500"
-  server_name   = "demo-cryptpad"
   version       = "nginx"
   provider_name = "hetzner"
   datacenter    = "fsn1"

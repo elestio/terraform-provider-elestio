@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_shopware (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" /><br>Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br><br>The **elestio_shopware** resource allows the creation and management of Elestio Shopware services. The service uses the following docker image [shyim/shopware](https://hub.docker.com/r/shyim/shopware)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/images-removebg-preview-9VVg.png" width="100" /><br>Shopware is a modern eCommerce platform connecting enterprise-level capabilities with flexibility<br><br>The **elestio_shopware** resource allows the creation and management of Elestio Shopware services. The service uses the following docker image [shyim/shopware](https://hub.docker.com/r/shyim/shopware)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Shopware service.
-resource "elestio_shopware" "demo_shopware" {
+resource "elestio_shopware" "example" {
   project_id    = "2500"
-  server_name   = "demo-shopware"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

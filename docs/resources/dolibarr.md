@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_dolibarr (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" /><br>Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br><br>The **elestio_dolibarr** resource allows the creation and management of Elestio Dolibarr services. The service uses the following docker image [upshift/dolibarr](https://hub.docker.com/r/upshift/dolibarr)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/64095022-ef2f0700-cd5d-11e9-8855-d6be38b31bdd-Y9Ir.png" width="100" /><br>Dolibarr ERP CRM is a modern software package to manage your company or foundation's activity<br><br>The **elestio_dolibarr** resource allows the creation and management of Elestio Dolibarr services. The service uses the following docker image [upshift/dolibarr](https://hub.docker.com/r/upshift/dolibarr)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Dolibarr service.
-resource "elestio_dolibarr" "demo_dolibarr" {
+resource "elestio_dolibarr" "example" {
   project_id    = "2500"
-  server_name   = "demo-dolibarr"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

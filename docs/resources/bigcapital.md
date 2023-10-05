@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_bigcapital (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bigcapital-DKAP.png" width="100" /><br>Bigcapital is financial accounting with intelligent reporting for faster decision-making, an open-source alternative to Quickbooks, Xero, etc.<br><br>The **elestio_bigcapital** resource allows the creation and management of Elestio Bigcapital services. The service uses the following docker image [elestio/bigcapital-webapp](https://hub.docker.com/r/elestio/bigcapital-webapp)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bigcapital-DKAP.png" width="100" /><br>Bigcapital is financial accounting with intelligent reporting for faster decision-making, an open-source alternative to Quickbooks, Xero, etc.<br><br>The **elestio_bigcapital** resource allows the creation and management of Elestio Bigcapital services. The service uses the following docker image [elestio/bigcapital-webapp](https://hub.docker.com/r/elestio/bigcapital-webapp)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Bigcapital service.
-resource "elestio_bigcapital" "demo_bigcapital" {
+resource "elestio_bigcapital" "example" {
   project_id    = "2500"
-  server_name   = "demo-bigcapital"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

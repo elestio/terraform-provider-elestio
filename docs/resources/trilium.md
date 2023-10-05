@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_trilium (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" /><br>Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br><br>The **elestio_trilium** resource allows the creation and management of Elestio Trilium services. The service uses the following docker image [zadam/trilium](https://hub.docker.com/r/zadam/trilium)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Trilium-0jCA.png" width="100" /><br>Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases.<br><br>The **elestio_trilium** resource allows the creation and management of Elestio Trilium services. The service uses the following docker image [zadam/trilium](https://hub.docker.com/r/zadam/trilium)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Trilium service.
-resource "elestio_trilium" "demo_trilium" {
+resource "elestio_trilium" "example" {
   project_id    = "2500"
-  server_name   = "demo-trilium"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

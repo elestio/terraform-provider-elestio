@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_microk8s (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" /><br>MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge<br><br>The **elestio_microk8s** resource allows the creation and management of Elestio Microk8s services.
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/microk8s-A6vJ.png" width="100" /><br>MicroK8s is a small, fast, single-package Kubernetes for developers, IoT and edge<br><br>The **elestio_microk8s** resource allows the creation and management of Elestio Microk8s services.
 
 ## Example Usage
 
 ```terraform
-# Create and manage Microk8s service.
-resource "elestio_microk8s" "demo_microk8s" {
+resource "elestio_microk8s" "example" {
   project_id    = "2500"
-  server_name   = "demo-microk8s"
   version       = ""
   provider_name = "hetzner"
   datacenter    = "fsn1"

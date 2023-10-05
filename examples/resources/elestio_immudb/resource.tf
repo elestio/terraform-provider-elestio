@@ -1,7 +1,5 @@
-# Create and manage ImmuDB service.
-resource "elestio_immudb" "demo_immudb" {
+resource "elestio_immudb" "example" {
   project_id    = "2500"
-  server_name   = "demo-immudb"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

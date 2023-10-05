@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_papercups (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" /><br>Papercups is a open-source live customer chat<br><br>The **elestio_papercups** resource allows the creation and management of Elestio Papercups services. The service uses the following docker image [papercups/papercups](https://hub.docker.com/r/papercups/papercups)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68310464-Fwoy.png" width="100" /><br>Papercups is a open-source live customer chat<br><br>The **elestio_papercups** resource allows the creation and management of Elestio Papercups services. The service uses the following docker image [papercups/papercups](https://hub.docker.com/r/papercups/papercups)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Papercups service.
-resource "elestio_papercups" "demo_papercups" {
+resource "elestio_papercups" "example" {
   project_id    = "2500"
-  server_name   = "demo-papercups"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

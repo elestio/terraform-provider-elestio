@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_huginn (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" /><br>Huginn is a tool in the Web Service Automation category of a tech stack.<br><br>The **elestio_huginn** resource allows the creation and management of Elestio Huginn services. The service uses the following docker image [elestio/huginn](https://hub.docker.com/r/elestio/huginn)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/huginn-Jd5i.png" width="100" /><br>Huginn is a tool in the Web Service Automation category of a tech stack.<br><br>The **elestio_huginn** resource allows the creation and management of Elestio Huginn services. The service uses the following docker image [elestio/huginn](https://hub.docker.com/r/elestio/huginn)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Huginn service.
-resource "elestio_huginn" "demo_huginn" {
+resource "elestio_huginn" "example" {
   project_id    = "2500"
-  server_name   = "demo-huginn"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

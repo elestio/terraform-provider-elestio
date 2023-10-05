@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_mediacms (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" /><br>MediaCMS is a fully featured open-source video and media CMS.<br><br>The **elestio_mediacms** resource allows the creation and management of Elestio MediaCMS services. The service uses the following docker image [mediacms/mediacms](https://hub.docker.com/r/mediacms/mediacms)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mediaCMS-kXpX.jpg" width="100" /><br>MediaCMS is a fully featured open-source video and media CMS.<br><br>The **elestio_mediacms** resource allows the creation and management of Elestio MediaCMS services. The service uses the following docker image [mediacms/mediacms](https://hub.docker.com/r/mediacms/mediacms)
 
 ## Example Usage
 
 ```terraform
-# Create and manage MediaCMS service.
-resource "elestio_mediacms" "demo_mediacms" {
+resource "elestio_mediacms" "example" {
   project_id    = "2500"
-  server_name   = "demo-mediacms"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

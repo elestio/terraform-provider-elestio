@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_traduora (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" /><br>Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br><br>The **elestio_traduora** resource allows the creation and management of Elestio Traduora services. The service uses the following docker image [everco/ever-traduora](https://hub.docker.com/r/everco/ever-traduora)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/48238001-domg.png" width="100" /><br>Open Translation Management Platform. Teams use Ever Traduora to reach users all around the globe. Automate your translation workflow today<br><br>The **elestio_traduora** resource allows the creation and management of Elestio Traduora services. The service uses the following docker image [everco/ever-traduora](https://hub.docker.com/r/everco/ever-traduora)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Traduora service.
-resource "elestio_traduora" "demo_traduora" {
+resource "elestio_traduora" "example" {
   project_id    = "2500"
-  server_name   = "demo-traduora"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

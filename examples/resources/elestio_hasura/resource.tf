@@ -1,7 +1,5 @@
-# Create and manage Hasura service.
-resource "elestio_hasura" "demo_hasura" {
+resource "elestio_hasura" "example" {
   project_id    = "2500"
-  server_name   = "demo-hasura"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

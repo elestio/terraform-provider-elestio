@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_typebot (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typebot-MGT8.png" width="100" /><br>Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like magic<br><br>The **elestio_typebot** resource allows the creation and management of Elestio Typebot services. The service uses the following docker image [elestio/typebot-viewer](https://hub.docker.com/r/elestio/typebot-viewer)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typebot-MGT8.png" width="100" /><br>Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like magic<br><br>The **elestio_typebot** resource allows the creation and management of Elestio Typebot services. The service uses the following docker image [elestio/typebot-viewer](https://hub.docker.com/r/elestio/typebot-viewer)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Typebot service.
-resource "elestio_typebot" "demo_typebot" {
+resource "elestio_typebot" "example" {
   project_id    = "2500"
-  server_name   = "demo-typebot"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

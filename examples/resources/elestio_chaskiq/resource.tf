@@ -1,7 +1,5 @@
-# Create and manage Chaskiq service.
-resource "elestio_chaskiq" "demo_chaskiq" {
+resource "elestio_chaskiq" "example" {
   project_id    = "2500"
-  server_name   = "demo-chaskiq"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

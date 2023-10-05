@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_formbricks (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [formbricks/formbricks](https://hub.docker.com/r/formbricks/formbricks)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [formbricks/formbricks](https://hub.docker.com/r/formbricks/formbricks)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Formbricks service.
-resource "elestio_formbricks" "demo_formbricks" {
+resource "elestio_formbricks" "example" {
   project_id    = "2500"
-  server_name   = "demo-formbricks"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_zabbix (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" /><br>Zabbix is an enterprise-class open source distributed monitoring solution.<br><br>The **elestio_zabbix** resource allows the creation and management of Elestio Zabbix services. The service uses the following docker image [zabbix/zabbix-server-mysql](https://hub.docker.com/r/zabbix/zabbix-server-mysql)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zabbix-BQ4C.png" width="100" /><br>Zabbix is an enterprise-class open source distributed monitoring solution.<br><br>The **elestio_zabbix** resource allows the creation and management of Elestio Zabbix services. The service uses the following docker image [zabbix/zabbix-server-mysql](https://hub.docker.com/r/zabbix/zabbix-server-mysql)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Zabbix service.
-resource "elestio_zabbix" "demo_zabbix" {
+resource "elestio_zabbix" "example" {
   project_id    = "2500"
-  server_name   = "demo-zabbix"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

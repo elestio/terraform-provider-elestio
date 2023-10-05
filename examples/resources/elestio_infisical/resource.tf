@@ -1,7 +1,5 @@
-# Create and manage Infisical service.
-resource "elestio_infisical" "demo_infisical" {
+resource "elestio_infisical" "example" {
   project_id    = "2500"
-  server_name   = "demo-infisical"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

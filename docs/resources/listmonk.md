@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_listmonk (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" /><br>Listmonk is a self-hosted, high performance mailing list and newsletter manager<br><br>The **elestio_listmonk** resource allows the creation and management of Elestio Listmonk services. The service uses the following docker image [listmonk/listmonk](https://hub.docker.com/r/listmonk/listmonk)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Listmonk-Fcfg.png" width="100" /><br>Listmonk is a self-hosted, high performance mailing list and newsletter manager<br><br>The **elestio_listmonk** resource allows the creation and management of Elestio Listmonk services. The service uses the following docker image [listmonk/listmonk](https://hub.docker.com/r/listmonk/listmonk)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Listmonk service.
-resource "elestio_listmonk" "demo_listmonk" {
+resource "elestio_listmonk" "example" {
   project_id    = "2500"
-  server_name   = "demo-listmonk"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

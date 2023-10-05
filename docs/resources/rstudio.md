@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_rstudio (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" /><br>Publish your R and Python content with RStudio Connect<br><br>The **elestio_rstudio** resource allows the creation and management of Elestio Rstudio services. The service uses the following docker image [rocker/rstudio](https://hub.docker.com/r/rocker/rstudio)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rstudio-lMcG.png" width="100" /><br>Publish your R and Python content with RStudio Connect<br><br>The **elestio_rstudio** resource allows the creation and management of Elestio Rstudio services. The service uses the following docker image [rocker/rstudio](https://hub.docker.com/r/rocker/rstudio)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Rstudio service.
-resource "elestio_rstudio" "demo_rstudio" {
+resource "elestio_rstudio" "example" {
   project_id    = "2500"
-  server_name   = "demo-rstudio"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

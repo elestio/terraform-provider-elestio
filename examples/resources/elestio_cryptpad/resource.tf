@@ -1,7 +1,5 @@
-# Create and manage CryptPad service.
-resource "elestio_cryptpad" "demo_cryptpad" {
+resource "elestio_cryptpad" "example" {
   project_id    = "2500"
-  server_name   = "demo-cryptpad"
   version       = "nginx"
   provider_name = "hetzner"
   datacenter    = "fsn1"

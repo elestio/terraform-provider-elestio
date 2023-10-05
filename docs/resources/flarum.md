@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_flarum (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" /><br>Flarum is a delightfully simple discussion platform for your website<br><br>The **elestio_flarum** resource allows the creation and management of Elestio Flarum services. The service uses the following docker image [crazymax/flarum](https://hub.docker.com/r/crazymax/flarum)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flarum-J296.png" width="100" /><br>Flarum is a delightfully simple discussion platform for your website<br><br>The **elestio_flarum** resource allows the creation and management of Elestio Flarum services. The service uses the following docker image [crazymax/flarum](https://hub.docker.com/r/crazymax/flarum)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Flarum service.
-resource "elestio_flarum" "demo_flarum" {
+resource "elestio_flarum" "example" {
   project_id    = "2500"
-  server_name   = "demo-flarum"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

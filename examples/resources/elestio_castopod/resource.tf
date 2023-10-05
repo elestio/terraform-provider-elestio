@@ -1,7 +1,5 @@
-# Create and manage Castopod service.
-resource "elestio_castopod" "demo_castopod" {
+resource "elestio_castopod" "example" {
   project_id    = "2500"
-  server_name   = "demo-castopod"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

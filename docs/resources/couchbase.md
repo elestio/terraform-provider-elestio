@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_couchbase (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" /><br>Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br><br>The **elestio_couchbase** resource allows the creation and management of Elestio Couchbase services. The service uses the following docker image [couchbase](https://hub.docker.com/r/couchbase)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Couchbase-4ECx.png" width="100" /><br>Couchbase Server is a modern cloud-native, distributed database that fuses the strengths of relational databases such as SQL and ACID transactions with JSON flexibility and scale that defines NoSQL<br><br>The **elestio_couchbase** resource allows the creation and management of Elestio Couchbase services. The service uses the following docker image [couchbase](https://hub.docker.com/r/couchbase)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Couchbase service.
-resource "elestio_couchbase" "demo_couchbase" {
+resource "elestio_couchbase" "example" {
   project_id    = "2500"
-  server_name   = "demo-couchbase"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

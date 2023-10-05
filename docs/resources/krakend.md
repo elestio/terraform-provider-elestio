@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_krakend (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/KrakenD-3mmY.png" width="100" /><br>KrakenD is a stateless, distributed, high-performance API Gateway that helps you effortlessly adopt microservices · The API Gateway pattern at its full extent.<br><br>The **elestio_krakend** resource allows the creation and management of Elestio KrakenD services. The service uses the following docker image [devopsfaith/krakend](https://hub.docker.com/r/devopsfaith/krakend)
 
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/KrakenD-3mmY.png" width="100" /><br>KrakenD is a stateless, distributed, high-performance API Gateway that helps you effortlessly adopt microservices · The API Gateway pattern at its full extent.<br><br>The **elestio_krakend** resource allows the creation and management of Elestio KrakenD services. The service uses the following docker image [devopsfaith/krakend](https://hub.docker.com/r/devopsfaith/krakend)
 
 ## Example Usage
 
 ```terraform
-# Create and manage KrakenD service.
-resource "elestio_krakend" "demo_krakend" {
+resource "elestio_krakend" "example" {
   project_id    = "2500"
-  server_name   = "demo-krakend"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

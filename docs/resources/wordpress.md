@@ -7,16 +7,14 @@ description: |-
 ---
 
 # elestio_wordpress (Resource)
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/800px-WordPress-logo-4TuK.png" width="100" /><br>WordPress is open-source software you can use to create a beautiful website, blog or app.<br><br>The **elestio_wordpress** resource allows the creation and management of Elestio Wordpress services. The service uses the following docker image [elestio/wordpress](https://hub.docker.com/r/elestio/wordpress)
 
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/800px-WordPress-logo-4TuK.png" width="100" /><br>WordPress is open-source software you can use to create a beautiful website, blog or app.<br><br>The **elestio_wordpress** resource allows the creation and management of Elestio Wordpress services. The service uses the following docker image [elestio/wordpress](https://hub.docker.com/r/elestio/wordpress)
 
 ## Example Usage
 
 ```terraform
-# Create and manage Wordpress service.
-resource "elestio_wordpress" "demo_wordpress" {
+resource "elestio_wordpress" "example" {
   project_id    = "2500"
-  server_name   = "demo-wordpress"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

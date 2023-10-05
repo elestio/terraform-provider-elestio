@@ -1,7 +1,5 @@
-# Create and manage Rstudio service.
-resource "elestio_rstudio" "demo_rstudio" {
+resource "elestio_rstudio" "example" {
   project_id    = "2500"
-  server_name   = "demo-rstudio"
   version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"

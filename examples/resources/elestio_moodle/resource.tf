@@ -1,7 +1,5 @@
-# Create and manage Moodle service.
-resource "elestio_moodle" "demo_moodle" {
+resource "elestio_moodle" "example" {
   project_id    = "2500"
-  server_name   = "demo-moodle"
   version       = "4.2"
   provider_name = "hetzner"
   datacenter    = "fsn1"

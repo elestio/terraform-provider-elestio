@@ -19,3 +19,6 @@ templates-get:
 
 templates-generate:
 	bash ./elestio-templates/scripts/generate_templates_examples.sh
+
+templates-delete:
+	bash ./elestio-templates/scripts/delete_generated_examples.sh

@@ -3,11 +3,11 @@
 page_title: "elestio_redis Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  Redis is an open-source, in-memory database, cache and message broker. The elestio_redis resource allows the creation and management of Elestio Redis services. The service uses the following docker image redis https://hub.docker.com/r/redis
+  Redis is an open-source, in-memory database, cache and message broker. The elestio_redis resource allows the creation and management of Elestio Redis services. The service uses the following docker image elestio/redis https://hub.docker.com/r/elestio/redis
 ---
 
 # elestio_redis (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [redis](https://hub.docker.com/r/redis)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [elestio/redis](https://hub.docker.com/r/elestio/redis)
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ description: |-
 resource "elestio_redis" "demo_redis" {
   project_id    = "2500"
   server_name   = "demo-redis"
-  version       = "6"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -50,7 +50,7 @@ resource "elestio_redis" "demo_redis" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `6`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

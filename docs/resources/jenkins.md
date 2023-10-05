@@ -3,11 +3,11 @@
 page_title: "elestio_jenkins Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Jenkins is the leading open-source automation server.The elestio_jenkins resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image jenkins/jenkins https://hub.docker.com/r/jenkins/jenkins
+  Jenkins is the leading open-source automation server.The elestio_jenkins resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image elestio/jenkins https://hub.docker.com/r/elestio/jenkins
 ---
 
 # elestio_jenkins (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br>Jenkins is the leading open-source automation server.<br><br>The **elestio_jenkins** resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image [jenkins/jenkins](https://hub.docker.com/r/jenkins/jenkins)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jenkins-logo-fpDg.png" width="100" /><br>Jenkins is the leading open-source automation server.<br><br>The **elestio_jenkins** resource allows the creation and management of Elestio Jenkins services. The service uses the following docker image [elestio/jenkins](https://hub.docker.com/r/elestio/jenkins)
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ description: |-
 resource "elestio_jenkins" "demo_jenkins" {
   project_id    = "2500"
   server_name   = "demo-jenkins"
-  version       = "lts-jdk11"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -51,7 +51,7 @@ resource "elestio_jenkins" "demo_jenkins" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `lts-jdk11`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

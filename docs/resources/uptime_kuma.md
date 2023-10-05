@@ -3,11 +3,11 @@
 page_title: "elestio_uptime_kuma Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.The elestiouptimekuma resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image louislam/uptime-kuma https://hub.docker.com/r/louislam/uptime-kuma
+  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.The elestiouptimekuma resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image elestio/uptime-kuma https://hub.docker.com/r/elestio/uptime-kuma
 ---
 
 # elestio_uptime_kuma (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br>Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br><br>The **elestio_uptime_kuma** resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image [louislam/uptime-kuma](https://hub.docker.com/r/louislam/uptime-kuma)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/uptimeKuma1-PPKD.png" width="100" /><br>Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.<br><br>The **elestio_uptime_kuma** resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image [elestio/uptime-kuma](https://hub.docker.com/r/elestio/uptime-kuma)
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ description: |-
 resource "elestio_uptime_kuma" "demo_uptime_kuma" {
   project_id    = "2500"
   server_name   = "demo-uptime_kuma"
-  version       = "1"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -51,7 +51,7 @@ resource "elestio_uptime_kuma" "demo_uptime_kuma" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `1`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

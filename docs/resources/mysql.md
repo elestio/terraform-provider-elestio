@@ -3,11 +3,11 @@
 page_title: "elestio_mysql Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.The elestio_mysql resource allows the creation and management of Elestio MySQL services. The service uses the following docker image mysql https://hub.docker.com/r/mysql
+  MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.The elestio_mysql resource allows the creation and management of Elestio MySQL services. The service uses the following docker image elestio/mysql https://hub.docker.com/r/elestio/mysql
 ---
 
 # elestio_mysql (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br>MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br><br>The **elestio_mysql** resource allows the creation and management of Elestio MySQL services. The service uses the following docker image [mysql](https://hub.docker.com/r/mysql)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/287-2873694-mysql-logo-png-transparent-png-download--1--gmvZ.png" width="100" /><br>MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.<br><br>The **elestio_mysql** resource allows the creation and management of Elestio MySQL services. The service uses the following docker image [elestio/mysql](https://hub.docker.com/r/elestio/mysql)
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ description: |-
 resource "elestio_mysql" "demo_mysql" {
   project_id    = "2500"
   server_name   = "demo-mysql"
-  version       = "8"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -50,7 +50,7 @@ resource "elestio_mysql" "demo_mysql" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `8`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

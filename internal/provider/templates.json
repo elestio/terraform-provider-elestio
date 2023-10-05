@@ -14,18 +14,19 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "postgres",
-      "dockerhub_default_tag": "14",
-      "firewallPorts": "34523,34343",
+      "dockerhub_default_tag": "16",
+      "firewallPorts": "443,25432",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 12,
       "category": "Databases & Cache",
       "title": "MySQL",
-      "version": "8",
+      "version": "latest",
       "adminUser": "root",
       "description": "MySQL is an Oracle-backed open-source RDBMS that runs on almost all platforms.",
       "showOrder": 1,
@@ -34,19 +35,20 @@
       "isPopular": 1,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "mysql",
-      "dockerhub_default_tag": "8",
+      "dockerhub_image": "elestio/mysql",
+      "dockerhub_default_tag": "latest",
       "firewallPorts": "24306,24580",
       "clusterNodes": 2,
       "isCluster": 1,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 270,
       "category": "Databases & Cache",
       "title": "MariaDB",
-      "version": "latest",
+      "version": "10.9",
       "adminUser": "root",
       "description": "The open source relational database",
       "showOrder": 1,
@@ -55,13 +57,36 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "mariadb",
-      "dockerhub_default_tag": "10.9.6",
+      "dockerhub_image": "elestio/mariadb",
+      "dockerhub_default_tag": "10.9",
       "firewallPorts": "24306,24580",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 357,
+      "category": "Databases & Cache",
+      "title": "ColumnStore",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "MariaDB ColumnStore is a GPLv2 open-source columnar database built on MariaDB Server.",
+      "showOrder": 1,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ColumnStore-MywM.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "mariadb/columnstore",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "23060,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 19,
@@ -80,15 +105,16 @@
       "dockerhub_default_tag": "6",
       "firewallPorts": "17271,17290",
       "clusterNodes": 5,
-      "isCluster": 1,
+      "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 3,
       "category": "Databases & Cache",
       "title": "Redis",
-      "version": "6",
+      "version": "latest",
       "adminUser": "root",
       "description": "Redis is an open-source, in-memory database, cache and message broker. ",
       "showOrder": 3,
@@ -97,13 +123,14 @@
       "isPopular": 1,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "redis",
-      "dockerhub_default_tag": "6",
-      "firewallPorts": "23647,24814",
+      "dockerhub_image": "elestio/redis",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "26379,80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 75,
@@ -122,9 +149,10 @@
       "dockerhub_default_tag": "latest",
       "firewallPorts": "23647,24814",
       "clusterNodes": 5,
-      "isCluster": 1,
+      "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 45,
@@ -145,7 +173,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 93,
@@ -166,7 +195,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 68,
@@ -187,7 +217,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 116,
@@ -208,7 +239,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 70,
@@ -229,7 +261,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 208,
@@ -250,7 +283,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 115,
@@ -271,7 +305,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 255,
@@ -292,7 +327,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 195,
@@ -311,9 +347,10 @@
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443,19200",
       "clusterNodes": 5,
-      "isCluster": 1,
+      "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 251,
@@ -334,7 +371,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 253,
@@ -355,7 +393,52 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 309,
+      "category": "Databases & Cache",
+      "title": "Hydra",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Hydra is an open-source alternative to enterprise data warehouses and it's simple, fast, and adaptable to your needs.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hydra-J2IS.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "hydradatabase/hydra",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,15432,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 313,
+      "category": "Databases & Cache",
+      "title": "Weaviate",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Weaviate is an open-source vector database. It allows you to store data objects and vector embeddings from your favorite ML models, and scale seamlessly into billions of data objects.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Weaviate-RRYC.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "semitechnologies/weaviate",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 36,
@@ -376,7 +459,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 38,
@@ -397,14 +481,15 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 48,
       "category": "Applications",
       "title": "Wordpress",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "WordPress is open-source software you can use to create a beautiful website, blog or app.",
       "showOrder": 0,
       "mainImage": "https://cf.appdrag.com/cloud-vm-c72afa/uploads/800px-WordPress-logo-4TuK.png",
@@ -412,13 +497,14 @@
       "isPopular": 1,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "wordpress",
+      "dockerhub_image": "elestio/wordpress",
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443,24580",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 55,
@@ -439,7 +525,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 57,
@@ -454,13 +541,14 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "directus/directus",
+      "dockerhub_image": "elestio/directus",
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 60,
@@ -481,7 +569,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 64,
@@ -502,7 +591,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 65,
@@ -517,13 +607,14 @@
       "isPopular": 0,
       "minRamGB": 4,
       "minCores": 1,
-      "dockerhub_image": "strapi/strapi",
-      "dockerhub_default_tag": "3",
-      "firewallPorts": "80,443,34343,34532",
+      "dockerhub_image": "elestio/strapi-development",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443,34532",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 170,
@@ -544,7 +635,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 49,
@@ -565,7 +657,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 182,
@@ -586,7 +679,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 235,
@@ -607,7 +701,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 59,
@@ -628,7 +723,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 63,
@@ -643,13 +739,14 @@
       "isPopular": 1,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "minio/minio",
+      "dockerhub_image": "elestio/minio",
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443,34256",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 66,
@@ -670,7 +767,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 74,
@@ -691,7 +789,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 77,
@@ -712,7 +811,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 79,
@@ -733,7 +833,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 84,
@@ -754,7 +855,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 85,
@@ -775,7 +877,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 89,
@@ -796,7 +899,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 90,
@@ -817,7 +921,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 91,
@@ -838,13 +943,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 92,
       "category": "Applications",
       "title": "Rocket.Chat",
-      "version": "latest",
+      "version": "sha-856c235",
       "adminUser": "root",
       "description": "Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. ",
       "showOrder": 10,
@@ -854,12 +960,13 @@
       "minRamGB": null,
       "minCores": 1,
       "dockerhub_image": "rocketchat/rocket.chat",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "dockerhub_default_tag": "sha-856c235",
+      "firewallPorts": "80,443,8443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 94,
@@ -880,7 +987,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 95,
@@ -901,7 +1009,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 96,
@@ -922,7 +1031,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 97,
@@ -943,7 +1053,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 98,
@@ -964,7 +1075,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 99,
@@ -985,7 +1097,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 108,
@@ -1000,13 +1113,14 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "bitnami/keycloak",
+      "dockerhub_image": "elestio/keycloak",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,7600",
+      "firewallPorts": "80,443,7600,8443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 188,
@@ -1027,7 +1141,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 190,
@@ -1048,7 +1163,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 193,
@@ -1069,7 +1185,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 194,
@@ -1090,7 +1207,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 197,
@@ -1111,7 +1229,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 198,
@@ -1132,7 +1251,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 200,
@@ -1153,14 +1273,367 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 349,
+      "category": "Applications",
+      "title": "OpenSlides",
+      "version": "latest",
+      "adminUser": "superadmin",
+      "description": "OpenSlides is a powerful and modern, web-based software for the digital organization of your meetings and committees. ",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenSlides-Fngj.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "penslides/openslides/openslides-client",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 350,
+      "category": "Applications",
+      "title": "Formbricks",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. ",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "formbricks/formbricks",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 351,
+      "category": "Applications",
+      "title": "Dittofeed",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Automate communications with customers. Give data control to your growth engineers.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dittofeed-6nSV.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "dittofeed/dittofeed-dashboard",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443,7443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 352,
+      "category": "Development",
+      "title": "Plane",
+      "version": "0.11",
+      "adminUser": "[EMAIL]",
+      "description": "An open-source software development tool to manage issues, sprints, and product roadmaps with peace of mind",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Plane-tFaD.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "makeplane/plane-frontend",
+      "dockerhub_default_tag": "0.11",
+      "firewallPorts": "80,443,8443,7443,6443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 353,
+      "category": "Development",
+      "title": "APITable",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "APITable is an API-oriented low-code platform for building collaborative apps and is better than all other Airtable open-source alternatives.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/APITable-Bu4d.webp",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 8,
+      "minCores": 4,
+      "dockerhub_image": "apitable/web-servers",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8543",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 354,
+      "category": "Applications",
+      "title": "Pixelfed",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pixelfed-1nfv.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 3,
+      "minCores": 3,
+      "dockerhub_image": "elestio/pixelfed",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,2443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 355,
+      "category": "Development",
+      "title": "Hoppscotch",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Hoppscotch is a lightweight, web-based API development suite. ",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hoppscotch-0tkX.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 2,
+      "minCores": 2,
+      "dockerhub_image": "elestio/hoppscotch-app",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,8443,7443,6443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 356,
+      "category": "Applications",
+      "title": "Pritunl",
+      "version": "latest",
+      "adminUser": "pritunl",
+      "description": "Best open-source alternative to proprietary commercial VPN products such as Aviatrix and Pulse Secure.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pritunl-Ji9D.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 2,
+      "minCores": 2,
+      "dockerhub_image": "ghcr.io/jippi/docker-pritunl",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,1443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 358,
+      "category": "Development",
+      "title": "ApacheNiFi",
+      "version": "latest",
+      "adminUser": "admin",
+      "description": "Apache NiFi automates the movement of data between disparate data sources and systems, making data ingestion fast, easy, and secure.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ApacheNiFi-ttJL.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "apache/nifi",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 359,
+      "category": "Development",
+      "title": "GrowthBook",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experiments",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrowthBook-rtdF.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "elestio/growthbook",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,6443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 360,
+      "category": "Applications",
+      "title": "Chaskiq",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "A full-featured Live Chat, Support, and marketing platform, an alternative to Intercom, Drift, Crisp, etc",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Chaskiq-OigG.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "chaskiq/chaskiq",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,6443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 361,
+      "category": "Applications",
+      "title": "Loki",
+      "version": "2.8.0",
+      "adminUser": "root",
+      "description": "Loki is a log aggregation system designed to store and query logs from all your applications and infrastructure.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrafanaLoki-LOvr.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "grafana/loki",
+      "dockerhub_default_tag": "2.8.0",
+      "firewallPorts": "80,443,3131",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 362,
+      "category": "Applications",
+      "title": "Hop",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Hop is a data orchestration and data engineering platform that aims to facilitate all aspects of data and metadata orchestration",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hop-1b7w.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "apache/hop-web",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 363,
+      "category": "Applications",
+      "title": "Bigcapital",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Bigcapital is financial accounting with intelligent reporting for faster decision-making, an open-source alternative to Quickbooks, Xero, etc.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bigcapital-DKAP.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "elestio/bigcapital-webapp",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,22632",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 364,
+      "category": "Applications",
+      "title": "Lago",
+      "version": "v0.48.0-beta",
+      "adminUser": "[EMAIL]",
+      "description": "Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lago-EpCS.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "getlago/front",
+      "dockerhub_default_tag": "v0.48.0-beta",
+      "firewallPorts": "80,443,56882,34079",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 0
+    },
+    {
+      "id": 365,
+      "category": "Applications",
+      "title": "GLPI",
+      "version": "latest",
+      "adminUser": " ",
+      "description": "GLPI is a Free Asset and IT Management Software package, Data center management, ITIL Service Desk, licenses tracking and software auditing.",
+      "showOrder": 10,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GLPI-qrhV.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "elestio/glpi",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,26452,52698",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 54,
       "category": "Development",
       "title": "N8N",
       "version": "latest",
-      "adminUser": "root",
+      "adminUser": "[EMAIL]",
       "description": "n8n is a free, self-hosted workflow automation tool that integrates with other apps to automate processes between them.",
       "showOrder": 11,
       "mainImage": "https://cf.appdrag.com/cloud-vm-c72afa/uploads/df5be1c-IIRO.png",
@@ -1174,7 +1647,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 58,
@@ -1195,7 +1669,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 211,
@@ -1216,7 +1691,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 212,
@@ -1235,9 +1711,10 @@
       "dockerhub_default_tag": "3-management",
       "firewallPorts": "80,443,5672,15672,4369,25672",
       "clusterNodes": 5,
-      "isCluster": 1,
+      "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 53,
@@ -1258,7 +1735,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 78,
@@ -1275,18 +1753,19 @@
       "minCores": 1,
       "dockerhub_image": "m1k1o/neko-rooms",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "",
+      "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 86,
       "category": "Applications",
       "title": "Odoo ERP & CRM",
       "version": "latest",
-      "adminUser": "null",
+      "adminUser": "[EMAIL]",
       "description": "Odoo is a suite of web-based, open-source business apps.",
       "showOrder": 15,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png",
@@ -1294,13 +1773,14 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "odoo",
+      "dockerhub_image": "elestio/odoo",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "firewallPorts": "80,443,25648",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 206,
@@ -1321,7 +1801,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 210,
@@ -1342,7 +1823,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 213,
@@ -1359,11 +1841,12 @@
       "minCores": 1,
       "dockerhub_image": "baserow/baserow",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "firewallPorts": "80,443,6443",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 215,
@@ -1384,7 +1867,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 203,
@@ -1405,7 +1889,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 216,
@@ -1426,7 +1911,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 217,
@@ -1447,7 +1933,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 218,
@@ -1468,14 +1955,15 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 219,
       "category": "Hosting & Infra",
       "title": "Kestra",
-      "version": "latest",
-      "adminUser": "root",
+      "version": "latest-full",
+      "adminUser": "admin",
       "description": "The open source data orchestration and scheduling platform.",
       "showOrder": 22,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kestra-nrvo.png",
@@ -1484,12 +1972,13 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "kestra/kestra",
-      "dockerhub_default_tag": "develop-full",
-      "firewallPorts": "",
+      "dockerhub_default_tag": "latest-full",
+      "firewallPorts": "80,443,6443",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 226,
@@ -1510,7 +1999,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 230,
@@ -1531,7 +2021,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 238,
@@ -1546,13 +2037,14 @@
       "isPopular": 0,
       "minRamGB": 4,
       "minCores": 2,
-      "dockerhub_image": "elestio/docker-desktop-vnc-knime",
+      "dockerhub_image": "elestio/knime",
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 185,
@@ -1573,7 +2065,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 186,
@@ -1594,7 +2087,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 209,
@@ -1615,7 +2109,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 202,
@@ -1630,13 +2125,14 @@
       "isPopular": 0,
       "minRamGB": null,
       "minCores": 1,
-      "dockerhub_image": "huginn/huginn-single-process",
+      "dockerhub_image": "elestio/huginn",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "firewallPorts": "80,443,8443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 87,
@@ -1657,7 +2153,30 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 345,
+      "category": "Applications",
+      "title": "MetabasePostgres",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Metabase is an open-source tool that simply and quickly gathers business intelligence and analytics for your company.",
+      "showOrder": 35,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/5927b3e6-af6a-4ca9-92b8-6e26b9216192-1589988072377--1--mPpm.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": null,
+      "minCores": 1,
+      "dockerhub_image": "metabase/metabase",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 205,
@@ -1678,7 +2197,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 105,
@@ -1699,7 +2219,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 106,
@@ -1720,7 +2241,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 107,
@@ -1741,7 +2263,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 110,
@@ -1762,7 +2285,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 112,
@@ -1783,7 +2307,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 113,
@@ -1804,13 +2329,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 114,
       "category": "Development",
       "title": "Jenkins",
-      "version": "lts-jdk11",
+      "version": "latest",
       "adminUser": "root",
       "description": "Jenkins is the leading open-source automation server.",
       "showOrder": 160,
@@ -1819,13 +2345,14 @@
       "isPopular": 0,
       "minRamGB": 4,
       "minCores": 1,
-      "dockerhub_image": "jenkins/jenkins",
-      "dockerhub_default_tag": "lts-jdk11",
+      "dockerhub_image": "elestio/jenkins",
+      "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 117,
@@ -1846,7 +2373,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 118,
@@ -1867,13 +2395,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 120,
       "category": "Applications",
       "title": "ErpNext",
-      "version": "v12",
+      "version": "latest",
       "adminUser": "Administrator",
       "description": "ERPNext is the leading open-source enterprise resource planning (ERP) software. ",
       "showOrder": 160,
@@ -1882,13 +2411,14 @@
       "isPopular": 0,
       "minRamGB": 2,
       "minCores": 1,
-      "dockerhub_image": "frappe/erpnext-nginx",
+      "dockerhub_image": "frappe/erpnext",
       "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 121,
@@ -1909,7 +2439,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 122,
@@ -1930,7 +2461,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 1
+      "requirePort25": 1,
+      "isStable": 1
     },
     {
       "id": 123,
@@ -1951,7 +2483,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 125,
@@ -1972,7 +2505,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 126,
@@ -1993,14 +2527,15 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 127,
       "category": "Development",
       "title": "Typesense",
       "version": "latest",
-      "adminUser": "null",
+      "adminUser": "\"\"",
       "description": "Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png",
@@ -2014,7 +2549,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 129,
@@ -2035,7 +2571,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 131,
@@ -2056,7 +2593,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 132,
@@ -2077,7 +2615,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 1
+      "requirePort25": 1,
+      "isStable": 1
     },
     {
       "id": 133,
@@ -2098,7 +2637,30 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 135,
+      "category": "Applications",
+      "title": "Outline",
+      "version": "latest",
+      "adminUser": "admin",
+      "description": "Outline is a fast wiki and knowledge base for growing teams - an alternative to Google Docs. ",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/outline-Eoq3.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": -1,
+      "minCores": 1,
+      "dockerhub_image": "outlinewiki/outline",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 137,
@@ -2113,13 +2675,14 @@
       "isPopular": 0,
       "minRamGB": -1,
       "minCores": 1,
-      "dockerhub_image": "louislam/uptime-kuma",
-      "dockerhub_default_tag": "1",
+      "dockerhub_image": "elestio/uptime-kuma",
+      "dockerhub_default_tag": "latest",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 138,
@@ -2140,7 +2703,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 139,
@@ -2161,7 +2725,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 140,
@@ -2182,7 +2747,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 142,
@@ -2203,7 +2769,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 143,
@@ -2224,7 +2791,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 144,
@@ -2234,7 +2802,7 @@
       "adminUser": "[EMAIL]",
       "description": "Appwrite provides developers with a set of REST APIs to manage their core backend needs.",
       "showOrder": 160,
-      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/appwritelogo-1-7ZXG.svg",
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Appwrite-ljVz.png",
       "osName": "Ubuntu 20.04",
       "isPopular": 0,
       "minRamGB": 4,
@@ -2245,7 +2813,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 146,
@@ -2266,7 +2835,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 149,
@@ -2283,11 +2853,12 @@
       "minCores": 1,
       "dockerhub_image": "parseplatform/parse-server",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443,1338",
+      "firewallPorts": "80,443,8443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 150,
@@ -2308,7 +2879,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 151,
@@ -2329,7 +2901,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 152,
@@ -2350,7 +2923,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 153,
@@ -2371,7 +2945,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 154,
@@ -2392,7 +2967,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 155,
@@ -2413,7 +2989,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 156,
@@ -2434,13 +3011,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 157,
       "category": "Development",
       "title": "Airbyte",
-      "version": "0.43.1",
+      "version": "0.50.30",
       "adminUser": "root",
       "description": "Airbyte is an open-source data integration platform that syncs data from applications, APIs, and databases to warehouses",
       "showOrder": 160,
@@ -2450,12 +3028,13 @@
       "minRamGB": 2,
       "minCores": 1,
       "dockerhub_image": "airbyte/server",
-      "dockerhub_default_tag": "0.43.1",
+      "dockerhub_default_tag": "0.50.30",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 173,
@@ -2476,7 +3055,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 174,
@@ -2497,7 +3077,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 175,
@@ -2518,7 +3099,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 177,
@@ -2539,7 +3121,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 178,
@@ -2560,7 +3143,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 179,
@@ -2581,7 +3165,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 180,
@@ -2602,7 +3187,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 181,
@@ -2623,13 +3209,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 183,
       "category": "Hosting & Infra",
       "title": "Vault",
-      "version": "latest",
+      "version": "1.13.3",
       "adminUser": "null",
       "description": "Vault is a tool for secrets management, encryption as a service, and privileged access management",
       "showOrder": 160,
@@ -2639,12 +3226,13 @@
       "minRamGB": 1,
       "minCores": 1,
       "dockerhub_image": "vault",
-      "dockerhub_default_tag": "latest",
+      "dockerhub_default_tag": "1.13.3",
       "firewallPorts": "80,443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 189,
@@ -2665,7 +3253,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 1
+      "requirePort25": 1,
+      "isStable": 1
     },
     {
       "id": 214,
@@ -2686,7 +3275,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 221,
@@ -2707,7 +3297,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 222,
@@ -2728,7 +3319,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 225,
@@ -2749,7 +3341,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 227,
@@ -2770,7 +3363,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 229,
@@ -2778,20 +3372,21 @@
       "title": "Mastodon",
       "version": "latest",
       "adminUser": "[EMAIL]",
-      "description": "Mastodon is a free, open-source social network server",
+      "description": "Mastodon is a free fediverse, open-source social network server with OpenSearch for indexing.",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mastodon-nT8w.png",
       "osName": "Ubuntu 20.04",
       "isPopular": 1,
       "minRamGB": 4,
       "minCores": 2,
-      "dockerhub_image": "tootsuite/mastodon",
+      "dockerhub_image": "ghcr.io/mastodon/mastodon",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "firewallPorts": "80,443,6443,5443",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 231,
@@ -2812,7 +3407,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 232,
@@ -2833,7 +3429,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 233,
@@ -2854,7 +3451,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 237,
@@ -2875,7 +3473,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 239,
@@ -2896,7 +3495,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 240,
@@ -2917,7 +3517,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 241,
@@ -2938,7 +3539,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 243,
@@ -2959,7 +3561,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 247,
@@ -2980,7 +3583,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 248,
@@ -3001,7 +3605,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 249,
@@ -3022,7 +3627,30 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 250,
+      "category": "Applications",
+      "title": "PostHog",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "PostHog provides open-source product analytics, session recording, feature flagging and a/b testing that you can self-host.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/cloud-vm-c72afa/uploads/posthog-logo-800x155-aeCl.svg",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 8,
+      "minCores": 4,
+      "dockerhub_image": "posthog/posthog",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,6443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 252,
@@ -3043,7 +3671,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 254,
@@ -3064,7 +3693,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 259,
@@ -3085,7 +3715,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 260,
@@ -3106,7 +3737,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 261,
@@ -3127,7 +3759,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 262,
@@ -3148,7 +3781,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 263,
@@ -3169,13 +3803,14 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 264,
       "category": "Applications",
       "title": "iTop",
-      "version": "latest",
+      "version": "latest-base",
       "adminUser": "admin",
       "description": "iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs",
       "showOrder": 160,
@@ -3185,12 +3820,13 @@
       "minRamGB": 4,
       "minCores": 2,
       "dockerhub_image": "vbkunin/itop",
-      "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "dockerhub_default_tag": "latest-base",
+      "firewallPorts": "80,443,48152",
       "clusterNodes": 2,
       "isCluster": 0,
-      "supportArm64": 0,
-      "requirePort25": 0
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 265,
@@ -3211,7 +3847,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 266,
@@ -3226,13 +3863,14 @@
       "isPopular": 0,
       "minRamGB": 1,
       "minCores": 1,
-      "dockerhub_image": "etherpad/etherpad",
+      "dockerhub_image": "elestio/etherpad",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "80,443",
+      "firewallPorts": "80,443,8475",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 271,
@@ -3253,7 +3891,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 272,
@@ -3274,7 +3913,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 273,
@@ -3295,7 +3935,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 275,
@@ -3316,7 +3957,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 277,
@@ -3337,7 +3979,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 278,
@@ -3358,7 +4001,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 279,
@@ -3379,7 +4023,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 280,
@@ -3400,7 +4045,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 281,
@@ -3421,7 +4067,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 283,
@@ -3442,7 +4089,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 284,
@@ -3463,7 +4111,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 285,
@@ -3471,7 +4120,7 @@
       "title": "PeerTube",
       "version": "production-bullseye",
       "adminUser": "root",
-      "description": "Free software to take back control of your videos.",
+      "description": "Free software to take back control of your videos for the Fediverse",
       "showOrder": 160,
       "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png",
       "osName": "Ubuntu 20.04",
@@ -3484,7 +4133,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 286,
@@ -3505,7 +4155,30 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 287,
+      "category": "Applications",
+      "title": "Docspell",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Simple document organizer",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--1--O6uX.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 1,
+      "dockerhub_image": "docspell/restserver",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,19878",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 288,
@@ -3526,7 +4199,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 289,
@@ -3547,7 +4221,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 290,
@@ -3568,7 +4243,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 291,
@@ -3589,7 +4265,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 292,
@@ -3610,7 +4287,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 293,
@@ -3631,7 +4309,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 294,
@@ -3652,7 +4331,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 0
     },
     {
       "id": 295,
@@ -3673,7 +4353,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 296,
@@ -3694,7 +4375,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 297,
@@ -3715,7 +4397,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 298,
@@ -3736,7 +4419,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 299,
@@ -3757,7 +4441,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 300,
@@ -3778,7 +4463,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 301,
@@ -3799,7 +4485,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 302,
@@ -3820,7 +4507,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 303,
@@ -3841,7 +4529,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 304,
@@ -3862,7 +4551,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 0,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 305,
@@ -3877,13 +4567,14 @@
       "isPopular": 0,
       "minRamGB": 1,
       "minCores": 0,
-      "dockerhub_image": "activepieces/activepieces",
+      "dockerhub_image": "elestio/activepieces",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "443,8284",
+      "firewallPorts": "80,443,4792",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 306,
@@ -3900,11 +4591,848 @@
       "minCores": 0,
       "dockerhub_image": "espocrm/espocrm",
       "dockerhub_default_tag": "latest",
-      "firewallPorts": "443,8686",
+      "firewallPorts": "80,443,8686",
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 307,
+      "category": "Development",
+      "title": "NocoBase",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Scalability-first open-source no-code platform. No programming required, build your own collaboration platform, management system with NocoBase in minutes.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/NocoBase-B6GW.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "nocobase/nocobase",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,13000",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 308,
+      "category": "Applications",
+      "title": "Dremio",
+      "version": "latest",
+      "adminUser": "admin",
+      "description": "The Easy and Open Data Lakehouse Self-service analytics with data warehouse functionality and data lake flexibility across all your data.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Dremio-K3uc.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "dremio/dremio-oss",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "80,443,31010",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 310,
+      "category": "Applications",
+      "title": "Immich",
+      "version": "release",
+      "adminUser": "[EMAIL]",
+      "description": "Self-hosted photo and video backup solution directly from your mobile phone.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Immich-rDWK.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "ghcr.io/immich-app/immich-server",
+      "dockerhub_default_tag": "release",
+      "firewallPorts": "443,2283",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 311,
+      "category": "Development",
+      "title": "Zitadel",
+      "version": "release",
+      "adminUser": "root@zitadel.[DOMAIN]",
+      "description": "Zitadel is a cloud-native Identity & Access Management platform built for the cloud era.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zitadel-xabh.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "ghcr.io/zitadel/zitadel",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,444,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 312,
+      "category": "Applications",
+      "title": "Picoshare",
+      "version": "latest",
+      "adminUser": "\"\"",
+      "description": "PicoShare is a service for sharing images, videos, and other files.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Picoshare-UGdv.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "mtlynch/picoshare",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 314,
+      "category": "Applications",
+      "title": "SerpBear",
+      "version": "latest",
+      "adminUser": "admin",
+      "description": "SerpBear is an Open Source Search Engine Position Tracking App. It allows you to track your website's keyword positions in Google and get notified of their positions.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/SerpBear-6MHU.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "towfiqi/serpbear",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 315,
+      "category": "Development",
+      "title": "FlowiseAI",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Open source UI visual tool to build your customized LLM flow using Langchain.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FlowiseAI-fDvD.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "flowiseai/flowise",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 316,
+      "category": "Applications",
+      "title": "Wekan",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Wekan-cw01.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "quay.io/wekan/wekan",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 317,
+      "category": "Applications",
+      "title": "Typebot",
+      "version": "latest",
+      "adminUser": "",
+      "description": "Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like magic",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typebot-MGT8.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "elestio/typebot-viewer",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,8443,39533,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 318,
+      "category": "Applications",
+      "title": "Memos",
+      "version": "latest",
+      "adminUser": "admin",
+      "description": "A lightweight, self-hosted memo hub. Open Source and Free forever.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68747470733a2f2f7573656d656d6f732e636f6d2f6c6f676f2e77656270-Eg8C.webp",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "neosmemo/memos",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 319,
+      "category": "Applications",
+      "title": "Flatnotes",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "A self-hosted, database-less note-taking web app that utilizes a flat folder of markdown files for storage.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flatnotes-BIyF.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "dullage/flatnotes",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 320,
+      "category": "Applications",
+      "title": "Automatisch",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Automatisch helps you to automate your business processes without coding. Use our affordable cloud solution or self-host on your own servers.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Automatisch-JNpW.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "automatischio/automatisch",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 321,
+      "category": "Applications",
+      "title": "Friendica",
+      "version": "stable",
+      "adminUser": "[EMAIL]",
+      "description": "A Decentralized Social Network, you can use to host your own social media server that forms one part of the fediverse, an interconnected and decentralized network of independently operated servers",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Friendica-cLpr.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "friendica",
+      "dockerhub_default_tag": "stable",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 322,
+      "category": "Applications",
+      "title": "Lemmy",
+      "version": "0.17.3",
+      "adminUser": "admin",
+      "description": "Open-source Reddit alternative. Create your own discussion platform with Lemmy",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/lemmy-svg-7oS6.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "dessalines/lemmy",
+      "dockerhub_default_tag": "0.17.3",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 1,
+      "isStable": 1
+    },
+    {
+      "id": 323,
+      "category": "Applications",
+      "title": "Gotenberg",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "A Docker-powered stateless API for PDF files",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gotenberg-gPoP.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "gotenberg/gotenberg",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 324,
+      "category": "Development",
+      "title": "Mage AI",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": " The modern replacement for Airflow. Build, run, and manage data pipelines for integrating and transforming data.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mage-AI-rtjE.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": " mageai/mageai",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 325,
+      "category": "Development",
+      "title": "KrakenD",
+      "version": "latest",
+      "adminUser": " root",
+      "description": "KrakenD is a stateless, distributed, high-performance API Gateway that helps you effortlessly adopt microservices · The API Gateway pattern at its full extent.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/KrakenD-3mmY.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "devopsfaith/krakend",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 326,
+      "category": "Development",
+      "title": "Bytebase",
+      "version": "1.17.0",
+      "adminUser": "[EMAIL]",
+      "description": "Bytebase is an open-source database CI/CD tool for developers and DBAs.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bytebase-9C6y.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "bytebase/bytebase",
+      "dockerhub_default_tag": "1.17.0",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 327,
+      "category": "Development",
+      "title": "Botpress",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "The first next-generation chatbot builder powered by OpenAI. Build ChatGPT-like bots for your project or business to get things done. ",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Botpress-HmD3.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 4,
+      "minCores": 0,
+      "dockerhub_image": "botpress/server",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 328,
+      "category": "Applications",
+      "title": "KBIN",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "A reddit-like content aggregator and micro-blogging platform for the fediverse.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kbin-6NIG.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "elestio/kbin",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 329,
+      "category": "Applications",
+      "title": "Yopass",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Yopass encryption mechanisms are built on open-source software meaning full transparency with the possibility to audit and submit features.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Yopass-GlqF.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "jhaals/yopass",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 330,
+      "category": "Applications",
+      "title": "Traggo",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Traggo-RlJO.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 0,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "traggo/server",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 332,
+      "category": "Development",
+      "title": "Hasura",
+      "version": "latest",
+      "adminUser": "\"\"",
+      "description": "Hasura GraphQL Engine is an open-source product that connects to your databases & services and gives you a realtime GraphQL API, instantly.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hasura-3R0C.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "hasura/graphql-engine",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 333,
+      "category": "Development",
+      "title": "ZincSearch",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ZincSearch-Bwvc.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "public.ecr.aws/zinclabs/zinc",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 334,
+      "category": "Development",
+      "title": "OpenBlocks",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/118157710-removebg-preview-djB7.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "openblocksdev/openblocks-ce",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 335,
+      "category": "Applications",
+      "title": "Infisical",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Infisical-DDNP.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "infisical/frontend",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 336,
+      "category": "Applications",
+      "title": "Lobsters",
+      "version": "latest",
+      "adminUser": "master",
+      "description": "Lobsters are a computing-focused community centered around link aggregation and discussion.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lobsters-KGMT.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "elestio/lobster",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 337,
+      "category": "Applications",
+      "title": "ILLA",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "ILLA Cloud is a low-code platform. Anyone can build internal tools with ILLA Cloud in minutes.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ILLA-driH.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "illasoft/illa-builder",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 338,
+      "category": "Applications",
+      "title": "TotaljsFlow",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "It's a friendly, modern, straightforward Visual Programming Interface for Low-code Development accessible through a web browser. The tool integrates, processes, and transforms various events and data in real-time.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/TotaljsFlow-UHff.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "totalplatform/flow",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 339,
+      "category": "Applications",
+      "title": "DocuSeal",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DocuSeal-sKif.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "docuseal/docuseal",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 340,
+      "category": "Applications",
+      "title": "PhpBB",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "phpBB is a free flat-forum bulletin board software solution that can be used to stay in touch with a group of people or can power your entire website.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/hpBB-JzHY.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "bitnami/phpbb",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 341,
+      "category": "Applications",
+      "title": "Rallly",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Rallly is the Doodle alternative scheduling and collaboration tool designed to make organizing events and meetings easier.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rallly-41397-logo-1671008442-clxn4-ZcWi.webp",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "lukevella/rallly",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 342,
+      "category": "Applications",
+      "title": "Windmill",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Open source low code framework to turn scripts into workflows and internal apps with auto-generated UIs in minutes.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Windmill-2Gp5.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "windmill-labs/windmill",
+      "dockerhub_default_tag": "main",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 343,
+      "category": "Applications",
+      "title": "LightLDAP",
+      "version": "stable",
+      "adminUser": "admin",
+      "description": "A Lightweight authentication server that provides an opinionated, simplified LDAP interface for authentication. It integrates with many backends, from KeyCloak to Authelia to Nextcloud and more!",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/download--9--nDJ2.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "nitnelave/lldap",
+      "dockerhub_default_tag": "stable",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 344,
+      "category": "Development",
+      "title": "Flagsmith",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Flagsmith is an, fully featured, Feature Flag and Remote Config service.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Flagsmith-Ttv1.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "flagsmith/flagsmith",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 346,
+      "category": "Applications",
+      "title": "Authelia",
+      "version": "latest",
+      "adminUser": "root",
+      "description": "Authelia is an authentication and authorization server and portal fulfilling the identity and access management (IAM) role of information security in providing multi-factor authentication and single sign-on (SSO) for your applications via a web portal. It",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Authelia-zjQ9.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "authelia/authelia",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 1,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 347,
+      "category": "Applications",
+      "title": "Cal.com",
+      "version": "latest",
+      "adminUser": "[EMAIL]",
+      "description": "Calendly alternative Cal.com, is the event-juggling scheduler for everyone. Focus on meetings, not making meetings. Free for individuals.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cal-P3ad.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "calcom/cal.com",
+      "dockerhub_default_tag": "latest",
+      "firewallPorts": "443,80,8443",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
+    },
+    {
+      "id": 348,
+      "category": "Applications",
+      "title": "Tracardi",
+      "version": "0.7.1",
+      "adminUser": "[EMAIL]",
+      "description": "TRACARDI is a new HOME for your customer data. TRACARDI is an API-first solution, a low-code / no-code platform aimed at any e-commerce business that wants to start using user data for marketing purposes.",
+      "showOrder": 160,
+      "mainImage": "https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Tracardi-ptmw.png",
+      "osName": "Ubuntu 20.04",
+      "isPopular": 1,
+      "minRamGB": 1,
+      "minCores": 0,
+      "dockerhub_image": "tracardi/tracardi-api",
+      "dockerhub_default_tag": "0.7.1",
+      "firewallPorts": "443,80,18686",
+      "clusterNodes": 2,
+      "isCluster": 0,
+      "supportArm64": 0,
+      "requirePort25": 0,
+      "isStable": 1
     },
     {
       "id": 234,
@@ -3925,7 +5453,8 @@
       "clusterNodes": 2,
       "isCluster": 0,
       "supportArm64": 1,
-      "requirePort25": 0
+      "requirePort25": 0,
+      "isStable": 1
     }
   ]
 }

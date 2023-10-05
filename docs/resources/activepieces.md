@@ -3,11 +3,11 @@
 page_title: "elestio_activepieces Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.The elestio_activepieces resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image activepieces/activepieces https://hub.docker.com/r/activepieces/activepieces
+  Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.The elestio_activepieces resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image elestio/activepieces https://hub.docker.com/r/elestio/activepieces
 ---
 
 # elestio_activepieces (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1651244193673-removebg-preview-zydr.png" width="100" /><br>Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.<br><br>The **elestio_activepieces** resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image [activepieces/activepieces](https://hub.docker.com/r/activepieces/activepieces)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1651244193673-removebg-preview-zydr.png" width="100" /><br>Activepieces is an open source alternative to Zapier, Make.com and Tray.io. Automate your work with our builder and connectors - host it on your machine.<br><br>The **elestio_activepieces** resource allows the creation and management of Elestio Activepieces services. The service uses the following docker image [elestio/activepieces](https://hub.docker.com/r/elestio/activepieces)
 
 
 ## Example Usage

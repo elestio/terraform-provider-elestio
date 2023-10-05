@@ -3,11 +3,11 @@
 page_title: "elestio_peertube Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Free software to take back control of your videos.The elestio_peertube resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image chocobozzz/peertube https://hub.docker.com/r/chocobozzz/peertube
+  Free software to take back control of your videos for the FediverseThe elestio_peertube resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image chocobozzz/peertube https://hub.docker.com/r/chocobozzz/peertube
 ---
 
 # elestio_peertube (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" /><br>Free software to take back control of your videos.<br><br>The **elestio_peertube** resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image [chocobozzz/peertube](https://hub.docker.com/r/chocobozzz/peertube)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PeerTube-JrBP.png" width="100" /><br>Free software to take back control of your videos for the Fediverse<br><br>The **elestio_peertube** resource allows the creation and management of Elestio PeerTube services. The service uses the following docker image [chocobozzz/peertube](https://hub.docker.com/r/chocobozzz/peertube)
 
 
 ## Example Usage

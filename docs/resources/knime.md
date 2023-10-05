@@ -3,11 +3,11 @@
 page_title: "elestio_knime Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  KNIME Analytics PlatformThe elestio_knime resource allows the creation and management of Elestio Knime services. The service uses the following docker image elestio/docker-desktop-vnc-knime https://hub.docker.com/r/elestio/docker-desktop-vnc-knime
+  KNIME Analytics PlatformThe elestio_knime resource allows the creation and management of Elestio Knime services. The service uses the following docker image elestio/knime https://hub.docker.com/r/elestio/knime
 ---
 
 # elestio_knime (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br>KNIME Analytics Platform<br><br>The **elestio_knime** resource allows the creation and management of Elestio Knime services. The service uses the following docker image [elestio/docker-desktop-vnc-knime](https://hub.docker.com/r/elestio/docker-desktop-vnc-knime)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Knime-Z1mn.png" width="100" /><br>KNIME Analytics Platform<br><br>The **elestio_knime** resource allows the creation and management of Elestio Knime services. The service uses the following docker image [elestio/knime](https://hub.docker.com/r/elestio/knime)
 
 
 ## Example Usage

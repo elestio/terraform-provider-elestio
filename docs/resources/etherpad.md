@@ -3,11 +3,11 @@
 page_title: "elestio_etherpad Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.The elestio_etherpad resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image etherpad/etherpad https://hub.docker.com/r/etherpad/etherpad
+  Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.The elestio_etherpad resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image elestio/etherpad https://hub.docker.com/r/elestio/etherpad
 ---
 
 # elestio_etherpad (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" /><br>Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br><br>The **elestio_etherpad** resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image [etherpad/etherpad](https://hub.docker.com/r/etherpad/etherpad)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Etherpad-vw2l.png" width="100" /><br>Etherpad is a highly customizable open source online editor providing collaborative editing in really real-time.<br><br>The **elestio_etherpad** resource allows the creation and management of Elestio Etherpad services. The service uses the following docker image [elestio/etherpad](https://hub.docker.com/r/elestio/etherpad)
 
 
 ## Example Usage

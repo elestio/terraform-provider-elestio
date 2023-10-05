@@ -3,11 +3,11 @@
 page_title: "elestio_mariadb Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  The open source relational databaseThe elestio_mariadb resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image mariadb https://hub.docker.com/r/mariadb
+  The open source relational databaseThe elestio_mariadb resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image elestio/mariadb https://hub.docker.com/r/elestio/mariadb
 ---
 
 # elestio_mariadb (Resource)
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br>The open source relational database<br><br>The **elestio_mariadb** resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image [mariadb](https://hub.docker.com/r/mariadb)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MariaDB-RfXk.png" width="100" /><br>The open source relational database<br><br>The **elestio_mariadb** resource allows the creation and management of Elestio MariaDB services. The service uses the following docker image [elestio/mariadb](https://hub.docker.com/r/elestio/mariadb)
 
 
 ## Example Usage
@@ -17,7 +17,7 @@ description: |-
 resource "elestio_mariadb" "demo_mariadb" {
   project_id    = "2500"
   server_name   = "demo-mariadb"
-  version       = "10.9.6"
+  version       = "10.9"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -50,7 +50,7 @@ resource "elestio_mariadb" "demo_mariadb" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `10.9.6`.
+- `version` (String) This is the version of the software used as service. **Default** `10.9`.
 
 ### Read-Only
 

@@ -197,3 +197,7 @@ FEATURES:
 - Updated the documentation guide about providers, datacenters and server types.
 - Fix typo escape in the documentation about the `ssh_public_keys` attribute of a service resource.
 - Fix missing documentation about the default value of `host_header` attribute of a load balancer resource.
+
+## V0.13.0 (4 October, 2023)
+
+- **New Resource:** A lot of new service resources are now available.

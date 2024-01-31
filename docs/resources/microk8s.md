@@ -69,6 +69,7 @@ resource "elestio_microk8s" "example" {
 - `deployment_ended_at` (String) Service deployment endedAt date.
 - `deployment_started_at` (String) Service deployment startedAt date.
 - `deployment_status` (String) Service deployement status.
+- `elestio_id` (Number) Service identifier unique and handled by Elestio.
 - `env` (Map of String, Sensitive) Service environment variables.
 - `external_backups_enabled` (Boolean) Service external backups state. **Default** `false`.
 - `external_backups_retain_day_of_week` (Number) Service external backups retain day of week. `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`
@@ -79,7 +80,7 @@ resource "elestio_microk8s" "example" {
 - `firewall_id` (String) Service firewall id.
 - `firewall_ports` (String) Service firewall ports.
 - `global_ip` (String) Service global IP.
-- `id` (String) Service identifier.
+- `id` (String) Service identifier handled by the provider. The format can change.
 - `ipv4` (String) Service IPv4.
 - `ipv6` (String) Service IPv6.
 - `last_updated` (String)

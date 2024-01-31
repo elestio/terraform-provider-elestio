@@ -201,3 +201,9 @@ FEATURES:
 ## V0.13.0 (4 October, 2023)
 
 - **New Resource:** A lot of new service resources are now available.
+
+## V0.14.0 (31 January, 2024)
+
+- Fixed a bug getting projects. (Elestio API change)
+- Added better error messages when creating a service and the default configuration was not fully deployed.
+- **New Attribute:** `elestio_service.elestio_id`. The Elestio ID of the service, unique and always the same format (number).

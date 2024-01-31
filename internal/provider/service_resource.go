@@ -57,6 +57,7 @@ type (
 
 	ServiceResourceModel struct {
 		Id                                          types.String `tfsdk:"id"`
+		ElestioId                                   types.Int64  `tfsdk:"elestio_id"`
 		ProjectID                                   types.String `tfsdk:"project_id"`
 		ServerName                                  types.String `tfsdk:"server_name"`
 		ServerType                                  types.String `tfsdk:"server_type"`
@@ -244,10 +245,17 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 		DeprecationMessage:  r.DeprecationMessage,
 		Attributes: map[string]schema.Attribute{
 			"id": schema.StringAttribute{
-				MarkdownDescription: "Service identifier.",
+				MarkdownDescription: "Service identifier handled by the provider. The format can change.",
 				Computed:            true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
+				},
+			},
+			"elestio_id": schema.Int64Attribute{
+				MarkdownDescription: "Service identifier unique and handled by Elestio.",
+				Computed:            true,
+				PlanModifiers: []planmodifier.Int64{
+					int64planmodifier.UseStateForUnknown(),
 				},
 			},
 			"project_id": schema.StringAttribute{
@@ -1092,6 +1100,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceModel, service *elestio.Service, diags *diag.Diagnostics) {
 	var d diag.Diagnostics
 
+	data.ElestioId = types.Int64Value(service.ElestioID)
 	data.ProjectID = types.StringValue(service.ProjectID)
 	data.ServerName = types.StringValue(service.ServerName)
 	data.ServerType = types.StringValue(service.ServerType)
@@ -1204,6 +1213,21 @@ func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request el
 	return serviceR, err
 }
 
+func (r *ServiceResource) getServiceWithRetry(ctx context.Context, projectId string, serviceId string) (*elestio.Service, error) {
+	var serviceR *elestio.Service
+	var err error
+	retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
+		serviceR, err = r.client.Service.Get(projectId, serviceId)
+		if err != nil {
+			return retry.RetryableError(err)
+		}
+
+		return nil
+	})
+
+	return serviceR, err
+}
+
 func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId string, serviceId string, keepBackups bool) error {
 	timeout := 2 * time.Minute
 	stateConf := retry.StateChangeConf{
@@ -1238,46 +1262,54 @@ func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId 
 func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
 	timeout := 15 * time.Minute
 	stateConf := retry.StateChangeConf{
-		Pending: []string{"waiting"},
-		Target:  []string{"configured"},
+		Pending: []string{
+			"waiting",
+			"waiting_deployment_status",
+			"waiting_app_auto_updates_enabled",
+			"waiting_system_auto_updates_enabled",
+			"waiting_backups_enabled",
+			"waiting_remote_backups_enabled",
+			"waiting_firewall_enabled",
+			"waiting_alerts_enabled"},
+		Target: []string{"configured"},
 		Refresh: func() (interface{}, string, error) {
-			serviceR, err := r.client.Service.Get(service.ProjectID, service.ID)
+			serviceR, err := r.getServiceWithRetry(ctx, service.ProjectID, service.ID)
 			if err != nil {
-				return struct{}{}, "", err
+				return struct{}{}, "", fmt.Errorf("GET Service Request failed (projectId: '%s', serviceId: '%s') %s", service.ProjectID, service.ID, err)
 			}
 
 			if serviceR.DeploymentStatus != elestio.ServiceDeploymentStatusDeployed {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_deployment_status", nil
 			}
 
 			// App auto updates are enabled by default at service creation
 			if !utils.BoolValue(serviceR.AppAutoUpdatesEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_app_auto_updates_enabled", nil
 			}
 
 			// System auto updates are enabled by default at service creation
 			if !utils.BoolValue(serviceR.SystemAutoUpdatesEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_system_auto_updates_enabled", nil
 			}
 
 			// Backups are enabled by default at service creation if service level is greater than level1
 			if serviceR.SupportLevel != "level1" && !utils.BoolValue(serviceR.BackupsEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_backups_enabled", nil
 			}
 
 			// Remote backups are enabled by default at service creation
 			if !utils.BoolValue(serviceR.RemoteBackupsEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_remote_backups_enabled", nil
 			}
 
 			// Firewall is enabled by default at service creation
 			if !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_firewall_enabled", nil
 			}
 
 			// Alerts are enabled by default at service creation
 			if !utils.BoolValue(serviceR.AlertsEnabled).ValueBool() {
-				return struct{}{}, "waiting", nil
+				return struct{}{}, "waiting_alerts_enabled", nil
 			}
 
 			return serviceR, "configured", nil

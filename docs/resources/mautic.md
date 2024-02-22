@@ -3,19 +3,19 @@
 page_title: "elestio_mautic Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Mautic is a open source marketing automation software.The elestio_mautic resource allows the creation and management of Elestio Mautic services. The service uses the following docker image mautic https://hub.docker.com/r/mautic
+  Mautic is a open source marketing automation software.The elestio_mautic resource allows the creation and management of Elestio Mautic services. The service uses the following docker image elestio/mautic https://hub.docker.com/r/elestio/mautic
 ---
 
 # elestio_mautic (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br>Mautic is a open source marketing automation software.<br><br>The **elestio_mautic** resource allows the creation and management of Elestio Mautic services. The service uses the following docker image [mautic](https://hub.docker.com/r/mautic)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mautic-HOef.png" width="100" /><br>Mautic is a open source marketing automation software.<br><br>The **elestio_mautic** resource allows the creation and management of Elestio Mautic services. The service uses the following docker image [elestio/mautic](https://hub.docker.com/r/elestio/mautic)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_mautic" "example" {
   project_id    = "2500"
-  version       = "v4"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -49,7 +49,7 @@ resource "elestio_mautic" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `v4`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

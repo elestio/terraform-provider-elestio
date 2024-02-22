@@ -3,12 +3,12 @@
 page_title: "elestio_jitsu Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Jitsu is an open-source web and app-event collection platform. The elestio_jitsu resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image jitsucom/jitsu https://hub.docker.com/r/jitsucom/jitsu
+  Jitsu is an open-source web and app-event collection platform. The elestio_jitsu resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image jitsucom/bulker https://hub.docker.com/r/jitsucom/bulker
 ---
 
 # elestio_jitsu (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" /><br>Jitsu is an open-source web and app-event collection platform. <br><br>The **elestio_jitsu** resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image [jitsucom/jitsu](https://hub.docker.com/r/jitsucom/jitsu)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/jitsu-5Rwb.svg" width="100" /><br>Jitsu is an open-source web and app-event collection platform. <br><br>The **elestio_jitsu** resource allows the creation and management of Elestio Jitsu services. The service uses the following docker image [jitsucom/bulker](https://hub.docker.com/r/jitsucom/bulker)
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_tooljet Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  ToolJet is an open-source low-code framework to build and deploy custom internal toolsThe elestio_tooljet resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image tooljet/tooljet-server-ce https://hub.docker.com/r/tooljet/tooljet-server-ce
+  ToolJet is an open-source low-code framework to build and deploy custom internal toolsThe elestio_tooljet resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image tooljet/tooljet-ce https://hub.docker.com/r/tooljet/tooljet-ce
 ---
 
 # elestio_tooljet (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" /><br>ToolJet is an open-source low-code framework to build and deploy custom internal tools<br><br>The **elestio_tooljet** resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image [tooljet/tooljet-server-ce](https://hub.docker.com/r/tooljet/tooljet-server-ce)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/tooljet-Qcsg.png" width="100" /><br>ToolJet is an open-source low-code framework to build and deploy custom internal tools<br><br>The **elestio_tooljet** resource allows the creation and management of Elestio ToolJet services. The service uses the following docker image [tooljet/tooljet-ce](https://hub.docker.com/r/tooljet/tooljet-ce)
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_castopod Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.The elestio_castopod resource allows the creation and management of Elestio Castopod services. The service uses the following docker image castopod/app https://hub.docker.com/r/castopod/app
+  Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.The elestio_castopod resource allows the creation and management of Elestio Castopod services. The service uses the following docker image castopod/castopod https://hub.docker.com/r/castopod/castopod
 ---
 
 # elestio_castopod (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" /><br>Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.<br><br>The **elestio_castopod** resource allows the creation and management of Elestio Castopod services. The service uses the following docker image [castopod/app](https://hub.docker.com/r/castopod/app)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Castopod-9PIS.png" width="100" /><br>Self-host your podcasts with ease, keep control over what you create, and talk to your audience without any middleman. Your podcast and your audience belong to you and you only.<br><br>The **elestio_castopod** resource allows the creation and management of Elestio Castopod services. The service uses the following docker image [castopod/castopod](https://hub.docker.com/r/castopod/castopod)
 
 ## Example Usage
 

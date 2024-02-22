@@ -1,4 +1,4 @@
-resource "elestio_chaskiq" "example" {
+resource "elestio_surrealdb" "example" {
   project_id    = "2500"
   version       = "latest"
   provider_name = "hetzner"

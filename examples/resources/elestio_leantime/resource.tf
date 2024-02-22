@@ -1,4 +1,4 @@
-resource "elestio_cal_com" "example" {
+resource "elestio_leantime" "example" {
   project_id    = "2500"
   version       = "latest"
   provider_name = "hetzner"

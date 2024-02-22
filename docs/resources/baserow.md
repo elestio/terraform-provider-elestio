@@ -3,12 +3,12 @@
 page_title: "elestio_baserow Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Baserow is an open source no-code database tool and Airtable alternative. The elestio_baserow resource allows the creation and management of Elestio Baserow services. The service uses the following docker image baserow/baserow https://hub.docker.com/r/baserow/baserow
+  Baserow is an open source no-code database tool and Airtable alternative. The elestio_baserow resource allows the creation and management of Elestio Baserow services. The service uses the following docker image elestio/baserow-allinone https://hub.docker.com/r/elestio/baserow-allinone
 ---
 
 # elestio_baserow (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" /><br>Baserow is an open source no-code database tool and Airtable alternative. <br><br>The **elestio_baserow** resource allows the creation and management of Elestio Baserow services. The service uses the following docker image [baserow/baserow](https://hub.docker.com/r/baserow/baserow)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/baserow-b9SE.jpg" width="100" /><br>Baserow is an open source no-code database tool and Airtable alternative. <br><br>The **elestio_baserow** resource allows the creation and management of Elestio Baserow services. The service uses the following docker image [elestio/baserow-allinone](https://hub.docker.com/r/elestio/baserow-allinone)
 
 ## Example Usage
 

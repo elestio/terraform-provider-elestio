@@ -1,6 +1,6 @@
 resource "elestio_pocketbase" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "0.20.0-rc3"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"

@@ -3,12 +3,12 @@
 page_title: "elestio_docuseal Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.The elestio_docuseal resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image docuseal/docuseal https://hub.docker.com/r/docuseal/docuseal
+  Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.The elestio_docuseal resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image elestio/docuseal https://hub.docker.com/r/elestio/docuseal
 ---
 
 # elestio_docuseal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DocuSeal-sKif.png" width="100" /><br>Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.<br><br>The **elestio_docuseal** resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image [docuseal/docuseal](https://hub.docker.com/r/docuseal/docuseal)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DocuSeal-sKif.png" width="100" /><br>Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.<br><br>The **elestio_docuseal** resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image [elestio/docuseal](https://hub.docker.com/r/elestio/docuseal)
 
 ## Example Usage
 

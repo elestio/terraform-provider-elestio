@@ -3,12 +3,12 @@
 page_title: "elestio_taiga Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Your Agile, Free and Open Source Project Management ToolThe elestio_taiga resource allows the creation and management of Elestio Taiga services. The service uses the following docker image taigaio/taiga-back https://hub.docker.com/r/taigaio/taiga-back
+  Your Agile, Free and Open Source Project Management ToolThe elestio_taiga resource allows the creation and management of Elestio Taiga services. The service uses the following docker image elestio/taiga-frontend https://hub.docker.com/r/elestio/taiga-frontend
 ---
 
 # elestio_taiga (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br>Your Agile, Free and Open Source Project Management Tool<br><br>The **elestio_taiga** resource allows the creation and management of Elestio Taiga services. The service uses the following docker image [taigaio/taiga-back](https://hub.docker.com/r/taigaio/taiga-back)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Taiga-L6AE.png" width="100" /><br>Your Agile, Free and Open Source Project Management Tool<br><br>The **elestio_taiga** resource allows the creation and management of Elestio Taiga services. The service uses the following docker image [elestio/taiga-frontend](https://hub.docker.com/r/elestio/taiga-frontend)
 
 ## Example Usage
 

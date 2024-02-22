@@ -233,6 +233,33 @@ func NewServiceResources() []func() resource.Resource {
 				Category:           "Deprecated",
 			})
 		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         360,
+				ResourceName:       "chaskiq",
+				DocumentationName:  "Chaskiq",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         157,
+				ResourceName:       "airbyte",
+				DocumentationName:  "Airbyte",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         347,
+				ResourceName:       "cal_com",
+				DocumentationName:  "Cal.com",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
 	}
 
 	// Unmarshal the bytes into the User struct

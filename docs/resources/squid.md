@@ -3,12 +3,12 @@
 page_title: "elestio_squid Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Fast & powerful proxy serverThe elestio_squid resource allows the creation and management of Elestio Squid services. The service uses the following docker image b4tman/squid https://hub.docker.com/r/b4tman/squid
+  Fast & powerful proxy serverThe elestio_squid resource allows the creation and management of Elestio Squid services. The service uses the following docker image elestio/squid https://hub.docker.com/r/elestio/squid
 ---
 
 # elestio_squid (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br>Fast & powerful proxy server<br><br>The **elestio_squid** resource allows the creation and management of Elestio Squid services. The service uses the following docker image [b4tman/squid](https://hub.docker.com/r/b4tman/squid)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Squid-IXDg.png" width="100" /><br>Fast & powerful proxy server<br><br>The **elestio_squid** resource allows the creation and management of Elestio Squid services. The service uses the following docker image [elestio/squid](https://hub.docker.com/r/elestio/squid)
 
 ## Example Usage
 

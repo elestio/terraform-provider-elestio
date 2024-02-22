@@ -3,12 +3,12 @@
 page_title: "elestio_openblocks Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.The elestio_openblocks resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image openblocksdev/openblocks-ce https://hub.docker.com/r/openblocksdev/openblocks-ce
+  Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.The elestio_openblocks resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image elestio/openblocks https://hub.docker.com/r/elestio/openblocks
 ---
 
 # elestio_openblocks (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/118157710-removebg-preview-djB7.png" width="100" /><br>Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.<br><br>The **elestio_openblocks** resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image [openblocksdev/openblocks-ce](https://hub.docker.com/r/openblocksdev/openblocks-ce)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/118157710-removebg-preview-djB7.png" width="100" /><br>Openblocks is a retool Alternative developer-friendly open-source low-code platform to build internal apps within minutes.<br><br>The **elestio_openblocks** resource allows the creation and management of Elestio OpenBlocks services. The service uses the following docker image [elestio/openblocks](https://hub.docker.com/r/elestio/openblocks)
 
 ## Example Usage
 

@@ -207,3 +207,7 @@ FEATURES:
 - Fixed a bug getting projects. (Elestio API change)
 - Added better error messages when creating a service and the default configuration was not fully deployed.
 - **New Attribute:** `elestio_service.elestio_id`. The Elestio ID of the service, unique and always the same format (number).
+
+## V0.15.0 (22 February, 2024)
+
+Updated the list of available services and their default configuration.

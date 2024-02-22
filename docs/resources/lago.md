@@ -3,19 +3,19 @@
 page_title: "elestio_lago Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.The elestio_lago resource allows the creation and management of Elestio Lago services. The service uses the following docker image getlago/front https://hub.docker.com/r/getlago/front
+  Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.The elestio_lago resource allows the creation and management of Elestio Lago services. The service uses the following docker image elestio/lago-front https://hub.docker.com/r/elestio/lago-front
 ---
 
 # elestio_lago (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lago-EpCS.png" width="100" /><br>Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.<br><br>The **elestio_lago** resource allows the creation and management of Elestio Lago services. The service uses the following docker image [getlago/front](https://hub.docker.com/r/getlago/front)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lago-EpCS.png" width="100" /><br>Open-source alternative to Stripe Billing and Chargebee it offers a modular architecture for metering and usage-based billing, at every stage of your company.<br><br>The **elestio_lago** resource allows the creation and management of Elestio Lago services. The service uses the following docker image [elestio/lago-front](https://hub.docker.com/r/elestio/lago-front)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_lago" "example" {
   project_id    = "2500"
-  version       = "v0.48.0-beta"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -49,7 +49,7 @@ resource "elestio_lago" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `v0.48.0-beta`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

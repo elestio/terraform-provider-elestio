@@ -3,12 +3,12 @@
 page_title: "elestio_parse Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. The elestio_parse resource allows the creation and management of Elestio Parse services. The service uses the following docker image parseplatform/parse-server https://hub.docker.com/r/parseplatform/parse-server
+  Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. The elestio_parse resource allows the creation and management of Elestio Parse services. The service uses the following docker image elestio/parse-dashboard https://hub.docker.com/r/elestio/parse-dashboard
 ---
 
 # elestio_parse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br>Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br><br>The **elestio_parse** resource allows the creation and management of Elestio Parse services. The service uses the following docker image [parseplatform/parse-server](https://hub.docker.com/r/parseplatform/parse-server)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/parse-server-logo-iFzw.png" width="100" /><br>Parse Server is an open-source backend that can be deployed to any infrastructure that can run Node.js. <br><br>The **elestio_parse** resource allows the creation and management of Elestio Parse services. The service uses the following docker image [elestio/parse-dashboard](https://hub.docker.com/r/elestio/parse-dashboard)
 
 ## Example Usage
 

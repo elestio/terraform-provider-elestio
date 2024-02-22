@@ -1,6 +1,6 @@
 resource "elestio_cryptpad" "example" {
   project_id    = "2500"
-  version       = "nginx"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"

@@ -3,19 +3,19 @@
 page_title: "elestio_bytebase Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Bytebase is an open-source database CI/CD tool for developers and DBAs.The elestio_bytebase resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image bytebase/bytebase https://hub.docker.com/r/bytebase/bytebase
+  Bytebase is an open-source database CI/CD tool for developers and DBAs.The elestio_bytebase resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image elestio/bytebase https://hub.docker.com/r/elestio/bytebase
 ---
 
 # elestio_bytebase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bytebase-9C6y.png" width="100" /><br>Bytebase is an open-source database CI/CD tool for developers and DBAs.<br><br>The **elestio_bytebase** resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image [bytebase/bytebase](https://hub.docker.com/r/bytebase/bytebase)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Bytebase-9C6y.png" width="100" /><br>Bytebase is an open-source database CI/CD tool for developers and DBAs.<br><br>The **elestio_bytebase** resource allows the creation and management of Elestio Bytebase services. The service uses the following docker image [elestio/bytebase](https://hub.docker.com/r/elestio/bytebase)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_bytebase" "example" {
   project_id    = "2500"
-  version       = "1.17.0"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -49,7 +49,7 @@ resource "elestio_bytebase" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `1.17.0`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

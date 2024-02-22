@@ -3,12 +3,12 @@
 page_title: "elestio_wg_easy Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. The elestiowgeasy resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image weejewel/wg-easy https://hub.docker.com/r/weejewel/wg-easy
+  WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. The elestiowgeasy resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image ghcr.io/wg-easy/wg-easy https://hub.docker.com/r/ghcr.io/wg-easy/wg-easy
 ---
 
 # elestio_wg_easy (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" /><br>WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br><br>The **elestio_wg_easy** resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image [weejewel/wg-easy](https://hub.docker.com/r/weejewel/wg-easy)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/wireguard2-sk98.jpg" width="100" /><br>WireGuard is a simple, fast general-purpose VPN for running on embedded interfaces and super computers alike. <br><br>The **elestio_wg_easy** resource allows the creation and management of Elestio WG-Easy services. The service uses the following docker image [ghcr.io/wg-easy/wg-easy](https://hub.docker.com/r/ghcr.io/wg-easy/wg-easy)
 
 ## Example Usage
 

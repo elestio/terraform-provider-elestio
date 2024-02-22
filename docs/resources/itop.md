@@ -3,19 +3,19 @@
 page_title: "elestio_itop Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAsThe elestio_itop resource allows the creation and management of Elestio iTop services. The service uses the following docker image vbkunin/itop https://hub.docker.com/r/vbkunin/itop
+  iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAsThe elestio_itop resource allows the creation and management of Elestio iTop services. The service uses the following docker image elestio/itop https://hub.docker.com/r/elestio/itop
 ---
 
 # elestio_itop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" /><br>iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs<br><br>The **elestio_itop** resource allows the creation and management of Elestio iTop services. The service uses the following docker image [vbkunin/itop](https://hub.docker.com/r/vbkunin/itop)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/iTop-icon-XPfe.png" width="100" /><br>iTop adapts to the needs of digital businesses to manage multiple customers, contracts and SLAs<br><br>The **elestio_itop** resource allows the creation and management of Elestio iTop services. The service uses the following docker image [elestio/itop](https://hub.docker.com/r/elestio/itop)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_itop" "example" {
   project_id    = "2500"
-  version       = "latest-base"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -49,7 +49,7 @@ resource "elestio_itop" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest-base`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

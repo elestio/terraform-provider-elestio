@@ -1,6 +1,6 @@
 resource "elestio_friendica" "example" {
   project_id    = "2500"
-  version       = "stable"
+  version       = "2023.05"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"

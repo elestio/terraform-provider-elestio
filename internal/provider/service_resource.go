@@ -56,69 +56,71 @@ type (
 	}
 
 	ServiceResourceModel struct {
-		Id                                          types.String `tfsdk:"id"`
-		ElestioId                                   types.Int64  `tfsdk:"elestio_id"`
-		ProjectID                                   types.String `tfsdk:"project_id"`
-		ServerName                                  types.String `tfsdk:"server_name"`
-		ServerType                                  types.String `tfsdk:"server_type"`
-		TemplateId                                  types.Int64  `tfsdk:"template_id"`
-		Version                                     types.String `tfsdk:"version"`
-		ProviderName                                types.String `tfsdk:"provider_name"`
-		Datacenter                                  types.String `tfsdk:"datacenter"`
-		SupportLevel                                types.String `tfsdk:"support_level"`
-		AdminEmail                                  types.String `tfsdk:"admin_email"`
-		DefaultPassword                             types.String `tfsdk:"default_password"`
-		Category                                    types.String `tfsdk:"category"`
-		Status                                      types.String `tfsdk:"status"`
-		DeploymentStatus                            types.String `tfsdk:"deployment_status"`
-		DeploymentStartedAt                         types.String `tfsdk:"deployment_started_at"`
-		DeploymentEndedAt                           types.String `tfsdk:"deployment_ended_at"`
-		CreatorName                                 types.String `tfsdk:"creator_name"`
-		CreatedAt                                   types.String `tfsdk:"created_at"`
-		IPV4                                        types.String `tfsdk:"ipv4"`
-		IPV6                                        types.String `tfsdk:"ipv6"`
-		CNAME                                       types.String `tfsdk:"cname"`
-		CustomDomainNames                           types.Set    `tfsdk:"custom_domain_names"`
-		SSHKeys                                     types.Set    `tfsdk:"ssh_keys"`
-		SSHPublicKeys                               types.Set    `tfsdk:"ssh_public_keys"`
-		Country                                     types.String `tfsdk:"country"`
-		City                                        types.String `tfsdk:"city"`
-		AdminUser                                   types.String `tfsdk:"admin_user"`
-		RootAppPath                                 types.String `tfsdk:"root_app_path"`
-		Env                                         types.Map    `tfsdk:"env"`
-		Admin                                       types.Object `tfsdk:"admin"`
-		DatabaseAdmin                               types.Object `tfsdk:"database_admin"`
-		GlobalIP                                    types.String `tfsdk:"global_ip"`
-		TrafficOutgoing                             types.Int64  `tfsdk:"traffic_outgoing"`
-		TrafficIncoming                             types.Int64  `tfsdk:"traffic_incoming"`
-		TrafficIncluded                             types.Int64  `tfsdk:"traffic_included"`
-		Cores                                       types.Int64  `tfsdk:"cores"`
-		RAMSizeGB                                   types.String `tfsdk:"ram_size_gb"`
-		StorageSizeGB                               types.Int64  `tfsdk:"storage_size_gb"`
-		PricePerHour                                types.String `tfsdk:"price_per_hour"`
-		AppAutoUpdatesEnabled                       types.Bool   `tfsdk:"app_auto_updates_enabled"`
-		AppAutoUpdatesDayOfWeek                     types.Int64  `tfsdk:"app_auto_updates_day_of_week"`
-		AppAutoUpdatesHour                          types.Int64  `tfsdk:"app_auto_updates_hour"`
-		AppAutoUpdatesMinute                        types.Int64  `tfsdk:"app_auto_updates_minute"`
-		SystemAutoUpdatesEnabled                    types.Bool   `tfsdk:"system_auto_updates_enabled"`
-		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool   `tfsdk:"system_auto_updates_security_patches_only_enabled"`
-		SystemAutoUpdatesRebootDayOfWeek            types.Int64  `tfsdk:"system_auto_updates_reboot_day_of_week"`
-		SystemAutoUpdatesRebootHour                 types.Int64  `tfsdk:"system_auto_updates_reboot_hour"`
-		SystemAutoUpdatesRebootMinute               types.Int64  `tfsdk:"system_auto_updates_reboot_minute"`
-		BackupsEnabled                              types.Bool   `tfsdk:"backups_enabled"`
-		RemoteBackupsEnabled                        types.Bool   `tfsdk:"remote_backups_enabled"`
-		ExternalBackupsEnabled                      types.Bool   `tfsdk:"external_backups_enabled"`
-		ExternalBackupsUpdateDayOfWeek              types.Int64  `tfsdk:"external_backups_update_day_of_week"`
-		ExternalBackupsUpdateHour                   types.Int64  `tfsdk:"external_backups_update_hour"`
-		ExternalBackupsUpdateMinute                 types.Int64  `tfsdk:"external_backups_update_minute"`
-		ExternalBackupsUpdateType                   types.String `tfsdk:"external_backups_update_type"`
-		ExternalBackupsRetainDayOfWeek              types.Int64  `tfsdk:"external_backups_retain_day_of_week"`
-		KeepBackupsOnDeleteEnabled                  types.Bool   `tfsdk:"keep_backups_on_delete_enabled"`
-		FirewallEnabled                             types.Bool   `tfsdk:"firewall_enabled"`
-		FirewallId                                  types.String `tfsdk:"firewall_id"`
-		FirewallPorts                               types.String `tfsdk:"firewall_ports"`
-		AlertsEnabled                               types.Bool   `tfsdk:"alerts_enabled"`
-		LastUpdated                                 types.String `tfsdk:"last_updated"`
+		Id                                          types.String  `tfsdk:"id"`
+		ElestioId                                   types.Int64   `tfsdk:"elestio_id"`
+		ProjectID                                   types.String  `tfsdk:"project_id"`
+		ServerName                                  types.String  `tfsdk:"server_name"`
+		ServerType                                  types.String  `tfsdk:"server_type"`
+		TemplateId                                  types.Int64   `tfsdk:"template_id"`
+		Version                                     types.String  `tfsdk:"version"`
+		ProviderName                                types.String  `tfsdk:"provider_name"`
+		Datacenter                                  types.String  `tfsdk:"datacenter"`
+		SupportLevel                                types.String  `tfsdk:"support_level"`
+		AdminEmail                                  types.String  `tfsdk:"admin_email"`
+		DefaultPassword                             types.String  `tfsdk:"default_password"`
+		Category                                    types.String  `tfsdk:"category"`
+		Status                                      types.String  `tfsdk:"status"`
+		DeploymentStatus                            types.String  `tfsdk:"deployment_status"`
+		DeploymentStartedAt                         types.String  `tfsdk:"deployment_started_at"`
+		DeploymentEndedAt                           types.String  `tfsdk:"deployment_ended_at"`
+		CreatorName                                 types.String  `tfsdk:"creator_name"`
+		CreatedAt                                   types.String  `tfsdk:"created_at"`
+		IPV4                                        types.String  `tfsdk:"ipv4"`
+		IPV6                                        types.String  `tfsdk:"ipv6"`
+		CNAME                                       types.String  `tfsdk:"cname"`
+		CustomDomainNames                           types.Set     `tfsdk:"custom_domain_names"`
+		SSHKeys                                     types.Set     `tfsdk:"ssh_keys"`
+		SSHPublicKeys                               types.Set     `tfsdk:"ssh_public_keys"`
+		Country                                     types.String  `tfsdk:"country"`
+		City                                        types.String  `tfsdk:"city"`
+		AdminUser                                   types.String  `tfsdk:"admin_user"`
+		RootAppPath                                 types.String  `tfsdk:"root_app_path"`
+		Env                                         types.Map     `tfsdk:"env"`
+		Admin                                       types.Object  `tfsdk:"admin"`
+		DatabaseAdmin                               types.Object  `tfsdk:"database_admin"`
+		GlobalIP                                    types.String  `tfsdk:"global_ip"`
+		TrafficOutgoing                             types.Int64   `tfsdk:"traffic_outgoing"`
+		TrafficIncoming                             types.Int64   `tfsdk:"traffic_incoming"`
+		TrafficIncluded                             types.Int64   `tfsdk:"traffic_included"`
+		Cores                                       types.Int64   `tfsdk:"cores"`
+		RAMSizeGB                                   types.String  `tfsdk:"ram_size_gb"`
+		StorageSizeGB                               types.Int64   `tfsdk:"storage_size_gb"`
+		PricePerHour                                types.String  `tfsdk:"price_per_hour"`
+		AppAutoUpdatesEnabled                       types.Bool    `tfsdk:"app_auto_updates_enabled"`
+		AppAutoUpdatesDayOfWeek                     types.Int64   `tfsdk:"app_auto_updates_day_of_week"`
+		AppAutoUpdatesHour                          types.Int64   `tfsdk:"app_auto_updates_hour"`
+		AppAutoUpdatesMinute                        types.Int64   `tfsdk:"app_auto_updates_minute"`
+		SystemAutoUpdatesEnabled                    types.Bool    `tfsdk:"system_auto_updates_enabled"`
+		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool    `tfsdk:"system_auto_updates_security_patches_only_enabled"`
+		SystemAutoUpdatesRebootDayOfWeek            types.Int64   `tfsdk:"system_auto_updates_reboot_day_of_week"`
+		SystemAutoUpdatesRebootHour                 types.Int64   `tfsdk:"system_auto_updates_reboot_hour"`
+		SystemAutoUpdatesRebootMinute               types.Int64   `tfsdk:"system_auto_updates_reboot_minute"`
+		BackupsEnabled                              types.Bool    `tfsdk:"backups_enabled"`
+		RemoteBackupsEnabled                        types.Bool    `tfsdk:"remote_backups_enabled"`
+		ExternalBackupsEnabled                      types.Bool    `tfsdk:"external_backups_enabled"`
+		ExternalBackupsUpdateDayOfWeek              types.Int64   `tfsdk:"external_backups_update_day_of_week"`
+		ExternalBackupsUpdateHour                   types.Int64   `tfsdk:"external_backups_update_hour"`
+		ExternalBackupsUpdateMinute                 types.Int64   `tfsdk:"external_backups_update_minute"`
+		ExternalBackupsUpdateType                   types.String  `tfsdk:"external_backups_update_type"`
+		ExternalBackupsRetainDayOfWeek              types.Int64   `tfsdk:"external_backups_retain_day_of_week"`
+		KeepBackupsOnDeleteEnabled                  types.Bool    `tfsdk:"keep_backups_on_delete_enabled"`
+		FirewallEnabled                             types.Bool    `tfsdk:"firewall_enabled"`
+		FirewallId                                  types.String  `tfsdk:"firewall_id"`
+		FirewallPorts                               types.String  `tfsdk:"firewall_ports"`
+		AlertsEnabled                               types.Bool    `tfsdk:"alerts_enabled"`
+		LastUpdated                                 types.String  `tfsdk:"last_updated"`
+		LocalField                                  types.Dynamic `tfsdk:"local_field"`
+		LocalFieldSensitive                         types.Dynamic `tfsdk:"local_field_sensitive"`
 	}
 )
 
@@ -702,6 +704,15 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"last_updated": schema.StringAttribute{
 				Computed: true,
+			},
+			"local_field": schema.DynamicAttribute{
+				MarkdownDescription: "This field is dynamic and can be used to store any custom data that you want to retrieve later in your configuration. It is not used by the provider.",
+				Optional:            true,
+			},
+			"local_field_sensitive": schema.DynamicAttribute{
+				MarkdownDescription: "Same as `local_field` but the value is sensitive.",
+				Optional:            true,
+				Sensitive:           true,
 			},
 		},
 	}

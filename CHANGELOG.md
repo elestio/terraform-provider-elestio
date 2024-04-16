@@ -211,3 +211,8 @@ FEATURES:
 ## V0.15.0 (22 February, 2024)
 
 Updated the list of available services and their default configuration.
+
+## V0.16.0 (16 April, 2024)
+
+- **New Attribute:** `elestio_service.local_fields`. This field is dynamic and can be used to store any custom data that you want to retrieve later in your configuration. It is not used by the provider.
+- **New Attribute:** `elestio_service.local_field_sensitive`. Same as `local_field` but the value is sensitive.

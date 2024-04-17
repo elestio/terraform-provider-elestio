@@ -3,10 +3,12 @@ package provider
 import (
 	"context"
 	"fmt"
+	"regexp"
 	"time"
 
 	"github.com/elestio/elestio-go-api-client"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
+	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
@@ -59,8 +61,17 @@ func (r *ProjectResource) Schema(ctx context.Context, req resource.SchemaRequest
 				},
 			},
 			"name": schema.StringAttribute{
-				MarkdownDescription: "Project name. Must be unique.",
-				Required:            true,
+				MarkdownDescription: "Project name." +
+					" Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-)." +
+					" Must be unique.",
+				Required: true,
+				Validators: []validator.String{
+					stringvalidator.LengthBetween(1, 60),
+					stringvalidator.RegexMatches(
+						regexp.MustCompile(`^[a-z0-9-]+$`),
+						"max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-).",
+					),
+				},
 			},
 			"description": schema.StringAttribute{
 				MarkdownDescription: "Project description.",

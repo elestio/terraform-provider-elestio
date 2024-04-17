@@ -36,7 +36,7 @@ The **elestio_linux_desktop** resource allows the creation and management of Ele
 - `local_field` (Dynamic) This field is dynamic and can be used to store any custom data that you want to retrieve later in your configuration. It is not used by the provider.
 - `local_field_sensitive` (Dynamic, Sensitive) Same as `local_field` but the value is sensitive.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
-- `server_name` (String) Service server name. Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters. Must be unique within the project. Requires replace to change it.
+- `server_name` (String) Service server name. Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-). Must be unique within the project. Requires replace to change it.
 - `ssh_keys` (Attributes Set) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
 - `ssh_public_keys` (Attributes Set) You can add Public Keys to your resource to access it via the SSH protocol. (see [below for nested schema](#nestedatt--ssh_public_keys))
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.

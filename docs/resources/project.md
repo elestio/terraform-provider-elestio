@@ -15,7 +15,7 @@ Project resource.
 ```terraform
 # Create and manage a project.
 resource "elestio_project" "myawesomeproject" {
-  name = "Awesome project"
+  name = "awesome-project"
 }
 ```
 
@@ -24,7 +24,7 @@ resource "elestio_project" "myawesomeproject" {
 
 ### Required
 
-- `name` (String) Project name. Must be unique.
+- `name` (String) Project name. Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-). Must be unique.
 
 ### Optional
 

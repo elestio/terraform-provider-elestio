@@ -271,7 +271,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"server_name": schema.StringAttribute{
 				MarkdownDescription: "Service server name." +
-					" Must consist of lowercase letters, `a-z`, `0-9`, and `-`, and have a maximum length of 60 - underscore not allowed characters." +
+					" Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-)." +
 					" Must be unique within the project." +
 					" Requires replace to change it.",
 				Optional: true,
@@ -284,7 +284,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					stringvalidator.LengthBetween(1, 60),
 					stringvalidator.RegexMatches(
 						regexp.MustCompile(`^[a-z0-9-]+$`),
-						"Must consist of lowercase letters, a-z, 0-9, and - (dash), _ (underscore) not allowed characters.",
+						"max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-).",
 					),
 				},
 			},

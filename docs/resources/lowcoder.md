@@ -3,12 +3,12 @@
 page_title: "elestio_lowcoder Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Create software applications for your Company and your Customers with minimal coding experience. Lowcoder is the best Retool, Appsmith, or Tooljet Alternative.The elestio_lowcoder resource allows the creation and management of Elestio Lowcoder services. The service uses the following docker image elestio/lowcoder https://hub.docker.com/r/elestio/lowcoder
+  Create software applications for your Company and your Customers with minimal coding experience. Lowcoder is the best Retool, Appsmith, or Tooljet Alternative.The elestio_lowcoder resource allows the creation and management of Elestio Lowcoder services. The service uses the following docker image lowcoderorg/lowcoder-ce-frontend https://hub.docker.com/r/lowcoderorg/lowcoder-ce-frontend
 ---
 
 # elestio_lowcoder (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lowcoder-LxkI.png" width="100" /><br>Create software applications for your Company and your Customers with minimal coding experience. Lowcoder is the best Retool, Appsmith, or Tooljet Alternative.<br><br>The **elestio_lowcoder** resource allows the creation and management of Elestio Lowcoder services. The service uses the following docker image [elestio/lowcoder](https://hub.docker.com/r/elestio/lowcoder)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lowcoder-LxkI.png" width="100" /><br>Create software applications for your Company and your Customers with minimal coding experience. Lowcoder is the best Retool, Appsmith, or Tooljet Alternative.<br><br>The **elestio_lowcoder** resource allows the creation and management of Elestio Lowcoder services. The service uses the following docker image [lowcoderorg/lowcoder-ce-frontend](https://hub.docker.com/r/lowcoderorg/lowcoder-ce-frontend)
 
 ## Example Usage
 

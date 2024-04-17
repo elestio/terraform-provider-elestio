@@ -3,12 +3,12 @@
 page_title: "elestio_memos Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  A lightweight, self-hosted memo hub. Open Source and Free forever.The elestio_memos resource allows the creation and management of Elestio Memos services. The service uses the following docker image neosmemo/memos https://hub.docker.com/r/neosmemo/memos
+  A lightweight, self-hosted memo hub. Open Source and Free forever.The elestio_memos resource allows the creation and management of Elestio Memos services. The service uses the following docker image elestio/memos https://hub.docker.com/r/elestio/memos
 ---
 
 # elestio_memos (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68747470733a2f2f7573656d656d6f732e636f6d2f6c6f676f2e77656270-Eg8C.webp" width="100" /><br>A lightweight, self-hosted memo hub. Open Source and Free forever.<br><br>The **elestio_memos** resource allows the creation and management of Elestio Memos services. The service uses the following docker image [neosmemo/memos](https://hub.docker.com/r/neosmemo/memos)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/68747470733a2f2f7573656d656d6f732e636f6d2f6c6f676f2e77656270-Eg8C.webp" width="100" /><br>A lightweight, self-hosted memo hub. Open Source and Free forever.<br><br>The **elestio_memos** resource allows the creation and management of Elestio Memos services. The service uses the following docker image [elestio/memos](https://hub.docker.com/r/elestio/memos)
 
 ## Example Usage
 

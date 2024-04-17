@@ -3,19 +3,19 @@
 page_title: "elestio_lobechat Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.The elestio_lobechat resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image lobehub/lobe-chat https://hub.docker.com/r/lobehub/lobe-chat
+  An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.The elestio_lobechat resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image elestio/lobe-chat https://hub.docker.com/r/elestio/lobe-chat
 ---
 
 # elestio_lobechat (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LobeChat-G5yZ.png" width="100" /><br>An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.<br><br>The **elestio_lobechat** resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image [lobehub/lobe-chat](https://hub.docker.com/r/lobehub/lobe-chat)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LobeChat-G5yZ.png" width="100" /><br>An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.<br><br>The **elestio_lobechat** resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image [elestio/lobe-chat](https://hub.docker.com/r/elestio/lobe-chat)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_lobechat" "example" {
   project_id    = "2500"
-  version       = "0.1.16"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -51,7 +51,7 @@ resource "elestio_lobechat" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `0.1.16`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

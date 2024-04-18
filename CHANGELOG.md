@@ -217,7 +217,7 @@ Updated the list of available services and their default configuration.
 - **New Attribute:** `elestio_service.local_fields`. This field is dynamic and can be used to store any custom data that you want to retrieve later in your configuration. It is not used by the provider.
 - **New Attribute:** `elestio_service.local_field_sensitive`. Same as `local_field` but the value is sensitive.
 
-## V0.17.0 (17 April, 2024)
+## V0.17.0 (18 April, 2024)
 
 - `elestio_project.name` attribute has new validation rules: Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-).
 - Added new service resources.

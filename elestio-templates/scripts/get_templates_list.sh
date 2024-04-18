@@ -1,6 +1,6 @@
 #!/bin/bash
 
-api_endpoint="https://api.elest.io/api/servers/getTemplates?id=-1"
+api_endpoint="https://api.elest.io/api/servers/getTemplates"
 output_file="internal/provider/templates.json"
 
 # Check if jq is installed

@@ -221,3 +221,7 @@ Updated the list of available services and their default configuration.
 
 - `elestio_project.name` attribute has new validation rules: Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-).
 - Added new service resources.
+
+## V0.18.0 (26 April, 2024)
+
+The validation of services configuration has been improved. You will now get an instant error message if `provider_name`, `datacenter`, or `server_type` are not valid.

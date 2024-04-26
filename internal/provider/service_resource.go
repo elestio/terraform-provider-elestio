@@ -33,6 +33,7 @@ var (
 	_ resource.Resource                   = &ServiceResource{}
 	_ resource.ResourceWithValidateConfig = &ServiceResource{}
 	_ resource.ResourceWithConfigure      = &ServiceResource{}
+	_ resource.ResourceWithModifyPlan     = &ServiceResource{}
 	_ resource.ResourceWithImportState    = &ServiceResource{}
 )
 
@@ -718,11 +719,11 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 	}
 }
 
+// ValidateConfig without provider configuration ("offline"), so therefore the resource Configure method will not have been called.
+// To implement validation with a configured API client, use ModifyPlan instead, which occurs during Terraform's planning phase.
 func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.ValidateConfigRequest, resp *resource.ValidateConfigResponse) {
 	var data ServiceResourceModel
-
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
-
 	if resp.Diagnostics.HasError() {
 		return
 	}
@@ -768,6 +769,41 @@ func (r *ServiceResource) Configure(ctx context.Context, req resource.ConfigureR
 	}
 
 	r.client = client
+}
+
+func (r *ServiceResource) ModifyPlan(ctx context.Context, req resource.ModifyPlanRequest, resp *resource.ModifyPlanResponse) {
+	if req.Plan.Raw.IsNull() {
+		// If the plan is null, it means that the resource is being destroyed.
+		// We don't need to validate the plan in this case.
+		return
+	}
+
+	var plan ServiceResourceModel
+	resp.Diagnostics.Append(req.Plan.Get(ctx, &plan)...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	isConfigValid, err := r.client.Service.ValidateConfig(elestio.ValidateConfigRequest{
+		TemplateId:   r.TemplateId,
+		ProviderName: plan.ProviderName.ValueString(),
+		Datacenter:   plan.Datacenter.ValueString(),
+		ServerType:   plan.ServerType.ValueString(),
+	})
+	if err != nil {
+		resp.Diagnostics.AddError(
+			"Error Validating Config",
+			fmt.Sprintf("Unable to validate config, got error: %s", err),
+		)
+		return
+	}
+	if !isConfigValid {
+		resp.Diagnostics.AddError(
+			"Invalid Config",
+			"Invalid configuration for the service.",
+		)
+		return
+	}
 }
 
 func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest, resp *resource.CreateResponse) {

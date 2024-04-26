@@ -27,6 +27,8 @@ github.com/elestio/elestio-go-api-client v1.12.0 h1:yxmkLVYDxgWQ4RkewyY3jVA5rR4+
 github.com/elestio/elestio-go-api-client v1.12.0/go.mod h1:7YDubAiEKlFPnBS/SIxAJPS4/zNaqKsIvADy+LS9j+k=
 github.com/elestio/elestio-go-api-client v1.13.0 h1:+5lY36SFw+ksaElOlGnXCS1NZpjcXkxtc6OKs5D9z7c=
 github.com/elestio/elestio-go-api-client v1.13.0/go.mod h1:7YDubAiEKlFPnBS/SIxAJPS4/zNaqKsIvADy+LS9j+k=
+github.com/elestio/elestio-go-api-client v1.14.0 h1:Edzp5YAeL46PnYrg50NgZvkC4UH/Ty7gmpfvz/6iELo=
+github.com/elestio/elestio-go-api-client v1.14.0/go.mod h1:7YDubAiEKlFPnBS/SIxAJPS4/zNaqKsIvADy+LS9j+k=
 github.com/emirpasic/gods v1.18.1 h1:FXtiHYKDGKCW2KzwZKx0iC0PQmdlorYgdFG9jPXJ1Bc=
 github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
 github.com/fatih/color v1.13.0 h1:8LOYc1KYPPmyKMuN8QV2DNRWNbLo6LZ0iLs8+mlH53w=

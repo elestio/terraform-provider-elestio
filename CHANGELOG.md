@@ -225,3 +225,7 @@ Updated the list of available services and their default configuration.
 ## V0.18.0 (26 April, 2024)
 
 The validation of services configuration has been improved. You will now get an instant error message if `provider_name`, `datacenter`, or `server_type` are not valid.
+
+## V0.18.1 (6 May, 2024)
+
+- Provides `createdFrom = "terraform"` to the creates API for `elestio_service` and `elestio_load_balancer` resource. This will allow Elestio support to know that the resource was created by Terraform.

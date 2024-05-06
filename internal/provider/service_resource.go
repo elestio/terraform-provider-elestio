@@ -833,6 +833,7 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 		Datacenter:   data.Datacenter.ValueString(),
 		SupportLevel: data.SupportLevel.ValueString(),
 		AdminEmail:   data.AdminEmail.ValueString(),
+		CreatedFrom:  "terraform",
 	})
 	if err != nil {
 		resp.Diagnostics.AddError(

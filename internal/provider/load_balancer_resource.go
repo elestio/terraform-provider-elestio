@@ -515,6 +515,7 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 			TargetServices:         planTargetServices,
 			RemoveResponseHeaders:  planRemoveResponseHeaders,
 		},
+		CreatedFrom: "terraform",
 	})
 	if err != nil {
 		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to create load balancer, got error: %s", err))

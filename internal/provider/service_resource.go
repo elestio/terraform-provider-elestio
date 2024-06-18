@@ -996,7 +996,9 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		if err := r.client.Service.UpdateServerType(service.ID, plan.ServerType.ValueString(), service.ProviderName, service.Datacenter); err != nil {
 			return nil, fmt.Errorf("failed to update serverType: %s", err)
 		}
-		r.waitServerReboot(ctx, service)
+		if _, err := r.waitServerReboot(ctx, service); err != nil {
+			return nil, fmt.Errorf("failed to wait server reboot after serverType update: %s", err)
+		}
 	}
 
 	if !state.Version.Equal(plan.Version) {
@@ -1151,7 +1153,9 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		if err := r.client.Service.RebootServer(service.ID); err != nil {
 			return nil, fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
 		}
-		r.waitServerReboot(ctx, service)
+		if _, err := r.waitServerReboot(ctx, service); err != nil {
+			return nil, fmt.Errorf("failed to wait server reboot to update scaleway ssh keys: %s", err)
+		}
 	}
 
 	service, err := r.client.Service.Get(service.ProjectID, service.ID)
@@ -1265,7 +1269,7 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request elestio.CreateServiceRequest) (*elestio.Service, error) {
 	var serviceR *elestio.Service
 	var err error
-	retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
+	retryErr := retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
 		serviceR, err = r.client.Service.Create(request)
 		if err != nil {
 			return retry.RetryableError(err)
@@ -1274,13 +1278,17 @@ func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request el
 		return nil
 	})
 
+	if retryErr != nil {
+		return nil, fmt.Errorf("retry for CreateService failed, got error: %s", retryErr)
+	}
+
 	return serviceR, err
 }
 
 func (r *ServiceResource) getServiceWithRetry(ctx context.Context, projectId string, serviceId string) (*elestio.Service, error) {
 	var serviceR *elestio.Service
 	var err error
-	retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
+	retryErr := retry.RetryContext(ctx, 2*time.Minute, func() *retry.RetryError {
 		serviceR, err = r.client.Service.Get(projectId, serviceId)
 		if err != nil {
 			return retry.RetryableError(err)
@@ -1288,6 +1296,10 @@ func (r *ServiceResource) getServiceWithRetry(ctx context.Context, projectId str
 
 		return nil
 	})
+
+	if retryErr != nil {
+		return nil, fmt.Errorf("retry for GetService failed, got error: %s", retryErr)
+	}
 
 	return serviceR, err
 }

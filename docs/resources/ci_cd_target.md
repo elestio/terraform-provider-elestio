@@ -3,7 +3,7 @@
 page_title: "elestio_ci_cd_target Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Deploy one or multiple CD/CD pipelines to a target nodeThe elestiocicd_target resource allows the creation and management of Elestio CI-CD-Target services.
+  Deploy one or multiple CD/CD pipelines to a target nodeThe elestio_ci_cd_target resource allows the creation and management of Elestio CI-CD-Target services.
 ---
 
 # elestio_ci_cd_target (Resource)

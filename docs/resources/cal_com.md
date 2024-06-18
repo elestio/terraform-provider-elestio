@@ -3,7 +3,7 @@
 page_title: "elestio_cal_com Resource - terraform-provider-elestio"
 subcategory: "Services: Deprecated"
 description: |-
-  The elestiocalcom resource allows the creation and management of Elestio Cal.com services.
+  The elestio_cal_com resource allows the creation and management of Elestio Cal.com services.
 ---
 
 # elestio_cal_com (Resource)

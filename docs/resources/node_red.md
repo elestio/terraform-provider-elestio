@@ -3,7 +3,7 @@
 page_title: "elestio_node_red Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Node-RED is a low-code programming environment for event-driven applications. The elestionodered resource allows the creation and management of Elestio Node-red services. The service uses the following docker image nodered/node-red https://hub.docker.com/r/nodered/node-red
+  Node-RED is a low-code programming environment for event-driven applications. The elestio_node_red resource allows the creation and management of Elestio Node-red services. The service uses the following docker image nodered/node-red https://hub.docker.com/r/nodered/node-red
 ---
 
 # elestio_node_red (Resource)

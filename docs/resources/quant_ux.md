@@ -3,7 +3,7 @@
 page_title: "elestio_quant_ux Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Quant-UX is a prototyping tool to design, test and analyse your visual designsThe elestioquantux resource allows the creation and management of Elestio Quant-UX services. The service uses the following docker image klausenschaefersinho/quant-ux-backend https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend
+  Quant-UX is a prototyping tool to design, test and analyse your visual designsThe elestio_quant_ux resource allows the creation and management of Elestio Quant-UX services. The service uses the following docker image klausenschaefersinho/quant-ux-backend https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend
 ---
 
 # elestio_quant_ux (Resource)

@@ -3,7 +3,7 @@
 page_title: "elestio_paperless_ngx Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.The elestiopaperlessngx resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image ghcr.io/paperless-ngx/paperless-ngx https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx
+  Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.The elestio_paperless_ngx resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image ghcr.io/paperless-ngx/paperless-ngx https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx
 ---
 
 # elestio_paperless_ngx (Resource)

@@ -3,7 +3,7 @@
 page_title: "elestio_password_pusher Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  An application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.The elestiopasswordpusher resource allows the creation and management of Elestio Password Pusher services. The service uses the following docker image elestio/password-pusher https://hub.docker.com/r/elestio/password-pusher
+  An application to communicate passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.The elestio_password_pusher resource allows the creation and management of Elestio Password Pusher services. The service uses the following docker image elestio/password-pusher https://hub.docker.com/r/elestio/password-pusher
 ---
 
 # elestio_password_pusher (Resource)

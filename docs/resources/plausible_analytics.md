@@ -3,7 +3,7 @@
 page_title: "elestio_plausible_analytics Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.The elestioplausibleanalytics resource allows the creation and management of Elestio Plausible Analytics services. The service uses the following docker image plausible/analytics https://hub.docker.com/r/plausible/analytics
+  Plausible Analytics is a simple, privacy-friendly alternative to Google Analytics.The elestio_plausible_analytics resource allows the creation and management of Elestio Plausible Analytics services. The service uses the following docker image plausible/analytics https://hub.docker.com/r/plausible/analytics
 ---
 
 # elestio_plausible_analytics (Resource)

@@ -18,7 +18,6 @@ terraform {
   required_providers {
     elestio = {
       source  = "elestio/elestio"
-      version = "0.2.0" # check out the latest version in the release section
     }
   }
 }

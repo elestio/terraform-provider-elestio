@@ -229,3 +229,8 @@ The validation of services configuration has been improved. You will now get an 
 ## V0.18.1 (6 May, 2024)
 
 - Provides `createdFrom = "terraform"` to the creates API for `elestio_service` and `elestio_load_balancer` resource. This will allow Elestio support to know that the resource was created by Terraform.
+
+## v0.19.0 (18 Jun, 2024)
+
+Changing `service.default_password` will not trigger a replacement of the resource anymore.
+It will be ignored and show a warning in the plan and apply that the value change has no effect.

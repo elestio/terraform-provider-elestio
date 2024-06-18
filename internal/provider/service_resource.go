@@ -376,7 +376,6 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Optional: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
-					stringplanmodifier.RequiresReplace(),
 				},
 				Validators: []validator.String{
 					validators.IsDefaultPassword(),
@@ -778,7 +777,7 @@ func (r *ServiceResource) ModifyPlan(ctx context.Context, req resource.ModifyPla
 		return
 	}
 
-	var plan ServiceResourceModel
+	var plan *ServiceResourceModel
 	resp.Diagnostics.Append(req.Plan.Get(ctx, &plan)...)
 	if resp.Diagnostics.HasError() {
 		return
@@ -803,6 +802,23 @@ func (r *ServiceResource) ModifyPlan(ctx context.Context, req resource.ModifyPla
 			"Invalid configuration for the service.",
 		)
 		return
+	}
+
+	if !req.State.Raw.IsNull() {
+		var state *ServiceResourceModel
+		resp.Diagnostics.Append(req.State.Get(ctx, &state)...)
+		if resp.Diagnostics.HasError() {
+			return
+		}
+
+		if state.DefaultPassword.ValueString() != plan.DefaultPassword.ValueString() {
+			resp.Diagnostics.AddAttributeWarning(
+				path.Root("default_password"),
+				"`default_password` Attribute Change Detected",
+				"The `default_password` attribute is used at creation time."+
+					" Changing it later has no direct effect on the service.",
+			)
+		}
 	}
 }
 

@@ -1,3 +1,5 @@
+# Changelog
+
 ## 0.1.0 (27 december, 2022)
 
 NOTES:
@@ -232,7 +234,8 @@ The validation of services configuration has been improved. You will now get an 
 
 ## v0.19.0 (18 Jun, 2024)
 
-Changing `service.default_password` will not trigger a replacement of the resource anymore.
-It will be ignored and show a warning in the plan and apply that the value change has no effect.
+- Changes of `service.default_password` will not trigger a replacement of the resource anymore, but will show a warning in the plan and apply that the value change has no effect.
 
-And updated the list of available services and their default configuration.
+- Updated the list of available services and their default configuration.
+
+- Update go packages to the latest version.

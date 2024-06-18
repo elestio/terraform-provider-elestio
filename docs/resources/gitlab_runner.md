@@ -3,7 +3,7 @@
 page_title: "elestio_gitlab_runner Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.The elestiogitlabrunner resource allows the creation and management of Elestio Gitlab-runner services. The service uses the following docker image gitlab/gitlab-runner https://hub.docker.com/r/gitlab/gitlab-runner
+  GitLab Runner is an application that works with GitLab CI/CD to run jobs in a pipeline.The elestio_gitlab_runner resource allows the creation and management of Elestio Gitlab-runner services. The service uses the following docker image gitlab/gitlab-runner https://hub.docker.com/r/gitlab/gitlab-runner
 ---
 
 # elestio_gitlab_runner (Resource)

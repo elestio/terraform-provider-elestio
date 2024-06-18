@@ -3,7 +3,7 @@
 page_title: "elestio_mage_ai Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  The modern replacement for Airflow. Build, run, and manage data pipelines for integrating and transforming data.The elestiomageai resource allows the creation and management of Elestio Mage AI services. The service uses the following docker image  mageai/mageai https://hub.docker.com/r/ mageai/mageai
+  The modern replacement for Airflow. Build, run, and manage data pipelines for integrating and transforming data.The elestio_mage_ai resource allows the creation and management of Elestio Mage AI services. The service uses the following docker image [ mageai/mageai](https://hub.docker.com/r/ mageai/mageai)
 ---
 
 # elestio_mage_ai (Resource)

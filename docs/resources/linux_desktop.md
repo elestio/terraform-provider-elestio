@@ -3,7 +3,7 @@
 page_title: "elestio_linux_desktop Resource - terraform-provider-elestio"
 subcategory: "Services: Deprecated"
 description: |-
-  The elestiolinuxdesktop resource allows the creation and management of Elestio Linux-desktop services.
+  The elestio_linux_desktop resource allows the creation and management of Elestio Linux-desktop services.
 ---
 
 # elestio_linux_desktop (Resource)

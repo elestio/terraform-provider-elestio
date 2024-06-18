@@ -3,7 +3,7 @@
 page_title: "elestio_uptime_kuma Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.The elestiouptimekuma resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image elestio/uptime-kuma https://hub.docker.com/r/elestio/uptime-kuma
+  Uptime Kuma is a self-hosted monitoring tool like Uptime Robot.The elestio_uptime_kuma resource allows the creation and management of Elestio Uptime-kuma services. The service uses the following docker image elestio/uptime-kuma https://hub.docker.com/r/elestio/uptime-kuma
 ---
 
 # elestio_uptime_kuma (Resource)

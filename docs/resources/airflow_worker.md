@@ -3,7 +3,7 @@
 page_title: "elestio_airflow_worker Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.The elestioairflowworker resource allows the creation and management of Elestio Airflow-worker services. The service uses the following docker image apache/airflow https://hub.docker.com/r/apache/airflow
+  Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.The elestio_airflow_worker resource allows the creation and management of Elestio Airflow-worker services. The service uses the following docker image apache/airflow https://hub.docker.com/r/apache/airflow
 ---
 
 # elestio_airflow_worker (Resource)

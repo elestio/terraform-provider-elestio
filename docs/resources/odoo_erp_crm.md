@@ -3,7 +3,7 @@
 page_title: "elestio_odoo_erp_crm Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Odoo is a suite of web-based, open-source business apps.The elestioodooerp_crm resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image elestio/odoo https://hub.docker.com/r/elestio/odoo
+  Odoo is a suite of web-based, open-source business apps.The elestio_odoo_erp_crm resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image elestio/odoo https://hub.docker.com/r/elestio/odoo
 ---
 
 # elestio_odoo_erp_crm (Resource)

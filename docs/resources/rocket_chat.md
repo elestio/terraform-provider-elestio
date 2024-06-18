@@ -3,7 +3,7 @@
 page_title: "elestio_rocket_chat Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. The elestiorocketchat resource allows the creation and management of Elestio Rocket.Chat services. The service uses the following docker image rocketchat/rocket.chat https://hub.docker.com/r/rocketchat/rocket.chat
+  Rocket.Chat is an open-source communications platform for organizations with high standards of data protection. The elestio_rocket_chat resource allows the creation and management of Elestio Rocket.Chat services. The service uses the following docker image rocketchat/rocket.chat https://hub.docker.com/r/rocketchat/rocket.chat
 ---
 
 # elestio_rocket_chat (Resource)

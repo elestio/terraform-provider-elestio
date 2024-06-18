@@ -3,7 +3,7 @@
 page_title: "elestio_stirling_pdf Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Web application that allows you to perform various operations on PDF files.The elestiostirlingpdf resource allows the creation and management of Elestio Stirling-PDF services. The service uses the following docker image frooodle/s-pdf https://hub.docker.com/r/frooodle/s-pdf
+  Web application that allows you to perform various operations on PDF files.The elestio_stirling_pdf resource allows the creation and management of Elestio Stirling-PDF services. The service uses the following docker image frooodle/s-pdf https://hub.docker.com/r/frooodle/s-pdf
 ---
 
 # elestio_stirling_pdf (Resource)

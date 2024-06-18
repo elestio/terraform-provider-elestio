@@ -3,7 +3,7 @@
 page_title: "elestio_mattermost_team_edition Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. The elestiomattermostteam_edition resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image mattermost/mattermost-team-edition https://hub.docker.com/r/mattermost/mattermost-team-edition
+  Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. The elestio_mattermost_team_edition resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image mattermost/mattermost-team-edition https://hub.docker.com/r/mattermost/mattermost-team-edition
 ---
 
 # elestio_mattermost_team_edition (Resource)

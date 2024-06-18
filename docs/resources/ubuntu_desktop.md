@@ -3,7 +3,7 @@
 page_title: "elestio_ubuntu_desktop Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Ubuntu Virtual Desktop experience in your browserThe elestioubuntudesktop resource allows the creation and management of Elestio Ubuntu-Desktop services. The service uses the following docker image elestio/ubuntu-desktop https://hub.docker.com/r/elestio/ubuntu-desktop
+  Ubuntu Virtual Desktop experience in your browserThe elestio_ubuntu_desktop resource allows the creation and management of Elestio Ubuntu-Desktop services. The service uses the following docker image elestio/ubuntu-desktop https://hub.docker.com/r/elestio/ubuntu-desktop
 ---
 
 # elestio_ubuntu_desktop (Resource)

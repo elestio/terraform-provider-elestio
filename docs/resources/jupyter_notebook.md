@@ -3,7 +3,7 @@
 page_title: "elestio_jupyter_notebook Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Jupyter Notebook is a web-based notebook environment for interactive computing. The elestiojupyternotebook resource allows the creation and management of Elestio Jupyter Notebook services. The service uses the following docker image jupyter/datascience-notebook https://hub.docker.com/r/jupyter/datascience-notebook
+  Jupyter Notebook is a web-based notebook environment for interactive computing. The elestio_jupyter_notebook resource allows the creation and management of Elestio Jupyter Notebook services. The service uses the following docker image jupyter/datascience-notebook https://hub.docker.com/r/jupyter/datascience-notebook
 ---
 
 # elestio_jupyter_notebook (Resource)

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_quant_ux (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-SN8q.png" width="100" /><br>Quant-UX is a prototyping tool to design, test and analyse your visual designs<br><br>The **elestio_quant_ux** resource allows the creation and management of Elestio Quant-UX services. The service uses the following docker image [klausenschaefersinho/quant-ux-backend](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Quant-UX-88W4.png" width="100" /><br>Quant-UX is a prototyping tool to design, test and analyse your visual designs<br><br>The **elestio_quant_ux** resource allows the creation and management of Elestio Quant-UX services. The service uses the following docker image [klausenschaefersinho/quant-ux-backend](https://hub.docker.com/r/klausenschaefersinho/quant-ux-backend)
 
 ## Example Usage
 

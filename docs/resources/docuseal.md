@@ -8,7 +8,7 @@ description: |-
 
 # elestio_docuseal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DocuSeal-sKif.png" width="100" /><br>Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.<br><br>The **elestio_docuseal** resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image [elestio/docuseal](https://hub.docker.com/r/elestio/docuseal)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/DocuSeal-O3ZL.png" width="100" /><br>Open source, tool to streamline document filling and signing. Create custom PDF forms to complete and sign with an easy-to-use online tool.<br><br>The **elestio_docuseal** resource allows the creation and management of Elestio DocuSeal services. The service uses the following docker image [elestio/docuseal](https://hub.docker.com/r/elestio/docuseal)
 
 ## Example Usage
 

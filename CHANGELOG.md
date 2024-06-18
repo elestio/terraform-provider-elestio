@@ -234,3 +234,5 @@ The validation of services configuration has been improved. You will now get an 
 
 Changing `service.default_password` will not trigger a replacement of the resource anymore.
 It will be ignored and show a warning in the plan and apply that the value change has no effect.
+
+And updated the list of available services and their default configuration.

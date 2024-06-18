@@ -3,19 +3,19 @@
 page_title: "elestio_infisical Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.The elestio_infisical resource allows the creation and management of Elestio Infisical services. The service uses the following docker image infisical/frontend https://hub.docker.com/r/infisical/frontend
+  Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.The elestio_infisical resource allows the creation and management of Elestio Infisical services. The service uses the following docker image infisical/infisical https://hub.docker.com/r/infisical/infisical
 ---
 
 # elestio_infisical (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Infisical-DDNP.png" width="100" /><br>Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.<br><br>The **elestio_infisical** resource allows the creation and management of Elestio Infisical services. The service uses the following docker image [infisical/frontend](https://hub.docker.com/r/infisical/frontend)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Infisical-DDNP.png" width="100" /><br>Infisical is an open-source, end-to-end encrypted platform for secret management: sync secrets across your team/infrastructure and prevents secret leaks.<br><br>The **elestio_infisical** resource allows the creation and management of Elestio Infisical services. The service uses the following docker image [infisical/infisical](https://hub.docker.com/r/infisical/infisical)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_infisical" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "latest-postgres"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "SMALL-1C-2G"
@@ -51,7 +51,7 @@ resource "elestio_infisical" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `latest-postgres`.
 
 ### Read-Only
 

@@ -8,7 +8,7 @@ description: |-
 
 # elestio_mirotalk (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MiroTalk-7MH8.png" width="100" /><br>WebRTC - P2P - Simple, Secure, Fast Real-Time Video Conferences Up to 4k and 60fps, compatible with all browsers and platforms.<br><br>The **elestio_mirotalk** resource allows the creation and management of Elestio MiroTalk services. The service uses the following docker image [elestio/mirotalk](https://hub.docker.com/r/elestio/mirotalk)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/MiroTalk-cLmd.png" width="100" /><br>WebRTC - P2P - Simple, Secure, Fast Real-Time Video Conferences Up to 4k and 60fps, compatible with all browsers and platforms.<br><br>The **elestio_mirotalk** resource allows the creation and management of Elestio MiroTalk services. The service uses the following docker image [elestio/mirotalk](https://hub.docker.com/r/elestio/mirotalk)
 
 ## Example Usage
 

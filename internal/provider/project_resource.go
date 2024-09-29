@@ -154,6 +154,7 @@ func (r *ProjectResource) Create(ctx context.Context, req resource.CreateRequest
 	}
 
 	data.Id = types.StringValue(project.ID.String())
+	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 	UpdateTerraformDataWithElestioProject(data, project)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
@@ -202,6 +203,7 @@ func (r *ProjectResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
+	plan.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 	UpdateTerraformDataWithElestioProject(plan, project)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &plan)...)
 }
@@ -233,5 +235,4 @@ func UpdateTerraformDataWithElestioProject(data *ProjectResourceModel, project *
 	data.TechnicalEmail = types.StringValue(project.TechnicalEmail)
 	data.NetworkCIDR = types.StringValue(project.NetworkCIDR)
 	data.CreationDate = types.StringValue(project.CreationDate)
-	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 }

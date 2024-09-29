@@ -881,6 +881,7 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 		return
 	}
 
+	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 	convertElestioToTerraformFormat(ctx, data, serviceUpdated, &resp.Diagnostics)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &data)...)
 }
@@ -933,6 +934,7 @@ func (r *ServiceResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
+	plan.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 	convertElestioToTerraformFormat(ctx, plan, updatedService, &resp.Diagnostics)
 	resp.Diagnostics.Append(resp.State.Set(ctx, &plan)...)
 }
@@ -1263,7 +1265,6 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.FirewallId = types.StringValue(service.FirewallID)
 	data.FirewallPorts = types.StringValue(service.FirewallPorts)
 	data.AlertsEnabled = utils.BoolValue(service.AlertsEnabled)
-	data.LastUpdated = types.StringValue(time.Now().Format(time.RFC850))
 }
 
 func (r *ServiceResource) createServiceWithRetry(ctx context.Context, request elestio.CreateServiceRequest) (*elestio.Service, error) {

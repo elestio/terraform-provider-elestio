@@ -1230,8 +1230,12 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 		return
 	}
 	data.GlobalIP = types.StringValue(service.GlobalIP)
-	data.TrafficOutgoing = types.Int64Value(service.TrafficOutgoing)
-	data.TrafficIncoming = types.Int64Value(service.TrafficIncoming)
+	data.TrafficOutgoing = types.Int64Value(0)
+	data.TrafficIncoming = types.Int64Value(0)
+	// TODO: Fix [WARN] Provider "registry.terraform.io/elestio/elestio" produced an unexpected new value for elestio_ubuntu.ubuntu during refresh.
+	// .traffic_incoming: was cty.NumberIntVal(0), but now cty.NumberIntVal(xxx)
+	// data.TrafficOutgoing = types.Int64Value(service.TrafficOutgoing)
+	// data.TrafficIncoming = types.Int64Value(service.TrafficIncoming)
 	data.TrafficIncluded = types.Int64Value(service.TrafficIncluded)
 	data.Cores = types.Int64Value(service.Cores)
 	data.RAMSizeGB = types.StringValue(service.RAMSizeGB)

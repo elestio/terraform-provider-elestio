@@ -247,3 +247,8 @@ It's a now() timestamp and should be updated only on create/update.
 
 - Fix `elestio_service.last_updated` attribute.
 - Fix `elestio_project.last_updated` attribute.
+
+## v0.19.2 (29 September, 2024)
+
+Some attributes had wrong values on refresh. We are still investigating the cause of this issue.
+For now, we decided to set a default value of `0` for `elestio_service.traffic_incoming` and `elestio_service.traffic_outgoing` attributes to avoid unexpected behavior.

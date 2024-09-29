@@ -239,3 +239,11 @@ The validation of services configuration has been improved. You will now get an 
 - Updated the list of available services and their default configuration.
 
 - Update go packages to the latest version.
+
+## v0.19.1 (29 September, 2024)
+
+LastUpdated attribute was updated also in read function.
+It's a now() timestamp and should be updated only on create/update.
+
+- Fix `elestio_service.last_updated` attribute.
+- Fix `elestio_project.last_updated` attribute.

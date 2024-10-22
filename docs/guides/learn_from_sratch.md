@@ -122,7 +122,7 @@ This section will explain how to organize a basic Terraform project :
       project_id       = elestio_project.my_project.id
       provider_name    = "hetzner"
       datacenter       = "fsn1"
-      server_type      = "SMALL-1C-2G"
+      server_type      = "MEDIUM-2C-4G"
       firewall_enabled = true
     }
 

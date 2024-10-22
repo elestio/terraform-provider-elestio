@@ -18,7 +18,7 @@ resource "elestio_pritunl" "example" {
   version       = "1.32.3746.95"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
 }
 ```
 

@@ -3,5 +3,5 @@ resource "elestio_[TEMPLATE_RESOURCE_NAME]" "example" {
   version       = "[TEMPLATE_DEFAULT_VERSION]"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
 }

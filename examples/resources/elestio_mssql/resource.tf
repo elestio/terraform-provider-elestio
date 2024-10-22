@@ -3,5 +3,5 @@ resource "elestio_mssql" "example" {
   version       = "2019-latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
 }

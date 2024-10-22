@@ -252,3 +252,8 @@ It's a now() timestamp and should be updated only on create/update.
 
 Some attributes had wrong values on refresh. We are still investigating the cause of this issue.
 For now, we decided to set a default value of `0` for `elestio_service.traffic_incoming` and `elestio_service.traffic_outgoing` attributes to avoid unexpected behavior.
+
+## v0.19.3 (22 October, 2024)
+
+Fixed the missing param `templateID` required by the API to create a `load_balancer` resource.
+Also updated examples with the new default `hetzner` server type.

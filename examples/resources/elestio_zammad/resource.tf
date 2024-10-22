@@ -3,5 +3,5 @@ resource "elestio_zammad" "example" {
   version       = "6.2.0-1"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
 }

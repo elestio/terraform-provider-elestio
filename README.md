@@ -36,7 +36,7 @@ resource "elestio_project" "project" {
 # Service postgres
 resource "elestio_postgresql" "postgres" {
   project_id    = elestio_project.project.id
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
   provider_name = "hetzner"
   datacenter    = "fsn1"
 }

@@ -3,5 +3,5 @@ resource "elestio_vault" "example" {
   version       = "1.13.3"
   provider_name = "hetzner"
   datacenter    = "fsn1"
-  server_type   = "SMALL-1C-2G"
+  server_type   = "MEDIUM-2C-4G"
 }

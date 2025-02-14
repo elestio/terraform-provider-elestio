@@ -257,3 +257,7 @@ For now, we decided to set a default value of `0` for `elestio_service.traffic_i
 
 Fixed the missing param `templateID` required by the API to create a `load_balancer` resource.
 Also updated examples with the new default `hetzner` server type.
+
+## v0.19.4 (14 February, 2025)
+
+The firewall is now read only for some services that don't support it. For example `elestio_ci_cd_target` resource.

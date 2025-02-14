@@ -243,6 +243,18 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 		return
 	}
 
+	firewallEnabledSchema := schema.BoolAttribute{
+		MarkdownDescription: "Service firewall state.",
+		Computed:            true,
+	}
+
+	// Firewall is enableable only if FirewallPorts are configured
+	if len(r.FirewallPorts) > 0 {
+		firewallEnabledSchema.Optional = true
+		firewallEnabledSchema.MarkdownDescription += " **Default** `true`."
+		firewallEnabledSchema.Default = booldefault.StaticBool(true)
+	}
+
 	resp.Schema = schema.Schema{
 		MarkdownDescription: schemaMardownDescription,
 		DeprecationMessage:  r.DeprecationMessage,
@@ -680,13 +692,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
 				Computed: true,
 			},
-			"firewall_enabled": schema.BoolAttribute{
-				MarkdownDescription: "Service firewall state." +
-					" **Default** `true`.",
-				Optional: true,
-				Computed: true,
-				Default:  booldefault.StaticBool(true),
-			},
+			"firewall_enabled": firewallEnabledSchema,
 			"firewall_id": schema.StringAttribute{
 				MarkdownDescription: "Service firewall id.",
 				Computed:            true,
@@ -1075,7 +1081,8 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	if !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
+	// Only update firewall if FirewallPorts are configured
+	if len(r.FirewallPorts) > 0 && !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
 		if plan.FirewallEnabled.ValueBool() {
 			if err := r.client.Service.EnableFirewall(service.ID, r.FirewallPorts); err != nil {
 				return nil, fmt.Errorf("failed to enable firewall: %s", err)
@@ -1383,8 +1390,8 @@ func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, s
 				return struct{}{}, "waiting_remote_backups_enabled", nil
 			}
 
-			// Firewall is enabled by default at service creation
-			if !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
+			// Only wait for firewall if FirewallPorts are configured
+			if len(r.FirewallPorts) > 0 && !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
 				return struct{}{}, "waiting_firewall_enabled", nil
 			}
 

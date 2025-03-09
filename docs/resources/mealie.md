@@ -3,19 +3,19 @@
 page_title: "elestio_mealie Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Mealie is an intuitive and easy to use recipe management appThe elestio_mealie resource allows the creation and management of Elestio Mealie services. The service uses the following docker image hkotel/mealie https://hub.docker.com/r/hkotel/mealie
+  Mealie is an intuitive and easy to use recipe management appThe elestio_mealie resource allows the creation and management of Elestio Mealie services. The service uses the following docker image ghcr.io/mealie-recipes/mealie https://hub.docker.com/r/ghcr.io/mealie-recipes/mealie
 ---
 
 # elestio_mealie (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [hkotel/mealie](https://hub.docker.com/r/hkotel/mealie)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [ghcr.io/mealie-recipes/mealie](https://hub.docker.com/r/ghcr.io/mealie-recipes/mealie)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_mealie" "example" {
   project_id    = "2500"
-  version       = "omni-nightly"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_mealie" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `omni-nightly`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

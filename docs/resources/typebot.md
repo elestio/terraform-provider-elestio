@@ -3,12 +3,12 @@
 page_title: "elestio_typebot Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like magicThe elestio_typebot resource allows the creation and management of Elestio Typebot services. The service uses the following docker image elestio/typebot-viewer https://hub.docker.com/r/elestio/typebot-viewer
+  Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like the magic.The elestio_typebot resource allows the creation and management of Elestio Typebot services. The service uses the following docker image baptistearno/typebot-viewer https://hub.docker.com/r/baptistearno/typebot-viewer
 ---
 
 # elestio_typebot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typebot-MGT8.png" width="100" /><br>Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like magic<br><br>The **elestio_typebot** resource allows the creation and management of Elestio Typebot services. The service uses the following docker image [elestio/typebot-viewer](https://hub.docker.com/r/elestio/typebot-viewer)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typebot-RCVM.png" width="100" /><br>Typebot gives you powerful blocks to create unique chat experiences. Embed them anywhere on your web/mobile apps and start collecting results like the magic.<br><br>The **elestio_typebot** resource allows the creation and management of Elestio Typebot services. The service uses the following docker image [baptistearno/typebot-viewer](https://hub.docker.com/r/baptistearno/typebot-viewer)
 
 ## Example Usage
 

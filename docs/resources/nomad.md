@@ -15,7 +15,7 @@ description: |-
 ```terraform
 resource "elestio_nomad" "example" {
   project_id    = "2500"
-  version       = ""
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -31,7 +31,6 @@ resource "elestio_nomad" "example" {
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
 - `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). You can only upgrade it, not downgrade.<br/>Requires replace to update the server type with the provider `scale_way`.
-- `version` (String) This is the version of the software used as service.
 
 ### Optional
 
@@ -52,6 +51,7 @@ resource "elestio_nomad" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

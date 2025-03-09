@@ -15,7 +15,7 @@ description: |-
 ```terraform
 resource "elestio_hyperswitch" "example" {
   project_id    = "2500"
-  version       = "nightly"
+  version       = "standalone"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_hyperswitch" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `nightly`.
+- `version` (String) This is the version of the software used as service. **Default** `standalone`.
 
 ### Read-Only
 

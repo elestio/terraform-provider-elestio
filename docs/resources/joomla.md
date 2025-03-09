@@ -3,12 +3,12 @@
 page_title: "elestio_joomla Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Joomla is an award-winning content management system for building websites and powerful online applications.The elestio_joomla resource allows the creation and management of Elestio Joomla services. The service uses the following docker image bitnami/joomla https://hub.docker.com/r/bitnami/joomla
+  Joomla is an award-winning content management system for building websites and powerful online applications.The elestio_joomla resource allows the creation and management of Elestio Joomla services. The service uses the following docker image joomla https://hub.docker.com/r/joomla
 ---
 
 # elestio_joomla (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla--Logo-CiYs.png" width="100" /><br>Joomla is an award-winning content management system for building websites and powerful online applications.<br><br>The **elestio_joomla** resource allows the creation and management of Elestio Joomla services. The service uses the following docker image [bitnami/joomla](https://hub.docker.com/r/bitnami/joomla)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Joomla-Mn3g.png" width="100" /><br>Joomla is an award-winning content management system for building websites and powerful online applications.<br><br>The **elestio_joomla** resource allows the creation and management of Elestio Joomla services. The service uses the following docker image [joomla](https://hub.docker.com/r/joomla)
 
 ## Example Usage
 

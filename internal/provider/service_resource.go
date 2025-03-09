@@ -1027,7 +1027,13 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	if !state.SystemAutoUpdatesEnabled.Equal(plan.SystemAutoUpdatesEnabled) {
+	// Checks if system updates state has changed
+	systemUpdatesChanged := !state.SystemAutoUpdatesEnabled.Equal(plan.SystemAutoUpdatesEnabled)
+	// Checks if security patches state has changed (only when system updates are enabled)
+	securityPatchesChanged := plan.SystemAutoUpdatesEnabled.ValueBool() && 
+		!state.SystemAutoUpdatesSecurityPatchesOnlyEnabled.Equal(plan.SystemAutoUpdatesSecurityPatchesOnlyEnabled)
+	// It handles enabling/disabling system updates with the appropriate security patches setting
+	if systemUpdatesChanged || securityPatchesChanged {
 		if plan.SystemAutoUpdatesEnabled.ValueBool() {
 			if err := r.client.Service.EnableSystemAutoUpdates(service.ID, plan.SystemAutoUpdatesSecurityPatchesOnlyEnabled.ValueBool()); err != nil {
 				return nil, fmt.Errorf("failed to enable systemAutoUpdates: %s", err)
@@ -1036,12 +1042,6 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 			if err := r.client.Service.DisableSystemAutoUpdates(service.ID); err != nil {
 				return nil, fmt.Errorf("failed to disable systemAutoUpdates: %s", err)
 			}
-		}
-	}
-
-	if !state.SystemAutoUpdatesSecurityPatchesOnlyEnabled.Equal(plan.SystemAutoUpdatesSecurityPatchesOnlyEnabled) {
-		if err := r.client.Service.EnableSystemAutoUpdates(service.ID, plan.SystemAutoUpdatesSecurityPatchesOnlyEnabled.ValueBool()); err != nil {
-			return nil, fmt.Errorf("failed to enable systemAutoUpdates: %s", err)
 		}
 	}
 
@@ -1253,13 +1253,10 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.AppAutoUpdatesHour = types.Int64Value(service.AppAutoUpdatesHour)
 	data.AppAutoUpdatesMinute = types.Int64Value(service.AppAutoUpdatesMinute)
 	data.SystemAutoUpdatesEnabled = utils.BoolValue(service.SystemAutoUpdatesEnabled)
-	data.SystemAutoUpdatesSecurityPatchesOnlyEnabled = utils.If(
-		// condition
-		!data.SystemAutoUpdatesEnabled.ValueBool(),
-		// if true
-		types.BoolValue(false),
-		// if false
-		utils.BoolValue(service.SystemAutoUpdatesSecurityPatchesOnlyEnabled),
+	data.SystemAutoUpdatesSecurityPatchesOnlyEnabled = types.BoolValue(
+		// Security patches can only be enabled if system auto updates are enabled
+		// If system auto updates are disabled, security patches must also be disabled
+		utils.BoolValue(service.SystemAutoUpdatesEnabled).ValueBool() && utils.BoolValue(service.SystemAutoUpdatesSecurityPatchesOnlyEnabled).ValueBool(),
 	)
 	data.SystemAutoUpdatesRebootDayOfWeek = types.Int64Value(service.SystemAutoUpdatesRebootDayOfWeek)
 	data.SystemAutoUpdatesRebootHour = types.Int64Value(service.SystemAutoUpdatesRebootHour)

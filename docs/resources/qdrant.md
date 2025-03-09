@@ -3,12 +3,12 @@
 page_title: "elestio_qdrant Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  The elestio_qdrant resource allows the creation and management of Elestio Qdrant services. The service uses the following docker image qdrant/qdrant https://hub.docker.com/r/qdrant/qdrant
+  High-performance, massive-scale Vector Database for the next generation of AI.The elestio_qdrant resource allows the creation and management of Elestio Qdrant services. The service uses the following docker image qdrant/qdrant https://hub.docker.com/r/qdrant/qdrant
 ---
 
 # elestio_qdrant (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Qdrant-E01O.png" width="100" /><br>The **elestio_qdrant** resource allows the creation and management of Elestio Qdrant services. The service uses the following docker image [qdrant/qdrant](https://hub.docker.com/r/qdrant/qdrant)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Qdrant-E01O.png" width="100" /><br>High-performance, massive-scale Vector Database for the next generation of AI.<br><br>The **elestio_qdrant** resource allows the creation and management of Elestio Qdrant services. The service uses the following docker image [qdrant/qdrant](https://hub.docker.com/r/qdrant/qdrant)
 
 ## Example Usage
 

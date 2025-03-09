@@ -3,12 +3,12 @@
 page_title: "elestio_nextcloud Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  NextCloud provides an industry-leading, on-premises content collaboration platform.The elestio_nextcloud resource allows the creation and management of Elestio NextCloud services. The service uses the following docker image elestio/nextcloud https://hub.docker.com/r/elestio/nextcloud
+  Nextcloud provides an industry-leading, on-premises content collaboration platform.The elestio_nextcloud resource allows the creation and management of Elestio Nextcloud services. The service uses the following docker image elestio/nextcloud https://hub.docker.com/r/elestio/nextcloud
 ---
 
 # elestio_nextcloud (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" /><br>NextCloud provides an industry-leading, on-premises content collaboration platform.<br><br>The **elestio_nextcloud** resource allows the creation and management of Elestio NextCloud services. The service uses the following docker image [elestio/nextcloud](https://hub.docker.com/r/elestio/nextcloud)
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/Nextcloud-Logo-tfec.png" width="100" /><br>Nextcloud provides an industry-leading, on-premises content collaboration platform.<br><br>The **elestio_nextcloud** resource allows the creation and management of Elestio Nextcloud services. The service uses the following docker image [elestio/nextcloud](https://hub.docker.com/r/elestio/nextcloud)
 
 ## Example Usage
 
@@ -143,6 +143,6 @@ Read-Only:
 Import is supported using the following syntax:
 
 ```shell
-# Import a NextCloud service by specifying the Project ID it belongs to, and the NextCloud service ID (spaced by a comma).
+# Import a Nextcloud service by specifying the Project ID it belongs to, and the Nextcloud service ID (spaced by a comma).
 terraform import elestio_nextcloud.my_nextcloud project_id,nextcloud_service_id
 ```

@@ -3,12 +3,12 @@
 page_title: "elestio_lobsters Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Lobsters are a computing-focused community centered around link aggregation and discussion.The elestio_lobsters resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image elestio/lobster https://hub.docker.com/r/elestio/lobster
+  Lobsters is a community dedicated to computing, where members gather to share links and engage in discussions.The elestio_lobsters resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image elestio/lobster https://hub.docker.com/r/elestio/lobster
 ---
 
 # elestio_lobsters (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Lobsters-KGMT.png" width="100" /><br>Lobsters are a computing-focused community centered around link aggregation and discussion.<br><br>The **elestio_lobsters** resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image [elestio/lobster](https://hub.docker.com/r/elestio/lobster)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/lobsters-high-resolution-logo-grayscale-woPt.png" width="100" /><br>Lobsters is a community dedicated to computing, where members gather to share links and engage in discussions.<br><br>The **elestio_lobsters** resource allows the creation and management of Elestio Lobsters services. The service uses the following docker image [elestio/lobster](https://hub.docker.com/r/elestio/lobster)
 
 ## Example Usage
 

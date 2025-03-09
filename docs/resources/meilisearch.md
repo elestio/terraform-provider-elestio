@@ -3,12 +3,12 @@
 page_title: "elestio_meilisearch Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  MeiliSearch is a next-generation search API.The elestio_meilisearch resource allows the creation and management of Elestio MeiliSearch services. The service uses the following docker image getmeili/meilisearch https://hub.docker.com/r/getmeili/meilisearch
+  Meilisearch is a next-generation search API.The elestio_meilisearch resource allows the creation and management of Elestio Meilisearch services. The service uses the following docker image getmeili/meilisearch https://hub.docker.com/r/getmeili/meilisearch
 ---
 
 # elestio_meilisearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" /><br>MeiliSearch is a next-generation search API.<br><br>The **elestio_meilisearch** resource allows the creation and management of Elestio MeiliSearch services. The service uses the following docker image [getmeili/meilisearch](https://hub.docker.com/r/getmeili/meilisearch)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/meilisearch-84ld.png" width="100" /><br>Meilisearch is a next-generation search API.<br><br>The **elestio_meilisearch** resource allows the creation and management of Elestio Meilisearch services. The service uses the following docker image [getmeili/meilisearch](https://hub.docker.com/r/getmeili/meilisearch)
 
 ## Example Usage
 
@@ -143,6 +143,6 @@ Read-Only:
 Import is supported using the following syntax:
 
 ```shell
-# Import a MeiliSearch service by specifying the Project ID it belongs to, and the MeiliSearch service ID (spaced by a comma).
+# Import a Meilisearch service by specifying the Project ID it belongs to, and the Meilisearch service ID (spaced by a comma).
 terraform import elestio_meilisearch.my_meilisearch project_id,meilisearch_service_id
 ```

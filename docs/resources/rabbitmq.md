@@ -3,19 +3,19 @@
 page_title: "elestio_rabbitmq Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  RabbitMQ is the most widely deployed open source message brokerThe elestio_rabbitmq resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image rabbitmq https://hub.docker.com/r/rabbitmq
+  RabbitMQ is the most widely deployed open source message brokerThe elestio_rabbitmq resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image elestio/rabbitmq https://hub.docker.com/r/elestio/rabbitmq
 ---
 
 # elestio_rabbitmq (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br>RabbitMQ is the most widely deployed open source message broker<br><br>The **elestio_rabbitmq** resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image [rabbitmq](https://hub.docker.com/r/rabbitmq)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rabbitmq-282296-dxOz.png" width="100" /><br>RabbitMQ is the most widely deployed open source message broker<br><br>The **elestio_rabbitmq** resource allows the creation and management of Elestio RabbitMQ services. The service uses the following docker image [elestio/rabbitmq](https://hub.docker.com/r/elestio/rabbitmq)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_rabbitmq" "example" {
   project_id    = "2500"
-  version       = "3-management"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_rabbitmq" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `3-management`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

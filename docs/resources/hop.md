@@ -3,12 +3,12 @@
 page_title: "elestio_hop Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Hop is a data orchestration and data engineering platform that aims to facilitate all aspects of data and metadata orchestrationThe elestio_hop resource allows the creation and management of Elestio Hop services. The service uses the following docker image apache/hop-web https://hub.docker.com/r/apache/hop-web
+  Apache Hop is a data orchestration and data engineering platform that aims to facilitate all aspects of data and metadata orchestrationThe elestio_hop resource allows the creation and management of Elestio Hop services. The service uses the following docker image apache/hop-web https://hub.docker.com/r/apache/hop-web
 ---
 
 # elestio_hop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hop-1b7w.png" width="100" /><br>Hop is a data orchestration and data engineering platform that aims to facilitate all aspects of data and metadata orchestration<br><br>The **elestio_hop** resource allows the creation and management of Elestio Hop services. The service uses the following docker image [apache/hop-web](https://hub.docker.com/r/apache/hop-web)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Hop-1b7w.png" width="100" /><br>Apache Hop is a data orchestration and data engineering platform that aims to facilitate all aspects of data and metadata orchestration<br><br>The **elestio_hop** resource allows the creation and management of Elestio Hop services. The service uses the following docker image [apache/hop-web](https://hub.docker.com/r/apache/hop-web)
 
 ## Example Usage
 

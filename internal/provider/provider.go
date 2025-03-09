@@ -195,7 +195,6 @@ func NewServiceResources() []func() resource.Resource {
 				Category: "Deprecated",
 			})
 		},
-
 		func() resource.Resource {
 			return NewServiceResource(&ServiceTemplate{
 				TemplateId:        11,
@@ -204,15 +203,6 @@ func NewServiceResources() []func() resource.Resource {
 				DeprecationMessage: "Use elestio_postgresql resource instead. " +
 					"This resource will be removed in the next major version of the provider.",
 				Category: "Deprecated",
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:         109,
-				ResourceName:       "onlyoffice",
-				DocumentationName:  "OnlyOffice",
-				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:           "Deprecated",
 			})
 		},
 		func() resource.Resource {
@@ -256,6 +246,42 @@ func NewServiceResources() []func() resource.Resource {
 				TemplateId:         347,
 				ResourceName:       "cal_com",
 				DocumentationName:  "Cal.com",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         342,
+				ResourceName:       "windmill",
+				DocumentationName:  "Windmill",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         112,
+				ResourceName:       "jupyter",
+				DocumentationName:  "Jupyter",
+				DeprecationMessage: "This resource was replaced by elestio_jupyter_notebook resource.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         185,
+				ResourceName:       "opensourcetranslate",
+				DocumentationName:  "OpenSourceTranslate",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         19,
+				ResourceName:       "mongodb",
+				DocumentationName:  "MongoDB",
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
 				Category:           "Deprecated",
 			})
@@ -314,7 +340,12 @@ func NewServiceResources() []func() resource.Resource {
 					Description:       template.Description,
 					Logo:              template.Logo,
 					DockerHubImage:    template.DockerHubImage,
-					DefaultVersion:    template.DockerHubDefaultTag,
+					DefaultVersion:    func() string {
+						if template.DockerHubDefaultTag == "" {
+							return "latest"
+						}
+						return template.DockerHubDefaultTag
+					}(),
 					Category:          template.Category,
 					FirewallPorts:     templateFirewallPorts,
 				})

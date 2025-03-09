@@ -3,19 +3,19 @@
 page_title: "elestio_vault Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Vault is a tool for secrets management, encryption as a service, and privileged access managementThe elestio_vault resource allows the creation and management of Elestio Vault services. The service uses the following docker image vault https://hub.docker.com/r/vault
+  Vault is a tool for secrets management, encryption as a service, and privileged access managementThe elestio_vault resource allows the creation and management of Elestio Vault services. The service uses the following docker image hashicorp/vault https://hub.docker.com/r/hashicorp/vault
 ---
 
 # elestio_vault (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" /><br>Vault is a tool for secrets management, encryption as a service, and privileged access management<br><br>The **elestio_vault** resource allows the creation and management of Elestio Vault services. The service uses the following docker image [vault](https://hub.docker.com/r/vault)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/vault-ttul.png" width="100" /><br>Vault is a tool for secrets management, encryption as a service, and privileged access management<br><br>The **elestio_vault** resource allows the creation and management of Elestio Vault services. The service uses the following docker image [hashicorp/vault](https://hub.docker.com/r/hashicorp/vault)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_vault" "example" {
   project_id    = "2500"
-  version       = "1.13.3"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_vault" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `1.13.3`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

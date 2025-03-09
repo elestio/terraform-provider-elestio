@@ -3,12 +3,12 @@
 page_title: "elestio_answer Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.The elestio_answer resource allows the creation and management of Elestio Answer services. The service uses the following docker image answerdev/answer https://hub.docker.com/r/answerdev/answer
+  An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.The elestio_answer resource allows the creation and management of Elestio Answer services. The service uses the following docker image elestio/answer https://hub.docker.com/r/elestio/answer
 ---
 
 # elestio_answer (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" /><br>An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.<br><br>The **elestio_answer** resource allows the creation and management of Elestio Answer services. The service uses the following docker image [answerdev/answer](https://hub.docker.com/r/answerdev/answer)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Answer-KTDc.png" width="100" /><br>An open-source knowledge-based community software. You can use it quickly to build Q&A community for your products, customers, teams, and more.<br><br>The **elestio_answer** resource allows the creation and management of Elestio Answer services. The service uses the following docker image [elestio/answer](https://hub.docker.com/r/elestio/answer)
 
 ## Example Usage
 

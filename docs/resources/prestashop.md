@@ -3,12 +3,12 @@
 page_title: "elestio_prestashop Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  The PrestaShop project is a universal open-source software platform to build your e-commerce solution.The elestio_prestashop resource allows the creation and management of Elestio Prestashop services. The service uses the following docker image bitnami/prestashop https://hub.docker.com/r/bitnami/prestashop
+  The PrestaShop project is a universal open-source software platform to build your e-commerce solution.The elestio_prestashop resource allows the creation and management of Elestio Prestashop services. The service uses the following docker image prestashop/prestashop https://hub.docker.com/r/prestashop/prestashop
 ---
 
 # elestio_prestashop (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" /><br>The PrestaShop project is a universal open-source software platform to build your e-commerce solution.<br><br>The **elestio_prestashop** resource allows the creation and management of Elestio Prestashop services. The service uses the following docker image [bitnami/prestashop](https://hub.docker.com/r/bitnami/prestashop)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/prestashop-logo-y89G.png" width="100" /><br>The PrestaShop project is a universal open-source software platform to build your e-commerce solution.<br><br>The **elestio_prestashop** resource allows the creation and management of Elestio Prestashop services. The service uses the following docker image [prestashop/prestashop](https://hub.docker.com/r/prestashop/prestashop)
 
 ## Example Usage
 

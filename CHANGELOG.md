@@ -261,3 +261,9 @@ Also updated examples with the new default `hetzner` server type.
 ## v0.19.4 (14 February, 2025)
 
 The firewall is now read only for some services that don't support it. For example `elestio_ci_cd_target` resource.
+
+## v0.20.0 (09 March, 2025)
+
+- Fixed some issues with the `system_auto_updates_security_patches_only_enabled` attribute.
+- If a template doesn't have a default version, the provider will now use `latest` as default.
+- Some resources are now deprecated because they are no more supported by Elestio.

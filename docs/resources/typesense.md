@@ -8,14 +8,14 @@ description: |-
 
 # elestio_typesense (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/typesense-1-OgKp.png" width="100" /><br>Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br><br>The **elestio_typesense** resource allows the creation and management of Elestio Typesense services. The service uses the following docker image [typesense/typesense](https://hub.docker.com/r/typesense/typesense)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Typesense-c5Zd.png" width="100" /><br>Typesense is a fast, typo-tolerant, fuzzy search engine for building great search experiences.<br><br>The **elestio_typesense** resource allows the creation and management of Elestio Typesense services. The service uses the following docker image [typesense/typesense](https://hub.docker.com/r/typesense/typesense)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_typesense" "example" {
   project_id    = "2500"
-  version       = "0.23.0.rc66"
+  version       = "27.0.rc34"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_typesense" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `0.23.0.rc66`.
+- `version` (String) This is the version of the software used as service. **Default** `27.0.rc34`.
 
 ### Read-Only
 

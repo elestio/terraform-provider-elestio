@@ -3,12 +3,12 @@
 page_title: "elestio_ferretdb Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  MongoDB alternative, built on Postgres. FerretDB allows you to use MongoDB drivers seamlessly with PostgreSQL as the database backend. Use all tools, drivers, UIs, and the same query language and stay open-source.The elestio_ferretdb resource allows the creation and management of Elestio FerretDB services. The service uses the following docker image ghcr.io/ferretdb/ferretdb https://hub.docker.com/r/ghcr.io/ferretdb/ferretdb
+  MongoDB alternative, built on Postgres. FerretDB allows you to use MongoDB drivers seamlessly with PostgreSQL as the database backend. Use all tools, drivers, UIs, and the same query language and stay open-source.The elestio_ferretdb resource allows the creation and management of Elestio FerretDB services. The service uses the following Docker image: https://ghcr.io/ferretdb/ferretdb.
 ---
 
 # elestio_ferretdb (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FerretDB-PgHG.png" width="100" /><br>MongoDB alternative, built on Postgres. FerretDB allows you to use MongoDB drivers seamlessly with PostgreSQL as the database backend. Use all tools, drivers, UIs, and the same query language and stay open-source.<br><br>The **elestio_ferretdb** resource allows the creation and management of Elestio FerretDB services. The service uses the following docker image [ghcr.io/ferretdb/ferretdb](https://hub.docker.com/r/ghcr.io/ferretdb/ferretdb)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FerretDB-PgHG.png" width="100" /><br>MongoDB alternative, built on Postgres. FerretDB allows you to use MongoDB drivers seamlessly with PostgreSQL as the database backend. Use all tools, drivers, UIs, and the same query language and stay open-source.<br><br>The **elestio_ferretdb** resource allows the creation and management of Elestio FerretDB services. The service uses the following Docker image: [ghcr.io/ferretdb/ferretdb](https://ghcr.io/ferretdb/ferretdb).
 
 ## Example Usage
 

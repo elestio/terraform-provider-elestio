@@ -1,6 +1,6 @@
 resource "elestio_budibase" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "3.7.2"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"

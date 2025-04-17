@@ -273,7 +273,7 @@ func NewServiceResources() []func() resource.Resource {
 				TemplateId:         185,
 				ResourceName:       "opensourcetranslate",
 				DocumentationName:  "OpenSourceTranslate",
-				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				DeprecationMessage: "This resource was replaced by elestio_osstranslate resource.",
 				Category:           "Deprecated",
 			})
 		},
@@ -282,6 +282,15 @@ func NewServiceResources() []func() resource.Resource {
 				TemplateId:         19,
 				ResourceName:       "mongodb",
 				DocumentationName:  "MongoDB",
+				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:           "Deprecated",
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:         185,
+				ResourceName:       "libretranslate",
+				DocumentationName:  "LibreTranslate",
 				DeprecationMessage: "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
 				Category:           "Deprecated",
 			})

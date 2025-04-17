@@ -1,4 +1,4 @@
-resource "elestio_libretranslate" "example" {
+resource "elestio_repman" "example" {
   project_id    = "2500"
   version       = "latest"
   provider_name = "hetzner"

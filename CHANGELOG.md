@@ -267,3 +267,16 @@ The firewall is now read only for some services that don't support it. For examp
 - Fixed some issues with the `system_auto_updates_security_patches_only_enabled` attribute.
 - If a template doesn't have a default version, the provider will now use `latest` as default.
 - Some resources are now deprecated because they are no more supported by Elestio.
+
+## v0.21.0 (17 April, 2025)
+
+Added new resources:
+
+- elestio_civicrm
+- elestio_jibri
+- elestio_omeka
+- elestio_repman
+
+Renamed resources:
+
+- elestio_libretranslate -> elestio_osstranslate

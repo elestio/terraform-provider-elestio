@@ -3,12 +3,12 @@
 page_title: "elestio_rke2 Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  The elestio_rke2 resource allows the creation and management of Elestio rke2 services.
+  RKE2, also known as RKE Government, is Rancher's next-generation Kubernetes distribution.The elestio_rke2 resource allows the creation and management of Elestio rke2 services.
 ---
 
 # elestio_rke2 (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rke2-Ij3T.png" width="100" /><br>The **elestio_rke2** resource allows the creation and management of Elestio rke2 services.
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/rke2-Ij3T.png" width="100" /><br>RKE2, also known as RKE Government, is Rancher's next-generation Kubernetes distribution.<br><br>The **elestio_rke2** resource allows the creation and management of Elestio rke2 services.
 
 ## Example Usage
 

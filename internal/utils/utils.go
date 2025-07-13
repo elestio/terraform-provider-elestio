@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	"github.com/hashicorp/terraform-plugin-framework/types"

@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/path"

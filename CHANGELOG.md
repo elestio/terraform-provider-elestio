@@ -280,3 +280,11 @@ Added new resources:
 Renamed resources:
 
 - elestio_libretranslate -> elestio_osstranslate
+
+## v0.22.0 (13 July, 2025)
+
+Fixes:
+
+- Firewall ports now display the correct enabled ports.
+- Firewall can be enabled on all services; the default is `true` unless the service template doesn't have custom ports.
+- Custom domain names are fixed and default value is `[]`.

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elestio/elestio-go-api-client"
+	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
@@ -39,16 +39,17 @@ var (
 
 type (
 	ServiceTemplate struct {
-		TemplateId         int64
-		ResourceName       string
-		DocumentationName  string
-		Description        string
-		DeprecationMessage string
-		Logo               string
-		DockerHubImage     string
-		DefaultVersion     string
-		Category           string
-		FirewallPorts      []elestio.ServiceFirewallPort
+		TemplateId             int64
+		ResourceName           string
+		DocumentationName      string
+		Description            string
+		DeprecationMessage     string
+		Logo                   string
+		DockerHubImage         string
+		DefaultVersion         string
+		Category               string
+		FirewallRules          []elestio.ServiceFirewallRule
+		HasCustomFirewallPorts bool
 	}
 
 	ServiceResource struct {
@@ -243,16 +244,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 		return
 	}
 
-	firewallEnabledSchema := schema.BoolAttribute{
-		MarkdownDescription: "Service firewall state.",
-		Computed:            true,
-	}
-
-	// Firewall is enableable only if FirewallPorts are configured
-	if len(r.FirewallPorts) > 0 {
-		firewallEnabledSchema.Optional = true
-		firewallEnabledSchema.MarkdownDescription += " **Default** `true`."
-		firewallEnabledSchema.Default = booldefault.StaticBool(true)
+	defaultCustomDomainNames, diags := types.SetValue(types.StringType, []attr.Value{})
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
 	}
 
 	resp.Schema = schema.Schema{
@@ -459,6 +454,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				// Databases & Cache do not support custom domains
 				Optional:    r.Category != "Databases & Cache",
 				Computed:    true,
+				Default:     setdefault.StaticValue(defaultCustomDomainNames),
 				ElementType: types.StringType,
 			},
 			"ssh_keys": schema.SetNestedAttribute{
@@ -692,7 +688,12 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					" `0 = Sunday`, `1 = Monday`, ..., `6 = Saturday`, `-1 = Everyday`",
 				Computed: true,
 			},
-			"firewall_enabled": firewallEnabledSchema,
+			"firewall_enabled": schema.BoolAttribute{
+				MarkdownDescription: fmt.Sprintf("Service firewall state. **Default** `%t`.", r.HasCustomFirewallPorts),
+				Optional:            true,
+				Computed:            true,
+				Default:             booldefault.StaticBool(r.HasCustomFirewallPorts),
+			},
 			"firewall_id": schema.StringAttribute{
 				MarkdownDescription: "Service firewall id.",
 				Computed:            true,
@@ -1030,7 +1031,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 	// Checks if system updates state has changed
 	systemUpdatesChanged := !state.SystemAutoUpdatesEnabled.Equal(plan.SystemAutoUpdatesEnabled)
 	// Checks if security patches state has changed (only when system updates are enabled)
-	securityPatchesChanged := plan.SystemAutoUpdatesEnabled.ValueBool() && 
+	securityPatchesChanged := plan.SystemAutoUpdatesEnabled.ValueBool() &&
 		!state.SystemAutoUpdatesSecurityPatchesOnlyEnabled.Equal(plan.SystemAutoUpdatesSecurityPatchesOnlyEnabled)
 	// It handles enabling/disabling system updates with the appropriate security patches setting
 	if systemUpdatesChanged || securityPatchesChanged {
@@ -1081,10 +1082,10 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	// Only update firewall if FirewallPorts are configured
-	if len(r.FirewallPorts) > 0 && !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
+	// Update firewall if the state changed
+	if !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
 		if plan.FirewallEnabled.ValueBool() {
-			if err := r.client.Service.EnableFirewall(service.ID, r.FirewallPorts); err != nil {
+			if err := r.client.Service.EnableFirewallWithRules(service.ID, r.FirewallRules); err != nil {
 				return nil, fmt.Errorf("failed to enable firewall: %s", err)
 			}
 		} else {
@@ -1271,7 +1272,12 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.ExternalBackupsRetainDayOfWeek = types.Int64Value(service.ExternalBackupsRetainDayOfWeek)
 	data.FirewallEnabled = utils.BoolValue(service.FirewallEnabled)
 	data.FirewallId = types.StringValue(service.FirewallID)
-	data.FirewallPorts = types.StringValue(service.FirewallPorts)
+	var firewallPorts []string
+	for _, rule := range service.FirewallRules {
+		firewallPorts = append(firewallPorts, rule.Port)
+	}
+	firewallPortsStr := strings.Join(firewallPorts, ",")
+	data.FirewallPorts = types.StringValue(firewallPortsStr)
 	data.AlertsEnabled = utils.BoolValue(service.AlertsEnabled)
 }
 
@@ -1387,8 +1393,9 @@ func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, s
 				return struct{}{}, "waiting_remote_backups_enabled", nil
 			}
 
-			// Only wait for firewall if FirewallPorts are configured
-			if len(r.FirewallPorts) > 0 && !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
+			// Always wait for firewall to be enabled if the default value is true (i.e., service has custom firewall ports)
+			// Even if user wants firewall_enabled = false, we wait for the default state first, then disable it in update
+			if r.HasCustomFirewallPorts && !utils.BoolValue(serviceR.FirewallEnabled).ValueBool() {
 				return struct{}{}, "waiting_firewall_enabled", nil
 			}
 

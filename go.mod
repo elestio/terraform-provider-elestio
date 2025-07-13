@@ -5,7 +5,7 @@ go 1.21
 toolchain go1.21.0
 
 require (
-	github.com/elestio/elestio-go-api-client v1.15.1
+	github.com/elestio/elestio-go-api-client/v2 v2.0.2
 	github.com/google/go-cmp v0.6.0
 	github.com/hashicorp/terraform-plugin-docs v0.19.4
 	github.com/hashicorp/terraform-plugin-framework v1.9.0

@@ -3,19 +3,19 @@
 page_title: "elestio_checkmate Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.The elestio_checkmate resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image bluewaveuptime/uptime_client https://hub.docker.com/r/bluewaveuptime/uptime_client
+  Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.The elestio_checkmate resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image ghcr.io/bluewave-labs/checkmate https://hub.docker.com/r/ghcr.io/bluewave-labs/checkmate
 ---
 
 # elestio_checkmate (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Checkmate-UQul.png" width="100" /><br>Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.<br><br>The **elestio_checkmate** resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image [bluewaveuptime/uptime_client](https://hub.docker.com/r/bluewaveuptime/uptime_client)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Checkmate-UQul.png" width="100" /><br>Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.<br><br>The **elestio_checkmate** resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image [ghcr.io/bluewave-labs/checkmate](https://hub.docker.com/r/ghcr.io/bluewave-labs/checkmate)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_checkmate" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "frontend-dist"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_checkmate" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `frontend-dist`.
 
 ### Read-Only
 

@@ -3,12 +3,12 @@
 page_title: "elestio_ollama Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  ChatGPT-Style Open Web UI Client for LLMs (Formerly Ollama WebUI) to Get up and running with Llama 2, Mistral, and other large language models.The elestio_ollama resource allows the creation and management of Elestio Ollama services. The service uses the following docker image ollama/ollama https://hub.docker.com/r/ollama/ollama
+  ChatGPT-Style Open Web UI Client for LLMs to get up and running with Llama 4, DeepSeek, Mistral, and other large language models.The elestio_ollama resource allows the creation and management of Elestio Ollama services. The service uses the following docker image ollama/ollama https://hub.docker.com/r/ollama/ollama
 ---
 
 # elestio_ollama (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ollama-OwRN.png" width="100" /><br>ChatGPT-Style Open Web UI Client for LLMs (Formerly Ollama WebUI) to Get up and running with Llama 2, Mistral, and other large language models.<br><br>The **elestio_ollama** resource allows the creation and management of Elestio Ollama services. The service uses the following docker image [ollama/ollama](https://hub.docker.com/r/ollama/ollama)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Ollama-OwRN.png" width="100" /><br>ChatGPT-Style Open Web UI Client for LLMs to get up and running with Llama 4, DeepSeek, Mistral, and other large language models.<br><br>The **elestio_ollama** resource allows the creation and management of Elestio Ollama services. The service uses the following docker image [ollama/ollama](https://hub.docker.com/r/ollama/ollama)
 
 ## Example Usage
 

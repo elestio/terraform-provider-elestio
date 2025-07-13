@@ -3,12 +3,12 @@
 page_title: "elestio_flowiseai Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Open source UI visual tool to build your customized LLM flow using Langchain.The elestio_flowiseai resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image elestio/flowiseai https://hub.docker.com/r/elestio/flowiseai
+  FlowiseAI is an open-source visual tool that lets you build customized LLM flows using Langchain.The elestio_flowiseai resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image elestio/flowiseai https://hub.docker.com/r/elestio/flowiseai
 ---
 
 # elestio_flowiseai (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FlowiseAI-fDvD.png" width="100" /><br>Open source UI visual tool to build your customized LLM flow using Langchain.<br><br>The **elestio_flowiseai** resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image [elestio/flowiseai](https://hub.docker.com/r/elestio/flowiseai)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/FlowiseAI-fDvD.png" width="100" /><br>FlowiseAI is an open-source visual tool that lets you build customized LLM flows using Langchain.<br><br>The **elestio_flowiseai** resource allows the creation and management of Elestio FlowiseAI services. The service uses the following docker image [elestio/flowiseai](https://hub.docker.com/r/elestio/flowiseai)
 
 ## Example Usage
 

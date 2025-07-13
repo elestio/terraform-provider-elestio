@@ -1,4 +1,4 @@
-resource "elestio_gophish" "example" {
+resource "elestio_bugsink" "example" {
   project_id    = "2500"
   version       = "latest"
   provider_name = "hetzner"

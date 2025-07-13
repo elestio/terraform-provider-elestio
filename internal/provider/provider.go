@@ -307,6 +307,26 @@ func NewServiceResources() []func() resource.Resource {
 				HasCustomFirewallPorts: false,
 			})
 		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:             401,
+				ResourceName:           "gophish",
+				DocumentationName:      "Gophish",
+				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:               "Deprecated",
+				HasCustomFirewallPorts: false,
+			})
+		},
+		func() resource.Resource {
+			return NewServiceResource(&ServiceTemplate{
+				TemplateId:             375,
+				ResourceName:           "surrealdb",
+				DocumentationName:      "SurrealDB",
+				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
+				Category:               "Deprecated",
+				HasCustomFirewallPorts: false,
+			})
+		},
 	}
 
 	// Unmarshal the bytes into the User struct

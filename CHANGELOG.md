@@ -288,3 +288,12 @@ Fixes:
 - Firewall ports now display the correct enabled ports.
 - Firewall can be enabled on all services; the default is `true` unless the service template doesn't have custom ports.
 - Custom domain names are fixed and default value is `[]`.
+
+## v0.23.0 (13 July, 2025)
+
+Services Update:
+
+- Introduced several new services and updated existing ones.
+- Deprecated the following services due to discontinued support:
+  - `gophish`
+  - `surrealdb`

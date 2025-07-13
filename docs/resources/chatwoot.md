@@ -3,12 +3,12 @@
 page_title: "elestio_chatwoot Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Chatwoot is an open-source, alternative customer engagement suite.The elestio_chatwoot resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image chatwoot/chatwoot https://hub.docker.com/r/chatwoot/chatwoot
+  Chatwoot is a modern open-source customer engagement suite — a powerful alternative to Intercom, Zendesk, and Salesforce Service Cloud.The elestio_chatwoot resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image chatwoot/chatwoot https://hub.docker.com/r/chatwoot/chatwoot
 ---
 
 # elestio_chatwoot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br>Chatwoot is an open-source, alternative customer engagement suite.<br><br>The **elestio_chatwoot** resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image [chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/brand-d6ec4f18194acc9e590c511b9ae51974-7fgU.svg" width="100" /><br>Chatwoot is a modern open-source customer engagement suite — a powerful alternative to Intercom, Zendesk, and Salesforce Service Cloud.<br><br>The **elestio_chatwoot** resource allows the creation and management of Elestio Chatwoot services. The service uses the following docker image [chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot)
 
 ## Example Usage
 

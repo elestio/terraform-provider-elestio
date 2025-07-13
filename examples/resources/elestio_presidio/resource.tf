@@ -1,6 +1,6 @@
-resource "elestio_friendica" "example" {
+resource "elestio_presidio" "example" {
   project_id    = "2500"
-  version       = "stable"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"

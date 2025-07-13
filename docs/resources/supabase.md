@@ -3,12 +3,12 @@
 page_title: "elestio_supabase Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Supabase is an open source alternative to Firebase.The elestio_supabase resource allows the creation and management of Elestio Supabase services. The service uses the following docker image supabase/studio https://hub.docker.com/r/supabase/studio
+  Supabase is an open-source alternative to Firebase, providing all the backend services you need to build modern apps.The elestio_supabase resource allows the creation and management of Elestio Supabase services. The service uses the following docker image supabase/studio https://hub.docker.com/r/supabase/studio
 ---
 
 # elestio_supabase (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" /><br>Supabase is an open source alternative to Firebase.<br><br>The **elestio_supabase** resource allows the creation and management of Elestio Supabase services. The service uses the following docker image [supabase/studio](https://hub.docker.com/r/supabase/studio)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/supabase-TAiY.png" width="100" /><br>Supabase is an open-source alternative to Firebase, providing all the backend services you need to build modern apps.<br><br>The **elestio_supabase** resource allows the creation and management of Elestio Supabase services. The service uses the following docker image [supabase/studio](https://hub.docker.com/r/supabase/studio)
 
 ## Example Usage
 

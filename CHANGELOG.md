@@ -297,3 +297,7 @@ Services Update:
 - Deprecated the following services due to discontinued support:
   - `gophish`
   - `surrealdb`
+
+## v0.23.1 (13 July, 2025)
+
+Updated dependencies to latest versions

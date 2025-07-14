@@ -2,13 +2,9 @@ package provider
 
 import (
 	"context"
-	_ "embed"
-	"encoding/json"
 	"os"
-	"strings"
 
 	"github.com/elestio/elestio-go-api-client/v2"
-	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
@@ -19,25 +15,9 @@ import (
 
 var (
 	_ provider.Provider = &ElestioProvider{}
-
-	//go:embed templates.json
-	templatesListBytes []byte
 )
 
 type (
-	TemplatesList struct {
-		Templates []struct {
-			ID                  int64  `json:"id"`
-			Name                string `json:"title"`
-			Category            string `json:"category"`
-			Description         string `json:"description"`
-			Logo                string `json:"mainImage"`
-			DockerHubImage      string `json:"dockerhub_image"`
-			DockerHubDefaultTag string `json:"dockerhub_default_tag"`
-			FirewallPorts       string `json:"firewallPorts"`
-		} `json:"templates"`
-	}
-
 	ElestioProvider struct {
 		// version is set to the provider version on release, "dev" when the
 		// provider is built and ran locally, and "test" when running acceptance
@@ -183,252 +163,14 @@ func New(version string) func() provider.Provider {
 }
 
 func NewServiceResources() []func() resource.Resource {
-	servicesResources := []func() resource.Resource{
-		// Deprecated service resources
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:        0,
-				ResourceName:      "service",
-				DocumentationName: "Service",
-				DeprecationMessage: "Use elestio_<SERVICE> resources instead. " +
-					"This resource will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:        11,
-				ResourceName:      "postgres",
-				DocumentationName: "PostgreSQL",
-				DeprecationMessage: "Use elestio_postgresql resource instead. " +
-					"This resource will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             236,
-				ResourceName:           "linux_desktop",
-				DocumentationName:      "Linux-desktop",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             244,
-				ResourceName:           "filerun",
-				DocumentationName:      "FileRun",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             360,
-				ResourceName:           "chaskiq",
-				DocumentationName:      "Chaskiq",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             157,
-				ResourceName:           "airbyte",
-				DocumentationName:      "Airbyte",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             347,
-				ResourceName:           "cal_com",
-				DocumentationName:      "Cal.com",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             342,
-				ResourceName:           "windmill",
-				DocumentationName:      "Windmill",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             112,
-				ResourceName:           "jupyter",
-				DocumentationName:      "Jupyter",
-				DeprecationMessage:     "This resource was replaced by elestio_jupyter_notebook resource.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             185,
-				ResourceName:           "opensourcetranslate",
-				DocumentationName:      "OpenSourceTranslate",
-				DeprecationMessage:     "This resource was replaced by elestio_osstranslate resource.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             19,
-				ResourceName:           "mongodb",
-				DocumentationName:      "MongoDB",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             185,
-				ResourceName:           "libretranslate",
-				DocumentationName:      "LibreTranslate",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             401,
-				ResourceName:           "gophish",
-				DocumentationName:      "Gophish",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-		func() resource.Resource {
-			return NewServiceResource(&ServiceTemplate{
-				TemplateId:             375,
-				ResourceName:           "surrealdb",
-				DocumentationName:      "SurrealDB",
-				DeprecationMessage:     "This resource is no more supported by Elestio and will be removed in the next major version of the provider.",
-				Category:               "Deprecated",
-				HasCustomFirewallPorts: false,
-			})
-		},
-	}
+	resources := GetDeprecatedServiceResources()
 
-	// Unmarshal the bytes into the User struct
-	var templatesList TemplatesList
-	err := json.Unmarshal(templatesListBytes, &templatesList)
+	// Generate service resources from templates
+	templateResources, err := GenerateServiceResourcesFromTemplates()
 	if err != nil {
 		panic(err)
 	}
 
-	for _, template := range templatesList.Templates {
-		template := template // avoid iteration with same pointer
-
-		// Skip full stack templates
-		if template.Category == "Full Stack" {
-			continue
-		}
-
-		var templateFirewallRules []elestio.ServiceFirewallRule
-		// Track if the template has custom firewall ports (beyond default 22 and 4242)
-		hasCustomFirewallPorts := len(template.FirewallPorts) > 0
-
-		// Track which default ports are already defined
-		has22TCP := false
-		has4242UDP := false
-
-		// Exemple of the template.FirewallPorts string: "80,443,22000,22000/udp"
-		if hasCustomFirewallPorts {
-			ports := strings.Split(template.FirewallPorts, ",")
-
-			for _, p := range ports {
-				var port string
-				var protocol string
-
-				// Check if port is TCP or UDP
-				if strings.Contains(p, "/udp") {
-					port = strings.Split(p, "/")[0]
-					protocol = elestio.ServiceFirewallRuleProtocolUDP
-				} else {
-					port = p
-					protocol = elestio.ServiceFirewallRuleProtocolTCP
-				}
-
-				// Remove whitespace if there is misstakes in the template
-				cleanPort := strings.TrimSpace(port)
-
-				// Check if this is one of our default ports
-				if cleanPort == "22" && protocol == elestio.ServiceFirewallRuleProtocolTCP {
-					has22TCP = true
-				}
-				if cleanPort == "4242" && protocol == elestio.ServiceFirewallRuleProtocolUDP {
-					has4242UDP = true
-				}
-
-				templateFirewallRules = append(templateFirewallRules, elestio.ServiceFirewallRule{
-					Port:     cleanPort,
-					Protocol: protocol,
-					Type:     elestio.ServiceFirewallRuleTypeInput,
-					Targets:  []string{"0.0.0.0/0"},
-				})
-			}
-		}
-
-		if !has22TCP {
-			templateFirewallRules = append(templateFirewallRules, elestio.ServiceFirewallRule{
-				Port:     "22",
-				Protocol: elestio.ServiceFirewallRuleProtocolTCP,
-				Type:     elestio.ServiceFirewallRuleTypeInput,
-				Targets:  []string{"0.0.0.0/0"},
-			})
-		}
-		if !has4242UDP {
-			templateFirewallRules = append(templateFirewallRules, elestio.ServiceFirewallRule{
-				Port:     "4242",
-				Protocol: elestio.ServiceFirewallRuleProtocolUDP,
-				Type:     elestio.ServiceFirewallRuleTypeInput,
-				Targets:  []string{"0.0.0.0/0"},
-			})
-		}
-
-		servicesResources = append(
-			servicesResources,
-			func() resource.Resource {
-				return NewServiceResource(&ServiceTemplate{
-					TemplateId:        template.ID,
-					ResourceName:      utils.CleanString(template.Name),
-					DocumentationName: template.Name,
-					Description:       template.Description,
-					Logo:              template.Logo,
-					DockerHubImage:    template.DockerHubImage,
-					DefaultVersion: func() string {
-						if template.DockerHubDefaultTag == "" {
-							return "latest"
-						}
-						return template.DockerHubDefaultTag
-					}(),
-					Category:               template.Category,
-					FirewallRules:          templateFirewallRules,
-					HasCustomFirewallPorts: hasCustomFirewallPorts,
-				})
-			},
-		)
-	}
-
-	return servicesResources
+	resources = append(resources, templateResources...)
+	return resources
 }

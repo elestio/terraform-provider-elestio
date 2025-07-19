@@ -301,3 +301,7 @@ Services Update:
 ## v0.23.1 (13 July, 2025)
 
 Updated dependencies to latest versions
+
+## Work in progress
+
+- Cleaned the code related to public SSH keys.

@@ -4,10 +4,11 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/models"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
-	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/setdefault"
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
@@ -15,23 +16,18 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 )
 
-type SSHPublicKeyModel struct {
-	Username types.String `tfsdk:"username"`
-	KeyData  types.String `tfsdk:"key_data"`
+func SSHPublicKeysDefaultValue() types.Set {
+	return types.SetValueMust(types.ObjectType{AttrTypes: models.SSHPublicKeyAttrTypes}, []attr.Value{})
 }
-
-var sshPublicKeyAttryTypes = map[string]attr.Type{
-	"username": types.StringType,
-	"key_data": types.StringType,
-}
-
-var sshPublicKeysDefaultValue = types.SetValueMust(types.ObjectType{AttrTypes: sshPublicKeyAttryTypes}, []attr.Value{})
 
 var sshPublicKeysSchema = schema.SetNestedAttribute{
 	MarkdownDescription: "You can add Public Keys to your resource to access it via the SSH protocol.",
 	Optional:            true,
 	Computed:            true,
-	Default:             setdefault.StaticValue(sshPublicKeysDefaultValue),
+	Default:             setdefault.StaticValue(SSHPublicKeysDefaultValue()),
+	Validators: []validator.Set{
+		validators.SSHPublicKeysUniqueUsernames(),
+	},
 	NestedObject: schema.NestedAttributeObject{
 		Attributes: map[string]schema.Attribute{
 			"username": schema.StringAttribute{
@@ -51,54 +47,30 @@ var sshPublicKeysSchema = schema.SetNestedAttribute{
 	},
 }
 
-// TODO: Move this check to a validator file with the proper format
-func ensureSSHPublicKeysUsernamesAreUnique(ctx *context.Context, data *basetypes.SetValue, diags *diag.Diagnostics) {
-	var keys []SSHPublicKeyModel
-
-	diags.Append(data.ElementsAs(*ctx, &keys, true)...)
-	if diags.HasError() {
-		return
-	}
-
-	keysMap := make(map[string]SSHPublicKeyModel)
-	for _, key := range keys {
-		if duplicatedUsername, exists := keysMap[key.Username.ValueString()]; exists {
-			diags.AddAttributeError(
-				path.Root("ssh_public_keys"),
-				"Invalid Attribute Configuration",
-				"SSH Public Key Username must be unique per ressource."+
-					fmt.Sprintf(" The following username is duplicated: %s", duplicatedUsername.Username.ValueString()),
-			)
-			return
-		}
-		keysMap[key.Username.ValueString()] = key
-	}
-}
-
-func compareSSHPublicKeys(ctx *context.Context, state *basetypes.SetValue, plan *basetypes.SetValue, diags *diag.Diagnostics) (toAdd []SSHPublicKeyModel, toUpdate []SSHPublicKeyModel, toRemove []SSHPublicKeyModel) {
-	var stateKeys []SSHPublicKeyModel
+func compareSSHPublicKeys(ctx *context.Context, state *basetypes.SetValue, plan *basetypes.SetValue, diags *diag.Diagnostics) (toAdd []models.SSHPublicKeyModel, toUpdate []models.SSHPublicKeyModel, toRemove []models.SSHPublicKeyModel) {
+	var stateKeys []models.SSHPublicKeyModel
 	diags.Append(state.ElementsAs(*ctx, &stateKeys, true)...)
 	if diags.HasError() {
 		return nil, nil, nil
 	}
-	var planKeys []SSHPublicKeyModel
+	var planKeys []models.SSHPublicKeyModel
 	diags.Append(plan.ElementsAs(*ctx, &planKeys, true)...)
 	if diags.HasError() {
 		return nil, nil, nil
 	}
 
-	toAdd, toUpdate, toRemove = []SSHPublicKeyModel{}, []SSHPublicKeyModel{}, []SSHPublicKeyModel{}
+	toAdd, toUpdate, toRemove = []models.SSHPublicKeyModel{}, []models.SSHPublicKeyModel{}, []models.SSHPublicKeyModel{}
 
 	if len(stateKeys) == 0 && len(planKeys) == 0 {
 		return toAdd, toUpdate, toRemove
 	}
 
 	// Usernames are unique and can be used as map index
-	stateKeysMap := make(map[string]SSHPublicKeyModel)
+	stateKeysMap := make(map[string]models.SSHPublicKeyModel)
 	for _, obj := range stateKeys {
 		stateKeysMap[obj.Username.ValueString()] = obj
 	}
-	planKeysMap := make(map[string]SSHPublicKeyModel)
+	planKeysMap := make(map[string]models.SSHPublicKeyModel)
 	for _, obj := range planKeys {
 		planKeysMap[obj.Username.ValueString()] = obj
 	}
@@ -122,4 +94,60 @@ func compareSSHPublicKeys(ctx *context.Context, state *basetypes.SetValue, plan 
 	}
 
 	return toAdd, toUpdate, toRemove
+}
+
+func applySSHPublicKeyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate, keysToRemove []models.SSHPublicKeyModel, providerName string, client *elestio.Client, serviceResource *ServiceResource, service *elestio.Service) error {
+	// Remove keys first
+	for _, key := range keysToRemove {
+		if err := client.Service.RemoveSSHPublicKey(serviceID, key.Username.ValueString()); err != nil {
+			return fmt.Errorf("failed to remove ssh public key: %s", err)
+		}
+	}
+
+	// Update keys (remove old, add new)
+	for _, key := range keysToUpdate {
+		if err := client.Service.RemoveSSHPublicKey(serviceID, key.Username.ValueString()); err != nil {
+			return fmt.Errorf("failed to update (remove the old one) ssh public key: %s", err)
+		}
+		if err := client.Service.AddSSHPublicKey(serviceID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
+			return fmt.Errorf("failed to update (add the new one) ssh public key: %s", err)
+		}
+	}
+
+	// Add new keys
+	for _, key := range keysToAdd {
+		if err := client.Service.AddSSHPublicKey(serviceID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
+			return fmt.Errorf("failed to add ssh public key: %s", err)
+		}
+	}
+
+	keyWasUpdated := len(keysToAdd) > 0 || len(keysToUpdate) > 0 || len(keysToRemove) > 0
+
+	// Scaleway does not support updating ssh keys without rebooting the server.
+	if keyWasUpdated && providerName == "scaleway" {
+		if err := client.Service.RebootServer(serviceID); err != nil {
+			return fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
+		}
+		if _, err := serviceResource.waitServerReboot(ctx, service); err != nil {
+			return fmt.Errorf("failed to wait server reboot to update scaleway ssh keys: %s", err)
+		}
+	}
+
+	return nil
+}
+
+// convertElestioSSHKeysToTerraform converts SSH keys from Elestio API format to Terraform format
+func convertElestioSSHKeysToTerraform(ctx context.Context, elestioSSHKeys []elestio.ServiceSSHPublicKey, diags *diag.Diagnostics) types.Set {
+	sshPublicKeys := make([]models.SSHPublicKeyModel, len(elestioSSHKeys))
+	for i, s := range elestioSSHKeys {
+		sshPublicKeys[i] = models.SSHPublicKeyModel{
+			Username: types.StringValue(s.Name),
+			KeyData:  types.StringValue(s.Key),
+		}
+	}
+
+	setSSHPublicKeys, d := types.SetValueFrom(ctx, types.ObjectType{AttrTypes: models.SSHPublicKeyAttrTypes}, sshPublicKeys)
+	diags.Append(d...)
+
+	return setSSHPublicKeys
 }

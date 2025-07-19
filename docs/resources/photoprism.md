@@ -46,7 +46,7 @@ resource "elestio_photoprism" "example" {
 - `local_field_sensitive` (Dynamic, Sensitive) Same as `local_field` but the value is sensitive.
 - `remote_backups_enabled` (Boolean) Service remote backups state. **Default** `true`.
 - `server_name` (String) Service server name. Max length 60 characters, and can only include lowercase letters a-z, digits 0-9, and hyphens (-). Must be unique within the project. Requires replace to change it.
-- `ssh_keys` (Attributes Set) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
+- `ssh_keys` (Attributes Set, Deprecated) This attribute allows you to add SSH keys to your service. (see [below for nested schema](#nestedatt--ssh_keys))
 - `ssh_public_keys` (Attributes Set) You can add Public Keys to your resource to access it via the SSH protocol. (see [below for nested schema](#nestedatt--ssh_public_keys))
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.

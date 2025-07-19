@@ -76,22 +76,6 @@ type ConfigModel struct {
 	RemoveResponseHeaders types.Set           `tfsdk:"remove_response_headers"`
 }
 
-// var configAttrTypes = map[string]attr.Type{
-// 	"host_header":              types.StringType,
-// 	"access_logs_enabled":      types.BoolType,
-// 	"force_https_enabled":      types.BoolType,
-// 	"ip_rate_limit_per_second": types.Int64Type,
-// 	"ip_rate_limit_enabled":    types.BoolType,
-// 	"output_cache_in_seconds":  types.Int64Type,
-// 	"sticky_session_enabled":   types.BoolType,
-// 	"proxy_protocol_enabled":   types.BoolType,
-// 	"ssl_domains":              types.SetType{ElemType: types.StringType},
-// 	"forward_rules":            types.SetType{ElemType: types.ObjectType{AttrTypes: forwardRuleAttrTypes}},
-// 	"output_headers":           types.SetType{ElemType: types.ObjectType{AttrTypes: outputHeaderAttrTypes}},
-// 	"target_services":          types.SetType{ElemType: types.StringType},
-// 	"remove_response_headers":  types.SetType{ElemType: types.StringType},
-// }
-
 type ForwardRuleModel struct {
 	Port           types.String `tfsdk:"port"`
 	Protocol       types.String `tfsdk:"protocol"`
@@ -116,20 +100,13 @@ var outputHeaderAttrTypes = map[string]attr.Type{
 	"value": types.StringType,
 }
 
-func (r *LoadBalancerResource) Metadata(ctx context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
-	resp.TypeName = req.ProviderTypeName + "_load_balancer"
+func SSLDomainsDefaultValue() types.Set {
+	set, _ := types.SetValue(types.StringType, []attr.Value{})
+	return set
 }
 
-func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
-	var diags diag.Diagnostics
-
-	defaultSSLDomains, diags := types.SetValue(types.StringType, []attr.Value{})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
-	defaultForwardRules, diags := types.SetValue(types.ObjectType{AttrTypes: forwardRuleAttrTypes}, []attr.Value{
+func ForwardRulesDefaultValue() types.Set {
+	set, _ := types.SetValue(types.ObjectType{AttrTypes: forwardRuleAttrTypes}, []attr.Value{
 		types.ObjectValueMust(forwardRuleAttrTypes, map[string]attr.Value{
 			"port":            types.StringValue("80"),
 			"protocol":        types.StringValue("HTTP"),
@@ -143,23 +120,24 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 			"target_protocol": types.StringValue("HTTP"),
 		}),
 	})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
+	return set
+}
 
-	defaultOutputHeaders, diags := types.SetValue(types.ObjectType{AttrTypes: outputHeaderAttrTypes}, []attr.Value{})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
+func OutputHeadersDefaultValue() types.Set {
+	set, _ := types.SetValue(types.ObjectType{AttrTypes: outputHeaderAttrTypes}, []attr.Value{})
+	return set
+}
 
-	defaultRemoveResponseHeaders, diags := types.SetValue(types.StringType, []attr.Value{})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
+func RemoveResponseHeadersDefaultValue() types.Set {
+	set, _ := types.SetValue(types.StringType, []attr.Value{})
+	return set
+}
 
+func (r *LoadBalancerResource) Metadata(ctx context.Context, req resource.MetadataRequest, resp *resource.MetadataResponse) {
+	resp.TypeName = req.ProviderTypeName + "_load_balancer"
+}
+
+func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		MarkdownDescription: "Load balancer resource",
 
@@ -273,15 +251,15 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						MarkdownDescription: "SSL domains",
 						Optional:            true,
 						Computed:            true,
-						Default:             setdefault.StaticValue(defaultSSLDomains),
+						Default:             setdefault.StaticValue(SSLDomainsDefaultValue()),
 						ElementType:         types.StringType,
 					},
 					"forward_rules": schema.SetNestedAttribute{
 						MarkdownDescription: "Forward Rules." +
-							fmt.Sprintf(" </br>Default value: `%+v`", defaultForwardRules),
+							fmt.Sprintf(" </br>Default value: `%+v`", ForwardRulesDefaultValue()),
 						Optional: true,
 						Computed: true,
-						Default:  setdefault.StaticValue(defaultForwardRules),
+						Default:  setdefault.StaticValue(ForwardRulesDefaultValue()),
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"protocol": schema.StringAttribute{
@@ -315,7 +293,7 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						MarkdownDescription: "Output headers",
 						Optional:            true,
 						Computed:            true,
-						Default:             setdefault.StaticValue(defaultOutputHeaders),
+						Default:             setdefault.StaticValue(OutputHeadersDefaultValue()),
 						NestedObject: schema.NestedAttributeObject{
 							Attributes: map[string]schema.Attribute{
 								"key": schema.StringAttribute{
@@ -343,7 +321,7 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 						MarkdownDescription: "Remove response headers",
 						Optional:            true,
 						Computed:            true,
-						Default:             setdefault.StaticValue(defaultRemoveResponseHeaders),
+						Default:             setdefault.StaticValue(RemoveResponseHeadersDefaultValue()),
 						ElementType:         types.StringType,
 					},
 				},

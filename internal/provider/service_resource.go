@@ -126,16 +126,9 @@ type (
 	}
 )
 
-type SSHKeyModel struct {
-	// Deprecated: replaced by SSHPublicKeyModel
-	KeyName   types.String `tfsdk:"key_name"`
-	PublicKey types.String `tfsdk:"public_key"`
-}
-
-var sshKeyAttryTypes = map[string]attr.Type{
-	// Deprecated: replaced by sshPublicKeyAttryTypes
-	"key_name":   types.StringType,
-	"public_key": types.StringType,
+func CustomDomainNamesDefaultValue() types.Set {
+	set, _ := types.SetValue(types.StringType, []attr.Value{})
+	return set
 }
 
 type AdminModel struct {
@@ -144,7 +137,7 @@ type AdminModel struct {
 	Password types.String `tfsdk:"password"`
 }
 
-var adminAttryTypes = map[string]attr.Type{
+var adminAttrTypes = map[string]attr.Type{
 	"url":      types.StringType,
 	"user":     types.StringType,
 	"password": types.StringType,
@@ -158,7 +151,7 @@ type DatabaseAdminModel struct {
 	Command  types.String `tfsdk:"command"`
 }
 
-var databaseAdminAttryTypes = map[string]attr.Type{
+var databaseAdminAttrTypes = map[string]attr.Type{
 	"host":     types.StringType,
 	"port":     types.StringType,
 	"user":     types.StringType,
@@ -236,18 +229,6 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 	// Add service dockerhub image
 	if r.DockerHubImage != "" {
 		schemaMardownDescription += fmt.Sprintf(" The service uses the following docker image [%s](https://hub.docker.com/r/%s)", r.DockerHubImage, r.DockerHubImage)
-	}
-
-	defaultSSHKeys, diags := types.SetValue(types.ObjectType{AttrTypes: sshKeyAttryTypes}, []attr.Value{})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
-	}
-
-	defaultCustomDomainNames, diags := types.SetValue(types.StringType, []attr.Value{})
-	resp.Diagnostics.Append(diags...)
-	if resp.Diagnostics.HasError() {
-		return
 	}
 
 	resp.Schema = schema.Schema{
@@ -454,35 +435,10 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				// Databases & Cache do not support custom domains
 				Optional:    r.Category != "Databases & Cache",
 				Computed:    true,
-				Default:     setdefault.StaticValue(defaultCustomDomainNames),
+				Default:     setdefault.StaticValue(CustomDomainNamesDefaultValue()),
 				ElementType: types.StringType,
 			},
-			"ssh_keys": schema.SetNestedAttribute{
-				MarkdownDescription: "This attribute allows you to add SSH keys to your service.",
-				Optional:            true,
-				Computed:            true,
-				Default:             setdefault.StaticValue(defaultSSHKeys),
-				NestedObject: schema.NestedAttributeObject{
-					Attributes: map[string]schema.Attribute{
-						"key_name": schema.StringAttribute{
-							MarkdownDescription: "SSH Key Name.",
-							Required:            true,
-						},
-						"public_key": schema.StringAttribute{
-							MarkdownDescription: "SSH Public Key." +
-								"The SSH public key should only contain two parts separated by a space." +
-								" Example: `ssh-rsa AAaCfa...WAqDUNs=`." +
-								" You should not include the username, hostname, or comment.",
-							Required: true,
-							Validators: []validator.String{
-								validators.IsSSHPublicKey(),
-							},
-							DeprecationMessage: "This attribute is deprecated and will be removed in a future version." +
-								" Please use `ssh_public_keys` instead.",
-						},
-					},
-				},
-			},
+			"ssh_keys":        sshKeysSchema,
 			"ssh_public_keys": sshPublicKeysSchema,
 			"country": schema.StringAttribute{
 				MarkdownDescription: "Service country.",
@@ -752,9 +708,6 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 		)
 		return
 	}
-
-	// TODO: Move this check to a validator file with the proper format
-	ensureSSHPublicKeysUsernamesAreUnique(&ctx, &data.SSHPublicKeys, &resp.Diagnostics)
 }
 
 func (r *ServiceResource) Configure(ctx context.Context, req resource.ConfigureRequest, resp *resource.ConfigureResponse) {
@@ -1136,36 +1089,8 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		return nil, fmt.Errorf("failed to compare ssh public keys from state to plan")
 	}
 
-	for _, key := range keysToRemove {
-		if err := r.client.Service.RemoveSSHPublicKey(service.ID, key.Username.ValueString()); err != nil {
-			return nil, fmt.Errorf("failed to remove ssh public key: %s", err)
-		}
-	}
-
-	for _, key := range keysToUpdate {
-		if err := r.client.Service.RemoveSSHPublicKey(service.ID, key.Username.ValueString()); err != nil {
-			return nil, fmt.Errorf("failed to update (remove the old one) ssh public key: %s", err)
-		}
-		if err := r.client.Service.AddSSHPublicKey(service.ID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
-			return nil, fmt.Errorf("failed to update (add the new one) ssh public key: %s", err)
-		}
-	}
-
-	for _, key := range keysToAdd {
-		if err := r.client.Service.AddSSHPublicKey(service.ID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
-			return nil, fmt.Errorf("failed to add ssh public key: %s", err)
-		}
-	}
-
-	// Scaleway does not support updating ssh keys without rebooting the server.
-	keyWasUpdated := len(keysToAdd) > 0 || len(keysToUpdate) > 0 || len(keysToRemove) > 0
-	if keyWasUpdated && plan.ProviderName.ValueString() == "scaleway" {
-		if err := r.client.Service.RebootServer(service.ID); err != nil {
-			return nil, fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
-		}
-		if _, err := r.waitServerReboot(ctx, service); err != nil {
-			return nil, fmt.Errorf("failed to wait server reboot to update scaleway ssh keys: %s", err)
-		}
+	if err := applySSHPublicKeyChanges(ctx, service.ID, keysToAdd, keysToUpdate, keysToRemove, plan.ProviderName.ValueString(), r.client, r, service); err != nil {
+		return nil, err
 	}
 
 	service, err := r.client.Service.Get(service.ProjectID, service.ID)
@@ -1199,25 +1124,16 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.IPV6 = types.StringValue(service.IPV6)
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
-	sshPublicKeys := make([]SSHPublicKeyModel, len(service.SSHPublicKeys))
-	for i, s := range service.SSHPublicKeys {
-		sshPublicKeys[i] = SSHPublicKeyModel{
-			Username: types.StringValue(s.Name),
-			KeyData:  types.StringValue(s.Key),
-		}
-	}
-	setSSHPublicKeys, d := types.SetValueFrom(ctx, types.ObjectType{AttrTypes: sshPublicKeyAttryTypes}, sshPublicKeys)
-	diags.Append(d...)
+	data.SSHPublicKeys = convertElestioSSHKeysToTerraform(ctx, service.SSHPublicKeys, diags)
 	if diags.HasError() {
 		return
 	}
-	data.SSHPublicKeys = setSSHPublicKeys
 	data.Country = types.StringValue(service.Country)
 	data.City = types.StringValue(service.City)
 	data.AdminUser = types.StringValue(service.AdminUser)
 	data.RootAppPath = types.StringValue(service.RootAppPath)
 	data.Env = utils.MapStringToMapType(service.Env, diags)
-	data.Admin, d = types.ObjectValue(adminAttryTypes, map[string]attr.Value{
+	data.Admin, d = types.ObjectValue(adminAttrTypes, map[string]attr.Value{
 		"url":      types.StringValue(service.Admin.URL),
 		"user":     types.StringValue(service.Admin.User),
 		"password": types.StringValue(service.Admin.Password),
@@ -1226,7 +1142,7 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	if diags.HasError() {
 		return
 	}
-	data.DatabaseAdmin, d = types.ObjectValue(databaseAdminAttryTypes, map[string]attr.Value{
+	data.DatabaseAdmin, d = types.ObjectValue(databaseAdminAttrTypes, map[string]attr.Value{
 		"host":     types.StringValue(service.DatabaseAdmin.Host),
 		"port":     types.StringValue(service.DatabaseAdmin.Port),
 		"user":     types.StringValue(service.DatabaseAdmin.User),

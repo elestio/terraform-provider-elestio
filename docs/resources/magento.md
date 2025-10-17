@@ -3,19 +3,19 @@
 page_title: "elestio_magento Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. The elestio_magento resource allows the creation and management of Elestio Magento services. The service uses the following docker image bitnami/magento https://hub.docker.com/r/bitnami/magento
+  Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. The elestio_magento resource allows the creation and management of Elestio Magento services. The service uses the following docker image magento/magento-cloud-docker-php https://hub.docker.com/r/magento/magento-cloud-docker-php
 ---
 
 # elestio_magento (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br>Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br><br>The **elestio_magento** resource allows the creation and management of Elestio Magento services. The service uses the following docker image [bitnami/magento](https://hub.docker.com/r/bitnami/magento)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Magento-logo-big-YpBS.png" width="100" /><br>Magento open-source software delivers basic e-commerce capabilities that allow you to build a unique online store from the ground up. <br><br>The **elestio_magento** resource allows the creation and management of Elestio Magento services. The service uses the following docker image [magento/magento-cloud-docker-php](https://hub.docker.com/r/magento/magento-cloud-docker-php)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_magento" "example" {
   project_id    = "2500"
-  version       = "2"
+  version       = "8.4-fpm-1.4.4"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_magento" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `2`.
+- `version` (String) This is the version of the software used as service. **Default** `8.4-fpm-1.4.4`.
 
 ### Read-Only
 

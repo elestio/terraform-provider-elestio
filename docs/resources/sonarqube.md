@@ -3,19 +3,19 @@
 page_title: "elestio_sonarqube Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  SonarQube is an open-source platform that reveals the health of an application and highlights new issues.The elestio_sonarqube resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image bitnami/sonarqube https://hub.docker.com/r/bitnami/sonarqube
+  SonarQube is an open-source platform that reveals the health of an application and highlights new issues.The elestio_sonarqube resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image sonarqube https://hub.docker.com/r/sonarqube
 ---
 
 # elestio_sonarqube (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br>SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br><br>The **elestio_sonarqube** resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image [bitnami/sonarqube](https://hub.docker.com/r/bitnami/sonarqube)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Sonarqube-uUXv.png" width="100" /><br>SonarQube is an open-source platform that reveals the health of an application and highlights new issues.<br><br>The **elestio_sonarqube** resource allows the creation and management of Elestio SonarQube services. The service uses the following docker image [sonarqube](https://hub.docker.com/r/sonarqube)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_sonarqube" "example" {
   project_id    = "2500"
-  version       = "9"
+  version       = "community"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"
@@ -51,7 +51,7 @@ resource "elestio_sonarqube" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `9`.
+- `version` (String) This is the version of the software used as service. **Default** `community`.
 
 ### Read-Only
 

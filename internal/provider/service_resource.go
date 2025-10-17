@@ -302,7 +302,8 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			},
 			"version": version,
 			"provider_name": schema.StringAttribute{
-				MarkdownDescription: "The name of the provider to use to host the service." +
+				MarkdownDescription: "The name of the provider to use to host the service (must be lowercase)." +
+					" Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`." +
 					" You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types)." +
 					" Requires replace to change it.",
 				Required: true,
@@ -311,7 +312,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 					stringplanmodifier.RequiresReplace(),
 				},
 				Validators: []validator.String{
-					stringvalidator.OneOf("hetzner", "do", "lightsail", "linode", "vultr", "scaleway"),
+					validators.IsLowercase(),
 				},
 			},
 			"datacenter": schema.StringAttribute{
@@ -743,23 +744,17 @@ func (r *ServiceResource) ModifyPlan(ctx context.Context, req resource.ModifyPla
 		return
 	}
 
-	isConfigValid, err := r.client.Service.ValidateConfig(elestio.ValidateConfigRequest{
-		TemplateId:   r.TemplateId,
-		ProviderName: plan.ProviderName.ValueString(),
-		Datacenter:   plan.Datacenter.ValueString(),
-		ServerType:   plan.ServerType.ValueString(),
-	})
-	if err != nil {
+	if err := validateProviderConfig(
+		ctx,
+		r.client,
+		r.TemplateId,
+		plan.ProviderName.ValueString(),
+		plan.Datacenter.ValueString(),
+		plan.ServerType.ValueString(),
+	); err != nil {
 		resp.Diagnostics.AddError(
-			"Error Validating Config",
-			fmt.Sprintf("Unable to validate config, got error: %s", err),
-		)
-		return
-	}
-	if !isConfigValid {
-		resp.Diagnostics.AddError(
-			"Invalid Config",
-			"Invalid configuration for the service.",
+			"Invalid Configuration",
+			err.Error(),
 		)
 		return
 	}

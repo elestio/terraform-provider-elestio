@@ -29,6 +29,7 @@ import (
 
 var _ resource.Resource = &LoadBalancerResource{}
 var _ resource.ResourceWithImportState = &LoadBalancerResource{}
+var _ resource.ResourceWithModifyPlan = &LoadBalancerResource{}
 
 func NewLoadBalancerResource() resource.Resource {
 	return &LoadBalancerResource{}
@@ -158,15 +159,15 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 				},
 			},
 			"provider_name": schema.StringAttribute{
-				MarkdownDescription: "Provider name." +
-					" Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
+				MarkdownDescription: "Provider name (must be lowercase). Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`." +
+					" For a complete list of available providers, see the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
 				Required: true,
 				PlanModifiers: []planmodifier.String{
 					stringplanmodifier.UseStateForUnknown(),
 					stringplanmodifier.RequiresReplace(),
 				},
 				Validators: []validator.String{
-					stringvalidator.OneOf("hetzner", "do", "lightsail", "linode", "vultr", "scaleway"),
+					validators.IsLowercase(),
 				},
 			},
 			"datacenter": schema.StringAttribute{
@@ -419,6 +420,35 @@ func (r *LoadBalancerResource) Configure(ctx context.Context, req resource.Confi
 	}
 
 	r.client = client
+}
+
+func (r *LoadBalancerResource) ModifyPlan(ctx context.Context, req resource.ModifyPlanRequest, resp *resource.ModifyPlanResponse) {
+	if req.Plan.Raw.IsNull() {
+		// If the plan is null, it means that the resource is being destroyed.
+		// We don't need to validate the plan in this case.
+		return
+	}
+
+	var plan *LoadBalancerResourceModel
+	resp.Diagnostics.Append(req.Plan.Get(ctx, &plan)...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	if err := validateProviderConfig(
+		ctx,
+		r.client,
+		218, // Load Balancer template ID
+		plan.ProviderName.ValueString(),
+		plan.Datacenter.ValueString(),
+		plan.ServerType.ValueString(),
+	); err != nil {
+		resp.Diagnostics.AddError(
+			"Invalid Configuration",
+			err.Error(),
+		)
+		return
+	}
 }
 
 func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRequest, resp *resource.CreateResponse) {

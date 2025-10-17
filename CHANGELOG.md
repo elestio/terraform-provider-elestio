@@ -305,3 +305,7 @@ Updated dependencies to latest versions
 ## Work in progress
 
 - Cleaned the code related to public SSH keys.
+- Added lowercase validator for provider_name attribute to ensure correct format.
+- Removed fixed provider list validators in favor of API validation.
+- Enhanced error messages to show current config, common providers, and docs link
+- Updated providers documentation with table of common providers and their full names

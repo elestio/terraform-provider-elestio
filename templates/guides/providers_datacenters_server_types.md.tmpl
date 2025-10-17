@@ -16,8 +16,23 @@ resource "elestio_vault" "my_vault" {
 }
 ```
 
-As this information can be updated often, we cannot put a fixed list in this documentation.
-You will learn how to get this information from the elestio website.
+## Common Providers
+
+Here are the common cloud providers currently supported by Elestio and their corresponding `provider_name` values (must be lowercase):
+
+**Note:** This list may change as new providers are added or existing ones are updated. For the most up-to-date information, use the method described in the "Listing all options" section below.
+
+| Provider Name | Full Name |
+|---------------|-----------|
+| `hetzner` | Hetzner Cloud |
+| `do` | Digital Ocean |
+| `lightsail` | Amazon Lightsail |
+| `linode` | Linode Cloud |
+| `vultr` | Vultr Cloud |
+| `scaleway` | Scaleway Cloud |
+| `netcup` | Netcup |
+
+**Important:** The `provider_name` must be provided in lowercase. For example, use `netcup` instead of `NETCUP` or `Netcup`.
 
 ## Listing all options
 

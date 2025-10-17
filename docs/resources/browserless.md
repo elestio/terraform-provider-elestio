@@ -29,7 +29,7 @@ resource "elestio_browserless" "example" {
 
 - `datacenter` (String) The datacenter of the provider where the service will be hosted. You can look for available datacenters in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
 - `project_id` (String) Identifier of the project in which the service is. Requires replace to change it.
-- `provider_name` (String) The name of the provider to use to host the service. You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
+- `provider_name` (String) The name of the provider to use to host the service (must be lowercase). Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`. You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). Requires replace to change it.
 - `server_type` (String) The server type defines the power and memory allocated to the service. Each `provider_name` has a list of available server types. You can look for available server types in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types). You can only upgrade it, not downgrade.<br/>Requires replace to update the server type with the provider `scale_way`.
 
 ### Optional

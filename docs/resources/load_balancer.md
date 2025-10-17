@@ -52,7 +52,7 @@ resource "elestio_service" "service_3" {
 - `config` (Attributes) Load balancer configuration (see [below for nested schema](#nestedatt--config))
 - `datacenter` (String) Datacenter name. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
 - `project_id` (String) Project identifier to which the load balancer will be attached
-- `provider_name` (String) Provider name. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
+- `provider_name` (String) Provider name (must be lowercase). Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`. For a complete list of available providers, see the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
 - `server_type` (String) Server type. Availables values on the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types
 
 ### Read-Only

@@ -1,6 +1,6 @@
-resource "elestio_dify" "example" {
+resource "elestio_vibecoder" "example" {
   project_id    = "2500"
-  version       = "main"
+  version       = "latest"
   provider_name = "hetzner"
   datacenter    = "fsn1"
   server_type   = "MEDIUM-2C-4G"

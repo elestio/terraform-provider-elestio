@@ -302,10 +302,19 @@ Services Update:
 
 Updated dependencies to latest versions
 
-## Work in progress
+## v0.24.0 (17 October, 2025)
+
+Changes:
 
 - Cleaned the code related to public SSH keys.
 - Added lowercase validator for provider_name attribute to ensure correct format.
 - Removed fixed provider list validators in favor of API validation.
 - Enhanced error messages to show current config, common providers, and docs link
 - Updated providers documentation with table of common providers and their full names
+
+New services:
+
+- `elestio_eneo`
+- `elestio_nats`
+- `elestio_streamlit`
+- `elestio_vibecoder`

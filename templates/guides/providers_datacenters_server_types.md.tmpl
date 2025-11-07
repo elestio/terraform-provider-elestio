@@ -9,8 +9,8 @@ This guide explain how to find available options for `provider_name`, `datacente
 ```tf
 resource "elestio_vault" "my_vault" {
   // ..
-  provider_name = "hetzner"
-  datacenter    = "fsn1"
+  provider_name = "netcup" 
+  datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
   // ...
 }

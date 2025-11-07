@@ -120,8 +120,8 @@ This section will explain how to organize a basic Terraform project :
     # Create a PostgreSQL Service
     resource "elestio_postgresql" "my_service" {
       project_id       = elestio_project.my_project.id
-      provider_name    = "hetzner"
-      datacenter       = "fsn1"
+      provider_name    = "netcup"
+      datacenter       = "nbg"
       server_type      = "MEDIUM-2C-4G"
       firewall_enabled = true
     }

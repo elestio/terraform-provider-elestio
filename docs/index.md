@@ -42,8 +42,8 @@ resource "elestio_project" "project" {
 # Create a postgresql service
 resource "elestio_postgresql" "database" {
   project_id    = elestio_project.project.id
-  provider_name = "hetzner"
-  datacenter    = "fsn1"
+  provider_name = "netcup"
+  datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
 }
 ```

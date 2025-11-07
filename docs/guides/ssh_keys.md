@@ -100,8 +100,8 @@ You can also use Terraform provisioners to perform actions from your configurati
 ```tf
 resource "elestio_postgresql" "postgres" {
   project_id    = "project_id"
-  provider_name = "hetzner"
-  datacenter    = "fsn1"
+  provider_name = "netcup"
+  datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
   ssh_public_keys = [
     {
@@ -135,8 +135,8 @@ Here is a configuration that combines two provisioners to replace the default `d
 ```tf
 resource "elestio_postgresql" "postgres" {
   project_id    = "project_id"
-  provider_name = "hetzner"
-  datacenter    = "fsn1"
+  provider_name = "netcup"
+  datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
   # 1. Submit the public key to the service
   ssh_public_keys = [

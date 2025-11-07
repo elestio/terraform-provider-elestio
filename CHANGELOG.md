@@ -318,3 +318,13 @@ New services:
 - `elestio_nats`
 - `elestio_streamlit`
 - `elestio_vibecoder`
+
+## v0.25.0 (7 November, 2025)
+
+Firewall ports are now fully customizable with proper validation.
+
+New attributes:
+
+- `firewall_user_rules`: Customize the firewall rules for the service.
+- `firewall_tool_rules`: Read-only attribute that shows the firewall rules for the dashboard tools that are not explicitly defined in `firewall_user_rules`.
+- `firewall_remove_tool_ports`: Remove the API-managed tool ports (VS Code, Terminal, File Explorer, etc.) from the firewall rules.

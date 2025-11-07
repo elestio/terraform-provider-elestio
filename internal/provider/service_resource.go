@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/firewall"
 	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
@@ -119,6 +120,9 @@ type (
 		FirewallEnabled                             types.Bool    `tfsdk:"firewall_enabled"`
 		FirewallId                                  types.String  `tfsdk:"firewall_id"`
 		FirewallPorts                               types.String  `tfsdk:"firewall_ports"`
+		FirewallUserRules                           types.Set     `tfsdk:"firewall_user_rules"`
+		FirewallToolRules                           types.Set     `tfsdk:"firewall_tool_rules"`
+		FirewallRemoveToolPorts                     types.Bool    `tfsdk:"firewall_remove_tool_ports"`
 		AlertsEnabled                               types.Bool    `tfsdk:"alerts_enabled"`
 		LastUpdated                                 types.String  `tfsdk:"last_updated"`
 		LocalField                                  types.Dynamic `tfsdk:"local_field"`
@@ -659,6 +663,17 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				MarkdownDescription: "Service firewall ports.",
 				Computed:            true,
 			},
+			"firewall_user_rules": firewall.UserRulesSchema(r.FirewallRules, r.HasCustomFirewallPorts, r.Category != "Databases & Cache"),
+			"firewall_tool_rules": firewall.ToolRulesSchema(),
+			"firewall_remove_tool_ports": schema.BoolAttribute{
+				MarkdownDescription: "When `true`, removes API-managed tool ports (VS Code, Terminal, etc.) that are not explicitly defined in `firewall_user_rules`." +
+					" Tool ports explicitly included in `firewall_user_rules` are user-managed and will always be preserved." +
+					" **Default** `false`." +
+					" Use temporarily for cleanup, then reset to `false`.",
+				Optional: true,
+				Computed: true,
+				Default:  booldefault.StaticBool(false),
+			},
 			"alerts_enabled": schema.BoolAttribute{
 				MarkdownDescription: "Service alerts state." +
 					" **Default** `true`.",
@@ -708,6 +723,21 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 			"The system_auto_updates_security_patches_only_enabled can be enabled only if system_auto_updates_enabled is enabled.",
 		)
 		return
+	}
+
+	// Validate that port 80/tcp/input is included when custom domains are specified
+	// This only applies to services that support custom domains (not "Databases & Cache")
+	// And only when firewall is enabled
+	if r.Category != "Databases & Cache" {
+		// Get firewall_enabled value, use default if not set
+		isFirewallEnabled := r.HasCustomFirewallPorts
+		if !data.FirewallEnabled.IsNull() && !data.FirewallEnabled.IsUnknown() {
+			isFirewallEnabled = data.FirewallEnabled.ValueBool()
+		}
+
+		if !firewall.ValidateRulesForCustomDomains(ctx, data.FirewallUserRules, data.CustomDomainNames, isFirewallEnabled, r.FirewallRules, &resp.Diagnostics, path.Root("firewall_user_rules")) {
+			return
+		}
 	}
 }
 
@@ -1033,7 +1063,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 	// Update firewall if the state changed
 	if !state.FirewallEnabled.Equal(plan.FirewallEnabled) {
 		if plan.FirewallEnabled.ValueBool() {
-			if err := r.client.Service.EnableFirewallWithRules(service.ID, r.FirewallRules); err != nil {
+			if err := firewall.Enable(ctx, service.ID, plan.FirewallUserRules, diags, r.client); err != nil {
 				return nil, fmt.Errorf("failed to enable firewall: %s", err)
 			}
 		} else {
@@ -1052,6 +1082,14 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 			if err := r.client.Service.DisableAlerts(service.ID); err != nil {
 				return nil, fmt.Errorf("failed to disable alerts: %s", err)
 			}
+		}
+	}
+
+	// Update firewall rules BEFORE adding custom domain names
+	// This ensures port 80 is open before Let's Encrypt tries to generate SSL certificates
+	if !state.FirewallEnabled.IsNull() && plan.FirewallEnabled.ValueBool() {
+		if err := firewall.ApplyChangesIfNeeded(ctx, service.ID, service.FirewallRules, state.FirewallUserRules, state.FirewallRemoveToolPorts, plan.FirewallUserRules, plan.FirewallRemoveToolPorts, diags, r.client); err != nil {
+			return nil, err
 		}
 	}
 
@@ -1189,6 +1227,14 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	}
 	firewallPortsStr := strings.Join(firewallPorts, ",")
 	data.FirewallPorts = types.StringValue(firewallPortsStr)
+	data.FirewallUserRules = firewall.ExtractUserRules(ctx, service.FirewallRules, data.FirewallUserRules, diags)
+	if diags.HasError() {
+		return
+	}
+	data.FirewallToolRules = firewall.ExtractToolRules(ctx, service.FirewallRules, data.FirewallUserRules, diags)
+	if diags.HasError() {
+		return
+	}
 	data.AlertsEnabled = utils.BoolValue(service.AlertsEnabled)
 }
 

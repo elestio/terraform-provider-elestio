@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/firewall"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 )
@@ -13,22 +14,6 @@ import (
 var (
 	//go:embed templates.json
 	templatesListBytes []byte
-
-	// requiredFirewallRules defines the standard firewall rules that must always be present
-	requiredFirewallRules = []elestio.ServiceFirewallRule{
-		{
-			Port:     "22",
-			Protocol: elestio.ServiceFirewallRuleProtocolTCP,
-			Type:     elestio.ServiceFirewallRuleTypeInput,
-			Targets:  []string{"0.0.0.0/0"},
-		},
-		{
-			Port:     "4242",
-			Protocol: elestio.ServiceFirewallRuleProtocolUDP,
-			Type:     elestio.ServiceFirewallRuleTypeInput,
-			Targets:  []string{"0.0.0.0/0"},
-		},
-	}
 )
 
 type (
@@ -160,28 +145,7 @@ func LoadTemplatesList() (*TemplatesList, error) {
 	return &templatesList, nil
 }
 
-// addMissingRequiredRules adds any missing required firewall rules
-func addMissingRequiredRules(existingRules []elestio.ServiceFirewallRule) []elestio.ServiceFirewallRule {
-	result := make([]elestio.ServiceFirewallRule, len(existingRules))
-	copy(result, existingRules)
-
-	for _, requiredRule := range requiredFirewallRules {
-		found := false
-		for _, existing := range existingRules {
-			if existing.Port == requiredRule.Port && existing.Protocol == requiredRule.Protocol {
-				found = true
-				break
-			}
-		}
-		if !found {
-			result = append(result, requiredRule)
-		}
-	}
-
-	return result
-}
-
-// ParseFirewallRules parses firewall ports string and returns firewall rules with required rules
+// ParseFirewallRules parses firewall ports string and returns firewall rules (template-specific only, without required system ports)
 func ParseFirewallRules(firewallPorts string) ([]elestio.ServiceFirewallRule, bool) {
 	var templateFirewallRules []elestio.ServiceFirewallRule
 	hasCustomFirewallPorts := len(firewallPorts) > 0
@@ -196,9 +160,7 @@ func ParseFirewallRules(firewallPorts string) ([]elestio.ServiceFirewallRule, bo
 		}
 	}
 
-	// Add missing required rules
-	templateFirewallRules = addMissingRequiredRules(templateFirewallRules)
-
+	// Required system ports (22/TCP for SSH, 4242/UDP for Nebula) are added automatically by the API
 	return templateFirewallRules, hasCustomFirewallPorts
 }
 
@@ -218,13 +180,12 @@ func parseFirewallPort(port string) elestio.ServiceFirewallRule {
 	return createFirewallRule(portNum, protocol)
 }
 
-// createFirewallRule creates a firewall rule with standard settings
 func createFirewallRule(port, protocol string) elestio.ServiceFirewallRule {
 	return elestio.ServiceFirewallRule{
 		Port:     port,
 		Protocol: protocol,
 		Type:     elestio.ServiceFirewallRuleTypeInput,
-		Targets:  []string{"0.0.0.0/0"},
+		Targets:  firewall.GetDefaultTargets(),
 	}
 }
 

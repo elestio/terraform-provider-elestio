@@ -3,12 +3,12 @@
 page_title: "elestio_solr Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Apache Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.The elestio_solr resource allows the creation and management of Elestio Solr services. The service uses the following docker image bitnami/solr https://hub.docker.com/r/bitnami/solr
+  Apache Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.The elestio_solr resource allows the creation and management of Elestio Solr services. The service uses the following docker image bitnamilegacy/solr https://hub.docker.com/r/bitnamilegacy/solr
 ---
 
 # elestio_solr (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" /><br>Apache Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br><br>The **elestio_solr** resource allows the creation and management of Elestio Solr services. The service uses the following docker image [bitnami/solr](https://hub.docker.com/r/bitnami/solr)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Solr-YA2p.png" width="100" /><br>Apache Solr is the popular, blazing fast open source search platform for all your enterprise, e-commerce, and analytics needs, built on Apache Lucene.<br><br>The **elestio_solr** resource allows the creation and management of Elestio Solr services. The service uses the following docker image [bitnamilegacy/solr](https://hub.docker.com/r/bitnamilegacy/solr)
 
 ## Example Usage
 

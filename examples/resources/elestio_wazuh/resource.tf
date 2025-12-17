@@ -1,6 +1,6 @@
 resource "elestio_wazuh" "example" {
   project_id    = "2500"
-  version       = "4.8.0"
+  version       = "4.13.1"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

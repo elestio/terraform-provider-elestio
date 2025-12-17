@@ -3,19 +3,19 @@
 page_title: "elestio_directus Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Directus is an open-source data platform that manages content for any SQL database with ease and flexibility.The elestio_directus resource allows the creation and management of Elestio Directus services. The service uses the following docker image elestio/directus https://hub.docker.com/r/elestio/directus
+  Directus is an open-source data platform that manages content for any SQL database with ease and flexibility.The elestio_directus resource allows the creation and management of Elestio Directus services. The service uses the following docker image directus/directus https://hub.docker.com/r/directus/directus
 ---
 
 # elestio_directus (Resource)
 
-<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br>Directus is an open-source data platform that manages content for any SQL database with ease and flexibility.<br><br>The **elestio_directus** resource allows the creation and management of Elestio Directus services. The service uses the following docker image [elestio/directus](https://hub.docker.com/r/elestio/directus)
+<img src="https://cf.appdrag.com/cloud-vm-c72afa/uploads/89687381-23943700-d8ce-11ea-9a4d-ae3eae136423-OYWi.png" width="100" /><br>Directus is an open-source data platform that manages content for any SQL database with ease and flexibility.<br><br>The **elestio_directus** resource allows the creation and management of Elestio Directus services. The service uses the following docker image [directus/directus](https://hub.docker.com/r/directus/directus)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_directus" "example" {
   project_id    = "2500"
-  version       = "v9.26.0"
+  version       = "9.26.0"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -83,7 +83,7 @@ resource "elestio_directus" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `v9.26.0`.
+- `version` (String) This is the version of the software used as service. **Default** `9.26.0`.
 
 ### Read-Only
 

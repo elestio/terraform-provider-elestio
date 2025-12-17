@@ -3,12 +3,12 @@
 page_title: "elestio_postal Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.The elestio_postal resource allows the creation and management of Elestio Postal services. The service uses the following docker image postalserver/postal https://hub.docker.com/r/postalserver/postal
+  Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.The elestio_postal resource allows the creation and management of Elestio Postal services. The service uses the following docker image ghcr.io/postalserver/postal https://hub.docker.com/r/ghcr.io/postalserver/postal
 ---
 
 # elestio_postal (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br>Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br><br>The **elestio_postal** resource allows the creation and management of Elestio Postal services. The service uses the following docker image [postalserver/postal](https://hub.docker.com/r/postalserver/postal)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/postal-QwYV.svg" width="100" /><br>Postal is a fully featured open-source mail delivery platform for incoming and outgoing email.<br><br>The **elestio_postal** resource allows the creation and management of Elestio Postal services. The service uses the following docker image [ghcr.io/postalserver/postal](https://hub.docker.com/r/ghcr.io/postalserver/postal)
 
 ## Example Usage
 

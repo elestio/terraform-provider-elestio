@@ -38,6 +38,12 @@ resource "elestio_baserow" "example" {
       "port"     = "6443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "25440"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
     }
   ]
 }

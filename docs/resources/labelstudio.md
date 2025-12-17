@@ -8,7 +8,7 @@ description: |-
 
 # elestio_labelstudio (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LabelStudio-NSEI.png" width="100" /><br>Label Studio is a multi-type data labeling and annotation tool with standardized output format<br><br>The **elestio_labelstudio** resource allows the creation and management of Elestio LabelStudio services. The service uses the following docker image [heartexlabs/label-studio](https://hub.docker.com/r/heartexlabs/label-studio)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LabelStudio-38kb.png" width="100" /><br>Label Studio is a multi-type data labeling and annotation tool with standardized output format<br><br>The **elestio_labelstudio** resource allows the creation and management of Elestio LabelStudio services. The service uses the following docker image [heartexlabs/label-studio](https://hub.docker.com/r/heartexlabs/label-studio)
 
 ## Example Usage
 

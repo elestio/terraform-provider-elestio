@@ -3,19 +3,19 @@
 page_title: "elestio_discourse Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Discourse is an open-source discussion platform built for the next decade of the Internet. The elestio_discourse resource allows the creation and management of Elestio Discourse services. The service uses the following docker image bitnamilegacy/discourse https://hub.docker.com/r/bitnamilegacy/discourse
+  Discourse is an open-source discussion platform built for the next decade of the Internet. The elestio_discourse resource allows the creation and management of Elestio Discourse services. The service uses the following docker image discourse/base https://hub.docker.com/r/discourse/base
 ---
 
 # elestio_discourse (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br>Discourse is an open-source discussion platform built for the next decade of the Internet. <br><br>The **elestio_discourse** resource allows the creation and management of Elestio Discourse services. The service uses the following docker image [bitnamilegacy/discourse](https://hub.docker.com/r/bitnamilegacy/discourse)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/kisspng-logo-discourse-internet-forum-brand-font-discourse-5b68ee610214d6-m4FJ.png" width="100" /><br>Discourse is an open-source discussion platform built for the next decade of the Internet. <br><br>The **elestio_discourse** resource allows the creation and management of Elestio Discourse services. The service uses the following docker image [discourse/base](https://hub.docker.com/r/discourse/base)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_discourse" "example" {
   project_id    = "2500"
-  version       = "3.4.7-debian-12-r0"
+  version       = "release-stable"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -83,7 +83,7 @@ resource "elestio_discourse" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `3.4.7-debian-12-r0`.
+- `version` (String) This is the version of the software used as service. **Default** `release-stable`.
 
 ### Read-Only
 

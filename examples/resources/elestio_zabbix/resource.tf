@@ -1,6 +1,6 @@
 resource "elestio_zabbix" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "ubuntu-latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

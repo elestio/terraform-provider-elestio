@@ -1,6 +1,6 @@
 resource "elestio_cal" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "v5.6.18"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

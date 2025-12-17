@@ -32,6 +32,12 @@ resource "elestio_matomo" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "14326"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
     }
   ]
 }

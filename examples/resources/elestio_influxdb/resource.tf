@@ -1,6 +1,6 @@
 resource "elestio_influxdb" "example" {
   project_id    = "2500"
-  version       = "2"
+  version       = "3-core"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -30,6 +30,12 @@ resource "elestio_influxdb" "example" {
     {
       "type"     = "input"
       "port"     = "443"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "55701"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     }

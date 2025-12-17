@@ -331,8 +331,10 @@ New attributes:
 
 ## v0.26.0 (17 December, 2025)
 
-New provider functions for SSH key handling:
+### New provider functions for SSH key handling and new services
 
+- **New service:** `elestio_getateam`
+- **New service:** `elestio_pgvector`
 - **New Function:** `parse_ssh_key_data()` - Strips the comment from an SSH public key, returning only the key type and key data.
 - **New Function:** `parse_ssh_key()` - Parses an SSH public key and extracts both key data and username. Pass `null` as the username parameter to extract the username from the key comment.
 

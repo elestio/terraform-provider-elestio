@@ -1,4 +1,4 @@
-package validators
+package ssh_public_keys
 
 import (
 	"context"
@@ -9,17 +9,17 @@ import (
 	"golang.org/x/crypto/ssh"
 )
 
-type isSSHPublicKeyValidator struct{}
+type isValidKeyValidator struct{}
 
-func (v isSSHPublicKeyValidator) Description(ctx context.Context) string {
+func (v isValidKeyValidator) Description(ctx context.Context) string {
 	return "string should be a valid SSH key"
 }
 
-func (v isSSHPublicKeyValidator) MarkdownDescription(ctx context.Context) string {
+func (v isValidKeyValidator) MarkdownDescription(ctx context.Context) string {
 	return "string should be a valid SSH key"
 }
 
-func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validator.StringRequest, resp *validator.StringResponse) {
+func (v isValidKeyValidator) ValidateString(ctx context.Context, req validator.StringRequest, resp *validator.StringResponse) {
 	// If the value is unknown or null, there is nothing to validate.
 	if req.ConfigValue.IsUnknown() || req.ConfigValue.IsNull() {
 		return
@@ -115,19 +115,9 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		)
 		return
 	}
-
-	// TODO: Enable this check to support only strong keys https://www.ibm.com/docs/en/zos/2.3.0?topic=certificates-size-considerations-public-private-keys
-	//
-	//	if len(pubKey.Marshal()) < 2048 {
-	//		resp.Diagnostics.AddAttributeError(
-	//			attributePath,
-	//			"Invalid Attribute Configuration",
-	//			"Only RSA keys with a length of 2048 bits or more are supported by Elestio.",
-	//		)
-	//		return
-	//	}
 }
 
-func IsSSHPublicKey() isSSHPublicKeyValidator {
-	return isSSHPublicKeyValidator{}
+// IsValidKey returns a validator that ensures the SSH public key is valid
+func IsValidKey() isValidKeyValidator {
+	return isValidKeyValidator{}
 }

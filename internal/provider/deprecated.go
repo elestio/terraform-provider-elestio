@@ -1,7 +1,7 @@
 package provider
 
 import (
-	"github.com/elestio/terraform-provider-elestio/internal/validators"
+	ssh_public_keys "github.com/elestio/terraform-provider-elestio/internal/ssh_public_keys"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/setdefault"
@@ -52,7 +52,7 @@ var sshKeysSchema = schema.SetNestedAttribute{
 					" You should not include the username, hostname, or comment.",
 				Required: true,
 				Validators: []validator.String{
-					validators.IsSSHPublicKey(),
+					ssh_public_keys.IsValidKey(),
 				},
 				DeprecationMessage: "This attribute is deprecated and will be removed in a future version." +
 					" Please use `ssh_public_keys` instead.",

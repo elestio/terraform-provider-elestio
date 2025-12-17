@@ -1,4 +1,4 @@
-package validators
+package ssh_public_keys
 
 import (
 	"context"
@@ -8,17 +8,17 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 )
 
-type sshPublicKeysUniqueUsernamesValidator struct{}
+type uniqueUsernamesValidator struct{}
 
-func (v sshPublicKeysUniqueUsernamesValidator) Description(ctx context.Context) string {
+func (v uniqueUsernamesValidator) Description(ctx context.Context) string {
 	return "SSH public key usernames must be unique within the set"
 }
 
-func (v sshPublicKeysUniqueUsernamesValidator) MarkdownDescription(ctx context.Context) string {
+func (v uniqueUsernamesValidator) MarkdownDescription(ctx context.Context) string {
 	return "SSH public key usernames must be unique within the set"
 }
 
-func (v sshPublicKeysUniqueUsernamesValidator) ValidateSet(ctx context.Context, req validator.SetRequest, resp *validator.SetResponse) {
+func (v uniqueUsernamesValidator) ValidateSet(ctx context.Context, req validator.SetRequest, resp *validator.SetResponse) {
 	// If the value is unknown or null, there is nothing to validate.
 	if req.ConfigValue.IsUnknown() || req.ConfigValue.IsNull() {
 		return
@@ -72,6 +72,8 @@ func (v sshPublicKeysUniqueUsernamesValidator) ValidateSet(ctx context.Context, 
 	}
 }
 
-func SSHPublicKeysUniqueUsernames() sshPublicKeysUniqueUsernamesValidator {
-	return sshPublicKeysUniqueUsernamesValidator{}
+// UniqueUsernames returns a validator that ensures SSH public key usernames are unique
+func UniqueUsernames() uniqueUsernamesValidator {
+	return uniqueUsernamesValidator{}
 }
+

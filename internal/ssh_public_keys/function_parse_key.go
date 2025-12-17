@@ -1,4 +1,4 @@
-package provider
+package ssh_public_keys
 
 import (
 	"context"
@@ -9,19 +9,19 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-var _ function.Function = &ParseSSHKeyFunction{}
+var _ function.Function = &ParseKeyFunction{}
 
-type ParseSSHKeyFunction struct{}
+type ParseKeyFunction struct{}
 
-func NewParseSSHKeyFunction() function.Function {
-	return &ParseSSHKeyFunction{}
+func NewParseKeyFunction() function.Function {
+	return &ParseKeyFunction{}
 }
 
-func (f *ParseSSHKeyFunction) Metadata(ctx context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
+func (f *ParseKeyFunction) Metadata(ctx context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
 	resp.Name = "parse_ssh_key"
 }
 
-func (f *ParseSSHKeyFunction) Definition(ctx context.Context, req function.DefinitionRequest, resp *function.DefinitionResponse) {
+func (f *ParseKeyFunction) Definition(ctx context.Context, req function.DefinitionRequest, resp *function.DefinitionResponse) {
 	resp.Definition = function.Definition{
 		Summary:     "Parses an SSH public key and extracts key data and username",
 		Description: "Takes an SSH public key and a username parameter. Returns an object with `key_data` (the key without comment) and `username` (from the provided value or extracted from the key comment). The username parameter is required but accepts null - pass null explicitly to extract the username from the SSH key comment. If username is null and the key has no comment, an error is returned.",
@@ -46,7 +46,7 @@ func (f *ParseSSHKeyFunction) Definition(ctx context.Context, req function.Defin
 	}
 }
 
-func (f *ParseSSHKeyFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
+func (f *ParseKeyFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
 	var sshKey types.String
 	var username types.String
 
@@ -101,3 +101,4 @@ func (f *ParseSSHKeyFunction) Run(ctx context.Context, req function.RunRequest, 
 
 	resp.Error = function.ConcatFuncErrors(resp.Error, resp.Result.Set(ctx, result))
 }
+

@@ -10,6 +10,7 @@ import (
 	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/elestio/terraform-provider-elestio/internal/firewall"
 	"github.com/elestio/terraform-provider-elestio/internal/modifiers"
+	ssh_public_keys "github.com/elestio/terraform-provider-elestio/internal/ssh_public_keys"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
@@ -444,7 +445,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				ElementType: types.StringType,
 			},
 			"ssh_keys":        sshKeysSchema,
-			"ssh_public_keys": sshPublicKeysSchema,
+			"ssh_public_keys": ssh_public_keys.Schema,
 			"country": schema.StringAttribute{
 				MarkdownDescription: "Service country.",
 				Computed:            true,
@@ -983,7 +984,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		if err := r.client.Service.UpdateServerType(service.ID, plan.ServerType.ValueString(), service.ProviderName, service.Datacenter); err != nil {
 			return nil, fmt.Errorf("failed to update serverType: %s", err)
 		}
-		if _, err := r.waitServerReboot(ctx, service); err != nil {
+		if _, err := r.WaitServerReboot(ctx, service); err != nil {
 			return nil, fmt.Errorf("failed to wait server reboot after serverType update: %s", err)
 		}
 	}
@@ -1117,12 +1118,12 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		}
 	}
 
-	keysToAdd, keysToUpdate, keysToRemove := compareSSHPublicKeys(&ctx, &state.SSHPublicKeys, &plan.SSHPublicKeys, diags)
+	keysToAdd, keysToUpdate, keysToRemove := ssh_public_keys.Compare(&ctx, &state.SSHPublicKeys, &plan.SSHPublicKeys, diags)
 	if diags.HasError() {
 		return nil, fmt.Errorf("failed to compare ssh public keys from state to plan")
 	}
 
-	if err := applySSHPublicKeyChanges(ctx, service.ID, keysToAdd, keysToUpdate, keysToRemove, plan.ProviderName.ValueString(), r.client, r, service); err != nil {
+	if err := ssh_public_keys.ApplyChanges(ctx, service.ID, keysToAdd, keysToUpdate, keysToRemove, plan.ProviderName.ValueString(), r.client, r, service); err != nil {
 		return nil, err
 	}
 
@@ -1157,7 +1158,7 @@ func convertElestioToTerraformFormat(ctx context.Context, data *ServiceResourceM
 	data.IPV6 = types.StringValue(service.IPV6)
 	data.CNAME = types.StringValue(service.CNAME)
 	data.CustomDomainNames = utils.SliceStringToSetType(service.CustomDomainNames, diags)
-	data.SSHPublicKeys = convertElestioSSHKeysToTerraform(ctx, service.SSHPublicKeys, diags)
+	data.SSHPublicKeys = ssh_public_keys.ConvertElestioToTerraform(ctx, service.SSHPublicKeys, diags)
 	if diags.HasError() {
 		return
 	}
@@ -1406,7 +1407,8 @@ func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *eles
 	return nil
 }
 
-func (r *ServiceResource) waitServerReboot(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
+// WaitServerReboot waits for a server to reboot and return to running state
+func (r *ServiceResource) WaitServerReboot(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
 	timeout := 10 * time.Minute
 	stateConf := retry.StateChangeConf{
 		Pending: []string{"rebooting"},

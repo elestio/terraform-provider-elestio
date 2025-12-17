@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	ssh_public_keys "github.com/elestio/terraform-provider-elestio/internal/ssh_public_keys"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/function"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -158,8 +159,8 @@ func (p *ElestioProvider) DataSources(ctx context.Context) []func() datasource.D
 
 func (p *ElestioProvider) Functions(ctx context.Context) []func() function.Function {
 	return []func() function.Function{
-		NewParseSSHKeyFunction,
-		NewParseSSHKeyDataFunction,
+		ssh_public_keys.NewParseKeyFunction,
+		ssh_public_keys.NewParseKeyDataFunction,
 	}
 }
 

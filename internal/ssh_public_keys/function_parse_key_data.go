@@ -1,4 +1,4 @@
-package provider
+package ssh_public_keys
 
 import (
 	"context"
@@ -7,19 +7,19 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/function"
 )
 
-var _ function.Function = &ParseSSHKeyDataFunction{}
+var _ function.Function = &ParseKeyDataFunction{}
 
-type ParseSSHKeyDataFunction struct{}
+type ParseKeyDataFunction struct{}
 
-func NewParseSSHKeyDataFunction() function.Function {
-	return &ParseSSHKeyDataFunction{}
+func NewParseKeyDataFunction() function.Function {
+	return &ParseKeyDataFunction{}
 }
 
-func (f *ParseSSHKeyDataFunction) Metadata(ctx context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
+func (f *ParseKeyDataFunction) Metadata(ctx context.Context, req function.MetadataRequest, resp *function.MetadataResponse) {
 	resp.Name = "parse_ssh_key_data"
 }
 
-func (f *ParseSSHKeyDataFunction) Definition(ctx context.Context, req function.DefinitionRequest, resp *function.DefinitionResponse) {
+func (f *ParseKeyDataFunction) Definition(ctx context.Context, req function.DefinitionRequest, resp *function.DefinitionResponse) {
 	resp.Definition = function.Definition{
 		Summary:     "Strips the comment from an SSH public key",
 		Description: "Takes an SSH public key string and returns only the key type and key data, removing any trailing comment. This is useful because Elestio does not accept SSH keys with comments.",
@@ -33,7 +33,7 @@ func (f *ParseSSHKeyDataFunction) Definition(ctx context.Context, req function.D
 	}
 }
 
-func (f *ParseSSHKeyDataFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
+func (f *ParseKeyDataFunction) Run(ctx context.Context, req function.RunRequest, resp *function.RunResponse) {
 	var sshKey string
 
 	resp.Error = function.ConcatFuncErrors(resp.Error, req.Arguments.Get(ctx, &sshKey))
@@ -54,3 +54,4 @@ func (f *ParseSSHKeyDataFunction) Run(ctx context.Context, req function.RunReque
 	result := fields[0] + " " + fields[1]
 	resp.Error = function.ConcatFuncErrors(resp.Error, resp.Result.Set(ctx, result))
 }
+

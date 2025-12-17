@@ -1,4 +1,4 @@
-package validators
+package ssh_public_keys
 
 import (
 	"context"
@@ -11,7 +11,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-func TestSSHPublicKeysUniqueUsernames(t *testing.T) {
+func TestUniqueUsernames(t *testing.T) {
 	t.Parallel()
 
 	type testCase struct {
@@ -118,7 +118,7 @@ func TestSSHPublicKeysUniqueUsernames(t *testing.T) {
 				ConfigValue:    test.val,
 			}
 			response := validator.SetResponse{}
-			SSHPublicKeysUniqueUsernames().ValidateSet(context.Background(), request, &response)
+			UniqueUsernames().ValidateSet(context.Background(), request, &response)
 
 			if !response.Diagnostics.HasError() && test.expectError {
 				t.Fatal("expected error, got no error")
@@ -130,3 +130,4 @@ func TestSSHPublicKeysUniqueUsernames(t *testing.T) {
 		})
 	}
 }
+

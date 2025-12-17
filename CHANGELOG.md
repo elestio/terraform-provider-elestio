@@ -329,7 +329,7 @@ New attributes:
 - `firewall_tool_rules`: Read-only attribute that shows the firewall rules for the dashboard tools that are not explicitly defined in `firewall_user_rules`.
 - `firewall_remove_tool_ports`: Remove the API-managed tool ports (VS Code, Terminal, File Explorer, etc.) from the firewall rules.
 
-## v0.26.0 (wip)
+## v0.26.0 (17 December, 2025)
 
 New provider functions for SSH key handling:
 

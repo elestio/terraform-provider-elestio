@@ -57,7 +57,6 @@ Elestio supports the following SSH key types in OpenSSH format:
 - `ecdsa-sha2-nistp256`
 - `ecdsa-sha2-nistp384`
 - `ecdsa-sha2-nistp521`
-- `ssh-dss`
 
 SSH key comments must be stripped before use.
 

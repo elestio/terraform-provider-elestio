@@ -84,21 +84,20 @@ func (v isValidKeyValidator) ValidateString(ctx context.Context, req validator.S
 		return
 	}
 
-	// Supported key types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521, ssh-dss
+	// Supported key types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521
 	supportedTypes := map[string]bool{
 		ssh.KeyAlgoRSA:      true,
 		ssh.KeyAlgoED25519:  true,
 		ssh.KeyAlgoECDSA256: true,
 		ssh.KeyAlgoECDSA384: true,
 		ssh.KeyAlgoECDSA521: true,
-		ssh.KeyAlgoDSA:      true,
 	}
 
 	if !supportedTypes[pubKey.Type()] {
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Unsupported SSH key type. Supported types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521, ssh-dss. "+
+			"Unsupported SSH key type. Supported types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521. "+
 				"Read the guide: "+docURL,
 		)
 		return

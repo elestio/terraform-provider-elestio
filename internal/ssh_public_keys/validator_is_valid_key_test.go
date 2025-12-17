@@ -70,10 +70,6 @@ func TestIsValidKey(t *testing.T) {
 				),
 			},
 		},
-		"valid-ssh-dss": {
-			input:               types.StringValue("ssh-dss AAAAB3NzaC1kc3MAAACBAJTdkgVSk8cgM6h0MrnH9yoihsQVZ9c6OQcFqS1FZ/5DD4Z/8qfJlKFhICwhSCTX0dHqbZumG5KkFyrn2XznDf15idCHxxK4Vd51tyq5XaRyk89lFZCogIYPzocD+RdYVBwX7Y9ju+t7FqEhshd0q4tO6MzENIE//Wx+QWeiZrWlAAAAFQCsaVnyLr+Q+akj4M/K7pYR+GwpJQAAAIBtcypWCzJrPUgxy33rRMbrnWlQDY3H81iS4n7U5SDlUE7V0VaH8IxoQdSiGe6FJCUbu9XEvSQ+v6raBHPM6ca3t9NyPgBDdIRlCcgxrIQzbhTzgi85HdfDyED3wqDgMMdIYZ1AOeRQ3u3tLlGlOXrKCEIPH5x/tvysTn0+2mYKmwAAAIAtOGBS6M+IrrH+kMIOyLFGiL9b1s4rv5Vv6izULYb2DU0zoBnlRkmq/cLkFSgHeE5MqzOosybhwt5PRzMfoFtyUBpMgChdfuPnFwZbeTjitWRVS7tB/FDknbBXsk8mmnUEmodbTYVYtVSxbBgfKtc6pgomY1gxsYpByxyIA3A9gQ=="),
-			expectedDiagnostics: nil,
-		},
 		"valid-ecdsa-sha2-nistp256": {
 			input:               types.StringValue("ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBA95ywHY2HQsFe59iIhJCNmPjQdGbAJ7/5ZcxfOdHs98gG6UhCj5KwjpSICNGTZ+ZE+W4ExRPWzAGfFzjibUzsE="),
 			expectedDiagnostics: nil,
@@ -157,4 +153,3 @@ func TestIsValidKey(t *testing.T) {
 		})
 	}
 }
-

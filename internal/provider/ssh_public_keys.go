@@ -35,9 +35,9 @@ var sshPublicKeysSchema = schema.SetNestedAttribute{
 				Required:            true,
 			},
 			"key_data": schema.StringAttribute{
-				MarkdownDescription: "The Public Key value." +
-					" Read the guide [\"How generate a valid SSH Key for Elestio\"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys)." +
-					" Example: `key_data = chomp(file(\"~/.ssh/id_rsa.pub\"))`.",
+				MarkdownDescription: "The Public Key value without comment." +
+					" Use `provider::elestio::parse_ssh_key_data(file(\"~/.ssh/id_rsa.pub\"))` to remove the comment from your key." +
+					" Read the guide [\"How to use SSH keys with Elestio Terraform Provider\"](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys).",
 				Required: true,
 				Validators: []validator.String{
 					validators.IsSSHPublicKey(),

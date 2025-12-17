@@ -6,6 +6,7 @@ import (
 
 	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
+	"github.com/hashicorp/terraform-plugin-framework/function"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
@@ -14,7 +15,8 @@ import (
 )
 
 var (
-	_ provider.Provider = &ElestioProvider{}
+	_ provider.Provider              = &ElestioProvider{}
+	_ provider.ProviderWithFunctions = &ElestioProvider{}
 )
 
 type (
@@ -151,6 +153,13 @@ func (p *ElestioProvider) Resources(ctx context.Context) []func() resource.Resou
 func (p *ElestioProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
 		NewProjectDataSource,
+	}
+}
+
+func (p *ElestioProvider) Functions(ctx context.Context) []func() function.Function {
+	return []func() function.Function{
+		NewParseSSHKeyFunction,
+		NewParseSSHKeyDataFunction,
 	}
 }
 

@@ -37,11 +37,15 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		return
 	}
 
+	docURL := "https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/ssh_keys"
+
 	if strings.Contains(attributeValue, "\n") || strings.Contains(attributeValue, "\r") {
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Your SSH public key must be on a single line. You can use the `chomp()` terraform function to remove newlines from your key. Example: key_data = chomp(file(\"~/.ssh/id_rsa.pub\"))",
+			"Your SSH public key must be on a single line. "+
+				"Use `provider::elestio::parse_ssh_key_data(file(\"~/.ssh/id_rsa.pub\"))` to read and parse your key file. "+
+				"Read the guide: "+docURL,
 		)
 		return
 	}
@@ -51,7 +55,9 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Expected a string with at least two fields separated by a space.",
+			"Invalid SSH key format: expected at least key type and key data separated by a space. "+
+				"Use `provider::elestio::parse_ssh_key_data(file(\"~/.ssh/id_rsa.pub\"))` to read and parse your key file. "+
+				"Read the guide: "+docURL,
 		)
 		return
 	}
@@ -61,7 +67,8 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Error decoding the key data. Your SSH public key does not seem to be base64 encoded.",
+			"Error decoding the key data. Your SSH public key does not seem to be base64 encoded. "+
+				"Read the guide: "+docURL,
 		)
 		return
 	}
@@ -71,16 +78,40 @@ func (v isSSHPublicKeyValidator) ValidateString(ctx context.Context, req validat
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Error parsing the key data. Your SSH public key does not seem to be valid. It may be corrupted or altered.",
+			"Error parsing the key data. Your SSH public key does not seem to be valid. It may be corrupted or altered. "+
+				"Read the guide: "+docURL,
 		)
 		return
 	}
 
-	if pubKey.Type() != ssh.KeyAlgoRSA {
+	// Supported key types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521, ssh-dss
+	supportedTypes := map[string]bool{
+		ssh.KeyAlgoRSA:      true,
+		ssh.KeyAlgoED25519:  true,
+		ssh.KeyAlgoECDSA256: true,
+		ssh.KeyAlgoECDSA384: true,
+		ssh.KeyAlgoECDSA521: true,
+		ssh.KeyAlgoDSA:      true,
+	}
+
+	if !supportedTypes[pubKey.Type()] {
 		resp.Diagnostics.AddAttributeError(
 			attributePath,
 			"Invalid Attribute Configuration",
-			"Only RSA keys are supported by Elestio.",
+			"Unsupported SSH key type. Supported types: ssh-rsa, ssh-ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521, ssh-dss. "+
+				"Read the guide: "+docURL,
+		)
+		return
+	}
+
+	if len(fields) > 2 {
+		resp.Diagnostics.AddAttributeError(
+			attributePath,
+			"Invalid Attribute Configuration",
+			"SSH public key comments are not allowed. "+
+				"Use `provider::elestio::parse_ssh_key_data()` to remove the comment, "+
+				"or `provider::elestio::parse_ssh_key()` to extract both the key and username from the comment. "+
+				"Read the guide: "+docURL,
 		)
 		return
 	}

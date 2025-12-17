@@ -328,3 +328,16 @@ New attributes:
 - `firewall_user_rules`: Customize the firewall rules for the service.
 - `firewall_tool_rules`: Read-only attribute that shows the firewall rules for the dashboard tools that are not explicitly defined in `firewall_user_rules`.
 - `firewall_remove_tool_ports`: Remove the API-managed tool ports (VS Code, Terminal, File Explorer, etc.) from the firewall rules.
+
+## v0.26.0 (wip)
+
+New provider functions for SSH key handling:
+
+- **New Function:** `parse_ssh_key_data()` - Strips the comment from an SSH public key, returning only the key type and key data.
+- **New Function:** `parse_ssh_key()` - Parses an SSH public key and extracts both key data and username. Pass `null` as the username parameter to extract the username from the key comment.
+
+SSH key improvements:
+
+- SSH key comments are now forbidden in `ssh_public_keys.key_data`. Use the new provider functions to strip comments.
+- Documented supported SSH key types: `ssh-rsa`, `ssh-ed25519`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, `ecdsa-sha2-nistp521`, `ssh-dss`.
+- Improved error messages with links to documentation and provider functions.

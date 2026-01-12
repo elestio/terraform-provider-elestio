@@ -1,4 +1,4 @@
-resource "elestio_getateam" "example" {
+resource "elestio_rybbit" "example" {
   project_id    = "2500"
   version       = "latest"
   provider_name = "netcup"

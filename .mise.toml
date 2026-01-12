@@ -1,0 +1,4 @@
+[tools]
+terraform = "1.14.3"
+terraform-docs = "0.21.0"
+go = "1.25.0"

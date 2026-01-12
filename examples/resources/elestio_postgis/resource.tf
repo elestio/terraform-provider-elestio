@@ -1,6 +1,6 @@
-resource "elestio_getateam" "example" {
+resource "elestio_postgis" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "17-master"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -30,6 +30,12 @@ resource "elestio_getateam" "example" {
     {
       "type"     = "input"
       "port"     = "443"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "35432"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     }

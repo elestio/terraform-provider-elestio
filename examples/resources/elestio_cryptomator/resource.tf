@@ -1,6 +1,6 @@
-resource "elestio_getateam" "example" {
+resource "elestio_cryptomator" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "stable"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

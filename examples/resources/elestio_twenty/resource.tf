@@ -1,6 +1,6 @@
 resource "elestio_twenty" "example" {
   project_id    = "2500"
-  version       = "v0.30.0"
+  version       = "v1"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

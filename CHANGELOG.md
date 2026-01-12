@@ -343,3 +343,9 @@ SSH key improvements:
 - SSH key comments are now forbidden in `ssh_public_keys.key_data`. Use the new provider functions to strip comments.
 - Documented supported SSH key types: `ssh-rsa`, `ssh-ed25519`, `ecdsa-sha2-nistp256`, `ecdsa-sha2-nistp384`, `ecdsa-sha2-nistp521`.
 - Improved error messages with links to documentation and provider functions.
+
+## v0.27.0 (12 January, 2026)
+
+- **New service:** `elestio_cryptomator`
+- **New service:** `elestio_postgis`
+- **New service:** `elestio_rybbit`

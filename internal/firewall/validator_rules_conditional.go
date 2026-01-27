@@ -9,7 +9,8 @@ import (
 )
 
 type firewallRulesConditionalValidator struct {
-	hasCustomFirewallPorts bool
+	defaultRules           types.Set
+	defaultFirewallEnabled bool
 }
 
 func (v firewallRulesConditionalValidator) Description(ctx context.Context) string {
@@ -36,10 +37,8 @@ func (v firewallRulesConditionalValidator) ValidateSet(ctx context.Context, req 
 		return
 	}
 
-	// Determine if firewall is enabled
-	// If firewall_enabled is unknown/null at this point, rules are specified by user,
-	// so we use the expected default value
-	isFirewallEnabled := v.hasCustomFirewallPorts
+	// Determine if firewall is enabled (use configured value or default)
+	isFirewallEnabled := v.defaultFirewallEnabled
 	if !firewallEnabled.IsNull() && !firewallEnabled.IsUnknown() {
 		isFirewallEnabled = firewallEnabled.ValueBool()
 	}
@@ -47,11 +46,12 @@ func (v firewallRulesConditionalValidator) ValidateSet(ctx context.Context, req 
 	// Check if firewall_user_rules is empty
 	isRulesEmpty := req.ConfigValue.IsNull() || len(req.ConfigValue.Elements()) == 0
 
-	// Case 1: User explicitly set firewall_enabled = false
-	if !firewallEnabled.IsUnknown() && !firewallEnabled.IsNull() && !isFirewallEnabled {
+	// Case 1: Firewall is disabled (explicitly or by default)
+	if !isFirewallEnabled {
 		// When firewall is explicitly disabled, firewall_user_rules MUST be explicitly set to empty
 		// We cannot allow it to be unknown/null because that would result in default rules being applied
-		if req.ConfigValue.IsUnknown() || req.ConfigValue.IsNull() {
+		if (!firewallEnabled.IsUnknown() && !firewallEnabled.IsNull()) &&
+			(req.ConfigValue.IsUnknown() || req.ConfigValue.IsNull()) {
 			resp.Diagnostics.AddAttributeError(
 				req.Path,
 				"Invalid Attribute Configuration",
@@ -75,24 +75,32 @@ func (v firewallRulesConditionalValidator) ValidateSet(ctx context.Context, req 
 	}
 
 	// Case 2: Firewall is enabled (explicitly or by default)
-	// Only validate required ports if rules are specified (not unknown/null)
-	if !req.ConfigValue.IsUnknown() && !req.ConfigValue.IsNull() {
-		requiredPorts := GetSystemRequiredPorts()
-
-		ValidateRequiredPorts(
-			ctx,
-			req.ConfigValue,
-			requiredPorts,
-			&resp.Diagnostics,
-			req.Path,
-			"",
-		)
+	// Determine what value to validate: explicit config or default
+	var valuesToValidate types.Set
+	if req.ConfigValue.IsUnknown() || req.ConfigValue.IsNull() {
+		// Use the default value provided by the schema
+		valuesToValidate = v.defaultRules
+	} else {
+		// Use the explicitly provided value
+		valuesToValidate = req.ConfigValue
 	}
+
+	// Validate that required system ports are present
+	// Note: Template-specific ports are optional - only system ports are strictly required
+	requiredPorts := GetSystemRequiredPorts()
+	ValidateRequiredPorts(
+		ctx,
+		valuesToValidate,
+		requiredPorts,
+		&resp.Diagnostics,
+		req.Path,
+		"",
+	)
 }
 
-func FirewallRulesConditional(hasCustomFirewallPorts bool) firewallRulesConditionalValidator {
+func FirewallRulesConditional(defaultRules types.Set, defaultFirewallEnabled bool) firewallRulesConditionalValidator {
 	return firewallRulesConditionalValidator{
-		hasCustomFirewallPorts: hasCustomFirewallPorts,
+		defaultRules:           defaultRules,
+		defaultFirewallEnabled: defaultFirewallEnabled,
 	}
 }
-

@@ -27,7 +27,14 @@ func TargetsDefaultValue() types.Set {
 }
 
 // CreateUserRulesDefaultValue creates the default firewall rules from template rules
-func CreateUserRulesDefaultValue(templateRules []elestio.ServiceFirewallRule) types.Set {
+func CreateUserRulesDefaultValue(templateRules []elestio.ServiceFirewallRule, hasCustomFirewallPorts bool) types.Set {
+	// If firewall is disabled by default (no custom firewall ports), return empty array
+	if !hasCustomFirewallPorts {
+		emptySet, _ := types.SetValue(types.ObjectType{AttrTypes: models.FirewallRuleAttrTypes}, []attr.Value{})
+		return emptySet
+	}
+
+	// If firewall is enabled by default, include required system ports + template rules
 	var firewallRulesObjs []attr.Value
 	diags := &diag.Diagnostics{}
 
@@ -69,13 +76,16 @@ func UserRulesSchema(templateRules []elestio.ServiceFirewallRule, hasCustomFirew
 		description += strings.Join(ruleParts, ", ") + "."
 	}
 
+	defaultRules := CreateUserRulesDefaultValue(templateRules, hasCustomFirewallPorts)
+	defaultFirewallEnabled := hasCustomFirewallPorts
+
 	return schema.SetNestedAttribute{
 		MarkdownDescription: description,
 		Optional:            true,
 		Computed:            true,
-		Default:             setdefault.StaticValue(CreateUserRulesDefaultValue(templateRules)),
+		Default:             setdefault.StaticValue(defaultRules),
 		Validators: []validator.Set{
-			FirewallRulesConditional(hasCustomFirewallPorts),
+			FirewallRulesConditional(defaultRules, defaultFirewallEnabled),
 		},
 		NestedObject: schema.NestedAttributeObject{
 			Attributes: map[string]schema.Attribute{

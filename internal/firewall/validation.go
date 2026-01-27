@@ -25,7 +25,7 @@ func ValidatePort80Required(ctx context.Context, firewallUserRules types.Set, di
 
 // ValidateRulesForCustomDomains validates firewall rules when custom domains are present
 // If firewallUserRules is null/unknown, validates against the default template rules
-func ValidateRulesForCustomDomains(ctx context.Context, firewallUserRules types.Set, customDomainNames types.Set, firewallEnabled bool, templateRules []elestio.ServiceFirewallRule, diags *diag.Diagnostics, attributePath path.Path) bool {
+func ValidateRulesForCustomDomains(ctx context.Context, firewallUserRules types.Set, customDomainNames types.Set, firewallEnabled bool, templateRules []elestio.ServiceFirewallRule, hasCustomFirewallPorts bool, diags *diag.Diagnostics, attributePath path.Path) bool {
 	if !firewallEnabled || customDomainNames.IsNull() || customDomainNames.IsUnknown() {
 		return true
 	}
@@ -44,7 +44,7 @@ func ValidateRulesForCustomDomains(ctx context.Context, firewallUserRules types.
 	// If firewall_user_rules is null/unknown, use the default value for validation
 	rulesToValidate := firewallUserRules
 	if firewallUserRules.IsNull() || firewallUserRules.IsUnknown() {
-		rulesToValidate = CreateUserRulesDefaultValue(templateRules)
+		rulesToValidate = CreateUserRulesDefaultValue(templateRules, hasCustomFirewallPorts)
 	}
 
 	return ValidatePort80Required(ctx, rulesToValidate, diags, attributePath)

@@ -736,7 +736,7 @@ func (r *ServiceResource) ValidateConfig(ctx context.Context, req resource.Valid
 			isFirewallEnabled = data.FirewallEnabled.ValueBool()
 		}
 
-		if !firewall.ValidateRulesForCustomDomains(ctx, data.FirewallUserRules, data.CustomDomainNames, isFirewallEnabled, r.FirewallRules, &resp.Diagnostics, path.Root("firewall_user_rules")) {
+		if !firewall.ValidateRulesForCustomDomains(ctx, data.FirewallUserRules, data.CustomDomainNames, isFirewallEnabled, r.FirewallRules, r.HasCustomFirewallPorts, &resp.Diagnostics, path.Root("firewall_user_rules")) {
 			return
 		}
 	}

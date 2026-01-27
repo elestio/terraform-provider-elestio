@@ -164,7 +164,6 @@ FEATURES:
 ## v0.10.1 (17 July, 2023)
 
 - Limit `provider_name` to:
-
   - `hetzner`
   - `do` for DigitalOcean
   - `lightsail` for AWS Lightsail
@@ -349,3 +348,7 @@ SSH key improvements:
 - **New service:** `elestio_cryptomator`
 - **New service:** `elestio_postgis`
 - **New service:** `elestio_rybbit`
+
+## v0.27.1 (27 January, 2026)
+
+Fixed an issue where the default value of the `firewall_user_rules` attribute incorrectly included required system ports even when `firewall_enabled` was `false` by default.

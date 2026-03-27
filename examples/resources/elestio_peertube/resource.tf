@@ -1,6 +1,6 @@
 resource "elestio_peertube" "example" {
   project_id    = "2500"
-  version       = "production-bullseye"
+  version       = "production-bookworm"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

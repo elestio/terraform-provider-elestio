@@ -3,12 +3,12 @@
 page_title: "elestio_growthbook Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experimentsThe elestio_growthbook resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image elestio/growthbook https://hub.docker.com/r/elestio/growthbook
+  GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experimentsThe elestio_growthbook resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image growthbook/growthbook https://hub.docker.com/r/growthbook/growthbook
 ---
 
 # elestio_growthbook (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrowthBook-rtdF.png" width="100" /><br>GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experiments<br><br>The **elestio_growthbook** resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image [elestio/growthbook](https://hub.docker.com/r/elestio/growthbook)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/GrowthBook-rtdF.png" width="100" /><br>GrowthBook is an open-source platform for feature flags and A/B tests that helps teams deploy code efficiently and analyze experiments<br><br>The **elestio_growthbook** resource allows the creation and management of Elestio GrowthBook services. The service uses the following docker image [growthbook/growthbook](https://hub.docker.com/r/growthbook/growthbook)
 
 ## Example Usage
 

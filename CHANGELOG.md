@@ -352,3 +352,18 @@ SSH key improvements:
 ## v0.27.1 (27 January, 2026)
 
 Fixed an issue where the default value of the `firewall_user_rules` attribute incorrectly included required system ports even when `firewall_enabled` was `false` by default.
+
+## v0.28.0 (27 March, 2026)
+
+New services:
+
+- `elestio_convex`
+- `elestio_inventree`
+- `elestio_litellm`
+- `elestio_onyx`
+- `elestio_openclaw`
+- `elestio_openobserve`
+- `elestio_ova_runner`
+- `elestio_pgduckdb`
+- `elestio_shinyserver`
+- `elestio_unibee`

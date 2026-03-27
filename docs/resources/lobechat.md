@@ -3,12 +3,12 @@
 page_title: "elestio_lobechat Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.The elestio_lobechat resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image elestio/lobe-chat https://hub.docker.com/r/elestio/lobe-chat
+  An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.The elestio_lobechat resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image lobehub/lobe-chat https://hub.docker.com/r/lobehub/lobe-chat
 ---
 
 # elestio_lobechat (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LobeChat-G5yZ.png" width="100" /><br>An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.<br><br>The **elestio_lobechat** resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image [elestio/lobe-chat](https://hub.docker.com/r/elestio/lobe-chat)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LobeChat-G5yZ.png" width="100" /><br>An open-source, high-performance chatbot framework. Support one-click free deployment of your private ChatGPT/Gemini/LLM application.<br><br>The **elestio_lobechat** resource allows the creation and management of Elestio LobeChat services. The service uses the following docker image [lobehub/lobe-chat](https://hub.docker.com/r/lobehub/lobe-chat)
 
 ## Example Usage
 

@@ -3,19 +3,19 @@
 page_title: "elestio_mssql Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.The elestio_mssql resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image mcr.microsoft.com/mssql/server https://hub.docker.com/r/mcr.microsoft.com/mssql/server
+  SQL Server is a modern data platform designed to tackle the challenges of today's data professional.The elestio_mssql resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image mcr.microsoft.com/mssql/server https://hub.docker.com/r/mcr.microsoft.com/mssql/server
 ---
 
 # elestio_mssql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server 2019 is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_mssql" "example" {
   project_id    = "2500"
-  version       = "2022-latest"
+  version       = "2025-latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -88,7 +88,7 @@ resource "elestio_mssql" "example" {
 - `support_level` (String) Service support level. Available support levels are `level1`, `level2` and `level3`. You can look for their advantages in the [pricing documentation](https://elest.io/pricing). Requires replace the whole resource to change it in terraform. It is recommended to use the web dashboard to change it without replacing the service.
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
-- `version` (String) This is the version of the software used as service. **Default** `2022-latest`.
+- `version` (String) This is the version of the software used as service. **Default** `2025-latest`.
 
 ### Read-Only
 

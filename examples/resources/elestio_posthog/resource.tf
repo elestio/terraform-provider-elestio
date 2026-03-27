@@ -1,6 +1,6 @@
 resource "elestio_posthog" "example" {
   project_id    = "2500"
-  version       = "8ae62abb31f38eed95d24abd03f100f4cf1d52a1"
+  version       = "da3412535721cf1d9306621bef72d5b62dd8a355"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

@@ -1,6 +1,6 @@
 resource "elestio_supabase" "example" {
   project_id    = "2500"
-  version       = "2025.11.24-sha-d990ae8"
+  version       = "2025.12.17-sha-43f4f7f"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

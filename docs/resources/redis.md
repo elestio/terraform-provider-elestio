@@ -3,12 +3,12 @@
 page_title: "elestio_redis Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  Redis is an open-source, in-memory database, cache and message broker. The elestio_redis resource allows the creation and management of Elestio Redis services. The service uses the following docker image elestio/redis https://hub.docker.com/r/elestio/redis
+  Redis is an open-source, in-memory database, cache and message broker. The elestio_redis resource allows the creation and management of Elestio Redis services. The service uses the following docker image redis https://hub.docker.com/r/redis
 ---
 
 # elestio_redis (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [elestio/redis](https://hub.docker.com/r/elestio/redis)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/1280px-Redis-Logo-8Xj9.png" width="100" /><br>Redis is an open-source, in-memory database, cache and message broker. <br><br>The **elestio_redis** resource allows the creation and management of Elestio Redis services. The service uses the following docker image [redis](https://hub.docker.com/r/redis)
 
 ## Example Usage
 

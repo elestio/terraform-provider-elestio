@@ -1,6 +1,6 @@
 resource "elestio_authentik" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "2025.10.0"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

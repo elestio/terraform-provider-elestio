@@ -1,6 +1,6 @@
 resource "elestio_huly" "example" {
   project_id    = "2500"
-  version       = "v0.6.466"
+  version       = "v0.7.252"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

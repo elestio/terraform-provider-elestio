@@ -32,6 +32,18 @@ resource "elestio_nats" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "4222"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "6222"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
     }
   ]
 }

@@ -32,6 +32,24 @@ resource "elestio_getateam" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "5060/udp"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "5060"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
+    {
+      "type"     = "input"
+      "port"     = "20000-20100/udp"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
     }
   ]
 }

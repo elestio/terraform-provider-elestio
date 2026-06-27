@@ -3,12 +3,12 @@
 page_title: "elestio_akaunting Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Online accounting software for small businesses and freelancers. Send invoices and track expenses on the cloud.The elestio_akaunting resource allows the creation and management of Elestio Akaunting services. The service uses the following docker image docker.io/akaunting/akaunting https://hub.docker.com/r/docker.io/akaunting/akaunting
+  Online accounting software for small businesses and freelancers. Send invoices and track expenses on the cloud.The elestio_akaunting resource allows the creation and management of Elestio Akaunting services. The service uses the following docker image docker.io/akaunting/akaunting https://hub.docker.com/r/akaunting/akaunting
 ---
 
 # elestio_akaunting (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Akaunting-ZGno.png" width="100" /><br>Online accounting software for small businesses and freelancers. Send invoices and track expenses on the cloud.<br><br>The **elestio_akaunting** resource allows the creation and management of Elestio Akaunting services. The service uses the following docker image [docker.io/akaunting/akaunting](https://hub.docker.com/r/docker.io/akaunting/akaunting)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Akaunting-ZGno.png" width="100" /><br>Online accounting software for small businesses and freelancers. Send invoices and track expenses on the cloud.<br><br>The **elestio_akaunting** resource allows the creation and management of Elestio Akaunting services. The service uses the following docker image [docker.io/akaunting/akaunting](https://hub.docker.com/r/akaunting/akaunting)
 
 ## Example Usage
 

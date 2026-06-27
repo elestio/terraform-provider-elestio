@@ -3,12 +3,12 @@
 page_title: "elestio_kellnr Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Kellnr allows you to host private Rust crates on your hardware. You can also keep full control of your code at any time.The elestio_kellnr resource allows the creation and management of Elestio Kellnr services. The service uses the following docker image ghcr.io/kellnr/kellnr https://hub.docker.com/r/ghcr.io/kellnr/kellnr
+  Kellnr allows you to host private Rust crates on your hardware. You can also keep full control of your code at any time.The elestio_kellnr resource allows the creation and management of Elestio Kellnr services. The service uses the following docker image ghcr.io/kellnr/kellnr https://ghcr.io/kellnr/kellnr
 ---
 
 # elestio_kellnr (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kellnr-fg8M.png" width="100" /><br>Kellnr allows you to host private Rust crates on your hardware. You can also keep full control of your code at any time.<br><br>The **elestio_kellnr** resource allows the creation and management of Elestio Kellnr services. The service uses the following docker image [ghcr.io/kellnr/kellnr](https://hub.docker.com/r/ghcr.io/kellnr/kellnr)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Kellnr-fg8M.png" width="100" /><br>Kellnr allows you to host private Rust crates on your hardware. You can also keep full control of your code at any time.<br><br>The **elestio_kellnr** resource allows the creation and management of Elestio Kellnr services. The service uses the following docker image [ghcr.io/kellnr/kellnr](https://ghcr.io/kellnr/kellnr)
 
 ## Example Usage
 

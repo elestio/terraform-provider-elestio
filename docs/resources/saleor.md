@@ -3,12 +3,12 @@
 page_title: "elestio_saleor Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Saleor Core: the high-performance, composable, headless commerce API.The elestio_saleor resource allows the creation and management of Elestio Saleor services. The service uses the following docker image ghcr.io/saleor/saleor https://hub.docker.com/r/ghcr.io/saleor/saleor
+  Saleor Core: the high-performance, composable, headless commerce API.The elestio_saleor resource allows the creation and management of Elestio Saleor services. The service uses the following docker image ghcr.io/saleor/saleor https://ghcr.io/saleor/saleor
 ---
 
 # elestio_saleor (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Saleor-XN6D.png" width="100" /><br>Saleor Core: the high-performance, composable, headless commerce API.<br><br>The **elestio_saleor** resource allows the creation and management of Elestio Saleor services. The service uses the following docker image [ghcr.io/saleor/saleor](https://hub.docker.com/r/ghcr.io/saleor/saleor)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Saleor-XN6D.png" width="100" /><br>Saleor Core: the high-performance, composable, headless commerce API.<br><br>The **elestio_saleor** resource allows the creation and management of Elestio Saleor services. The service uses the following docker image [ghcr.io/saleor/saleor](https://ghcr.io/saleor/saleor)
 
 ## Example Usage
 

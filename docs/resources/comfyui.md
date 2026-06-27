@@ -3,12 +3,12 @@
 page_title: "elestio_comfyui Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  The most powerful and modular stable diffusion GUI, API, and backend with a graph/nodes interface.The elestio_comfyui resource allows the creation and management of Elestio ComfyUI services. The service uses the following docker image ghcr.io/ai-dock/comfyui https://hub.docker.com/r/ghcr.io/ai-dock/comfyui
+  The most powerful and modular stable diffusion GUI, API, and backend with a graph/nodes interface.The elestio_comfyui resource allows the creation and management of Elestio ComfyUI services. The service uses the following docker image ghcr.io/ai-dock/comfyui https://ghcr.io/ai-dock/comfyui
 ---
 
 # elestio_comfyui (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ComfyUI-xHQj.png" width="100" /><br>The most powerful and modular stable diffusion GUI, API, and backend with a graph/nodes interface.<br><br>The **elestio_comfyui** resource allows the creation and management of Elestio ComfyUI services. The service uses the following docker image [ghcr.io/ai-dock/comfyui](https://hub.docker.com/r/ghcr.io/ai-dock/comfyui)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ComfyUI-xHQj.png" width="100" /><br>The most powerful and modular stable diffusion GUI, API, and backend with a graph/nodes interface.<br><br>The **elestio_comfyui** resource allows the creation and management of Elestio ComfyUI services. The service uses the following docker image [ghcr.io/ai-dock/comfyui](https://ghcr.io/ai-dock/comfyui)
 
 ## Example Usage
 

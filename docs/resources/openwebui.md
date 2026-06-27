@@ -3,12 +3,12 @@
 page_title: "elestio_openwebui Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  User-friendly AI Interface (Supports Ollama, OpenAI API, etc.) Includes Ollama's default setup.The elestio_openwebui resource allows the creation and management of Elestio OpenWebUI services. The service uses the following docker image ghcr.io/open-webui/open-webui https://hub.docker.com/r/ghcr.io/open-webui/open-webui
+  User-friendly AI Interface (Supports Ollama, OpenAI API, etc.) Includes Ollama's default setup.The elestio_openwebui resource allows the creation and management of Elestio OpenWebUI services. The service uses the following docker image ghcr.io/open-webui/open-webui https://ghcr.io/open-webui/open-webui
 ---
 
 # elestio_openwebui (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenWebUI-tep1.png" width="100" /><br>User-friendly AI Interface (Supports Ollama, OpenAI API, etc.) Includes Ollama's default setup.<br><br>The **elestio_openwebui** resource allows the creation and management of Elestio OpenWebUI services. The service uses the following docker image [ghcr.io/open-webui/open-webui](https://hub.docker.com/r/ghcr.io/open-webui/open-webui)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenWebUI-tep1.png" width="100" /><br>User-friendly AI Interface (Supports Ollama, OpenAI API, etc.) Includes Ollama's default setup.<br><br>The **elestio_openwebui** resource allows the creation and management of Elestio OpenWebUI services. The service uses the following docker image [ghcr.io/open-webui/open-webui](https://ghcr.io/open-webui/open-webui)
 
 ## Example Usage
 

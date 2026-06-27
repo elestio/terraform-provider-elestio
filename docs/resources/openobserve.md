@@ -3,12 +3,12 @@
 page_title: "elestio_openobserve Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  OpenObserve is an open-source observability platform for logs, metrics, traces, and frontend monitoring. A cost-effective alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.The elestio_openobserve resource allows the creation and management of Elestio OpenObserve services. The service uses the following docker image public.ecr.aws/zinclabs/openobserve https://hub.docker.com/r/public.ecr.aws/zinclabs/openobserve
+  OpenObserve is an open-source observability platform for logs, metrics, traces, and frontend monitoring. A cost-effective alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.The elestio_openobserve resource allows the creation and management of Elestio OpenObserve services. The service uses the following docker image public.ecr.aws/zinclabs/openobserve https://public.ecr.aws/zinclabs/openobserve
 ---
 
 # elestio_openobserve (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenObserve-dltQ.png" width="100" /><br>OpenObserve is an open-source observability platform for logs, metrics, traces, and frontend monitoring. A cost-effective alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.<br><br>The **elestio_openobserve** resource allows the creation and management of Elestio OpenObserve services. The service uses the following docker image [public.ecr.aws/zinclabs/openobserve](https://hub.docker.com/r/public.ecr.aws/zinclabs/openobserve)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/OpenObserve-dltQ.png" width="100" /><br>OpenObserve is an open-source observability platform for logs, metrics, traces, and frontend monitoring. A cost-effective alternative to Datadog, Splunk, and Elasticsearch with 140x lower storage costs and single binary deployment.<br><br>The **elestio_openobserve** resource allows the creation and management of Elestio OpenObserve services. The service uses the following docker image [public.ecr.aws/zinclabs/openobserve](https://public.ecr.aws/zinclabs/openobserve)
 
 ## Example Usage
 

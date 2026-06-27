@@ -3,12 +3,12 @@
 page_title: "elestio_wekan Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.The elestio_wekan resource allows the creation and management of Elestio Wekan services. The service uses the following docker image quay.io/wekan/wekan https://hub.docker.com/r/quay.io/wekan/wekan
+  Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.The elestio_wekan resource allows the creation and management of Elestio Wekan services. The service uses the following docker image quay.io/wekan/wekan https://quay.io/wekan/wekan
 ---
 
 # elestio_wekan (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Wekan-cw01.png" width="100" /><br>Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.<br><br>The **elestio_wekan** resource allows the creation and management of Elestio Wekan services. The service uses the following docker image [quay.io/wekan/wekan](https://hub.docker.com/r/quay.io/wekan/wekan)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Wekan-cw01.png" width="100" /><br>Experience efficient task management with WeKan - the Open-Source, customizable, and privacy-focused Kanban.<br><br>The **elestio_wekan** resource allows the creation and management of Elestio Wekan services. The service uses the following docker image [quay.io/wekan/wekan](https://quay.io/wekan/wekan)
 
 ## Example Usage
 

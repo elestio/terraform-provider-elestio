@@ -3,12 +3,12 @@
 page_title: "elestio_netbox Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  The premier source of truth powering network automation.The elestio_netbox resource allows the creation and management of Elestio NetBox services. The service uses the following docker image docker.io/netboxcommunity/netbox https://hub.docker.com/r/docker.io/netboxcommunity/netbox
+  The premier source of truth powering network automation.The elestio_netbox resource allows the creation and management of Elestio NetBox services. The service uses the following docker image docker.io/netboxcommunity/netbox https://hub.docker.com/r/netboxcommunity/netbox
 ---
 
 # elestio_netbox (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/NetBox-bvQb.png" width="100" /><br>The premier source of truth powering network automation.<br><br>The **elestio_netbox** resource allows the creation and management of Elestio NetBox services. The service uses the following docker image [docker.io/netboxcommunity/netbox](https://hub.docker.com/r/docker.io/netboxcommunity/netbox)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/NetBox-bvQb.png" width="100" /><br>The premier source of truth powering network automation.<br><br>The **elestio_netbox** resource allows the creation and management of Elestio NetBox services. The service uses the following docker image [docker.io/netboxcommunity/netbox](https://hub.docker.com/r/netboxcommunity/netbox)
 
 ## Example Usage
 

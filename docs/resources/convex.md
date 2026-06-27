@@ -3,12 +3,12 @@
 page_title: "elestio_convex Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Convex is the open-source reactive database designed to make life easy for web app developers, whether human or LLM.The elestio_convex resource allows the creation and management of Elestio Convex services. The service uses the following docker image ghcr.io/get-convex/convex-backend https://hub.docker.com/r/ghcr.io/get-convex/convex-backend
+  Convex is the open-source reactive database designed to make life easy for web app developers, whether human or LLM.The elestio_convex resource allows the creation and management of Elestio Convex services. The service uses the following docker image ghcr.io/get-convex/convex-backend https://ghcr.io/get-convex/convex-backend
 ---
 
 # elestio_convex (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Convex-7KOY.png" width="100" /><br>Convex is the open-source reactive database designed to make life easy for web app developers, whether human or LLM.<br><br>The **elestio_convex** resource allows the creation and management of Elestio Convex services. The service uses the following docker image [ghcr.io/get-convex/convex-backend](https://hub.docker.com/r/ghcr.io/get-convex/convex-backend)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Convex-7KOY.png" width="100" /><br>Convex is the open-source reactive database designed to make life easy for web app developers, whether human or LLM.<br><br>The **elestio_convex** resource allows the creation and management of Elestio Convex services. The service uses the following docker image [ghcr.io/get-convex/convex-backend](https://ghcr.io/get-convex/convex-backend)
 
 ## Example Usage
 

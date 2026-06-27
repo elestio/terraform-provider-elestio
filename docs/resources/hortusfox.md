@@ -3,12 +3,12 @@
 page_title: "elestio_hortusfox Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Self-hosted collaborative plant management and tracking system for plant enthusiastsThe elestio_hortusfox resource allows the creation and management of Elestio HortusFox services. The service uses the following docker image ghcr.io/danielbrendel/hortusfox-web https://hub.docker.com/r/ghcr.io/danielbrendel/hortusfox-web
+  Self-hosted collaborative plant management and tracking system for plant enthusiastsThe elestio_hortusfox resource allows the creation and management of Elestio HortusFox services. The service uses the following docker image ghcr.io/danielbrendel/hortusfox-web https://ghcr.io/danielbrendel/hortusfox-web
 ---
 
 # elestio_hortusfox (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HortusFox-agQl.png" width="100" /><br>Self-hosted collaborative plant management and tracking system for plant enthusiasts<br><br>The **elestio_hortusfox** resource allows the creation and management of Elestio HortusFox services. The service uses the following docker image [ghcr.io/danielbrendel/hortusfox-web](https://hub.docker.com/r/ghcr.io/danielbrendel/hortusfox-web)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/HortusFox-agQl.png" width="100" /><br>Self-hosted collaborative plant management and tracking system for plant enthusiasts<br><br>The **elestio_hortusfox** resource allows the creation and management of Elestio HortusFox services. The service uses the following docker image [ghcr.io/danielbrendel/hortusfox-web](https://ghcr.io/danielbrendel/hortusfox-web)
 
 ## Example Usage
 

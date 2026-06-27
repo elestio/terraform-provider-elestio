@@ -3,12 +3,12 @@
 page_title: "elestio_zitadel Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Zitadel is a cloud-native Identity & Access Management platform built for the cloud era.The elestio_zitadel resource allows the creation and management of Elestio Zitadel services. The service uses the following docker image ghcr.io/zitadel/zitadel https://hub.docker.com/r/ghcr.io/zitadel/zitadel
+  Zitadel is a cloud-native Identity & Access Management platform built for the cloud era.The elestio_zitadel resource allows the creation and management of Elestio Zitadel services. The service uses the following docker image ghcr.io/zitadel/zitadel https://ghcr.io/zitadel/zitadel
 ---
 
 # elestio_zitadel (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zitadel-xabh.png" width="100" /><br>Zitadel is a cloud-native Identity & Access Management platform built for the cloud era.<br><br>The **elestio_zitadel** resource allows the creation and management of Elestio Zitadel services. The service uses the following docker image [ghcr.io/zitadel/zitadel](https://hub.docker.com/r/ghcr.io/zitadel/zitadel)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Zitadel-xabh.png" width="100" /><br>Zitadel is a cloud-native Identity & Access Management platform built for the cloud era.<br><br>The **elestio_zitadel** resource allows the creation and management of Elestio Zitadel services. The service uses the following docker image [ghcr.io/zitadel/zitadel](https://ghcr.io/zitadel/zitadel)
 
 ## Example Usage
 

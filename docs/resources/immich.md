@@ -3,12 +3,12 @@
 page_title: "elestio_immich Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Self-hosted photo and video backup solution directly from your mobile phone.The elestio_immich resource allows the creation and management of Elestio Immich services. The service uses the following docker image ghcr.io/immich-app/immich-server https://hub.docker.com/r/ghcr.io/immich-app/immich-server
+  Self-hosted photo and video backup solution directly from your mobile phone.The elestio_immich resource allows the creation and management of Elestio Immich services. The service uses the following docker image ghcr.io/immich-app/immich-server https://ghcr.io/immich-app/immich-server
 ---
 
 # elestio_immich (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Immich-rDWK.png" width="100" /><br>Self-hosted photo and video backup solution directly from your mobile phone.<br><br>The **elestio_immich** resource allows the creation and management of Elestio Immich services. The service uses the following docker image [ghcr.io/immich-app/immich-server](https://hub.docker.com/r/ghcr.io/immich-app/immich-server)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Immich-rDWK.png" width="100" /><br>Self-hosted photo and video backup solution directly from your mobile phone.<br><br>The **elestio_immich** resource allows the creation and management of Elestio Immich services. The service uses the following docker image [ghcr.io/immich-app/immich-server](https://ghcr.io/immich-app/immich-server)
 
 ## Example Usage
 

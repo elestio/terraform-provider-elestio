@@ -3,12 +3,12 @@
 page_title: "elestio_mailu Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  Mailu is an insular email distribution - mail server as Docker imagesThe elestio_mailu resource allows the creation and management of Elestio Mailu services. The service uses the following docker image ghcr.io/mailu https://hub.docker.com/r/ghcr.io/mailu
+  Mailu is an insular email distribution - mail server as Docker imagesThe elestio_mailu resource allows the creation and management of Elestio Mailu services. The service uses the following docker image ghcr.io/mailu https://ghcr.io/mailu
 ---
 
 # elestio_mailu (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br>Mailu is an insular email distribution - mail server as Docker images<br><br>The **elestio_mailu** resource allows the creation and management of Elestio Mailu services. The service uses the following docker image [ghcr.io/mailu](https://hub.docker.com/r/ghcr.io/mailu)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/mailu-logo-W4op.png" width="100" /><br>Mailu is an insular email distribution - mail server as Docker images<br><br>The **elestio_mailu** resource allows the creation and management of Elestio Mailu services. The service uses the following docker image [ghcr.io/mailu](https://ghcr.io/mailu)
 
 ## Example Usage
 

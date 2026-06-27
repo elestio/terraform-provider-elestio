@@ -3,12 +3,12 @@
 page_title: "elestio_litellm Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format—[Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]The elestio_litellm resource allows the creation and management of Elestio LiteLLM services. The service uses the following docker image ghcr.io/berriai/litellm https://hub.docker.com/r/ghcr.io/berriai/litellm
+  Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format—[Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]The elestio_litellm resource allows the creation and management of Elestio LiteLLM services. The service uses the following docker image ghcr.io/berriai/litellm https://ghcr.io/berriai/litellm
 ---
 
 # elestio_litellm (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LiteLLM-PE90.png" width="100" /><br>Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format—[Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]<br><br>The **elestio_litellm** resource allows the creation and management of Elestio LiteLLM services. The service uses the following docker image [ghcr.io/berriai/litellm](https://hub.docker.com/r/ghcr.io/berriai/litellm)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LiteLLM-PE90.png" width="100" /><br>Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format—[Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]<br><br>The **elestio_litellm** resource allows the creation and management of Elestio LiteLLM services. The service uses the following docker image [ghcr.io/berriai/litellm](https://ghcr.io/berriai/litellm)
 
 ## Example Usage
 

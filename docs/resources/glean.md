@@ -3,12 +3,12 @@
 page_title: "elestio_glean Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  A self-hosted RSS reader and personal knowledge management tool.The elestio_glean resource allows the creation and management of Elestio Glean services. The service uses the following docker image ghcr.io/leslieleung/glean-admin https://hub.docker.com/r/ghcr.io/leslieleung/glean-admin
+  A self-hosted RSS reader and personal knowledge management tool.The elestio_glean resource allows the creation and management of Elestio Glean services. The service uses the following docker image ghcr.io/leslieleung/glean-admin https://ghcr.io/leslieleung/glean-admin
 ---
 
 # elestio_glean (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Glean-R8wi.png" width="100" /><br>A self-hosted RSS reader and personal knowledge management tool.<br><br>The **elestio_glean** resource allows the creation and management of Elestio Glean services. The service uses the following docker image [ghcr.io/leslieleung/glean-admin](https://hub.docker.com/r/ghcr.io/leslieleung/glean-admin)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Glean-R8wi.png" width="100" /><br>A self-hosted RSS reader and personal knowledge management tool.<br><br>The **elestio_glean** resource allows the creation and management of Elestio Glean services. The service uses the following docker image [ghcr.io/leslieleung/glean-admin](https://ghcr.io/leslieleung/glean-admin)
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_jupyterhub Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  A multi-user version of the notebook designed for companies, classrooms, and research labsThe elestio_jupyterhub resource allows the creation and management of Elestio JupyterHub services. The service uses the following docker image quay.io/jupyterhub/jupyterhub https://hub.docker.com/r/quay.io/jupyterhub/jupyterhub
+  A multi-user version of the notebook designed for companies, classrooms, and research labsThe elestio_jupyterhub resource allows the creation and management of Elestio JupyterHub services. The service uses the following docker image quay.io/jupyterhub/jupyterhub https://quay.io/jupyterhub/jupyterhub
 ---
 
 # elestio_jupyterhub (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/JupyterHub-F3cn.png" width="100" /><br>A multi-user version of the notebook designed for companies, classrooms, and research labs<br><br>The **elestio_jupyterhub** resource allows the creation and management of Elestio JupyterHub services. The service uses the following docker image [quay.io/jupyterhub/jupyterhub](https://hub.docker.com/r/quay.io/jupyterhub/jupyterhub)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/JupyterHub-F3cn.png" width="100" /><br>A multi-user version of the notebook designed for companies, classrooms, and research labs<br><br>The **elestio_jupyterhub** resource allows the creation and management of Elestio JupyterHub services. The service uses the following docker image [quay.io/jupyterhub/jupyterhub](https://quay.io/jupyterhub/jupyterhub)
 
 ## Example Usage
 

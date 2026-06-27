@@ -393,3 +393,7 @@ New services:
 - `elestio_rustfs`
 - `elestio_seaweedfs`
 - `elestio_temporal`
+
+### Fix
+
+- Fixed generated documentation links for services whose docker image is hosted outside Docker Hub (e.g. `ghcr.io`, `quay.io`, `mcr.microsoft.com`). These were incorrectly prefixed with `https://hub.docker.com/r/`, producing broken links. The image now links to its actual registry, and `docker.io/...` references link to the corresponding Docker Hub page. Reported in [#63](https://github.com/elestio/terraform-provider-elestio/pull/63).

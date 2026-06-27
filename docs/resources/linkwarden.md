@@ -3,12 +3,12 @@
 page_title: "elestio_linkwarden Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Linkwarden is a collaborative bookmark manager to collects, organizes, and preserves web pages.The elestio_linkwarden resource allows the creation and management of Elestio Linkwarden services. The service uses the following docker image ghcr.io/linkwarden/linkwarden https://hub.docker.com/r/ghcr.io/linkwarden/linkwarden
+  Linkwarden is a collaborative bookmark manager to collects, organizes, and preserves web pages.The elestio_linkwarden resource allows the creation and management of Elestio Linkwarden services. The service uses the following docker image ghcr.io/linkwarden/linkwarden https://ghcr.io/linkwarden/linkwarden
 ---
 
 # elestio_linkwarden (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Linkwarden-4x7q.png" width="100" /><br>Linkwarden is a collaborative bookmark manager to collects, organizes, and preserves web pages.<br><br>The **elestio_linkwarden** resource allows the creation and management of Elestio Linkwarden services. The service uses the following docker image [ghcr.io/linkwarden/linkwarden](https://hub.docker.com/r/ghcr.io/linkwarden/linkwarden)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Linkwarden-4x7q.png" width="100" /><br>Linkwarden is a collaborative bookmark manager to collects, organizes, and preserves web pages.<br><br>The **elestio_linkwarden** resource allows the creation and management of Elestio Linkwarden services. The service uses the following docker image [ghcr.io/linkwarden/linkwarden](https://ghcr.io/linkwarden/linkwarden)
 
 ## Example Usage
 

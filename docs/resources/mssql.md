@@ -3,12 +3,12 @@
 page_title: "elestio_mssql Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  SQL Server is a modern data platform designed to tackle the challenges of today's data professional.The elestio_mssql resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image mcr.microsoft.com/mssql/server https://hub.docker.com/r/mcr.microsoft.com/mssql/server
+  SQL Server is a modern data platform designed to tackle the challenges of today's data professional.The elestio_mssql resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image mcr.microsoft.com/mssql/server https://mcr.microsoft.com/mssql/server
 ---
 
 # elestio_mssql (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://hub.docker.com/r/mcr.microsoft.com/mssql/server)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sqlserverlogo-FoWZ.png" width="100" /><br>SQL Server is a modern data platform designed to tackle the challenges of today's data professional.<br><br>The **elestio_mssql** resource allows the creation and management of Elestio MSSQL services. The service uses the following docker image [mcr.microsoft.com/mssql/server](https://mcr.microsoft.com/mssql/server)
 
 ## Example Usage
 

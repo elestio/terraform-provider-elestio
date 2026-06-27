@@ -3,12 +3,12 @@
 page_title: "elestio_sharkey Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Sharkey is an open source, decentralized social media platform that's free forever! The elestio_sharkey resource allows the creation and management of Elestio Sharkey services. The service uses the following docker image activitypub.software/TransFem-org/Sharkey/container_registry/2 https://hub.docker.com/r/activitypub.software/TransFem-org/Sharkey/container_registry/2
+  Sharkey is an open source, decentralized social media platform that's free forever! The elestio_sharkey resource allows the creation and management of Elestio Sharkey services. The service uses the following docker image activitypub.software/TransFem-org/Sharkey/container_registry/2 https://activitypub.software/TransFem-org/Sharkey/container_registry/2
 ---
 
 # elestio_sharkey (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sharkey-aARb.png" width="100" /><br>Sharkey is an open source, decentralized social media platform that's free forever! <br><br>The **elestio_sharkey** resource allows the creation and management of Elestio Sharkey services. The service uses the following docker image [activitypub.software/TransFem-org/Sharkey/container_registry/2](https://hub.docker.com/r/activitypub.software/TransFem-org/Sharkey/container_registry/2)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/sharkey-aARb.png" width="100" /><br>Sharkey is an open source, decentralized social media platform that's free forever! <br><br>The **elestio_sharkey** resource allows the creation and management of Elestio Sharkey services. The service uses the following docker image [activitypub.software/TransFem-org/Sharkey/container_registry/2](https://activitypub.software/TransFem-org/Sharkey/container_registry/2)
 
 ## Example Usage
 

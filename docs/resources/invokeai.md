@@ -3,12 +3,12 @@
 page_title: "elestio_invokeai Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies.The elestio_invokeai resource allows the creation and management of Elestio InvokeAI services. The service uses the following docker image ghcr.io/invoke-ai/invokeai https://hub.docker.com/r/ghcr.io/invoke-ai/invokeai
+  InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies.The elestio_invokeai resource allows the creation and management of Elestio InvokeAI services. The service uses the following docker image ghcr.io/invoke-ai/invokeai https://ghcr.io/invoke-ai/invokeai
 ---
 
 # elestio_invokeai (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvokeAI-HkQz.png" width="100" /><br>InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies.<br><br>The **elestio_invokeai** resource allows the creation and management of Elestio InvokeAI services. The service uses the following docker image [ghcr.io/invoke-ai/invokeai](https://hub.docker.com/r/ghcr.io/invoke-ai/invokeai)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/InvokeAI-HkQz.png" width="100" /><br>InvokeAI is a leading creative engine for Stable Diffusion models, empowering professionals, artists, and enthusiasts to generate and create visual media using the latest AI-driven technologies.<br><br>The **elestio_invokeai** resource allows the creation and management of Elestio InvokeAI services. The service uses the following docker image [ghcr.io/invoke-ai/invokeai](https://ghcr.io/invoke-ai/invokeai)
 
 ## Example Usage
 

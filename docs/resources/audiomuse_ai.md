@@ -3,12 +3,12 @@
 page_title: "elestio_audiomuse_ai Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  AudioMuse-AI is a self-hosted, Dockerized music playlist generator using sonic analysis to discover related tracks for Jellyfin, Navidrome, LMS, Lyrion, and Emby: no metadata or external APIs needed.The elestio_audiomuse_ai resource allows the creation and management of Elestio AudioMuse-AI services. The service uses the following docker image ghcr.io/neptunehub/audiomuse-ai https://hub.docker.com/r/ghcr.io/neptunehub/audiomuse-ai
+  AudioMuse-AI is a self-hosted, Dockerized music playlist generator using sonic analysis to discover related tracks for Jellyfin, Navidrome, LMS, Lyrion, and Emby: no metadata or external APIs needed.The elestio_audiomuse_ai resource allows the creation and management of Elestio AudioMuse-AI services. The service uses the following docker image ghcr.io/neptunehub/audiomuse-ai https://ghcr.io/neptunehub/audiomuse-ai
 ---
 
 # elestio_audiomuse_ai (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/AudioMuse-AI-YE90.png" width="100" /><br>AudioMuse-AI is a self-hosted, Dockerized music playlist generator using sonic analysis to discover related tracks for Jellyfin, Navidrome, LMS, Lyrion, and Emby: no metadata or external APIs needed.<br><br>The **elestio_audiomuse_ai** resource allows the creation and management of Elestio AudioMuse-AI services. The service uses the following docker image [ghcr.io/neptunehub/audiomuse-ai](https://hub.docker.com/r/ghcr.io/neptunehub/audiomuse-ai)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/AudioMuse-AI-YE90.png" width="100" /><br>AudioMuse-AI is a self-hosted, Dockerized music playlist generator using sonic analysis to discover related tracks for Jellyfin, Navidrome, LMS, Lyrion, and Emby: no metadata or external APIs needed.<br><br>The **elestio_audiomuse_ai** resource allows the creation and management of Elestio AudioMuse-AI services. The service uses the following docker image [ghcr.io/neptunehub/audiomuse-ai](https://ghcr.io/neptunehub/audiomuse-ai)
 
 ## Example Usage
 

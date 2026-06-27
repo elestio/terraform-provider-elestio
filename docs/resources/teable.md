@@ -3,12 +3,12 @@
 page_title: "elestio_teable Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  The Next Gen Airtable Alternative: No-Code Postgres databaseThe elestio_teable resource allows the creation and management of Elestio Teable services. The service uses the following docker image ghcr.io/teableio/teable https://hub.docker.com/r/ghcr.io/teableio/teable
+  The Next Gen Airtable Alternative: No-Code Postgres databaseThe elestio_teable resource allows the creation and management of Elestio Teable services. The service uses the following docker image ghcr.io/teableio/teable https://ghcr.io/teableio/teable
 ---
 
 # elestio_teable (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Teable-qwLK.png" width="100" /><br>The Next Gen Airtable Alternative: No-Code Postgres database<br><br>The **elestio_teable** resource allows the creation and management of Elestio Teable services. The service uses the following docker image [ghcr.io/teableio/teable](https://hub.docker.com/r/ghcr.io/teableio/teable)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Teable-qwLK.png" width="100" /><br>The Next Gen Airtable Alternative: No-Code Postgres database<br><br>The **elestio_teable** resource allows the creation and management of Elestio Teable services. The service uses the following docker image [ghcr.io/teableio/teable](https://ghcr.io/teableio/teable)
 
 ## Example Usage
 

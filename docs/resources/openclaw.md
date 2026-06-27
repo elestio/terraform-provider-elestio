@@ -3,12 +3,12 @@
 page_title: "elestio_openclaw Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Your own personal AI assistant. Any OS. Any platform. The lobster way.  Previously known as Clawdbot.The elestio_openclaw resource allows the creation and management of Elestio OpenClaw services. The service uses the following docker image ghcr.io/openclaw/openclaw https://hub.docker.com/r/ghcr.io/openclaw/openclaw
+  Your own personal AI assistant. Any OS. Any platform. The lobster way.  Previously known as Clawdbot.The elestio_openclaw resource allows the creation and management of Elestio OpenClaw services. The service uses the following docker image ghcr.io/openclaw/openclaw https://ghcr.io/openclaw/openclaw
 ---
 
 # elestio_openclaw (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Clawdbot-IP55.png" width="100" /><br>Your own personal AI assistant. Any OS. Any platform. The lobster way.  Previously known as Clawdbot.<br><br>The **elestio_openclaw** resource allows the creation and management of Elestio OpenClaw services. The service uses the following docker image [ghcr.io/openclaw/openclaw](https://hub.docker.com/r/ghcr.io/openclaw/openclaw)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Clawdbot-IP55.png" width="100" /><br>Your own personal AI assistant. Any OS. Any platform. The lobster way.  Previously known as Clawdbot.<br><br>The **elestio_openclaw** resource allows the creation and management of Elestio OpenClaw services. The service uses the following docker image [ghcr.io/openclaw/openclaw](https://ghcr.io/openclaw/openclaw)
 
 ## Example Usage
 

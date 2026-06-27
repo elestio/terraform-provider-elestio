@@ -3,12 +3,12 @@
 page_title: "elestio_mealie Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Mealie is an intuitive and easy to use recipe management appThe elestio_mealie resource allows the creation and management of Elestio Mealie services. The service uses the following docker image ghcr.io/mealie-recipes/mealie https://hub.docker.com/r/ghcr.io/mealie-recipes/mealie
+  Mealie is an intuitive and easy to use recipe management appThe elestio_mealie resource allows the creation and management of Elestio Mealie services. The service uses the following docker image ghcr.io/mealie-recipes/mealie https://ghcr.io/mealie-recipes/mealie
 ---
 
 # elestio_mealie (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [ghcr.io/mealie-recipes/mealie](https://hub.docker.com/r/ghcr.io/mealie-recipes/mealie)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png" width="100" /><br>Mealie is an intuitive and easy to use recipe management app<br><br>The **elestio_mealie** resource allows the creation and management of Elestio Mealie services. The service uses the following docker image [ghcr.io/mealie-recipes/mealie](https://ghcr.io/mealie-recipes/mealie)
 
 ## Example Usage
 

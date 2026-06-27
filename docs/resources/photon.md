@@ -3,12 +3,12 @@
 page_title: "elestio_photon Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  A replacement for Lemmy-ui with more features, a better design, and more customizability. It includes Photon UI + LemmyThe elestio_photon resource allows the creation and management of Elestio Photon services. The service uses the following docker image ghcr.io/xyphyn/photon https://hub.docker.com/r/ghcr.io/xyphyn/photon
+  A replacement for Lemmy-ui with more features, a better design, and more customizability. It includes Photon UI + LemmyThe elestio_photon resource allows the creation and management of Elestio Photon services. The service uses the following docker image ghcr.io/xyphyn/photon https://ghcr.io/xyphyn/photon
 ---
 
 # elestio_photon (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Photon-ZYOy.png" width="100" /><br>A replacement for Lemmy-ui with more features, a better design, and more customizability. It includes Photon UI + Lemmy<br><br>The **elestio_photon** resource allows the creation and management of Elestio Photon services. The service uses the following docker image [ghcr.io/xyphyn/photon](https://hub.docker.com/r/ghcr.io/xyphyn/photon)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Photon-ZYOy.png" width="100" /><br>A replacement for Lemmy-ui with more features, a better design, and more customizability. It includes Photon UI + Lemmy<br><br>The **elestio_photon** resource allows the creation and management of Elestio Photon services. The service uses the following docker image [ghcr.io/xyphyn/photon](https://ghcr.io/xyphyn/photon)
 
 ## Example Usage
 

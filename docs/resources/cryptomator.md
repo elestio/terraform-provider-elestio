@@ -3,12 +3,12 @@
 page_title: "elestio_cryptomator Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Secure client-side encryption for your cloud storage, ensuring privacy and control over your data.The elestio_cryptomator resource allows the creation and management of Elestio Cryptomator services. The service uses the following docker image ghcr.io/cryptomator/hub https://hub.docker.com/r/ghcr.io/cryptomator/hub
+  Secure client-side encryption for your cloud storage, ensuring privacy and control over your data.The elestio_cryptomator resource allows the creation and management of Elestio Cryptomator services. The service uses the following docker image ghcr.io/cryptomator/hub https://ghcr.io/cryptomator/hub
 ---
 
 # elestio_cryptomator (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cryptomator-zqE1.png" width="100" /><br>Secure client-side encryption for your cloud storage, ensuring privacy and control over your data.<br><br>The **elestio_cryptomator** resource allows the creation and management of Elestio Cryptomator services. The service uses the following docker image [ghcr.io/cryptomator/hub](https://hub.docker.com/r/ghcr.io/cryptomator/hub)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Cryptomator-zqE1.png" width="100" /><br>Secure client-side encryption for your cloud storage, ensuring privacy and control over your data.<br><br>The **elestio_cryptomator** resource allows the creation and management of Elestio Cryptomator services. The service uses the following docker image [ghcr.io/cryptomator/hub](https://ghcr.io/cryptomator/hub)
 
 ## Example Usage
 

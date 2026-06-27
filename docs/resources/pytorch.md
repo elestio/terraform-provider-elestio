@@ -3,12 +3,12 @@
 page_title: "elestio_pytorch Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Tensors and Dynamic neural networks in Python with strong GPU accelerationThe elestio_pytorch resource allows the creation and management of Elestio PyTorch services. The service uses the following docker image quay.io/jupyter/pytorch-notebook https://hub.docker.com/r/quay.io/jupyter/pytorch-notebook
+  Tensors and Dynamic neural networks in Python with strong GPU accelerationThe elestio_pytorch resource allows the creation and management of Elestio PyTorch services. The service uses the following docker image quay.io/jupyter/pytorch-notebook https://quay.io/jupyter/pytorch-notebook
 ---
 
 # elestio_pytorch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PyTorch-loCC.png" width="100" /><br>Tensors and Dynamic neural networks in Python with strong GPU acceleration<br><br>The **elestio_pytorch** resource allows the creation and management of Elestio PyTorch services. The service uses the following docker image [quay.io/jupyter/pytorch-notebook](https://hub.docker.com/r/quay.io/jupyter/pytorch-notebook)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/PyTorch-loCC.png" width="100" /><br>Tensors and Dynamic neural networks in Python with strong GPU acceleration<br><br>The **elestio_pytorch** resource allows the creation and management of Elestio PyTorch services. The service uses the following docker image [quay.io/jupyter/pytorch-notebook](https://quay.io/jupyter/pytorch-notebook)
 
 ## Example Usage
 

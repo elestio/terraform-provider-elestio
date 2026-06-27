@@ -3,12 +3,12 @@
 page_title: "elestio_zep Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Long-Term Memory for AI Assistants it Recall, understand, and extract data from chat histories.The elestio_zep resource allows the creation and management of Elestio Zep services. The service uses the following docker image ghcr.io/getzep/zep https://hub.docker.com/r/ghcr.io/getzep/zep
+  Long-Term Memory for AI Assistants it Recall, understand, and extract data from chat histories.The elestio_zep resource allows the creation and management of Elestio Zep services. The service uses the following docker image ghcr.io/getzep/zep https://ghcr.io/getzep/zep
 ---
 
 # elestio_zep (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zep-yT7g.png" width="100" /><br>Long-Term Memory for AI Assistants it Recall, understand, and extract data from chat histories.<br><br>The **elestio_zep** resource allows the creation and management of Elestio Zep services. The service uses the following docker image [ghcr.io/getzep/zep](https://hub.docker.com/r/ghcr.io/getzep/zep)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/zep-yT7g.png" width="100" /><br>Long-Term Memory for AI Assistants it Recall, understand, and extract data from chat histories.<br><br>The **elestio_zep** resource allows the creation and management of Elestio Zep services. The service uses the following docker image [ghcr.io/getzep/zep](https://ghcr.io/getzep/zep)
 
 ## Example Usage
 

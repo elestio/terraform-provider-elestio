@@ -181,6 +181,22 @@ func (r *ServiceResource) Metadata(ctx context.Context, req resource.MetadataReq
 	resp.TypeName = req.ProviderTypeName + "_" + r.ResourceName
 }
 
+// dockerImageURL returns a browsable URL for a docker image reference.
+// Plain Docker Hub references (e.g. "owner/name" or "name") are linked to
+// hub.docker.com, while fully-qualified references that include a registry
+// host (e.g. "ghcr.io/ferretdb/ferretdb") are linked to that registry directly.
+func dockerImageURL(image string) string {
+	host, path, found := strings.Cut(image, "/")
+	switch {
+	case host == "docker.io": // Docker Hub's registry host
+		return "https://hub.docker.com/r/" + path
+	case found && strings.Contains(host, "."): // another registry, e.g. ghcr.io
+		return "https://" + image
+	default: // plain Docker Hub reference, e.g. owner/name
+		return "https://hub.docker.com/r/" + image
+	}
+}
+
 func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest, resp *resource.SchemaResponse) {
 	// ↓↓↓ Attributes that require a multi-stage construction process. ↓↓↓
 	version := schema.StringAttribute{
@@ -238,9 +254,9 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 	// Add terraform description
 	schemaMardownDescription += fmt.Sprintf("The **elestio_%s** resource allows the creation and management of Elestio %s services.", r.ResourceName, r.DocumentationName)
 
-	// Add service dockerhub image
+	// Add service docker image
 	if r.DockerHubImage != "" {
-		schemaMardownDescription += fmt.Sprintf(" The service uses the following docker image [%s](https://hub.docker.com/r/%s)", r.DockerHubImage, r.DockerHubImage)
+		schemaMardownDescription += fmt.Sprintf(" The service uses the following docker image [%s](%s)", r.DockerHubImage, dockerImageURL(r.DockerHubImage))
 	}
 
 	resp.Schema = schema.Schema{

@@ -3,12 +3,12 @@
 page_title: "elestio_presidio Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.The elestio_presidio resource allows the creation and management of Elestio Presidio services. The service uses the following docker image mcr.microsoft.com/presidio-anonymizer https://hub.docker.com/r/mcr.microsoft.com/presidio-anonymizer
+  Framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.The elestio_presidio resource allows the creation and management of Elestio Presidio services. The service uses the following docker image mcr.microsoft.com/presidio-anonymizer https://mcr.microsoft.com/presidio-anonymizer
 ---
 
 # elestio_presidio (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Presidio-bUfu.png" width="100" /><br>Framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.<br><br>The **elestio_presidio** resource allows the creation and management of Elestio Presidio services. The service uses the following docker image [mcr.microsoft.com/presidio-anonymizer](https://hub.docker.com/r/mcr.microsoft.com/presidio-anonymizer)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Presidio-bUfu.png" width="100" /><br>Framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.<br><br>The **elestio_presidio** resource allows the creation and management of Elestio Presidio services. The service uses the following docker image [mcr.microsoft.com/presidio-anonymizer](https://mcr.microsoft.com/presidio-anonymizer)
 
 ## Example Usage
 

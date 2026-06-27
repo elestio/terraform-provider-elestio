@@ -3,12 +3,12 @@
 page_title: "elestio_affine Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.The elestio_affine resource allows the creation and management of Elestio Affine services. The service uses the following docker image ghcr.io/toeverything/affine-self-hosted https://hub.docker.com/r/ghcr.io/toeverything/affine-self-hosted
+  More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.The elestio_affine resource allows the creation and management of Elestio Affine services. The service uses the following docker image ghcr.io/toeverything/affine-self-hosted https://ghcr.io/toeverything/affine-self-hosted
 ---
 
 # elestio_affine (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" /><br>More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.<br><br>The **elestio_affine** resource allows the creation and management of Elestio Affine services. The service uses the following docker image [ghcr.io/toeverything/affine-self-hosted](https://hub.docker.com/r/ghcr.io/toeverything/affine-self-hosted)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Affine-KOfL.png" width="100" /><br>More than Notion and Miro's next-generation knowledge base, AFFiNE unifies planning, sorting, and creation.<br><br>The **elestio_affine** resource allows the creation and management of Elestio Affine services. The service uses the following docker image [ghcr.io/toeverything/affine-self-hosted](https://ghcr.io/toeverything/affine-self-hosted)
 
 ## Example Usage
 

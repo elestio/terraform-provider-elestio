@@ -3,12 +3,12 @@
 page_title: "elestio_coroot Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Coroot is an APM & Observability tool, a DataDog and NewRelic alternativeThe elestio_coroot resource allows the creation and management of Elestio Coroot services. The service uses the following docker image ghcr.io/coroot/coroot https://hub.docker.com/r/ghcr.io/coroot/coroot
+  Coroot is an APM & Observability tool, a DataDog and NewRelic alternativeThe elestio_coroot resource allows the creation and management of Elestio Coroot services. The service uses the following docker image ghcr.io/coroot/coroot https://ghcr.io/coroot/coroot
 ---
 
 # elestio_coroot (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Coroot-j3JG.png" width="100" /><br>Coroot is an APM & Observability tool, a DataDog and NewRelic alternative<br><br>The **elestio_coroot** resource allows the creation and management of Elestio Coroot services. The service uses the following docker image [ghcr.io/coroot/coroot](https://hub.docker.com/r/ghcr.io/coroot/coroot)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Coroot-j3JG.png" width="100" /><br>Coroot is an APM & Observability tool, a DataDog and NewRelic alternative<br><br>The **elestio_coroot** resource allows the creation and management of Elestio Coroot services. The service uses the following docker image [ghcr.io/coroot/coroot](https://ghcr.io/coroot/coroot)
 
 ## Example Usage
 

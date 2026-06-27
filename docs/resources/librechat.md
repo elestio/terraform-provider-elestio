@@ -3,12 +3,12 @@
 page_title: "elestio_librechat Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Enhanced ChatGPT Clone AI chat platform. This Web UI offers vast customization, supporting numerous AI providers, services, and integrations.The elestio_librechat resource allows the creation and management of Elestio LibreChat services. The service uses the following docker image ghcr.io/danny-avila/librechat https://hub.docker.com/r/ghcr.io/danny-avila/librechat
+  Enhanced ChatGPT Clone AI chat platform. This Web UI offers vast customization, supporting numerous AI providers, services, and integrations.The elestio_librechat resource allows the creation and management of Elestio LibreChat services. The service uses the following docker image ghcr.io/danny-avila/librechat https://ghcr.io/danny-avila/librechat
 ---
 
 # elestio_librechat (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LibreChat-awGY.png" width="100" /><br>Enhanced ChatGPT Clone AI chat platform. This Web UI offers vast customization, supporting numerous AI providers, services, and integrations.<br><br>The **elestio_librechat** resource allows the creation and management of Elestio LibreChat services. The service uses the following docker image [ghcr.io/danny-avila/librechat](https://hub.docker.com/r/ghcr.io/danny-avila/librechat)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/LibreChat-awGY.png" width="100" /><br>Enhanced ChatGPT Clone AI chat platform. This Web UI offers vast customization, supporting numerous AI providers, services, and integrations.<br><br>The **elestio_librechat** resource allows the creation and management of Elestio LibreChat services. The service uses the following docker image [ghcr.io/danny-avila/librechat](https://ghcr.io/danny-avila/librechat)
 
 ## Example Usage
 

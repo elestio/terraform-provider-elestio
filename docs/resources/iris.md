@@ -3,12 +3,12 @@
 page_title: "elestio_iris Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Iris is a web collaborative platform aiming to help incident responders sharing technical details during investigations.The elestio_iris resource allows the creation and management of Elestio IRIS services. The service uses the following docker image ghcr.io/dfir-iris/iriswebapp_app https://hub.docker.com/r/ghcr.io/dfir-iris/iriswebapp_app
+  Iris is a web collaborative platform aiming to help incident responders sharing technical details during investigations.The elestio_iris resource allows the creation and management of Elestio IRIS services. The service uses the following docker image ghcr.io/dfir-iris/iriswebapp_app https://ghcr.io/dfir-iris/iriswebapp_app
 ---
 
 # elestio_iris (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/IRIS-F3By.png" width="100" /><br>Iris is a web collaborative platform aiming to help incident responders sharing technical details during investigations.<br><br>The **elestio_iris** resource allows the creation and management of Elestio IRIS services. The service uses the following docker image [ghcr.io/dfir-iris/iriswebapp_app](https://hub.docker.com/r/ghcr.io/dfir-iris/iriswebapp_app)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/IRIS-F3By.png" width="100" /><br>Iris is a web collaborative platform aiming to help incident responders sharing technical details during investigations.<br><br>The **elestio_iris** resource allows the creation and management of Elestio IRIS services. The service uses the following docker image [ghcr.io/dfir-iris/iriswebapp_app](https://ghcr.io/dfir-iris/iriswebapp_app)
 
 ## Example Usage
 

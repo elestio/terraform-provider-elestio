@@ -3,12 +3,12 @@
 page_title: "elestio_firefish Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Firefish is based off of Misskey, a powerful microblogging social media platform in the fediverse.The elestio_firefish resource allows the creation and management of Elestio Firefish services. The service uses the following docker image registry.joinfirefish.org/firefish/firefish https://hub.docker.com/r/registry.joinfirefish.org/firefish/firefish
+  Firefish is based off of Misskey, a powerful microblogging social media platform in the fediverse.The elestio_firefish resource allows the creation and management of Elestio Firefish services. The service uses the following docker image registry.joinfirefish.org/firefish/firefish https://registry.joinfirefish.org/firefish/firefish
 ---
 
 # elestio_firefish (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Firefish-QAta.png" width="100" /><br>Firefish is based off of Misskey, a powerful microblogging social media platform in the fediverse.<br><br>The **elestio_firefish** resource allows the creation and management of Elestio Firefish services. The service uses the following docker image [registry.joinfirefish.org/firefish/firefish](https://hub.docker.com/r/registry.joinfirefish.org/firefish/firefish)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Firefish-QAta.png" width="100" /><br>Firefish is based off of Misskey, a powerful microblogging social media platform in the fediverse.<br><br>The **elestio_firefish** resource allows the creation and management of Elestio Firefish services. The service uses the following docker image [registry.joinfirefish.org/firefish/firefish](https://registry.joinfirefish.org/firefish/firefish)
 
 ## Example Usage
 

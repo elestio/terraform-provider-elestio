@@ -3,12 +3,12 @@
 page_title: "elestio_revolt Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  The Open Source Discord Alternative. Find your community, connect with the worldThe elestio_revolt resource allows the creation and management of Elestio Revolt services. The service uses the following docker image ghcr.io/revoltchat/server https://hub.docker.com/r/ghcr.io/revoltchat/server
+  The Open Source Discord Alternative. Find your community, connect with the worldThe elestio_revolt resource allows the creation and management of Elestio Revolt services. The service uses the following docker image ghcr.io/revoltchat/server https://ghcr.io/revoltchat/server
 ---
 
 # elestio_revolt (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/revolt-Sbdh.png" width="100" /><br>The Open Source Discord Alternative. Find your community, connect with the world<br><br>The **elestio_revolt** resource allows the creation and management of Elestio Revolt services. The service uses the following docker image [ghcr.io/revoltchat/server](https://hub.docker.com/r/ghcr.io/revoltchat/server)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/revolt-Sbdh.png" width="100" /><br>The Open Source Discord Alternative. Find your community, connect with the world<br><br>The **elestio_revolt** resource allows the creation and management of Elestio Revolt services. The service uses the following docker image [ghcr.io/revoltchat/server](https://ghcr.io/revoltchat/server)
 
 ## Example Usage
 

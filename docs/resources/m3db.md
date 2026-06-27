@@ -3,12 +3,12 @@
 page_title: "elestio_m3db Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  M3 is a Prometheus compatible, easy to adopt metrics engineThe elestio_m3db resource allows the creation and management of Elestio M3DB services. The service uses the following docker image quay.io/m3db/m3dbnode https://hub.docker.com/r/quay.io/m3db/m3dbnode
+  M3 is a Prometheus compatible, easy to adopt metrics engineThe elestio_m3db resource allows the creation and management of Elestio M3DB services. The service uses the following docker image quay.io/m3db/m3dbnode https://quay.io/m3db/m3dbnode
 ---
 
 # elestio_m3db (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" /><br>M3 is a Prometheus compatible, easy to adopt metrics engine<br><br>The **elestio_m3db** resource allows the creation and management of Elestio M3DB services. The service uses the following docker image [quay.io/m3db/m3dbnode](https://hub.docker.com/r/quay.io/m3db/m3dbnode)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/M3DB-Tl2K.png" width="100" /><br>M3 is a Prometheus compatible, easy to adopt metrics engine<br><br>The **elestio_m3db** resource allows the creation and management of Elestio M3DB services. The service uses the following docker image [quay.io/m3db/m3dbnode](https://quay.io/m3db/m3dbnode)
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_postiz Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  The ultimate social media scheduling tool with a bunch of AI.The elestio_postiz resource allows the creation and management of Elestio Postiz services. The service uses the following docker image ghcr.io/gitroomhq/postiz-app https://hub.docker.com/r/ghcr.io/gitroomhq/postiz-app
+  The ultimate social media scheduling tool with a bunch of AI.The elestio_postiz resource allows the creation and management of Elestio Postiz services. The service uses the following docker image ghcr.io/gitroomhq/postiz-app https://ghcr.io/gitroomhq/postiz-app
 ---
 
 # elestio_postiz (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Postiz-CL2b.png" width="100" /><br>The ultimate social media scheduling tool with a bunch of AI.<br><br>The **elestio_postiz** resource allows the creation and management of Elestio Postiz services. The service uses the following docker image [ghcr.io/gitroomhq/postiz-app](https://hub.docker.com/r/ghcr.io/gitroomhq/postiz-app)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Postiz-CL2b.png" width="100" /><br>The ultimate social media scheduling tool with a bunch of AI.<br><br>The **elestio_postiz** resource allows the creation and management of Elestio Postiz services. The service uses the following docker image [ghcr.io/gitroomhq/postiz-app](https://ghcr.io/gitroomhq/postiz-app)
 
 ## Example Usage
 

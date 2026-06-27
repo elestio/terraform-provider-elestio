@@ -3,12 +3,12 @@
 page_title: "elestio_parseable Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Parseable is a log analytics system platform for modern, cloud-native workloadsThe elestio_parseable resource allows the creation and management of Elestio Parseable services. The service uses the following docker image containers.parseable.com/parseable/parseable https://hub.docker.com/r/containers.parseable.com/parseable/parseable
+  Parseable is a log analytics system platform for modern, cloud-native workloadsThe elestio_parseable resource allows the creation and management of Elestio Parseable services. The service uses the following docker image containers.parseable.com/parseable/parseable https://containers.parseable.com/parseable/parseable
 ---
 
 # elestio_parseable (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Parseable-gsAJ.png" width="100" /><br>Parseable is a log analytics system platform for modern, cloud-native workloads<br><br>The **elestio_parseable** resource allows the creation and management of Elestio Parseable services. The service uses the following docker image [containers.parseable.com/parseable/parseable](https://hub.docker.com/r/containers.parseable.com/parseable/parseable)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Parseable-gsAJ.png" width="100" /><br>Parseable is a log analytics system platform for modern, cloud-native workloads<br><br>The **elestio_parseable** resource allows the creation and management of Elestio Parseable services. The service uses the following docker image [containers.parseable.com/parseable/parseable](https://containers.parseable.com/parseable/parseable)
 
 ## Example Usage
 

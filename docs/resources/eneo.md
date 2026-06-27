@@ -3,12 +3,12 @@
 page_title: "elestio_eneo Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Open AI platform for generative AI that puts public Sweden in the driver's seat.The elestio_eneo resource allows the creation and management of Elestio Eneo services. The service uses the following docker image ghcr.io/eneo-ai/eneo-frontend https://hub.docker.com/r/ghcr.io/eneo-ai/eneo-frontend
+  Open AI platform for generative AI that puts public Sweden in the driver's seat.The elestio_eneo resource allows the creation and management of Elestio Eneo services. The service uses the following docker image ghcr.io/eneo-ai/eneo-frontend https://ghcr.io/eneo-ai/eneo-frontend
 ---
 
 # elestio_eneo (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Eneo-7n3e.png" width="100" /><br>Open AI platform for generative AI that puts public Sweden in the driver's seat.<br><br>The **elestio_eneo** resource allows the creation and management of Elestio Eneo services. The service uses the following docker image [ghcr.io/eneo-ai/eneo-frontend](https://hub.docker.com/r/ghcr.io/eneo-ai/eneo-frontend)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Eneo-7n3e.png" width="100" /><br>Open AI platform for generative AI that puts public Sweden in the driver's seat.<br><br>The **elestio_eneo** resource allows the creation and management of Elestio Eneo services. The service uses the following docker image [ghcr.io/eneo-ai/eneo-frontend](https://ghcr.io/eneo-ai/eneo-frontend)
 
 ## Example Usage
 

@@ -3,12 +3,12 @@
 page_title: "elestio_rybbit Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Alternative to Google Analytics that is 10x more intuitive.The elestio_rybbit resource allows the creation and management of Elestio Rybbit services. The service uses the following docker image ghcr.io/rybbit-io/rybbit-client https://hub.docker.com/r/ghcr.io/rybbit-io/rybbit-client
+  Alternative to Google Analytics that is 10x more intuitive.The elestio_rybbit resource allows the creation and management of Elestio Rybbit services. The service uses the following docker image ghcr.io/rybbit-io/rybbit-client https://ghcr.io/rybbit-io/rybbit-client
 ---
 
 # elestio_rybbit (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rybbit-ysgw.png" width="100" /><br>Alternative to Google Analytics that is 10x more intuitive.<br><br>The **elestio_rybbit** resource allows the creation and management of Elestio Rybbit services. The service uses the following docker image [ghcr.io/rybbit-io/rybbit-client](https://hub.docker.com/r/ghcr.io/rybbit-io/rybbit-client)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Rybbit-ysgw.png" width="100" /><br>Alternative to Google Analytics that is 10x more intuitive.<br><br>The **elestio_rybbit** resource allows the creation and management of Elestio Rybbit services. The service uses the following docker image [ghcr.io/rybbit-io/rybbit-client](https://ghcr.io/rybbit-io/rybbit-client)
 
 ## Example Usage
 

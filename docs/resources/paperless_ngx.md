@@ -3,12 +3,12 @@
 page_title: "elestio_paperless_ngx Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Paperless-ngx is an open-source document management system that digitizes, organizes, and archives your physical documents into a fully searchable online library.The elestio_paperless_ngx resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image ghcr.io/paperless-ngx/paperless-ngx https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx
+  Paperless-ngx is an open-source document management system that digitizes, organizes, and archives your physical documents into a fully searchable online library.The elestio_paperless_ngx resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image ghcr.io/paperless-ngx/paperless-ngx https://ghcr.io/paperless-ngx/paperless-ngx
 ---
 
 # elestio_paperless_ngx (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" /><br>Paperless-ngx is an open-source document management system that digitizes, organizes, and archives your physical documents into a fully searchable online library.<br><br>The **elestio_paperless_ngx** resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image [ghcr.io/paperless-ngx/paperless-ngx](https://hub.docker.com/r/ghcr.io/paperless-ngx/paperless-ngx)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Paperless-ngx-DOZO.jpg" width="100" /><br>Paperless-ngx is an open-source document management system that digitizes, organizes, and archives your physical documents into a fully searchable online library.<br><br>The **elestio_paperless_ngx** resource allows the creation and management of Elestio Paperless-ngx services. The service uses the following docker image [ghcr.io/paperless-ngx/paperless-ngx](https://ghcr.io/paperless-ngx/paperless-ngx)
 
 ## Example Usage
 

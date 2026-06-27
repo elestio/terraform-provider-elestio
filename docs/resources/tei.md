@@ -3,12 +3,12 @@
 page_title: "elestio_tei Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Text Embeddings Inference: a blazing-fast inference solution for text embeddings modelsThe elestio_tei resource allows the creation and management of Elestio Tei services. The service uses the following docker image ghcr.io/huggingface/text-embeddings-inference https://hub.docker.com/r/ghcr.io/huggingface/text-embeddings-inference
+  Text Embeddings Inference: a blazing-fast inference solution for text embeddings modelsThe elestio_tei resource allows the creation and management of Elestio Tei services. The service uses the following docker image ghcr.io/huggingface/text-embeddings-inference https://ghcr.io/huggingface/text-embeddings-inference
 ---
 
 # elestio_tei (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Tei-OmUn.png" width="100" /><br>Text Embeddings Inference: a blazing-fast inference solution for text embeddings models<br><br>The **elestio_tei** resource allows the creation and management of Elestio Tei services. The service uses the following docker image [ghcr.io/huggingface/text-embeddings-inference](https://hub.docker.com/r/ghcr.io/huggingface/text-embeddings-inference)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Tei-OmUn.png" width="100" /><br>Text Embeddings Inference: a blazing-fast inference solution for text embeddings models<br><br>The **elestio_tei** resource allows the creation and management of Elestio Tei services. The service uses the following docker image [ghcr.io/huggingface/text-embeddings-inference](https://ghcr.io/huggingface/text-embeddings-inference)
 
 ## Example Usage
 

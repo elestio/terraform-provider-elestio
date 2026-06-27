@@ -3,12 +3,12 @@
 page_title: "elestio_checkmate Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.The elestio_checkmate resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image ghcr.io/bluewave-labs/checkmate https://hub.docker.com/r/ghcr.io/bluewave-labs/checkmate
+  Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.The elestio_checkmate resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image ghcr.io/bluewave-labs/checkmate https://ghcr.io/bluewave-labs/checkmate
 ---
 
 # elestio_checkmate (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Checkmate-UQul.png" width="100" /><br>Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.<br><br>The **elestio_checkmate** resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image [ghcr.io/bluewave-labs/checkmate](https://hub.docker.com/r/ghcr.io/bluewave-labs/checkmate)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Checkmate-UQul.png" width="100" /><br>Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.<br><br>The **elestio_checkmate** resource allows the creation and management of Elestio Checkmate services. The service uses the following docker image [ghcr.io/bluewave-labs/checkmate](https://ghcr.io/bluewave-labs/checkmate)
 
 ## Example Usage
 

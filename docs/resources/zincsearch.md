@@ -3,12 +3,12 @@
 page_title: "elestio_zincsearch Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources.The elestio_zincsearch resource allows the creation and management of Elestio ZincSearch services. The service uses the following docker image public.ecr.aws/zinclabs/zinc https://hub.docker.com/r/public.ecr.aws/zinclabs/zinc
+  ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources.The elestio_zincsearch resource allows the creation and management of Elestio ZincSearch services. The service uses the following docker image public.ecr.aws/zinclabs/zinc https://public.ecr.aws/zinclabs/zinc
 ---
 
 # elestio_zincsearch (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ZincSearch-Bwvc.png" width="100" /><br>ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources.<br><br>The **elestio_zincsearch** resource allows the creation and management of Elestio ZincSearch services. The service uses the following docker image [public.ecr.aws/zinclabs/zinc](https://hub.docker.com/r/public.ecr.aws/zinclabs/zinc)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/ZincSearch-Bwvc.png" width="100" /><br>ZincSearch is a search engine that does full text indexing. It is a lightweight alternative to Elasticsearch and runs using a fraction of the resources.<br><br>The **elestio_zincsearch** resource allows the creation and management of Elestio ZincSearch services. The service uses the following docker image [public.ecr.aws/zinclabs/zinc](https://public.ecr.aws/zinclabs/zinc)
 
 ## Example Usage
 

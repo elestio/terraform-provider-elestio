@@ -3,12 +3,12 @@
 page_title: "elestio_formbricks Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. The elestio_formbricks resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image ghcr.io/formbricks/formbricks https://hub.docker.com/r/ghcr.io/formbricks/formbricks
+  Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. The elestio_formbricks resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image ghcr.io/formbricks/formbricks https://ghcr.io/formbricks/formbricks
 ---
 
 # elestio_formbricks (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [ghcr.io/formbricks/formbricks](https://hub.docker.com/r/ghcr.io/formbricks/formbricks)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [ghcr.io/formbricks/formbricks](https://ghcr.io/formbricks/formbricks)
 
 ## Example Usage
 

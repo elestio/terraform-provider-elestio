@@ -3,6 +3,7 @@ package ssh_public_keys
 import (
 	"context"
 	"fmt"
+	"time"
 
 	"github.com/elestio/elestio-go-api-client/v2"
 	"github.com/elestio/terraform-provider-elestio/internal/models"
@@ -12,7 +13,7 @@ import (
 
 // ServerRebooter defines the interface for services that can reboot and wait
 type ServerRebooter interface {
-	WaitServerReboot(ctx context.Context, service *elestio.Service) (*elestio.Service, error)
+	WaitServerReboot(ctx context.Context, service *elestio.Service, timeout time.Duration) (*elestio.Service, error)
 }
 
 // Compare compares state and plan SSH public keys and returns keys to add, update, and remove
@@ -66,7 +67,7 @@ func Compare(ctx *context.Context, state *basetypes.SetValue, plan *basetypes.Se
 }
 
 // ApplyChanges applies SSH public key changes to the service
-func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate, keysToRemove []models.SSHPublicKeyModel, providerName string, client *elestio.Client, rebooter ServerRebooter, service *elestio.Service) error {
+func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate, keysToRemove []models.SSHPublicKeyModel, providerName string, client *elestio.Client, rebooter ServerRebooter, service *elestio.Service, rebootTimeout time.Duration) error {
 	// Remove keys first
 	for _, key := range keysToRemove {
 		if err := client.Service.RemoveSSHPublicKey(serviceID, key.Username.ValueString()); err != nil {
@@ -98,11 +99,10 @@ func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate
 		if err := client.Service.RebootServer(serviceID); err != nil {
 			return fmt.Errorf("failed to reboot server to update scaleway ssh keys: %s", err)
 		}
-		if _, err := rebooter.WaitServerReboot(ctx, service); err != nil {
+		if _, err := rebooter.WaitServerReboot(ctx, service, rebootTimeout); err != nil {
 			return fmt.Errorf("failed to wait server reboot to update scaleway ssh keys: %s", err)
 		}
 	}
 
 	return nil
 }
-

@@ -13,6 +13,7 @@ import (
 	ssh_public_keys "github.com/elestio/terraform-provider-elestio/internal/ssh_public_keys"
 	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
+	"github.com/hashicorp/terraform-plugin-framework-timeouts/resource/timeouts"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/diag"
@@ -60,76 +61,82 @@ type (
 	}
 
 	ServiceResourceModel struct {
-		Id                                          types.String  `tfsdk:"id"`
-		ElestioId                                   types.Int64   `tfsdk:"elestio_id"`
-		ProjectID                                   types.String  `tfsdk:"project_id"`
-		ServerName                                  types.String  `tfsdk:"server_name"`
-		ServerType                                  types.String  `tfsdk:"server_type"`
-		TemplateId                                  types.Int64   `tfsdk:"template_id"`
-		Version                                     types.String  `tfsdk:"version"`
-		ProviderName                                types.String  `tfsdk:"provider_name"`
-		Datacenter                                  types.String  `tfsdk:"datacenter"`
-		SupportLevel                                types.String  `tfsdk:"support_level"`
-		AdminEmail                                  types.String  `tfsdk:"admin_email"`
-		DefaultPassword                             types.String  `tfsdk:"default_password"`
-		Category                                    types.String  `tfsdk:"category"`
-		Status                                      types.String  `tfsdk:"status"`
-		DeploymentStatus                            types.String  `tfsdk:"deployment_status"`
-		DeploymentStartedAt                         types.String  `tfsdk:"deployment_started_at"`
-		DeploymentEndedAt                           types.String  `tfsdk:"deployment_ended_at"`
-		CreatorName                                 types.String  `tfsdk:"creator_name"`
-		CreatedAt                                   types.String  `tfsdk:"created_at"`
-		IPV4                                        types.String  `tfsdk:"ipv4"`
-		IPV6                                        types.String  `tfsdk:"ipv6"`
-		CNAME                                       types.String  `tfsdk:"cname"`
-		CustomDomainNames                           types.Set     `tfsdk:"custom_domain_names"`
-		SSHKeys                                     types.Set     `tfsdk:"ssh_keys"`
-		SSHPublicKeys                               types.Set     `tfsdk:"ssh_public_keys"`
-		Country                                     types.String  `tfsdk:"country"`
-		City                                        types.String  `tfsdk:"city"`
-		AdminUser                                   types.String  `tfsdk:"admin_user"`
-		RootAppPath                                 types.String  `tfsdk:"root_app_path"`
-		Env                                         types.Map     `tfsdk:"env"`
-		Admin                                       types.Object  `tfsdk:"admin"`
-		DatabaseAdmin                               types.Object  `tfsdk:"database_admin"`
-		GlobalIP                                    types.String  `tfsdk:"global_ip"`
-		TrafficOutgoing                             types.Int64   `tfsdk:"traffic_outgoing"`
-		TrafficIncoming                             types.Int64   `tfsdk:"traffic_incoming"`
-		TrafficIncluded                             types.Int64   `tfsdk:"traffic_included"`
-		Cores                                       types.Int64   `tfsdk:"cores"`
-		RAMSizeGB                                   types.String  `tfsdk:"ram_size_gb"`
-		StorageSizeGB                               types.Int64   `tfsdk:"storage_size_gb"`
-		PricePerHour                                types.String  `tfsdk:"price_per_hour"`
-		AppAutoUpdatesEnabled                       types.Bool    `tfsdk:"app_auto_updates_enabled"`
-		AppAutoUpdatesDayOfWeek                     types.Int64   `tfsdk:"app_auto_updates_day_of_week"`
-		AppAutoUpdatesHour                          types.Int64   `tfsdk:"app_auto_updates_hour"`
-		AppAutoUpdatesMinute                        types.Int64   `tfsdk:"app_auto_updates_minute"`
-		SystemAutoUpdatesEnabled                    types.Bool    `tfsdk:"system_auto_updates_enabled"`
-		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool    `tfsdk:"system_auto_updates_security_patches_only_enabled"`
-		SystemAutoUpdatesRebootDayOfWeek            types.Int64   `tfsdk:"system_auto_updates_reboot_day_of_week"`
-		SystemAutoUpdatesRebootHour                 types.Int64   `tfsdk:"system_auto_updates_reboot_hour"`
-		SystemAutoUpdatesRebootMinute               types.Int64   `tfsdk:"system_auto_updates_reboot_minute"`
-		BackupsEnabled                              types.Bool    `tfsdk:"backups_enabled"`
-		RemoteBackupsEnabled                        types.Bool    `tfsdk:"remote_backups_enabled"`
-		ExternalBackupsEnabled                      types.Bool    `tfsdk:"external_backups_enabled"`
-		ExternalBackupsUpdateDayOfWeek              types.Int64   `tfsdk:"external_backups_update_day_of_week"`
-		ExternalBackupsUpdateHour                   types.Int64   `tfsdk:"external_backups_update_hour"`
-		ExternalBackupsUpdateMinute                 types.Int64   `tfsdk:"external_backups_update_minute"`
-		ExternalBackupsUpdateType                   types.String  `tfsdk:"external_backups_update_type"`
-		ExternalBackupsRetainDayOfWeek              types.Int64   `tfsdk:"external_backups_retain_day_of_week"`
-		KeepBackupsOnDeleteEnabled                  types.Bool    `tfsdk:"keep_backups_on_delete_enabled"`
-		FirewallEnabled                             types.Bool    `tfsdk:"firewall_enabled"`
-		FirewallId                                  types.String  `tfsdk:"firewall_id"`
-		FirewallPorts                               types.String  `tfsdk:"firewall_ports"`
-		FirewallUserRules                           types.Set     `tfsdk:"firewall_user_rules"`
-		FirewallToolRules                           types.Set     `tfsdk:"firewall_tool_rules"`
-		FirewallRemoveToolPorts                     types.Bool    `tfsdk:"firewall_remove_tool_ports"`
-		AlertsEnabled                               types.Bool    `tfsdk:"alerts_enabled"`
-		LastUpdated                                 types.String  `tfsdk:"last_updated"`
-		LocalField                                  types.Dynamic `tfsdk:"local_field"`
-		LocalFieldSensitive                         types.Dynamic `tfsdk:"local_field_sensitive"`
+		Id                                          types.String   `tfsdk:"id"`
+		ElestioId                                   types.Int64    `tfsdk:"elestio_id"`
+		ProjectID                                   types.String   `tfsdk:"project_id"`
+		ServerName                                  types.String   `tfsdk:"server_name"`
+		ServerType                                  types.String   `tfsdk:"server_type"`
+		TemplateId                                  types.Int64    `tfsdk:"template_id"`
+		Version                                     types.String   `tfsdk:"version"`
+		ProviderName                                types.String   `tfsdk:"provider_name"`
+		Datacenter                                  types.String   `tfsdk:"datacenter"`
+		SupportLevel                                types.String   `tfsdk:"support_level"`
+		AdminEmail                                  types.String   `tfsdk:"admin_email"`
+		DefaultPassword                             types.String   `tfsdk:"default_password"`
+		Category                                    types.String   `tfsdk:"category"`
+		Status                                      types.String   `tfsdk:"status"`
+		DeploymentStatus                            types.String   `tfsdk:"deployment_status"`
+		DeploymentStartedAt                         types.String   `tfsdk:"deployment_started_at"`
+		DeploymentEndedAt                           types.String   `tfsdk:"deployment_ended_at"`
+		CreatorName                                 types.String   `tfsdk:"creator_name"`
+		CreatedAt                                   types.String   `tfsdk:"created_at"`
+		IPV4                                        types.String   `tfsdk:"ipv4"`
+		IPV6                                        types.String   `tfsdk:"ipv6"`
+		CNAME                                       types.String   `tfsdk:"cname"`
+		CustomDomainNames                           types.Set      `tfsdk:"custom_domain_names"`
+		SSHKeys                                     types.Set      `tfsdk:"ssh_keys"`
+		SSHPublicKeys                               types.Set      `tfsdk:"ssh_public_keys"`
+		Country                                     types.String   `tfsdk:"country"`
+		City                                        types.String   `tfsdk:"city"`
+		AdminUser                                   types.String   `tfsdk:"admin_user"`
+		RootAppPath                                 types.String   `tfsdk:"root_app_path"`
+		Env                                         types.Map      `tfsdk:"env"`
+		Admin                                       types.Object   `tfsdk:"admin"`
+		DatabaseAdmin                               types.Object   `tfsdk:"database_admin"`
+		GlobalIP                                    types.String   `tfsdk:"global_ip"`
+		TrafficOutgoing                             types.Int64    `tfsdk:"traffic_outgoing"`
+		TrafficIncoming                             types.Int64    `tfsdk:"traffic_incoming"`
+		TrafficIncluded                             types.Int64    `tfsdk:"traffic_included"`
+		Cores                                       types.Int64    `tfsdk:"cores"`
+		RAMSizeGB                                   types.String   `tfsdk:"ram_size_gb"`
+		StorageSizeGB                               types.Int64    `tfsdk:"storage_size_gb"`
+		PricePerHour                                types.String   `tfsdk:"price_per_hour"`
+		AppAutoUpdatesEnabled                       types.Bool     `tfsdk:"app_auto_updates_enabled"`
+		AppAutoUpdatesDayOfWeek                     types.Int64    `tfsdk:"app_auto_updates_day_of_week"`
+		AppAutoUpdatesHour                          types.Int64    `tfsdk:"app_auto_updates_hour"`
+		AppAutoUpdatesMinute                        types.Int64    `tfsdk:"app_auto_updates_minute"`
+		SystemAutoUpdatesEnabled                    types.Bool     `tfsdk:"system_auto_updates_enabled"`
+		SystemAutoUpdatesSecurityPatchesOnlyEnabled types.Bool     `tfsdk:"system_auto_updates_security_patches_only_enabled"`
+		SystemAutoUpdatesRebootDayOfWeek            types.Int64    `tfsdk:"system_auto_updates_reboot_day_of_week"`
+		SystemAutoUpdatesRebootHour                 types.Int64    `tfsdk:"system_auto_updates_reboot_hour"`
+		SystemAutoUpdatesRebootMinute               types.Int64    `tfsdk:"system_auto_updates_reboot_minute"`
+		BackupsEnabled                              types.Bool     `tfsdk:"backups_enabled"`
+		RemoteBackupsEnabled                        types.Bool     `tfsdk:"remote_backups_enabled"`
+		ExternalBackupsEnabled                      types.Bool     `tfsdk:"external_backups_enabled"`
+		ExternalBackupsUpdateDayOfWeek              types.Int64    `tfsdk:"external_backups_update_day_of_week"`
+		ExternalBackupsUpdateHour                   types.Int64    `tfsdk:"external_backups_update_hour"`
+		ExternalBackupsUpdateMinute                 types.Int64    `tfsdk:"external_backups_update_minute"`
+		ExternalBackupsUpdateType                   types.String   `tfsdk:"external_backups_update_type"`
+		ExternalBackupsRetainDayOfWeek              types.Int64    `tfsdk:"external_backups_retain_day_of_week"`
+		KeepBackupsOnDeleteEnabled                  types.Bool     `tfsdk:"keep_backups_on_delete_enabled"`
+		FirewallEnabled                             types.Bool     `tfsdk:"firewall_enabled"`
+		FirewallId                                  types.String   `tfsdk:"firewall_id"`
+		FirewallPorts                               types.String   `tfsdk:"firewall_ports"`
+		FirewallUserRules                           types.Set      `tfsdk:"firewall_user_rules"`
+		FirewallToolRules                           types.Set      `tfsdk:"firewall_tool_rules"`
+		FirewallRemoveToolPorts                     types.Bool     `tfsdk:"firewall_remove_tool_ports"`
+		AlertsEnabled                               types.Bool     `tfsdk:"alerts_enabled"`
+		LastUpdated                                 types.String   `tfsdk:"last_updated"`
+		LocalField                                  types.Dynamic  `tfsdk:"local_field"`
+		LocalFieldSensitive                         types.Dynamic  `tfsdk:"local_field_sensitive"`
+		Timeouts                                    timeouts.Value `tfsdk:"timeouts"`
 	}
 )
+
+// defaultOperationTimeout is the default duration the provider waits for a
+// service operation (create, update, delete) to complete when no custom
+// timeout is configured.
+const defaultOperationTimeout = 20 * time.Minute
 
 func CustomDomainNamesDefaultValue() types.Set {
 	set, _ := types.SetValue(types.StringType, []attr.Value{})
@@ -695,6 +702,13 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 				Sensitive:           true,
 			},
 		},
+		Blocks: map[string]schema.Block{
+			"timeouts": timeouts.Block(ctx, timeouts.Opts{
+				Create: true,
+				Update: true,
+				Delete: true,
+			}),
+		},
 	}
 }
 
@@ -815,6 +829,12 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 		return
 	}
 
+	createTimeout, diags := data.Timeouts.Create(ctx, defaultOperationTimeout)
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
 	// If no template is provided in the provider configuration
 	// use the one provided by the user.
 	var templateId int64
@@ -846,11 +866,15 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 	}
 
 	// Service is created but we need to wait for the default configuration to be applied.
-	serviceConfigured, err := r.waitServiceDefaultConfiguration(ctx, service)
+	serviceConfigured, err := r.waitServiceDefaultConfiguration(ctx, service, createTimeout)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Service",
-			fmt.Sprintf("Unable to wait service default configuration, got error: %s", err),
+			fmt.Sprintf("Timed out after %s while waiting for the service to start (%s).\n\n"+
+				"Some services need more time to provision depending on the template, server type, and datacenter. "+
+				"If the service is running on your Elestio dashboard, increase the create timeout, then run apply again:\n\n"+
+				"  timeouts {\n    create = \"30m\"\n  }",
+				createTimeout, err),
 		)
 		return
 	}
@@ -858,7 +882,7 @@ func (r *ServiceResource) Create(ctx context.Context, req resource.CreateRequest
 	data.Id = types.StringValue(serviceConfigured.ID)
 
 	// Update some fields that are not available in the create request.
-	serviceUpdated, err := r.updateElestioService(ctx, serviceConfigured, data, &resp.Diagnostics)
+	serviceUpdated, err := r.updateElestioService(ctx, serviceConfigured, data, &resp.Diagnostics, createTimeout)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Service",
@@ -901,6 +925,12 @@ func (r *ServiceResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
+	updateTimeout, diags := plan.Timeouts.Update(ctx, defaultOperationTimeout)
+	resp.Diagnostics.Append(diags...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
 	projectId, serviceId := state.ProjectID.ValueString(), state.Id.ValueString()
 	service, err := r.client.Service.Get(projectId, serviceId)
 	if err != nil {
@@ -911,7 +941,7 @@ func (r *ServiceResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
-	updatedService, err := r.updateElestioService(ctx, service, plan, &resp.Diagnostics)
+	updatedService, err := r.updateElestioService(ctx, service, plan, &resp.Diagnostics, updateTimeout)
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Updating Service",
@@ -928,6 +958,12 @@ func (r *ServiceResource) Update(ctx context.Context, req resource.UpdateRequest
 func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest, resp *resource.DeleteResponse) {
 	var state *ServiceResourceModel
 	resp.Diagnostics.Append(req.State.Get(ctx, &state)...)
+	if resp.Diagnostics.HasError() {
+		return
+	}
+
+	deleteTimeout, diags := state.Timeouts.Delete(ctx, defaultOperationTimeout)
+	resp.Diagnostics.Append(diags...)
 	if resp.Diagnostics.HasError() {
 		return
 	}
@@ -950,7 +986,7 @@ func (r *ServiceResource) Delete(ctx context.Context, req resource.DeleteRequest
 		return
 	}
 
-	if err := r.waitServiceDeletion(ctx, service); err != nil {
+	if err := r.waitServiceDeletion(ctx, service, deleteTimeout); err != nil {
 		resp.Diagnostics.AddError(
 			"Error Deleting Service",
 			fmt.Sprintf("Unable to wait service deletion, got error: %s", err),
@@ -974,7 +1010,7 @@ func (r *ServiceResource) ImportState(ctx context.Context, req resource.ImportSt
 	resp.Diagnostics.Append(resp.State.SetAttribute(ctx, path.Root("id"), idParts[1])...)
 }
 
-func (r *ServiceResource) updateElestioService(ctx context.Context, service *elestio.Service, plan *ServiceResourceModel, diags *diag.Diagnostics) (*elestio.Service, error) {
+func (r *ServiceResource) updateElestioService(ctx context.Context, service *elestio.Service, plan *ServiceResourceModel, diags *diag.Diagnostics, timeout time.Duration) (*elestio.Service, error) {
 	state := &ServiceResourceModel{}
 	state.Id = types.StringValue(service.ID)
 	convertElestioToTerraformFormat(ctx, state, service, diags)
@@ -984,7 +1020,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		if err := r.client.Service.UpdateServerType(service.ID, plan.ServerType.ValueString(), service.ProviderName, service.Datacenter); err != nil {
 			return nil, fmt.Errorf("failed to update serverType: %s", err)
 		}
-		if _, err := r.WaitServerReboot(ctx, service); err != nil {
+		if _, err := r.WaitServerReboot(ctx, service, timeout); err != nil {
 			return nil, fmt.Errorf("failed to wait server reboot after serverType update: %s", err)
 		}
 	}
@@ -1123,7 +1159,7 @@ func (r *ServiceResource) updateElestioService(ctx context.Context, service *ele
 		return nil, fmt.Errorf("failed to compare ssh public keys from state to plan")
 	}
 
-	if err := ssh_public_keys.ApplyChanges(ctx, service.ID, keysToAdd, keysToUpdate, keysToRemove, plan.ProviderName.ValueString(), r.client, r, service); err != nil {
+	if err := ssh_public_keys.ApplyChanges(ctx, service.ID, keysToAdd, keysToUpdate, keysToRemove, plan.ProviderName.ValueString(), r.client, r, service, timeout); err != nil {
 		return nil, err
 	}
 
@@ -1308,8 +1344,7 @@ func (r *ServiceResource) deleteServiceWithRetry(ctx context.Context, projectId 
 	return nil
 }
 
-func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
-	timeout := 15 * time.Minute
+func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, service *elestio.Service, timeout time.Duration) (*elestio.Service, error) {
 	stateConf := retry.StateChangeConf{
 		Pending: []string{
 			"waiting",
@@ -1379,8 +1414,7 @@ func (r *ServiceResource) waitServiceDefaultConfiguration(ctx context.Context, s
 	return serviceConfigured.(*elestio.Service), nil
 }
 
-func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *elestio.Service) error {
-	timeout := 15 * time.Minute
+func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *elestio.Service, timeout time.Duration) error {
 	stateConf := retry.StateChangeConf{
 		Pending: []string{"waiting"},
 		Target:  []string{"deleted"},
@@ -1408,8 +1442,7 @@ func (r *ServiceResource) waitServiceDeletion(ctx context.Context, service *eles
 }
 
 // WaitServerReboot waits for a server to reboot and return to running state
-func (r *ServiceResource) WaitServerReboot(ctx context.Context, service *elestio.Service) (*elestio.Service, error) {
-	timeout := 10 * time.Minute
+func (r *ServiceResource) WaitServerReboot(ctx context.Context, service *elestio.Service, timeout time.Duration) (*elestio.Service, error) {
 	stateConf := retry.StateChangeConf{
 		Pending: []string{"rebooting"},
 		Target:  []string{"rebooted"},

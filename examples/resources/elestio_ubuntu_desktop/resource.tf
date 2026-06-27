@@ -1,6 +1,6 @@
 resource "elestio_ubuntu_desktop" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "noble"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

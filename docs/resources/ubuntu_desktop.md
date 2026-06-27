@@ -15,7 +15,7 @@ description: |-
 ```terraform
 resource "elestio_ubuntu_desktop" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "noble"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -90,7 +90,7 @@ resource "elestio_ubuntu_desktop" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `noble`.
 
 ### Read-Only
 

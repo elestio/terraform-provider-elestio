@@ -3,12 +3,12 @@
 page_title: "elestio_odoo_erp_crm Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Odoo is a suite of web-based, open-source business apps.The elestio_odoo_erp_crm resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image elestio/odoo https://hub.docker.com/r/elestio/odoo
+  Odoo is a suite of web-based, open-source business apps.The elestio_odoo_erp_crm resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image odoo https://hub.docker.com/r/odoo
 ---
 
 # elestio_odoo_erp_crm (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br>Odoo is a suite of web-based, open-source business apps.<br><br>The **elestio_odoo_erp_crm** resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image [elestio/odoo](https://hub.docker.com/r/elestio/odoo)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/odoo-logo-JAer.png" width="100" /><br>Odoo is a suite of web-based, open-source business apps.<br><br>The **elestio_odoo_erp_crm** resource allows the creation and management of Elestio Odoo ERP & CRM services. The service uses the following docker image [odoo](https://hub.docker.com/r/odoo)
 
 
 
@@ -44,7 +44,7 @@ description: |-
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `19`.
 
 ### Read-Only
 

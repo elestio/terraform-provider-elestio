@@ -367,3 +367,29 @@ New services:
 - `elestio_pgduckdb`
 - `elestio_shinyserver`
 - `elestio_unibee`
+
+## v0.29.0
+
+### Configurable operation timeouts
+
+- **New block:** `timeouts` on every service resource. Configure how long the provider waits for `create`, `update`, and `delete` operations to complete.
+- The default per-operation timeout is now **20 minutes** (raised from 15 minutes).
+- The create error message now suggests increasing the timeout when a service takes longer to provision than the wait allows.
+- **New guide:** Operation Timeouts.
+
+### Services update
+
+- Introduced several new services and updated existing ones.
+
+New services:
+
+- `elestio_audiomuse_ai`
+- `elestio_erugo`
+- `elestio_garage`
+- `elestio_ghostfolio`
+- `elestio_glean`
+- `elestio_hermes`
+- `elestio_netbox`
+- `elestio_rustfs`
+- `elestio_seaweedfs`
+- `elestio_temporal`

@@ -1,6 +1,6 @@
-resource "elestio_litellm" "example" {
+resource "elestio_seaweedfs" "example" {
   project_id    = "2500"
-  version       = "v1.83.7-stable"
+  version       = "latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -35,19 +35,13 @@ resource "elestio_litellm" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "55635"
+      "port"     = "54821"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
     {
       "type"     = "input"
-      "port"     = "30389"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
-      "port"     = "25926"
+      "port"     = "54822"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     }

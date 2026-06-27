@@ -3,19 +3,19 @@
 page_title: "elestio_formbricks Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. The elestio_formbricks resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image formbricks/formbricks https://hub.docker.com/r/formbricks/formbricks
+  Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. The elestio_formbricks resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image ghcr.io/formbricks/formbricks https://hub.docker.com/r/ghcr.io/formbricks/formbricks
 ---
 
 # elestio_formbricks (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [formbricks/formbricks](https://hub.docker.com/r/formbricks/formbricks)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Formbricks-zFPy.webp" width="100" /><br>Formbricks is your go-to solution for in-product micro-surveys that will supercharge your product experience. <br><br>The **elestio_formbricks** resource allows the creation and management of Elestio Formbricks services. The service uses the following docker image [ghcr.io/formbricks/formbricks](https://hub.docker.com/r/ghcr.io/formbricks/formbricks)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_formbricks" "example" {
   project_id    = "2500"
-  version       = "3.1.3"
+  version       = "4.9.5"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -90,7 +90,7 @@ resource "elestio_formbricks" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `3.1.3`.
+- `version` (String) This is the version of the software used as service. **Default** `4.9.5`.
 
 ### Read-Only
 

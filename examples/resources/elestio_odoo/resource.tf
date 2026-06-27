@@ -1,6 +1,6 @@
 resource "elestio_odoo" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "19"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"

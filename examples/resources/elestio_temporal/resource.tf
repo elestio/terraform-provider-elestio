@@ -33,11 +33,5 @@ resource "elestio_temporal" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "42489"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

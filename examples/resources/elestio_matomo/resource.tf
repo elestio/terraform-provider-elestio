@@ -38,6 +38,6 @@ resource "elestio_matomo" "example" {
       "port"     = "14326"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

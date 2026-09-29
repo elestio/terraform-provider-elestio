@@ -53,7 +53,7 @@ resource "elestio_onedev" "example" {
       "port"     = "2022"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

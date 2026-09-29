@@ -38,6 +38,6 @@ resource "elestio_immich" "example" {
       "port"     = "2283"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

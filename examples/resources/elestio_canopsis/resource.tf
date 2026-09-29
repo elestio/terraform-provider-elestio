@@ -1,6 +1,6 @@
 resource "elestio_canopsis" "example" {
   project_id    = "2500"
-  version       = "4.3.9"
+  version       = "26.04.1"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -38,6 +38,6 @@ resource "elestio_canopsis" "example" {
       "port"     = "25672"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

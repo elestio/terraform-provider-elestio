@@ -1,6 +1,6 @@
 resource "elestio_mautic" "example" {
   project_id    = "2500"
-  version       = "6.0.3-fpm"
+  version       = "7.1-fpm"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -32,6 +32,6 @@ resource "elestio_mautic" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

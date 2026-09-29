@@ -59,7 +59,7 @@ resource "elestio_saleor" "example" {
       "port"     = "60128"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

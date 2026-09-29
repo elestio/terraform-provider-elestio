@@ -38,6 +38,6 @@ resource "elestio_uvdesk" "example" {
       "port"     = "53189"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

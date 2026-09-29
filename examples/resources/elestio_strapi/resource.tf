@@ -44,6 +44,6 @@ resource "elestio_strapi" "example" {
       "port"     = "34532"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

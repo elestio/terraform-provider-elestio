@@ -53,7 +53,7 @@ resource "elestio_victoriametrics" "example" {
       "port"     = "33110"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

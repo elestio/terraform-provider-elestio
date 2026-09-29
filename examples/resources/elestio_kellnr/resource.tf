@@ -38,6 +38,6 @@ resource "elestio_kellnr" "example" {
       "port"     = "38362"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -3,19 +3,19 @@
 page_title: "elestio_canopsis Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  The first open-source hypervision solutionThe elestio_canopsis resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image canopsis/canopsis-api https://hub.docker.com/r/canopsis/canopsis-api
+  The first open-source hypervision solutionThe elestio_canopsis resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image docker.canopsis.net/docker https://docker.canopsis.net/docker
 ---
 
 # elestio_canopsis (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br>The first open-source hypervision solution<br><br>The **elestio_canopsis** resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image [canopsis/canopsis-api](https://hub.docker.com/r/canopsis/canopsis-api)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-canopsis-vert-jgxH.png" width="100" /><br>The first open-source hypervision solution<br><br>The **elestio_canopsis** resource allows the creation and management of Elestio Canopsis services. The service uses the following docker image [docker.canopsis.net/docker](https://docker.canopsis.net/docker)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_canopsis" "example" {
   project_id    = "2500"
-  version       = "4.3.9"
+  version       = "26.04.1"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -53,7 +53,7 @@ resource "elestio_canopsis" "example" {
       "port"     = "25672"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```
@@ -90,7 +90,7 @@ resource "elestio_canopsis" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `4.3.9`.
+- `version` (String) This is the version of the software used as service. **Default** `26.04.1`.
 
 ### Read-Only
 

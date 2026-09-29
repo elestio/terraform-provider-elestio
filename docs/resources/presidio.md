@@ -59,7 +59,7 @@ resource "elestio_presidio" "example" {
       "port"     = "5003"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

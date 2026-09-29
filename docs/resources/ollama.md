@@ -53,7 +53,7 @@ resource "elestio_ollama" "example" {
       "port"     = "57987"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

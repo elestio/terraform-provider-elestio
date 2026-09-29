@@ -38,6 +38,6 @@ resource "elestio_weaviate" "example" {
       "port"     = "46834"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

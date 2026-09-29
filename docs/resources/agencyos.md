@@ -3,19 +3,19 @@
 page_title: "elestio_agencyos Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Open source operating system for digital agencies. Built with Directus and Nuxt.The elestio_agencyos resource allows the creation and management of Elestio AgencyOS services. The service uses the following docker image elestio/directus https://hub.docker.com/r/elestio/directus
+  Open source operating system for digital agencies. Built with Directus and Nuxt.The elestio_agencyos resource allows the creation and management of Elestio AgencyOS services. The service uses the following docker image directus/directus https://hub.docker.com/r/directus/directus
 ---
 
 # elestio_agencyos (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/agencyos-icon-fDAn.png" width="100" /><br>Open source operating system for digital agencies. Built with Directus and Nuxt.<br><br>The **elestio_agencyos** resource allows the creation and management of Elestio AgencyOS services. The service uses the following docker image [elestio/directus](https://hub.docker.com/r/elestio/directus)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/agencyos-icon-fDAn.png" width="100" /><br>Open source operating system for digital agencies. Built with Directus and Nuxt.<br><br>The **elestio_agencyos** resource allows the creation and management of Elestio AgencyOS services. The service uses the following docker image [directus/directus](https://hub.docker.com/r/directus/directus)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_agencyos" "example" {
   project_id    = "2500"
-  version       = "v9.26.0"
+  version       = "9.26.0"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -47,7 +47,7 @@ resource "elestio_agencyos" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```
@@ -84,7 +84,7 @@ resource "elestio_agencyos" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `v9.26.0`.
+- `version` (String) This is the version of the software used as service. **Default** `9.26.0`.
 
 ### Read-Only
 

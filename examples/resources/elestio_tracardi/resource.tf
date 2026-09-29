@@ -38,6 +38,6 @@ resource "elestio_tracardi" "example" {
       "port"     = "18686"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

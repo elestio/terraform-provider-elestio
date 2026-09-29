@@ -53,7 +53,7 @@ resource "elestio_metatrader5" "example" {
       "port"     = "14901"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

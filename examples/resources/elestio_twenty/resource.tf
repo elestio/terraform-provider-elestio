@@ -33,11 +33,5 @@ resource "elestio_twenty" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "63405"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

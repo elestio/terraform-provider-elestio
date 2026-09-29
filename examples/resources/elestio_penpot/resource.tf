@@ -38,6 +38,6 @@ resource "elestio_penpot" "example" {
       "port"     = "31021"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

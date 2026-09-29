@@ -44,6 +44,6 @@ resource "elestio_lago" "example" {
       "port"     = "34079"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

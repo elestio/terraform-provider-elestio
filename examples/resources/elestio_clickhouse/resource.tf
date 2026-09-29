@@ -74,6 +74,6 @@ resource "elestio_clickhouse" "example" {
       "port"     = "9181"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

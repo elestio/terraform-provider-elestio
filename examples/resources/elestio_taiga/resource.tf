@@ -44,6 +44,6 @@ resource "elestio_taiga" "example" {
       "port"     = "41748"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

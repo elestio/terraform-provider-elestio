@@ -44,6 +44,6 @@ resource "elestio_neo4j" "example" {
       "port"     = "27687"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

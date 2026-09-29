@@ -1,6 +1,6 @@
 resource "elestio_agencyos" "example" {
   project_id    = "2500"
-  version       = "v9.26.0"
+  version       = "9.26.0"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -32,6 +32,6 @@ resource "elestio_agencyos" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -38,6 +38,6 @@ resource "elestio_bugsink" "example" {
       "port"     = "35564"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

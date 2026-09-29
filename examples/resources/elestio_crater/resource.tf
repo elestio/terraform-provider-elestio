@@ -33,11 +33,5 @@ resource "elestio_crater" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "11860"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

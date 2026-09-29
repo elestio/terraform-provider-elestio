@@ -44,6 +44,6 @@ resource "elestio_woocommerce" "example" {
       "port"     = "24580"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

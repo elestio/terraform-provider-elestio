@@ -53,7 +53,7 @@ resource "elestio_etherpad" "example" {
       "port"     = "8475"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

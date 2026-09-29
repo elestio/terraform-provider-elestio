@@ -86,6 +86,12 @@ resource "elestio_rke2" "example" {
       "port"     = "10256"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
+    {
+      "type"     = "input"
+      "port"     = "8472/udp"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
   ]
 }

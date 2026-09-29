@@ -26,6 +26,6 @@ resource "elestio_squid" "example" {
       "port"     = "18028"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

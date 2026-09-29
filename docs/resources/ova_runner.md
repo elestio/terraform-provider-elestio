@@ -53,7 +53,7 @@ resource "elestio_ova_runner" "example" {
       "port"     = "24971"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

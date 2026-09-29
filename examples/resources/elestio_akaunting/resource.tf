@@ -38,6 +38,6 @@ resource "elestio_akaunting" "example" {
       "port"     = "36568"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

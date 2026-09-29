@@ -38,6 +38,6 @@ resource "elestio_odoo" "example" {
       "port"     = "25648"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

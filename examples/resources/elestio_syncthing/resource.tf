@@ -44,6 +44,6 @@ resource "elestio_syncthing" "example" {
       "port"     = "22000/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -59,7 +59,7 @@ resource "elestio_mastodon" "example" {
       "port"     = "5443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

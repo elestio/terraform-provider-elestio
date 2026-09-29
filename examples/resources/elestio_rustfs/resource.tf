@@ -38,6 +38,6 @@ resource "elestio_rustfs" "example" {
       "port"     = "39743"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

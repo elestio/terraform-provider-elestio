@@ -65,7 +65,7 @@ resource "elestio_powerdns" "example" {
       "port"     = "44350"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

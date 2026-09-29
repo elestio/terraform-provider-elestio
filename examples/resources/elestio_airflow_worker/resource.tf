@@ -32,6 +32,6 @@ resource "elestio_airflow_worker" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

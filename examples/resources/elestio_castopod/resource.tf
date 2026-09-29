@@ -33,11 +33,5 @@ resource "elestio_castopod" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "5974"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

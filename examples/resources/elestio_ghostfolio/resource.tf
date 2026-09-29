@@ -38,6 +38,6 @@ resource "elestio_ghostfolio" "example" {
       "port"     = "20693"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

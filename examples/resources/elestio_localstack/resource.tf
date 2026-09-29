@@ -1,6 +1,6 @@
 resource "elestio_localstack" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "4.9"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -38,6 +38,6 @@ resource "elestio_localstack" "example" {
       "port"     = "4510-4559"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -38,6 +38,6 @@ resource "elestio_labelstudio" "example" {
       "port"     = "30797"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

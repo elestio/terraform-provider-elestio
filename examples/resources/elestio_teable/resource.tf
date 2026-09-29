@@ -35,15 +35,9 @@ resource "elestio_teable" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "19532"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "13448"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

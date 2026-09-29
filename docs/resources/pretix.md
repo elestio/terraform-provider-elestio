@@ -59,7 +59,7 @@ resource "elestio_pretix" "example" {
       "port"     = "29098"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

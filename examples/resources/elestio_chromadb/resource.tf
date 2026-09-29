@@ -38,6 +38,6 @@ resource "elestio_chromadb" "example" {
       "port"     = "44751"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

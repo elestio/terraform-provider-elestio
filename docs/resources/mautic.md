@@ -15,7 +15,7 @@ description: |-
 ```terraform
 resource "elestio_mautic" "example" {
   project_id    = "2500"
-  version       = "6.0.3-fpm"
+  version       = "7.1-fpm"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -47,7 +47,7 @@ resource "elestio_mautic" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```
@@ -84,7 +84,7 @@ resource "elestio_mautic" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `6.0.3-fpm`.
+- `version` (String) This is the version of the software used as service. **Default** `7.1-fpm`.
 
 ### Read-Only
 

@@ -1,6 +1,6 @@
 resource "elestio_loki" "example" {
   project_id    = "2500"
-  version       = "2.8.0"
+  version       = "latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -38,6 +38,6 @@ resource "elestio_loki" "example" {
       "port"     = "3131"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -3,12 +3,12 @@
 page_title: "elestio_gradio Resource - terraform-provider-elestio"
 subcategory: "Services: AI/GPU"
 description: |-
-  Stable Diffusion Web UI, A browser interface based on Gradio library for Stable Diffusion.The elestio_gradio resource allows the creation and management of Elestio Gradio services. The service uses the following docker image kestr3l/stable-diffusion-webui https://hub.docker.com/r/kestr3l/stable-diffusion-webui
+  Stable Diffusion Web UI (AUTOMATIC1111), A browser interface based on Gradio library for Stable Diffusion.The elestio_gradio resource allows the creation and management of Elestio Gradio services. The service uses the following docker image kestr3l/stable-diffusion-webui https://hub.docker.com/r/kestr3l/stable-diffusion-webui
 ---
 
 # elestio_gradio (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gradio-ZOKL.png" width="100" /><br>Stable Diffusion Web UI, A browser interface based on Gradio library for Stable Diffusion.<br><br>The **elestio_gradio** resource allows the creation and management of Elestio Gradio services. The service uses the following docker image [kestr3l/stable-diffusion-webui](https://hub.docker.com/r/kestr3l/stable-diffusion-webui)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Gradio-ZOKL.png" width="100" /><br>Stable Diffusion Web UI (AUTOMATIC1111), A browser interface based on Gradio library for Stable Diffusion.<br><br>The **elestio_gradio** resource allows the creation and management of Elestio Gradio services. The service uses the following docker image [kestr3l/stable-diffusion-webui](https://hub.docker.com/r/kestr3l/stable-diffusion-webui)
 
 ## Example Usage
 
@@ -47,7 +47,7 @@ resource "elestio_gradio" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

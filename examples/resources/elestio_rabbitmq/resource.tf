@@ -56,6 +56,6 @@ resource "elestio_rabbitmq" "example" {
       "port"     = "5552"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

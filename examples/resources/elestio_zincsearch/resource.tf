@@ -32,6 +32,6 @@ resource "elestio_zincsearch" "example" {
       "port"     = "80"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

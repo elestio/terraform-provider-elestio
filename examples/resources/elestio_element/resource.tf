@@ -41,12 +41,6 @@ resource "elestio_element" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "33374"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "54227"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
@@ -56,6 +50,6 @@ resource "elestio_element" "example" {
       "port"     = "50100-50200/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

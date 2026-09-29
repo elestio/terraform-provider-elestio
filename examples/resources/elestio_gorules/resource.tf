@@ -33,11 +33,5 @@ resource "elestio_gorules" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "55812"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

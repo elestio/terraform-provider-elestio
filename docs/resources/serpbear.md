@@ -47,7 +47,7 @@ resource "elestio_serpbear" "example" {
       "port"     = "80"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

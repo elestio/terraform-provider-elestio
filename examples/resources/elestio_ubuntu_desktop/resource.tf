@@ -38,6 +38,6 @@ resource "elestio_ubuntu_desktop" "example" {
       "port"     = "14901"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

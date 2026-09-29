@@ -38,6 +38,6 @@ resource "elestio_audiomuse_ai" "example" {
       "port"     = "35406"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

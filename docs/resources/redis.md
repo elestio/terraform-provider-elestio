@@ -59,7 +59,7 @@ resource "elestio_redis" "example" {
       "port"     = "26380"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

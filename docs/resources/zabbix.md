@@ -53,7 +53,7 @@ resource "elestio_zabbix" "example" {
       "port"     = "10051"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

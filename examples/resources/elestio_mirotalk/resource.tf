@@ -80,6 +80,6 @@ resource "elestio_mirotalk" "example" {
       "port"     = "3478/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

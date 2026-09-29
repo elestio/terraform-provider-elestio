@@ -59,7 +59,7 @@ resource "elestio_pleroma" "example" {
       "port"     = "4897"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

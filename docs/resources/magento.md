@@ -53,7 +53,7 @@ resource "elestio_magento" "example" {
       "port"     = "24580"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

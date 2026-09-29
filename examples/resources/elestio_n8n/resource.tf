@@ -44,6 +44,6 @@ resource "elestio_n8n" "example" {
       "port"     = "56379"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

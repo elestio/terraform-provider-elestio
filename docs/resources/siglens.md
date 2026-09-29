@@ -53,7 +53,7 @@ resource "elestio_siglens" "example" {
       "port"     = "48926"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

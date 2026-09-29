@@ -50,6 +50,6 @@ resource "elestio_logto" "example" {
       "port"     = "42494"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

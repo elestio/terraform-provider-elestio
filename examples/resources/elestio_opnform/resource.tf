@@ -35,15 +35,9 @@ resource "elestio_opnform" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "20551"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "58624"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -38,6 +38,6 @@ resource "elestio_authentik" "example" {
       "port"     = "34156"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

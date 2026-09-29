@@ -50,6 +50,6 @@ resource "elestio_opensearch" "example" {
       "port"     = "34256"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

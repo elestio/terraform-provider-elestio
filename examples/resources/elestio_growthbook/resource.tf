@@ -38,6 +38,6 @@ resource "elestio_growthbook" "example" {
       "port"     = "6443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

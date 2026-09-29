@@ -53,7 +53,7 @@ resource "elestio_wg_easy" "example" {
       "port"     = "51820/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

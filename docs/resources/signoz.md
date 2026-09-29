@@ -3,12 +3,12 @@
 page_title: "elestio_signoz Resource - terraform-provider-elestio"
 subcategory: "Services: Hosting & Infra"
 description: |-
-  SigNoz is an open-source APM solution for understanding issues in your applications and solving them quicklyThe elestio_signoz resource allows the creation and management of Elestio SigNoz services. The service uses the following docker image signoz/frontend https://hub.docker.com/r/signoz/frontend
+  SigNoz is an open-source APM solution for understanding issues in your applications and solving them quicklyThe elestio_signoz resource allows the creation and management of Elestio SigNoz services. The service uses the following docker image [ signoz/signoz](https://hub.docker.com/r/ signoz/signoz)
 ---
 
 # elestio_signoz (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" /><br>SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly<br><br>The **elestio_signoz** resource allows the creation and management of Elestio SigNoz services. The service uses the following docker image [signoz/frontend](https://hub.docker.com/r/signoz/frontend)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/signoz-8Mth.svg" width="100" /><br>SigNoz is an open-source APM solution for understanding issues in your applications and solving them quickly<br><br>The **elestio_signoz** resource allows the creation and management of Elestio SigNoz services. The service uses the following docker image [ signoz/signoz](https://hub.docker.com/r/ signoz/signoz)
 
 ## Example Usage
 
@@ -47,7 +47,7 @@ resource "elestio_signoz" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

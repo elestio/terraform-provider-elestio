@@ -71,7 +71,7 @@ resource "elestio_hyperswitch" "example" {
       "port"     = "50755"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

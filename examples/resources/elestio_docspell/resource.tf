@@ -38,6 +38,6 @@ resource "elestio_docspell" "example" {
       "port"     = "19878"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

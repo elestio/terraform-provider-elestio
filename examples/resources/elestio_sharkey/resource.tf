@@ -38,6 +38,6 @@ resource "elestio_sharkey" "example" {
       "port"     = "62379"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

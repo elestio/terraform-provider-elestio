@@ -71,7 +71,7 @@ resource "elestio_kafka" "example" {
       "port"     = "29092"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

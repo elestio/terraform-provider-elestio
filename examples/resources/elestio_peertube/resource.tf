@@ -38,6 +38,6 @@ resource "elestio_peertube" "example" {
       "port"     = "1935"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

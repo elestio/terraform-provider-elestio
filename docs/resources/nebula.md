@@ -53,7 +53,7 @@ resource "elestio_nebula" "example" {
       "port"     = "4243/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

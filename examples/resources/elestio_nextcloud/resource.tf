@@ -56,6 +56,12 @@ resource "elestio_nextcloud" "example" {
       "port"     = "3478/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
+    {
+      "type"     = "input"
+      "port"     = "13003"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
   ]
 }

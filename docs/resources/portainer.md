@@ -59,7 +59,7 @@ resource "elestio_portainer" "example" {
       "port"     = "8000"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

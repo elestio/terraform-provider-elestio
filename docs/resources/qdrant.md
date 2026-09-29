@@ -53,7 +53,7 @@ resource "elestio_qdrant" "example" {
       "port"     = "6333"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

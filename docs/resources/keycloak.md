@@ -65,7 +65,7 @@ resource "elestio_keycloak" "example" {
       "port"     = "7800"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

@@ -53,7 +53,7 @@ resource "elestio_corteza" "example" {
       "port"     = "8924"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

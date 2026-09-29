@@ -38,6 +38,6 @@ resource "elestio_guacamole" "example" {
       "port"     = "3389"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -38,6 +38,6 @@ resource "elestio_rocket_chat" "example" {
       "port"     = "8443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -71,7 +71,7 @@ resource "elestio_wazuh" "example" {
       "port"     = "55000"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

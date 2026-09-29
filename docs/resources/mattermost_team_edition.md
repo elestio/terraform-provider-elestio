@@ -3,12 +3,12 @@
 page_title: "elestio_mattermost_team_edition Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. The elestio_mattermost_team_edition resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image mattermost/mattermost-team-edition https://hub.docker.com/r/mattermost/mattermost-team-edition
+  Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. The elestio_mattermost_team_edition resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image mattermost/mattermost-enterprise-edition https://hub.docker.com/r/mattermost/mattermost-enterprise-edition
 ---
 
 # elestio_mattermost_team_edition (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" /><br>Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br><br>The **elestio_mattermost_team_edition** resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image [mattermost/mattermost-team-edition](https://hub.docker.com/r/mattermost/mattermost-team-edition)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mattermost-1-I9m1.png" width="100" /><br>Mattermost is an open-source platform for secure collaboration across the entire software development lifecycle. <br><br>The **elestio_mattermost_team_edition** resource allows the creation and management of Elestio Mattermost Team Edition services. The service uses the following docker image [mattermost/mattermost-enterprise-edition](https://hub.docker.com/r/mattermost/mattermost-enterprise-edition)
 
 
 
@@ -44,7 +44,7 @@ description: |-
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `10.10.1`.
+- `version` (String) This is the version of the software used as service. **Default** `latest`.
 
 ### Read-Only
 

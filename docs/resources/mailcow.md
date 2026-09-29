@@ -95,7 +95,7 @@ resource "elestio_mailcow" "example" {
       "port"     = "4190"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

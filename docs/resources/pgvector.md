@@ -53,7 +53,7 @@ resource "elestio_pgvector" "example" {
       "port"     = "35432"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

@@ -53,7 +53,7 @@ resource "elestio_influxdb" "example" {
       "port"     = "55701"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

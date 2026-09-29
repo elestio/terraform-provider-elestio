@@ -1,6 +1,6 @@
 resource "elestio_posthog" "example" {
   project_id    = "2500"
-  version       = "da3412535721cf1d9306621bef72d5b62dd8a355"
+  version       = "8801e5fe7f9d646d20ea2f693d4c4c71d2901d26"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -35,15 +35,9 @@ resource "elestio_posthog" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "6443"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "18080"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

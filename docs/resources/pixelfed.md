@@ -3,19 +3,19 @@
 page_title: "elestio_pixelfed Resource - terraform-provider-elestio"
 subcategory: "Services: Applications"
 description: |-
-  Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.The elestio_pixelfed resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image elestio/pixelfed https://hub.docker.com/r/elestio/pixelfed
+  Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.The elestio_pixelfed resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image ghcr.io/pixelfed-glitch/pixelfed https://ghcr.io/pixelfed-glitch/pixelfed
 ---
 
 # elestio_pixelfed (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pixelfed-1nfv.png" width="100" /><br>Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.<br><br>The **elestio_pixelfed** resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image [elestio/pixelfed](https://hub.docker.com/r/elestio/pixelfed)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Pixelfed-1nfv.png" width="100" /><br>Pixelfed is a fediverse decentralized social network for image sharing. Unlike other platforms with features similar to those of the social network Instagram.<br><br>The **elestio_pixelfed** resource allows the creation and management of Elestio Pixelfed services. The service uses the following docker image [ghcr.io/pixelfed-glitch/pixelfed](https://ghcr.io/pixelfed-glitch/pixelfed)
 
 ## Example Usage
 
 ```terraform
 resource "elestio_pixelfed" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "nginx-latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -53,7 +53,7 @@ resource "elestio_pixelfed" "example" {
       "port"     = "2443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```
@@ -90,7 +90,7 @@ resource "elestio_pixelfed" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `latest`.
+- `version` (String) This is the version of the software used as service. **Default** `nginx-latest`.
 
 ### Read-Only
 

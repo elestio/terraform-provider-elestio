@@ -1,6 +1,6 @@
 resource "elestio_mysql" "example" {
   project_id    = "2500"
-  version       = "8.0"
+  version       = "8.4"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -32,6 +32,6 @@ resource "elestio_mysql" "example" {
       "port"     = "24580"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

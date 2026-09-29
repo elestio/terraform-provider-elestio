@@ -44,6 +44,6 @@ resource "elestio_dremio" "example" {
       "port"     = "32010"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -53,7 +53,7 @@ resource "elestio_piefed" "example" {
       "port"     = "1906"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

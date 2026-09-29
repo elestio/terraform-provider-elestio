@@ -53,7 +53,7 @@ resource "elestio_iris" "example" {
       "port"     = "29027"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

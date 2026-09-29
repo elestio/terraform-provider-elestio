@@ -3,12 +3,12 @@
 page_title: "elestio_browserless Resource - terraform-provider-elestio"
 subcategory: "Services: Development"
 description: |-
-  Browserless provides fast, scalable, reliable web browser automation. The elestio_browserless resource allows the creation and management of Elestio Browserless services. The service uses the following docker image browserless/chrome https://hub.docker.com/r/browserless/chrome
+  Browserless provides fast, scalable, reliable web browser automation. The elestio_browserless resource allows the creation and management of Elestio Browserless services. The service uses the following docker image ghcr.io/browserless/chromium https://ghcr.io/browserless/chromium
 ---
 
 # elestio_browserless (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" /><br>Browserless provides fast, scalable, reliable web browser automation. <br><br>The **elestio_browserless** resource allows the creation and management of Elestio Browserless services. The service uses the following docker image [browserless/chrome](https://hub.docker.com/r/browserless/chrome)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/logo-banner-y34k.png" width="100" /><br>Browserless provides fast, scalable, reliable web browser automation. <br><br>The **elestio_browserless** resource allows the creation and management of Elestio Browserless services. The service uses the following docker image [ghcr.io/browserless/chromium](https://ghcr.io/browserless/chromium)
 
 ## Example Usage
 
@@ -47,7 +47,7 @@ resource "elestio_browserless" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

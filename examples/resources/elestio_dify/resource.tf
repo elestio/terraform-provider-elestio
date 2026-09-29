@@ -1,6 +1,6 @@
 resource "elestio_dify" "example" {
   project_id    = "2500"
-  version       = "main"
+  version       = "latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -33,11 +33,5 @@ resource "elestio_dify" "example" {
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
     },
-    {
-      "type"     = "input"
-      "port"     = "7317"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    }
   ]
 }

@@ -53,7 +53,7 @@ resource "elestio_cryptpad" "example" {
       "port"     = "3001"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

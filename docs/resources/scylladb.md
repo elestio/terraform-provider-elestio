@@ -53,7 +53,7 @@ resource "elestio_scylladb" "example" {
       "port"     = "26443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

@@ -38,6 +38,6 @@ resource "elestio_checkmate" "example" {
       "port"     = "17352"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

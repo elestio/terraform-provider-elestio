@@ -56,6 +56,6 @@ resource "elestio_zitadel" "example" {
       "port"     = "23456"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

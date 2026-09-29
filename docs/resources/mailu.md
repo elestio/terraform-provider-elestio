@@ -95,7 +95,7 @@ resource "elestio_mailu" "example" {
       "port"     = "16443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

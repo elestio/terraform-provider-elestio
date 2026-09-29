@@ -38,6 +38,6 @@ resource "elestio_shlink" "example" {
       "port"     = "18081"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

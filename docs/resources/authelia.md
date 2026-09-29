@@ -47,7 +47,7 @@ resource "elestio_authelia" "example" {
       "port"     = "80"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

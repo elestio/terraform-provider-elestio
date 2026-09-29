@@ -59,7 +59,7 @@ resource "elestio_hi_events" "example" {
       "port"     = "13448"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

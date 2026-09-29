@@ -1,6 +1,6 @@
 resource "elestio_meilisearch" "example" {
   project_id    = "2500"
-  version       = "v1.14.0"
+  version       = "v1.53.2"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -32,6 +32,6 @@ resource "elestio_meilisearch" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

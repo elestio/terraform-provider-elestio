@@ -38,6 +38,6 @@ resource "elestio_docmost" "example" {
       "port"     = "31497"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

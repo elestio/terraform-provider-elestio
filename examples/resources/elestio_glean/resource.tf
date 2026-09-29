@@ -38,6 +38,6 @@ resource "elestio_glean" "example" {
       "port"     = "39493"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -59,7 +59,7 @@ resource "elestio_immudb" "example" {
       "port"     = "9497"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

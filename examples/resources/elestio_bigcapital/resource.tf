@@ -35,12 +35,6 @@ resource "elestio_bigcapital" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "22632"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "3306"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
@@ -50,6 +44,6 @@ resource "elestio_bigcapital" "example" {
       "port"     = "54454"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

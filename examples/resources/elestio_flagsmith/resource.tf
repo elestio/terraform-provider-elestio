@@ -38,6 +38,6 @@ resource "elestio_flagsmith" "example" {
       "port"     = "64499"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -59,7 +59,7 @@ resource "elestio_glpi" "example" {
       "port"     = "52698"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

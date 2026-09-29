@@ -35,15 +35,9 @@ resource "elestio_llana" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "10010"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "55262"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

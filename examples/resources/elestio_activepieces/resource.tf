@@ -38,6 +38,6 @@ resource "elestio_activepieces" "example" {
       "port"     = "4792"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

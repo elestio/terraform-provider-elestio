@@ -38,6 +38,6 @@ resource "elestio_neko" "example" {
       "port"     = "59000-59049/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

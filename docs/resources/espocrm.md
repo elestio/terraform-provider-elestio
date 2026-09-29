@@ -53,7 +53,7 @@ resource "elestio_espocrm" "example" {
       "port"     = "8686"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

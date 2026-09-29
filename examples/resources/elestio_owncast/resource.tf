@@ -38,6 +38,6 @@ resource "elestio_owncast" "example" {
       "port"     = "1935"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -53,7 +53,7 @@ resource "elestio_openwebui" "example" {
       "port"     = "11434"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

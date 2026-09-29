@@ -53,7 +53,7 @@ resource "elestio_attendize" "example" {
       "port"     = "23121"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

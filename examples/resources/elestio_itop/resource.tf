@@ -38,6 +38,6 @@ resource "elestio_itop" "example" {
       "port"     = "48152"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

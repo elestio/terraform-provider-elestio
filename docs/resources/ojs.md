@@ -53,7 +53,7 @@ resource "elestio_ojs" "example" {
       "port"     = "52440"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

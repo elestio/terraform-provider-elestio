@@ -50,6 +50,6 @@ resource "elestio_plane" "example" {
       "port"     = "6443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

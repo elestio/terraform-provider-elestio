@@ -15,7 +15,7 @@ description: |-
 ```terraform
 resource "elestio_meilisearch" "example" {
   project_id    = "2500"
-  version       = "v1.14.0"
+  version       = "v1.53.2"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -47,7 +47,7 @@ resource "elestio_meilisearch" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```
@@ -84,7 +84,7 @@ resource "elestio_meilisearch" "example" {
 - `system_auto_updates_enabled` (Boolean) Service system auto update state. **Default** `true`.
 - `system_auto_updates_security_patches_only_enabled` (Boolean) Service system auto update security patches only state. **Default** `false`.
 - `timeouts` (Block, Optional) (see [below for nested schema](#nestedblock--timeouts))
-- `version` (String) This is the version of the software used as service. **Default** `v1.14.0`.
+- `version` (String) This is the version of the software used as service. **Default** `v1.53.2`.
 
 ### Read-Only
 

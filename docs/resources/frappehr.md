@@ -53,7 +53,7 @@ resource "elestio_frappehr" "example" {
       "port"     = "26934"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

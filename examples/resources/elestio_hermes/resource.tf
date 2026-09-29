@@ -38,6 +38,12 @@ resource "elestio_hermes" "example" {
       "port"     = "9911"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
+    {
+      "type"     = "input"
+      "port"     = "9912"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
   ]
 }

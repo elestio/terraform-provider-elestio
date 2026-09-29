@@ -53,7 +53,7 @@ resource "elestio_gitlab_runner" "example" {
       "port"     = "8093"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

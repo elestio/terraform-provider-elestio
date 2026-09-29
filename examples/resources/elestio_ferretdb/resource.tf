@@ -38,6 +38,6 @@ resource "elestio_ferretdb" "example" {
       "port"     = "27017"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -38,6 +38,6 @@ resource "elestio_langflow" "example" {
       "port"     = "34941"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

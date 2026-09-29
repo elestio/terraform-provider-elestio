@@ -59,7 +59,7 @@ resource "elestio_nocobase" "example" {
       "port"     = "57777"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

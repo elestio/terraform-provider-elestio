@@ -38,6 +38,6 @@ resource "elestio_documenso" "example" {
       "port"     = "28665"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -68,6 +68,6 @@ resource "elestio_rustdeskserver" "example" {
       "port"     = "21116/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

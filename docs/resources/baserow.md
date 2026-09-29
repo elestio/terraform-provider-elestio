@@ -59,7 +59,7 @@ resource "elestio_baserow" "example" {
       "port"     = "25440"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

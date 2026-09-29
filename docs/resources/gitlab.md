@@ -53,7 +53,7 @@ resource "elestio_gitlab" "example" {
       "port"     = "22022"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

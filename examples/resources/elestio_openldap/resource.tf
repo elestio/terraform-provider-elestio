@@ -50,6 +50,6 @@ resource "elestio_openldap" "example" {
       "port"     = "636"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

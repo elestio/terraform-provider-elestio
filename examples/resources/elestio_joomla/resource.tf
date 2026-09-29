@@ -38,6 +38,6 @@ resource "elestio_joomla" "example" {
       "port"     = "40573"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

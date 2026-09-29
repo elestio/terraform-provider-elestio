@@ -68,6 +68,6 @@ resource "elestio_clickhouses3" "example" {
       "port"     = "20001"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

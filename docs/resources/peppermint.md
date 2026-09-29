@@ -59,7 +59,7 @@ resource "elestio_peppermint" "example" {
       "port"     = "58325"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

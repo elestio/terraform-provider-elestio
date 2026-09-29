@@ -32,6 +32,6 @@ resource "elestio_manticoresearch" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

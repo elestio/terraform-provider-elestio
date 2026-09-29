@@ -38,6 +38,6 @@ resource "elestio_nopcommerce" "example" {
       "port"     = "2445"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

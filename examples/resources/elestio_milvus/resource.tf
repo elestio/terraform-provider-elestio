@@ -44,6 +44,6 @@ resource "elestio_milvus" "example" {
       "port"     = "40318"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

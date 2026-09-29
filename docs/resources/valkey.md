@@ -3,12 +3,12 @@
 page_title: "elestio_valkey Resource - terraform-provider-elestio"
 subcategory: "Services: Databases & Cache"
 description: |-
-  A flexible distributed key-value datastore that supports both caching and beyond caching workloads.The elestio_valkey resource allows the creation and management of Elestio Valkey services. The service uses the following docker image elestio/valkey https://hub.docker.com/r/elestio/valkey
+  A flexible distributed key-value datastore that supports both caching and beyond caching workloads.The elestio_valkey resource allows the creation and management of Elestio Valkey services. The service uses the following docker image valkey/valkey https://hub.docker.com/r/valkey/valkey
 ---
 
 # elestio_valkey (Resource)
 
-<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Valkey-Tuyi.png" width="100" /><br>A flexible distributed key-value datastore that supports both caching and beyond caching workloads.<br><br>The **elestio_valkey** resource allows the creation and management of Elestio Valkey services. The service uses the following docker image [elestio/valkey](https://hub.docker.com/r/elestio/valkey)
+<img src="https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Valkey-Tuyi.png" width="100" /><br>A flexible distributed key-value datastore that supports both caching and beyond caching workloads.<br><br>The **elestio_valkey** resource allows the creation and management of Elestio Valkey services. The service uses the following docker image [valkey/valkey](https://hub.docker.com/r/valkey/valkey)
 
 ## Example Usage
 
@@ -59,7 +59,7 @@ resource "elestio_valkey" "example" {
       "port"     = "26380"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

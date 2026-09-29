@@ -38,6 +38,6 @@ resource "elestio_supabase" "example" {
       "port"     = "5432"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

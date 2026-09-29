@@ -1,6 +1,6 @@
 resource "elestio_dittofeed" "example" {
   project_id    = "2500"
-  version       = "v0.13.10"
+  version       = "latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -44,6 +44,6 @@ resource "elestio_dittofeed" "example" {
       "port"     = "7443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

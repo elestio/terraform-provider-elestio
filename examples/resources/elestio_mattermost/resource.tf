@@ -1,6 +1,6 @@
 resource "elestio_mattermost" "example" {
   project_id    = "2500"
-  version       = "10.10.1"
+  version       = "latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -44,6 +44,6 @@ resource "elestio_mattermost" "example" {
       "port"     = "8443/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

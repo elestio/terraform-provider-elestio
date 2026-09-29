@@ -1,6 +1,6 @@
 resource "elestio_pixelfed" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "nginx-latest"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -38,6 +38,6 @@ resource "elestio_pixelfed" "example" {
       "port"     = "2443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

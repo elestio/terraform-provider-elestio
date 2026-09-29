@@ -1,6 +1,6 @@
 resource "elestio_cassandra" "example" {
   project_id    = "2500"
-  version       = "latest"
+  version       = "5.0"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -35,15 +35,9 @@ resource "elestio_cassandra" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "7000"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "9042"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

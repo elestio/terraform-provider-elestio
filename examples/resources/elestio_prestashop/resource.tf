@@ -38,6 +38,6 @@ resource "elestio_prestashop" "example" {
       "port"     = "7988"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

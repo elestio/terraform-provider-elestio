@@ -56,6 +56,6 @@ resource "elestio_jitsu" "example" {
       "port"     = "31088"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

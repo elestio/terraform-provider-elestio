@@ -53,7 +53,7 @@ resource "elestio_limesurvey" "example" {
       "port"     = "8443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

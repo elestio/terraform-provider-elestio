@@ -1,6 +1,6 @@
 resource "elestio_postgis" "example" {
   project_id    = "2500"
-  version       = "17-master"
+  version       = "18-3.6"
   provider_name = "netcup"
   datacenter    = "nbg"
   server_type   = "MEDIUM-2C-4G"
@@ -38,6 +38,6 @@ resource "elestio_postgis" "example" {
       "port"     = "35432"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -53,7 +53,7 @@ resource "elestio_langfuse" "example" {
       "port"     = "33374"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

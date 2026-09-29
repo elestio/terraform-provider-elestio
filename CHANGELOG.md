@@ -368,7 +368,7 @@ New services:
 - `elestio_shinyserver`
 - `elestio_unibee`
 
-## v0.29.0
+## v0.29.0 (29 September, 2026)
 
 ### Configurable operation timeouts
 

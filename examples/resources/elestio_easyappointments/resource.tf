@@ -35,15 +35,9 @@ resource "elestio_easyappointments" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "19566"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "59598"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

@@ -44,6 +44,6 @@ resource "elestio_humhub" "example" {
       "port"     = "21011"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

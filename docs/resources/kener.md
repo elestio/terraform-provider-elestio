@@ -53,7 +53,7 @@ resource "elestio_kener" "example" {
       "port"     = "46708"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

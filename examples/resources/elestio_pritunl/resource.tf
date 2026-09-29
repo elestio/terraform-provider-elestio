@@ -44,6 +44,6 @@ resource "elestio_pritunl" "example" {
       "port"     = "1194/udp"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

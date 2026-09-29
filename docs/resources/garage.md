@@ -53,7 +53,7 @@ resource "elestio_garage" "example" {
       "port"     = "58431"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

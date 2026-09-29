@@ -38,6 +38,6 @@ resource "elestio_gerrit" "example" {
       "port"     = "29418"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

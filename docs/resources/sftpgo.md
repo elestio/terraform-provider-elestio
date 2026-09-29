@@ -65,7 +65,7 @@ resource "elestio_sftpgo" "example" {
       "port"     = "40080"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

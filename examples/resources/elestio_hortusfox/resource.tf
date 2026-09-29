@@ -38,6 +38,6 @@ resource "elestio_hortusfox" "example" {
       "port"     = "12461"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

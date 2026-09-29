@@ -32,6 +32,12 @@ resource "elestio_librechat" "example" {
       "port"     = "443"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
+    {
+      "type"     = "input"
+      "port"     = "3000"
+      "protocol" = "tcp"
+      "targets"  = ["0.0.0.0/0", "::/0"]
+    },
   ]
 }

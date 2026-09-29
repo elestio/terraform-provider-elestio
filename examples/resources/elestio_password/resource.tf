@@ -35,15 +35,9 @@ resource "elestio_password" "example" {
     },
     {
       "type"     = "input"
-      "port"     = "48846"
-      "protocol" = "tcp"
-      "targets"  = ["0.0.0.0/0", "::/0"]
-    },
-    {
-      "type"     = "input"
       "port"     = "48697"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

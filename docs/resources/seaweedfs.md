@@ -59,7 +59,7 @@ resource "elestio_seaweedfs" "example" {
       "port"     = "54822"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

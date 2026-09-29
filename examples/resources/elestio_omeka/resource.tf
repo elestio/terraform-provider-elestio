@@ -38,6 +38,6 @@ resource "elestio_omeka" "example" {
       "port"     = "57007"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

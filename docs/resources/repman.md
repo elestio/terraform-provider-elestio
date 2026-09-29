@@ -53,7 +53,7 @@ resource "elestio_repman" "example" {
       "port"     = "26597"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }
 ```

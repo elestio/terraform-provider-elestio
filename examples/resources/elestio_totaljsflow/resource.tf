@@ -32,6 +32,6 @@ resource "elestio_totaljsflow" "example" {
       "port"     = "80"
       "protocol" = "tcp"
       "targets"  = ["0.0.0.0/0", "::/0"]
-    }
+    },
   ]
 }

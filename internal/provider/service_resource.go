@@ -805,10 +805,19 @@ func (r *ServiceResource) ModifyPlan(ctx context.Context, req resource.ModifyPla
 		return
 	}
 
+	// If no template is provided in the provider configuration
+	// use the one provided by the user.
+	var templateId int64
+	if r.TemplateId != 0 {
+		templateId = r.TemplateId
+	} else {
+		templateId = plan.TemplateId.ValueInt64()
+	}
+
 	if err := validateProviderConfig(
 		ctx,
 		r.client,
-		r.TemplateId,
+		templateId,
 		plan.ProviderName.ValueString(),
 		plan.Datacenter.ValueString(),
 		plan.ServerType.ValueString(),

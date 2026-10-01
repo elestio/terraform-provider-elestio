@@ -35,3 +35,6 @@ examples/test
 
 # Keep windows files with windows line endings
 *.winfile eol=crlf
+
+# Output of scripts/live-lifecycle-test.sh (logs, state, cached tokens)
+live-test-output/

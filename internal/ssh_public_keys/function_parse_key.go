@@ -101,4 +101,3 @@ func (f *ParseKeyFunction) Run(ctx context.Context, req function.RunRequest, res
 
 	resp.Error = function.ConcatFuncErrors(resp.Error, resp.Result.Set(ctx, result))
 }
-

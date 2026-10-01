@@ -54,4 +54,3 @@ func (f *ParseKeyDataFunction) Run(ctx context.Context, req function.RunRequest,
 	result := fields[0] + " " + fields[1]
 	resp.Error = function.ConcatFuncErrors(resp.Error, resp.Result.Set(ctx, result))
 }
-

@@ -25,12 +25,14 @@ func (v isEmailValidator) ValidateString(ctx context.Context, req validator.Stri
 
 	value := req.ConfigValue.ValueString()
 
-	_, err := mail.ParseAddress(value)
-	if err != nil {
+	// Only a bare address is accepted. mail.ParseAddress alone also accepts
+	// display-name forms such as "Name <a@b.c>" and comments.
+	addr, err := mail.ParseAddress(value)
+	if err != nil || addr.Address != value {
 		resp.Diagnostics.AddAttributeError(
 			req.Path,
 			"Invalid Email Address",
-			fmt.Sprintf("Invalid email address: %s", value),
+			fmt.Sprintf("Invalid email address: %q", value),
 		)
 	}
 }

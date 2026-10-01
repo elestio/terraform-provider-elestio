@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/setvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
@@ -445,13 +446,14 @@ func (r *LoadBalancerResource) ModifyPlan(ctx context.Context, req resource.Modi
 	); err != nil {
 		resp.Diagnostics.AddError(
 			"Invalid Configuration",
-			err.Error(),
+			utils.RedactError(err),
 		)
 		return
 	}
 }
 
 func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRequest, resp *resource.CreateResponse) {
+	defer utils.RecoverToDiagnostic(&resp.Diagnostics, "Create")
 	var plan *LoadBalancerResourceModel
 
 	// Read Terraform plan data into the model
@@ -526,11 +528,16 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 		CreatedFrom: "terraform",
 	})
 	if err != nil {
-		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to create load balancer, got error: %s", err))
+		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to create load balancer, got error: %s", utils.RedactError(err)))
 		return
 	}
 
 	tflog.Trace(ctx, "Created Load Balancer: "+clientLoadBalancer.ID)
+
+	// The load balancer now exists and is billed. Record its identity right
+	// away so a failure below leaves a tainted resource in state, not an orphan.
+	resp.Diagnostics.Append(resp.State.SetAttribute(ctx, path.Root("id"), clientLoadBalancer.ID)...)
+	resp.Diagnostics.Append(resp.State.SetAttribute(ctx, path.Root("project_id"), clientLoadBalancer.ProjectID)...)
 
 	tflog.Info(ctx, "Waiting for Load Balancer to be deployed: "+clientLoadBalancer.ID)
 	deploymentStateConf := &retry.StateChangeConf{
@@ -539,7 +546,7 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 		Refresh: func() (interface{}, string, error) {
 			deployingClientLoadBalancer, err := r.client.LoadBalancer.Get(clientLoadBalancer.ProjectID, clientLoadBalancer.ID)
 			if err != nil {
-				return nil, "", fmt.Errorf("waiting for load balancer deployment, got error: %s", err)
+				return nil, "", fmt.Errorf("waiting for load balancer deployment, got error: %s", utils.RedactError(err))
 			}
 
 			if deployingClientLoadBalancer.DeploymentStatus != elestio.LoadBalancerDeploymentStatusDeployed {
@@ -555,7 +562,7 @@ func (r *LoadBalancerResource) Create(ctx context.Context, req resource.CreateRe
 	}
 	deployedClientLoadBalancer, err := deploymentStateConf.WaitForStateContext(ctx)
 	if err != nil {
-		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to wait for load balancer deployment, got error: %s", err))
+		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to wait for load balancer deployment, got error: %s", utils.RedactError(err)))
 		return
 	}
 	tflog.Trace(ctx, "Load Balancer deployed: "+deployedClientLoadBalancer.(*elestio.LoadBalancer).ID)
@@ -581,8 +588,12 @@ func (r *LoadBalancerResource) Read(ctx context.Context, req resource.ReadReques
 	tflog.Info(ctx, "Getting Load Balancer: "+state.Id.ValueString())
 
 	loadBalancer, err := r.client.LoadBalancer.Get(state.ProjectId.ValueString(), state.Id.ValueString())
+	if utils.IsNotFound(err) {
+		resp.State.RemoveResource(ctx)
+		return
+	}
 	if err != nil {
-		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to read load balancer, got error: %s", err))
+		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to read load balancer, got error: %s", utils.RedactError(err)))
 		return
 	}
 	loadBalancerModel, d := transformClientLoadBalancerToResourceModel(ctx, loadBalancer, state)
@@ -665,7 +676,7 @@ func (r *LoadBalancerResource) Update(ctx context.Context, req resource.UpdateRe
 	}
 	loadBalancer, err := r.client.LoadBalancer.UpdateConfig(state.ProjectId.ValueString(), state.Id.ValueString(), payload)
 	if err != nil {
-		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to update load balancer, got error: %s", err))
+		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to update load balancer, got error: %s", utils.RedactError(err)))
 		return
 	}
 
@@ -693,7 +704,7 @@ func (r *LoadBalancerResource) Delete(ctx context.Context, req resource.DeleteRe
 
 	err := r.client.LoadBalancer.Delete(state.ProjectId.ValueString(), state.Id.ValueString(), true)
 	if err != nil {
-		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to delete load balancer, got error: %s", err))
+		resp.Diagnostics.AddError("Client Error", fmt.Sprintf("Unable to delete load balancer, got error: %s", utils.RedactError(err)))
 		return
 	}
 
@@ -704,8 +715,10 @@ func (r *LoadBalancerResource) Delete(ctx context.Context, req resource.DeleteRe
 		Target:  []string{"DELETED"},
 		Refresh: func() (interface{}, string, error) {
 			loadBalancer, err := r.client.LoadBalancer.Get(state.ProjectId.ValueString(), state.Id.ValueString())
-			// We expect a 401 error when the load balancer is deleted
-			if err != nil {
+			// The API answers 401 InvalidServer for a deleted load balancer,
+			// which IsNotFound recognizes. Other errors (network, 5xx, an
+			// expired token) keep polling until the timeout.
+			if utils.IsNotFound(err) {
 				return struct{}{}, "DELETED", nil
 			}
 			return loadBalancer, "DELETING", nil
@@ -717,7 +730,7 @@ func (r *LoadBalancerResource) Delete(ctx context.Context, req resource.DeleteRe
 	}
 	_, err = confirmDeleteStateConf.WaitForStateContext(ctx)
 	if err != nil {
-		resp.Diagnostics.AddWarning("Client Error", fmt.Sprintf("Unable to confirm load balancer deletion, got error: %s", err))
+		resp.Diagnostics.AddWarning("Client Error", fmt.Sprintf("Unable to confirm load balancer deletion, got error: %s", utils.RedactError(err)))
 	}
 }
 

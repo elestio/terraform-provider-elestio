@@ -66,8 +66,11 @@ func Compare(ctx *context.Context, state *basetypes.SetValue, plan *basetypes.Se
 	return toAdd, toUpdate, toRemove
 }
 
-// ApplyChanges applies SSH public key changes to the service
-func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate, keysToRemove []models.SSHPublicKeyModel, providerName string, client *elestio.Client, rebooter ServerRebooter, service *elestio.Service, rebootTimeout time.Duration) error {
+// ApplyChanges applies SSH public key changes to the service.
+// previousKeys are the keys currently on the service, used to restore a key
+// when replacing it fails half-way (the API can only remove a key by username
+// before the new one with the same username is added).
+func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate, keysToRemove, previousKeys []models.SSHPublicKeyModel, providerName string, client *elestio.Client, rebooter ServerRebooter, service *elestio.Service, rebootTimeout time.Duration) error {
 	// Remove keys first
 	for _, key := range keysToRemove {
 		if err := client.Service.RemoveSSHPublicKey(serviceID, key.Username.ValueString()); err != nil {
@@ -76,12 +79,24 @@ func ApplyChanges(ctx context.Context, serviceID string, keysToAdd, keysToUpdate
 	}
 
 	// Update keys (remove old, add new)
+	previous := make(map[string]string, len(previousKeys))
+	for _, k := range previousKeys {
+		previous[k.Username.ValueString()] = k.KeyData.ValueString()
+	}
 	for _, key := range keysToUpdate {
-		if err := client.Service.RemoveSSHPublicKey(serviceID, key.Username.ValueString()); err != nil {
+		username := key.Username.ValueString()
+		if err := client.Service.RemoveSSHPublicKey(serviceID, username); err != nil {
 			return fmt.Errorf("failed to update (remove the old one) ssh public key: %s", err)
 		}
-		if err := client.Service.AddSSHPublicKey(serviceID, key.Username.ValueString(), key.KeyData.ValueString()); err != nil {
-			return fmt.Errorf("failed to update (add the new one) ssh public key: %s", err)
+		if err := client.Service.AddSSHPublicKey(serviceID, username, key.KeyData.ValueString()); err != nil {
+			msg := fmt.Sprintf("failed to update (add the new one) ssh public key for %q: %s", username, err)
+			if old, ok := previous[username]; ok {
+				if restoreErr := client.Service.AddSSHPublicKey(serviceID, username, old); restoreErr != nil {
+					return fmt.Errorf("%s; restoring the previous key also failed, key %q is no longer on the service: %s", msg, username, restoreErr)
+				}
+				return fmt.Errorf("%s; the previous key was restored", msg)
+			}
+			return fmt.Errorf("%s; the previous key could not be restored", msg)
 		}
 	}
 

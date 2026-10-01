@@ -4,8 +4,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/elestio/elestio-go-api-client/v2"
 	ssh_public_keys "github.com/elestio/terraform-provider-elestio/internal/ssh_public_keys"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/function"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -90,6 +90,10 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 
 	email := os.Getenv("ELESTIO_EMAIL")
 	apiToken := os.Getenv("ELESTIO_API_TOKEN")
+	// Optional session JWT obtained earlier (valid for several days). Lets CI
+	// share one sign-in across many runs; email and api_token are then only
+	// needed to renew it.
+	sessionJWT := os.Getenv("ELESTIO_JWT")
 
 	if !data.Email.IsNull() {
 		email = data.Email.ValueString()
@@ -99,7 +103,7 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 		apiToken = data.APIToken.ValueString()
 	}
 
-	if email == "" {
+	if email == "" && sessionJWT == "" {
 		resp.Diagnostics.AddAttributeError(
 			path.Root("email"),
 			"Missing Elestio API Email",
@@ -109,7 +113,7 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 		)
 	}
 
-	if apiToken == "" {
+	if apiToken == "" && sessionJWT == "" {
 		resp.Diagnostics.AddAttributeError(
 			path.Root("api_token"),
 			"Missing Elestio API Token",
@@ -123,13 +127,13 @@ func (p *ElestioProvider) Configure(ctx context.Context, req provider.ConfigureR
 		return
 	}
 
-	client, err := elestio.NewClient(email, apiToken)
+	client, err := newAPIClient(ctx, clientConfig{creds: apiCredentials{email: email, apiToken: apiToken}, jwt: sessionJWT})
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Unable to Create Elestio API Client",
 			"An unexpected error occurred when creating the Elestio API client. "+
 				"If the error is not clear, please contact the provider developers.\n\n"+
-				"Elestio Client Error: "+err.Error(),
+				"Elestio Client Error: "+utils.RedactError(err),
 		)
 		return
 	}

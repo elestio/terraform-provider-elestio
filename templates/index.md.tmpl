@@ -64,6 +64,20 @@ When using this method, you may omit the Elestio `provider` block entirely:
 
 {{ .SchemaMarkdown | trimspace }}
 
+## Sign-in limits and session reuse
+
+The Elestio API allows **15 sign-ins per hour** for an account (and for an IP address), but the session token (JWT) it returns stays valid for several days. The provider signs in once per Terraform command and reuses the token for every API request in that command, renewing it shortly before it expires. If the API rejects the token (for example after a password change), the provider signs in again once and retries the request.
+
+By default the token is kept **in memory only**, so each Terraform command signs in once and nothing is written to disk. That is enough for normal use (up to about 15 commands per hour), and it is the safest setting: a session token is valid for days, so a copy on disk would be a long-lived credential.
+
+| Environment variable | Effect |
+|---|---|
+| `ELESTIO_JWT_CACHE=on` | Opt in to a private cache file (`~/.cache/terraform-provider-elestio/`, mode `0600`, directory `0700`, named after a hash of your credentials, deleted when the API rejects the token). Later commands then reuse the token without signing in. Use it on a personal machine if you hit the hourly limit, and **do not use it on shared CI runners**, where other jobs could read the file. |
+| `ELESTIO_JWT` | Use a session token you obtained earlier, for example one stored in your CI secret manager. `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN` are then only needed to renew it when it expires. |
+
+The token is never written to the Terraform state.
+
+
 ## Secrets and Terraform state
 
 Some resources that can be created with this provider, like `elestio_service.env`, are

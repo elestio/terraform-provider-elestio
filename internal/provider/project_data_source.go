@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
@@ -104,7 +105,7 @@ func (d *ProjectDataSource) Read(ctx context.Context, req datasource.ReadRequest
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Unable to Read Elestio Project",
-			err.Error(),
+			utils.RedactError(err),
 		)
 		return
 	}

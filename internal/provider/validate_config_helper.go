@@ -5,6 +5,7 @@ import (
 	"fmt"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 )
 
 func validateProviderConfig(
@@ -23,7 +24,7 @@ func validateProviderConfig(
 	if err != nil || !isConfigValid {
 		errorMsg := ""
 		if err != nil {
-			errorMsg = fmt.Sprintf("%s\n\n", err)
+			errorMsg = fmt.Sprintf("%s\n\n", utils.RedactError(err))
 		}
 
 		errorMsg += fmt.Sprintf("Configuration provided:\n"+

@@ -26,7 +26,10 @@ jobs:
           go-version-file: "go.mod"
           cache: true
       - run: go install golang.org/x/vuln/cmd/govulncheck@v1.8.0
-      - run: govulncheck ./...
+      # govulncheck cannot ignore a single advisory, so a small gate keeps the check strict for
+      # everything except the explicit, documented exceptions in .govulncheck-allowlist.
+      - run: govulncheck -format json ./... > vuln.json
+      - run: python3 scripts/govulncheck-gate.py vuln.json .govulncheck-allowlist
 
   gosec:
     name: gosec

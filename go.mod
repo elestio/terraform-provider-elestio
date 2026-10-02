@@ -1,6 +1,6 @@
 module github.com/elestio/terraform-provider-elestio
 
-go 1.26.0
+go 1.26.8
 
 require (
 	github.com/elestio/elestio-go-api-client/v2 v2.2.0

@@ -408,13 +408,14 @@ This release fixes known vulnerabilities, stops the provider from signing in on 
 - **`default_password` is hidden in plans** (it is now `Sensitive`). It is still stored in the Terraform state, so protect the state file.
 - **`admin_email` and `technical_email` only accept a bare address.** Forms such as `Name <a@b.co>` are rejected.
 - **`backups_enabled = true` needs a `support_level` above `level1`** and is now rejected at validate time. It used to fail only at apply.
-- **Building from source needs Go 1.26 or later.** Released binaries are not affected.
+- **Building from source needs Go 1.26.8 or later.** Released binaries are not affected.
 
 ### Security
 
 - Updated `google.golang.org/grpc`, `golang.org/x/net`, `golang.org/x/crypto` and `golang.org/x/text` to fix known vulnerabilities (GO-2026-6348, GO-2026-6061, GO-2026-4762, GO-2026-5026, GO-2026-5018, GO-2026-5970). Also updated `terraform-plugin-framework` to 1.19, `terraform-plugin-go` to 0.31, `terraform-plugin-sdk` to 2.40 and `terraform-plugin-log` to 0.11.
 - API session tokens are removed from error messages. Go's HTTP client includes the request URL, and the Elestio API client put the token in it, so a network error or timeout could print a token that is valid for several days in Terraform output and CI logs.
 - API requests now have a 2 minute timeout, require TLS 1.2 or later, and refuse redirects to another host or from HTTPS to HTTP.
+- The provider is now built with Go 1.26.8. Go 1.26.0, which the build used before, has 20 known vulnerabilities in the standard library (including `net/http`, `crypto/tls`, `crypto/x509` and `net/url`), all fixed by Go 1.26.6 or later.
 - New CI checks: govulncheck, gosec, CodeQL and dependency review.
 
 ### Sign-in reuse

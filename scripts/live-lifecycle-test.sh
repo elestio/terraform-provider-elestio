@@ -42,6 +42,7 @@
 #   WAIT_FOR_WINDOW=1  retry the pre-flight while the rate limit is active
 #
 # SEND ME: OUT_DIR/report.txt  and  OUT_DIR/terraform.redacted.log
+#   (preflight and cleanup runs write report-<mode>.txt and terraform-<mode>.redacted.log instead)
 set -u
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -55,7 +56,10 @@ WORK="$OUT/work"
 RAW="$OUT/.raw"            # unredacted logs; deleted at the end
 LOG="$RAW/terraform.log"
 DEBUG="$RAW/provider.debug"
-REPORT="$OUT/report.txt"
+# preflight and cleanup runs write their own files so they never overwrite the evidence of a
+# full run.
+SUFFIX=""; [ "$MODE" != "full" ] && SUFFIX="-$MODE"
+REPORT="$OUT/report$SUFFIX.txt"
 PW="AuditPass12345"
 
 : "${ELESTIO_EMAIL:?export ELESTIO_EMAIL first}"
@@ -171,7 +175,7 @@ tf() {
 
 finish() {
   # Redact everything into files that are safe to send, then delete the raw logs.
-  for pair in "$LOG:terraform.redacted.log" "$DEBUG:provider.redacted.log"; do
+  for pair in "$LOG:terraform$SUFFIX.redacted.log" "$DEBUG:provider$SUFFIX.redacted.log"; do
     src="${pair%%:*}"; dst="$OUT/${pair##*:}"
     [ -f "$src" ] || continue
     python3 - "$src" "$dst" "$PW" <<'PYR'
@@ -437,5 +441,5 @@ say ""
 finish
 say ""
 say "RESULT: $pass passed, $fail failed, $inconc inconclusive"
-say "Send: $REPORT  and  $OUT/terraform.redacted.log"
+say "Send: $REPORT  and  $OUT/terraform$SUFFIX.redacted.log"
 [ "$fail" = 0 ] && [ "$inconc" = 0 ]

@@ -99,17 +99,68 @@ When using this method, you may omit the Elestio `provider` block entirely:
 
 ## Sign-in limits and session reuse
 
-The Elestio API allows **15 sign-ins per hour** for an account (and for an IP address), but the session token (JWT) it returns stays valid for several days. The provider signs in once per Terraform command and reuses the token for every API request in that command, renewing it shortly before it expires. If the API rejects the token (for example after a password change), the provider signs in again once and retries the request.
+To talk to the Elestio API the provider signs in with your email and API token and receives a **session token** (a JWT). The API allows only **15 sign-ins per hour** for an account (and for an IP address), but the session token stays valid for **several days**. Signing in on every Terraform command would therefore hit the limit quickly (the API then answers HTTP 429), so the provider reuses the session token instead.
 
-By default the token is kept **in memory only**, so each Terraform command signs in once and nothing is written to disk. That is enough for normal use (up to about 15 commands per hour), and it is the safest setting: a session token is valid for days, so a copy on disk would be a long-lived credential.
+Within one Terraform command (`plan`, `apply`, `refresh`, `destroy`) the provider always signs in **once** and reuses that token for every API request, renewing it shortly before it expires. If the API rejects the token (for example after a password change), the provider signs in again once and retries the request. The token is **never written to the Terraform state** and never appears in logs or error messages.
 
-| Environment variable | Effect |
+There are three ways to handle the token between commands:
+
+| Mode | How to enable | Sign-ins | Token stored on disk? | Use it for |
+|---|---|---|---|---|
+| **Default** | nothing to do | 1 per Terraform command (up to about 15 commands per hour) | **No**, memory only | Most users. The safest setting. |
+| **Cache** | `ELESTIO_JWT_CACHE=on` | 1, then none until the token nears expiry (days) | Yes, in a private cache file | A personal machine where you run more than about 15 commands per hour. |
+| **Provided token** | `ELESTIO_JWT=<token>` | 0 | No | CI pipelines, with the token held in a secret manager. |
+
+### `ELESTIO_JWT_CACHE`: reuse the token between Terraform runs
+
+By default the token lives only in memory, so it is gone when the command ends and the next command signs in again. Set `ELESTIO_JWT_CACHE=on` to let the provider keep the token in a small file so that later commands reuse it without signing in.
+
+```sh
+export ELESTIO_JWT_CACHE=on
+terraform plan    # signs in once and writes the cache file
+terraform apply   # reuses the cached token, no sign-in
+```
+
+On Windows PowerShell: `$env:ELESTIO_JWT_CACHE = "on"`.
+
+**Accepted values.** `on`, `1`, `true`, `yes` or `enabled` (not case sensitive) enable the cache. Anything else, including leaving the variable unset or setting `off`, keeps it disabled.
+
+**Requirements.** The cache is only used when both the email and the API token are configured (provider arguments or `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN`), because they identify which account the cached token belongs to.
+
+**Where the file is.** In your operating system's user cache directory, under `terraform-provider-elestio`:
+
+| System | Location |
 |---|---|
-| `ELESTIO_JWT_CACHE=on` | Opt in to a private cache file (`~/.cache/terraform-provider-elestio/`, mode `0600`, directory `0700`, named after a hash of your credentials, deleted when the API rejects the token). Later commands then reuse the token without signing in. Use it on a personal machine if you hit the hourly limit, and **do not use it on shared CI runners**, where other jobs could read the file. |
-| `ELESTIO_JWT` | Use a session token you obtained earlier, for example one stored in your CI secret manager. `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN` are then only needed to renew it when it expires. |
+| Linux | `$XDG_CACHE_HOME/terraform-provider-elestio/`, or `~/.cache/terraform-provider-elestio/` if `XDG_CACHE_HOME` is not set |
+| macOS | `~/Library/Caches/terraform-provider-elestio/` |
+| Windows | `%LocalAppData%\terraform-provider-elestio\` |
 
-The token is never written to the Terraform state.
+**What is stored and how it is protected.**
+- The file contains the session token and its expiry time. It does not contain your email or API token.
+- The file name is a hash of your email and API token, so different accounts never share a file and the name reveals nothing.
+- The directory is created with mode `0700` and the file with mode `0600` (readable only by your user). On Linux and macOS, a cache file that other users can read is not trusted: it is ignored and deleted.
+- A corrupt file, or one whose token has expired, is ignored. The provider then signs in again and replaces it.
+- When the API rejects the cached token, the file is deleted and the provider signs in again.
+- Writing the cache is best effort: if the file cannot be written, Terraform carries on and simply signs in next time.
 
+**Security trade-off.** A session token is valid for days, so a cache file is a long-lived credential on disk: anyone who can read it can use your Elestio account until it expires. For that reason the cache is **off by default**. Enable it only on a machine you control. **Do not enable it on shared CI runners or shared servers**, where other jobs or users could read your home directory (use `ELESTIO_JWT` from a secret manager there instead).
+
+**Turning it off and clearing it.** Unset the variable or set `ELESTIO_JWT_CACHE=off`. Disabling it does not delete an existing file, so remove it yourself:
+
+```sh
+rm -rf ~/.cache/terraform-provider-elestio          # Linux
+rm -rf ~/Library/Caches/terraform-provider-elestio  # macOS
+```
+
+If you think a cached token was exposed, delete the file, and change your Elestio password to invalidate all sessions that were issued before the change.
+
+### `ELESTIO_JWT`: provide a session token
+
+Set `ELESTIO_JWT` to a session token you obtained earlier, for example one stored in your CI secret manager, and every pipeline run can use it without signing in at all.
+
+- A token that is valid and not within 10 minutes of expiring is used as is.
+- `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN` are then optional. If they are set, they are used to sign in again once when the token is expired, malformed or rejected by the API. If they are not set, the provider stops with a clear message that the token is missing, expired or rejected.
+- Treat the token like a password: keep it in a secret store, never in the Terraform configuration or in source control.
 
 ## Secrets and Terraform state
 

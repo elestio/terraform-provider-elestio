@@ -60,6 +60,10 @@ eval "$(terraform output -raw psql_command)"
 
 You have just deployed in a few lines of code a whole infrastructure.
 
+## Sign-in limits
+
+The Elestio API allows 15 sign-ins per hour per account. The provider signs in once per Terraform command and reuses the session token during that command. If you run many commands per hour on your own machine, set `ELESTIO_JWT_CACHE=on` to reuse the token between runs (it is stored in a private file in your user cache directory, so do not use it on shared CI runners). In CI, pass a token you obtained earlier with `ELESTIO_JWT`. See the [provider documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs#sign-in-limits-and-session-reuse) for details.
+
 ## License
 
 terraform-provider-elestio is licensed under the MPL license. Full license text is available in the [LICENSE](LICENSE) file.

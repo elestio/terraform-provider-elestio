@@ -1,0 +1,9 @@
+# Vulnerabilities that scripts/govulncheck-gate.py tolerates. One OSV id per line.
+# Every entry needs a reason and a condition for removing it.
+
+# google.golang.org/grpc server panic on a missing :authority/Host header.
+# Reachable only through the plugin's local gRPC server (Terraform core to provider
+# over a per-run local socket), so exploiting it needs local access. The fix exists only
+# in a v1.85.0-dev pre-release. Remove this line once a stable grpc release (>= 1.85)
+# is adopted; the gate will remind us when the advisory stops being reported.
+GO-2026-6443

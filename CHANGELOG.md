@@ -397,3 +397,42 @@ New services:
 ### Fix
 
 - Fixed generated documentation links for services whose docker image is hosted outside Docker Hub (e.g. `ghcr.io`, `quay.io`, `mcr.microsoft.com`). These were incorrectly prefixed with `https://hub.docker.com/r/`, producing broken links. The image now links to its actual registry, and `docker.io/...` references link to the corresponding Docker Hub page. Reported in [#63](https://github.com/elestio/terraform-provider-elestio/pull/63).
+
+## v0.30.0 (2 October, 2026)
+
+This release fixes known vulnerabilities, stops the provider from signing in on every command, and fixes several bugs that could leave billed servers untracked or drop running ones from state. It was checked end to end against the Elestio API (create, update, deletion outside Terraform, destroy).
+
+### Behavior changes to know about when upgrading
+
+- **Creating a service is no longer retried.** If a create fails, run `terraform apply` again. Each attempt used to create and bill a server, so a request that timed out but had succeeded could create duplicates.
+- **`default_password` is hidden in plans** (it is now `Sensitive`). It is still stored in the Terraform state, so protect the state file.
+- **`admin_email` and `technical_email` only accept a bare address.** Forms such as `Name <a@b.co>` are rejected.
+- **`backups_enabled = true` needs a `support_level` above `level1`** and is now rejected at validate time. It used to fail only at apply.
+- **Building from source needs Go 1.26.8 or later.** Released binaries are not affected.
+
+### Security
+
+- Updated `google.golang.org/grpc`, `golang.org/x/net`, `golang.org/x/crypto` and `golang.org/x/text` to fix known vulnerabilities (GO-2026-6348, GO-2026-6061, GO-2026-4762, GO-2026-5026, GO-2026-5018, GO-2026-5970). Also updated `terraform-plugin-framework` to 1.19, `terraform-plugin-go` to 0.31, `terraform-plugin-sdk` to 2.40 and `terraform-plugin-log` to 0.11.
+- API session tokens are removed from error messages. Go's HTTP client includes the request URL, and the Elestio API client put the token in it, so a network error or timeout could print a token that is valid for several days in Terraform output and CI logs.
+- API requests now have a 2 minute timeout, require TLS 1.2 or later, and refuse redirects to another host or from HTTPS to HTTP.
+- The provider is now built with Go 1.26.8. Go 1.26.0, which the build used before, has 20 known vulnerabilities in the standard library (including `net/http`, `crypto/tls`, `crypto/x509` and `net/url`), all fixed by Go 1.26.6 or later.
+- New CI checks: govulncheck, gosec, CodeQL and dependency review.
+
+### Sign-in reuse
+
+The Elestio API allows only 15 sign-ins per hour per account, which CI pipelines could hit, while the session token it returns is valid for several days.
+
+- The provider now signs in once per Terraform command and reuses the token for every request. If the API rejects the token as expired or revoked, the provider signs in again once and retries the request. The token never appears in the request URL, so network errors cannot print it.
+- By default the token is kept in memory only and nothing is written to disk. Set `ELESTIO_JWT_CACHE=on` to opt in to a private cache file in the user cache directory (`0600`, directory `0700`, named after a hash of the credentials) shared between runs. Do not enable it on shared CI runners.
+- New `ELESTIO_JWT` environment variable: use a session token obtained earlier, for example from a CI secret store. `ELESTIO_EMAIL` and `ELESTIO_API_TOKEN` are then only needed to renew it.
+
+### Fixes
+
+- **Re-enabling alerts failed.** Changing `alerts_enabled` from `false` to `true` returned `500 ActionError`. The API client sends only 10 of the 12 alert rules the backend requires, so the backend's monitoring setup always failed. The provider now sends the complete default rule set. (New services were not affected, because the backend enables alerts by default during deployment.)
+- If a service or load balancer is created but a later step fails (for example a timeout while waiting for it to deploy), it is now saved in state as tainted instead of being left untracked.
+- Refresh now drops a service, project or load balancer that no longer exists from state, so Terraform plans a re-create instead of failing with an error. Destroying a service that was already deleted now succeeds.
+- Waiting for a deletion no longer treats network, authentication or server errors as "deleted", which could drop a still-running service from state. A service or load balancer counts as deleted only when the API answers `InvalidServer` or `service_deleted`.
+- If replacing an SSH key fails after the old key was removed, the old key is restored and the error says so.
+- The last API error is now shown when deleting a service keeps failing.
+- A malformed API response during service or load balancer creation is reported as an error instead of crashing the provider.
+- Removed a duplicated API call to toggle app auto-updates.

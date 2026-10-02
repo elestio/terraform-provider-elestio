@@ -1,0 +1,81 @@
+# Exercises the release path (Go setup, GPG key import, goreleaser build and
+# checksum signing) without publishing anything and without using the real
+# signing key. It runs when a file that affects releases changes, so a broken
+# action update or goreleaser config is found on the pull request instead of on
+# release day.
+name: Release dry run
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/release.yml"
+      - ".github/workflows/release-dry-run.yml"
+      - ".goreleaser.yml"
+      - "go.mod"
+      - "go.sum"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          # goreleaser reads the tag history.
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: "go.mod"
+          cache: true
+
+      # A key that exists only on this runner. It is generated, removed from the
+      # keyring and then imported again by the action, so the import step is really
+      # tested, and the production signing key is never used.
+      - name: Create a throwaway signing key
+        id: key
+        run: |
+          gpg --batch --pinentry-mode loopback --passphrase '' \
+            --quick-generate-key 'Release dry run <dry-run@example.invalid>' rsa3072 sign never
+          {
+            echo 'private<<GPG_KEY_END'
+            gpg --batch --armor --export-secret-keys dry-run@example.invalid
+            echo 'GPG_KEY_END'
+          } >> "$GITHUB_OUTPUT"
+          gpg --batch --armor --export dry-run@example.invalid > "$RUNNER_TEMP/dry-run-public.asc"
+          gpg --batch --yes --delete-secret-and-public-keys "$(gpg --batch --list-keys --with-colons dry-run@example.invalid | awk -F: '/^fpr/{print $10; exit}')"
+          ! gpg --batch --list-secret-keys dry-run@example.invalid
+
+      - name: Import GPG key
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@2dc316deee8e90f13e1a351ab510b4d5bc0c82cd # v7.0.0
+        with:
+          gpg_private_key: ${{ steps.key.outputs.private }}
+
+      - name: Run GoReleaser (snapshot, nothing is published)
+        uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7.2.3
+        with:
+          args: release --snapshot --clean --skip=publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
+
+      - name: Check the release artifacts
+        run: |
+          set -eu
+          ls -1 dist | head -40
+          zips=$(ls dist/*.zip | wc -l)
+          echo "zip archives: $zips"
+          [ "$zips" -ge 8 ]
+          sums=$(ls dist/*_SHA256SUMS)
+          sig=$(ls dist/*_SHA256SUMS.sig)
+          gpg --batch --import "$RUNNER_TEMP/dry-run-public.asc"
+          gpg --batch --verify "$sig" "$sums"
+          (cd dist && sha256sum --check --ignore-missing "$(basename "$sums")")
+          # The registry manifest is listed in the checksum file (it is uploaded at publish time).
+          grep -q manifest "$sums"
+          [ "$(wc -l < "$sums")" -eq $((zips + 1)) ]

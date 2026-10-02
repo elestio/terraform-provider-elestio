@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/elestio/elestio-go-api-client/v2"
+	"github.com/elestio/terraform-provider-elestio/internal/utils"
 	"github.com/elestio/terraform-provider-elestio/internal/validators"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -148,7 +149,7 @@ func (r *ProjectResource) Create(ctx context.Context, req resource.CreateRequest
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Creating Project",
-			fmt.Sprintf("Unable to create project, got error: %s", err),
+			fmt.Sprintf("Unable to create project, got error: %s", utils.RedactError(err)),
 		)
 		return
 	}
@@ -168,10 +169,14 @@ func (r *ProjectResource) Read(ctx context.Context, req resource.ReadRequest, re
 
 	projectId := data.Id.ValueString()
 	project, err := r.client.Project.Get(projectId)
+	if utils.IsNotFound(err) {
+		resp.State.RemoveResource(ctx)
+		return
+	}
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Reading Project",
-			fmt.Sprintf("Unable to read project, got error: %s", err),
+			fmt.Sprintf("Unable to read project, got error: %s", utils.RedactError(err)),
 		)
 		return
 	}
@@ -198,7 +203,7 @@ func (r *ProjectResource) Update(ctx context.Context, req resource.UpdateRequest
 	if err != nil {
 		resp.Diagnostics.AddError(
 			"Error Updating Project",
-			fmt.Sprintf("Unable to update project, got error: %s", err),
+			fmt.Sprintf("Unable to update project, got error: %s", utils.RedactError(err)),
 		)
 		return
 	}
@@ -219,7 +224,7 @@ func (r *ProjectResource) Delete(ctx context.Context, req resource.DeleteRequest
 	if err := r.client.Project.Delete(serviceId); err != nil {
 		resp.Diagnostics.AddError(
 			"Error Deleting  Project",
-			fmt.Sprintf("Unable to delete project, got error: %s", err),
+			fmt.Sprintf("Unable to delete project, got error: %s", utils.RedactError(err)),
 		)
 		return
 	}

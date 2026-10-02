@@ -8,6 +8,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 )
 
+var defaultPasswordCharset = regexp.MustCompile(`^[a-zA-Z0-9-]+$`)
+
 type isDefaultPasswordValidator struct{}
 
 func (v isDefaultPasswordValidator) Description(ctx context.Context) string {
@@ -35,7 +37,7 @@ func (v isDefaultPasswordValidator) ValidateString(ctx context.Context, req vali
 	}
 
 	// Password can only contain alphanumeric characters or hyphens
-	if !regexp.MustCompile(`^[a-zA-Z0-9-]+$`).MatchString(enteredPassword) {
+	if !defaultPasswordCharset.MatchString(enteredPassword) {
 		resp.Diagnostics.AddAttributeError(
 			req.Path,
 			"Invalid Attribute Configuration",

@@ -76,4 +76,3 @@ func (v uniqueUsernamesValidator) ValidateSet(ctx context.Context, req validator
 func UniqueUsernames() uniqueUsernamesValidator {
 	return uniqueUsernamesValidator{}
 }
-

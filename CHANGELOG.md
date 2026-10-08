@@ -436,3 +436,9 @@ The Elestio API allows only 15 sign-ins per hour per account, which CI pipelines
 - The last API error is now shown when deleting a service keeps failing.
 - A malformed API response during service or load balancer creation is reported as an error instead of crashing the provider.
 - Removed a duplicated API call to toggle app auto-updates.
+
+## Unreleased
+
+### Features
+
+- Added `ovh` (OVHcloud) to the documented `provider_name` values. No provider change was needed: `provider_name` is not restricted to a fixed list, and datacenters are uppercase (for example `BHS5`, `EU-WEST-PAR`). OVH can only resize to a server type with an equal or larger disk.

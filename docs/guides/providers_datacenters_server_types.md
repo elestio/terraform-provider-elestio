@@ -31,6 +31,7 @@ Here are the common cloud providers currently supported by Elestio and their cor
 | `vultr` | Vultr Cloud |
 | `scaleway` | Scaleway Cloud |
 | `netcup` | Netcup |
+| `ovh` | OVHcloud |
 
 **Important:** The `provider_name` must be provided in lowercase. For example, use `netcup` instead of `NETCUP` or `Netcup`.
 

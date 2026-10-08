@@ -160,7 +160,7 @@ func (r *LoadBalancerResource) Schema(ctx context.Context, req resource.SchemaRe
 				},
 			},
 			"provider_name": schema.StringAttribute{
-				MarkdownDescription: "Provider name (must be lowercase). Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`." +
+				MarkdownDescription: "Provider name (must be lowercase). Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`, `ovh`." +
 					" For a complete list of available providers, see the related guide: https://docs.elest.io/books/elestio-terraform-provider/page/providers-datacenters-and-server-types",
 				Required: true,
 				PlanModifiers: []planmodifier.String{

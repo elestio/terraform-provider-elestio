@@ -337,7 +337,7 @@ func (r *ServiceResource) Schema(ctx context.Context, req resource.SchemaRequest
 			"version": version,
 			"provider_name": schema.StringAttribute{
 				MarkdownDescription: "The name of the provider to use to host the service (must be lowercase)." +
-					" Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`." +
+					" Common providers: `hetzner`, `do`, `lightsail`, `linode`, `vultr`, `scaleway`, `netcup`, `ovh`." +
 					" You can look for available provider names in the [providers documentation](https://registry.terraform.io/providers/elestio/elestio/latest/docs/guides/providers_datacenters_server_types)." +
 					" Requires replace to change it.",
 				Required: true,

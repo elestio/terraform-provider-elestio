@@ -437,7 +437,7 @@ The Elestio API allows only 15 sign-ins per hour per account, which CI pipelines
 - A malformed API response during service or load balancer creation is reported as an error instead of crashing the provider.
 - Removed a duplicated API call to toggle app auto-updates.
 
-## Unreleased
+## v0.30.1 (30 October, 2026)
 
 ### Features
 

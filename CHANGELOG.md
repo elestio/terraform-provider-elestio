@@ -442,3 +442,11 @@ The Elestio API allows only 15 sign-ins per hour per account, which CI pipelines
 ### Features
 
 - Added `ovh` (OVHcloud) to the documented `provider_name` values. No provider change was needed: `provider_name` is not restricted to a fixed list, and datacenters are uppercase (for example `BHS5`, `EU-WEST-PAR`). OVH can only resize to a server type with an equal or larger disk.
+
+## v0.30.2 (30 October, 2026)
+
+### Security
+
+- Built with Go 1.26.10 (was 1.26.8) and `golang.org/x/net` 0.60.0 (was 0.59.0). This fixes ten advisories in the Go standard library and `x/net` that were published after v0.30.1 (HTTP/2 and HTTP/1 handling in `net/http`, `crypto/tls`, `crypto/x509`, MIME parsing). v0.30.1 was built with the older toolchain, so upgrade from it to this release.
+- Removed the `GO-2026-6443` entry from the govulncheck allowlist, because it is no longer reported.
+
